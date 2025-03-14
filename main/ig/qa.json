@@ -1,0 +1,19 @@
+{
+  "url" : "http://hl7.fr/fhir/fr/example/ImplementationGuide/hl7.fhir.fr.example",
+  "name" : "ExampleIG",
+  "title" : "Exemple d'IG Français",
+  "description" : null,
+  "status" : "draft",
+  "package-id" : "hl7.fhir.fr.example",
+  "ig-ver" : "0.1.0",
+  "date" : "Fri, 14 Mar, 2025 15:17:52 +0000",
+  "dateISO8601" : "2025-03-14T15:17:52+00:00",
+  "errs" : 1,
+  "warnings" : 4,
+  "hints" : 1,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 918849008
+}
