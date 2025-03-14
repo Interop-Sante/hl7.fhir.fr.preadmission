@@ -1,0 +1,39 @@
+id: hl7.fhir.fr.example
+canonical: http://hl7.fr/fhir/fr/example
+name: ExampleIG
+title: Exemple d'IG Français
+publisher:
+  name: Interop'Santé
+  url: http://interopsante.org/
+contact:
+  - name: InteropSanté
+    telecom:
+      - system: email
+        value: fhir@interopsante.org
+        use: work
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2024+
+releaseLabel: ci-build
+jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
+
+parameters:
+  shownav: 'true'
+
+
+# dependencies:
+#   ans.fr.nos: latest
+
+pages:
+    index.md:
+        title: Accueil
+    downloads.md:
+        title: Téléchargement du guide
+menu:
+    Accueil: index.html
+    Ressources de conformité: artifacts.html
+    Documentations: 
+        Documentation des IGs: new-tab https://interop.esante.gouv.fr/ig/documentation/
+        Site d'InteropSanté: new-tab https://www.interopsante.org/
+        Téléchargements: downloads.html

@@ -1,0 +1,24 @@
+name: Workflow GitHub pages
+on:
+  workflow_call:
+  push:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+jobs:
+  run-gitHubPages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:      
+          path: igSource
+
+      - uses: ansforge/IG-workflows@v0.2.0
+
+        with:      
+          bake: "false"
+          nos: "false"
+          validator_cli: "false"     
+          generate_plantuml : "false"
+          repo_ig: "./igSource"   
+          github_page: "true"
+          github_page_token: ${{ secrets.GITHUB_TOKEN  }}
