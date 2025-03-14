@@ -3,7 +3,7 @@ PREAD : Validation Results
 
 err = 1, warn = 4, info = 1
 IG Publisher Version: 1.8.20
-Generated Fri Mar 14 15:22:48 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.1.0 (canonical = http://hl7.fr/fhir/fr/preadmission)
+Generated Fri Mar 14 15:24:40 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.1.0 (canonical = http://hl7.fr/fhir/fr/preadmission)
  Build Errors : 1 / 4 / 0
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission : 0 / 0 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Patient-frpatient-exemple : 0 / 0 / 1
