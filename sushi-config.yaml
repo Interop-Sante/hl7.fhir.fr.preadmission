@@ -1,7 +1,7 @@
-id: hl7.fhir.fr.example
-canonical: http://hl7.fr/fhir/fr/example
-name: ExampleIG
-title: Exemple d'IG Français
+id: hl7.fhir.fr.preadmission
+canonical: http://hl7.fr/fhir/fr/preadmission
+name: PREAD
+title: Préadmission en ligne
 publisher:
   name: Interop'Santé
   url: http://interopsante.org/
