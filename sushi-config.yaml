@@ -1,5 +1,5 @@
-id: hl7.fhir.fr.example
-canonical: http://hl7.fr/fhir/fr/example
+id: hl7.fhir.fr.preadmission
+canonical: http://hl7.fr/fhir/fr/preadmission
 name: ExampleIG
 title: Exemple d'IG Français
 publisher:
