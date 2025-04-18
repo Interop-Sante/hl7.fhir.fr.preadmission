@@ -1,0 +1,755 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 5, errors = 23, warn = 29, info = 5-->
+<head>
+  <title>ExampleIG : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    button { padding: 0px 8px; font-size: 12px; cursor: pointer; border-radius: 2px; border: 1px solid #ccc; background-color: #f0f0f0 }
+    button:hover { background-color: #e0e0e0; }
+    .code-value { display: inline; }
+    .code-hidden { display: none; }
+    span.toggle  { font-size: 10px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
+    function toggleCodes() {
+      const codes = document.getElementsByClassName('code-value');
+      for (let code of codes) {
+        code.classList.toggle('code-hidden');
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for ExampleIG</h1>
+ <p>Generated Fri Apr 18 09:06:03 UTC 2025, FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.1.0 (canonical = <a href="http://hl7.fr/fhir/fr/preadmission">http://hl7.fr/fhir/fr/preadmission</a> (<a href="http://hl7.fr/fhir/fr/preadmission/history.html">history</a>)). See <a href="qa.min.html">Errors Only</a> &amp; <a href="qa-ipreview.html">IP</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.8.24</span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = hl7.fhir.fr.preadmission, Canonical = http://hl7.fr/fhir/fr/preadmission</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Language Info:</td><td>This IG has no language information</td></tr>
+ <tr><td>Publication Request:</td><td><ul><li><span title="Not Found">This IG has never been published</span> <img src="information.png" height="16px" width="16px"/></li>
+<li>No publication request found <img src="information.png" height="16px" width="16px"/></li>
+</ul>
+</td></tr>
+ <tr><td>Supressed Messages:</td><td>No Suppressed Issues
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="dep" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.fr.preadmission</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0.1.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.fr/fhir/fr/preadmission</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.terminology.r4</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">6.2.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="Not yet released">U</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org/6.2.0</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.extensions.r4</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">5.2.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/extensions/5.2.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+</table><para>Templates: hl7.fhir.fr.template#0.1.0 -&gt; fhir.base.template#current. Tools: 0.5.0</para></div></td></tr>
+ <tr><td>Related IGs:</td><td>n/a</td></tr>
+ <tr><td>Dependent IGs:</td><td><a href="qa-dep.html">no references</a></td></tr>
+ <tr><td>Global Profiles:</td><td>(none declared)</td></tr>
+ <tr><td>Terminology Server(s):</td><td><a href="http://tx.fhir.org/r4">http://tx.fhir.org/r4</a> (<a href="qa-txservers.html">details</a>)</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>no Non-HL7 references found</i></td></tr>
+ <tr><td>R5 Dependencies:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Draft Dependencies:</td><td><ul>
+  <li>
+hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-parameter-code.html">GuideParameterCode</a>
+ (15 uses),     <a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/appointment.html">Appointment</a>
+ (6 uses),     <a href="http://hl7.org/fhir/R4/valueset-languages.html">CommonLanguages</a>
+ (6 uses),     <a href="http://hl7.org/fhir/R4/valueset-appointmentstatus.html">AppointmentStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-appointment-cancellation-reason.html">AppointmentCancellationReason</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-category.html">ServiceCategory</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-service-type.html">ServiceType</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-reason.html">EncounterReasonCodes</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/condition.html">Condition</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/immunizationrecommendation.html">ImmunizationRecommendation</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/slot.html">Slot</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-participant-type.html">ParticipantType</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/practitioner.html">Practitioner</a>
+ (7 uses),     <a href="http://hl7.org/fhir/R4/practitionerrole.html">PractitionerRole</a>
+ (6 uses),     <a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a>
+ (9 uses),     <a href="http://hl7.org/fhir/R4/device.html">Device</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/healthcareservice.html">HealthcareService</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/location.html">Location</a>
+ (4 uses),     <a href="http://hl7.org/fhir/R4/valueset-participantrequired.html">ParticipantRequired</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-participationstatus.html">ParticipationStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/consent.html">Consent</a>
+ (8 uses),     <a href="http://hl7.org/fhir/R4/valueset-consent-state-codes.html">ConsentState</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-consent-scope.html">ConsentScopeCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-consent-category.html">ConsentCategoryCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/organization.html">Organization</a>
+ (12 uses),     <a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/contract.html">Contract</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-consent-policy.html">ConsentPolicyRuleCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-consent-provision-type.html">ConsentProvisionType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-security-role-type.html">SecurityRoleType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/group.html">Group</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/careteam.html">CareTeam</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-consent-action.html">ConsentActionCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-consent-content-class.html">ConsentContentClass</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-consent-content-code.html">ConsentContentCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-consent-data-meaning.html">ConsentDataMeaning</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/coverage.html">Coverage</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-fm-status.html">FinancialResourceStatusCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-coverage-type.html">CoverageTypeAndSelf-PayCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-subscriber-relationship.html">SubscriberRelationshipCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-coverage-class.html">CoverageClassCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-coverage-copay-type.html">CoverageCopayTypeCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-coverage-financial-exception.html">ExampleCoverageFinancialExceptionCodes</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-document-reference-status.html">DocumentReferenceStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-composition-status.html">CompositionStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-document-relationship-type.html">DocumentRelationshipType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a>
+ (3 uses),     <a href="http://hl7.org/fhir/R4/episodeofcare.html">EpisodeOfCare</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-status.html">EncounterStatus</a>
+ (2 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-type.html">EncounterType</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-diagnosis-role.html">DiagnosisRole</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/account.html">Account</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-admit-source.html">AdmitSource</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-diet.html">Diet</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-special-courtesy.html">SpecialCourtesy</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-special-arrangements.html">SpecialArrangements</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-discharge-disposition.html">DischargeDisposition</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-encounter-location-status.html">EncounterLocationStatus</a>
+ (1 uses),     <a href="http://hl7.org/fhir/R4/valueset-location-physical-type.html">LocationType</a>
+ (1 uses)
+  </li>
+</ul>
+</td></tr>
+ <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://hl7.fr/fhir/fr/preadmission (Problem #1 with package-list.json at http://hl7.fr/fhir/fr/preadmission: Not Found)</td></tr>
+ <tr><td>IPA Comparison:</td><td> n/a</td></tr>
+ <tr><td>IPS Comparison:</td><td> n/a</td></tr>
+ <tr><td>Validation Flags:</td><td> On: autoLoad; Off: hintAboutNonMustSupport, anyExtensionsAllowed, checkAggregation, showReferenceMessages, noExperimentalContent, displayWarnings</td></tr>
+ <tr><td>Summary:</td><td> errors = 23, warn = 29, info = 5, broken links = 5, pinned = n/a.  <button onclick="toggleCodes()">Show Message Ids</button></td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>6</b></td><td><b>4</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_CodeSystem-document-type-code-system"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-document-type-code-system</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_CodeSystem-encounter-class-code-system"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-encounter-class-code-system</b></a></td><td><b>2</b></td><td><b>2</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_CodeSystem-preadmission-consent-code-system"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-consent-code-system</b></a></td><td><b>2</b></td><td><b>2</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_CodeSystem-preadmission-status-code-system"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-status-code-system</b></a></td><td><b>5</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_ImplementationGuide-hl7.fhir.fr.preadmission"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-appointment-questionnaire-response"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-appointment-questionnaire-response</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-encounter-agent-instructions"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-encounter-agent-instructions</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-encounter-consent"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-encounter-consent</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-encounter-patient-comment"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-encounter-patient-comment</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-hl7.fhir.fr.preadmission.organisme-complementaire"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.organisme-complementaire</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-hl7.fhir.fr.preadmission.statut-preadmission"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.statut-preadmission</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-hl7.fhir.fr.preadmission.type-document"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.type-document</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-patient-dmp-access-opposition-fr"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-patient-dmp-access-opposition-fr</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-preadmission-appointment-fr"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-preadmission-appointment-fr</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-preadmission-consent-fr"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-preadmission-consent-fr</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-preadmission-coverage-fr"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-preadmission-coverage-fr</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-preadmission-documentreference-fr"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-preadmission-documentreference-fr</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-preadmission-encounter-fr"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-preadmission-encounter-fr</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_ValueSet-encounter-class-value-set"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-encounter-class-value-set</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_ValueSet-preadmission-consent-value-set"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-consent-value-set</b></a></td><td><b>2</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_ValueSet-preadmission-document-type-valueset"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-document-type-valueset</b></a></td><td><b>4</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_ValueSet-preadmission-status-value-set"><b>/home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-status-value-set</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
+ <table class="grid">
+   <tr style="background-color: #ffcccc">
+     <td><b>ImplementationGuide&#8203;.definition&#8203;.parameter[24]&#8203;.value</b></td><td><b>error</b></td><td><b>Supressed messages file not found</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="downloads.html#l339">output&#8203;/downloads&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 196, column 8</a></b></td><td><b>error</b></td><td><b>The link 'definitions.json.zip' for &quot;Définitions JSON (zip)&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="downloads.html#l343">output&#8203;/downloads&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 197, column 8</a></b></td><td><b>error</b></td><td><b>The link 'definitions.xml.zip' for &quot;Définitions XML (zip)&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="downloads.html#l347">output&#8203;/downloads&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 198, column 8</a></b></td><td><b>error</b></td><td><b>The link 'definitions.ttl.zip' for &quot;Définitions Turtle (zip)&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="downloads.html#l357">output&#8203;/downloads&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 204, column 8</a></b></td><td><b>error</b></td><td><b>The link 'examples.xml.zip' for &quot;Exemples XML (zip)&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="downloads.html#l361">output&#8203;/downloads&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 205, column 8</a></b></td><td><b>error</b></td><td><b>The link 'examples.json.zip' for &quot;Exemples JSON (zip)&quot; cannot be resolved</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>1</b></td><td><b>warning</b></td><td><b>The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>2</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>3</b></td><td><b>warning</b></td><td><b>An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>4</b></td><td><b>warning</b></td><td><b>The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_CodeSystem-document-type-code-system"> </a>
+<h2><a href="CodeSystem-document-type-code-system.html">fsh-generated/resources/CodeSystem-document-type-code-system.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem</b></td><td><b>information</b></td><td><b>CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CodeSystem (l1/c3876)</b></td><td><b>error</b></td><td><b>Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING_HL7</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CodeSystem (l1/c3876)</b></td><td><b>error</b></td><td><b>Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING_HL7</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem.concept[0] (l1/c3876)</b></td><td><b>warning</b></td><td><b>HL7 Defined CodeSystems should ensure that every concept has a definition</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_CONCEPT_NO_DEFINITION</span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_CodeSystem-encounter-class-code-system"> </a>
+<h2><a href="CodeSystem-encounter-class-code-system.html">fsh-generated/resources/CodeSystem-encounter-class-code-system.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CodeSystem&#8203;.where(url = 'https:&#8203;/&#8203;/interop-sante&#8203;.fr&#8203;/fhir&#8203;/CodeSystem&#8203;/encounter-class-code-system')</b></td><td><b>error</b></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-encounter-class-code-system.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system) does not match the URL (https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">RESOURCE_CANONICAL_MISMATCH</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem</b></td><td><b>information</b></td><td><b>CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem (l1/c1849)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem (l1/c1849)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>fsh-generated&#8203;/resources&#8203;/CodeSystem-encounter-class-code-system</b></td><td><b>error</b></td><td><b>URL Mismatch http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system vs https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_CodeSystem-preadmission-consent-code-system"> </a>
+<h2><a href="CodeSystem-preadmission-consent-code-system.html">fsh-generated/resources/CodeSystem-preadmission-consent-code-system.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CodeSystem&#8203;.where(url = 'https:&#8203;/&#8203;/interop-sante&#8203;.fr&#8203;/fhir&#8203;/CodeSystem&#8203;/preadmission-consent-code-system')</b></td><td><b>error</b></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-consent-code-system.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-code-system) does not match the URL (https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">RESOURCE_CANONICAL_MISMATCH</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem</b></td><td><b>information</b></td><td><b>CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem (l1/c1806)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem (l1/c1806)</b></td><td><b>warning</b></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>fsh-generated&#8203;/resources&#8203;/CodeSystem-preadmission-consent-code-system</b></td><td><b>error</b></td><td><b>URL Mismatch http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-code-system vs https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_CodeSystem-preadmission-status-code-system"> </a>
+<h2><a href="CodeSystem-preadmission-status-code-system.html">fsh-generated/resources/CodeSystem-preadmission-status-code-system.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CodeSystem&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/CodeSystem&#8203;/preadmission-status')</b></td><td><b>error</b></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-status-code-system.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system) does not match the URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">RESOURCE_CANONICAL_MISMATCH</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CodeSystem.url</b></td><td><b>error</b></td><td><b>Resource id/url mismatch: preadmission-status-code-system/http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">RESOURCE_ID_MISMATCH</span></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>CodeSystem</b></td><td><b>information</b></td><td><b>CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CodeSystem (l1/c2501)</b></td><td><b>error</b></td><td><b>Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING_HL7</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CodeSystem (l1/c2501)</b></td><td><b>error</b></td><td><b>Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_SHAREABLE_MISSING_HL7</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>CodeSystem.concept[0] (l1/c2501)</b></td><td><b>warning</b></td><td><b>HL7 Defined CodeSystems should ensure that every concept has a definition</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">CODESYSTEM_CONCEPT_NO_DEFINITION</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>fsh-generated&#8203;/resources&#8203;/CodeSystem-preadmission-status-code-system</b></td><td><b>error</b></td><td><b>URL Mismatch http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system vs http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_ImplementationGuide-hl7.fhir.fr.preadmission"> </a>
+<h2><a href="index.html">fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>ImplementationGuide/hl7.fhir.fr.preadmission: ImplementationGuide: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/implementationguide.html">ImplementationGuide</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-appointment-questionnaire-response"> </a>
+<h2><a href="StructureDefinition-appointment-questionnaire-response.html">fsh-generated/resources/StructureDefinition-appointment-questionnaire-response.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.context[0]</b></td><td><b>warning</b></td><td><b>Review the extension type for appointment-questionnaire-response: extensions should not have a context of Element unless it's really intended that they can be used anywhere</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_CONTEXT_SHOULD_NOT_BE_ELEMENT</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/appointment-questionnaire-response')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-encounter-agent-instructions"> </a>
+<h2><a href="StructureDefinition-encounter-agent-instructions.html">fsh-generated/resources/StructureDefinition-encounter-agent-instructions.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.context[0]</b></td><td><b>warning</b></td><td><b>Review the extension type for encounter-agent-instructions: extensions should not have a context of Element unless it's really intended that they can be used anywhere</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_CONTEXT_SHOULD_NOT_BE_ELEMENT</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/encounter-agent-instructions')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-encounter-consent"> </a>
+<h2><a href="StructureDefinition-encounter-consent.html">fsh-generated/resources/StructureDefinition-encounter-consent.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/encounter-consent')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-encounter-patient-comment"> </a>
+<h2><a href="StructureDefinition-encounter-patient-comment.html">fsh-generated/resources/StructureDefinition-encounter-patient-comment.json</a> <span id="svi9" class="toggle" onclick="toggle('vi9')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi9')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi9"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.context[0]</b></td><td><b>warning</b></td><td><b>Review the extension type for encounter-patient-comment: extensions should not have a context of Element unless it's really intended that they can be used anywhere</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_CONTEXT_SHOULD_NOT_BE_ELEMENT</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/encounter-patient-comment')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-hl7.fhir.fr.preadmission.organisme-complementaire"> </a>
+<h2><a href="StructureDefinition-hl7.fhir.fr.preadmission.organisme-complementaire.html">fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.organisme-complementaire.json</a> <span id="svi10" class="toggle" onclick="toggle('vi10')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi10')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi10"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/hl7&#8203;.fhir&#8203;.fr&#8203;.preadmission&#8203;.organisme-complementaire')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-hl7.fhir.fr.preadmission.statut-preadmission"> </a>
+<h2><a href="StructureDefinition-hl7.fhir.fr.preadmission.statut-preadmission.html">fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.statut-preadmission.json</a> <span id="svi11" class="toggle" onclick="toggle('vi11')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi11')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi11"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/hl7&#8203;.fhir&#8203;.fr&#8203;.preadmission&#8203;.statut-preadmission')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-hl7.fhir.fr.preadmission.type-document"> </a>
+<h2><a href="StructureDefinition-hl7.fhir.fr.preadmission.type-document.html">fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.type-document.json</a> <span id="svi12" class="toggle" onclick="toggle('vi12')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi12')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi12"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition&#8203;.where(url = 'https:&#8203;/&#8203;/interop-sante&#8203;.fr&#8203;/fhir&#8203;/StructureDefinition&#8203;/DocumentTypeFr')</b></td><td><b>error</b></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.type-document.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.type-document) does not match the URL (https://interop-sante.fr/fhir/StructureDefinition/DocumentTypeFr)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">RESOURCE_CANONICAL_MISMATCH</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'https:&#8203;/&#8203;/interop-sante&#8203;.fr&#8203;/fhir&#8203;/StructureDefinition&#8203;/DocumentTypeFr')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>fsh-generated&#8203;/resources&#8203;/StructureDefinition-hl7&#8203;.fhir&#8203;.fr&#8203;.preadmission&#8203;.type-document</b></td><td><b>error</b></td><td><b>URL Mismatch http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.type-document vs https://interop-sante.fr/fhir/StructureDefinition/DocumentTypeFr</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-patient-dmp-access-opposition-fr"> </a>
+<h2><a href="StructureDefinition-patient-dmp-access-opposition-fr.html">fsh-generated/resources/StructureDefinition-patient-dmp-access-opposition-fr.json</a> <span id="svi13" class="toggle" onclick="toggle('vi13')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi13')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi13"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.context[0]</b></td><td><b>warning</b></td><td><b>Review the extension type for patient-dmp-access-opposition-fr: extensions should not have a context of Element unless it's really intended that they can be used anywhere</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">SD_CONTEXT_SHOULD_NOT_BE_ELEMENT</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/patient-dmp-access-opposition-fr')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this extension</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-preadmission-appointment-fr"> </a>
+<h2><a href="StructureDefinition-preadmission-appointment-fr.html">fsh-generated/resources/StructureDefinition-preadmission-appointment-fr.json</a> <span id="svi14" class="toggle" onclick="toggle('vi14')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi14')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi14"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>StructureDefinition&#8203;.snapshot&#8203;.element[4]&#8203;.binding&#8203;.extension[0] (l1&#8203;/c20628)</b></td><td><b>information</b></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">MSG_DEPENDS_ON_DEPRECATED</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/preadmission-appointment-fr')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-preadmission-consent-fr"> </a>
+<h2><a href="StructureDefinition-preadmission-consent-fr.html">fsh-generated/resources/StructureDefinition-preadmission-consent-fr.json</a> <span id="svi15" class="toggle" onclick="toggle('vi15')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi15')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi15"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/preadmission-consent-fr')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-preadmission-coverage-fr"> </a>
+<h2><a href="StructureDefinition-preadmission-coverage-fr.html">fsh-generated/resources/StructureDefinition-preadmission-coverage-fr.json</a> <span id="svi16" class="toggle" onclick="toggle('vi16')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi16')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi16"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/preadmission-coverage-fr')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-preadmission-documentreference-fr"> </a>
+<h2><a href="StructureDefinition-preadmission-documentreference-fr.html">fsh-generated/resources/StructureDefinition-preadmission-documentreference-fr.json</a> <span id="svi17" class="toggle" onclick="toggle('vi17')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi17')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi17"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/preadmission-documentreference-fr')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_StructureDefinition-preadmission-encounter-fr"> </a>
+<h2><a href="StructureDefinition-preadmission-encounter-fr.html">fsh-generated/resources/StructureDefinition-preadmission-encounter-fr.json</a> <span id="svi18" class="toggle" onclick="toggle('vi18')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi18')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi18"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/StructureDefinition&#8203;/preadmission-encounter-fr')</b></td><td><b>warning</b></td><td><b>The Implementation Guide contains no examples for this profile</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_ValueSet-encounter-class-value-set"> </a>
+<h2><a href="ValueSet-encounter-class-value-set.html">fsh-generated/resources/ValueSet-encounter-class-value-set.json</a> <span id="svi19" class="toggle" onclick="toggle('vi19')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi19')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi19"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet&#8203;.where(url = 'https:&#8203;/&#8203;/interop-sante&#8203;.fr&#8203;/fhir&#8203;/ValueSet&#8203;/encounter-class-value-set')</b></td><td><b>error</b></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-encounter-class-value-set.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/encounter-class-value-set) does not match the URL (https://interop-sante.fr/fhir/ValueSet/encounter-class-value-set)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">RESOURCE_CANONICAL_MISMATCH</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet (l1/c1308)</b></td><td><b>warning</b></td><td><b>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>fsh-generated&#8203;/resources&#8203;/ValueSet-encounter-class-value-set</b></td><td><b>error</b></td><td><b>URL Mismatch http://hl7.fr/fhir/fr/preadmission/ValueSet/encounter-class-value-set vs https://interop-sante.fr/fhir/ValueSet/encounter-class-value-set</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_ValueSet-preadmission-consent-value-set"> </a>
+<h2><a href="ValueSet-preadmission-consent-value-set.html">fsh-generated/resources/ValueSet-preadmission-consent-value-set.json</a> <span id="svi20" class="toggle" onclick="toggle('vi20')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi20')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi20"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet&#8203;.where(url = 'https:&#8203;/&#8203;/interop-sante&#8203;.fr&#8203;/fhir&#8203;/ValueSet&#8203;/preadmission-consent-value-set')</b></td><td><b>error</b></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-consent-value-set.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set) does not match the URL (https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">RESOURCE_CANONICAL_MISMATCH</span></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet (l1/c1367)</b></td><td><b>warning</b></td><td><b>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>fsh-generated&#8203;/resources&#8203;/ValueSet-preadmission-consent-value-set</b></td><td><b>error</b></td><td><b>URL Mismatch http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set vs https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_ValueSet-preadmission-document-type-valueset"> </a>
+<h2><a href="ValueSet-preadmission-document-type-valueset.html">fsh-generated/resources/ValueSet-preadmission-document-type-valueset.json</a> <span id="svi21" class="toggle" onclick="toggle('vi21')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi21')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi21"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet&#8203;.where(url = 'http:&#8203;/&#8203;/hl7&#8203;.fr&#8203;/fhir&#8203;/fr&#8203;/preadmission&#8203;/ValueSet&#8203;/PreadmissionValueSetDocumentTypeFr')</b></td><td><b>error</b></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-document-type-valueset.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset) does not match the URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr)</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">RESOURCE_CANONICAL_MISMATCH</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet.url</b></td><td><b>error</b></td><td><b>Resource id/url mismatch: preadmission-document-type-valueset/http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">RESOURCE_ID_MISMATCH</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet (l1/c1376)</b></td><td><b>error</b></td><td><b>Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_SHAREABLE_MISSING_HL7</span></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>fsh-generated&#8203;/resources&#8203;/ValueSet-preadmission-document-type-valueset</b></td><td><b>error</b></td><td><b>URL Mismatch http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset vs http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy"></span></td>
+   </tr>
+</table>
+<hr/>
+<a name="_home_runner_work_hl7.fhir.fr.preadmission_hl7.fhir.fr.preadmission_igSource_fsh-generated_resources_ValueSet-preadmission-status-value-set"> </a>
+<h2><a href="ValueSet-preadmission-status-value-set.html">fsh-generated/resources/ValueSet-preadmission-status-value-set.json</a> <span id="svi22" class="toggle" onclick="toggle('vi22')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi22')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi22"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet (l1/c1325)</b></td><td><b>error</b></td><td><b>Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b> <span class="code-value code-hidden" style="font-size: 8px; color: navy">VALUESET_SHAREABLE_MISSING_HL7</span></td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="CODESYSTEM_CONCEPT_NO_DEFINITION"> </a>
+<h2>CODESYSTEM_CONCEPT_NO_DEFINITION</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="CodeSystem-document-type-code-system.html">fsh-generated/resources/CodeSystem-document-type-code-system.json</a></td><td><b>HL7 Defined CodeSystems should ensure that every concept has a definition</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="CodeSystem-preadmission-status-code-system.html">fsh-generated/resources/CodeSystem-preadmission-status-code-system.json</a></td><td><b>HL7 Defined CodeSystems should ensure that every concept has a definition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="CODESYSTEM_SHAREABLE_MISSING"> </a>
+<h2>CODESYSTEM_SHAREABLE_MISSING</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="CodeSystem-encounter-class-code-system.html">fsh-generated/resources/CodeSystem-encounter-class-code-system.json</a></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="CodeSystem-encounter-class-code-system.html">fsh-generated/resources/CodeSystem-encounter-class-code-system.json</a></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="CodeSystem-preadmission-consent-code-system.html">fsh-generated/resources/CodeSystem-preadmission-consent-code-system.json</a></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="CodeSystem-preadmission-consent-code-system.html">fsh-generated/resources/CodeSystem-preadmission-consent-code-system.json</a></td><td><b>Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="CODESYSTEM_SHAREABLE_MISSING_HL7"> </a>
+<h2>CODESYSTEM_SHAREABLE_MISSING_HL7</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="CodeSystem-document-type-code-system.html">fsh-generated/resources/CodeSystem-document-type-code-system.json</a></td><td><b>Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CodeSystem-document-type-code-system.html">fsh-generated/resources/CodeSystem-document-type-code-system.json</a></td><td><b>Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CodeSystem-preadmission-status-code-system.html">fsh-generated/resources/CodeSystem-preadmission-status-code-system.json</a></td><td><b>Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CodeSystem-preadmission-status-code-system.html">fsh-generated/resources/CodeSystem-preadmission-status-code-system.json</a></td><td><b>Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="MSG_DEPENDS_ON_DEPRECATED"> </a>
+<h2>MSG_DEPENDS_ON_DEPRECATED</h2>
+ <table class="grid">
+   <tr style="background-color: #fffff2">
+     <td><a href="StructureDefinition-preadmission-appointment-fr.html">fsh-generated/resources/StructureDefinition-preadmission-appointment-fr.json</a></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="RESOURCE_CANONICAL_MISMATCH"> </a>
+<h2>RESOURCE_CANONICAL_MISMATCH</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="CodeSystem-encounter-class-code-system.html">fsh-generated/resources/CodeSystem-encounter-class-code-system.json</a></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-encounter-class-code-system.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system) does not match the URL (https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system)</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CodeSystem-preadmission-consent-code-system.html">fsh-generated/resources/CodeSystem-preadmission-consent-code-system.json</a></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-consent-code-system.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-code-system) does not match the URL (https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system)</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="CodeSystem-preadmission-status-code-system.html">fsh-generated/resources/CodeSystem-preadmission-status-code-system.json</a></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-status-code-system.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system) does not match the URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status)</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-hl7.fhir.fr.preadmission.type-document.html">fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.type-document.json</a></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.type-document.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.type-document) does not match the URL (https://interop-sante.fr/fhir/StructureDefinition/DocumentTypeFr)</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="ValueSet-encounter-class-value-set.html">fsh-generated/resources/ValueSet-encounter-class-value-set.json</a></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-encounter-class-value-set.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/encounter-class-value-set) does not match the URL (https://interop-sante.fr/fhir/ValueSet/encounter-class-value-set)</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="ValueSet-preadmission-consent-value-set.html">fsh-generated/resources/ValueSet-preadmission-consent-value-set.json</a></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-consent-value-set.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set) does not match the URL (https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set)</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="ValueSet-preadmission-document-type-valueset.html">fsh-generated/resources/ValueSet-preadmission-document-type-valueset.json</a></td><td><b>Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-document-type-valueset.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset) does not match the URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr)</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="RESOURCE_ID_MISMATCH"> </a>
+<h2>RESOURCE_ID_MISMATCH</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="CodeSystem-preadmission-status-code-system.html">fsh-generated/resources/CodeSystem-preadmission-status-code-system.json</a></td><td><b>Resource id/url mismatch: preadmission-status-code-system/http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="ValueSet-preadmission-document-type-valueset.html">fsh-generated/resources/ValueSet-preadmission-document-type-valueset.json</a></td><td><b>Resource id/url mismatch: preadmission-document-type-valueset/http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="SD_CONTEXT_SHOULD_NOT_BE_ELEMENT"> </a>
+<h2>SD_CONTEXT_SHOULD_NOT_BE_ELEMENT</h2>
+ <table class="grid">
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-appointment-questionnaire-response.html">fsh-generated/resources/StructureDefinition-appointment-questionnaire-response.json</a></td><td><b>Review the extension type for appointment-questionnaire-response: extensions should not have a context of Element unless it's really intended that they can be used anywhere</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-encounter-agent-instructions.html">fsh-generated/resources/StructureDefinition-encounter-agent-instructions.json</a></td><td><b>Review the extension type for encounter-agent-instructions: extensions should not have a context of Element unless it's really intended that they can be used anywhere</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-encounter-patient-comment.html">fsh-generated/resources/StructureDefinition-encounter-patient-comment.json</a></td><td><b>Review the extension type for encounter-patient-comment: extensions should not have a context of Element unless it's really intended that they can be used anywhere</b></td>
+   </tr>
+   <tr style="background-color: #fff4ee">
+     <td><a href="StructureDefinition-patient-dmp-access-opposition-fr.html">fsh-generated/resources/StructureDefinition-patient-dmp-access-opposition-fr.json</a></td><td><b>Review the extension type for patient-dmp-access-opposition-fr: extensions should not have a context of Element unless it's really intended that they can be used anywhere</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="VALUESET_SHAREABLE_MISSING_HL7"> </a>
+<h2>VALUESET_SHAREABLE_MISSING_HL7</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="ValueSet-preadmission-document-type-valueset.html">fsh-generated/resources/ValueSet-preadmission-document-type-valueset.json</a></td><td><b>Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="ValueSet-preadmission-status-value-set.html">fsh-generated/resources/ValueSet-preadmission-status-value-set.json</a></td><td><b>Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</b></td>
+   </tr>
+</table>
+</body>
+</html>

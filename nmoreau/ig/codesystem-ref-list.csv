@@ -1,0 +1,5 @@
+URL,Version,Status,OIDs,Name,Title,Description,Used
+http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system,0.1.0,active,,PreadmissionCodeSystemDocumentTypeFr,Code System des types de documents pour la préadmission,"Code System listant les types de documents transmis lors de la préadmission hospitalière.","ValueSet/preadmission-document-type-valueset"
+http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status,0.1.0,active,,PreadmissionStatusCodeSystem,CodeSystem des statuts de la préadmission,"CodeSystem pour les statuts de la préadmission","ValueSet/preadmission-status-value-set"
+https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system,0.1.0,active,,EncounterClassCodeSystem,Code System du type de venue,"Types de venue utilisés pour les préadmissions en France.","ValueSet/encounter-class-value-set"
+https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system,0.1.0,active,,PreadmissionConsentCodeSystem,Code System des consentements du patient,"Consentements du patient liés à sa venue (ex. accès au DMP)","ValueSet/preadmission-consent-value-set"

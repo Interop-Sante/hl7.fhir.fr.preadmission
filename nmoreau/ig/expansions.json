@@ -1,0 +1,300 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "bcc3ac87-71b3-4975-bba9-a5b01e59ebd8",
+  "meta" : {
+    "lastUpdated" : "2025-04-18T09:05:31.719+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "https://interop-sante.fr/fhir/ValueSet/encounter-class-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-encounter-class-code-system.html\">codesystem Code System du type de venue v0.1.0 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 3 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system-NONAC\"> </a>\u00a0\u00a0<a href=\"CodeSystem-encounter-class-code-system.html#encounter-class-code-system-NONAC\">NONAC</a></td><td>https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system-SS\"> </a>\u00a0\u00a0<a href=\"CodeSystem-encounter-class-code-system.html#encounter-class-code-system-SS\">SS</a></td><td>https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system-VR\"> </a>\u00a0\u00a0<a href=\"CodeSystem-encounter-class-code-system.html#encounter-class-code-system-VR\">VR</a></td><td>https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system</td><td/></tr></table></div>"
+      },
+      "url" : "https://interop-sante.fr/fhir/ValueSet/encounter-class-value-set",
+      "version" : "0.1.0",
+      "name" : "EncounterClassValueSet",
+      "title" : "ValueSet du type de venue",
+      "status" : "active",
+      "date" : "2025-04-18T09:05:02+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "FRANCE"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:81d021a7-c365-4e1b-86dd-8ac9cab6bc21",
+        "timestamp" : "2025-04-18T09:05:47+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "fr-FR"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system",
+          "code" : "NONAC"
+        },
+        {
+          "system" : "https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system",
+          "code" : "SS"
+        },
+        {
+          "system" : "https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system",
+          "code" : "VR"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-preadmission-consent-code-system.html\">codesystem Code System des consentements du patient v0.1.0 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 2 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system-DMP_ACCESS_GRANTED\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-consent-code-system.html#preadmission-consent-code-system-DMP_ACCESS_GRANTED\">DMP_ACCESS_GRANTED</a></td><td>https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system-DMP_ACCESS_DENIED\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-consent-code-system.html#preadmission-consent-code-system-DMP_ACCESS_DENIED\">DMP_ACCESS_DENIED</a></td><td>https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system</td><td/></tr></table></div>"
+      },
+      "url" : "https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set",
+      "version" : "0.1.0",
+      "name" : "PreadmissionConsentValueSet",
+      "title" : "ValueSet des consentements du patient",
+      "status" : "active",
+      "date" : "2025-04-18T09:05:02+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "FRANCE"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:24bafd94-2fff-4036-b63b-5c2939d34953",
+        "timestamp" : "2025-04-18T09:05:47+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "fr-FR"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system",
+          "code" : "DMP_ACCESS_GRANTED"
+        },
+        {
+          "system" : "https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system",
+          "code" : "DMP_ACCESS_DENIED"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-document-type-code-system.html\">codesystem Code System des types de documents pour la préadmission v0.1.0 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 13 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-CNI\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-CNI\">CNI</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-CNI_RECTO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-CNI_RECTO\">CNI_RECTO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-CNI_VERSO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-CNI_VERSO\">CNI_VERSO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-ATTEST_VITALE\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-ATTEST_VITALE\">ATTEST_VITALE</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-PASSPORT\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-PASSPORT\">PASSPORT</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-JUSTIFICATIF_ID\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-JUSTIFICATIF_ID\">JUSTIFICATIF_ID</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-MUTUELLE\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-MUTUELLE\">MUTUELLE</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-MUTUELLE_RECTO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-MUTUELLE_RECTO\">MUTUELLE_RECTO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-MUTUELLE_VERSO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-MUTUELLE_VERSO\">MUTUELLE_VERSO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-LIVRET\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-LIVRET\">LIVRET</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-JUSTIFICATIF_DOM\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-JUSTIFICATIF_DOM\">JUSTIFICATIF_DOM</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-CARTE_SEJOUR\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-CARTE_SEJOUR\">CARTE_SEJOUR</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system-ARRET_TRAVAIL\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-code-system.html#document-type-code-system-ARRET_TRAVAIL\">ARRET_TRAVAIL</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</td><td/></tr></table></div>"
+      },
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr",
+      "version" : "0.1.0",
+      "name" : "PreadmissionValueSetDocumentTypeFr",
+      "title" : "Types de documents - ValueSet",
+      "status" : "draft",
+      "date" : "2025-04-18T09:05:02+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "FRANCE"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:8219177f-430d-4068-bada-4844b8e77f64",
+        "timestamp" : "2025-04-18T09:05:47+00:00",
+        "total" : 13,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "fr-FR"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "CNI"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "CNI_RECTO"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "CNI_VERSO"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "ATTEST_VITALE"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "PASSPORT"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "JUSTIFICATIF_ID"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "MUTUELLE"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "MUTUELLE_RECTO"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "MUTUELLE_VERSO"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "LIVRET"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "JUSTIFICATIF_DOM"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "CARTE_SEJOUR"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+          "code" : "ARRET_TRAVAIL"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-preadmission-status-code-system.html\">codesystem CodeSystem des statuts de la préadmission v0.1.0 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 6 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-CANCELLED\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-CANCELLED\">CANCELLED</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-CREATED\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-CREATED\">CREATED</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-IN_PROGRESS\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-IN_PROGRESS\">IN_PROGRESS</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-READY\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-READY\">READY</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-COMPLETED\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-COMPLETED\">COMPLETED</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-REFUSED\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-REFUSED\">REFUSED</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status</td><td/></tr></table></div>"
+      },
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set",
+      "version" : "0.1.0",
+      "name" : "PreAdmissionStatusValueSet",
+      "title" : "ValueSet des statuts de préadmission",
+      "status" : "active",
+      "date" : "2025-04-18T09:05:02+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "FRANCE"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:ae355a57-9522-46d5-975d-be173c79ce5e",
+        "timestamp" : "2025-04-18T09:05:47+00:00",
+        "total" : 6,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "fr-FR"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
+          "code" : "CANCELLED"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
+          "code" : "CREATED"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
+          "code" : "IN_PROGRESS"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
+          "code" : "READY"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
+          "code" : "COMPLETED"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
+          "code" : "REFUSED"
+        }]
+      }
+    }
+  }]
+}

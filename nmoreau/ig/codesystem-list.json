@@ -1,0 +1,36 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PreadmissionCodeSystemDocumentTypeFr",
+      "title" : "Code System des types de documents pour la préadmission",
+      "description" : "Code System listant les types de documents transmis lors de la préadmission hospitalière."
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PreadmissionStatusCodeSystem",
+      "title" : "CodeSystem des statuts de la préadmission",
+      "description" : "CodeSystem pour les statuts de la préadmission"
+    },
+    {
+      "url" : "https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "EncounterClassCodeSystem",
+      "title" : "Code System du type de venue",
+      "description" : "Types de venue utilisés pour les préadmissions en France."
+    },
+    {
+      "url" : "https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PreadmissionConsentCodeSystem",
+      "title" : "Code System des consentements du patient",
+      "description" : "Consentements du patient liés à sa venue (ex. accès au DMP)"
+    }
+  ]
+}

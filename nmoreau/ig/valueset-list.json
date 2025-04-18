@@ -1,0 +1,48 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PreadmissionValueSetDocumentTypeFr",
+      "title" : "Types de documents - ValueSet",
+      "description" : "Liste des types de documents autorisés pour la préadmission",
+      "systems" : [
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system"
+      ]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PreAdmissionStatusValueSet",
+      "title" : "ValueSet des statuts de préadmission",
+      "description" : "Statuts valides qu'une préadmission peut prendre.",
+      "systems" : [
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status"
+      ]
+    },
+    {
+      "url" : "https://interop-sante.fr/fhir/ValueSet/encounter-class-value-set",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "EncounterClassValueSet",
+      "title" : "ValueSet du type de venue",
+      "description" : "Valeurs autorisées pour le type de venue dans le cadre d'une préadmission.",
+      "systems" : [
+        "https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system"
+      ]
+    },
+    {
+      "url" : "https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PreadmissionConsentValueSet",
+      "title" : "ValueSet des consentements du patient",
+      "description" : "Consentements exprimés par le patient dans le cadre de la préadmission.",
+      "systems" : [
+        "https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system"
+      ]
+    }
+  ]
+}

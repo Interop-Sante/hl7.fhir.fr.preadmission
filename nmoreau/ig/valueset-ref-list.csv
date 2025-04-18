@@ -1,0 +1,5 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr,0.1.0,draft,,PreadmissionValueSetDocumentTypeFr,Types de documents - ValueSet,"Liste des types de documents autorisés pour la préadmission","StructureDefinition/hl7.fhir.fr.preadmission.type-document","Internal"
+http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set,0.1.0,active,,PreAdmissionStatusValueSet,ValueSet des statuts de préadmission,"Statuts valides qu'une préadmission peut prendre.",,"Internal"
+https://interop-sante.fr/fhir/ValueSet/encounter-class-value-set,0.1.0,active,,EncounterClassValueSet,ValueSet du type de venue,"Valeurs autorisées pour le type de venue dans le cadre d'une préadmission.",,"Internal"
+https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set,0.1.0,active,,PreadmissionConsentValueSet,ValueSet des consentements du patient,"Consentements exprimés par le patient dans le cadre de la préadmission.",,"Internal"

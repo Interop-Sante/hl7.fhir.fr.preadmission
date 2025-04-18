@@ -1,0 +1,48 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "preadmission-consent-code-system",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem preadmission-consent-code-system</b></p><a name=\"preadmission-consent-code-system\"> </a><a name=\"hcpreadmission-consent-code-system\"> </a><a name=\"preadmission-consent-code-system-fr-FR\"> </a><p>This  code system <code>https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">DMP_ACCESS_GRANTED<a name=\"preadmission-consent-code-system-DMP_ACCESS_GRANTED\"> </a></td><td>Accès au DMP autorisé</td></tr><tr><td style=\"white-space:nowrap\">DMP_ACCESS_DENIED<a name=\"preadmission-consent-code-system-DMP_ACCESS_DENIED\"> </a></td><td>Accès au DMP refusé</td></tr></table></div>"
+  },
+  "url" : "https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system",
+  "version" : "0.1.0",
+  "name" : "PreadmissionConsentCodeSystem",
+  "title" : "Code System des consentements du patient",
+  "status" : "active",
+  "date" : "2025-04-18T09:05:02+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  },
+  {
+    "name" : "InteropSanté",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "fhir@interopsante.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Consentements du patient liés à sa venue (ex. accès au DMP)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "DMP_ACCESS_GRANTED",
+    "display" : "Accès au DMP autorisé"
+  },
+  {
+    "code" : "DMP_ACCESS_DENIED",
+    "display" : "Accès au DMP refusé"
+  }]
+}

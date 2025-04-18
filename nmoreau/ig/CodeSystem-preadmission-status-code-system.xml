@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="preadmission-status-code-system"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem preadmission-status-code-system</b></p><a name="preadmission-status-code-system"> </a><a name="hcpreadmission-status-code-system"> </a><a name="preadmission-status-code-system-fr-FR"> </a><p>This  code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">CANCELLED<a name="preadmission-status-code-system-CANCELLED"> </a></td><td>Pré-admission annulée</td></tr><tr><td style="white-space:nowrap">CREATED<a name="preadmission-status-code-system-CREATED"> </a></td><td>Pré-admission créée</td></tr><tr><td style="white-space:nowrap">IN_PROGRESS<a name="preadmission-status-code-system-IN_PROGRESS"> </a></td><td>Pré-admission en cours</td></tr><tr><td style="white-space:nowrap">READY<a name="preadmission-status-code-system-READY"> </a></td><td>Pré-admission prête</td></tr><tr><td style="white-space:nowrap">COMPLETED<a name="preadmission-status-code-system-COMPLETED"> </a></td><td>Pré-admission terminée</td></tr><tr><td style="white-space:nowrap">REFUSED<a name="preadmission-status-code-system-REFUSED"> </a></td><td>Pré-admission refusée</td></tr></table></div>
+  </text>
+  <url value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status"/>
+  <version value="0.1.0"/>
+  <name value="PreadmissionStatusCodeSystem"/>
+  <title value="CodeSystem des statuts de la préadmission"/>
+  <status value="active"/>
+  <date value="2025-04-18T09:05:02+00:00"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="InteropSanté"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@interopsante.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="CodeSystem pour les statuts de la préadmission"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="CANCELLED"/>
+    <display value="Pré-admission annulée"/>
+  </concept>
+  <concept>
+    <code value="CREATED"/>
+    <display value="Pré-admission créée"/>
+  </concept>
+  <concept>
+    <code value="IN_PROGRESS"/>
+    <display value="Pré-admission en cours"/>
+  </concept>
+  <concept>
+    <code value="READY"/>
+    <display value="Pré-admission prête"/>
+  </concept>
+  <concept>
+    <code value="COMPLETED"/>
+    <display value="Pré-admission terminée"/>
+  </concept>
+  <concept>
+    <code value="REFUSED"/>
+    <display value="Pré-admission refusée"/>
+  </concept>
+</CodeSystem>

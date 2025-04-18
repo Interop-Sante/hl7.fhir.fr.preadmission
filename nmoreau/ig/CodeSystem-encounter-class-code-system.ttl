@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "encounter-class-code-system"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem encounter-class-code-system</b></p><a name=\"encounter-class-code-system\"> </a><a name=\"hcencounter-class-code-system\"> </a><a name=\"encounter-class-code-system-fr-FR\"> </a><p>This  code system <code>https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">NONAC<a name=\"encounter-class-code-system-NONAC\"> </a></td><td>Hospitalisation (NONAC)</td></tr><tr><td style=\"white-space:nowrap\">SS<a name=\"encounter-class-code-system-SS\"> </a></td><td>Consultation externe (SS)</td></tr><tr><td style=\"white-space:nowrap\">VR<a name=\"encounter-class-code-system-VR\"> </a></td><td>Téléconsultation (VR)</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "EncounterClassCodeSystem"] ; # 
+  fhir:title [ fhir:v "Code System du type de venue"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2025-04-18T09:05:02+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Interop'Santé"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Interop'Santé" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://interopsante.org/" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "InteropSanté" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "fhir@interopsante.org" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Types de venue utilisés pour les préadmissions en France."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "FR" ] ;
+       fhir:display [ fhir:v "FRANCE" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "NONAC" ] ;
+     fhir:display [ fhir:v "Hospitalisation (NONAC)" ]
+  ] [
+     fhir:code [ fhir:v "SS" ] ;
+     fhir:display [ fhir:v "Consultation externe (SS)" ]
+  ] [
+     fhir:code [ fhir:v "VR" ] ;
+     fhir:display [ fhir:v "Téléconsultation (VR)" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

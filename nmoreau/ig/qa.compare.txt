@@ -1,0 +1,115 @@
+ExampleIG : Validation Results
+=========================================
+
+err = 23, warn = 29, info = 5
+$--
+Generated $--. FHIR version $-- for hl7.fhir.fr.preadmission#$-- (canonical = http://hl7.fr/fhir/fr/preadmission)
+ Build Errors : 6 / 4 / 0
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-document-type-code-system : 2 / 1 / 2
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-encounter-class-code-system : 2 / 2 / 2
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-consent-code-system : 2 / 2 / 2
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-status-code-system : 5 / 1 / 2
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission : 0 / 0 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-appointment-questionnaire-response : 0 / 2 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-encounter-agent-instructions : 0 / 2 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-encounter-consent : 0 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-encounter-patient-comment : 0 / 2 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.organisme-complementaire : 0 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.statut-preadmission : 0 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.type-document : 2 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-patient-dmp-access-opposition-fr : 0 / 2 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-preadmission-appointment-fr : 0 / 1 / 2
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-preadmission-consent-fr : 0 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-preadmission-coverage-fr : 0 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-preadmission-documentreference-fr : 0 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-preadmission-encounter-fr : 0 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-encounter-class-value-set : 2 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-consent-value-set : 2 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-document-type-valueset : 4 / 0 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-status-value-set : 1 / 0 / 1
+</table>
+== n/a ==
+ERROR: ImplementationGuide.definition.parameter[24].value: Supressed messages file not found
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 196, column 8: The link 'definitions.json.zip' for "Définitions JSON (zip)" cannot be resolved
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 197, column 8: The link 'definitions.xml.zip' for "Définitions XML (zip)" cannot be resolved
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 198, column 8: The link 'definitions.ttl.zip' for "Définitions Turtle (zip)" cannot be resolved
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 204, column 8: The link 'examples.xml.zip' for "Exemples XML (zip)" cannot be resolved
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/downloads.html#/html/body/div/div/div/div/div/ul/li/a at Line 205, column 8: The link 'examples.json.zip' for "Exemples JSON (zip)" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/CodeSystem-document-type-code-system.json ==
+INFORMATION: CodeSystem/document-type-code-system: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+ERROR: CodeSystem/document-type-code-system: CodeSystem: Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+ERROR: CodeSystem/document-type-code-system: CodeSystem: Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+WARNING: CodeSystem/document-type-code-system: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-encounter-class-code-system.json ==
+ERROR: CodeSystem.where(url = 'https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system'): Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-encounter-class-code-system.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system) does not match the URL (https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system)
+INFORMATION: CodeSystem/encounter-class-code-system: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/encounter-class-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/encounter-class-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-encounter-class-code-system: URL Mismatch http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system vs https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system
+== fsh-generated/resources/CodeSystem-preadmission-consent-code-system.json ==
+ERROR: CodeSystem.where(url = 'https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system'): Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-consent-code-system.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-code-system) does not match the URL (https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system)
+INFORMATION: CodeSystem/preadmission-consent-code-system: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/preadmission-consent-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/preadmission-consent-code-system: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-consent-code-system: URL Mismatch http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-code-system vs https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system
+== fsh-generated/resources/CodeSystem-preadmission-status-code-system.json ==
+ERROR: CodeSystem.where(url = 'http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status'): Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-status-code-system.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system) does not match the URL (http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status)
+ERROR: CodeSystem.url: Resource id/url mismatch: preadmission-status-code-system/http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status
+INFORMATION: CodeSystem/preadmission-status-code-system: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+ERROR: CodeSystem/preadmission-status-code-system: CodeSystem: Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+ERROR: CodeSystem/preadmission-status-code-system: CodeSystem: Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+WARNING: CodeSystem/preadmission-status-code-system: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-status-code-system: URL Mismatch http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system vs http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status
+== fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission.json ==
+== fsh-generated/resources/StructureDefinition-appointment-questionnaire-response.json ==
+WARNING: StructureDefinition/appointment-questionnaire-response: StructureDefinition.context[0]: Review the extension type for appointment-questionnaire-response: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-encounter-agent-instructions.json ==
+WARNING: StructureDefinition/encounter-agent-instructions: StructureDefinition.context[0]: Review the extension type for encounter-agent-instructions: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-encounter-consent.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-consent'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-encounter-patient-comment.json ==
+WARNING: StructureDefinition/encounter-patient-comment: StructureDefinition.context[0]: Review the extension type for encounter-patient-comment: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.organisme-complementaire.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.organisme-complementaire'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.statut-preadmission.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.type-document.json ==
+ERROR: StructureDefinition.where(url = 'https://interop-sante.fr/fhir/StructureDefinition/DocumentTypeFr'): Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.type-document.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.type-document) does not match the URL (https://interop-sante.fr/fhir/StructureDefinition/DocumentTypeFr)
+WARNING: StructureDefinition.where(url = 'https://interop-sante.fr/fhir/StructureDefinition/DocumentTypeFr'): The Implementation Guide contains no examples for this extension
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-hl7.fhir.fr.preadmission.type-document: URL Mismatch http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.type-document vs https://interop-sante.fr/fhir/StructureDefinition/DocumentTypeFr
+== fsh-generated/resources/StructureDefinition-patient-dmp-access-opposition-fr.json ==
+WARNING: StructureDefinition/patient-dmp-access-opposition-fr: StructureDefinition.context[0]: Review the extension type for patient-dmp-access-opposition-fr: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/patient-dmp-access-opposition-fr'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-preadmission-appointment-fr.json ==
+INFORMATION: StructureDefinition/preadmission-appointment-fr: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-preadmission-consent-fr.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-preadmission-coverage-fr.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-preadmission-documentreference-fr.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-preadmission-encounter-fr.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/ValueSet-encounter-class-value-set.json ==
+ERROR: ValueSet.where(url = 'https://interop-sante.fr/fhir/ValueSet/encounter-class-value-set'): Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-encounter-class-value-set.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/encounter-class-value-set) does not match the URL (https://interop-sante.fr/fhir/ValueSet/encounter-class-value-set)
+WARNING: ValueSet/encounter-class-value-set: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-encounter-class-value-set: URL Mismatch http://hl7.fr/fhir/fr/preadmission/ValueSet/encounter-class-value-set vs https://interop-sante.fr/fhir/ValueSet/encounter-class-value-set
+== fsh-generated/resources/ValueSet-preadmission-consent-value-set.json ==
+ERROR: ValueSet.where(url = 'https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set'): Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-consent-value-set.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set) does not match the URL (https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set)
+WARNING: ValueSet/preadmission-consent-value-set: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-consent-value-set: URL Mismatch http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set vs https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set
+== fsh-generated/resources/ValueSet-preadmission-document-type-valueset.json ==
+ERROR: ValueSet.where(url = 'http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr'): Conformance resource /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-document-type-valueset.json - the canonical URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset) does not match the URL (http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr)
+ERROR: ValueSet.url: Resource id/url mismatch: preadmission-document-type-valueset/http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr
+ERROR: ValueSet/preadmission-document-type-valueset: ValueSet: Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ValueSet-preadmission-document-type-valueset: URL Mismatch http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset vs http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr
+== fsh-generated/resources/ValueSet-preadmission-status-value-set.json ==
+ERROR: ValueSet/preadmission-status-value-set: ValueSet: Value sets published by HL7 SHALL conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
