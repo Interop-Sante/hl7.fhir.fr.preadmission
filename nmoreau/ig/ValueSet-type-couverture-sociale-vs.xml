@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="type-couverture-sociale-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet type-couverture-sociale-vs</b></p><a name="type-couverture-sociale-vs"> </a><a name="hctype-couverture-sociale-vs"> </a><a name="type-couverture-sociale-vs-fr-FR"> </a><ul><li>Include codes provenant de<a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-ActCode.html"><code>http://terminology.hl7.org/CodeSystem/v3-ActCode</code></a> où code  = <a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-PUBLICPOL">PUBLICPOL</a> et code  = <a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-EHCPOL">EHCPOL</a></li></ul></div>
+  </text>
+  <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs"/>
+  <version value="0.1.0"/>
+  <name value="TypeCouvertureSocialeValueSet"/>
+  <title value="ValueSet des types de couverture pour la préadmission"/>
+  <status value="draft"/>
+  <date value="2025-04-24T12:12:45+00:00"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="InteropSanté"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@interopsante.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <filter>
+        <property value="code"/>
+        <op value="="/>
+        <value value="PUBLICPOL"/>
+      </filter>
+      <filter>
+        <property value="code"/>
+        <op value="="/>
+        <value value="EHCPOL"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

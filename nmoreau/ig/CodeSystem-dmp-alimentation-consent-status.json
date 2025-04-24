@@ -1,0 +1,52 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dmp-alimentation-consent-status",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dmp-alimentation-consent-status</b></p><a name=\"dmp-alimentation-consent-status\"> </a><a name=\"hcdmp-alimentation-consent-status\"> </a><a name=\"dmp-alimentation-consent-status-fr-FR\"> </a><p>This  code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">NA<a name=\"dmp-alimentation-consent-status-NA\"> </a></td><td>Information non recueillie</td></tr><tr><td style=\"white-space:nowrap\">IO<a name=\"dmp-alimentation-consent-status-IO\"> </a></td><td>Informé et opposé</td></tr><tr><td style=\"white-space:nowrap\">INO<a name=\"dmp-alimentation-consent-status-INO\"> </a></td><td>Informé et non opposé</td></tr></table></div>"
+  },
+  "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
+  "version" : "0.1.0",
+  "name" : "AlimentationDMPConsentStatus",
+  "title" : "Statut de consentement - alimentation du DMP",
+  "status" : "draft",
+  "date" : "2025-04-24T12:12:45+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  },
+  {
+    "name" : "InteropSanté",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "fhir@interopsante.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Valeurs possibles pour le consentement à l’alimentation du DMP.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "NA",
+    "display" : "Information non recueillie"
+  },
+  {
+    "code" : "IO",
+    "display" : "Informé et opposé"
+  },
+  {
+    "code" : "INO",
+    "display" : "Informé et non opposé"
+  }]
+}

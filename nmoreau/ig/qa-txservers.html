@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>ExampleIG : Terminology Server Report</title>
+  <title>PreadmissionFHIRIG : Terminology Server Report</title>
   <link href="fhir.css" rel="stylesheet"/>
   <style>
     span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
@@ -10,8 +10,8 @@
   </style>
 </head>
 <body style="margin: 20px; background-color: #ffffff">
- <h1>Terminology Server Report for ExampleIG</h1>
- <p>Generated Fri Apr 18 09:06:03 UTC 2025, FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.1.0 (canonical = <a href="http://hl7.fr/fhir/fr/preadmission">http://hl7.fr/fhir/fr/preadmission</a> (<a href="http://hl7.fr/fhir/fr/preadmission/history.html">history</a>))</p>
+ <h1>Terminology Server Report for PreadmissionFHIRIG</h1>
+ <p>Generated Thu Apr 24 12:14:15 UTC 2025, FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.1.0 (canonical = <a href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission">https://github.com/Interop-Sante/hl7.fhir.fr.preadmission</a> (<a href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -63,9 +63,121 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>urn:ietf:bcp:13</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
     <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
     <td>[http://unstats.un.org/unsd/methods/m49/m49.htm, urn:iso:std:iso:3166, urn:iso:std:iso:3166:-2]</td>
     <td>[auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4, auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4, auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4]</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1</td>
+    <td>http://snomed.info/sct</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://apps.health.belgium.be/ontoserver/fhir|http://tx.hl7europe.eu/r4</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://terminology.hl7.org/CodeSystem/coverage-type</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://terminology.hl7.org/CodeSystem/coverage-type</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>urn:uuid:3dbace6d-b100-4f90-9b33-6bdf0bc55b3c</td>
+    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>urn:uuid:1ffbc51f-efd1-4719-902a-707fe5e4eb37</td>
+    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs|0.1.0</td>
+    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>urn:uuid:92efc9e9-7833-4f80-a21f-85486bce96e2</td>
+    <td>urn:ietf:bcp:13</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.org/fhir/ValueSet/mimetypes|4.0.1</td>
+    <td>urn:ietf:bcp:13</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Fallback: primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>urn:uuid:fb4fd241-edb0-493e-9772-3586181f6794</td>
+    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs|0.1.0</td>
+    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs|0.1.0</td>
+    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
@@ -105,7 +217,7 @@
 </table>
 <h2>Primary Server: http://tx.fhir.org/r4</h2>
 <a href="http://tx.fhir.org/r4"></a>
-<p>Use Count: 9. Code Systems used: </p>
+<p>Use Count: 24. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -122,10 +234,44 @@
     </th>
   </tr>
   <tr>
+    <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
     <td>http://hl7.org/fhir/fhir-types</td>
     <td>0</td>
     <td>1</td>
     <td></td>
+  </tr>
+  <tr>
+    <td>http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://snomed.info/sct</td>
+    <td>0</td>
+    <td>1</td>
+    <td>
+      <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED CT (all versions)</a>
+    </td>
+  </tr>
+  <tr>
+    <td>http://terminology.hl7.org/CodeSystem/coverage-type</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
+    <td>2</td>
+    <td>4</td>
+    <td>
+      <a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-ActCode.html">ActCode</a>
+    </td>
   </tr>
   <tr>
     <td>http://unstats.un.org/unsd/methods/m49/m49.htm</td>
@@ -134,11 +280,17 @@
     <td></td>
   </tr>
   <tr>
+    <td>urn:ietf:bcp:13</td>
+    <td>0</td>
+    <td>3</td>
+    <td></td>
+  </tr>
+  <tr>
     <td>urn:iso:std:iso:3166</td>
     <td>3</td>
     <td>2</td>
     <td>
-      <a href="http://terminology.hl7.org/6.2.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
+      <a href="http://terminology.hl7.org/5.3.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>
     </td>
   </tr>
   <tr>
@@ -146,7 +298,7 @@
     <td>1</td>
     <td>2</td>
     <td>
-      <a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-iso3166-2.html">ISO 3166 Part 2 Country Subdivision Codes</a>
+      <a href="http://terminology.hl7.org/5.3.0/CodeSystem-ISO3166Part2.html">ISO 3166 Part 2 Country Subdivision Codes</a>
     </td>
   </tr>
 </table>

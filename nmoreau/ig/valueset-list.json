@@ -12,7 +12,40 @@
       ]
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-category-value-set",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PreadmissionConsentCategoryValueSet",
+      "title" : "ValueSet pour la catégorie de consentement",
+      "description" : "Valeurs autorisées pour la catégorie de consentement",
+      "systems" : [
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"
+      ]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-access-consent-status-vs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DmpConsultationConsentStatusVS",
+      "title" : "Valeurs de statut pour consultation du DMP",
+      "description" : null,
+      "systems" : [
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status"
+      ]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-feed-consent-status-vs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "DmpAlimentationConsentStatusVS",
+      "title" : "Valeurs de statut pour alimentation du DMP",
+      "description" : null,
+      "systems" : [
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status"
+      ]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status",
       "version" : "0.1.0",
       "status" : "active",
       "name" : "PreAdmissionStatusValueSet",
@@ -23,15 +56,22 @@
       ]
     },
     {
-      "url" : "https://interop-sante.fr/fhir/ValueSet/encounter-class-value-set",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
       "version" : "0.1.0",
-      "status" : "active",
-      "name" : "EncounterClassValueSet",
-      "title" : "ValueSet du type de venue",
-      "description" : "Valeurs autorisées pour le type de venue dans le cadre d'une préadmission.",
-      "systems" : [
-        "https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system"
-      ]
+      "status" : "draft",
+      "name" : "TypeCouvertureSocialeValueSet",
+      "title" : "ValueSet des types de couverture pour la préadmission",
+      "description" : "Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "TypeVenueEncounterValueSet",
+      "title" : "ValueSet des classes d'Encounter pour la préadmission",
+      "description" : "Restreint les classes d'Encounter aux valeurs NONAC, SS et VR",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"]
     },
     {
       "url" : "https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set",
@@ -41,7 +81,7 @@
       "title" : "ValueSet des consentements du patient",
       "description" : "Consentements exprimés par le patient dans le cadre de la préadmission.",
       "systems" : [
-        "https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system"
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"
       ]
     }
   ]

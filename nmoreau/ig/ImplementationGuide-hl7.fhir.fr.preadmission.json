@@ -3,14 +3,14 @@
   "id" : "hl7.fhir.fr.preadmission",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name=\"hl7.fhir.fr.preadmission\"> </a><a name=\"hchl7.fhir.fr.preadmission\"> </a><a name=\"hl7.fhir.fr.preadmission-fr-FR\"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name=\"hl7.fhir.fr.preadmission\"> </a><a name=\"hchl7.fhir.fr.preadmission\"> </a><a name=\"hl7.fhir.fr.preadmission-fr-FR\"> </a><h2>PreadmissionFHIRIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>"
   },
-  "url" : "http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission",
+  "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission",
   "version" : "0.1.0",
-  "name" : "ExampleIG",
-  "title" : "Exemple d'IG Français",
+  "name" : "PreadmissionFHIRIG",
+  "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
   "status" : "draft",
-  "date" : "2025-04-18T09:05:02+00:00",
+  "date" : "2025-04-24T12:12:45+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -56,6 +56,12 @@
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
     "version" : "5.2.0"
+  },
+  {
+    "id" : "hl7_fhir_fr_core",
+    "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
+    "packageId" : "hl7.fhir.fr.core",
+    "version" : "2.0.1"
   }],
   "definition" : {
     "extension" : [{
@@ -175,7 +181,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "http://hl7.fr/fhir/fr/preadmission/history.html"
+        "valueString" : "history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -465,7 +471,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "http://hl7.fr/fhir/fr/preadmission/history.html"
+        "valueString" : "history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -637,14 +643,14 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
+        "valueString" : "Appointment"
       }],
       "reference" : {
-        "reference" : "CodeSystem/preadmission-consent-code-system"
+        "reference" : "Appointment/appt-irm-001"
       },
-      "name" : "Code System des consentements du patient",
-      "description" : "Consentements du patient liés à sa venue (ex. accès au DMP)",
-      "exampleBoolean" : false
+      "name" : "appt-irm-001",
+      "description" : "IRM cérébrale - préadmission",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"
     },
     {
       "extension" : [{
@@ -685,13 +691,24 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Consent"
+      }],
+      "reference" : {
+        "reference" : "Consent/consent-dmp"
+      },
+      "name" : "consent-dmp",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/encounter-consent"
+        "reference" : "StructureDefinition/preadmission-consent-fr-exntension"
       },
-      "name" : "Consentement - Opposition DMP",
-      "description" : "Consentement décrivant les oppositions du patient à l’accès à son DMP (bris de glace, centre de régulation, date de recueil).",
+      "name" : "Consentement lié au rendez-vous",
+      "description" : "Référence vers un ou plusieurs consentements donnés dans le cadre de la préadmission.",
       "exampleBoolean" : false
     },
     {
@@ -704,6 +721,85 @@
       },
       "name" : "Consignes de l'agent administratif",
       "description" : "Consignes à destination du patient, fournies par l'agent administratif",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/appointment-context-extension"
+      },
+      "name" : "Contexte du rendez-vous",
+      "description" : "Contexte lié au rendez-vous (ex : ALD, maternité, accidents du travail, etc.)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Coverage"
+      }],
+      "reference" : {
+        "reference" : "Coverage/coverage-amc"
+      },
+      "name" : "coverage-amc",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Coverage"
+      }],
+      "reference" : {
+        "reference" : "Coverage/coverage-amo"
+      },
+      "name" : "coverage-amo",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "DocumentReference"
+      }],
+      "reference" : {
+        "reference" : "DocumentReference/documentreference-cni-recto"
+      },
+      "name" : "documentreference-cni-recto",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/encounter-irm-externe"
+      },
+      "name" : "encounter-irm-externe",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/encounter-irm-refused"
+      },
+      "name" : "encounter-irm-refused",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/fr-coverage-amc-extended"
+      },
+      "name" : "Extension AMC Étendue",
+      "description" : "Extension pour les données spécifiques AMC incluant nom, numéro, code convention, code CSR et datamatrix",
       "exampleBoolean" : false
     },
     {
@@ -736,18 +832,6 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/preadmission-coverage-fr"
-      },
-      "name" : "Fr Preadmission Coverage Profile",
-      "description" : "Profil FHIR pour la couverture sociale du patient pendant la préadmission",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
         "reference" : "StructureDefinition/preadmission-documentreference-fr"
       },
       "name" : "Fr Preadmission DocumentReference Profile",
@@ -772,30 +856,6 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/patient-dmp-access-opposition-fr"
-      },
-      "name" : "Opposition à l'accès DMP",
-      "description" : "Permet d’enregistrer les oppositions du patient à l’accès à son DMP selon les règles ZFA (ZFA-6, ZFA-7, ZFA-8).",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/hl7.fhir.fr.preadmission.organisme-complementaire"
-      },
-      "name" : "PreadmissionOrganismeComplementaireFr",
-      "description" : "Rattachement à un organisme complémentaire.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
         "reference" : "StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"
       },
       "name" : "PreadmissionStatutFr",
@@ -805,14 +865,36 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
+        "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/hl7.fhir.fr.preadmission.type-document"
+        "reference" : "StructureDefinition/preadmission-coverage-fr"
       },
-      "name" : "PreadmissionTypeDocumentFr",
-      "description" : "Extension pour indiquer le type de document dans DocumentReference",
+      "name" : "Profil Coverage pour la préadmission FR",
+      "description" : "Profil Coverage pour la gestion des informations liées à la couverture sociale AMO et AMC pour la préadmission hospitalière.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "QuestionnaireResponse"
+      }],
+      "reference" : {
+        "reference" : "QuestionnaireResponse/qr-irm-001"
+      },
+      "name" : "qr-irm-001",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Questionnaire"
+      }],
+      "reference" : {
+        "reference" : "Questionnaire/questionnaire-irm"
+      },
+      "name" : "Questionnaire IRM - Préadmission",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -841,6 +923,42 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/dmp-alimentation-consent-status"
+      },
+      "name" : "Statut de consentement - alimentation du DMP",
+      "description" : "Valeurs possibles pour le consentement à l’alimentation du DMP.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/dmp-consultation-consent-status"
+      },
+      "name" : "Statut de consentement - consultation du DMP",
+      "description" : "Valeurs possibles pour le consentement à la consultation du DMP (Mon Espace Santé).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/preadmission-consent-type"
+      },
+      "name" : "Types de consentements pour la préadmission",
+      "description" : "Types de consentement recueillis pendant la préadmission.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -848,6 +966,40 @@
       },
       "name" : "Types de documents - ValueSet",
       "description" : "Liste des types de documents autorisés pour la préadmission",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/dmp-feed-consent-status-vs"
+      },
+      "name" : "Valeurs de statut pour alimentation du DMP",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/dmp-access-consent-status-vs"
+      },
+      "name" : "Valeurs de statut pour consultation du DMP",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/type-venue-encounter-vs"
+      },
+      "name" : "ValueSet des classes d'Encounter pour la préadmission",
+      "description" : "Restreint les classes d'Encounter aux valeurs NONAC, SS et VR",
       "exampleBoolean" : false
     },
     {
@@ -880,10 +1032,22 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/encounter-class-value-set"
+        "reference" : "ValueSet/type-couverture-sociale-vs"
       },
-      "name" : "ValueSet du type de venue",
-      "description" : "Valeurs autorisées pour le type de venue dans le cadre d'une préadmission.",
+      "name" : "ValueSet des types de couverture pour la préadmission",
+      "description" : "Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/consent-category-value-set"
+      },
+      "name" : "ValueSet pour la catégorie de consentement",
+      "description" : "Valeurs autorisées pour la catégorie de consentement",
       "exampleBoolean" : false
     }],
     "page" : {
@@ -901,6 +1065,96 @@
         }],
         "nameUrl" : "index.html",
         "title" : "Accueil",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "processus.html"
+        }],
+        "nameUrl" : "processus.html",
+        "title" : "Processus de Préadmission",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "processus-ressource-fhir.html"
+        }],
+        "nameUrl" : "processus-ressource-fhir.html",
+        "title" : "Processus centré sur les ressources",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "appointment.html"
+        }],
+        "nameUrl" : "appointment.html",
+        "title" : "Rendez-vous (Appointment)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "encounter.html"
+        }],
+        "nameUrl" : "encounter.html",
+        "title" : "Preadmission (Encounter)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "consentements.html"
+        }],
+        "nameUrl" : "consentements.html",
+        "title" : "Consentements",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "coverage.html"
+        }],
+        "nameUrl" : "coverage.html",
+        "title" : "Couverture Sociale (Coverage)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "questionnaires.html"
+        }],
+        "nameUrl" : "questionnaires.html",
+        "title" : "Questionnaires",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "documents.html"
+        }],
+        "nameUrl" : "documents.html",
+        "title" : "Documents Justificatifs",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "flux.html"
+        }],
+        "nameUrl" : "flux.html",
+        "title" : "Diagrammes des flux",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "sequence.html"
+        }],
+        "nameUrl" : "sequence.html",
+        "title" : "Diagramme de séquence du processus",
         "generation" : "markdown"
       },
       {

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="coverage-amc"/>
+  <meta>
+    <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Coverage coverage-amc</b></p><a name="coverage-amc"> </a><a name="hccoverage-amc"> </a><a name="coverage-amc-fr-FR"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-preadmission-coverage-fr.html">Profil Coverage pour la préadmission FR</a></p></div><blockquote><p><b>Extension AMC Étendue</b></p><ul><li>nomAMC: Mutuelle Santé Plus</li><li>numeroAMC: 987654321</li><li>codeConvention: 12345</li><li>codeCSR: 67890</li></ul></blockquote><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMC-2025-001 (use: official, )</p><p><b>status</b>: Active</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/coverage-type EHCPOL}">Assurance Maladie Complémentaire</span></p><p><b>subscriber</b>: <a href="Patient/patient-001">Patient/patient-001</a></p><p><b>subscriberId</b>: AMC-987654321</p><p><b>beneficiary</b>: <a href="Patient/patient-001">Patient/patient-001</a></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Assurance Maladie Complémentaire</p></div>
+  </text>
+  <extension url="http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended">
+    <extension url="nomAMC">
+      <valueString value="Mutuelle Santé Plus"/>
+    </extension>
+    <extension url="numeroAMC">
+      <valueString value="987654321"/>
+    </extension>
+    <extension url="codeConvention">
+      <valueString value="12345"/>
+    </extension>
+    <extension url="codeCSR">
+      <valueString value="67890"/>
+    </extension>
+  </extension>
+  <identifier>
+    <use value="official"/>
+    <system value="http://example.com/identifiers/coverage"/>
+    <value value="AMC-2025-001"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/coverage-type"/>
+      <code value="EHCPOL"/>
+      <display value="Assurance Maladie Complémentaire"/>
+    </coding>
+  </type>
+  <subscriber>
+    <reference value="Patient/patient-001"/>
+  </subscriber>
+  <subscriberId value="AMC-987654321"/>
+  <beneficiary>
+    <reference value="Patient/patient-001"/>
+  </beneficiary>
+  <period>
+    <start value="2025-01-01T00:00:00+01:00"/>
+    <end value="2025-12-31T23:59:59+01:00"/>
+  </period>
+  <payor>
+    <display value="Assurance Maladie Complémentaire"/>
+  </payor>
+</Coverage>

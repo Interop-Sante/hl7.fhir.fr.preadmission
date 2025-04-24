@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Code System du type de venue - XML Representation - Exemple d&#39;IG Français v0.1.0</title>
+    <title>Code System du type de venue - XML Representation - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"3.20"}
-    h3,h4,h5,h6{--heading-prefix:"3.20"}</style>
+    <style type="text/css">h2{--heading-prefix:"13.22"}
+    h3,h4,h5,h6{--heading-prefix:"13.22"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -59,7 +59,7 @@
 </div>
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Exemple d&#39;IG Français</span>
+          <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
             <br/>
             <span style="display:inline-block;">0.1.0 - ci-build
 
@@ -94,6 +94,44 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Processus de préadmission
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="flux.html">Diagramme de flux</a>
+      </li>
+      <li>
+        <a href="sequence.html">Diagramme de séquence</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="appointment.html">Appointment</a>
+      </li>
+      <li>
+        <a href="encounter.html">Encounter</a>
+      </li>
+      <li>
+        <a href="coverage.html">Coverage</a>
+      </li>
+      <li>
+        <a href="consentements.html">Consentements</a>
+      </li>
+      <li>
+        <a href="questionnaires.html">Questionnaires</a>
+      </li>
+      <li>
+        <a href="documents.html">Documents</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -149,7 +187,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Exemple d'IG Français - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.fr/fhir/fr/preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -204,7 +242,7 @@
         
           Active
           
-            as of 2025-04-18
+            as of 2025-04-24
           
         
       </td>
@@ -225,15 +263,15 @@
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;encounter-class-code-system&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem encounter-class-code-system&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;encounter-class-code-system&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcencounter-class-code-system&quot;&gt; &lt;/a&gt;&lt;a name=&quot;encounter-class-code-system-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;This  code system &lt;code&gt;https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;NONAC&lt;a name=&quot;encounter-class-code-system-NONAC&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospitalisation (NONAC)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;SS&lt;a name=&quot;encounter-class-code-system-SS&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Consultation externe (SS)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;VR&lt;a name=&quot;encounter-class-code-system-VR&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Téléconsultation (VR)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: CodeSystem encounter-class-code-system&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;encounter-class-code-system&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcencounter-class-code-system&quot;&gt; &lt;/a&gt;&lt;a name=&quot;encounter-class-code-system-fr-FR&quot;&gt; &lt;/a&gt;&lt;p&gt;This  code system &lt;code&gt;http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system&lt;/code&gt; defines the following codes:&lt;/p&gt;&lt;table class=&quot;codes&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;NONAC&lt;a name=&quot;encounter-class-code-system-NONAC&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospitalisation (NONAC)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;SS&lt;a name=&quot;encounter-class-code-system-SS&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Consultation externe (SS)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;VR&lt;a name=&quot;encounter-class-code-system-VR&quot;&gt; &lt;/a&gt;&lt;/td&gt;&lt;td&gt;Téléconsultation (VR)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.url">url</a>
-       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system&quot;/&gt;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.version">version</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;0.1.0&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;EncounterClassCodeSystem&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Code System du type de venue&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;active&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-04-18T09:05:02+00:00&quot;/&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.date">date</a> <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">value</a>=&quot;2025-04-24T12:12:45+00:00&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.publisher">publisher</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Interop'Santé&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/codesystem.html#CodeSystem.contact">contact</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Interop'Santé&quot;/&gt;
@@ -319,7 +357,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 18, 2025 09:05+0000">2025-04-18</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:13+0000">2025-04-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -328,7 +366,7 @@
                 
           Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.fr/fhir/fr/preadmission/history.html">Historique des versions </a>
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Historique des versions </a>
                  
                 
 

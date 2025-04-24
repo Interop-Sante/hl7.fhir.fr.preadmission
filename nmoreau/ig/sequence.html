@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Diagramme de séquence du processus - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/hl7fr.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"11"}
+    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+<div id="project-nav">
+  <a id="hl7-logo" no-external="true" href="http://interopsante.org/"><img height="50" alt="Interop'Santé Logo" src="assets/images/IS_LOGO.png"/></a>
+</div>
+
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Processus de préadmission
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="flux.html">Diagramme de flux</a>
+      </li>
+      <li>
+        <a href="sequence.html">Diagramme de séquence</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="appointment.html">Appointment</a>
+      </li>
+      <li>
+        <a href="encounter.html">Encounter</a>
+      </li>
+      <li>
+        <a href="coverage.html">Coverage</a>
+      </li>
+      <li>
+        <a href="consentements.html">Consentements</a>
+      </li>
+      <li>
+        <a href="questionnaires.html">Questionnaires</a>
+      </li>
+      <li>
+        <a href="documents.html">Documents</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Documentations
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation des IGs</a>
+      </li>
+      <li>
+        <a target="_blank" href="https://www.interopsante.org/">Site d&apos;InteropSanté</a>
+      </li>
+      <li>
+        <a href="downloads.html">Téléchargements</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Diagramme de séquence du processus</b></li>
+
+          <span style="float:right;">
+
+            <a href="flux.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="downloads.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Diagramme de séquence du processus</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#séquence-des-opérations--preadmission-hospitalière-en-ligne" id="markdown-toc-séquence-des-opérations--preadmission-hospitalière-en-ligne">Séquence des Opérations – Preadmission Hospitalière en Ligne</a>    <ul>
+      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+      <li><a href="#séquence-des-étapes" id="markdown-toc-séquence-des-étapes">Séquence des étapes</a>        <ul>
+          <li><a href="#1-prise-de-rendez-vous-par-le-patient" id="markdown-toc-1-prise-de-rendez-vous-par-le-patient">1. <strong>Prise de Rendez-vous par le Patient</strong></a></li>
+          <li><a href="#2-remplissage-du-formulaire-de-pré-admission" id="markdown-toc-2-remplissage-du-formulaire-de-pré-admission">2. <strong>Remplissage du Formulaire de Pré-admission</strong></a></li>
+          <li><a href="#3-transmission-des-données-au-sih" id="markdown-toc-3-transmission-des-données-au-sih">3. <strong>Transmission des Données au SIH</strong></a></li>
+          <li><a href="#4-vérification-par-le-bureau-des-entrées-bde" id="markdown-toc-4-vérification-par-le-bureau-des-entrées-bde">4. <strong>Vérification par le Bureau des Entrées (BDE)</strong></a></li>
+          <li><a href="#5-retour-au-patient" id="markdown-toc-5-retour-au-patient">5. <strong>Retour au Patient</strong></a></li>
+        </ul>
+      </li>
+      <li><a href="#récapitulatif-de-la-séquence" id="markdown-toc-récapitulatif-de-la-séquence">Récapitulatif de la Séquence</a></li>
+      <li><a href="#diagramme-de-séquence" id="markdown-toc-diagramme-de-séquence">Diagramme de Séquence</a></li>
+      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="séquence-des-opérations--preadmission-hospitalière-en-ligne">Séquence des Opérations – Preadmission Hospitalière en Ligne</h1>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>La pré-admission hospitalière en ligne repose sur une séquence d’opérations bien définies qui permettent la collecte et la validation des informations administratives nécessaires avant l’admission physique du patient à l’hôpital. Cette séquence est orchestrée par plusieurs acteurs du système de santé, chacun ayant un rôle spécifique à jouer dans le processus.</p>
+
+<h2 id="séquence-des-étapes">Séquence des étapes</h2>
+
+<h3 id="1-prise-de-rendez-vous-par-le-patient">1. <strong>Prise de Rendez-vous par le Patient</strong></h3>
+<p>Le patient réserve une consultation via un <strong>portail externe</strong> (par exemple, Doctolib). Lors de cette prise de rendez-vous :</p>
+<ul>
+  <li>Un <code class="language-plaintext highlighter-rouge">Appointment</code> est créé pour planifier la consultation.</li>
+</ul>
+
+<h3 id="2-remplissage-du-formulaire-de-pré-admission">2. <strong>Remplissage du Formulaire de Pré-admission</strong></h3>
+<p>Une fois le rendez-vous pris, le patient remplit un formulaire de pré-admission via le <strong>portail de préadmission</strong>. Ce formulaire inclut des informations personnelles, des détails sur la couverture sociale, des documents justificatifs, ainsi que des consentements :</p>
+<ul>
+  <li>Les données sont envoyées sous forme de <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>.</li>
+  <li>Les documents justificatifs sont téléchargés sous forme de <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</li>
+  <li>Le consentement du patient est recueilli via une ressource <code class="language-plaintext highlighter-rouge">Consent</code>.</li>
+</ul>
+
+<h3 id="3-transmission-des-données-au-sih">3. <strong>Transmission des Données au SIH</strong></h3>
+<p>Une fois les informations saisies et validées par le patient, le <strong>SIH</strong> (Système d’Information Hospitalier) reçoit les données :</p>
+<ul>
+  <li>Un <code class="language-plaintext highlighter-rouge">Encounter</code> de type préadmission est créé dans le SIH pour amorcer le processus de validation des informations administratives.</li>
+</ul>
+
+<h3 id="4-vérification-par-le-bureau-des-entrées-bde">4. <strong>Vérification par le Bureau des Entrées (BDE)</strong></h3>
+<p>Un agent du <strong>Bureau des Entrées (BDE)</strong> vérifie les données récupérées, notamment :</p>
+<ul>
+  <li>La validité des informations du patient.</li>
+  <li>La conformité des documents justificatifs.</li>
+  <li>La vérification de la couverture sociale.</li>
+</ul>
+
+<p>Le BDE peut accepter ou refuser la pré-admission, et dans ce cas, une cause de rejet peut être spécifiée à l’aide d’une ressource <code class="language-plaintext highlighter-rouge">Extension</code>.</p>
+
+<h3 id="5-retour-au-patient">5. <strong>Retour au Patient</strong></h3>
+<p>Après vérification, le <strong>portail de préadmission</strong> notifie le patient de l’issue de la pré-admission (acceptation ou rejet), avec des justifications éventuelles.</p>
+
+<hr />
+
+<h2 id="récapitulatif-de-la-séquence">Récapitulatif de la Séquence</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Étape</th>
+      <th>Ressources FHIR utilisées</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1. Prise de rendez-vous</td>
+      <td><code class="language-plaintext highlighter-rouge">Appointment</code></td>
+    </tr>
+    <tr>
+      <td>2. Remplissage du formulaire</td>
+      <td><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>, <code class="language-plaintext highlighter-rouge">Consent</code></td>
+    </tr>
+    <tr>
+      <td>3. Transmission au SIH</td>
+      <td><code class="language-plaintext highlighter-rouge">Encounter</code></td>
+    </tr>
+    <tr>
+      <td>4. Vérification par le BDE</td>
+      <td><code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Coverage</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code>, <code class="language-plaintext highlighter-rouge">Extension</code></td>
+    </tr>
+    <tr>
+      <td>5. Retour au patient</td>
+      <td><code class="language-plaintext highlighter-rouge">Consent</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="diagramme-de-séquence">Diagramme de Séquence</h2>
+
+<p>Voici le diagramme de séquence Mermaid illustrant la procédure de pré-admission :</p>
+
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Patient
+    participant PortailRdv as Portail de rendez-vous
+    participant PortailPreadm as Portail de préadmission
+    participant SIH
+    participant AgentBDE as Agent du Bureau des Entrées
+
+    %% Étape 1 : Prise de RDV
+    Patient-&gt;&gt;PortailRdv: Réservation de rendez-vous
+    PortailRdv--&gt;&gt;SIH: Notification du rendez-vous (Appointment)
+
+    %% Étape 2 : SIH initie la préadmission
+    SIH-&gt;&gt;PortailPreadm: Envoi d'un Encounter (pré-admission)
+    
+    %% Étape 3 : Notification au patient
+    PortailPreadm-&gt;&gt;Patient: Envoi lien sécurisé
+
+    %% Étape 4 : Patient renseigne ses données
+    Patient-&gt;&gt;PortailPreadm: Envoi Patient / Coverage / DocumentReference / Consent\n+ Extension (message libre)
+
+    %% Étape 5 : Polling du SIH
+    loop Polling régulier
+        SIH-&gt;&gt;PortailPreadm: Récupération des données
+        PortailPreadm--&gt;&gt;SIH: Retour des ressources complétées
+    end
+
+    %% Étape 6 : Vérification par l'agent
+    AgentBDE-&gt;&gt;SIH: Consultation des données
+    AgentBDE-&gt;&gt;PortailPreadm: Acceptation ou refus\n+ cause de refus (Extension/Communication)
+
+    %% Étape 7 : Notification finale
+    PortailPreadm-&gt;&gt;Patient: Résultat (accepté / rejeté)
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Cette séquence garantit une gestion fluide et structurée des données administratives liées à la pré-admission hospitalière en ligne. Chaque acteur du processus contribue à l’efficacité du parcours patient, tout en respectant les normes d’interopérabilité et de sécurité des données.</p>
+
+<hr />
+
+<p>Le diagramme de séquence montre l’enchaînement des interactions entre les différents acteurs et systèmes tout au long du processus de pré-admission. Si tu as d’autres demandes ou des modifications à apporter, fais-le moi savoir !</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="flux.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="downloads.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:13+0000">2025-04-24</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Historique des versions </a>
+                 
+                
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

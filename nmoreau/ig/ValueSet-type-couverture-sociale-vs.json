@@ -1,0 +1,53 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "type-couverture-sociale-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet type-couverture-sociale-vs</b></p><a name=\"type-couverture-sociale-vs\"> </a><a name=\"hctype-couverture-sociale-vs\"> </a><a name=\"type-couverture-sociale-vs-fr-FR\"> </a><ul><li>Include codes provenant de<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-v3-ActCode.html\"><code>http://terminology.hl7.org/CodeSystem/v3-ActCode</code></a> où code  = <a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-PUBLICPOL\">PUBLICPOL</a> et code  = <a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-EHCPOL\">EHCPOL</a></li></ul></div>"
+  },
+  "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
+  "version" : "0.1.0",
+  "name" : "TypeCouvertureSocialeValueSet",
+  "title" : "ValueSet des types de couverture pour la préadmission",
+  "status" : "draft",
+  "date" : "2025-04-24T12:12:45+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  },
+  {
+    "name" : "InteropSanté",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "fhir@interopsante.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "filter" : [{
+        "property" : "code",
+        "op" : "=",
+        "value" : "PUBLICPOL"
+      },
+      {
+        "property" : "code",
+        "op" : "=",
+        "value" : "EHCPOL"
+      }]
+    }]
+  }
+}

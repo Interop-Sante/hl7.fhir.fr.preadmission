@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system> a fhir:CodeSystem ;
+<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/document-type-code-system> a fhir:CodeSystem ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "document-type-code-system"] ; # 
   fhir:text [
@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PreadmissionCodeSystemDocumentTypeFr"] ; # 
   fhir:title [ fhir:v "Code System des types de documents pour la préadmission"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-04-18T09:05:02+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-24T12:12:45+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

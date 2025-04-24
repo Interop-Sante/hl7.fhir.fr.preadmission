@@ -1,6 +1,28 @@
 {
   "codeSystems" : [
     {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "AlimentationDMPConsentStatus",
+      "title" : "Statut de consentement - alimentation du DMP",
+      "description" : "Valeurs possibles pour le consentement à l’alimentation du DMP.",
+      "uses" : {
+      },
+      "ValueSet-dmp-feed-consent-status-vs.html" : "Valeurs de statut pour alimentation du DMP"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ConsultationDMPConsentStatus",
+      "title" : "Statut de consentement - consultation du DMP",
+      "description" : "Valeurs possibles pour le consentement à la consultation du DMP (Mon Espace Santé).",
+      "uses" : {
+      },
+      "ValueSet-dmp-access-consent-status-vs.html" : "Valeurs de statut pour consultation du DMP"
+    },
+    {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
       "version" : "0.1.0",
       "status" : "active",
@@ -10,6 +32,18 @@
       "uses" : {
       },
       "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PreadmissionConsentCategoryCodeSystem",
+      "title" : "Types de consentements pour la préadmission",
+      "description" : "Types de consentement recueillis pendant la préadmission.",
+      "uses" : {
+      },
+      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient",
+      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement"
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
@@ -23,26 +57,17 @@
       "ValueSet-preadmission-status-value-set.html" : "ValueSet des statuts de préadmission"
     },
     {
-      "url" : "https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system",
-      "version" : "0.1.0",
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "version" : "9.0.0",
       "status" : "active",
-      "name" : "EncounterClassCodeSystem",
-      "title" : "Code System du type de venue",
-      "description" : "Types de venue utilisés pour les préadmissions en France.",
+      "name" : "ActCode",
+      "title" : "ActCode",
+      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
-      "ValueSet-encounter-class-value-set.html" : "ValueSet du type de venue"
-    },
-    {
-      "url" : "https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "PreadmissionConsentCodeSystem",
-      "title" : "Code System des consentements du patient",
-      "description" : "Consentements du patient liés à sa venue (ex. accès au DMP)",
-      "uses" : {
-      },
-      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient"
+      "ValueSet-type-venue-encounter-vs.html" : "ValueSet des classes d'Encounter pour la préadmission",
+      "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission"
     }
   ]
 }

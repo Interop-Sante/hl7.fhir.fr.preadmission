@@ -5,6 +5,74 @@
   "jurisdiction": "FR",
   "extensions": [
     {
+      "url": "http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended",
+      "title": "Extension AMC Étendue",
+      "types": [
+        "string",
+        "string",
+        "string",
+        "string",
+        "string",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context-extension",
+      "title": "Contexte du rendez-vous",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
       "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",
       "title": "Questionnaire lié au rendez-vous",
       "types": [
@@ -12,133 +80,28 @@
       ]
     },
     {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions",
-      "title": "Consignes de l\u0027agent administratif",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension",
+      "title": "Consentement lié au rendez-vous",
       "types": [
-        "string"
+        "Reference"
       ]
     },
     {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-consent",
-      "title": "Consentement - Opposition DMP",
-      "types": [
-        "base64Binary",
-        "boolean",
-        "canonical",
-        "code",
-        "date",
-        "dateTime",
-        "decimal",
-        "id",
-        "instant",
-        "integer",
-        "markdown",
-        "oid",
-        "positiveInt",
-        "string",
-        "time",
-        "unsignedInt",
-        "uri",
-        "url",
-        "uuid",
-        "Address",
-        "Age",
-        "Annotation",
-        "Attachment",
-        "CodeableConcept",
-        "Coding",
-        "ContactPoint",
-        "Count",
-        "Distance",
-        "Duration",
-        "HumanName",
-        "Identifier",
-        "Money",
-        "Period",
-        "Quantity",
-        "Range",
-        "Ratio",
-        "Reference",
-        "SampledData",
-        "Signature",
-        "Timing",
-        "ContactDetail",
-        "Contributor",
-        "DataRequirement",
-        "Expression",
-        "ParameterDefinition",
-        "RelatedArtifact",
-        "TriggerDefinition",
-        "UsageContext",
-        "Dosage",
-        "Meta"
-      ]
-    },
-    {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient",
       "title": "Remarque du patient",
       "types": [
         "string"
       ]
     },
     {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.organisme-complementaire",
-      "title": "PreadmissionOrganismeComplementaireFr",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent",
+      "title": "Consignes de l\u0027agent administratif",
       "types": [
-        "base64Binary",
-        "boolean",
-        "canonical",
-        "code",
-        "date",
-        "dateTime",
-        "decimal",
-        "id",
-        "instant",
-        "integer",
-        "markdown",
-        "oid",
-        "positiveInt",
-        "string",
-        "time",
-        "unsignedInt",
-        "uri",
-        "url",
-        "uuid",
-        "Address",
-        "Age",
-        "Annotation",
-        "Attachment",
-        "CodeableConcept",
-        "Coding",
-        "ContactPoint",
-        "Count",
-        "Distance",
-        "Duration",
-        "HumanName",
-        "Identifier",
-        "Money",
-        "Period",
-        "Quantity",
-        "Range",
-        "Ratio",
-        "Reference",
-        "SampledData",
-        "Signature",
-        "Timing",
-        "ContactDetail",
-        "Contributor",
-        "DataRequirement",
-        "Expression",
-        "ParameterDefinition",
-        "RelatedArtifact",
-        "TriggerDefinition",
-        "UsageContext",
-        "Dosage",
-        "Meta"
+        "string"
       ]
     },
     {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus",
       "title": "PreadmissionStatutFr",
       "types": [
         "CodeableConcept",
@@ -154,72 +117,6 @@
         "string",
         "boolean",
         "string"
-      ]
-    },
-    {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/patient-dmp-access-opposition-fr",
-      "title": "Opposition à l\u0027accès DMP",
-      "types": [
-        "boolean",
-        "boolean",
-        "dateTime",
-        "base64Binary",
-        "boolean",
-        "canonical",
-        "code",
-        "date",
-        "dateTime",
-        "decimal",
-        "id",
-        "instant",
-        "integer",
-        "markdown",
-        "oid",
-        "positiveInt",
-        "string",
-        "time",
-        "unsignedInt",
-        "uri",
-        "url",
-        "uuid",
-        "Address",
-        "Age",
-        "Annotation",
-        "Attachment",
-        "CodeableConcept",
-        "Coding",
-        "ContactPoint",
-        "Count",
-        "Distance",
-        "Duration",
-        "HumanName",
-        "Identifier",
-        "Money",
-        "Period",
-        "Quantity",
-        "Range",
-        "Ratio",
-        "Reference",
-        "SampledData",
-        "Signature",
-        "Timing",
-        "ContactDetail",
-        "Contributor",
-        "DataRequirement",
-        "Expression",
-        "ParameterDefinition",
-        "RelatedArtifact",
-        "TriggerDefinition",
-        "UsageContext",
-        "Dosage",
-        "Meta"
-      ]
-    },
-    {
-      "url": "https://interop-sante.fr/fhir/StructureDefinition/DocumentTypeFr",
-      "title": "PreadmissionTypeDocumentFr",
-      "types": [
-        "Coding"
       ]
     }
   ],
@@ -239,7 +136,7 @@
     "Coverage": [
       {
         "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr",
-        "title": "Fr Preadmission Coverage Profile"
+        "title": "Profil Coverage pour la préadmission FR"
       }
     ],
     "DocumentReference": [
@@ -256,23 +153,33 @@
     ]
   },
   "usage": {
+    "http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended": [
+      "Coverage"
+    ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context": [
+      "Appointment"
+    ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response": [
       "Appointment"
     ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions": [
       "Encounter"
     ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-consent": [
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension": [
+      "Appointment",
       "Encounter"
     ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment": [
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-status": [
       "Encounter"
     ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission": [
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient": [
       "Encounter"
     ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/patient-dmp-access-opposition-fr": [
-      "Extension"
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent": [
+      "Encounter"
+    ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus": [
+      "Encounter"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
@@ -314,8 +221,11 @@
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
     ],
-    "https://interop-sante.fr/fhir/StructureDefinition/DocumentTypeFr": [
-      "DocumentReference"
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator": [
+      "Appointment"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-estimated-discharge-date": [
+      "Encounter"
     ]
   }
 }

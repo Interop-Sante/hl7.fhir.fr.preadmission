@@ -5,12 +5,12 @@
     "status" : "generated",
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet preadmission-status-value-set</b></p><a name=\"preadmission-status-value-set\"> </a><a name=\"hcpreadmission-status-value-set\"> </a><a name=\"preadmission-status-value-set-fr-FR\"> </a><ul><li>Include tous les codes définis dans <a href=\"CodeSystem-preadmission-status-code-system.html\"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status</code></a></li></ul></div>"
   },
-  "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set",
+  "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status",
   "version" : "0.1.0",
   "name" : "PreAdmissionStatusValueSet",
   "title" : "ValueSet des statuts de préadmission",
   "status" : "active",
-  "date" : "2025-04-18T09:05:02+00:00",
+  "date" : "2025-04-24T12:12:45+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

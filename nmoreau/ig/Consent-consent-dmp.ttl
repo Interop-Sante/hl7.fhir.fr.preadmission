@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Consent/consent-dmp> a fhir:Consent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "consent-dmp"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"^^xsd:anyURI ;
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Consent consent-dmp</b></p><a name=\"consent-dmp\"> </a><a name=\"hcconsent-dmp\"> </a><a name=\"consent-dmp-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-consent-fr.html\">Fr Preadmission Consent Profile</a></p></div><p><b>status</b>: Active</p><p><b>scope</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Privacy Consent</span></p><p><b>category</b>: <span title=\"Codes:{http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category dmp}\">Dossier Médical Partagé</span></p><p><b>patient</b>: <a href=\"Patient/patient-001\">Patient/patient-001</a></p><p><b>dateTime</b>: 2025-04-22 10:00:00+0100</p><blockquote><p><b>provision</b></p><p><b>code</b>: <span title=\"Codes:{http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status INO}\">Informé et non opposé</span>, <span title=\"Codes:{http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status IC}\">Informé et consent à la consultation de Mon Espace Santé</span></p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:scope [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentscope"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "patient-privacy" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "dmp" ] ;
+       fhir:display [ fhir:v "Dossier Médical Partagé" ]
+     ] )
+  ] ) ; # 
+  fhir:patient [
+     fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Patient/patient-001> ;
+     fhir:reference [ fhir:v "Patient/patient-001" ]
+  ] ; # 
+  fhir:dateTime [ fhir:v "2025-04-22T10:00:00+01:00"^^xsd:dateTime] ; # 
+  fhir:provision [
+     fhir:code ( [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "INO" ] ;
+         fhir:display [ fhir:v "Informé et non opposé" ]
+       ] )
+     ] [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "IC" ] ;
+         fhir:display [ fhir:v "Informé et consent à la consultation de Mon Espace Santé" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

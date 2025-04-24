@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Remarque du patient - Exemple d&#39;IG Français v0.1.0</title>
+    <title>Remarque du patient - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"3.13"}
-    h3,h4,h5,h6{--heading-prefix:"3.13"}</style>
+    <style type="text/css">h2{--heading-prefix:"13.12"}
+    h3,h4,h5,h6{--heading-prefix:"13.12"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -57,7 +57,7 @@
 </div>
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Exemple d&#39;IG Français</span>
+          <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
             <br/>
             <span style="display:inline-block;">0.1.0 - ci-build
 
@@ -92,6 +92,44 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Processus de préadmission
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="flux.html">Diagramme de flux</a>
+      </li>
+      <li>
+        <a href="sequence.html">Diagramme de séquence</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="appointment.html">Appointment</a>
+      </li>
+      <li>
+        <a href="encounter.html">Encounter</a>
+      </li>
+      <li>
+        <a href="coverage.html">Coverage</a>
+      </li>
+      <li>
+        <a href="consentements.html">Consentements</a>
+      </li>
+      <li>
+        <a href="questionnaires.html">Questionnaires</a>
+      </li>
+      <li>
+        <a href="documents.html">Documents</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -147,7 +185,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Exemple d'IG Français - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.fr/fhir/fr/preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -217,10 +255,10 @@
   <table class="colsd">
 
     <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"/></span>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment|0.1.0"/></span>
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient|0.1.0"/></span>
       </td>
     </tr>
 
@@ -236,7 +274,7 @@
         
           Draft
           
-            as of 2025-04-18
+            as of 2025-04-24
           
         
       </td>
@@ -261,7 +299,7 @@
 <ul>
   <li>
 Element ID:     <code>
-<a href="http://hl7.org/fhir/R4/datatypes.html#Element">Element</a>    </code>
+<a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a>    </code>
   </li>
 </ul>
 
@@ -322,7 +360,7 @@ Element ID:     <code>
         </p>
         <div id="tbl-diff-inner">
           <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="encounter-patient-commentd" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Le nom logique de lélément" data-no-external="true">Nom</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Drapeaux</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description et contraintes</a><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension" title="Remarque libre saisie par le patient à destination de l’agent administratif" data-no-external="true">Extension</a><a name="d-Extension"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension" data-no-external="true">Extension</a><a name="d-Extension"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td>
@@ -338,7 +376,7 @@ Element ID:     <code>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"</span></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"</span></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ac" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Type de donnée primitif" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension.value[x]" data-no-external="true">value[x]</a><a name="d-Extension.value_x_"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -355,7 +393,7 @@ Element ID:     <code>
       <div id="tbl-snap">
         <div id="tbl-snap-inner">
           <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="encounter-patient-comments" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Le nom logique de lélément" data-no-external="true">Nom</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Drapeaux</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description et contraintes</a><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension" title="Remarque libre saisie par le patient à destination de l’agent administratif" data-no-external="true">Extension</a><a name="Extension"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension" title="An Extension" data-no-external="true">Extension</a><a name="Extension"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td>
@@ -377,7 +415,7 @@ Element ID:     <code>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"</span></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"</span></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ad" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Type de donnée primitif" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension.value[x]" title="Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list)." data-no-external="true">value[x]</a><a name="Extension.value_x_"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -408,7 +446,7 @@ Element ID:     <code>
            // <span style="color: navy; opacity: 0.8">Remarque du patient</span>
  {
     "<a href="StructureDefinition-encounter-patient-comment.html#Extension.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Unique id for inter-element referencing</span>
-    "<a href="StructureDefinition-encounter-patient-comment.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL" class="dict"><span style="text-decoration: underline">url</span></a>" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>
+    "<a href="StructureDefinition-encounter-patient-comment.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL" class="dict"><span style="text-decoration: underline">url</span></a>" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>
     "<a href="StructureDefinition-encounter-patient-comment.html#Extension.valueString" title="Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list)" class="dict"><span style="text-decoration: underline">valueString</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;" <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Value of extension</span>
   }
 
@@ -452,7 +490,7 @@ Résumé
         </p>
         <div id="all-tbl-diff-inner">
           <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="encounter-patient-commentd" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Le nom logique de lélément" data-no-external="true">Nom</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Drapeaux</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description et contraintes</a><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension" title="Remarque libre saisie par le patient à destination de l’agent administratif" data-no-external="true">Extension</a><a name="da-Extension"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension" data-no-external="true">Extension</a><a name="da-Extension"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td>
@@ -468,7 +506,7 @@ Résumé
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"</span></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"</span></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ac" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Type de donnée primitif" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension.value[x]" data-no-external="true">value[x]</a><a name="da-Extension.value_x_"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -485,7 +523,7 @@ Résumé
         </p>
         <div id="all-tbl-snap-inner">
           <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="encounter-patient-comments" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Le nom logique de lélément" data-no-external="true">Nom</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Drapeaux</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description et contraintes</a><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
-<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension" title="Remarque libre saisie par le patient à destination de l’agent administratif" data-no-external="true">Extension</a><a name="sa-Extension"> </a></td>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension" title="An Extension" data-no-external="true">Extension</a><a name="sa-Extension"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td>
@@ -507,7 +545,7 @@ Résumé
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"</span></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"</span></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ad" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Type de donnée primitif" class="hierarchy"/> <a no-external="true" href="StructureDefinition-encounter-patient-comment-definitions.html#Extension.value[x]" title="Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list)." data-no-external="true">value[x]</a><a name="sa-Extension.value_x_"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -538,7 +576,7 @@ Résumé
            // <span style="color: navy; opacity: 0.8">Remarque du patient</span>
  {
     "<a href="StructureDefinition-encounter-patient-comment.html#Extension.id" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces" class="dict"><span style="text-decoration: underline">id</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;", <span style="color: Gray">//</span> <span style="color: navy; opacity: 0.8">Unique id for inter-element referencing</span>
-    "<a href="StructureDefinition-encounter-patient-comment.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL" class="dict"><span style="text-decoration: underline">url</span></a>" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>
+    "<a href="StructureDefinition-encounter-patient-comment.html#Extension.url" title="Source of the definition for the extension code - a logical name or a URL" class="dict"><span style="text-decoration: underline">url</span></a>" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient", <span style="color: Gray">//</span> <span style="color: brown" title="This element is required"><b>R!</b></span>
     "<a href="StructureDefinition-encounter-patient-comment.html#Extension.valueString" title="Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list)" class="dict"><span style="text-decoration: underline">valueString</span></a>" : "&lt;<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></span>&gt;" <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: brown" title="This element is required"><b>R!</b></span> <span style="color: navy; opacity: 0.8">Value of extension</span>
   }
 
@@ -636,7 +674,7 @@ Résumé
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 18, 2025 09:05+0000">2025-04-18</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:13+0000">2025-04-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -645,7 +683,7 @@ Résumé
                 
           Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.fr/fhir/fr/preadmission/history.html">Historique des versions </a>
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Historique des versions </a>
                  
                 
 

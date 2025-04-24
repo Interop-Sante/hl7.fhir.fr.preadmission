@@ -13,6 +13,28 @@
       "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
     },
     {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "AlimentationDMPConsentStatus",
+      "title" : "Statut de consentement - alimentation du DMP",
+      "description" : "Valeurs possibles pour le consentement à l’alimentation du DMP.",
+      "uses" : {
+      },
+      "ValueSet-dmp-feed-consent-status-vs.html" : "Valeurs de statut pour alimentation du DMP"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ConsultationDMPConsentStatus",
+      "title" : "Statut de consentement - consultation du DMP",
+      "description" : "Valeurs possibles pour le consentement à la consultation du DMP (Mon Espace Santé).",
+      "uses" : {
+      },
+      "ValueSet-dmp-access-consent-status-vs.html" : "Valeurs de statut pour consultation du DMP"
+    },
+    {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
       "version" : "0.1.0",
       "status" : "active",
@@ -22,6 +44,18 @@
       "uses" : {
       },
       "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PreadmissionConsentCategoryCodeSystem",
+      "title" : "Types de consentements pour la préadmission",
+      "description" : "Types de consentement recueillis pendant la préadmission.",
+      "uses" : {
+      },
+      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient",
+      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement"
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
@@ -211,10 +245,9 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-consent-category.html" : "Consent Category Codes",
-      "http://hl7.org/fhir/R4/valueset-consent-content-code.html" : "Consent Content Codes",
+      "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set",
       "http://hl7.org/fhir/R4/valueset-c80-doc-typecodes.html" : "Document Type Value Set",
-      "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set"
+      "http://hl7.org/fhir/R4/valueset-consent-content-code.html" : "Consent Content Codes"
     },
     {
       "url" : "http://snomed.info/sct",
@@ -227,8 +260,8 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
-      "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
-      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set"
+      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
+      "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/admit-source",
@@ -255,6 +288,18 @@
       "http://hl7.org/fhir/R4/valueset-appointment-cancellation-reason.html" : "Appointment cancellation reason"
     },
     {
+      "url" : "http://terminology.hl7.org/CodeSystem/common-tags",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "CommonTags",
+      "title" : "Common Tags",
+      "description" : "Common Tag Codes defined by FHIR project",
+      "oids" : ["2.16.840.1.113883.4.642.1.1067"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-common-tags.html" : "Common Tags"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/consentaction",
       "version" : "1.0.1",
       "status" : "active",
@@ -265,18 +310,6 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-consent-action.html" : "Consent Action Codes"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/consentcategorycodes",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "ConsentCategoryCodes",
-      "title" : "Consent Category Codes",
-      "description" : "This value set includes sample Consent Directive Type codes, including several consent directive related LOINC codes; HL7 VALUE SET: ActConsentType(2.16.840.1.113883.1.11.19897); examples of US realm consent directive legal descriptions and references to online and/or downloadable forms such as the SSA-827 Authorization to Disclose Information to the Social Security Administration; and other anticipated consent directives related to participation in a clinical trial, medical procedures, reproductive procedures; health care directive (Living Will); advance directive, do not resuscitate (DNR); Physician Orders for Life-Sustaining Treatment (POLST)",
-      "oids" : ["2.16.840.1.113883.4.642.1.1226"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R4/valueset-consent-category.html" : "Consent Category Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
@@ -384,7 +417,7 @@
       "oids" : ["2.16.840.1.113883.4.642.1.1093"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-encounter-discharge-disposition.html" : "Discharge disposition"
+      "https://hl7.fr/ig/fhir/core/2.0.1/ValueSet-fr-core-vs-encounter-discharge-disposition.html" : "FR Core ValueSet Encounter discharge disposition"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/encounter-special-arrangements",
@@ -397,18 +430,6 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-encounter-special-arrangements.html" : "Special arrangements"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/encounter-type",
-      "version" : "1.0.1",
-      "status" : "active",
-      "name" : "EncounterType",
-      "title" : "Encounter type",
-      "description" : "This example value set defines a set of codes that can be used to indicate the type of encounter: a specific code indicating type of service provided.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1088"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R4/valueset-encounter-type.html" : "Encounter type"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/ex-coverage-financial-exception",
@@ -432,18 +453,6 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
-      "version" : "2.0.1",
-      "status" : "active",
-      "name" : "LocationType",
-      "title" : "Location type",
-      "description" : "This example value set defines a set of codes that can be used to indicate the physical form of the Location.\r\rThis includes several 'non physical' codes which are still considered a location.",
-      "oids" : ["2.16.840.1.113883.4.642.1.1108"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R4/valueset-location-physical-type.html" : "Location type"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/participant-type",
@@ -494,8 +503,20 @@
       "http://hl7.org/fhir/R4/valueset-subscriber-relationship.html" : "SubscriberPolicyholder Relationship Codes"
     },
     {
+      "url" : "http://terminology.hl7.org/CodeSystem/v2-0007",
+      "version" : "2.2.0",
+      "status" : "active",
+      "name" : "AdmissionType",
+      "title" : "admissionType",
+      "description" : "Code system of concepts specifying the circumstances under which the patient was or will be admitted.  Used in HL7 Version 2.x messaging in the PV1 segment.",
+      "oids" : ["2.16.840.1.113883.18.9"],
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.0.1/ValueSet-fr-core-vs-encounter-type.html" : "FR Core ValueSet Encounter type"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0092",
-      "version" : "2.0.0",
+      "version" : "2.1.0",
       "status" : "active",
       "name" : "ReAdmissionIndicator",
       "title" : "re-admissionIndicator",
@@ -503,23 +524,11 @@
       "oids" : ["2.16.840.1.113883.18.36"],
       "uses" : {
       },
-      "http://terminology.hl7.org/6.2.0/ValueSet-v2-0092.html" : "hl7VS-re-admissionIndicator"
-    },
-    {
-      "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-      "version" : "4.0.0",
-      "status" : "active",
-      "name" : "IdentifierType",
-      "title" : "identifierType",
-      "description" : "HL7-defined code system of concepts specifying type of identifier. Used in HL7 Version 2.x messaging data types CX, PLN, PPN, XCN and XON.",
-      "oids" : ["2.16.840.1.113883.18.108"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType"
+      "http://terminology.hl7.org/5.3.0/ValueSet-v2-0092.html" : "hl7VS-re-admissionIndicator"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0276",
-      "version" : "2.0.0",
+      "version" : "2.1.0",
       "status" : "active",
       "name" : "AppointmentReason",
       "title" : "appointmentReason",
@@ -527,7 +536,7 @@
       "oids" : ["2.16.840.1.113883.18.169"],
       "uses" : {
       },
-      "http://terminology.hl7.org/6.2.0/ValueSet-v2-0276.html" : "hl7VS-appointmentReasonCodes"
+      "http://terminology.hl7.org/5.3.0/ValueSet-v2-0276.html" : "hl7VS-appointmentReasonCodes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
@@ -539,7 +548,9 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
+      "ValueSet-type-venue-encounter-vs.html" : "ValueSet des classes d'Encounter pour la préadmission",
       "http://terminology.hl7.org/6.2.0/ValueSet-v3-ActCode.html" : "v3 Code System ActCode",
+      "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission",
       "http://terminology.hl7.org/6.2.0/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode"
     },
     {
@@ -612,8 +623,8 @@
       "oids" : ["2.16.840.1.113883.5.90"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type",
-      "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
+      "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType",
+      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleClass",
@@ -640,26 +651,60 @@
       "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
     },
     {
-      "url" : "https://interop-sante.fr/fhir/CodeSystem/encounter-class-code-system",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "EncounterClassCodeSystem",
-      "title" : "Code System du type de venue",
-      "description" : "Types de venue utilisés pour les préadmissions en France.",
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-circonstances-sortie",
+      "version" : "2.0.1",
+      "status" : "draft",
+      "name" : "FRCoreCodeSystemCirconstancesSortie",
+      "title" : "FR Core CodeSystem Circonstances Sortie",
+      "description" : "Discharge Disposition",
       "uses" : {
       },
-      "ValueSet-encounter-class-value-set.html" : "ValueSet du type de venue"
+      "https://hl7.fr/ig/fhir/core/2.0.1/ValueSet-fr-core-vs-encounter-discharge-disposition.html" : "FR Core ValueSet Encounter discharge disposition"
     },
     {
-      "url" : "https://interop-sante.fr/fhir/CodeSystem/preadmission-consent-code-system",
-      "version" : "0.1.0",
-      "status" : "active",
-      "name" : "PreadmissionConsentCodeSystem",
-      "title" : "Code System des consentements du patient",
-      "description" : "Consentements du patient liés à sa venue (ex. accès au DMP)",
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type",
+      "version" : "2.0.1",
+      "status" : "draft",
+      "name" : "FRCoreCodeSystemIdentifierType",
+      "title" : "FR Core CodeSystem Identifier Type",
+      "description" : "Identifier type",
       "uses" : {
       },
-      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient"
+      "https://hl7.fr/ig/fhir/core/2.0.1/ValueSet-fr-core-vs-encounter-identifier-type.html" : "FR Core ValueSet Encounter identifier type"
+    },
+    {
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-physical-type",
+      "version" : "2.0.1",
+      "status" : "draft",
+      "name" : "FRCoreCodeSystemLocationPhysicalType",
+      "title" : "FR Core CodeSystem Location Physical Type",
+      "description" : "Location physical type",
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.0.1/ValueSet-fr-core-vs-location-physical-type.html" : "FR Core ValueSet Location physical type"
+    },
+    {
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-type-admission",
+      "version" : "2.0.1",
+      "status" : "draft",
+      "name" : "FRCoreCodeSystemTypeAdmission",
+      "title" : "FR Core CodeSystem Type Admission",
+      "description" : "Admission type",
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.0.1/ValueSet-fr-core-vs-encounter-type.html" : "FR Core ValueSet Encounter type"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
+      "version" : "1.2.0",
+      "status" : "active",
+      "name" : "TRE_R38-SpecialiteOrdinale",
+      "title" : null,
+      "description" : "Spécialité ordinale",
+      "oids" : ["1.2.250.1.213.2.28"],
+      "uses" : {
+      },
+      "https://hl7.fr/ig/fhir/core/2.0.1/ValueSet-fr-core-vs-practitioner-specialty.html" : "FR Core ValueSet Practitioner specialty"
     },
     {
       "url" : "urn:ietf:bcp:47",

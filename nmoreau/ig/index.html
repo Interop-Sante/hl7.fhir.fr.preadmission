@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Accueil - Exemple d&#39;IG Français v0.1.0</title>
+    <title>Accueil - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -57,7 +57,7 @@
 </div>
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Exemple d&#39;IG Français</span>
+          <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
             <br/>
             <span style="display:inline-block;">0.1.0 - ci-build
 
@@ -92,6 +92,44 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Processus de préadmission
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="flux.html">Diagramme de flux</a>
+      </li>
+      <li>
+        <a href="sequence.html">Diagramme de séquence</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Ressources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="appointment.html">Appointment</a>
+      </li>
+      <li>
+        <a href="encounter.html">Encounter</a>
+      </li>
+      <li>
+        <a href="coverage.html">Coverage</a>
+      </li>
+      <li>
+        <a href="consentements.html">Consentements</a>
+      </li>
+      <li>
+        <a href="questionnaires.html">Questionnaires</a>
+      </li>
+      <li>
+        <a href="documents.html">Documents</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -132,7 +170,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="downloads.html">next&gt;</a>
+          | <a href="processus.html">next&gt;</a>
 
           </span>
 
@@ -154,7 +192,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Exemple d'IG Français - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.fr/fhir/fr/preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Accueil</h2>
   
 
@@ -166,10 +204,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <table class="colsd">
 
     <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission"/></span>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission<button title="Click to copy URL" class="btn-copy" data-clipboard-text="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission|0.1.0"/></span>
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission|0.1.0"/></span>
       </td>
     </tr>
 
@@ -185,14 +223,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2025-04-18
+            as of 2025-04-24
           
         
       </td>
 
 
 
-      <td><i>Computable Name</i>: <span style="font-family: monospace;">ExampleIG</span></td>
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">PreadmissionFHIRIG</span></td>
     </tr>
 
 
@@ -241,11 +279,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </li>
       <li><a href="#identifiant-de-préadmission-vn" id="markdown-toc-identifiant-de-préadmission-vn">Identifiant de préadmission (VN)</a></li>
       <li><a href="#questionnaire-de-contexte" id="markdown-toc-questionnaire-de-contexte">Questionnaire de contexte</a></li>
-      <li><a href="#consentement-dmp-zfa" id="markdown-toc-consentement-dmp-zfa">Consentement DMP (ZFA)</a></li>
-    </ul>
-  </li>
-  <li><a href="#-flux-de-la-préadmission" id="markdown-toc--flux-de-la-préadmission">🔄 Flux de la préadmission</a>    <ul>
-      <li><a href="#diagramme-de-séquence--scénario-complet" id="markdown-toc-diagramme-de-séquence--scénario-complet">Diagramme de séquence – Scénario complet</a></li>
+      <li><a href="#consentement-dmp" id="markdown-toc-consentement-dmp">Consentement DMP</a></li>
     </ul>
   </li>
 </ul>
@@ -339,7 +373,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="2-logiciel-de-rendez-vous">2. Logiciel de rendez-vous</h3>
 <ul>
   <li>Création de <code class="language-plaintext highlighter-rouge">Appointment</code></li>
-  <li>Association : <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>, <code class="language-plaintext highlighter-rouge">Consent</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code></li>
+  <li>Association : <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>, <code class="language-plaintext highlighter-rouge">Consent</code></li>
 </ul>
 
 <h3 id="3-système-administratif">3. Système administratif</h3>
@@ -373,91 +407,33 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Implant ? Allergies ? Aide médicale ? Contre-indications ?</li>
 </ul>
 
-<h2 id="consentement-dmp-zfa">Consentement DMP (ZFA)</h2>
-<p>Description | Type |
-————-|——|
-Opposition bris de glace | Oui / Non |
-Opposition centre régulation | Oui / Non |
-Date de recueil | Date |</p>
+<h2 id="consentement-dmp">Consentement DMP</h2>
 
-<h1 id="-flux-de-la-préadmission">🔄 Flux de la préadmission</h1>
-
-<p>Ce diagramme présente le cheminement d’un patient dans le processus de préadmission, depuis la prise de rendez-vous jusqu’à l’admission à l’hôpital.</p>
-
-<pre><code class="language-mermaid">flowchart TD
-    A[Patient] --&gt; B[Portail patient en ligne]
-    B --&gt; C[Prise de rendez-vous (Appointment)]
-    C --&gt; D[Remplissage du questionnaire de contexte]
-    D --&gt; E[Recueil du consentement DMP]
-    C --&gt; F[Validation par le logiciel administratif]
-    F --&gt; G[Preadmission (Encounter)]
-    G --&gt; H[Préparation du séjour hospitalier]
-
-
-
----
-
-### 📄 `schema-fhir.md`
-
-```markdown
-# 🧬 Schéma FHIR du modèle de préadmission
-
-Voici les principales ressources FHIR impliquées dans le processus de préadmission et leurs liens :
-
-```mermaid
-flowchart TD
-    A[Patient] --&gt;|Prise de rendez-vous| B[Portail de rendez-vous (ex: Doctolib)]
-    A --&gt;|Prise de rendez-vous| C[Secrétaire médicale]
-    B --&gt; D[Logiciel de rendez-vous]
-    C --&gt; D[Logiciel de rendez-vous]
-    D --&gt; E[Système administratif hospitalier]
-    E --&gt; F[Portail de pré-admission]
-    F --&gt; G[Patient]
-    E --&gt;|Notification de l'état du dossier| F 
-
-
-# 🖼️ Diagrammes Complémentaires
-
-## Diagramme de flux – Enchaînement complet
-```mermaid
-flowchart TD
-  A[Patient] --&gt; B[Portail Patient]
-  B --&gt; B1[Remplissage du questionnaire]
-  B --&gt; B2[Téléversement des documents]
-  B --&gt; B3[Consentement au DMP]
-  B --&gt; C[Logiciel de rendez-vous]
-  C --&gt; C1[Création de l'Appointment]
-  C --&gt; C2[Lien avec QuestionnaireResponse / Consent]
-  C --&gt; D[Système administratif]
-  D --&gt; D1[Récupération des données]
-  D --&gt; D2[Création de Encounter]
-  D --&gt; D3[Vérification de la couverture]
-  D --&gt; D4[Préparation de l’admission]
-</code></pre>
-
-<h2 id="diagramme-de-séquence--scénario-complet">Diagramme de séquence – Scénario complet</h2>
-<pre><code class="language-mermaid"> sequenceDiagram
-    participant Patient
-    participant Portail_RDV as Portail de rendez-vous
-    participant Secretaire as Secrétaire médicale
-    participant RDV_System as Logiciel de rendez-vous
-    participant AdminSystem as Système administratif hospitalier
-    participant Portail_Preadm as Portail de pré-admission
-
-    Patient-&gt;&gt;Portail_RDV: Prise de rendez-vous
-    Secretaire-&gt;&gt;RDV_System: Prise de rendez-vous
-    Portail_RDV-&gt;&gt;AdminSystem: Transmission du rendez-vous
-    RDV_System-&gt;&gt;AdminSystem: Transmission des données de rendez-vous
-    AdminSystem-&gt;&gt;Portail_Preadm: Envoi des informations de pré-admission
-    Patient-&gt;&gt;Portail_Preadm: Remplissage du questionnaire et téléversement des documents
-    Portail_Preadm-&gt;&gt;AdminSystem: Envoi des données de pré-admission
-    AdminSystem-&gt;&gt;Portail_Preadm: Notification de l'état du dossier
-    Portail_Preadm-&gt;&gt;Patient: Notification de l'état du dossier 
-</code></pre>
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Opposition bris de glace</td>
+      <td>Oui / Non</td>
+    </tr>
+    <tr>
+      <td>Opposition centre régulation</td>
+      <td>Oui / Non</td>
+    </tr>
+    <tr>
+      <td>Date de recueil</td>
+      <td>Date</td>
+    </tr>
+  </tbody>
+</table>
 
 <hr />
 <p>Ce guide est maintenu par <strong>Interop’Santé</strong>, sous la spécification <code class="language-plaintext highlighter-rouge">PreadmissionFr</code>. Toute contribution ou retour est bienvenu afin d’enrichir ce référentiel.</p>
-
 
 
 
@@ -489,7 +465,7 @@ flowchart TD
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="downloads.html">next&gt;</a>
+                <a href="processus.html">next&gt;</a>
 
               </td>
             </tr>
@@ -499,7 +475,7 @@ flowchart TD
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 18, 2025 09:05+0000">2025-04-18</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:13+0000">2025-04-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -508,7 +484,7 @@ flowchart TD
                 
           Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.fr/fhir/fr/preadmission/history.html">Historique des versions </a>
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Historique des versions </a>
                  
                 
 

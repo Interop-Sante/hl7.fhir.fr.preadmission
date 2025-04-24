@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response> a fhir:StructureDefinition ;
+<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/appointment-questionnaire-response> a fhir:StructureDefinition ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "appointment-questionnaire-response"] ; # 
   fhir:text [
@@ -15,10 +15,10 @@
   ] ; # 
   fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
-  fhir:name [ fhir:v "AppointmentQuestionnaireResponse"] ; # 
+  fhir:name [ fhir:v "PreadmissionAppointmentQuestionnaireResponseFr"] ; # 
   fhir:title [ fhir:v "Questionnaire lié au rendez-vous"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-18T09:05:02+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-24T12:12:45+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

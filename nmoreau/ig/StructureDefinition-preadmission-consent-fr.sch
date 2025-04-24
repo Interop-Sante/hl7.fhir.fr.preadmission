@@ -9,4 +9,12 @@
     you may need to use this schematron fragment to build a, 
     single schematron that validates contained resources (if you have any) 
   -->
+  <sch:pattern>
+    <sch:title>f:Consent</sch:title>
+    <sch:rule context="f:Consent">
+      <sch:assert test="count(f:category) &lt;= 1">category: maximum cardinality of 'category' is 1</sch:assert>
+      <sch:assert test="count(f:patient) &gt;= 1">patient: minimum cardinality of 'patient' is 1</sch:assert>
+      <sch:assert test="count(f:dateTime) &gt;= 1">dateTime: minimum cardinality of 'dateTime' is 1</sch:assert>
+    </sch:rule>
+  </sch:pattern>
 </sch:schema>

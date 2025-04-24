@@ -10,7 +10,7 @@
   "name" : "PreadmissionEncounterFr",
   "title" : "Fr Preadmission Encounter Profile",
   "status" : "draft",
-  "date" : "2025-04-18T09:05:02+00:00",
+  "date" : "2025-04-24T12:12:45+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -59,12 +59,12 @@
   "kind" : "resource",
   "abstract" : false,
   "type" : "Encounter",
-  "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Encounter",
+  "baseDefinition" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter",
   "derivation" : "constraint",
   "snapshot" : {
     "extension" : [{
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
-      "valueString" : "4.0.1"
+      "valueString" : "2.0.1"
     }],
     "element" : [{
       "id" : "Encounter",
@@ -190,6 +190,301 @@
       }],
       "isModifier" : false,
       "isSummary" : true
+    },
+    {
+      "id" : "Encounter.meta.id",
+      "path" : "Encounter.meta.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Unique id for inter-element referencing",
+      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Encounter.meta.extension",
+      "path" : "Encounter.meta.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Extensions are always sliced by (at least) url",
+        "rules" : "open"
+      },
+      "short" : "Additional content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Encounter.meta.versionId",
+      "path" : "Encounter.meta.versionId",
+      "short" : "Version specific identifier",
+      "definition" : "The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted.",
+      "comment" : "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Meta.versionId",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "id"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true
+    },
+    {
+      "id" : "Encounter.meta.lastUpdated",
+      "path" : "Encounter.meta.lastUpdated",
+      "short" : "When the resource version last changed",
+      "definition" : "When the resource last changed - e.g. when the version changed.",
+      "comment" : "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant. This is equivalent to the HTTP Last-Modified and SHOULD have the same value on a [read](http://hl7.org/fhir/R4/http.html#read) interaction.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Meta.lastUpdated",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "instant"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true
+    },
+    {
+      "id" : "Encounter.meta.source",
+      "path" : "Encounter.meta.source",
+      "short" : "Identifies where the resource comes from",
+      "definition" : "A uri that identifies the source system of the resource. This provides a minimal amount of [Provenance](http://hl7.org/fhir/R4/provenance.html#) information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.",
+      "comment" : "In the provenance resource, this corresponds to Provenance.entity.what[x]. The exact use of the source (and the implied Provenance.entity.role) is left to implementer discretion. Only one nominated source is allowed; for additional provenance details, a full Provenance resource should be used. \n\nThis element can be used to indicate where the current master source of a resource that has a canonical URL if the resource is no longer hosted at the canonical URL.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Meta.source",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "uri"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true
+    },
+    {
+      "id" : "Encounter.meta.profile",
+      "path" : "Encounter.meta.profile",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "$this"
+        }],
+        "description" : "Slice based on the canonical url value",
+        "rules" : "open"
+      },
+      "short" : "Profiles this resource claims to conform to",
+      "definition" : "A list of profiles (references to [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](http://hl7.org/fhir/R4/structuredefinition-definitions.html#StructureDefinition.url).",
+      "comment" : "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Meta.profile",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "canonical",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/StructureDefinition"]
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true
+    },
+    {
+      "id" : "Encounter.meta.profile:fr-canonical",
+      "path" : "Encounter.meta.profile",
+      "sliceName" : "fr-canonical",
+      "short" : "Profiles this resource claims to conform to",
+      "definition" : "A list of profiles (references to [StructureDefinition](http://hl7.org/fhir/R4/structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url](http://hl7.org/fhir/R4/structuredefinition-definitions.html#StructureDefinition.url).",
+      "comment" : "It is up to the server and/or other infrastructure of policy to determine whether/how these claims are verified and/or updated over time.  The list of profile URLs is a set.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Meta.profile",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "canonical",
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/StructureDefinition"]
+      }],
+      "patternCanonical" : "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter",
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true
+    },
+    {
+      "id" : "Encounter.meta.security",
+      "path" : "Encounter.meta.security",
+      "short" : "Security Labels applied to this resource",
+      "definition" : "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
+      "comment" : "The security labels can be updated without changing the stated version of the resource. The list of security labels is a set. Uniqueness is based the system/code, and version and display are ignored.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Meta.security",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "SecurityLabels"
+        }],
+        "strength" : "extensible",
+        "description" : "Security Labels from the Healthcare Privacy and Security Classification System.",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/security-labels"
+      }
+    },
+    {
+      "id" : "Encounter.meta.tag",
+      "path" : "Encounter.meta.tag",
+      "short" : "Tags applied to this resource",
+      "definition" : "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
+      "comment" : "The tags can be updated without changing the stated version of the resource. The list of tags is a set. Uniqueness is based the system/code, and version and display are ignored.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Meta.tag",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Coding"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "Tags"
+        }],
+        "strength" : "example",
+        "description" : "Codes that represent various types of tags, commonly workflow-related; e.g. \"Needs review by Dr. Jones\".",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/common-tags"
+      }
     },
     {
       "id" : "Encounter.implicitRules",
@@ -328,7 +623,6 @@
           "type" : "value",
           "path" : "url"
         }],
-        "ordered" : false,
         "rules" : "open"
       },
       "short" : "Extension",
@@ -363,11 +657,11 @@
       "isSummary" : false
     },
     {
-      "id" : "Encounter.extension:remarquePatient",
+      "id" : "Encounter.extension:estimatedDischargeDate",
       "path" : "Encounter.extension",
-      "sliceName" : "remarquePatient",
-      "short" : "Remarque du patient",
-      "definition" : "Remarque libre saisie par le patient à destination de l’agent administratif",
+      "sliceName" : "estimatedDischargeDate",
+      "short" : "Estimated discharge date | Date de sortie estimée",
+      "definition" : "This extension is used to specify the estimated discharge date of the patient",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -377,7 +671,7 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"]
+        "profile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-estimated-discharge-date"]
       }],
       "condition" : ["ele-1"],
       "constraint" : [{
@@ -394,6 +688,41 @@
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
         "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "Encounter.extension:remarquePatient",
+      "path" : "Encounter.extension",
+      "sliceName" : "remarquePatient",
+      "short" : "Remarque du patient",
+      "definition" : "An Extension",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "DomainResource.extension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension",
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"]
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
@@ -404,7 +733,7 @@
       "path" : "Encounter.extension",
       "sliceName" : "consignesAgent",
       "short" : "Consignes de l'agent administratif",
-      "definition" : "Consignes à destination du patient, fournies par l'agent administratif",
+      "definition" : "An Extension",
       "min" : 0,
       "max" : "1",
       "base" : {
@@ -414,9 +743,8 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -430,7 +758,7 @@
         "severity" : "error",
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
-        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
@@ -441,7 +769,7 @@
       "path" : "Encounter.extension",
       "sliceName" : "preadmissionStatus",
       "short" : "Extension",
-      "definition" : "Statut spécifique de la pré-admission.",
+      "definition" : "An Extension",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -451,9 +779,8 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -467,7 +794,7 @@
         "severity" : "error",
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
-        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
@@ -477,8 +804,8 @@
       "id" : "Encounter.extension:consentements",
       "path" : "Encounter.extension",
       "sliceName" : "consentements",
-      "short" : "Consentement - Opposition DMP",
-      "definition" : "Consentement décrivant les oppositions du patient à l’accès à son DMP (bris de glace, centre de régulation, date de recueil).",
+      "short" : "Consentement lié au rendez-vous",
+      "definition" : "Référence vers un ou plusieurs consentements donnés dans le cadre de la préadmission.",
       "min" : 0,
       "max" : "*",
       "base" : {
@@ -488,9 +815,8 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-consent"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"]
       }],
-      "condition" : ["ele-1"],
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -504,7 +830,7 @@
         "severity" : "error",
         "human" : "Must have either extensions or value[x], not both",
         "expression" : "extension.exists() != value.exists()",
-        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
         "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
       }],
       "isModifier" : false,
@@ -556,10 +882,10 @@
     {
       "id" : "Encounter.identifier",
       "path" : "Encounter.identifier",
-      "short" : "Identifier(s) by which this encounter is known",
-      "definition" : "Identifier(s) by which this encounter is known.",
-      "min" : 0,
-      "max" : "*",
+      "short" : "Identifier(s) by which this encounter is known | identifiant de la rencontre",
+      "definition" : "Identifier(s) by which this encounter is known.Cet élément est multiévalué (pour ne pas bloquer les implémentations, car il arrive sur le terrain qu'il y ait plusieurs id pour une même admission, mais cette situation est considérée comme une anomalie)",
+      "min" : 1,
+      "max" : "1",
       "base" : {
         "path" : "Encounter.identifier",
         "min" : 0,
@@ -576,6 +902,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -722,10 +1049,10 @@
       "id" : "Encounter.identifier.type",
       "path" : "Encounter.identifier.type",
       "short" : "Description of identifier",
-      "definition" : "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
+      "definition" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose | Type d'identifiant (admission ou de mouvement lors d'une hospitalisation) (JdV à définir)",
       "comment" : "This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.",
       "requirements" : "Allows users to make use of identifiers when the identifier system is not known.",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "base" : {
         "path" : "Identifier.type",
@@ -751,8 +1078,7 @@
           "valueString" : "IdentifierType"
         }],
         "strength" : "extensible",
-        "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-type"
+        "valueSet" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -1206,10 +1532,10 @@
       "id" : "Encounter.identifier.system",
       "path" : "Encounter.identifier.system",
       "short" : "The namespace for the identifier value",
-      "definition" : "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
+      "definition" : "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.\r\nLe namespace est défini à partir de la racine d'identification (gérée par l'ANS) de l'organisation où a lieu la rencontre, concaténée avec par exemple le FINESS de l'établissent (ou FINEJ ou SIRET ou SIREN), cf annexe française des types de données HL7 en France.",
       "comment" : "Identifier.system is always case sensitive.",
       "requirements" : "There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "base" : {
         "path" : "Identifier.system",
@@ -1222,6 +1548,14 @@
       "example" : [{
         "label" : "General",
         "valueUri" : "http://www.acme.com/identifiers/patient"
+      },
+      {
+        "label" : "OID de l'ANS de gestion des organisations (1.2.250.1.71.4.2.2) suivi du FINESS suivi de la branche z qui gère les id de venue/mouvements si l'établissement n'a pas d'OID (sinon utilisation de l'OID de l'établissement)",
+        "valueUri" : "1.2.250.1.71.4.2.2.1330780321"
+      },
+      {
+        "label" : "autre solution, utilisation d'une URL",
+        "valueUri" : "http://hopitalTest.fr/fhir/namingsystem/encounters"
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -1252,7 +1586,7 @@
       "short" : "The value that is unique",
       "definition" : "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
       "comment" : "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "base" : {
         "path" : "Identifier.value",
@@ -1342,7 +1676,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization"]
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -1391,6 +1725,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : true,
       "isModifierReason" : "This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
       "isSummary" : true,
@@ -1655,6 +1990,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "binding" : {
@@ -1677,6 +2013,288 @@
       {
         "identity" : "rim",
         "map" : ".inboundRelationship[typeCode=SUBJ].source[classCode=LIST].code"
+      }]
+    },
+    {
+      "id" : "Encounter.class.id",
+      "path" : "Encounter.class.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Unique id for inter-element referencing",
+      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Encounter.class.extension",
+      "path" : "Encounter.class.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Extensions are always sliced by (at least) url",
+        "rules" : "open"
+      },
+      "short" : "Additional content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Encounter.class.system",
+      "path" : "Encounter.class.system",
+      "short" : "Identity of the terminology system",
+      "definition" : "The identification of the code system that defines the meaning of the symbol in the code.",
+      "comment" : "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
+      "requirements" : "Need to be unambiguous about the source of the definition of the symbol.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "Coding.system",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "uri"
+      }],
+      "patternUri" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.3"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./codeSystem"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
+      }]
+    },
+    {
+      "id" : "Encounter.class.version",
+      "path" : "Encounter.class.version",
+      "short" : "Version of the system - if relevant",
+      "definition" : "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+      "comment" : "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Coding.version",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.7"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./codeSystemVersion"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+      }]
+    },
+    {
+      "id" : "Encounter.class.code",
+      "path" : "Encounter.class.code",
+      "short" : "Symbol in syntax defined by the system",
+      "definition" : "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+      "requirements" : "Need to refer to a particular code in the system.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "Coding.code",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.1"
+      },
+      {
+        "identity" : "rim",
+        "map" : "./code"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+      }]
+    },
+    {
+      "id" : "Encounter.class.display",
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+        "valueBoolean" : true
+      }],
+      "path" : "Encounter.class.display",
+      "short" : "Representation defined by the system",
+      "definition" : "A representation of the meaning of the code in the system, following the rules of the system.",
+      "requirements" : "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Coding.display",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "C*E.2 - but note this is not well followed"
+      },
+      {
+        "identity" : "rim",
+        "map" : "CV.displayName"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+      }]
+    },
+    {
+      "id" : "Encounter.class.userSelected",
+      "path" : "Encounter.class.userSelected",
+      "short" : "If this coding was chosen directly by the user",
+      "definition" : "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
+      "comment" : "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+      "requirements" : "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Coding.userSelected",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "boolean"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "Sometimes implied by being first"
+      },
+      {
+        "identity" : "rim",
+        "map" : "CD.codingRationale"
+      },
+      {
+        "identity" : "orim",
+        "map" : "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
       }]
     },
     {
@@ -1897,7 +2515,7 @@
       "definition" : "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
       "comment" : "Since there are many ways to further classify encounters, this element is 0..*.",
       "min" : 0,
-      "max" : "*",
+      "max" : "1",
       "base" : {
         "path" : "Encounter.type",
         "min" : 0,
@@ -1922,8 +2540,7 @@
           "valueString" : "EncounterType"
         }],
         "strength" : "example",
-        "description" : "The type of encounter.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/encounter-type"
+        "valueSet" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-type"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -2052,8 +2669,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient",
-        "http://hl7.org/fhir/StructureDefinition/Group"]
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -2168,7 +2784,7 @@
     {
       "id" : "Encounter.participant",
       "path" : "Encounter.participant",
-      "short" : "List of participants involved in the encounter",
+      "short" : "List of participants involved in the encounter | Liste des personnes impliquées dans la rencontre",
       "definition" : "The list of people responsible for providing the service.",
       "min" : 0,
       "max" : "*",
@@ -2188,6 +2804,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : true,
       "mapping" : [{
@@ -2411,9 +3028,9 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Practitioner",
-        "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-        "http://hl7.org/fhir/StructureDefinition/RelatedPerson"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+        "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner",
+        "http://hl7.org/fhir/StructureDefinition/PractitionerRole"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -2448,7 +3065,7 @@
       "short" : "The appointment that scheduled this encounter",
       "definition" : "The appointment that scheduled this encounter.",
       "min" : 0,
-      "max" : "*",
+      "max" : "1",
       "base" : {
         "path" : "Encounter.appointment",
         "min" : 0,
@@ -2456,7 +3073,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Appointment"]
+        "targetProfile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -2487,7 +3104,7 @@
       "short" : "The start and end time of the encounter",
       "definition" : "The start and end time of the encounter.",
       "comment" : "If not (yet) known, the end of the Period may be omitted.",
-      "min" : 0,
+      "min" : 1,
       "max" : "1",
       "base" : {
         "path" : "Encounter.period",
@@ -2505,6 +3122,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -2932,7 +3550,7 @@
       "definition" : "The set of accounts that may be used for billing for this Encounter.",
       "comment" : "The billing system may choose to allocate billable items associated with the Encounter to different referenced Accounts based on internal business rules.",
       "min" : 0,
-      "max" : "*",
+      "max" : "1",
       "base" : {
         "path" : "Encounter.account",
         "min" : 0,
@@ -3103,7 +3721,7 @@
     {
       "id" : "Encounter.hospitalization.preAdmissionIdentifier",
       "path" : "Encounter.hospitalization.preAdmissionIdentifier",
-      "short" : "Pre-admission identifier",
+      "short" : "Pre-admission identifier | Identifiant de pré-admission",
       "definition" : "Pre-admission identifier.",
       "min" : 0,
       "max" : "1",
@@ -3135,6 +3753,338 @@
       }]
     },
     {
+      "id" : "Encounter.hospitalization.preAdmissionIdentifier.id",
+      "path" : "Encounter.hospitalization.preAdmissionIdentifier.id",
+      "representation" : ["xmlAttr"],
+      "short" : "Unique id for inter-element referencing",
+      "definition" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Element.id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+          "valueUrl" : "string"
+        }],
+        "code" : "http://hl7.org/fhirpath/System.String"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Encounter.hospitalization.preAdmissionIdentifier.extension",
+      "path" : "Encounter.hospitalization.preAdmissionIdentifier.extension",
+      "slicing" : {
+        "discriminator" : [{
+          "type" : "value",
+          "path" : "url"
+        }],
+        "description" : "Extensions are always sliced by (at least) url",
+        "rules" : "open"
+      },
+      "short" : "Additional content defined by implementations",
+      "definition" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+      "comment" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+      "alias" : ["extensions",
+      "user content"],
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Element.extension",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "Extension"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      },
+      {
+        "key" : "ext-1",
+        "severity" : "error",
+        "human" : "Must have either extensions or value[x], not both",
+        "expression" : "extension.exists() != value.exists()",
+        "xpath" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Extension"
+      }],
+      "isModifier" : false,
+      "isSummary" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "Encounter.hospitalization.preAdmissionIdentifier.use",
+      "path" : "Encounter.hospitalization.preAdmissionIdentifier.use",
+      "short" : "usual | official | temp | secondary | old (If known)",
+      "definition" : "The purpose of this identifier.",
+      "comment" : "Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.",
+      "requirements" : "Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Identifier.use",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "code"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : true,
+      "isModifierReason" : "This is labeled as \"Is Modifier\" because applications should not mistake a temporary id for a permanent one.",
+      "isSummary" : true,
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "IdentifierUse"
+        }],
+        "strength" : "required",
+        "description" : "Identifies the purpose for this identifier, if known .",
+        "valueSet" : "http://hl7.org/fhir/ValueSet/identifier-use|4.0.1"
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "N/A"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Role.code or implied by context"
+      }]
+    },
+    {
+      "id" : "Encounter.hospitalization.preAdmissionIdentifier.type",
+      "path" : "Encounter.hospitalization.preAdmissionIdentifier.type",
+      "short" : "Description of identifier",
+      "definition" : "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
+      "comment" : "This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.",
+      "requirements" : "Allows users to make use of identifiers when the identifier system is not known.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "Identifier.type",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "CodeableConcept"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "binding" : {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+          "valueString" : "IdentifierType"
+        }],
+        "strength" : "extensible",
+        "valueSet" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type"
+      },
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "CX.5"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Role.code or implied by context"
+      }]
+    },
+    {
+      "id" : "Encounter.hospitalization.preAdmissionIdentifier.system",
+      "path" : "Encounter.hospitalization.preAdmissionIdentifier.system",
+      "short" : "The namespace for the identifier value",
+      "definition" : "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.\r\nLe namespace est défini à partir de la racine d'identification (gérée par l'ANS) de l'organisation où a lieu la rencontre , concaténée avec par exemple le FINESS de l'établissent (ou FINEJ ou SIRET ou SIREN), cf annexe française des types de données HL7 en France",
+      "comment" : "Identifier.system is always case sensitive.",
+      "requirements" : "There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "Identifier.system",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "uri"
+      }],
+      "fixedUri" : "1.2.250.1.71.4.2.2+.n°FINESS",
+      "example" : [{
+        "label" : "General",
+        "valueUri" : "http://www.acme.com/identifiers/patient"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "CX.4 / EI-2-4"
+      },
+      {
+        "identity" : "rim",
+        "map" : "II.root or Role.id.root"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./IdentifierType"
+      }]
+    },
+    {
+      "id" : "Encounter.hospitalization.preAdmissionIdentifier.value",
+      "path" : "Encounter.hospitalization.preAdmissionIdentifier.value",
+      "short" : "The value that is unique",
+      "definition" : "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
+      "comment" : "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](http://hl7.org/fhir/R4/extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "Identifier.value",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "example" : [{
+        "label" : "General",
+        "valueString" : "123456"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "CX.1 / EI.1"
+      },
+      {
+        "identity" : "rim",
+        "map" : "II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./Value"
+      }]
+    },
+    {
+      "id" : "Encounter.hospitalization.preAdmissionIdentifier.period",
+      "path" : "Encounter.hospitalization.preAdmissionIdentifier.period",
+      "short" : "Time period when id is/was valid for use",
+      "definition" : "Time period during which identifier is/was valid for use.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Identifier.period",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Period"
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "CX.7 + CX.8"
+      },
+      {
+        "identity" : "rim",
+        "map" : "Role.effectiveTime or implied by context"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./StartDate and ./EndDate"
+      }]
+    },
+    {
+      "id" : "Encounter.hospitalization.preAdmissionIdentifier.assigner",
+      "path" : "Encounter.hospitalization.preAdmissionIdentifier.assigner",
+      "short" : "Organization that issued id (may be just text)",
+      "definition" : "Organization that issued/manages the identifier.",
+      "comment" : "The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "Identifier.assigner",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"]
+      }],
+      "constraint" : [{
+        "key" : "ele-1",
+        "severity" : "error",
+        "human" : "All FHIR elements must have a @value or children",
+        "expression" : "hasValue() or (children().count() > id.count())",
+        "xpath" : "@value|f:*|h:div",
+        "source" : "http://hl7.org/fhir/StructureDefinition/Element"
+      }],
+      "isModifier" : false,
+      "isSummary" : true,
+      "mapping" : [{
+        "identity" : "v2",
+        "map" : "CX.4 / (CX.4,CX.9,CX.10)"
+      },
+      {
+        "identity" : "rim",
+        "map" : "II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"
+      },
+      {
+        "identity" : "servd",
+        "map" : "./IdentifierIssuingAuthority"
+      }]
+    },
+    {
       "id" : "Encounter.hospitalization.origin",
       "path" : "Encounter.hospitalization.origin",
       "short" : "The location/organization from which the patient came before admission",
@@ -3148,8 +4098,8 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Location",
-        "http://hl7.org/fhir/StructureDefinition/Organization"]
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location",
+        "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -3212,7 +4162,7 @@
     {
       "id" : "Encounter.hospitalization.reAdmission",
       "path" : "Encounter.hospitalization.reAdmission",
-      "short" : "The type of hospital re-admission that has occurred (if any). If the value is absent, then this is not identified as a readmission",
+      "short" : "the resaon of re-admission of this hospitalization encounter | Raison de la ré-admission du patient.",
       "definition" : "Whether this hospitalization is a readmission and why if known.",
       "min" : 0,
       "max" : "1",
@@ -3397,8 +4347,8 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Location",
-        "http://hl7.org/fhir/StructureDefinition/Organization"]
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location",
+        "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -3445,13 +4395,8 @@
       "isModifier" : false,
       "isSummary" : false,
       "binding" : {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-          "valueString" : "DischargeDisp"
-        }],
         "strength" : "example",
-        "description" : "Discharge Disposition.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/encounter-discharge-disposition"
+        "valueSet" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-discharge-disposition"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -3469,7 +4414,7 @@
       "definition" : "List of locations where  the patient has been during this encounter.",
       "comment" : "Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type \"kind\" such as \"client's home\" and an encounter.class = \"virtual\".",
       "min" : 0,
-      "max" : "*",
+      "max" : "1",
       "base" : {
         "path" : "Encounter.location",
         "min" : 0,
@@ -3486,6 +4431,7 @@
         "xpath" : "@value|f:*|h:div",
         "source" : "http://hl7.org/fhir/StructureDefinition/Element"
       }],
+      "mustSupport" : true,
       "isModifier" : false,
       "isSummary" : false,
       "mapping" : [{
@@ -3619,7 +4565,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Location"]
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-location"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -3715,13 +4661,8 @@
       "isModifier" : false,
       "isSummary" : false,
       "binding" : {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-          "valueString" : "PhysicalType"
-        }],
         "strength" : "example",
-        "description" : "Physical form of the location.",
-        "valueSet" : "http://hl7.org/fhir/ValueSet/location-physical-type"
+        "valueSet" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-location-physical-type"
       }
     },
     {
@@ -3768,7 +4709,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Organization"]
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-organization"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -3812,7 +4753,7 @@
           "valueBoolean" : true
         }],
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Encounter"]
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-encounter"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -3842,14 +4783,6 @@
     {
       "id" : "Encounter.extension",
       "path" : "Encounter.extension",
-      "slicing" : {
-        "discriminator" : [{
-          "type" : "value",
-          "path" : "url"
-        }],
-        "ordered" : false,
-        "rules" : "open"
-      },
       "min" : 1
     },
     {
@@ -3860,7 +4793,7 @@
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"]
       }]
     },
     {
@@ -3871,7 +4804,7 @@
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent"]
       }]
     },
     {
@@ -3882,7 +4815,7 @@
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus"]
       }]
     },
     {
@@ -3893,8 +4826,14 @@
       "max" : "*",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-consent"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"]
       }]
+    },
+    {
+      "id" : "Encounter.identifier",
+      "path" : "Encounter.identifier",
+      "max" : "1",
+      "mustSupport" : true
     },
     {
       "id" : "Encounter.identifier.use",
@@ -3910,6 +4849,54 @@
       "id" : "Encounter.identifier.type.coding.code",
       "path" : "Encounter.identifier.type.coding.code",
       "patternCode" : "VN"
+    },
+    {
+      "id" : "Encounter.status",
+      "path" : "Encounter.status",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.class",
+      "path" : "Encounter.class",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.class.system",
+      "path" : "Encounter.class.system",
+      "patternUri" : "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+    },
+    {
+      "id" : "Encounter.class.code",
+      "path" : "Encounter.class.code",
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"
+      }
+    },
+    {
+      "id" : "Encounter.participant",
+      "path" : "Encounter.participant",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.appointment",
+      "path" : "Encounter.appointment",
+      "max" : "1",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"]
+      }]
+    },
+    {
+      "id" : "Encounter.period",
+      "path" : "Encounter.period",
+      "mustSupport" : true
+    },
+    {
+      "id" : "Encounter.location",
+      "path" : "Encounter.location",
+      "max" : "1",
+      "mustSupport" : true
     }]
   }
 }

@@ -1,0 +1,42 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "dmp-feed-consent-status-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dmp-feed-consent-status-vs</b></p><a name=\"dmp-feed-consent-status-vs\"> </a><a name=\"hcdmp-feed-consent-status-vs\"> </a><a name=\"dmp-feed-consent-status-vs-fr-FR\"> </a><ul><li>Include tous les codes définis dans <a href=\"CodeSystem-dmp-alimentation-consent-status.html\"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status</code></a></li></ul></div>"
+  },
+  "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-feed-consent-status-vs",
+  "version" : "0.1.0",
+  "name" : "DmpAlimentationConsentStatusVS",
+  "title" : "Valeurs de statut pour alimentation du DMP",
+  "status" : "draft",
+  "date" : "2025-04-24T12:12:45+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  },
+  {
+    "name" : "InteropSanté",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "fhir@interopsante.org",
+      "use" : "work"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status"
+    }]
+  }
+}

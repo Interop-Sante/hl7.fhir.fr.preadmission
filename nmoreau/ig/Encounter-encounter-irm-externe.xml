@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="encounter-irm-externe"/>
+  <meta>
+    <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Encounter encounter-irm-externe</b></p><a name="encounter-irm-externe"> </a><a name="hcencounter-irm-externe"> </a><a name="encounter-irm-externe-fr-FR"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-preadmission-encounter-fr.html">Fr Preadmission Encounter Profile</a></p></div><p><b>fr/fhir/fr/preadmission/StructureDefinition/preadmission-status</b>: READY</p><p><b>fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions</b>: Le patient est attendu pour une IRM en ambulatoire.</p><p><b>identifier</b>: Visit Number/15655244 (use: temp, )</p><p><b>status</b>: Planned</p><p><b>class</b>: <a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-SS">ActCode SS</a>: Externe</p><p><b>subject</b>: <a href="Patient/patient-001">Patient/patient-001</a></p><p><b>appointment</b>: <a href="Appointment-appt-irm-001.html">Appointment : extension = -&gt;Response to Questionnaire 'Questionnaire/questionnaire-irm' about '-&gt;Patient/patient-001'; status = booked; reasonCode = IRM cérébrale (procédure); description = IRM cérébrale - préadmission; start = 2025-05-15 10:30:00+0100; end = 2025-05-15 11:00:00+0100</a></p><p><b>period</b>: 2025-05-15 10:30:00+0100 --&gt; 2025-05-15 11:00:00+0100</p></div>
+  </text>
+  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-status">
+    <valueCode value="READY"/>
+  </extension>
+  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions">
+    <valueString value="Le patient est attendu pour une IRM en ambulatoire."/>
+  </extension>
+  <identifier>
+    <use value="temp"/>
+    <type>
+      <coding>
+        <system value="http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type"/>
+        <code value="VN"/>
+        <display value="Visit Number"/>
+      </coding>
+    </type>
+    <system value="http://example.com/identifiers/encounters"/>
+    <value value="15655244"/>
+  </identifier>
+  <status value="planned"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="SS"/>
+    <display value="Externe"/>
+  </class>
+  <subject>
+    <reference value="Patient/patient-001"/>
+  </subject>
+  <appointment>
+    <reference value="Appointment/appt-irm-001"/>
+  </appointment>
+  <period>
+    <start value="2025-05-15T10:30:00+01:00"/>
+    <end value="2025-05-15T11:00:00+01:00"/>
+  </period>
+</Encounter>
