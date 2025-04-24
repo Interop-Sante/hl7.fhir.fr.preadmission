@@ -1,8 +1,29 @@
-Extension: PreadmissionOrganismeComplementaireFr
-Id: hl7.fhir.fr.preadmission.organisme-complementaire
-* ^url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/OrganismeComplementaire"
-* ^description = "Rattachement à un organisme complémentaire."
+Extension: FrCoverageAMCExtension
+Id:        fr-coverage-amc-extended
+Title:     "Extension AMC Étendue"
+Description: "Extension pour les données spécifiques AMC incluant nom, numéro, code convention, code CSR et datamatrix"
+* ^url = "http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended"
 * ^context.type = #element
 * ^context.expression = "Coverage"
-* value[x] 1..1
-* valueString
+
+* extension contains
+    nomAMC 0..1 MS and
+    numeroAMC 1..1 MS and
+    codeConvention 0..1 MS and
+    codeCSR 0..1 MS and
+    datamatrix 0..1 MS
+
+* extension[nomAMC].value[x] only string
+* extension[nomAMC].url = "nomAMC" (exactly)
+
+* extension[numeroAMC].value[x] only string
+* extension[numeroAMC].url = "numeroAMC" (exactly)
+
+* extension[codeConvention].value[x] only string
+* extension[codeConvention].url = "codeConvention" (exactly)
+
+* extension[codeCSR].value[x] only string
+* extension[codeCSR].url = "codeCSR" (exactly)
+
+* extension[datamatrix].value[x] only string
+* extension[datamatrix].url = "datamatrix" (exactly)

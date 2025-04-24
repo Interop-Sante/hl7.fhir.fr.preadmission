@@ -25,14 +25,16 @@ Description: "Profil FHIR pour un encounter lié à une préadmission"
 
 * subject only Reference(FrCorePatient)
 
-* appointment 1..1
+* appointment 0..1
 * appointment only Reference(PreadmissionAppointmentFr)
 
 * identifier 1..1 MS
 * status 1..1 MS
-* type 1..1 MS
-* subject 1..1 MS
 * participant 0..* MS
 * period 1..1 MS
-* appointment 1..1 MS
 * location 0..1 MS
+
+// Précision pour le champ class
+* class 1..1 MS
+* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* class.code from TypeVenueEncounterValueSet (required)

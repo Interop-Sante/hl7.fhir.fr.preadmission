@@ -33,11 +33,13 @@ pages:
   processus-ressource-fhir.md:
     title: Processus centré sur les ressources
   appointment.md:
-    title: Ressource Rendez-vous (Appointment)
+    title: Rendez-vous (Appointment)
   encounter.md:
-    title: Ressource Preadmission (Encounter)
+    title: Preadmission (Encounter)
   consentements.md:
     title: Consentements
+  coverage.md:
+    title: Couverture Sociale (Coverage)
   questionnaires.md:
     title: Questionnaires
   documents.md:
@@ -57,6 +59,7 @@ menu:
     Ressources:
         Appointment: appointment.html
         Encounter: encounter.html
+        Coverage: coverage.html
         Consentements: consentements.html
         Questionnaires: questionnaires.html
         Documents: documents.html

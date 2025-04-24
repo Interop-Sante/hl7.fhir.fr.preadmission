@@ -25,6 +25,14 @@ Ce consentement est obligatoire et permet de recueillir l’accord du patient po
 
 ### **2. Consentement à l’accès et à l’alimentation du DMP**
 
+
+| Description                      | Type     |
+|----------------------------------|----------|
+| Opposition bris de glace         | Oui / Non |
+| Opposition centre régulation     | Oui / Non |
+| Date de recueil                  | Date      |
+
+
 Ce consentement permet à l’établissement de santé d’accéder au Dossier Médical Partagé (DMP) du patient et d’y inscrire des documents relatifs à la préadmission. Il est modélisé à l’aide de deux sous-catégories distinctes :
 - **Accès au DMP** : Permet la consultation des données du DMP.
 - **Alimentation du DMP** : Autorise l’ajout de documents dans le DMP.

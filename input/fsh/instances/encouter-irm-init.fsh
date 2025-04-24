@@ -1,7 +1,7 @@
-Instance: encounter-irm-refused
+Instance: encounter-irm-externe
 InstanceOf: PreadmissionEncounterFr
 Usage: #example
-* id = "encounter-irm-refused"
+* id = "encounter-irm-externe"
 * status = #planned
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #SS
@@ -21,8 +21,8 @@ Usage: #example
 
 // Extension pour le statut de la préadmission
 * extension[0].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-status"
-* extension[0].valueCode = #REFUSED
+* extension[0].valueCode = #READY
 
-// Extension pour le commentaire de rejet
+// Extension pour un commentaire éventuel
 * extension[1].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"
-* extension[1].valueString = "Le patient n'a pas fourni les documents nécessaires pour valider la préadmission."
+* extension[1].valueString = "Le patient est attendu pour une IRM en ambulatoire."

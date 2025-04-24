@@ -20,12 +20,28 @@ La ressource `Encounter` est créée par le **système administratif** de l’h�
 Le **statut de la préadmission** est représenté à l’aide de l’extension `PreadmissionStatutFr`. Cette extension permet de suivre l’état administratif de la préadmission avec les valeurs suivantes :
 
 - `CREATED` : Pré-admission créée mais non encore traitée.
-- `IN_PROGRESS` : Pré-admission en cours de traitement.
-- `READY` : Pré-admission complète et prête pour la venue du patient.
+- `IN_PROGRESS` : Pré-admission en cours de traitement dans le **portail de préadmission**. La patient n'a pas encore renseigner ses informations.
+- `READY` : Les informations ont été renseignées par le patient dans le portail de préadmission. Celle-ci peut-être récupérée par le **système administratif** de l’hôpital
 - `COMPLETED` : Pré-admission validée et finalisée.
 - `REFUSED` : Pré-admission refusée avec un motif explicatif.
 
 Cette extension est obligatoire dans le profil et remplace l’utilisation directe de `Encounter.status` pour refléter l’état administratif.
+
+---
+
+## Cycle de vie de la préadmission
+
+Le cycle de vie de la préadmission est géré à travers le champ `preadmission_status`, qui évolue en fonction des actions réalisées par le patient ou l’agent administratif. Voici les étapes principales :
+
+| **Action**                     | **Statut**                     | **Description**                                                                 |
+|--------------------------------|---------------------------------|---------------------------------------------------------------------------------|
+| **POST**                       | `CREATED`                      | La préadmission est créée par le système administratif ou le portail patient.   |
+| **GET**                        | `IN_PROGRESS`                  | La préadmission est commencée par le patient.                                  |
+| **PATCH**                      | `READY`                        | La préadmission est terminée par le patient et prête pour validation.          |
+| **PATCH**                      | `CANCELLED`                    | La préadmission est annulée par le patient ou l’agent administratif.           |
+| **PATCH**                      | `IN_PROGRESS`                  | La préadmission est modifiée (ex. changement de date ou d’informations).       |
+| **PATCH**                      | `REFUSED`                      | La préadmission est rejetée par l’agent administratif avec un motif explicatif. |
+| **PATCH**                      | `COMPLETED`                    | La préadmission est validée par l’agent administratif.                         |
 
 ---
 
