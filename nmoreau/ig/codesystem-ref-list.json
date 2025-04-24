@@ -42,8 +42,8 @@
       "description" : "Types de consentement recueillis pendant la préadmission.",
       "uses" : {
       },
-      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement",
-      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient"
+      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient",
+      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement"
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",

@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PreadmissionAppointmentQuestionnaireResponseFr"] ; # 
   fhir:title [ fhir:v "Questionnaire lié au rendez-vous"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-24T12:14:49+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-24T12:53:37+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

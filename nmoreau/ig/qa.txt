@@ -3,7 +3,7 @@ PreadmissionFHIRIG : Validation Results
 
 err = 117, warn = 60, info = 17
 IG Publisher Version: 1.8.24
-Generated Thu Apr 24 12:16:18 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.1.0 (canonical = https://github.com/Interop-Sante/hl7.fhir.fr.preadmission)
+Generated Thu Apr 24 12:55:15 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.1.0 (canonical = https://github.com/Interop-Sante/hl7.fhir.fr.preadmission)
  Build Errors : 12 / 16 / 0
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Appointment-appt-irm-001 : 6 / 1 / 3
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-dmp-alimentation-consent-status : 4 / 1 / 2
