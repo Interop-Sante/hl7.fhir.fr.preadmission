@@ -1,0 +1,41 @@
+{
+  "resourceType": "Appointment",
+  "id": "appt-irm-001",
+  "status": "booked",
+  "description": "IRM cérébrale - préadmission",
+  "start": "2025-05-15T10:30:00+01:00",
+  "end": "2025-05-15T11:00:00+01:00",
+  "participant": [
+    {
+      "actor": {
+        "reference": "Patient/patient-001"
+      },
+      "status": "accepted"
+    },
+    {
+      "actor": {
+        "reference": "Practitioner/practitioner-irm"
+      },
+      "status": "accepted"
+    }
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "241541005",
+          "display": "IRM cérébrale (procédure)"
+        }
+      ]
+    }
+  },
+  "extension": [
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context",
+      "valueReference": {
+        "reference": "QuestionnaireResponse/qr-irm-001"
+      }
+    }
+  ]
+}

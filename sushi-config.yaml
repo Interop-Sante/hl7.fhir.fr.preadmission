@@ -1,7 +1,7 @@
 id: hl7.fhir.fr.preadmission
 canonical: http://hl7.fr/fhir/fr/preadmission
-name: ExampleIG
-title: Exemple d'IG Français
+name: PreadmissionFHIRIG
+title: Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne
 publisher:
   name: Interop'Santé
   url: http://interopsante.org/
@@ -12,6 +12,7 @@ contact:
         value: fhir@interopsante.org
         use: work
 status: draft
+url : https://github.com/Interop-Sante/hl7.fhir.fr.preadmission
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+
@@ -20,20 +21,49 @@ jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
 parameters:
   shownav: 'true'
-
-
-# dependencies:
-#   ans.fr.nos: latest
+  
+dependencies:
+  hl7.fhir.fr.core: 2.0.1
 
 pages:
-    index.md:
-        title: Accueil
-    downloads.md:
-        title: Téléchargement du guide
+  index.md:
+    title: Accueil
+  processus.md:
+    title: Processus de Préadmission
+  processus-ressource-fhir.md:
+    title: Processus centré sur les ressources
+  appointment.md:
+    title: Ressource Rendez-vous (Appointment)
+  encounter.md:
+    title: Ressource Preadmission (Encounter)
+  consentements.md:
+    title: Consentements
+  questionnaires.md:
+    title: Questionnaires
+  documents.md:
+    title: Documents Justificatifs
+  flux.md:
+    title: Diagrammes des flux
+  sequence.md:
+    title: Diagramme de séquence du processus
+  downloads.md:
+    title: Téléchargement du guide
+
 menu:
     Accueil: index.html
+    Processus de préadmission:
+        Diagramme de flux: flux.html
+        Diagramme de séquence: sequence.html
+    Ressources:
+        Appointment: appointment.html
+        Encounter: encounter.html
+        Consentements: consentements.html
+        Questionnaires: questionnaires.html
+        Documents: documents.html
     Ressources de conformité: artifacts.html
     Documentations: 
         Documentation des IGs: new-tab https://interop.esante.gouv.fr/ig/documentation/
         Site d'InteropSanté: new-tab https://www.interopsante.org/
         Téléchargements: downloads.html
+
+

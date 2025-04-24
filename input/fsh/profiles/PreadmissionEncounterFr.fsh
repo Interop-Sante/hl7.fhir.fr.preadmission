@@ -1,5 +1,5 @@
 Profile: PreadmissionEncounterFr
-Parent: Encounter
+Parent: FrCoreEncounter
 Id: preadmission-encounter-fr
 Title: "Fr Preadmission Encounter Profile"
 Description: "Profil FHIR pour un encounter lié à une préadmission"
@@ -7,6 +7,8 @@ Description: "Profil FHIR pour un encounter lié à une préadmission"
 * extension contains EncounterPatientComment named remarquePatient 0..1
 * extension contains EncounterAgentInstructions named consignesAgent 0..1
 * extension contains PreadmissionStatutFr named preadmissionStatus 1..1
+* extension contains PreadmissionConsentementsExtension named consentements 0..*
+
 * identifier.use = #temp
 * identifier.type.coding.system = "http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type"
 * identifier.type.coding.code = #VN
@@ -20,4 +22,17 @@ Description: "Profil FHIR pour un encounter lié à une préadmission"
   </ul>
 </div>
 """
-* extension contains EncounterConsentExtension named consentements 0..*
+
+* subject only Reference(FrCorePatient)
+
+* appointment 1..1
+* appointment only Reference(PreadmissionAppointmentFr)
+
+* identifier 1..1 MS
+* status 1..1 MS
+* type 1..1 MS
+* subject 1..1 MS
+* participant 0..* MS
+* period 1..1 MS
+* appointment 1..1 MS
+* location 0..1 MS

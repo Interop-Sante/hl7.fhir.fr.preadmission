@@ -1,0 +1,29 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "questionnaire-irm",
+  "title": "Questionnaire IRM - Préadmission",
+  "status": "active",
+  "subjectType": ["Patient"],
+  "item": [
+    {
+      "linkId": "implant",
+      "text": "Avez-vous un implant métallique ou un pacemaker ?",
+      "type": "boolean"
+    },
+    {
+      "linkId": "grossesse",
+      "text": "Êtes-vous actuellement enceinte ?",
+      "type": "boolean"
+    },
+    {
+      "linkId": "allergies",
+      "text": "Avez-vous des allergies connues ?",
+      "type": "boolean"
+    },
+    {
+      "linkId": "medications",
+      "text": "Prenez-vous des médicaments régulièrement ?",
+      "type": "boolean"
+    }
+  ]
+}

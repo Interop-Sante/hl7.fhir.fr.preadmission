@@ -6,6 +6,7 @@ Description: "CodeSystem pour les statuts de la préadmission"
 * ^version = "1.0.0"
 * ^status = #active
 * ^content = #complete
+* ^caseSensitive = false
 
 * #CANCELLED "Pré-admission annulée"
 * #CREATED "Pré-admission créée"

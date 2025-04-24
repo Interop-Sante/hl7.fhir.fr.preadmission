@@ -67,7 +67,7 @@ Il repose sur des profils FHIR adaptés au contexte français (INS, couverture s
 
 ### 2. Logiciel de rendez-vous
 - Création de `Appointment`
-- Association : `QuestionnaireResponse`, `Consent`, `DocumentReference`
+- Association : `QuestionnaireResponse`, `Consent`
 
 ### 3. Système administratif
 - Récupération des données
@@ -97,90 +97,13 @@ Il repose sur des profils FHIR adaptés au contexte français (INS, couverture s
 ## Questionnaire de contexte
 - Implant ? Allergies ? Aide médicale ? Contre-indications ?
 
-## Consentement DMP (ZFA)
-Description | Type |
--------------|------|
-Opposition bris de glace | Oui / Non |
-Opposition centre régulation | Oui / Non |
-Date de recueil | Date |
+## Consentement DMP
 
-# 🔄 Flux de la préadmission
-
-Ce diagramme présente le cheminement d’un patient dans le processus de préadmission, depuis la prise de rendez-vous jusqu’à l’admission à l’hôpital.
-
-```mermaid
-flowchart TD
-    A[Patient] --> B[Portail patient en ligne]
-    B --> C[Prise de rendez-vous (Appointment)]
-    C --> D[Remplissage du questionnaire de contexte]
-    D --> E[Recueil du consentement DMP]
-    C --> F[Validation par le logiciel administratif]
-    F --> G[Preadmission (Encounter)]
-    G --> H[Préparation du séjour hospitalier]
-
-
-
----
-
-### 📄 `schema-fhir.md`
-
-```markdown
-# 🧬 Schéma FHIR du modèle de préadmission
-
-Voici les principales ressources FHIR impliquées dans le processus de préadmission et leurs liens :
-
-```mermaid
-flowchart TD
-    A[Patient] -->|Prise de rendez-vous| B[Portail de rendez-vous (ex: Doctolib)]
-    A -->|Prise de rendez-vous| C[Secrétaire médicale]
-    B --> D[Logiciel de rendez-vous]
-    C --> D[Logiciel de rendez-vous]
-    D --> E[Système administratif hospitalier]
-    E --> F[Portail de pré-admission]
-    F --> G[Patient]
-    E -->|Notification de l'état du dossier| F 
-
-
-# 🖼️ Diagrammes Complémentaires
-
-## Diagramme de flux – Enchaînement complet
-```mermaid
-flowchart TD
-  A[Patient] --> B[Portail Patient]
-  B --> B1[Remplissage du questionnaire]
-  B --> B2[Téléversement des documents]
-  B --> B3[Consentement au DMP]
-  B --> C[Logiciel de rendez-vous]
-  C --> C1[Création de l'Appointment]
-  C --> C2[Lien avec QuestionnaireResponse / Consent]
-  C --> D[Système administratif]
-  D --> D1[Récupération des données]
-  D --> D2[Création de Encounter]
-  D --> D3[Vérification de la couverture]
-  D --> D4[Préparation de l’admission]
-```
-
-## Diagramme de séquence – Scénario complet
-```mermaid
- sequenceDiagram
-    participant Patient
-    participant Portail_RDV as Portail de rendez-vous
-    participant Secretaire as Secrétaire médicale
-    participant RDV_System as Logiciel de rendez-vous
-    participant AdminSystem as Système administratif hospitalier
-    participant Portail_Preadm as Portail de pré-admission
-
-    Patient->>Portail_RDV: Prise de rendez-vous
-    Secretaire->>RDV_System: Prise de rendez-vous
-    Portail_RDV->>AdminSystem: Transmission du rendez-vous
-    RDV_System->>AdminSystem: Transmission des données de rendez-vous
-    AdminSystem->>Portail_Preadm: Envoi des informations de pré-admission
-    Patient->>Portail_Preadm: Remplissage du questionnaire et téléversement des documents
-    Portail_Preadm->>AdminSystem: Envoi des données de pré-admission
-    AdminSystem->>Portail_Preadm: Notification de l'état du dossier
-    Portail_Preadm->>Patient: Notification de l'état du dossier 
-```
-
+| Description                      | Type     |
+|----------------------------------|----------|
+| Opposition bris de glace         | Oui / Non |
+| Opposition centre régulation     | Oui / Non |
+| Date de recueil                  | Date      |
 
 
 ---

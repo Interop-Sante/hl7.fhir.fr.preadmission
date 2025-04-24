@@ -1,0 +1,27 @@
+{
+  "resourceType": "Consent",
+  "id": "consent-dmp-001",
+  "status": "active",
+  "scope": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+        "code": "patient-privacy"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/patient-001"
+  },
+  "dateTime": "2025-04-22T10:00:00+01:00",
+  "extension": [
+    {
+      "url": "https://interop-sante.fr/fhir/StructureDefinition/consent-dmp-bris-de-glace",
+      "valueCode": "DMP_ACCESS_GRANTED"
+    },
+    {
+      "url": "https://interop-sante.fr/fhir/StructureDefinition/consent-dmp-centre-regulation",
+      "valueCode": "DMP_ACCESS_DENIED"
+    }
+  ]
+}

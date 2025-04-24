@@ -1,0 +1,28 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "qr-irm-001",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/patient-001"
+  },
+  "questionnaire": "Questionnaire/questionnaire-irm",
+  "authored": "2025-04-22T11:00:00+01:00",
+  "item": [
+    {
+      "linkId": "implant",
+      "answer": [{"valueBoolean": true}]
+    },
+    {
+      "linkId": "grossesse",
+      "answer": [{"valueBoolean": false}]
+    },
+    {
+      "linkId": "allergies",
+      "answer": [{"valueBoolean": true}]
+    },
+    {
+      "linkId": "medications",
+      "answer": [{"valueBoolean": true}]
+    }
+  ]
+}
