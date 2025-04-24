@@ -1,7 +1,7 @@
 {
   "version" : "0.1.0",
   "fhirVersion" : ["4.0.1"],
-  "date" : "20250314151720",
-  "name" : "hl7.fhir.fr.example",
+  "date" : "20250424125237",
+  "name" : "hl7.fhir.fr.preadmission",
   "jurisdiction" : "urn:iso:std:iso:3166#FR"
 }

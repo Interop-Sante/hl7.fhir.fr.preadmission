@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.fr.example"/>
+  <id value="hl7.fhir.fr.preadmission"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.example</b></p><a name="hl7.fhir.fr.example"> </a><a name="hchl7.fhir.fr.example"> </a><a name="hl7.fhir.fr.example-fr-FR"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>http://hl7.fr/fhir/fr/example/ImplementationGuide/hl7.fhir.fr.example</pre></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name="hl7.fhir.fr.preadmission"> </a><a name="hchl7.fhir.fr.preadmission"> </a><a name="hl7.fhir.fr.preadmission-fr-FR"> </a><h2>PREAD</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>
   </text>
-  <url value="http://hl7.fr/fhir/fr/example/ImplementationGuide/hl7.fhir.fr.example"/>
+  <url value="http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission"/>
   <version value="0.1.0"/>
-  <name value="ExampleIG"/>
-  <title value="Exemple d'IG Français"/>
+  <name value="PREAD"/>
+  <title value="Préadmission en ligne"/>
   <status value="draft"/>
-  <date value="2025-03-14T15:17:20+00:00"/>
+  <date value="2025-04-24T12:52:37+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -34,7 +34,7 @@
       <display value="FRANCE"/>
     </coding>
   </jurisdiction>
-  <packageId value="hl7.fhir.fr.example"/>
+  <packageId value="hl7.fhir.fr.preadmission"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
   <dependsOn id="hl7tx">
@@ -139,7 +139,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="http://hl7.fr/fhir/fr/example/history.html"/>
+        <valueString value="http://hl7.fr/fhir/fr/preadmission/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -263,7 +263,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools.r4#0.3.0"/>
+      <valueCode value="hl7.fhir.uv.tools.r4#0.5.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -350,7 +350,7 @@
         <valueCode value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="http://hl7.fr/fhir/fr/example/history.html"/>
+        <valueString value="http://hl7.fr/fhir/fr/preadmission/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -482,7 +482,7 @@
       </reference>
       <name value="frpatient-exemple"/>
       <description value="Exemple d'un patient français"/>
-      <exampleCanonical value="http://hl7.fr/fhir/fr/example/StructureDefinition/fr-patient"/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-patient"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

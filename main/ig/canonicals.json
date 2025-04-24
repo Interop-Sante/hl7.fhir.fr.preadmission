@@ -1,15 +1,15 @@
 [
   {
-    "id" : "hl7.fhir.fr.example",
+    "id" : "hl7.fhir.fr.preadmission",
     "type" : "ImplementationGuide",
-    "url" : "http://hl7.fr/fhir/fr/example/ImplementationGuide/hl7.fhir.fr.example",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission",
     "version" : "0.1.0",
-    "name" : "ExampleIG"
+    "name" : "PREAD"
   },
   {
     "id" : "fr-patient",
     "type" : "StructureDefinition",
-    "url" : "http://hl7.fr/fhir/fr/example/StructureDefinition/fr-patient",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-patient",
     "version" : "0.1.0",
     "name" : "FrPatientExample"
   }

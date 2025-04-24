@@ -6,19 +6,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.fr/fhir/fr/example/ImplementationGuide/hl7.fhir.fr.example> a fhir:ImplementationGuide ;
+<http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission> a fhir:ImplementationGuide ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "hl7.fhir.fr.example"] ; # 
+  fhir:id [ fhir:v "hl7.fhir.fr.preadmission"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.example</b></p><a name=\"hl7.fhir.fr.example\"> </a><a name=\"hchl7.fhir.fr.example\"> </a><a name=\"hl7.fhir.fr.example-fr-FR\"> </a><h2>ExampleIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>http://hl7.fr/fhir/fr/example/ImplementationGuide/hl7.fhir.fr.example</pre></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name=\"hl7.fhir.fr.preadmission\"> </a><a name=\"hchl7.fhir.fr.preadmission\"> </a><a name=\"hl7.fhir.fr.preadmission-fr-FR\"> </a><h2>PREAD</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>"^^rdf:XMLLiteral
   ] ; # 
-  fhir:url [ fhir:v "http://hl7.fr/fhir/fr/example/ImplementationGuide/hl7.fhir.fr.example"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
-  fhir:name [ fhir:v "ExampleIG"] ; # 
-  fhir:title [ fhir:v "Exemple d'IG Français"] ; # 
+  fhir:name [ fhir:v "PREAD"] ; # 
+  fhir:title [ fhir:v "Préadmission en ligne"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-03-14T15:17:20+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-24T12:52:37+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -41,7 +41,7 @@
        fhir:display [ fhir:v "FRANCE" ]
      ] )
   ] ) ; # 
-  fhir:packageId [ fhir:v "hl7.fhir.fr.example"] ; # 
+  fhir:packageId [ fhir:v "hl7.fhir.fr.preadmission"] ; # 
   fhir:license [ fhir:v "CC0-1.0"] ; # 
   fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
   fhir:dependsOn ( [
@@ -237,7 +237,7 @@
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "http://hl7.fr/fhir/fr/example/history.html"
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/history.html"
          ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
@@ -470,7 +470,7 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:code ;
-         fhir:v "hl7.fhir.uv.tools.r4#0.3.0"
+         fhir:v "hl7.fhir.uv.tools.r4#0.5.0"
        ]
      ] [
        fhir:extension ( [
@@ -633,7 +633,7 @@
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "http://hl7.fr/fhir/fr/example/history.html"
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/history.html"
          ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
@@ -872,15 +872,15 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/example/Patient/frpatient-exemple> ;
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/frpatient-exemple> ;
          fhir:reference [ fhir:v "Patient/frpatient-exemple" ]
        ] ;
        fhir:name [ fhir:v "frpatient-exemple" ] ;
        fhir:description [ fhir:v "Exemple d'un patient français" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://hl7.fr/fhir/fr/example/StructureDefinition/fr-patient"^^xsd:anyURI ;
-         fhir:link <http://hl7.fr/fhir/fr/example/StructureDefinition/fr-patient>
+         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-patient"^^xsd:anyURI ;
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-patient>
        ]
      ] [
        fhir:extension ( [
@@ -891,7 +891,7 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/example/StructureDefinition/fr-patient> ;
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-patient> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-patient" ]
        ] ;
        fhir:name [ fhir:v "Patient français" ] ;

@@ -6,13 +6,13 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.fr/fhir/fr/example/Patient/frpatient-exemple> a fhir:Patient ;
+<http://hl7.fr/fhir/fr/preadmission/Patient/frpatient-exemple> a fhir:Patient ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "frpatient-exemple"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.fr/fhir/fr/example/StructureDefinition/fr-patient"^^xsd:anyURI ;
-       fhir:link <http://hl7.fr/fhir/fr/example/StructureDefinition/fr-patient>
+       fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-patient"^^xsd:anyURI ;
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-patient>
      ] )
   ] ; # 
   fhir:text [

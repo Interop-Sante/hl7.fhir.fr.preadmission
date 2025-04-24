@@ -1,5 +1,5 @@
 {
-  "package": "hl7.fhir.fr.example",
+  "package": "hl7.fhir.fr.preadmission",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "FR",
@@ -7,7 +7,7 @@
   "profiles": {
     "Patient": [
       {
-        "url": "http://hl7.fr/fhir/fr/example/StructureDefinition/fr-patient",
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-patient",
         "title": "Patient français"
       }
     ]
