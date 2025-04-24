@@ -6,4 +6,4 @@
 
 ## Preview
 
-https://Interop-Sante.github.io/IG-fhir-mesures-de-sante/[ajouter_nom_de_la_branche]/ig 
+https://Interop-Sante.github.io/IG-fhir-hl7.fhir.fr.preadmission/[ajouter_nom_de_la_branche]/ig 
