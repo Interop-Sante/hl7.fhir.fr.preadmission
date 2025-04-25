@@ -63,6 +63,15 @@ Le profil **PreadmissionEncounterFr** apporte les contraintes suivantes :
 - **`Encounter.subject`** : Référence obligatoire vers le `Patient` concerné.
 - **`Encounter.appointment`** : Référence obligatoire vers le `Appointment` à l’origine de la préadmission.
 
+---
+
+## Critères de recherche autorisés
+
+Les critères de recherche suivants sont disponibles pour le profil `PreadmissionEncounterFr` :
+
+- **Date de dernière mise à jour** : Permet de rechercher les préadmissions en fonction de la date de leur dernière modification (`_lastUpdated`).
+- **Date de la venue** : Permet de rechercher les préadmissions en fonction de la période prévue pour la venue (`date`).
+- **Statut de la préadmission** : Permet de rechercher les préadmissions selon leur statut (`preadmissionStatus`).
 
 ---
 

@@ -27,7 +27,6 @@ La ressource `Coverage` est utilisée pour modéliser les informations relatives
 ### Extensions spécifiques
 Pour répondre aux besoins spécifiques de la préadmission, des extensions enrichissent la ressource `Coverage` :
 - **`FrCoverageAMCExtension`** : Permet de détailler les informations spécifiques à une AMC, comme le nom de l'organisme complémentaire, le numéro d'adhérent, ou encore un code de convention.
-- **`relationship`** : Indique le lien entre l'assuré principal et le bénéficiaire, obligatoire si ces deux personnes sont différentes.
 
 ---
 
@@ -37,7 +36,7 @@ Pour une Assurance Maladie Obligatoire (AMO), les informations suivantes doivent
 1. **Type de couverture** : Utilisez le code `PUBLICPOL` pour indiquer qu'il s'agit d'une AMO.
 2. **Bénéficiaire** : Référencez le patient concerné via le champ `beneficiary`.
 3. **Assuré principal** : Si l'assuré principal est différent du bénéficiaire, renseignez le champ `subscriber` avec une référence vers la ressource `Patient` correspondante.
-4. **Numéro de sécurité sociale** : Renseignez le champ `subscriberId` avec le NIR (Numéro d'Inscription au Répertoire) de l'assuré principal.
+4. **Numéro de sécurité sociale** : Renseignez le champ `subscriberId` avec le numéro de Sécurité Sociale de l'assuré principal.
 5. **Lien entre l'assuré et le bénéficiaire** : Si nécessaire, utilisez le champ `relationship` pour indiquer le lien (ex. parent, conjoint).
 
 ---
@@ -53,18 +52,26 @@ Pour une Assurance Maladie Complémentaire (AMC), les informations suivantes doi
    - Le nom de l'organisme complémentaire (`nomAMC`).
    - Le numéro de l'AMC (`numeroAMC`).
    - Un code de convention ou un code CSR, si applicable.
-
+   - Il est possible aussi de transmettre le contenu du Datamatrix
 ---
 
 ## Exemple d'échange de couverture sociale
 
 Lors de la préadmission, le patient fournit ses informations de couverture sociale via un portail en ligne. Ces données sont ensuite transmises au système administratif de l'hôpital pour vérification. Voici un exemple de flux :
-1. **Saisie par le patient** : Le patient renseigne ses informations d'AMO et/ou d'AMC sur le portail.
+1. **Saisie par le patient** : Le patient renseigne ses informations d'AMO et/ou d'AMC sur le portail de préadmission.
 2. **Transmission au système administratif hospitalier** : Les données sont envoyées sous forme de ressource `Coverage`, enrichie des extensions nécessaires.
-3. **Vérification par l'agent administratif** : L'agent vérifie la validité des informations (dates, numéros, etc.).
+3. **Vérification par l'agent administratif** : L'agent vérifie la validité des informations (dates, numéros, etc.) et fait appel aux différents téléservices.
 4. **Validation ou correction** : Si tout est conforme, la couverture est validée. Sinon, une notification est envoyée au patient pour correction.
 
 ---
+
+## Critère de recherche
+
+Dans le contexte de la préadmission, la ressource `Coverage` ne peut être recherchée qu'à partir du **patient**. Cela signifie que les systèmes doivent utiliser uniquement le critère `patient` pour interroger les informations de couverture, conformément aux contraintes d'implémentation définies.
+
+```plaintext
+coverage?patient=
+```
 
 ## Conclusion
 

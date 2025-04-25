@@ -1,6 +1,6 @@
 id: hl7.fhir.fr.preadmission
 canonical: http://hl7.fr/fhir/fr/preadmission
-name: PreadmissionFHIRIG
+name: PREADMISSIONFR
 title: Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne
 publisher:
   name: Interop'Santé
@@ -23,7 +23,7 @@ parameters:
   shownav: 'true'
   
 dependencies:
-  hl7.fhir.fr.core: 2.0.1
+  hl7.fhir.fr.core: 2.1.0
 
 pages:
   index.md:
@@ -54,6 +54,7 @@ pages:
 menu:
     Accueil: index.html
     Processus de préadmission:
+        Processus centré sur les ressources: processus-ressource-fhir.html
         Diagramme de flux: flux.html
         Diagramme de séquence: sequence.html
     Ressources:

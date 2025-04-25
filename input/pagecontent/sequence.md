@@ -7,18 +7,18 @@ La pré-admission hospitalière en ligne repose sur une séquence d’opération
 ## Séquence des étapes
 
 ### 1. **Prise de Rendez-vous par le Patient**
-Le patient réserve une consultation via un **portail externe** (par exemple, Doctolib). Lors de cette prise de rendez-vous :
+Le patient réserve une consultation via un **portail externe**. Lors de cette prise de rendez-vous :
 - Un `Appointment` est créé pour planifier la consultation.
 
 ### 2. **Remplissage du Formulaire de Pré-admission**
 Une fois le rendez-vous pris, le patient remplit un formulaire de pré-admission via le **portail de préadmission**. Ce formulaire inclut des informations personnelles, des détails sur la couverture sociale, des documents justificatifs, ainsi que des consentements :
-- Les données sont envoyées sous forme de `QuestionnaireResponse`.
+- Les données personnelles sont envoyées sous forme de `Patient`.
 - Les documents justificatifs sont téléchargés sous forme de `DocumentReference`.
 - Le consentement du patient est recueilli via une ressource `Consent`.
 
-### 3. **Transmission des Données au SIH**
-Une fois les informations saisies et validées par le patient, le **SIH** (Système d’Information Hospitalier) reçoit les données :
-- Un `Encounter` de type préadmission est créé dans le SIH pour amorcer le processus de validation des informations administratives.
+### 3. **Transmission des Données au Système administratif de l'hôpital**
+Une fois les informations saisies et validées par le patient, le **Système administratif de l'hôpital** reçoit les données :
+- Un `Encounter` de type préadmission est créé dans le **Système administratif de l'hôpital** pour amorcer le processus de validation des informations administratives.
 
 ### 4. **Vérification par le Bureau des Entrées (BDE)**
 Un agent du **Bureau des Entrées (BDE)** vérifie les données récupérées, notamment :
@@ -35,13 +35,14 @@ Après vérification, le **portail de préadmission** notifie le patient de l'is
 
 ## Récapitulatif de la Séquence
 
-| Étape                          | Ressources FHIR utilisées          |
-|---------------------------------|------------------------------------|
-| 1. Prise de rendez-vous         | `Appointment`                      |
-| 2. Remplissage du formulaire    | `QuestionnaireResponse`, `Consent` |
-| 3. Transmission au SIH          | `Encounter`                        |
-| 4. Vérification par le BDE      | `Patient`, `Coverage`, `DocumentReference`, `Extension` |
-| 5. Retour au patient            | `Consent`                          |
+| Étape                          | Ressources FHIR utilisées                                       |
+|-------------------------------|------------------------------------------------------------------|
+| 1. Prise de rendez-vous       | `Appointment`                                                   |
+| 2. Remplissage du formulaire  | `QuestionnaireResponse`, `Consent`                              |
+| 3. Transmission au SIH        | `Encounter`                                                     |
+| 4. Vérification par le BDE    | `Patient`, `Coverage`, `DocumentReference`, `Consent`, `Extension` |
+| 5. Retour au patient          | `Consent`                                                       |
+
 
 ---
 
@@ -54,31 +55,31 @@ sequenceDiagram
     participant Patient
     participant PortailRdv as Portail de rendez-vous
     participant PortailPreadm as Portail de préadmission
-    participant SIH
+    participant SAH as Système administratif de l'hôpital
     participant AgentBDE as Agent du Bureau des Entrées
 
     %% Étape 1 : Prise de RDV
     Patient->>PortailRdv: Réservation de rendez-vous
-    PortailRdv-->>SIH: Notification du rendez-vous (Appointment)
+    PortailRdv-->>SAH: Notification du rendez-vous (Appointment)
 
-    %% Étape 2 : SIH initie la préadmission
-    SIH->>PortailPreadm: Envoi d'un Encounter (pré-admission)
+    %% Étape 2 : Système administratif de l'hôpital initie la préadmission
+    SAH->>PortailPreadm: Envoi d'un Encounter (pré-admission)
     
     %% Étape 3 : Notification au patient
     PortailPreadm->>Patient: Envoi lien sécurisé
 
     %% Étape 4 : Patient renseigne ses données
-    Patient->>PortailPreadm: Envoi Patient / Coverage / DocumentReference / Consent\n+ Extension (message libre)
+    Patient->>PortailPreadm: Envoi Patient / Coverage / DocumentReference / Consent + Extension (message libre)
 
-    %% Étape 5 : Polling du SIH
+    %% Étape 5 : Polling du SAH
     loop Polling régulier
-        SIH->>PortailPreadm: Récupération des données
-        PortailPreadm-->>SIH: Retour des ressources complétées
+        SAH->>PortailPreadm: Récupération des données
+        PortailPreadm-->>SAH: Retour des ressources complétées
     end
 
     %% Étape 6 : Vérification par l'agent
-    AgentBDE->>SIH: Consultation des données
-    AgentBDE->>PortailPreadm: Acceptation ou refus\n+ cause de refus (Extension/Communication)
+    AgentBDE->>SAH: Consultation des données
+    AgentBDE->>PortailPreadm: Acceptation ou refus + cause de refus (Extension/Communication)
 
     %% Étape 7 : Notification finale
     PortailPreadm->>Patient: Résultat (accepté / rejeté)

@@ -67,35 +67,5 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-## 📬 Communication
-
-**Rôle :** Notifications envoyées au patient
-
-- Utilisé pour informer le patient :
-  - de la possibilité de compléter sa préadmission,
-  - de la validation,
-  - ou d’un refus avec explication.
-
----
-
-## 📝 Annotation (sur Encounter)
-
-**Rôle :** Commentaire de refus
-
-- Ajoutée à l'Encounter en cas de refus de la préadmission.
-- Utilisée pour justifier la décision de rejet (texte libre).
-
----
-
-## 🧾 Task (optionnel)
-
-**Rôle :** Suivi des actions à effectuer
-
-- Peut être utilisée pour :
-  - Tracer la vérification par un agent administratif.
-  - Créer une tâche de relance en cas de non-réponse du patient.
-
----
-
 Ce découpage par ressource permet une implémentation modulaire, chaque acteur (portail, secrétariat, SIH) manipulant uniquement les ressources pertinentes à son rôle tout en respectant les standards FHIR.
 
