@@ -85,12 +85,52 @@ sequenceDiagram
     PortailPreadm->>Patient: Résultat (accepté / rejeté)
 ```
 
+### Si le Portail de rendez-vous est en dehors du SIH
+
+```mermaid
+sequenceDiagram
+    participant Patient
+    participant PortailRdv as Portail de rendez-vous
+    participant PortailPreadm as Portail de préadmission
+    participant SAH as Système administratif de l'hôpital
+    participant AgentBDE as Agent du Bureau des Entrées
+
+    %% Étape 1 : Prise de RDV
+    Patient->>PortailRdv: Réservation de rendez-vous
+
+    %% Étape 2 : Polling du SAH vers le RDV
+    loop Polling régulier
+        SAH->>PortailRdv: Récupération des rendez-vous
+        PortailRdv-->>SAH: Retour des ressources complétées
+    end
+
+    %% Étape 3 : Système administratif de l'hôpital initie la préadmission
+    SAH->>PortailPreadm: Envoi d'un Encounter (pré-admission)
+    
+    %% Étape 4 : Notification au patient
+    PortailPreadm->>Patient: Envoi lien sécurisé
+
+    %% Étape 5 : Patient renseigne ses données
+    Patient->>PortailPreadm: Envoi Patient / Coverage / DocumentReference / Consent + Extension (message libre)
+
+    %% Étape 6 : Polling du SAH
+    loop Polling régulier
+        SAH->>PortailPreadm: Récupération des données
+        PortailPreadm-->>SAH: Retour des ressources complétées
+    end
+
+    %% Étape 7 : Vérification par l'agent
+    AgentBDE->>SAH: Consultation des données
+    AgentBDE->>PortailPreadm: Acceptation ou refus + cause de refus (Extension)
+
+    %% Étape 7 : Notification finale
+    PortailPreadm->>Patient: Résultat (accepté / rejeté)
+```
+
 ## Conclusion
 
 Cette séquence garantit une gestion fluide et structurée des données administratives liées à la pré-admission hospitalière en ligne. Chaque acteur du processus contribue à l'efficacité du parcours patient, tout en respectant les normes d'interopérabilité et de sécurité des données.
 
 ---
-
-Le diagramme de séquence montre l'enchaînement des interactions entre les différents acteurs et systèmes tout au long du processus de pré-admission. Si tu as d'autres demandes ou des modifications à apporter, fais-le moi savoir !
 
 

@@ -114,6 +114,31 @@ SIH → [Portail de préadmission] → Patient
    Système administratif de l'hôpital → [Portail de préadmission] → Patient
 ```
 
+```mermaid
+flowchart TD
+    %% Étape 1 : Prise de rendez-vous
+    Patient1[Patient]
+    PortailRDV[Portail de rendez-vous]
+    SystemeAdmin[Système administratif de l'hôpital]
+    Patient1 -->|Prise de rendez-vous| PortailRDV -->|Transmission du rendez-vous| SystemeAdmin
+
+    %% Étape 2 : Soumission des informations de préadmission
+    Patient2[Patient]
+    PortailPread[Portail de préadmission]
+    Patient2 -->|Soumission des infos| PortailPread -->|Transmission des infos| SystemeAdmin
+
+    %% Étape 3 : Recueil des consentements
+    Patient3[Patient]
+    Patient3 -->|Consentements| PortailPread -->|Transmission des consentements| SystemeAdmin
+
+    %% Étape 4 : Vérification par l'agent du BDE
+    AgentBDE[Agent du BDE]
+    SystemeAdmin <-->|Vérification et validation| AgentBDE
+
+    %% Étape 5 : Notification au patient
+    SystemeAdmin -->|Notification| PortailPread -->|Consultation du statut| Patient3
+```
+
 ## Conclusion
 
 Les flux décrits dans ce document permettent de structurer et de coordonner les échanges entre les différents acteurs impliqués dans la préadmission hospitalière. En s’appuyant sur les ressources FHIR (`Appointment`, `Patient`, `Coverage`, `DocumentReference`, `Consent`, `Encounter`, etc.), ce processus garantit une gestion efficace et conforme aux exigences réglementaires.

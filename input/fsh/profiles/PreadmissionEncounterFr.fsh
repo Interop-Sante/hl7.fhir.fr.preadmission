@@ -23,7 +23,7 @@ Description: "Profil FHIR pour un encounter lié à une préadmission"
 </div>
 """
 
-* subject only Reference(FRCorePatientINSProfile)
+* subject only Reference(FRCorePatientProfile)
 
 * appointment 0..1
 * appointment only Reference(PreadmissionAppointmentFr)

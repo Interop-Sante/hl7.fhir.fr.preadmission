@@ -5,7 +5,7 @@ Title: "Fr Preadmission Consent Profile"
 Description: "Profil FHIR pour les consentements lors de la préadmission"
 
 * patient 1..1
-* patient only Reference(FRCorePatientINSProfile)
+* patient only Reference(FRCorePatientProfile)
 
 * category 1..1
 * category from PreadmissionConsentCategoryValueSet (required)

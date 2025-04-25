@@ -30,11 +30,11 @@ Description: "Profil Coverage pour la gestion des informations liées à la couv
 
 // Précisione pour le bénéficiaire de la couverture (patient)
 * beneficiary 1..1 MS
-* beneficiary only Reference(FRCorePatientINSProfile)
+* beneficiary only Reference(FRCorePatientProfile)
 
 // Précision pour le champ subscriber
 * subscriber 1..1 MS
-* subscriber only Reference(FRCorePatientINSProfile)
+* subscriber only Reference(FRCorePatientProfile)
 * subscriber ^short = "Référence vers l’assuré"
 * subscriber ^definition = "Référence vers l’assuré (et son NIR). À renseigner obligatoirement si l’assuré est différent du bénéficiaire."
 
