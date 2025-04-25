@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PreadmissionEncounterFr"] ; # 
   fhir:title [ fhir:v "Fr Preadmission Encounter Profile"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-25T14:29:23+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-25T16:50:14+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -2929,8 +2929,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
          fhir:targetProfile ( [
-           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"^^xsd:anyURI ;
-           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins>
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -5344,16 +5344,6 @@
            fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs>
          ]
        ]
-     ] [
-       fhir:id [ fhir:v "Encounter.subject" ] ;
-       fhir:path [ fhir:v "Encounter.subject" ] ;
-       fhir:type ( [
-         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
-         fhir:targetProfile ( [
-           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"^^xsd:anyURI ;
-           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins>
-         ] )
-       ] )
      ] [
        fhir:id [ fhir:v "Encounter.participant" ] ;
        fhir:path [ fhir:v "Encounter.participant" ] ;

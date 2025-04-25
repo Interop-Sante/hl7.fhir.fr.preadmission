@@ -62,7 +62,7 @@
       "description" : "Liste des types de documents autorisés pour la préadmission",
       "systems" : [
         "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/document-type-code-system",
-        "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type"
+        "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity"
       ]
     },
     {

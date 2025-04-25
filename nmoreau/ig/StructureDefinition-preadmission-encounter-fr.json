@@ -10,7 +10,7 @@
   "name" : "PreadmissionEncounterFr",
   "title" : "Fr Preadmission Encounter Profile",
   "status" : "draft",
-  "date" : "2025-04-25T14:29:23+00:00",
+  "date" : "2025-04-25T16:50:14+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -2673,7 +2673,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"]
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -4879,14 +4879,6 @@
         "strength" : "required",
         "valueSet" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs"
       }
-    },
-    {
-      "id" : "Encounter.subject",
-      "path" : "Encounter.subject",
-      "type" : [{
-        "code" : "Reference",
-        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"]
-      }]
     },
     {
       "id" : "Encounter.participant",

@@ -165,6 +165,9 @@
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-status": [
       "Encounter"
     ],
+    "http://hl7.org/fhir/StructureDefinition/birth-list-given-name": [
+      "Patient.name"
+    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
     ],

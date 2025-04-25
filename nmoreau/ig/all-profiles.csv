@@ -351,7 +351,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "preadmission-appointment-fr","Appointment.participant.type","Appointment.participant.type","","","",0,*,"","","Y","CodeableConcept {[]} {[]}
 ","Role of participant in the appointment","Role of participant in the appointment.","The role of the participant can be used to declare what the actor will be doing in the scope of this appointment.If the actor is not specified, then it is expected that the actor will be filled in at a later stage of planning.This value SHALL be the same when creating an AppointmentResponse so that they can be matched, and subsequently update the Appointment.","","","","","","","","",,"extensible","Role of participant in encounter.","http://hl7.org/fhir/ValueSet/encounter-participant-type","",,,,"Appointment.participant.type",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"preadmission-appointment-fr","Appointment.participant.actor","Appointment.participant.actor","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins]]}
+"preadmission-appointment-fr","Appointment.participant.actor","Appointment.participant.actor","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient], CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient]]}
 ","Person, Location/HealthcareService or Device","A Person, Location/HealthcareService or Device that is participating in the appointment.","","","","","","","","","",,,,,"",,,,"Appointment.participant.actor",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "preadmission-appointment-fr","Appointment.participant.required","Appointment.participant.required","","","",0,1,"","","Y","code {[]} {[]}
@@ -429,7 +429,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "preadmission-consent-fr","Consent.category","Consent.category","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
 ","Classification of the consent statement - for indexing/retrieval","A classification of the type of consents found in the statement. This element supports indexing and retrieval of consent statements.","","","","","","","","","",,"required","","https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/consent-category-value-set","",,,,"Consent.category",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"preadmission-consent-fr","Consent.patient","Consent.patient","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins]]}
+"preadmission-consent-fr","Consent.patient","Consent.patient","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient]]}
 ","Who the consent applies to","The patient/healthcare consumer to whom this consent applies.","Commonly, the patient the consent pertains to is the author, but for young and old people, it may be some other person.","","","","","","","","",,,,,"",,,,"Consent.patient",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "preadmission-consent-fr","Consent.dateTime","Consent.dateTime","","","",1,1,"","","Y","dateTime {[]} {[]}
@@ -670,13 +670,13 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "preadmission-coverage-fr","Coverage.policyHolder","Coverage.policyHolder","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Owner of the policy","The party who 'owns' the insurance policy.","For example: may be an individual, corporation or the subscriber's employer.","This provides employer information in the case of Worker's Compensation and other policies.","","","","","","","",,,,,"",,,,"Coverage.policyHolder",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"preadmission-coverage-fr","Coverage.subscriber","Coverage.subscriber","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins]]}
+"preadmission-coverage-fr","Coverage.subscriber","Coverage.subscriber","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient]]}
 ","Référence vers l’assuré","Référence vers l’assuré (et son NIR). À renseigner obligatoirement si l’assuré est différent du bénéficiaire.","May be self or a parent in the case of dependants.","This is the party who is entitled to the benfits under the policy.","","","","","","","",,,,,"",,,,"Coverage.subscriber",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "preadmission-coverage-fr","Coverage.subscriberId","Coverage.subscriberId","","","",1,1,"","","Y","string {[]} {[]}
 ","Numéro de sécurité sociale ou numéro d'adhérent","Contient le numéro de sécurité sociale de l'ayant droit pour une AMO ou le numéro d'adhérent pour une AMC","","The insurer requires this identifier on correspondance and claims (digital and otherwise).","","","","","","","",,,,,"",,,,"Coverage.subscriberId",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"preadmission-coverage-fr","Coverage.beneficiary","Coverage.beneficiary","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins]]}
+"preadmission-coverage-fr","Coverage.beneficiary","Coverage.beneficiary","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient]]}
 ","Plan beneficiary","The party who benefits from the insurance coverage; the patient when products and/or services are provided.","","This is the party who receives treatment for which the costs are reimbursed under the coverage.","","","","","","","",,,,,"",,,,"Coverage.beneficiary",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "preadmission-coverage-fr","Coverage.dependent","Coverage.dependent","","","",0,1,"","","Y","string {[]} {[]}
@@ -1242,7 +1242,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Indicates the urgency of the encounter","Indicates the urgency of the encounter.","","","","","","","","","",,"example","Indicates the urgency of the encounter.","http://terminology.hl7.org/ValueSet/v3-ActPriority","",,,,"Encounter.priority",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "preadmission-encounter-fr","Encounter.subject","Encounter.subject","","patient
-","",0,1,"","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins]]}
+","",0,1,"","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient]]}
 ","The patient or group present at the encounter","The patient or group present at the encounter.","While the encounter is always about the patient, the patient might not actually be known in all contexts of use, and there may be a group of patients that could be anonymous (such as in a group therapy for Alcoholics Anonymous - where the recording of the encounter could be used for billing on the number of people/staff and not important to the context of the specific patients) or alternately in veterinary care a herd of sheep receiving treatment (where the animals are not individually tracked).","","","","","","","","",,,,,"",,,,"Encounter.subject",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "preadmission-encounter-fr","Encounter.episodeOfCare","Encounter.episodeOfCare","","","",0,*,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/EpisodeOfCare]]}

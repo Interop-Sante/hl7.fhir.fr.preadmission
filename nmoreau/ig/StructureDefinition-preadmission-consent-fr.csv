@@ -45,7 +45,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Consent.category","Consent.category","","","",1,1,"","","Y","CodeableConcept {[]} {[]}
 ","Classification of the consent statement - for indexing/retrieval","A classification of the type of consents found in the statement. This element supports indexing and retrieval of consent statements.","","","","","","","","","",,"required","","https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/consent-category-value-set","",,,,"Consent.category",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.code","HL7 Table 0497 - Consent Type","CNTRCT","FiveWs.class"
-"Consent.patient","Consent.patient","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins]]}
+"Consent.patient","Consent.patient","","","",1,1,"","","Y","Reference {[]} {[CanonicalType[https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient]]}
 ","Who the consent applies to","The patient/healthcare consumer to whom this consent applies.","Commonly, the patient the consent pertains to is the author, but for young and old people, it may be some other person.","","","","","","","","",,,,,"",,,,"Consent.patient",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Event.subject","Role","FiveWs.subject[x]","FiveWs.subject"
 "Consent.dateTime","Consent.dateTime","","","",1,1,"","","Y","dateTime {[]} {[]}

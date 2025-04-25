@@ -224,7 +224,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         </ul>
       </li>
       <li><a href="#récapitulatif-de-la-séquence" id="markdown-toc-récapitulatif-de-la-séquence">Récapitulatif de la Séquence</a></li>
-      <li><a href="#diagramme-de-séquence" id="markdown-toc-diagramme-de-séquence">Diagramme de Séquence</a></li>
+      <li><a href="#diagramme-de-séquence" id="markdown-toc-diagramme-de-séquence">Diagramme de Séquence</a>        <ul>
+          <li><a href="#si-le-portail-de-rendez-vous-est-en-dehors-du-sih" id="markdown-toc-si-le-portail-de-rendez-vous-est-en-dehors-du-sih">Si le Portail de rendez-vous est en dehors du SIH</a></li>
+        </ul>
+      </li>
       <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
     </ul>
   </li>
@@ -347,13 +350,52 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     PortailPreadm-&gt;&gt;Patient: Résultat (accepté / rejeté)
 </code></pre>
 
+<h3 id="si-le-portail-de-rendez-vous-est-en-dehors-du-sih">Si le Portail de rendez-vous est en dehors du SIH</h3>
+
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Patient
+    participant PortailRdv as Portail de rendez-vous
+    participant PortailPreadm as Portail de préadmission
+    participant SAH as Système administratif de l'hôpital
+    participant AgentBDE as Agent du Bureau des Entrées
+
+    %% Étape 1 : Prise de RDV
+    Patient-&gt;&gt;PortailRdv: Réservation de rendez-vous
+
+    %% Étape 2 : Polling du SAH vers le RDV
+    loop Polling régulier
+        SAH-&gt;&gt;PortailRdv: Récupération des rendez-vous
+        PortailRdv--&gt;&gt;SAH: Retour des ressources complétées
+    end
+
+    %% Étape 3 : Système administratif de l'hôpital initie la préadmission
+    SAH-&gt;&gt;PortailPreadm: Envoi d'un Encounter (pré-admission)
+    
+    %% Étape 4 : Notification au patient
+    PortailPreadm-&gt;&gt;Patient: Envoi lien sécurisé
+
+    %% Étape 5 : Patient renseigne ses données
+    Patient-&gt;&gt;PortailPreadm: Envoi Patient / Coverage / DocumentReference / Consent + Extension (message libre)
+
+    %% Étape 6 : Polling du SAH
+    loop Polling régulier
+        SAH-&gt;&gt;PortailPreadm: Récupération des données
+        PortailPreadm--&gt;&gt;SAH: Retour des ressources complétées
+    end
+
+    %% Étape 7 : Vérification par l'agent
+    AgentBDE-&gt;&gt;SAH: Consultation des données
+    AgentBDE-&gt;&gt;PortailPreadm: Acceptation ou refus + cause de refus (Extension)
+
+    %% Étape 7 : Notification finale
+    PortailPreadm-&gt;&gt;Patient: Résultat (accepté / rejeté)
+</code></pre>
+
 <h2 id="conclusion">Conclusion</h2>
 
 <p>Cette séquence garantit une gestion fluide et structurée des données administratives liées à la pré-admission hospitalière en ligne. Chaque acteur du processus contribue à l’efficacité du parcours patient, tout en respectant les normes d’interopérabilité et de sécurité des données.</p>
 
 <hr />
-
-<p>Le diagramme de séquence montre l’enchaînement des interactions entre les différents acteurs et systèmes tout au long du processus de pré-admission. Si tu as d’autres demandes ou des modifications à apporter, fais-le moi savoir !</p>
 
 
 
@@ -396,7 +438,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 25, 2025 14:29+0000">2025-04-25</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 25, 2025 16:50+0000">2025-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

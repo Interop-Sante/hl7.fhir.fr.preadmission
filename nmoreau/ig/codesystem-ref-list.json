@@ -55,8 +55,8 @@
       "description" : "Types de consentement recueillis pendant la préadmission.",
       "uses" : {
       },
-      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient",
-      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement"
+      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement",
+      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient"
     },
     {
       "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-status-code-system",
@@ -78,8 +78,18 @@
       "description" : "Identifier type",
       "uses" : {
       },
-      "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet",
       "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-identifier-type.html" : "FR Core ValueSet Encounter identifier type"
+    },
+    {
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+      "version" : "2.1.0",
+      "status" : "active",
+      "name" : "FRCoreCodeSystemModeValidationIdentite",
+      "title" : "FR Core CodeSystem Mode Validation Identite",
+      "description" : "Mode de validation de l'identité",
+      "uses" : {
+      },
+      "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet"
     }
   ]
 }

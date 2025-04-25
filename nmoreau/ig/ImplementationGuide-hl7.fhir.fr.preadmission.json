@@ -10,7 +10,7 @@
   "name" : "PREADMISSIONFR",
   "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
   "status" : "draft",
-  "date" : "2025-04-25T14:29:23+00:00",
+  "date" : "2025-04-25T16:50:14+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -849,6 +849,28 @@
       "name" : "Fr Preadmission Encounter Profile",
       "description" : "Profil FHIR pour un encounter lié à une préadmission",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/patient-001"
+      },
+      "name" : "patient-001",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Practitioner"
+      }],
+      "reference" : {
+        "reference" : "Practitioner/practitioner-irm"
+      },
+      "name" : "practitioner-irm",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{

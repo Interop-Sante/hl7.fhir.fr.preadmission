@@ -1,26 +1,28 @@
 PREADMISSIONFR : Validation Results
 =========================================
 
-err = 75, warn = 66, info = 17
+err = 58, warn = 69, info = 20
 IG Publisher Version: 1.8.24
-Generated Fri Apr 25 14:30:57 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.1.0 (canonical = https://github.com/Interop-Sante/hl7.fhir.fr.preadmission)
- Build Errors : 19 / 18 / 0
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Appointment-appt-irm-001 : 6 / 1 / 3
+Generated Fri Apr 25 16:51:49 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.1.0 (canonical = https://github.com/Interop-Sante/hl7.fhir.fr.preadmission)
+ Build Errors : 9 / 20 / 0
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Appointment-appt-irm-001 : 4 / 1 / 3
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-dmp-alimentation-consent-status : 2 / 1 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-dmp-consultation-consent-status : 2 / 1 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-document-type-code-system : 2 / 1 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-encounter-class-code-system : 2 / 1 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-consent-type : 2 / 1 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-status-code-system : 1 / 1 / 1
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Consent-consent-dmp : 8 / 6 / 1
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Coverage-coverage-amc : 7 / 2 / 2
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Coverage-coverage-amo : 6 / 1 / 1
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/DocumentReference-documentreference-cni-recto : 2 / 3 / 2
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-externe : 7 / 6 / 4
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-refused : 7 / 5 / 4
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Consent-consent-dmp : 6 / 6 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Coverage-coverage-amc : 3 / 2 / 2
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Coverage-coverage-amo : 2 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/DocumentReference-documentreference-cni-recto : 0 / 3 / 2
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-externe : 5 / 6 / 4
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-refused : 5 / 5 / 4
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission : 0 / 0 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Patient-patient-001 : 2 / 1 / 4
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Practitioner-practitioner-irm : 0 / 0 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Questionnaire-questionnaire-irm : 0 / 0 / 2
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/QuestionnaireResponse-qr-irm-001 : 2 / 2 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/QuestionnaireResponse-qr-irm-001 : 1 / 2 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-appointment-context-extension : 0 / 2 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-appointment-questionnaire-response : 0 / 2 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/StructureDefinition-encounter-agent-instructions : 0 / 1 / 1
@@ -56,17 +58,9 @@ WARNING: Unable to find ImplementationGuide.definition.resource.description for 
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource DocumentReference/documentreference-cni-recto.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Encounter/encounter-irm-externe.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Encounter/encounter-irm-refused.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/patient-001.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/practitioner-irm.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource QuestionnaireResponse/qr-irm-001.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/Appointment-appt-irm-001.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 248, column 1115: The link 'Patient/patient-001' for "Patient/patient-001" cannot be resolved
-ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/Appointment-appt-irm-001.html#/html/body/div/div/div/div/div/div/blockquote/p/a at Line 248, column 1269: The link 'Practitioner/practitioner-irm' for "Practitioner/practitioner-irm" cannot be resolved
-ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/Consent-consent-dmp.html#/html/body/div/div/div/div/div/div/p/a at Line 248, column 873: The link 'Patient/patient-001' for "Patient/patient-001" cannot be resolved
-ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/Coverage-coverage-amc.html#/html/body/div/div/div/div/div/div/p/a at Line 248, column 1067: The link 'Patient/patient-001' for "Patient/patient-001" cannot be resolved
-ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/Coverage-coverage-amc.html#/html/body/div/div/div/div/div/div/p/a at Line 248, column 1188: The link 'Patient/patient-001' for "Patient/patient-001" cannot be resolved
-ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/Coverage-coverage-amo.html#/html/body/div/div/div/div/div/div/p/a at Line 248, column 851: The link 'Patient/patient-001' for "Patient/patient-001" cannot be resolved
-ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/Coverage-coverage-amo.html#/html/body/div/div/div/div/div/div/p/a at Line 248, column 974: The link 'Patient/patient-001' for "Patient/patient-001" cannot be resolved
-ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/DocumentReference-documentreference-cni-recto.html#/html/body/div/div/div/div/div/div/p/a at Line 248, column 839: The link 'Patient/patient-001' for "Patient/patient-001" cannot be resolved
-ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/Encounter-encounter-irm-externe.html#/html/body/div/div/div/div/div/div/p/a at Line 248, column 1044: The link 'Patient/patient-001' for "Patient/patient-001" cannot be resolved
-ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/Encounter-encounter-irm-refused.html#/html/body/div/div/div/div/div/div/p/a at Line 248, column 1076: The link 'Patient/patient-001' for "Patient/patient-001" cannot be resolved
 ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/StructureDefinition-hl7.fhir.fr.preadmission.statut-preadmission.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 831, column 162: The link 'PreAdmissionStatusValueSet' for "PreAdmissionStatusValueSet" cannot be resolved
 ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/StructureDefinition-preadmission-documentreference-fr.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 449, column 152: The link 'PreadmissionDocumentTypeFrValueSet' for "PreadmissionDocumentTypeFrValueSet" cannot be resolved
 ERROR: /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/output/StructureDefinition-preadmission-documentreference-fr.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 536, column 152: The link 'PreadmissionDocumentTypeFrValueSet' for "PreadmissionDocumentTypeFrValueSet" cannot be resolved
@@ -86,10 +80,8 @@ INFORMATION: Appointment/appt-irm-001: Appointment.meta.profile[0]: This element
 ERROR: Appointment/appt-irm-001: Appointment.extension[0]: The extension http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context could not be found so is not allowed here
 WARNING: Appointment/appt-irm-001: Appointment.extension[0].url: URL value 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context' does not resolve
 ERROR: Appointment/appt-irm-001: Appointment.reasonCode[0].coding[0].display: Wrong Display Name 'IRM cérébrale (procédure)' for http://snomed.info/sct#241541005. There are no valid display names found for language(s) 'fr-FR'. Default display is 'High resolution CT of lungs'
-ERROR: Appointment/appt-irm-001: Appointment.participant[0].actor: Unable to resolve resource with reference 'Patient/patient-001'
-ERROR: Appointment/appt-irm-001: Appointment.participant[1].actor: Unable to resolve resource with reference 'Practitioner/practitioner-irm'
-ERROR: Appointment.text.div: Hyperlink 'Patient/patient-001' at 'div/blockquote/p/a' for 'Patient/patient-001' does not resolve
-ERROR: Appointment.text.div: Hyperlink 'Practitioner/practitioner-irm' at 'div/blockquote/p/a' for 'Practitioner/practitioner-irm' does not resolve
+ERROR: Appointment/appt-irm-001: Appointment.participant[1].actor: Unable to find a profile match for Practitioner/practitioner-irm (by type) among choices: ; [https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient, https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient]
+ERROR: Appointment/appt-irm-001: Appointment.participant[1].actor: Invalid Resource target type. Found Practitioner, but expected one of ([Patient])
 == fsh-generated/resources/CodeSystem-dmp-alimentation-consent-status.json ==
 INFORMATION: CodeSystem/dmp-alimentation-consent-status: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
 ERROR: CodeSystem/dmp-alimentation-consent-status: CodeSystem: Code systems published by HL7 SHALL conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
@@ -122,7 +114,6 @@ WARNING: CodeSystem/preadmission-status-code-system: CodeSystem.concept[0]: HL7 
 WARNING: Consent/consent-dmp: Consent.category[0].coding[0].system: A definition for CodeSystem 'http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category' could not be found, so the code cannot be validated
 ERROR: Consent/consent-dmp: Consent.category[0]: None of the codings provided are in the value set 'ValueSet pour la catégorie de consentement' (https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/consent-category-value-set|0.1.0), and a coding from this value set is required) (codes = http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category#dmp)
 WARNING: Consent/consent-dmp: Consent.category[0].coding[0].system: URL value 'http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category' does not resolve
-ERROR: Consent/consent-dmp: Consent.patient: Unable to resolve resource with reference 'Patient/patient-001'
 ERROR: Consent/consent-dmp: Consent.provision.code[0]: Slicing cannot be evaluated: Could not match discriminator (coding.code) for slice Consent.provision.code:alimentationDmp in profile https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr|0.1.0 - the discriminator [coding.code] does not have fixed value, binding or existence assertions
 ERROR: Consent/consent-dmp: Consent.provision.code[1]: Slicing cannot be evaluated: Could not match discriminator (coding.code) for slice Consent.provision.code:alimentationDmp in profile https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr|0.1.0 - the discriminator [coding.code] does not have fixed value, binding or existence assertions
 ERROR: Consent/consent-dmp: Consent.provision.code[0]: Slicing cannot be evaluated: Could not match discriminator (coding.code) for slice Consent.provision.code:consultationDmp in profile https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr|0.1.0 - the discriminator [coding.code] does not have fixed value, binding or existence assertions
@@ -132,7 +123,6 @@ WARNING: Consent/consent-dmp: Consent.provision.code[0].coding[0].system: URL va
 WARNING: Consent/consent-dmp: Consent.provision.code[1].coding[0].system: A definition for CodeSystem 'http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status' could not be found, so the code cannot be validated
 WARNING: Consent/consent-dmp: Consent.provision.code[1].coding[0].system: URL value 'http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status' does not resolve
 ERROR: Consent/consent-dmp: Consent: Constraint failed: ppc-1: 'Either a Policy or PolicyRule' (defined in http://hl7.org/fhir/StructureDefinition/Consent)
-ERROR: Consent.text.div: Hyperlink 'Patient/patient-001' at 'div/p/a' for 'Patient/patient-001' does not resolve
 == fsh-generated/resources/Coverage-coverage-amc.json ==
 INFORMATION: Coverage/coverage-amc: Coverage.extension[0]: This element does not match any known slice defined in the profile https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 ERROR: Coverage/coverage-amc: Coverage.extension[0]: The extension http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended could not be found so is not allowed here
@@ -140,25 +130,15 @@ WARNING: Coverage/coverage-amc: Coverage.extension[0].url: URL value 'http://fhi
 WARNING: Coverage/coverage-amc: Coverage.type.coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/coverage-type' could not be found, so the code cannot be validated
 ERROR: Coverage/coverage-amc: Coverage.type.coding[0].system: URL value 'http://terminology.hl7.org/CodeSystem/coverage-type' does not resolve
 ERROR: Coverage/coverage-amc: Coverage.type.coding[0].code: The value provided ('EHCPOL') was not found in the value set 'ValueSet des types de couverture pour la préadmission' (https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-couverture-sociale-vs|0.1.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'EHCPOL' in the ValueSet 'https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-couverture-sociale-vs|0.1.0'; The provided code '#EHCPOL' was not found in the value set 'https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-couverture-sociale-vs|0.1.0')
-ERROR: Coverage/coverage-amc: Coverage.subscriber: Unable to resolve resource with reference 'Patient/patient-001'
-ERROR: Coverage/coverage-amc: Coverage.beneficiary: Unable to resolve resource with reference 'Patient/patient-001'
-ERROR: Coverage.text.div: Hyperlink 'Patient/patient-001' at 'div/p/a' for 'Patient/patient-001' does not resolve
-ERROR: Coverage.text.div: Hyperlink 'Patient/patient-001' at 'div/p/a' for 'Patient/patient-001' does not resolve
 == fsh-generated/resources/Coverage-coverage-amo.json ==
 WARNING: Coverage/coverage-amo: Coverage.type.coding[0]: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/coverage-type' could not be found, so the code cannot be validated
 ERROR: Coverage/coverage-amo: Coverage.type.coding[0].system: URL value 'http://terminology.hl7.org/CodeSystem/coverage-type' does not resolve
 ERROR: Coverage/coverage-amo: Coverage.type.coding[0].code: The value provided ('PUBLICPOL') was not found in the value set 'ValueSet des types de couverture pour la préadmission' (https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-couverture-sociale-vs|0.1.0), and a code is required from this value set  (error message = The provided code '#PUBLICPOL' was not found in the value set 'https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-couverture-sociale-vs|0.1.0'; The System URI could not be determined for the code 'PUBLICPOL' in the ValueSet 'https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-couverture-sociale-vs|0.1.0')
-ERROR: Coverage/coverage-amo: Coverage.subscriber: Unable to resolve resource with reference 'Patient/patient-001'
-ERROR: Coverage/coverage-amo: Coverage.beneficiary: Unable to resolve resource with reference 'Patient/patient-001'
-ERROR: Coverage.text.div: Hyperlink 'Patient/patient-001' at 'div/p/a' for 'Patient/patient-001' does not resolve
-ERROR: Coverage.text.div: Hyperlink 'Patient/patient-001' at 'div/p/a' for 'Patient/patient-001' does not resolve
 == fsh-generated/resources/DocumentReference-documentreference-cni-recto.json ==
 WARNING: DocumentReference/documentreference-cni-recto: DocumentReference.type.coding[0].system: A definition for CodeSystem 'http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system' could not be found, so the code cannot be validated
 WARNING: DocumentReference/documentreference-cni-recto: DocumentReference.type.coding[0].system: URL value 'http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system' does not resolve
 WARNING: DocumentReference/documentreference-cni-recto: DocumentReference.type.coding[0]: ValueSet 'PreadmissionDocumentTypeFrValueSet' not found
 INFORMATION: DocumentReference/documentreference-cni-recto: DocumentReference.type.coding[0]: A definition for CodeSystem 'http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system' could not be found, so the code cannot be validated
-ERROR: DocumentReference/documentreference-cni-recto: DocumentReference.subject: Unable to resolve resource with reference 'Patient/patient-001'
-ERROR: DocumentReference.text.div: Hyperlink 'Patient/patient-001' at 'div/p/a' for 'Patient/patient-001' does not resolve
 == fsh-generated/resources/Encounter-encounter-irm-externe.json ==
 INFORMATION: Encounter/encounter-irm-externe: Encounter.extension[0]: This element does not match any known slice defined in the profile https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Encounter/encounter-irm-externe: Encounter.extension[1]: This element does not match any known slice defined in the profile https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -174,8 +154,6 @@ WARNING: Encounter/encounter-irm-externe: Encounter.identifier[0].type.coding[0]
 ERROR: Encounter/encounter-irm-externe: Encounter.identifier[0].type.coding[0].system: The value provided ('http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type') was not found in the value set 'FR Core ValueSet Encounter identifier type' (https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.1.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type' in the ValueSet 'https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.1.0'; The provided code '#http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type' was not found in the value set 'https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.1.0')
 WARNING: Encounter/encounter-irm-externe: Encounter.class: Wrong Display Name 'Externe' for http://terminology.hl7.org/CodeSystem/v3-ActCode#SS. There are no valid display names found for language(s) 'fr-FR'. Default display is 'short stay'
 ERROR: Encounter/encounter-irm-externe: Encounter.class.code: The value provided ('SS') was not found in the value set 'ValueSet des classes d'Encounter pour la préadmission' (https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs|0.1.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'SS' in the ValueSet 'https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs|0.1.0'; The provided code '#SS' was not found in the value set 'https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs|0.1.0')
-ERROR: Encounter/encounter-irm-externe: Encounter.subject: Unable to resolve resource with reference 'Patient/patient-001'
-ERROR: Encounter.text.div: Hyperlink 'Patient/patient-001' at 'div/p/a' for 'Patient/patient-001' does not resolve
 == fsh-generated/resources/Encounter-encounter-irm-refused.json ==
 INFORMATION: Encounter/encounter-irm-refused: Encounter.extension[0]: This element does not match any known slice defined in the profile https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Encounter/encounter-irm-refused: Encounter.extension[1]: This element does not match any known slice defined in the profile https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -190,15 +168,20 @@ WARNING: Encounter/encounter-irm-refused: Encounter.identifier[0].type.coding[0]
 WARNING: Encounter/encounter-irm-refused: Encounter.identifier[0].type.coding[0]: A definition for CodeSystem 'http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type' could not be found, so the code cannot be validated
 ERROR: Encounter/encounter-irm-refused: Encounter.identifier[0].type.coding[0].system: The value provided ('http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type') was not found in the value set 'FR Core ValueSet Encounter identifier type' (https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.1.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type' in the ValueSet 'https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.1.0'; The provided code '#http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type' was not found in the value set 'https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.1.0')
 ERROR: Encounter/encounter-irm-refused: Encounter.class.code: The value provided ('SS') was not found in the value set 'ValueSet des classes d'Encounter pour la préadmission' (https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs|0.1.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'SS' in the ValueSet 'https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs|0.1.0'; The provided code '#SS' was not found in the value set 'https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs|0.1.0')
-ERROR: Encounter/encounter-irm-refused: Encounter.subject: Unable to resolve resource with reference 'Patient/patient-001'
-ERROR: Encounter.text.div: Hyperlink 'Patient/patient-001' at 'div/p/a' for 'Patient/patient-001' does not resolve
 == fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission.json ==
+== fsh-generated/resources/Patient-patient-001.json ==
+INFORMATION: Patient/patient-001: Patient.identifier[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+WARNING: Patient/patient-001: Patient.identifier[0].system: URL value 'http://interopsante.org/fhir/NIR' does not resolve
+ERROR: Patient/patient-001: Patient.name[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/birth-list-given-name could not be found so is not allowed here
+ERROR: Patient/patient-001: Patient.name[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/birth-list-given-name' does not resolve
+INFORMATION: Patient/patient-001: Patient.name[0].extension[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Patient/patient-001: Patient.name[0].extension[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-human-name|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+== fsh-generated/resources/Practitioner-practitioner-irm.json ==
 == fsh-generated/resources/Questionnaire-questionnaire-irm.json ==
 INFORMATION: Resource: The resource Questionnaire/questionnaire-irm could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == fsh-generated/resources/QuestionnaireResponse-qr-irm-001.json ==
 ERROR: QuestionnaireResponse/qr-irm-001: QuestionnaireResponse.questionnaire: Canonical URLs must be absolute URLs if they are not fragment references (Questionnaire/questionnaire-irm)
 WARNING: QuestionnaireResponse/qr-irm-001: QuestionnaireResponse.questionnaire: Canonical URL 'Questionnaire/questionnaire-irm' does not resolve
-ERROR: QuestionnaireResponse/qr-irm-001: QuestionnaireResponse.subject: Unable to resolve resource with reference 'Patient/patient-001'
 WARNING: QuestionnaireResponse/qr-irm-001: QuestionnaireResponse: The questionnaire 'Questionnaire/questionnaire-irm' could not be resolved, so no validation can be performed against the base questionnaire
 == fsh-generated/resources/StructureDefinition-appointment-context-extension.json ==
 WARNING: StructureDefinition/appointment-context-extension: StructureDefinition.context[0]: Review the extension type for appointment-context-extension: extensions should not have a context of Element unless it's really intended that they can be used anywhere

@@ -388,6 +388,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    Système administratif de l'hôpital → [Portail de préadmission] → Patient
 </code></pre></div></div>
 
+<pre><code class="language-mermaid">flowchart TD
+    %% Étape 1 : Prise de rendez-vous
+    Patient1[Patient]
+    PortailRDV[Portail de rendez-vous]
+    SystemeAdmin[Système administratif de l'hôpital]
+    Patient1 --&gt;|Prise de rendez-vous| PortailRDV --&gt;|Transmission du rendez-vous| SystemeAdmin
+
+    %% Étape 2 : Soumission des informations de préadmission
+    Patient2[Patient]
+    PortailPread[Portail de préadmission]
+    Patient2 --&gt;|Soumission des infos| PortailPread --&gt;|Transmission des infos| SystemeAdmin
+
+    %% Étape 3 : Recueil des consentements
+    Patient3[Patient]
+    Patient3 --&gt;|Consentements| PortailPread --&gt;|Transmission des consentements| SystemeAdmin
+
+    %% Étape 4 : Vérification par l'agent du BDE
+    AgentBDE[Agent du BDE]
+    SystemeAdmin &lt;--&gt;|Vérification et validation| AgentBDE
+
+    %% Étape 5 : Notification au patient
+    SystemeAdmin --&gt;|Notification| PortailPread --&gt;|Consultation du statut| Patient3
+</code></pre>
+
 <h2 id="conclusion">Conclusion</h2>
 
 <p>Les flux décrits dans ce document permettent de structurer et de coordonner les échanges entre les différents acteurs impliqués dans la préadmission hospitalière. En s’appuyant sur les ressources FHIR (<code class="language-plaintext highlighter-rouge">Appointment</code>, <code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Coverage</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code>, <code class="language-plaintext highlighter-rouge">Consent</code>, <code class="language-plaintext highlighter-rouge">Encounter</code>, etc.), ce processus garantit une gestion efficace et conforme aux exigences réglementaires.</p>
@@ -432,7 +456,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 25, 2025 14:29+0000">2025-04-25</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 25, 2025 16:50+0000">2025-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
