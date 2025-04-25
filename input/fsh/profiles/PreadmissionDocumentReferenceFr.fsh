@@ -4,6 +4,7 @@ Id: preadmission-documentreference-fr
 Title: "Fr Preadmission DocumentReference Profile"
 Description: "Profil FHIR pour un document administratif de préadmission"
 
+
 * context.encounter 1..1
 * content 1..*
 * content.attachment 1..1
@@ -13,4 +14,4 @@ Description: "Profil FHIR pour un document administratif de préadmission"
 * type 1..1
 * type.coding 1..1
 * type.coding ^binding.strength = #required
-* type.coding ^binding.valueSet = PreadmissionValueSetDocumentTypeFr
+* type.coding ^binding.valueSet = PreadmissionDocumentTypeFrValueSet

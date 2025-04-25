@@ -30,11 +30,11 @@ Description: "Profil Coverage pour la gestion des informations liées à la couv
 
 // Précisione pour le bénéficiaire de la couverture (patient)
 * beneficiary 1..1 MS
-* beneficiary only Reference(FrCorePatient)
+* beneficiary only Reference(FRCorePatientINSProfile)
 
 // Précision pour le champ subscriber
 * subscriber 1..1 MS
-* subscriber only Reference(FrCorePatient)
+* subscriber only Reference(FRCorePatientINSProfile)
 * subscriber ^short = "Référence vers l’assuré"
 * subscriber ^definition = "Référence vers l’assuré (et son NIR). À renseigner obligatoirement si l’assuré est différent du bénéficiaire."
 
@@ -50,4 +50,5 @@ Description: "Profil Coverage pour la gestion des informations liées à la couv
 * relationship ^definition = "À renseigner obligatoirement si l’assuré est différent du bénéficiaire pour indiquer le lien entre les deux (ex. parent, conjoint, enfant)."
 * relationship.coding 1..1
 * relationship.coding.system = "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
+
 

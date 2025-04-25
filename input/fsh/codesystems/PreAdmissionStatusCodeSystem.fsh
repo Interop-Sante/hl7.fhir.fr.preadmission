@@ -2,8 +2,6 @@ CodeSystem: PreadmissionStatusCodeSystem
 Id: preadmission-status-code-system
 Title: "CodeSystem des statuts de la préadmission"
 Description: "CodeSystem pour les statuts de la préadmission"
-* ^version = "1.0.0"
-* ^status = #active
 * ^content = #complete
 * ^caseSensitive = false
 

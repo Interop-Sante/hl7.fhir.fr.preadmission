@@ -2,8 +2,6 @@ CodeSystem: EncounterClassCodeSystem
 Id: encounter-class-code-system
 Title: "Code System du type de venue"
 Description: "Types de venue utilisés pour les préadmissions en France."
-* ^version = "1.0.0"
-* ^status = #active
 * ^content = #complete
 
 * #NONAC "Hospitalisation (NONAC)"

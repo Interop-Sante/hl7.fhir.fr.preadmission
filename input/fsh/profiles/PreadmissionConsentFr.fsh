@@ -5,7 +5,7 @@ Title: "Fr Preadmission Consent Profile"
 Description: "Profil FHIR pour les consentements lors de la préadmission"
 
 * patient 1..1
-* patient only Reference(FrCorePatient)
+* patient only Reference(FRCorePatientINSProfile)
 
 * category 1..1
 * category from PreadmissionConsentCategoryValueSet (required)
@@ -22,3 +22,4 @@ Description: "Profil FHIR pour les consentements lors de la préadmission"
 
 * provision.code[alimentationDmp] from DmpAlimentationConsentStatusVS (required)
 * provision.code[consultationDmp] from DmpConsultationConsentStatusVS (required)
+
