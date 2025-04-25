@@ -99,6 +99,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
+      </li>
+      <li>
         <a href="flux.html">Diagramme de flux</a>
       </li>
       <li>
@@ -220,6 +223,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           <li><a href="#contraintes-sur-les-champs-principaux" id="markdown-toc-contraintes-sur-les-champs-principaux"><strong>Contraintes sur les champs principaux</strong></a></li>
         </ul>
       </li>
+      <li><a href="#critères-de-recherche-autorisés" id="markdown-toc-critères-de-recherche-autorisés">Critères de recherche autorisés</a></li>
       <li><a href="#gestion-des-refus-et-validations" id="markdown-toc-gestion-des-refus-et-validations">Gestion des refus et validations</a>        <ul>
           <li><a href="#en-cas-de-refus" id="markdown-toc-en-cas-de-refus"><strong>En cas de refus</strong></a></li>
           <li><a href="#en-cas-de-validation" id="markdown-toc-en-cas-de-validation"><strong>En cas de validation</strong></a></li>
@@ -346,6 +350,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
+<h2 id="critères-de-recherche-autorisés">Critères de recherche autorisés</h2>
+
+<p>Les critères de recherche suivants sont disponibles pour le profil <code class="language-plaintext highlighter-rouge">PreadmissionEncounterFr</code> :</p>
+
+<ul>
+  <li><strong>Date de dernière mise à jour</strong> : Permet de rechercher les préadmissions en fonction de la date de leur dernière modification (<code class="language-plaintext highlighter-rouge">_lastUpdated</code>).</li>
+  <li><strong>Date de la venue</strong> : Permet de rechercher les préadmissions en fonction de la période prévue pour la venue (<code class="language-plaintext highlighter-rouge">date</code>).</li>
+  <li><strong>Statut de la préadmission</strong> : Permet de rechercher les préadmissions selon leur statut (<code class="language-plaintext highlighter-rouge">preadmissionStatus</code>).</li>
+</ul>
+
+<hr />
+
 <h2 id="gestion-des-refus-et-validations">Gestion des refus et validations</h2>
 
 <h3 id="en-cas-de-refus"><strong>En cas de refus</strong></h3>
@@ -420,7 +436,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:54+0000">2025-04-24</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 25, 2025 09:57+0000">2025-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

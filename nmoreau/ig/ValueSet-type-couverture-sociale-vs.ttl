@@ -11,14 +11,14 @@
   fhir:id [ fhir:v "type-couverture-sociale-vs"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet type-couverture-sociale-vs</b></p><a name=\"type-couverture-sociale-vs\"> </a><a name=\"hctype-couverture-sociale-vs\"> </a><a name=\"type-couverture-sociale-vs-fr-FR\"> </a><ul><li>Include codes provenant de<a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-v3-ActCode.html\"><code>http://terminology.hl7.org/CodeSystem/v3-ActCode</code></a> où code  = <a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-PUBLICPOL\">PUBLICPOL</a> et code  = <a href=\"http://terminology.hl7.org/6.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-EHCPOL\">EHCPOL</a></li></ul></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet type-couverture-sociale-vs</b></p><a name=\"type-couverture-sociale-vs\"> </a><a name=\"hctype-couverture-sociale-vs\"> </a><a name=\"type-couverture-sociale-vs-fr-FR\"> </a><ul><li>Include codes provenant de<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html\"><code>http://terminology.hl7.org/CodeSystem/v3-ActCode</code></a> où code  = <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-PUBLICPOL\">PUBLICPOL</a> et code  = <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-EHCPOL\">EHCPOL</a></li></ul></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "TypeCouvertureSocialeValueSet"] ; # 
   fhir:title [ fhir:v "ValueSet des types de couverture pour la préadmission"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-24T12:53:37+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-25T09:56:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

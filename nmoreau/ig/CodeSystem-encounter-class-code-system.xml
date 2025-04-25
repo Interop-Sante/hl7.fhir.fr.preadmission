@@ -9,8 +9,8 @@
   <version value="0.1.0"/>
   <name value="EncounterClassCodeSystem"/>
   <title value="Code System du type de venue"/>
-  <status value="active"/>
-  <date value="2025-04-24T12:53:37+00:00"/>
+  <status value="draft"/>
+  <date value="2025-04-25T09:56:34+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>

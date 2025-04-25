@@ -3,14 +3,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="preadmission-encounter-fr"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>L'identifiant de la préadmission doit être représenté dans l'élément <code>identifier</code> avec :</p><ul><li>un <strong>use</strong> de type <code>temp</code></li><li>un <strong>type</strong> codé avec la valeur <code>VN</code> (&quot;Visit Number&quot;) selon le système <code>http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type</code></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>L'identifiant de la préadmission doit être représenté dans l'élément <code>identifier</code> avec :</p><ul><li>un <strong>use</strong> de type <code>temp</code></li><li>un <strong>type</strong> codé avec la valeur <code>VN</code> (&quot;Visit Number&quot;) selon le système <code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type</code></li></ul></div>
   </text>
   <url value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
   <version value="0.1.0"/>
   <name value="PreadmissionEncounterFr"/>
   <title value="Fr Preadmission Encounter Profile"/>
   <status value="draft"/>
-  <date value="2025-04-24T12:53:37+00:00"/>
+  <date value="2025-04-25T09:56:34+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -63,7 +63,7 @@
   <derivation value="constraint"/>
   <snapshot>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
-      <valueString value="2.0.1"/>
+      <valueString value="2.1.0"/>
     </extension>
     <element id="Encounter">
       <path value="Encounter"/>
@@ -597,6 +597,7 @@
           <type value="value"/>
           <path value="url"/>
         </discriminator>
+        <ordered value="false"/>
         <rules value="open"/>
       </slicing>
       <short value="Extension"/>
@@ -679,7 +680,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"/>
+        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -714,7 +715,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent"/>
+        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -749,7 +750,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus"/>
+        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -1250,7 +1251,6 @@
       <type>
         <code value="uri"/>
       </type>
-      <patternUri value="http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type"/>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -1261,6 +1261,10 @@
       </constraint>
       <isModifier value="false"/>
       <isSummary value="true"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type"/>
+      </binding>
       <mapping>
         <identity value="v2"/>
         <map value="C*E.3"/>
@@ -2574,7 +2578,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"/>
+        <targetProfile value="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -4625,7 +4629,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"/>
+        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"/>
       </type>
     </element>
     <element id="Encounter.extension:consignesAgent">
@@ -4635,7 +4639,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent"/>
+        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"/>
       </type>
     </element>
     <element id="Encounter.extension:preadmissionStatus">
@@ -4645,7 +4649,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus"/>
+        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"/>
       </type>
     </element>
     <element id="Encounter.extension:consentements">
@@ -4669,7 +4673,10 @@
     </element>
     <element id="Encounter.identifier.type.coding.system">
       <path value="Encounter.identifier.type.coding.system"/>
-      <patternUri value="http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type"/>
+      </binding>
     </element>
     <element id="Encounter.identifier.type.coding.code">
       <path value="Encounter.identifier.type.coding.code"/>
@@ -4693,6 +4700,13 @@
         <strength value="required"/>
         <valueSet value="http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"/>
       </binding>
+    </element>
+    <element id="Encounter.subject">
+      <path value="Encounter.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"/>
+      </type>
     </element>
     <element id="Encounter.participant">
       <path value="Encounter.participant"/>

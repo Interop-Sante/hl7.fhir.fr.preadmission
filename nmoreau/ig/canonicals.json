@@ -1,12 +1,5 @@
 [
   {
-    "id" : "fr-coverage-amc-extended",
-    "type" : "StructureDefinition",
-    "url" : "http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended",
-    "version" : "0.1.0",
-    "name" : "FrCoverageAMCExtension"
-  },
-  {
     "id" : "dmp-alimentation-consent-status",
     "type" : "CodeSystem",
     "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
@@ -25,7 +18,7 @@
     "type" : "CodeSystem",
     "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
     "version" : "0.1.0",
-    "name" : "PreadmissionCodeSystemDocumentTypeFr"
+    "name" : "PreadmissionDocumentTypeCodeSystem"
   },
   {
     "id" : "encounter-class-code-system",
@@ -44,7 +37,7 @@
   {
     "id" : "preadmission-status-code-system",
     "type" : "CodeSystem",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
     "version" : "0.1.0",
     "name" : "PreadmissionStatusCodeSystem"
   },
@@ -61,6 +54,34 @@
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",
     "version" : "0.1.0",
     "name" : "PreadmissionAppointmentQuestionnaireResponseFr"
+  },
+  {
+    "id" : "encounter-agent-instructions",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions",
+    "version" : "0.1.0",
+    "name" : "EncounterAgentInstructions"
+  },
+  {
+    "id" : "encounter-patient-comment",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment",
+    "version" : "0.1.0",
+    "name" : "EncounterPatientComment"
+  },
+  {
+    "id" : "fr-coverage-amc-extended",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended",
+    "version" : "0.1.0",
+    "name" : "FrCoverageAMCExtension"
+  },
+  {
+    "id" : "hl7.fhir.fr.preadmission.statut-preadmission",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission",
+    "version" : "0.1.0",
+    "name" : "PreadmissionStatutFr"
   },
   {
     "id" : "preadmission-appointment-fr",
@@ -105,34 +126,6 @@
     "name" : "PreadmissionEncounterFr"
   },
   {
-    "id" : "encounter-patient-comment",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient",
-    "version" : "0.1.0",
-    "name" : "EncounterPatientComment"
-  },
-  {
-    "id" : "encounter-agent-instructions",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent",
-    "version" : "0.1.0",
-    "name" : "EncounterAgentInstructions"
-  },
-  {
-    "id" : "hl7.fhir.fr.preadmission.statut-preadmission",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus",
-    "version" : "0.1.0",
-    "name" : "PreadmissionStatutFr"
-  },
-  {
-    "id" : "preadmission-document-type-valueset",
-    "type" : "ValueSet",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr",
-    "version" : "0.1.0",
-    "name" : "PreadmissionValueSetDocumentTypeFr"
-  },
-  {
     "id" : "consent-category-value-set",
     "type" : "ValueSet",
     "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-category-value-set",
@@ -154,9 +147,23 @@
     "name" : "DmpAlimentationConsentStatusVS"
   },
   {
+    "id" : "preadmission-consent-value-set",
+    "type" : "ValueSet",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set",
+    "version" : "0.1.0",
+    "name" : "PreadmissionConsentValueSet"
+  },
+  {
+    "id" : "preadmission-document-type-valueset",
+    "type" : "ValueSet",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset",
+    "version" : "0.1.0",
+    "name" : "PreadmissionDocumentTypeFrValueSet"
+  },
+  {
     "id" : "preadmission-status-value-set",
     "type" : "ValueSet",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set",
     "version" : "0.1.0",
     "name" : "PreAdmissionStatusValueSet"
   },
@@ -179,19 +186,12 @@
     "type" : "ImplementationGuide",
     "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission",
     "version" : "0.1.0",
-    "name" : "PreadmissionFHIRIG"
+    "name" : "PREADMISSIONFR"
   },
   {
     "id" : "questionnaire-irm",
     "type" : "Questionnaire",
     "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Questionnaire/questionnaire-irm",
     "version" : "0.1.0"
-  },
-  {
-    "id" : "preadmission-consent-value-set",
-    "type" : "ValueSet",
-    "url" : "https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set",
-    "version" : "0.1.0",
-    "name" : "PreadmissionConsentValueSet"
   }
 ]

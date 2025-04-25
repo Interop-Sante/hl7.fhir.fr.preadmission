@@ -99,6 +99,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
+      </li>
+      <li>
         <a href="flux.html">Diagramme de flux</a>
       </li>
       <li>
@@ -215,7 +218,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h2 id="objectif">Objectif</h2>
 
-<p>Dans le cadre de la préadmission hospitalière, le patient est invité à fournir certains <strong>documents administratifs et médicaux</strong> nécessaires à la validation de son dossier. Ces documents permettent à l’établissement de santé de vérifier l’identité, la couverture sociale et les informations médicales du patient avant son admission.</p>
+<p>Dans le cadre de la préadmission hospitalière, le patient est invité à fournir certains <strong>documents administratifs</strong> nécessaires à la validation de son dossier. Ces documents permettent à l’établissement de santé de vérifier l’identité, la couverture sociale du patient avant son admission.</p>
 
 <p>Les documents sont modélisés dans FHIR à l’aide de la ressource <code class="language-plaintext highlighter-rouge">DocumentReference</code>, enrichie d’extensions spécifiques pour répondre aux besoins du processus de préadmission.</p>
 
@@ -236,7 +239,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>&#x1F4DD; <strong>Arrêt de travail</strong> : Document médical validant une période d’arrêt de travail du patient.</li>
 </ul>
 
-<p><a name="l440">​</a>Ces documents sont modélisés dans FHIR à l’aide de la ressource <code class="language-plaintext highlighter-rouge">DocumentReference</code>, avec le type de document contraint par le <code class="language-plaintext highlighter-rouge">ValueSet</code> <a href="preadmission-document-type-valueset.html"><code class="language-plaintext highlighter-rouge">PreadmissionValueSetDocumentTypeFr</code></a>.</p>
+<p><a name="l446">​</a>Ces documents sont modélisés dans FHIR à l’aide de la ressource <code class="language-plaintext highlighter-rouge">DocumentReference</code>, avec le type de document contraint par le <code class="language-plaintext highlighter-rouge">ValueSet</code> <a href="preadmission-document-type-valueset.html"><code class="language-plaintext highlighter-rouge">PreadmissionValueSetDocumentTypeFr</code></a>.</p>
 
 <hr/>
 
@@ -247,8 +250,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="contraintes-principales"><strong>Contraintes principales</strong></h3>
 <ul>
   <li><strong>Type de document</strong> : Obligatoire, défini via l’extension <code class="language-plaintext highlighter-rouge">PreadmissionTypeDocumentFr</code>.</li>
-  <li><strong>Lien avec le patient</strong> : Chaque document doit référencer une ressource <code class="language-plaintext highlighter-rouge">Patient</code> via <code class="language-plaintext highlighter-rouge">DocumentReference.subject</code>.</li>
   <li><strong>Lien avec la préadmission</strong> : Chaque document doit être associé à un <code class="language-plaintext highlighter-rouge">Encounter</code> via <code class="language-plaintext highlighter-rouge">DocumentReference.context.encounter</code>.</li>
+</ul>
+
+<hr/>
+
+<h2 id="critères-de-recherche-autorisés">Critères de recherche autorisés</h2>
+
+<p>Les critères de recherche suivants sont disponibles pour la ressource <code class="language-plaintext highlighter-rouge">DocumentReference</code> dans le cadre de la préadmission hospitalière :</p>
+
+<ul>
+  <li><strong>Lien avec la préadmission</strong> : Permet de rechercher les documents associés à un <code class="language-plaintext highlighter-rouge">Encounter</code> spécifique.</li>
 </ul>
 
 <hr/>
@@ -293,14 +305,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h2 id="bonnes-pratiques">Bonnes pratiques</h2>
 
 <ul>
-  <li><strong>Validation des documents</strong> : Chaque document téléversé doit être vérifié par un agent administratif pour s’assurer de sa conformité (lisibilité, validité, etc.).
- -<strong>Traçabilité</strong> : Les documents doivent être horodatés et associés à un Encounter pour garantir une traçabilité complète.</li>
+  <li><strong>Validation des documents</strong> : Chaque document téléversé doit être vérifié par un agent administratif pour s’assurer de sa conformité (lisibilité, validité, etc.).</li>
+  <li><strong>Traçabilité</strong> : Les documents doivent être horodatés et associés à un Encounter pour garantir une traçabilité complète.</li>
   <li><strong>Respect des réglementations</strong> : Les documents doivent être stockés conformément aux exigences légales (RGPD, hébergement HDS, etc.).</li>
   <li><strong>Gestion des erreurs</strong> : En cas de document manquant ou non conforme, une notification doit être envoyée au patient pour lui permettre de corriger ou compléter son dossier.</li>
 </ul>
 
 <h2 id="conclusion">Conclusion</h2>
-<p>La ressource <code class="language-plaintext highlighter-rouge">DocumentReference</code>, enrichie d’extensions spécifiques, joue un rôle clé dans la gestion des pièces justificatives pour la préadmission hospitalière. Elle garantit une organisation structurée et conforme des documents, tout en facilitant leur traitement par les agents administratifs.</p>
+<p>La ressource <code class="language-plaintext highlighter-rouge">DocumentReference</code> joue un rôle clé dans la gestion des pièces justificatives pour la préadmission hospitalière. Elle garantit une organisation structurée et conforme des documents, tout en facilitant leur traitement par les agents administratifs.</p>
 
 
 
@@ -342,7 +354,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:54+0000">2025-04-24</span>
+          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 25, 2025 09:57+0000">2025-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -107,6 +107,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
+      </li>
+      <li>
         <a href="flux.html">Diagramme de flux</a>
       </li>
       <li>
@@ -276,7 +279,7 @@
         
           Draft
           
-            as of 2025-04-24
+            as of 2025-04-25
           
         
       </td>
@@ -308,14 +311,14 @@
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;preadmission-encounter-fr&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;L'identifiant de la préadmission doit être représenté dans l'élément &lt;code&gt;identifier&lt;/code&gt; avec :&lt;/p&gt;&lt;ul&gt;&lt;li&gt;un &lt;strong&gt;use&lt;/strong&gt; de type &lt;code&gt;temp&lt;/code&gt;&lt;/li&gt;&lt;li&gt;un &lt;strong&gt;type&lt;/strong&gt; codé avec la valeur &lt;code&gt;VN&lt;/code&gt; (&amp;quot;Visit Number&amp;quot;) selon le système &lt;code&gt;http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;L'identifiant de la préadmission doit être représenté dans l'élément &lt;code&gt;identifier&lt;/code&gt; avec :&lt;/p&gt;&lt;ul&gt;&lt;li&gt;un &lt;strong&gt;use&lt;/strong&gt; de type &lt;code&gt;temp&lt;/code&gt;&lt;/li&gt;&lt;li&gt;un &lt;strong&gt;type&lt;/strong&gt; codé avec la valeur &lt;code&gt;VN&lt;/code&gt; (&amp;quot;Visit Number&amp;quot;) selon le système &lt;code&gt;https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr&quot;^^xsd:anyURI] ; # 
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;0.1.0&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PreadmissionEncounterFr&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Fr Preadmission Encounter Profile&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;draft&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-04-24T12:53:37+00:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-04-25T09:56:34+00:00&quot;^^xsd:dateTime] ; # 
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Interop'Santé&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.contact">fhir:contact</a> ( [
 <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Interop'Santé&quot; ] ;
@@ -367,7 +370,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:string ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2.0.1&quot;       ]     ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2.1.0&quot;       ]     ] ) ;
     ( <a href="http://hl7.org/fhir/R4/structuredefinition.html#StructureDefinition.snapshot.element">fhir:element</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter&quot; ] ;
@@ -872,6 +875,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator">fhir:discriminator</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;value&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">fhir:path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;url&quot; ]         ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.ordered">fhir:ordered</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.slicing.rules">fhir:rules</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;open&quot; ]       ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.short">fhir:short</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Extension&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">fhir:definition</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:v</a> &quot;An Extension&quot; ] ;
@@ -951,8 +955,8 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:type</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;Extension&quot;^^xsd:anyURI ] ;
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient&gt;         ] )       ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment&gt;         ] )       ] ) ;
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">fhir:constraint</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">fhir:key</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;ele-1&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">fhir:severity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;error&quot; ] ;
@@ -986,8 +990,8 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:type</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;Extension&quot;^^xsd:anyURI ] ;
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent&gt;         ] )       ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions&gt;         ] )       ] ) ;
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">fhir:constraint</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">fhir:key</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;ele-1&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">fhir:severity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;error&quot; ] ;
@@ -1021,8 +1025,8 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:type</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;Extension&quot;^^xsd:anyURI ] ;
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus&gt;         ] )       ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission&gt;         ] )       ] ) ;
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">fhir:constraint</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">fhir:key</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;ele-1&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">fhir:severity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;error&quot; ] ;
@@ -1474,9 +1478,6 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base.max">fhir:max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;1&quot; ]       ] ;
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:type</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;uri&quot;^^xsd:anyURI ]       ] ) ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.pattern[x]">fhir:pattern</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">a</a> fhir:uri ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type&quot;^^xsd:anyURI       ] ;
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">fhir:constraint</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">fhir:key</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;ele-1&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">fhir:severity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;error&quot; ] ;
@@ -1488,6 +1489,11 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Element&gt;         ]       ] ) ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isModifier">fhir:isModifier</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.isSummary">fhir:isSummary</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> true ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:binding</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:strength</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;required&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">fhir:valueSet</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type&gt;         ]       ] ;
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping">fhir:mapping</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.identity">fhir:identity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;v2&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mapping.map">fhir:map</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;C*E.3&quot; ]       ] [
@@ -2646,8 +2652,8 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:type</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;Reference&quot;^^xsd:anyURI ] ;
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">fhir:targetProfile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient&gt;         ] )       ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins&gt;         ] )       ] ) ;
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint">fhir:constraint</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.key">fhir:key</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;ele-1&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.constraint.severity">fhir:severity</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;error&quot; ] ;
@@ -4487,8 +4493,8 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:type</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;Extension&quot;^^xsd:anyURI ] ;
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient&gt;         ] )       ] )     ] [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment&gt;         ] )       ] )     ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.extension:consignesAgent&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.extension&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">fhir:sliceName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;consignesAgent&quot; ] ;
@@ -4497,8 +4503,8 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:type</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;Extension&quot;^^xsd:anyURI ] ;
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent&gt;         ] )       ] )     ] [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions&gt;         ] )       ] )     ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.extension:preadmissionStatus&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.extension&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">fhir:sliceName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;preadmissionStatus&quot; ] ;
@@ -4507,8 +4513,8 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
       ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:type</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;Extension&quot;^^xsd:anyURI ] ;
         ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus&gt;         ] )       ] )     ] [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission&gt;         ] )       ] )     ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.extension:consentements&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.extension&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.sliceName">fhir:sliceName</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;consentements&quot; ] ;
@@ -4530,9 +4536,11 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;temp&quot;       ]     ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.identifier.type.coding.system&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.identifier.type.coding.system&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.pattern[x]">fhir:pattern</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">a</a> fhir:uri ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type&quot;^^xsd:anyURI       ]     ] [
+<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding">fhir:binding</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.strength">fhir:strength</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;required&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">fhir:valueSet</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type&gt;         ]       ]     ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.identifier.type.coding.code&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.identifier.type.coding.code&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.pattern[x]">fhir:pattern</a> [
@@ -4556,6 +4564,13 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.binding.valueSet">fhir:valueSet</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs&quot;^^xsd:anyURI ;
 <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs&gt;         ]       ]     ] [
+<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.subject&quot; ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.subject&quot; ] ;
+      ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type">fhir:type</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;Reference&quot;^^xsd:anyURI ] ;
+        ( <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.type.targetProfile">fhir:targetProfile</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins&gt;         ] )       ] )     ] [
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.participant&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.path">fhir:path</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Encounter.participant&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.mustSupport">fhir:mustSupport</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> true ]     ] [
@@ -4626,7 +4641,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:54+0000">2025-04-24</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 25, 2025 09:57+0000">2025-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

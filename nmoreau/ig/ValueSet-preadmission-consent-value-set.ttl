@@ -13,12 +13,12 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet preadmission-consent-value-set</b></p><a name=\"preadmission-consent-value-set\"> </a><a name=\"hcpreadmission-consent-value-set\"> </a><a name=\"preadmission-consent-value-set-fr-FR\"> </a><ul><li>Include tous les codes définis dans <a href=\"CodeSystem-preadmission-consent-type.html\"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</code></a></li></ul></div>"^^rdf:XMLLiteral
   ] ; # 
-  fhir:url [ fhir:v "https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PreadmissionConsentValueSet"] ; # 
   fhir:title [ fhir:v "ValueSet des consentements du patient"] ; # 
-  fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2025-04-24T12:53:37+00:00"^^xsd:dateTime] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2025-04-25T09:56:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

@@ -1,23 +1,9 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "PreadmissionValueSetDocumentTypeFr",
-      "title" : "Types de documents - ValueSet",
-      "description" : "Liste des types de documents autorisés pour la préadmission",
-      "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile"
-    },
-    {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-category-value-set",
       "version" : "0.1.0",
-      "status" : "active",
+      "status" : "draft",
       "name" : "PreadmissionConsentCategoryValueSet",
       "title" : "ValueSet pour la catégorie de consentement",
       "description" : "Valeurs autorisées pour la catégorie de consentement",
@@ -57,14 +43,37 @@
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set",
       "version" : "0.1.0",
-      "status" : "active",
+      "status" : "draft",
+      "name" : "PreadmissionConsentValueSet",
+      "title" : "ValueSet des consentements du patient",
+      "description" : "Consentements exprimés par le patient dans le cadre de la préadmission.",
+      "systems" : [
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"
+      ]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PreadmissionDocumentTypeFrValueSet",
+      "title" : "Types de documents - ValueSet",
+      "description" : "Liste des types de documents autorisés pour la préadmission",
+      "systems" : [
+        "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type",
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system"
+      ]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set",
+      "version" : "0.1.0",
+      "status" : "draft",
       "name" : "PreAdmissionStatusValueSet",
       "title" : "ValueSet des statuts de préadmission",
       "description" : "Statuts valides qu'une préadmission peut prendre.",
       "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status"
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"
       ]
     },
     {
@@ -92,15 +101,18 @@
       "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
-      "url" : "https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set",
-      "version" : "0.1.0",
+      "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type",
+      "version" : "2.1.0",
       "status" : "active",
-      "name" : "PreadmissionConsentValueSet",
-      "title" : "ValueSet des consentements du patient",
-      "description" : "Consentements exprimés par le patient dans le cadre de la préadmission.",
+      "name" : "FRCoreValueSetEncounterIdentifierType",
+      "title" : "FR Core ValueSet Encounter identifier type",
+      "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose (Encounters).",
       "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"
-      ]
+        "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     }
   ]
 }

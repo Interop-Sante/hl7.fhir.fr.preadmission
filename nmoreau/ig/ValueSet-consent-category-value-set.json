@@ -9,8 +9,8 @@
   "version" : "0.1.0",
   "name" : "PreadmissionConsentCategoryValueSet",
   "title" : "ValueSet pour la catégorie de consentement",
-  "status" : "active",
-  "date" : "2025-04-24T12:53:37+00:00",
+  "status" : "draft",
+  "date" : "2025-04-25T09:56:34+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

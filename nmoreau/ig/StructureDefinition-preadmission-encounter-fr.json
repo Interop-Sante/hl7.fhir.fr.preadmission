@@ -3,14 +3,14 @@
   "id" : "preadmission-encounter-fr",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>L'identifiant de la préadmission doit être représenté dans l'élément <code>identifier</code> avec :</p><ul><li>un <strong>use</strong> de type <code>temp</code></li><li>un <strong>type</strong> codé avec la valeur <code>VN</code> (&quot;Visit Number&quot;) selon le système <code>http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type</code></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>L'identifiant de la préadmission doit être représenté dans l'élément <code>identifier</code> avec :</p><ul><li>un <strong>use</strong> de type <code>temp</code></li><li>un <strong>type</strong> codé avec la valeur <code>VN</code> (&quot;Visit Number&quot;) selon le système <code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type</code></li></ul></div>"
   },
   "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr",
   "version" : "0.1.0",
   "name" : "PreadmissionEncounterFr",
   "title" : "Fr Preadmission Encounter Profile",
   "status" : "draft",
-  "date" : "2025-04-24T12:53:37+00:00",
+  "date" : "2025-04-25T09:56:34+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -64,7 +64,7 @@
   "snapshot" : {
     "extension" : [{
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
-      "valueString" : "2.0.1"
+      "valueString" : "2.1.0"
     }],
     "element" : [{
       "id" : "Encounter",
@@ -623,6 +623,7 @@
           "type" : "value",
           "path" : "url"
         }],
+        "ordered" : false,
         "rules" : "open"
       },
       "short" : "Extension",
@@ -707,7 +708,7 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -743,7 +744,7 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -779,7 +780,7 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -1298,7 +1299,6 @@
       "type" : [{
         "code" : "uri"
       }],
-      "patternUri" : "http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type",
       "constraint" : [{
         "key" : "ele-1",
         "severity" : "error",
@@ -1309,6 +1309,10 @@
       }],
       "isModifier" : false,
       "isSummary" : true,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type"
+      },
       "mapping" : [{
         "identity" : "v2",
         "map" : "C*E.3"
@@ -2669,7 +2673,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"]
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -4793,7 +4797,7 @@
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"]
       }]
     },
     {
@@ -4804,7 +4808,7 @@
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"]
       }]
     },
     {
@@ -4815,7 +4819,7 @@
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"]
       }]
     },
     {
@@ -4843,7 +4847,10 @@
     {
       "id" : "Encounter.identifier.type.coding.system",
       "path" : "Encounter.identifier.type.coding.system",
-      "patternUri" : "http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type"
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type"
+      }
     },
     {
       "id" : "Encounter.identifier.type.coding.code",
@@ -4872,6 +4879,14 @@
         "strength" : "required",
         "valueSet" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"
       }
+    },
+    {
+      "id" : "Encounter.subject",
+      "path" : "Encounter.subject",
+      "type" : [{
+        "code" : "Reference",
+        "targetProfile" : ["https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"]
+      }]
     },
     {
       "id" : "Encounter.participant",

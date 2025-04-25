@@ -5,7 +5,35 @@
   "jurisdiction": "FR",
   "extensions": [
     {
-      "url": "http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context-extension",
+      "title": "Contexte du rendez-vous",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",
+      "title": "Questionnaire lié au rendez-vous",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions",
+      "title": "Consignes de l\u0027agent administratif",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment",
+      "title": "Remarque du patient",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended",
       "title": "Extension AMC Étendue",
       "types": [
         "string",
@@ -66,42 +94,7 @@
       ]
     },
     {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context-extension",
-      "title": "Contexte du rendez-vous",
-      "types": [
-        "Reference"
-      ]
-    },
-    {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",
-      "title": "Questionnaire lié au rendez-vous",
-      "types": [
-        "Reference"
-      ]
-    },
-    {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension",
-      "title": "Consentement lié au rendez-vous",
-      "types": [
-        "Reference"
-      ]
-    },
-    {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient",
-      "title": "Remarque du patient",
-      "types": [
-        "string"
-      ]
-    },
-    {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent",
-      "title": "Consignes de l\u0027agent administratif",
-      "types": [
-        "string"
-      ]
-    },
-    {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission",
       "title": "PreadmissionStatutFr",
       "types": [
         "CodeableConcept",
@@ -117,6 +110,13 @@
         "string",
         "boolean",
         "string"
+      ]
+    },
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension",
+      "title": "Consentement lié au rendez-vous",
+      "types": [
+        "Reference"
       ]
     }
   ],
@@ -165,20 +165,20 @@
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions": [
       "Encounter"
     ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment": [
+      "Encounter"
+    ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended": [
+      "Coverage"
+    ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission": [
+      "Encounter"
+    ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension": [
       "Appointment",
       "Encounter"
     ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-status": [
-      "Encounter"
-    ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient": [
-      "Encounter"
-    ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent": [
-      "Encounter"
-    ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus": [
       "Encounter"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [

@@ -3,14 +3,14 @@
   "id" : "hl7.fhir.fr.preadmission",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name=\"hl7.fhir.fr.preadmission\"> </a><a name=\"hchl7.fhir.fr.preadmission\"> </a><a name=\"hl7.fhir.fr.preadmission-fr-FR\"> </a><h2>PreadmissionFHIRIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name=\"hl7.fhir.fr.preadmission\"> </a><a name=\"hchl7.fhir.fr.preadmission\"> </a><a name=\"hl7.fhir.fr.preadmission-fr-FR\"> </a><h2>PREADMISSIONFR</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>"
   },
   "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission",
   "version" : "0.1.0",
-  "name" : "PreadmissionFHIRIG",
+  "name" : "PREADMISSIONFR",
   "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
   "status" : "draft",
-  "date" : "2025-04-24T12:53:37+00:00",
+  "date" : "2025-04-25T09:56:34+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -61,7 +61,7 @@
     "id" : "hl7_fhir_fr_core",
     "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
     "packageId" : "hl7.fhir.fr.core",
-    "version" : "2.0.1"
+    "version" : "2.1.0"
   }],
   "definition" : {
     "extension" : [{

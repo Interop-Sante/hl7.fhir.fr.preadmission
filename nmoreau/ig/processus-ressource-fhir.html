@@ -99,6 +99,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
+      </li>
+      <li>
         <a href="flux.html">Diagramme de flux</a>
       </li>
       <li>
@@ -298,48 +301,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="-communication">📬 Communication</h2>
-
-<p><strong>Rôle :</strong> Notifications envoyées au patient</p>
-
-<ul>
-  <li>Utilisé pour informer le patient :
-    <ul>
-      <li>de la possibilité de compléter sa préadmission,</li>
-      <li>de la validation,</li>
-      <li>ou d’un refus avec explication.</li>
-    </ul>
-  </li>
-</ul>
-
-<hr />
-
-<h2 id="-annotation-sur-encounter">📝 Annotation (sur Encounter)</h2>
-
-<p><strong>Rôle :</strong> Commentaire de refus</p>
-
-<ul>
-  <li>Ajoutée à l’Encounter en cas de refus de la préadmission.</li>
-  <li>Utilisée pour justifier la décision de rejet (texte libre).</li>
-</ul>
-
-<hr />
-
-<h2 id="-task-optionnel">🧾 Task (optionnel)</h2>
-
-<p><strong>Rôle :</strong> Suivi des actions à effectuer</p>
-
-<ul>
-  <li>Peut être utilisée pour :
-    <ul>
-      <li>Tracer la vérification par un agent administratif.</li>
-      <li>Créer une tâche de relance en cas de non-réponse du patient.</li>
-    </ul>
-  </li>
-</ul>
-
-<hr />
-
 <p>Ce découpage par ressource permet une implémentation modulaire, chaque acteur (portail, secrétariat, SIH) manipulant uniquement les ressources pertinentes à son rôle tout en respectant les standards FHIR.</p>
 
 
@@ -383,7 +344,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:54+0000">2025-04-24</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 25, 2025 09:57+0000">2025-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

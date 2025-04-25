@@ -99,6 +99,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
+      </li>
+      <li>
         <a href="flux.html">Diagramme de flux</a>
       </li>
       <li>
@@ -245,7 +248,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Pour répondre aux besoins spécifiques de la préadmission, des extensions enrichissent la ressource <code class="language-plaintext highlighter-rouge">Coverage</code> :</p>
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">FrCoverageAMCExtension</code></strong> : Permet de détailler les informations spécifiques à une AMC, comme le nom de l’organisme complémentaire, le numéro d’adhérent, ou encore un code de convention.</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">relationship</code></strong> : Indique le lien entre l’assuré principal et le bénéficiaire, obligatoire si ces deux personnes sont différentes.</li>
 </ul>
 
 <hr />
@@ -257,7 +259,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>Type de couverture</strong> : Utilisez le code <code class="language-plaintext highlighter-rouge">PUBLICPOL</code> pour indiquer qu’il s’agit d’une AMO.</li>
   <li><strong>Bénéficiaire</strong> : Référencez le patient concerné via le champ <code class="language-plaintext highlighter-rouge">beneficiary</code>.</li>
   <li><strong>Assuré principal</strong> : Si l’assuré principal est différent du bénéficiaire, renseignez le champ <code class="language-plaintext highlighter-rouge">subscriber</code> avec une référence vers la ressource <code class="language-plaintext highlighter-rouge">Patient</code> correspondante.</li>
-  <li><strong>Numéro de sécurité sociale</strong> : Renseignez le champ <code class="language-plaintext highlighter-rouge">subscriberId</code> avec le NIR (Numéro d’Inscription au Répertoire) de l’assuré principal.</li>
+  <li><strong>Numéro de sécurité sociale</strong> : Renseignez le champ <code class="language-plaintext highlighter-rouge">subscriberId</code> avec le numéro de Sécurité Sociale de l’assuré principal.</li>
   <li><strong>Lien entre l’assuré et le bénéficiaire</strong> : Si nécessaire, utilisez le champ <code class="language-plaintext highlighter-rouge">relationship</code> pour indiquer le lien (ex. parent, conjoint).</li>
 </ol>
 
@@ -276,23 +278,31 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>Le nom de l’organisme complémentaire (<code class="language-plaintext highlighter-rouge">nomAMC</code>).</li>
       <li>Le numéro de l’AMC (<code class="language-plaintext highlighter-rouge">numeroAMC</code>).</li>
       <li>Un code de convention ou un code CSR, si applicable.</li>
+      <li>
+        <h2 id="il-est-possible-aussi-de-transmettre-le-contenu-du-datamatrix">Il est possible aussi de transmettre le contenu du Datamatrix</h2>
+      </li>
     </ul>
   </li>
 </ol>
-
-<hr />
 
 <h2 id="exemple-déchange-de-couverture-sociale">Exemple d’échange de couverture sociale</h2>
 
 <p>Lors de la préadmission, le patient fournit ses informations de couverture sociale via un portail en ligne. Ces données sont ensuite transmises au système administratif de l’hôpital pour vérification. Voici un exemple de flux :</p>
 <ol>
-  <li><strong>Saisie par le patient</strong> : Le patient renseigne ses informations d’AMO et/ou d’AMC sur le portail.</li>
+  <li><strong>Saisie par le patient</strong> : Le patient renseigne ses informations d’AMO et/ou d’AMC sur le portail de préadmission.</li>
   <li><strong>Transmission au système administratif hospitalier</strong> : Les données sont envoyées sous forme de ressource <code class="language-plaintext highlighter-rouge">Coverage</code>, enrichie des extensions nécessaires.</li>
-  <li><strong>Vérification par l’agent administratif</strong> : L’agent vérifie la validité des informations (dates, numéros, etc.).</li>
+  <li><strong>Vérification par l’agent administratif</strong> : L’agent vérifie la validité des informations (dates, numéros, etc.) et fait appel aux différents téléservices.</li>
   <li><strong>Validation ou correction</strong> : Si tout est conforme, la couverture est validée. Sinon, une notification est envoyée au patient pour correction.</li>
 </ol>
 
 <hr />
+
+<h2 id="critère-de-recherche">Critère de recherche</h2>
+
+<p>Dans le contexte de la préadmission, la ressource <code class="language-plaintext highlighter-rouge">Coverage</code> ne peut être recherchée qu’à partir du <strong>patient</strong>. Cela signifie que les systèmes doivent utiliser uniquement le critère <code class="language-plaintext highlighter-rouge">patient</code> pour interroger les informations de couverture, conformément aux contraintes d’implémentation définies.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>coverage?patient=
+</code></pre></div></div>
 
 <h2 id="conclusion">Conclusion</h2>
 
@@ -338,7 +348,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:54+0000">2025-04-24</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 25, 2025 09:57+0000">2025-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

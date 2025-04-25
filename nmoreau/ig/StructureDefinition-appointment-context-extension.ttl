@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PreadmissionContextExtension"] ; # 
   fhir:title [ fhir:v "Contexte du rendez-vous"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-24T12:53:37+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-25T09:56:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

@@ -25,8 +25,8 @@
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
       "version" : "0.1.0",
-      "status" : "active",
-      "name" : "PreadmissionCodeSystemDocumentTypeFr",
+      "status" : "draft",
+      "name" : "PreadmissionDocumentTypeCodeSystem",
       "title" : "Code System des types de documents pour la préadmission",
       "description" : "Code System listant les types de documents transmis lors de la préadmission hospitalière.",
       "uses" : {
@@ -42,13 +42,13 @@
       "description" : "Types de consentement recueillis pendant la préadmission.",
       "uses" : {
       },
-      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient",
-      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement"
+      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement",
+      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
       "version" : "0.1.0",
-      "status" : "active",
+      "status" : "draft",
       "name" : "PreadmissionStatusCodeSystem",
       "title" : "CodeSystem des statuts de la préadmission",
       "description" : "CodeSystem pour les statuts de la préadmission",
@@ -68,6 +68,18 @@
       },
       "ValueSet-type-venue-encounter-vs.html" : "ValueSet des classes d'Encounter pour la préadmission",
       "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission"
+    },
+    {
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type",
+      "version" : "2.1.0",
+      "status" : "draft",
+      "name" : "FRCoreCodeSystemIdentifierType",
+      "title" : "FR Core CodeSystem Identifier Type",
+      "description" : "Identifier type",
+      "uses" : {
+      },
+      "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet",
+      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-identifier-type.html" : "FR Core ValueSet Encounter identifier type"
     }
   ]
 }

@@ -5,12 +5,12 @@
     "status" : "generated",
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet preadmission-consent-value-set</b></p><a name=\"preadmission-consent-value-set\"> </a><a name=\"hcpreadmission-consent-value-set\"> </a><a name=\"preadmission-consent-value-set-fr-FR\"> </a><ul><li>Include tous les codes définis dans <a href=\"CodeSystem-preadmission-consent-type.html\"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</code></a></li></ul></div>"
   },
-  "url" : "https://interop-sante.fr/fhir/ValueSet/preadmission-consent-value-set",
+  "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set",
   "version" : "0.1.0",
   "name" : "PreadmissionConsentValueSet",
   "title" : "ValueSet des consentements du patient",
-  "status" : "active",
-  "date" : "2025-04-24T12:53:37+00:00",
+  "status" : "draft",
+  "date" : "2025-04-25T09:56:34+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

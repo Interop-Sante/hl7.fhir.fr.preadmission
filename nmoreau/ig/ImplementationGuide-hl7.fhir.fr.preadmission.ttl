@@ -11,14 +11,14 @@
   fhir:id [ fhir:v "hl7.fhir.fr.preadmission"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name=\"hl7.fhir.fr.preadmission\"> </a><a name=\"hchl7.fhir.fr.preadmission\"> </a><a name=\"hl7.fhir.fr.preadmission-fr-FR\"> </a><h2>PreadmissionFHIRIG</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name=\"hl7.fhir.fr.preadmission\"> </a><a name=\"hchl7.fhir.fr.preadmission\"> </a><a name=\"hl7.fhir.fr.preadmission-fr-FR\"> </a><h2>PREADMISSIONFR</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
-  fhir:name [ fhir:v "PreadmissionFHIRIG"] ; # 
+  fhir:name [ fhir:v "PREADMISSIONFR"] ; # 
   fhir:title [ fhir:v "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-24T12:53:37+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-25T09:56:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -81,7 +81,7 @@
        fhir:link <https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core>
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
-     fhir:version [ fhir:v "2.0.1" ]
+     fhir:version [ fhir:v "2.1.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [

@@ -11,14 +11,14 @@
   fhir:id [ fhir:v "preadmission-encounter-fr"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>L'identifiant de la préadmission doit être représenté dans l'élément <code>identifier</code> avec :</p><ul><li>un <strong>use</strong> de type <code>temp</code></li><li>un <strong>type</strong> codé avec la valeur <code>VN</code> (&quot;Visit Number&quot;) selon le système <code>http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type</code></li></ul></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>L'identifiant de la préadmission doit être représenté dans l'élément <code>identifier</code> avec :</p><ul><li>un <strong>use</strong> de type <code>temp</code></li><li>un <strong>type</strong> codé avec la valeur <code>VN</code> (&quot;Visit Number&quot;) selon le système <code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type</code></li></ul></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PreadmissionEncounterFr"] ; # 
   fhir:title [ fhir:v "Fr Preadmission Encounter Profile"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-24T12:53:37+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-25T09:56:34+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -73,7 +73,7 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:string ;
-         fhir:v "2.0.1"
+         fhir:v "2.1.0"
        ]
      ] ) ;
      fhir:element ( [
@@ -700,6 +700,7 @@
            fhir:type [ fhir:v "value" ] ;
            fhir:path [ fhir:v "url" ]
          ] ) ;
+         fhir:ordered [ fhir:v false ] ;
          fhir:rules [ fhir:v "open" ]
        ] ;
        fhir:short [ fhir:v "Extension" ] ;
@@ -796,8 +797,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -839,8 +840,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -882,8 +883,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -1448,10 +1449,6 @@
        fhir:type ( [
          fhir:code [ fhir:v "uri"^^xsd:anyURI ]
        ] ) ;
-       fhir:pattern [
-         a fhir:uri ;
-         fhir:v "http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type"^^xsd:anyURI
-       ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
          fhir:severity [ fhir:v "error" ] ;
@@ -1465,6 +1462,13 @@
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
        fhir:isSummary [ fhir:v true ] ;
+       fhir:binding [
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:valueSet [
+           fhir:v "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type>
+         ]
+       ] ;
        fhir:mapping ( [
          fhir:identity [ fhir:v "v2" ] ;
          fhir:map [ fhir:v "C*E.3" ]
@@ -2925,8 +2929,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
          fhir:targetProfile ( [
-           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"^^xsd:anyURI ;
-           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient>
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -5243,8 +5247,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionCommentairePatient>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment>
          ] )
        ] )
      ] [
@@ -5256,8 +5260,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionInstructionsAgent>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions>
          ] )
        ] )
      ] [
@@ -5269,8 +5273,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmissionStatus>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission>
          ] )
        ] )
      ] [
@@ -5301,9 +5305,12 @@
      ] [
        fhir:id [ fhir:v "Encounter.identifier.type.coding.system" ] ;
        fhir:path [ fhir:v "Encounter.identifier.type.coding.system" ] ;
-       fhir:pattern [
-         a fhir:uri ;
-         fhir:v "http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type"^^xsd:anyURI
+       fhir:binding [
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:valueSet [
+           fhir:v "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type>
+         ]
        ]
      ] [
        fhir:id [ fhir:v "Encounter.identifier.type.coding.code" ] ;
@@ -5337,6 +5344,16 @@
            fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs>
          ]
        ]
+     ] [
+       fhir:id [ fhir:v "Encounter.subject" ] ;
+       fhir:path [ fhir:v "Encounter.subject" ] ;
+       fhir:type ( [
+         fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
+         fhir:targetProfile ( [
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient-ins>
+         ] )
+       ] )
      ] [
        fhir:id [ fhir:v "Encounter.participant" ] ;
        fhir:path [ fhir:v "Encounter.participant" ] ;

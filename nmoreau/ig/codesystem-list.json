@@ -19,15 +19,15 @@
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
       "version" : "0.1.0",
-      "status" : "active",
-      "name" : "PreadmissionCodeSystemDocumentTypeFr",
+      "status" : "draft",
+      "name" : "PreadmissionDocumentTypeCodeSystem",
       "title" : "Code System des types de documents pour la préadmission",
       "description" : "Code System listant les types de documents transmis lors de la préadmission hospitalière."
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system",
       "version" : "0.1.0",
-      "status" : "active",
+      "status" : "draft",
       "name" : "EncounterClassCodeSystem",
       "title" : "Code System du type de venue",
       "description" : "Types de venue utilisés pour les préadmissions en France."
@@ -41,9 +41,9 @@
       "description" : "Types de consentement recueillis pendant la préadmission."
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
       "version" : "0.1.0",
-      "status" : "active",
+      "status" : "draft",
       "name" : "PreadmissionStatusCodeSystem",
       "title" : "CodeSystem des statuts de la préadmission",
       "description" : "CodeSystem pour les statuts de la préadmission"

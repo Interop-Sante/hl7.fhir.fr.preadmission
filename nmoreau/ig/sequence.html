@@ -99,6 +99,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
+      </li>
+      <li>
         <a href="flux.html">Diagramme de flux</a>
       </li>
       <li>
@@ -215,7 +218,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li><a href="#séquence-des-étapes" id="markdown-toc-séquence-des-étapes">Séquence des étapes</a>        <ul>
           <li><a href="#1-prise-de-rendez-vous-par-le-patient" id="markdown-toc-1-prise-de-rendez-vous-par-le-patient">1. <strong>Prise de Rendez-vous par le Patient</strong></a></li>
           <li><a href="#2-remplissage-du-formulaire-de-pré-admission" id="markdown-toc-2-remplissage-du-formulaire-de-pré-admission">2. <strong>Remplissage du Formulaire de Pré-admission</strong></a></li>
-          <li><a href="#3-transmission-des-données-au-sih" id="markdown-toc-3-transmission-des-données-au-sih">3. <strong>Transmission des Données au SIH</strong></a></li>
+          <li><a href="#3-transmission-des-données-au-système-administratif-de-lhôpital" id="markdown-toc-3-transmission-des-données-au-système-administratif-de-lhôpital">3. <strong>Transmission des Données au Système administratif de l’hôpital</strong></a></li>
           <li><a href="#4-vérification-par-le-bureau-des-entrées-bde" id="markdown-toc-4-vérification-par-le-bureau-des-entrées-bde">4. <strong>Vérification par le Bureau des Entrées (BDE)</strong></a></li>
           <li><a href="#5-retour-au-patient" id="markdown-toc-5-retour-au-patient">5. <strong>Retour au Patient</strong></a></li>
         </ul>
@@ -237,7 +240,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h2 id="séquence-des-étapes">Séquence des étapes</h2>
 
 <h3 id="1-prise-de-rendez-vous-par-le-patient">1. <strong>Prise de Rendez-vous par le Patient</strong></h3>
-<p>Le patient réserve une consultation via un <strong>portail externe</strong> (par exemple, Doctolib). Lors de cette prise de rendez-vous :</p>
+<p>Le patient réserve une consultation via un <strong>portail externe</strong>. Lors de cette prise de rendez-vous :</p>
 <ul>
   <li>Un <code class="language-plaintext highlighter-rouge">Appointment</code> est créé pour planifier la consultation.</li>
 </ul>
@@ -245,15 +248,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="2-remplissage-du-formulaire-de-pré-admission">2. <strong>Remplissage du Formulaire de Pré-admission</strong></h3>
 <p>Une fois le rendez-vous pris, le patient remplit un formulaire de pré-admission via le <strong>portail de préadmission</strong>. Ce formulaire inclut des informations personnelles, des détails sur la couverture sociale, des documents justificatifs, ainsi que des consentements :</p>
 <ul>
-  <li>Les données sont envoyées sous forme de <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>.</li>
+  <li>Les données personnelles sont envoyées sous forme de <code class="language-plaintext highlighter-rouge">Patient</code>.</li>
   <li>Les documents justificatifs sont téléchargés sous forme de <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</li>
   <li>Le consentement du patient est recueilli via une ressource <code class="language-plaintext highlighter-rouge">Consent</code>.</li>
 </ul>
 
-<h3 id="3-transmission-des-données-au-sih">3. <strong>Transmission des Données au SIH</strong></h3>
-<p>Une fois les informations saisies et validées par le patient, le <strong>SIH</strong> (Système d’Information Hospitalier) reçoit les données :</p>
+<h3 id="3-transmission-des-données-au-système-administratif-de-lhôpital">3. <strong>Transmission des Données au Système administratif de l’hôpital</strong></h3>
+<p>Une fois les informations saisies et validées par le patient, le <strong>Système administratif de l’hôpital</strong> reçoit les données :</p>
 <ul>
-  <li>Un <code class="language-plaintext highlighter-rouge">Encounter</code> de type préadmission est créé dans le SIH pour amorcer le processus de validation des informations administratives.</li>
+  <li>Un <code class="language-plaintext highlighter-rouge">Encounter</code> de type préadmission est créé dans le <strong>Système administratif de l’hôpital</strong> pour amorcer le processus de validation des informations administratives.</li>
 </ul>
 
 <h3 id="4-vérification-par-le-bureau-des-entrées-bde">4. <strong>Vérification par le Bureau des Entrées (BDE)</strong></h3>
@@ -295,7 +298,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </tr>
     <tr>
       <td>4. Vérification par le BDE</td>
-      <td><code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Coverage</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code>, <code class="language-plaintext highlighter-rouge">Extension</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Coverage</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code>, <code class="language-plaintext highlighter-rouge">Consent</code>, <code class="language-plaintext highlighter-rouge">Extension</code></td>
     </tr>
     <tr>
       <td>5. Retour au patient</td>
@@ -314,31 +317,31 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     participant Patient
     participant PortailRdv as Portail de rendez-vous
     participant PortailPreadm as Portail de préadmission
-    participant SIH
+    participant SAH as Système administratif de l'hôpital
     participant AgentBDE as Agent du Bureau des Entrées
 
     %% Étape 1 : Prise de RDV
     Patient-&gt;&gt;PortailRdv: Réservation de rendez-vous
-    PortailRdv--&gt;&gt;SIH: Notification du rendez-vous (Appointment)
+    PortailRdv--&gt;&gt;SAH: Notification du rendez-vous (Appointment)
 
-    %% Étape 2 : SIH initie la préadmission
-    SIH-&gt;&gt;PortailPreadm: Envoi d'un Encounter (pré-admission)
+    %% Étape 2 : Système administratif de l'hôpital initie la préadmission
+    SAH-&gt;&gt;PortailPreadm: Envoi d'un Encounter (pré-admission)
     
     %% Étape 3 : Notification au patient
     PortailPreadm-&gt;&gt;Patient: Envoi lien sécurisé
 
     %% Étape 4 : Patient renseigne ses données
-    Patient-&gt;&gt;PortailPreadm: Envoi Patient / Coverage / DocumentReference / Consent\n+ Extension (message libre)
+    Patient-&gt;&gt;PortailPreadm: Envoi Patient / Coverage / DocumentReference / Consent + Extension (message libre)
 
-    %% Étape 5 : Polling du SIH
+    %% Étape 5 : Polling du SAH
     loop Polling régulier
-        SIH-&gt;&gt;PortailPreadm: Récupération des données
-        PortailPreadm--&gt;&gt;SIH: Retour des ressources complétées
+        SAH-&gt;&gt;PortailPreadm: Récupération des données
+        PortailPreadm--&gt;&gt;SAH: Retour des ressources complétées
     end
 
     %% Étape 6 : Vérification par l'agent
-    AgentBDE-&gt;&gt;SIH: Consultation des données
-    AgentBDE-&gt;&gt;PortailPreadm: Acceptation ou refus\n+ cause de refus (Extension/Communication)
+    AgentBDE-&gt;&gt;SAH: Consultation des données
+    AgentBDE-&gt;&gt;PortailPreadm: Acceptation ou refus + cause de refus (Extension/Communication)
 
     %% Étape 7 : Notification finale
     PortailPreadm-&gt;&gt;Patient: Résultat (accepté / rejeté)
@@ -393,7 +396,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 24, 2025 12:54+0000">2025-04-24</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 25, 2025 09:57+0000">2025-04-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
