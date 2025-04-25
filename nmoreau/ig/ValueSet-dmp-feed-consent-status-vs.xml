@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="dmp-feed-consent-status-vs"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet dmp-feed-consent-status-vs</b></p><a name="dmp-feed-consent-status-vs"> </a><a name="hcdmp-feed-consent-status-vs"> </a><a name="dmp-feed-consent-status-vs-fr-FR"> </a><ul><li>Include tous les codes définis dans <a href="CodeSystem-dmp-alimentation-consent-status.html"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status</code></a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet dmp-feed-consent-status-vs</b></p><a name="dmp-feed-consent-status-vs"> </a><a name="hcdmp-feed-consent-status-vs"> </a><a name="dmp-feed-consent-status-vs-fr-FR"> </a><ul><li>Include tous les codes définis dans <a href="CodeSystem-dmp-alimentation-consent-status.html"><code>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-alimentation-consent-status</code></a></li></ul></div>
   </text>
-  <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-feed-consent-status-vs"/>
+  <url value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/dmp-feed-consent-status-vs"/>
   <version value="0.1.0"/>
   <name value="DmpAlimentationConsentStatusVS"/>
   <title value="Valeurs de statut pour alimentation du DMP"/>
   <status value="draft"/>
-  <date value="2025-04-25T09:56:34+00:00"/>
+  <date value="2025-04-25T14:29:23+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -36,7 +36,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status"/>
+      <system value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-alimentation-consent-status"/>
     </include>
   </compose>
 </ValueSet>

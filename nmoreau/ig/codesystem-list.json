@@ -1,7 +1,7 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
+      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-alimentation-consent-status",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "AlimentationDMPConsentStatus",
@@ -9,7 +9,7 @@
       "description" : "Valeurs possibles pour le consentement à l’alimentation du DMP."
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
+      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-consultation-consent-status",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "ConsultationDMPConsentStatus",
@@ -17,7 +17,7 @@
       "description" : "Valeurs possibles pour le consentement à la consultation du DMP (Mon Espace Santé)."
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/document-type-code-system",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionDocumentTypeCodeSystem",
@@ -25,7 +25,7 @@
       "description" : "Code System listant les types de documents transmis lors de la préadmission hospitalière."
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system",
+      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/encounter-class-code-system",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "EncounterClassCodeSystem",
@@ -33,7 +33,7 @@
       "description" : "Types de venue utilisés pour les préadmissions en France."
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
+      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-consent-type",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionConsentCategoryCodeSystem",
@@ -41,7 +41,7 @@
       "description" : "Types de consentement recueillis pendant la préadmission."
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-status-code-system",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionStatusCodeSystem",

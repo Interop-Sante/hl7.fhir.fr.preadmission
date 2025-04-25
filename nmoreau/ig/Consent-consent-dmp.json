@@ -2,7 +2,7 @@
   "resourceType" : "Consent",
   "id" : "consent-dmp",
   "meta" : {
-    "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"]
+    "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr"]
   },
   "text" : {
     "status" : "generated",

@@ -3,14 +3,14 @@
   "id" : "preadmission-consent-type",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem preadmission-consent-type</b></p><a name=\"preadmission-consent-type\"> </a><a name=\"hcpreadmission-consent-type\"> </a><a name=\"preadmission-consent-type-fr-FR\"> </a><p>This  code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">alimentationDmp<a name=\"preadmission-consent-type-alimentationDmp\"> </a></td><td>Alimentation du DMP</td></tr><tr><td style=\"white-space:nowrap\">consultationDmp<a name=\"preadmission-consent-type-consultationDmp\"> </a></td><td>Consultation du DMP</td></tr><tr><td style=\"white-space:nowrap\">portal-transfer<a name=\"preadmission-consent-type-portal-transfer\"> </a></td><td>Envoi au portail de préadmission</td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"preadmission-consent-type-other\"> </a></td><td>Autres (RGPD, etc.)</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem preadmission-consent-type</b></p><a name=\"preadmission-consent-type\"> </a><a name=\"hcpreadmission-consent-type\"> </a><a name=\"preadmission-consent-type-fr-FR\"> </a><p>This  code system <code>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-consent-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">alimentationDmp<a name=\"preadmission-consent-type-alimentationDmp\"> </a></td><td>Alimentation du DMP</td></tr><tr><td style=\"white-space:nowrap\">consultationDmp<a name=\"preadmission-consent-type-consultationDmp\"> </a></td><td>Consultation du DMP</td></tr><tr><td style=\"white-space:nowrap\">portal-transfer<a name=\"preadmission-consent-type-portal-transfer\"> </a></td><td>Envoi au portail de préadmission</td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"preadmission-consent-type-other\"> </a></td><td>Autres (RGPD, etc.)</td></tr></table></div>"
   },
-  "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
+  "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-consent-type",
   "version" : "0.1.0",
   "name" : "PreadmissionConsentCategoryCodeSystem",
   "title" : "Types de consentements pour la préadmission",
   "status" : "draft",
-  "date" : "2025-04-25T09:56:34+00:00",
+  "date" : "2025-04-25T14:29:23+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

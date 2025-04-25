@@ -11,8 +11,8 @@
   fhir:id [ fhir:v "coverage-amc"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"^^xsd:anyURI ;
-       fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr>
+       fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr"^^xsd:anyURI ;
+       fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr>
      ] )
   ] ; # 
   fhir:text [

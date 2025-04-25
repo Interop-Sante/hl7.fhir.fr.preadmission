@@ -2,7 +2,7 @@
   "resourceType" : "DocumentReference",
   "id" : "documentreference-cni-recto",
   "meta" : {
-    "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr"]
+    "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-documentreference-fr"]
   },
   "text" : {
     "status" : "generated",

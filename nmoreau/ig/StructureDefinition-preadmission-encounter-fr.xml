@@ -5,12 +5,12 @@
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>L'identifiant de la préadmission doit être représenté dans l'élément <code>identifier</code> avec :</p><ul><li>un <strong>use</strong> de type <code>temp</code></li><li>un <strong>type</strong> codé avec la valeur <code>VN</code> (&quot;Visit Number&quot;) selon le système <code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type</code></li></ul></div>
   </text>
-  <url value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
+  <url value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr"/>
   <version value="0.1.0"/>
   <name value="PreadmissionEncounterFr"/>
   <title value="Fr Preadmission Encounter Profile"/>
   <status value="draft"/>
-  <date value="2025-04-25T09:56:34+00:00"/>
+  <date value="2025-04-25T14:29:23+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -680,7 +680,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"/>
+        <profile value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-patient-comment"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -715,7 +715,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"/>
+        <profile value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-agent-instructions"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -750,7 +750,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"/>
+        <profile value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -785,7 +785,7 @@
       </base>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"/>
+        <profile value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr-exntension"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -2126,7 +2126,7 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"/>
+        <valueSet value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -2970,7 +2970,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"/>
+        <targetProfile value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -4629,7 +4629,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"/>
+        <profile value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-patient-comment"/>
       </type>
     </element>
     <element id="Encounter.extension:consignesAgent">
@@ -4639,7 +4639,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"/>
+        <profile value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-agent-instructions"/>
       </type>
     </element>
     <element id="Encounter.extension:preadmissionStatus">
@@ -4649,7 +4649,7 @@
       <max value="1"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"/>
+        <profile value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"/>
       </type>
     </element>
     <element id="Encounter.extension:consentements">
@@ -4659,7 +4659,7 @@
       <max value="*"/>
       <type>
         <code value="Extension"/>
-        <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"/>
+        <profile value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr-exntension"/>
       </type>
     </element>
     <element id="Encounter.identifier">
@@ -4698,7 +4698,7 @@
       <path value="Encounter.class.code"/>
       <binding>
         <strength value="required"/>
-        <valueSet value="http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"/>
+        <valueSet value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs"/>
       </binding>
     </element>
     <element id="Encounter.subject">
@@ -4717,7 +4717,7 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"/>
+        <targetProfile value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr"/>
       </type>
     </element>
     <element id="Encounter.period">

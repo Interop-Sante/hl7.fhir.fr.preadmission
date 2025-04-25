@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PREADMISSIONFR"] ; # 
   fhir:title [ fhir:v "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-25T09:56:34+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-25T14:29:23+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -887,8 +887,8 @@
        fhir:description [ fhir:v "IRM cérébrale - préadmission" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"^^xsd:anyURI ;
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr>
+         fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr"^^xsd:anyURI ;
+         fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr>
        ]
      ] [
        fhir:extension ( [
@@ -959,8 +959,8 @@
        fhir:name [ fhir:v "consent-dmp" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"^^xsd:anyURI ;
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr>
+         fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr"^^xsd:anyURI ;
+         fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr>
        ]
      ] [
        fhir:extension ( [
@@ -1031,8 +1031,8 @@
        fhir:name [ fhir:v "coverage-amc" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"^^xsd:anyURI ;
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr>
+         fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr"^^xsd:anyURI ;
+         fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr>
        ]
      ] [
        fhir:extension ( [
@@ -1049,8 +1049,8 @@
        fhir:name [ fhir:v "coverage-amo" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"^^xsd:anyURI ;
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr>
+         fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr"^^xsd:anyURI ;
+         fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr>
        ]
      ] [
        fhir:extension ( [
@@ -1067,8 +1067,8 @@
        fhir:name [ fhir:v "documentreference-cni-recto" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr"^^xsd:anyURI ;
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr>
+         fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-documentreference-fr"^^xsd:anyURI ;
+         fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-documentreference-fr>
        ]
      ] [
        fhir:extension ( [
@@ -1085,8 +1085,8 @@
        fhir:name [ fhir:v "encounter-irm-externe" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"^^xsd:anyURI ;
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr>
+         fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr"^^xsd:anyURI ;
+         fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr>
        ]
      ] [
        fhir:extension ( [
@@ -1103,8 +1103,8 @@
        fhir:name [ fhir:v "encounter-irm-refused" ] ;
        fhir:example [
          a fhir:canonical ;
-         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"^^xsd:anyURI ;
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr>
+         fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr"^^xsd:anyURI ;
+         fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr>
        ]
      ] [
        fhir:extension ( [

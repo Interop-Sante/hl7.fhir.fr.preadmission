@@ -3,14 +3,14 @@
   "id" : "preadmission-document-type-valueset",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet preadmission-document-type-valueset</b></p><a name=\"preadmission-document-type-valueset\"> </a><a name=\"hcpreadmission-document-type-valueset\"> </a><a name=\"preadmission-document-type-valueset-fr-FR\"> </a><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Inclut tous les codes définis dans <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-identifier-type.html\"><code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type</code></a></li><li>Inclut tous les codes définis dans <a href=\"CodeSystem-document-type-code-system.html\"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</code></a></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet preadmission-document-type-valueset</b></p><a name=\"preadmission-document-type-valueset\"> </a><a name=\"hcpreadmission-document-type-valueset\"> </a><a name=\"preadmission-document-type-valueset-fr-FR\"> </a><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Inclut tous les codes définis dans <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-identifier-type.html\"><code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type</code></a></li><li>Inclut tous les codes définis dans <a href=\"CodeSystem-document-type-code-system.html\"><code>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/document-type-code-system</code></a></li></ul></div>"
   },
-  "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset",
+  "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/preadmission-document-type-valueset",
   "version" : "0.1.0",
   "name" : "PreadmissionDocumentTypeFrValueSet",
   "title" : "Types de documents - ValueSet",
   "status" : "draft",
-  "date" : "2025-04-25T09:56:34+00:00",
+  "date" : "2025-04-25T14:29:23+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -40,7 +40,7 @@
       "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type"
     },
     {
-      "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system"
+      "system" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/document-type-code-system"
     }]
   }
 }
