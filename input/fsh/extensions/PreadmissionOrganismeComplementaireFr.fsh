@@ -2,7 +2,6 @@ Extension: FrCoverageAMCExtension
 Id:        fr-coverage-amc-extended
 Title:     "Extension AMC Étendue"
 Description: "Extension pour les données spécifiques AMC incluant nom, numéro, code convention, code CSR et datamatrix"
-* ^url = "http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended"
 * ^context.type = #element
 * ^context.expression = "Coverage"
 

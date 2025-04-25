@@ -12,6 +12,5 @@ Description: "Profil FHIR pour un document administratif de préadmission"
 // Contraindre le type de document à utiliser le ValueSet dédié
 * type 1..1
 * type.coding 1..1
-* type.coding.system = "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system"
 * type.coding ^binding.strength = #required
-* type.coding ^binding.valueSet = "http://hl7.fr/fhir/fr/preadmission/ValueSet/PreadmissionValueSetDocumentTypeFr"
+* type.coding ^binding.valueSet = PreadmissionValueSetDocumentTypeFr

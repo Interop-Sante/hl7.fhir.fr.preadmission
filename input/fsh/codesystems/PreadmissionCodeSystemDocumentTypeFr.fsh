@@ -2,7 +2,6 @@ CodeSystem: PreadmissionCodeSystemDocumentTypeFr
 Id: document-type-code-system
 Title: "Code System des types de documents pour la préadmission"
 Description: "Code System listant les types de documents transmis lors de la préadmission hospitalière."
-* ^url = "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system"
 * ^version = "1.0.0"
 * ^status = #active
 * ^content = #complete

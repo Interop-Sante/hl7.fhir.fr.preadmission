@@ -10,7 +10,7 @@ Description: "Profil FHIR pour un encounter lié à une préadmission"
 * extension contains PreadmissionConsentementsExtension named consentements 0..*
 
 * identifier.use = #temp
-* identifier.type.coding.system = "http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type"
+* identifier.type.coding.system from FrCoreCodeSystemIdentifierType
 * identifier.type.coding.code = #VN
 * ^text.status = #generated
 * ^text.div = """
@@ -18,7 +18,7 @@ Description: "Profil FHIR pour un encounter lié à une préadmission"
   <p>L'identifiant de la préadmission doit être représenté dans l'élément <code>identifier</code> avec :</p>
   <ul>
     <li>un <strong>use</strong> de type <code>temp</code></li>
-    <li>un <strong>type</strong> codé avec la valeur <code>VN</code> ("Visit Number") selon le système <code>http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type</code></li>
+    <li>un <strong>type</strong> codé avec la valeur <code>VN</code> ("Visit Number") selon le système <code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type</code></li>
   </ul>
 </div>
 """

@@ -2,7 +2,6 @@ CodeSystem: PreadmissionStatusCodeSystem
 Id: preadmission-status-code-system
 Title: "CodeSystem des statuts de la préadmission"
 Description: "CodeSystem pour les statuts de la préadmission"
-* ^url = "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status"
 * ^version = "1.0.0"
 * ^status = #active
 * ^content = #complete
