@@ -2,11 +2,12 @@
 
 Bienvenue dans le guide d'implémentation FHIR pour la pré-admission hospitalière en ligne. Ce guide est structuré en plusieurs sections pour faciliter la compréhension et l'intégration des spécifications.
 
----
 
-# 📘 Contexte et Objectif
 
-## Contexte
+## 📘 Contexte et Objectif
+
+### Contexte
+
 La pré-admission hospitalière est une étape administrative essentielle permettant à l’établissement de santé de préparer l’accueil du patient en amont. Elle consiste à recueillir, à distance, les informations nécessaires à :
 - L’identification du patient,
 - La gestion de sa couverture sociale,
@@ -15,7 +16,8 @@ La pré-admission hospitalière est une étape administrative essentielle permet
 
 Ce guide repose sur le standard **FHIR** pour assurer des échanges fluides, sécurisés et interopérables entre les différents systèmes impliqués.
 
-## Objectif
+### Objectif
+
 Définir les spécifications d’échange de données entre :
 - Un portail web de préadmission,
 - Un logiciel de gestion des rendez-vous,
@@ -23,11 +25,12 @@ Définir les spécifications d’échange de données entre :
 
 Les profils FHIR décrits ici sont adaptés au contexte français, en tenant compte des spécificités comme l'INS, la couverture sociale, et les exigences réglementaires (RGPD, hébergement HDS).
 
----
 
-# 🎯 Périmètre et Acteurs
 
-## Périmètre
+## 🎯 Périmètre et Acteurs
+
+### Périmètre
+
 Les ressources FHIR couvertes par ce guide incluent :
 - **`Appointment`** : Planification d’un rendez-vous,
 - **`Encounter`** : Gestion de la pré-admission administrative,
@@ -36,23 +39,25 @@ Les ressources FHIR couvertes par ce guide incluent :
 - **`Consent`** : Recueil des consentements nécessaires,
 - **`QuestionnaireResponse`** : Réponses aux questionnaires administratifs ou médicaux.
 
-### Hors périmètre :
+#### Hors périmètre :
 - Aspects médicaux,
 - Urgences,
 - Intégration clinique.
 
-## Acteurs
+### Acteurs
+
 Les principaux acteurs impliqués dans le processus sont :
 - **Patient** : Fournit ses informations administratives, ses documents justificatifs et ses consentements,
 - **Portail de pré-admission** : Plateforme en ligne pour collecter les données du patient,
 - **Logiciel de rendez-vous** : Planifie les consultations et séjours,
 - **Système administratif hospitalier** : Vérifie et valide les informations transmises.
 
----
 
-# 🧩 Ressources FHIR & Profils
 
-## Ressources utilisées
+## 🧩 Ressources FHIR & Profils
+
+### Ressources utilisées
+
 Les ressources FHIR suivantes sont utilisées dans le cadre de la pré-admission :
 - **`Appointment`** : Gestion des rendez-vous,
 - **`Encounter`** : Pré-admission administrative,
@@ -61,7 +66,8 @@ Les ressources FHIR suivantes sont utilisées dans le cadre de la pré-admission
 - **`Consent`** : Recueil des consentements,
 - **`QuestionnaireResponse`** : Réponses aux questionnaires.
 
-## Profils personnalisés
+### Profils personnalisés
+
 Les profils FHIR suivants ont été définis pour répondre aux besoins spécifiques de la pré-admission :
 - **`PreadmissionAppointmentFr`** : Profil pour les rendez-vous,
 - **`PreadmissionEncounterFr`** : Profil pour la pré-admission,
@@ -69,12 +75,12 @@ Les profils FHIR suivants ont été définis pour répondre aux besoins spécifi
 - **`PreadmissionDocumentReferenceFr`** : Profil pour les documents justificatifs,
 - **`PreadmissionConsentFr`** : Profil pour les consentements.
 
-## Extensions spécifiques
+### Extensions spécifiques
 
 Des extensions ont été ajoutées pour enrichir les ressources FHIR et répondre aux besoins spécifiques de la préadmission hospitalière. Ces extensions permettent de capturer des informations supplémentaires essentielles au processus administratif et réglementaire.
 
+#### Rattachement complémentaire (AMC)
 
-### **1. Rattachement complémentaire (AMC)**
 - **Extension :** `FrCoverageAMCExtension`
 - **Ressource concernée :** `Coverage`
 - **Description :** Permet de détailler les informations spécifiques à une Assurance Maladie Complémentaire (AMC), telles que :
@@ -83,13 +89,15 @@ Des extensions ont été ajoutées pour enrichir les ressources FHIR et répondr
   - Le code de convention (`codeConvention`),
   - Le code CSR (`codeCSR`),
   - Un datamatrix pour les échanges numériques.
+
 - **Exemple d’utilisation :**
   - Nom de l’AMC : Mutuelle Santé Plus
   - Numéro d’adhérent : 987654321
 
----
 
-### **2. Statut de la pré-admission**
+
+#### Statut de la pré-admission
+
 - **Extension :** `PreadmissionStatutFr`
 - **Ressource concernée :** `Encounter`
 - **Description :** Permet de suivre l’état administratif de la préadmission. Les statuts possibles incluent :
@@ -98,65 +106,70 @@ Des extensions ont été ajoutées pour enrichir les ressources FHIR et répondr
   - `READY` : Pré-admission prête,
   - `COMPLETED` : Pré-admission validée,
   - `REFUSED` : Pré-admission refusée.
+
 - **Exemple d’utilisation :**
   - Statut : `READY` (Prêt pour validation)
 
----
 
-### **3. Remarque du patient**
+
+#### Remarque du patient
+
 - **Extension :** `EncounterPatientComment`
 - **Ressource concernée :** `Encounter`
 - **Description :** Permet au patient de fournir des commentaires libres à destination de l’agent administratif.
+
 - **Exemple d’utilisation :**
   - Remarque : "Je ne pourrai pas être présent à l’heure exacte du rendez-vous."
 
----
 
-### **4. Consignes de l’agent administratif**
+
+#### Consignes de l’agent administratif
+
 - **Extension :** `EncounterAgentInstructions`
 - **Ressource concernée :** `Encounter`
 - **Description :** Permet à l’agent administratif de transmettre des consignes spécifiques au patient.
+
 - **Exemple d’utilisation :**
   - Consigne : "Veuillez apporter votre carte Vitale et votre carte de mutuelle."
 
----
 
-### **5. Consentements liés à la préadmission**
+
+#### Consentements liés à la préadmission
+
 - **Extension :** `PreadmissionConsentementsExtension`
 - **Ressource concernée :** `Encounter`, `Appointment`
 - **Description :** Permet de référencer un ou plusieurs consentements recueillis dans le cadre de la préadmission. Ces consentements incluent, par exemple, l’accès et l’alimentation du Dossier Médical Partagé (DMP).
+
 - **Exemple d’utilisation :**
   - Consentement à l’accès au DMP : Informé et consentant.
 
----
 
-Ces extensions enrichissent les ressources FHIR pour capturer des informations essentielles au processus de préadmission, tout en garantissant une interopérabilité et une conformité aux exigences réglementaires.
 
----
+## 🔄 Enchaînement des Processus
 
-# 🔄 Enchaînement des Processus
+### Parcours global
 
-## Parcours global
-### 1. Portail de préadmission
-- Le patient remplit un formulaire de pré-admission,
-- Téléverse ses documents justificatifs (`DocumentReference`),
-- Fournit ses consentements (`Consent`).
-
-### 2. Logiciel de rendez-vous
+#### Logiciel de rendez-vous
 - Création d’un rendez-vous (`Appointment`),
 - Association des réponses aux questionnaires (`QuestionnaireResponse`),
 - Référencement des consentements recueillis (`Consent`).
 
-### 3. Système administratif
+#### Système administratif
 - Récupération des données transmises par le portail,
 - Création d’une ressource `Encounter` pour la pré-admission,
 - Vérification des informations administratives, de la couverture sociale (`Coverage`), et des documents justificatifs.
 
----
+#### Portail de préadmission
+- Le patient remplit un formulaire de pré-admission,
+- Téléverse ses documents justificatifs (`DocumentReference`),
+- Fournit ses consentements (`Consent`).
 
-# 📝 Exemples de Ressources
 
-## Identifiant de préadmission (VN)
+
+## 📝 Exemples de Ressources
+
+### Identifiant de préadmission (VN)
+
 ```json
 "identifier": [
   {
@@ -175,6 +188,3 @@ Ces extensions enrichissent les ressources FHIR pour capturer des informations e
   }
 ]
 ```
-
----
-Ce guide est maintenu par **Interop’Santé**, sous la spécification `PreadmissionFr`. Toute contribution ou retour est bienvenu afin d’enrichir ce référentiel.

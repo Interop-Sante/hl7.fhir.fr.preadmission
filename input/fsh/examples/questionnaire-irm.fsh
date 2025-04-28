@@ -2,6 +2,8 @@ Instance: questionnaire-irm
 InstanceOf: Questionnaire
 Usage: #example
 * id = "questionnaire-irm"
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Réponse du patient au questionnaire posé lors de la prise de rendez-vous pour une IRM.</p></div>"
 * title = "Questionnaire IRM - Préadmission"
 * status = #active
 * subjectType = #Patient

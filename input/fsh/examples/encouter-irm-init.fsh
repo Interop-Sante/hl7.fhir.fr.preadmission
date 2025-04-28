@@ -2,6 +2,8 @@ Instance: encounter-irm-externe
 InstanceOf: PreadmissionEncounterFr
 Usage: #example
 * id = "encounter-irm-externe"
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Initialisation de la préadmission par la GAP, suite à la réception dun rendez-vous - préadmission.</p></div>"
 * status = #planned
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #SS

@@ -2,6 +2,8 @@ Instance: coverage-amc
 InstanceOf: PreadmissionCoverageFr
 Usage: #example
 * id = "coverage-amc"
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Couverture sociale AMC - préadmission.</p></div>"
 * status = #active
 * type.coding[0].system = "http://terminology.hl7.org/CodeSystem/coverage-type"
 * type.coding[0].code = #EHCPOL

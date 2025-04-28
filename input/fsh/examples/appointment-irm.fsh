@@ -2,8 +2,9 @@ Instance: appt-irm-001
 InstanceOf: PreadmissionAppointmentFr
 Usage: #example
 * id = "appt-irm-001"
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Rendez vous pour une IRM cérébrale - préadmission.</p></div>"
 * status = #booked
-* description = "IRM cérébrale - préadmission"
 * start = "2025-05-15T10:30:00+01:00"
 * end = "2025-05-15T11:00:00+01:00"
 * participant[0].actor.reference = "Patient/patient-001"

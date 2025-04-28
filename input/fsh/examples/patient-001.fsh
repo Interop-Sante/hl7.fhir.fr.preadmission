@@ -2,6 +2,8 @@ Instance: patient-001
 InstanceOf: FRCorePatientProfile
 Usage: #example
 * id = "patient-001"
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Patient de préadmission - référencé dans les autres exemples.</p></div>"
 
 // Identifiant du patient (NIR)
 * identifier[0].system = "http://interopsante.org/fhir/NIR"

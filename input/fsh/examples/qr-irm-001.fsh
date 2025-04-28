@@ -2,6 +2,8 @@ Instance: qr-irm-001
 InstanceOf: QuestionnaireResponse
 Usage: #example
 * id = "qr-irm-001"
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Questionnaire posé lors de la prise de rendez-vous pour une IRM.</p></div>"
 * status = #completed
 * subject.reference = "Patient/patient-001"
 * questionnaire = "Questionnaire/questionnaire-irm"

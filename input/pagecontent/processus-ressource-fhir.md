@@ -69,3 +69,55 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 Ce découpage par ressource permet une implémentation modulaire, chaque acteur (portail, secrétariat, SIH) manipulant uniquement les ressources pertinentes à son rôle tout en respectant les standards FHIR.
 
+## Enchainements
+
+### Séquence standard
+```mermaid
+sequenceDiagram
+    participant Patient
+    participant PortailRdv as Portail de rendez-vous
+    participant PortailPreadm as Portail de préadmission
+    participant SAH as Système administratif de l'hôpital
+
+    %% Étape 1 : Prise de RDV
+    Patient->>PortailRdv: Prend rendez-vous
+    PortailRdv-->>SAH: POST Appointment
+
+    %% Étape 2 : Système administratif de l'hôpital initie la préadmission
+    SAH->>PortailPreadm: POST Encounter (pré-admission)
+    
+    %% Étape 3 : Notification au patient
+    PortailPreadm->>Patient: Envoi lien sécurisé (SMS / e-mail)
+
+    %% Étape 4 : Patient renseigne ses données
+
+    %% Étape 5 : Polling du SAH
+    loop Polling régulier
+        SAH->>PortailPreadm: GET Encounter / Patient / Coverage / DocumentReference / Consent
+    end
+
+    %% Étape 6 : Vérification par l'agent
+    AgentBDE->>SAH: GET Encounter / Patient / Coverage / DocumentReference / Consent
+    AgentBDE->>PortailPreadm: PATCH Encounter (acceptation ou refus)
+
+    %% Étape 7 : Notification finale
+    PortailPreadm->>Patient: Résultat (accepté / rejeté) par SMS/e-mail
+```
+
+### Annulation
+
+```mermaid
+sequenceDiagram
+    participant Patient
+    participant PortailRdv as Portail de rendez-vous
+    participant PortailPreadm as Portail de préadmission
+    participant SAH as Système administratif de l'hôpital
+    participant AgentBDE as Agent du Bureau des Entrées
+
+    %% Étape 1 : Annulation du RDV
+    Patient->>PortailRdv: Annule le rendez-vous
+    PortailRdv-->>SAH: DELETE Appointment
+
+    %% Étape 2 : Système administratif de l'hôpital annule la préadmission
+    SAH->>PortailPreadm: DELETE Encounter (pré-admission)
+```

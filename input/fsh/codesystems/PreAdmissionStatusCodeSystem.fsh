@@ -4,7 +4,7 @@ Title: "CodeSystem des statuts de la préadmission"
 Description: "CodeSystem pour les statuts de la préadmission"
 * ^content = #complete
 * ^caseSensitive = false
-
+* ^experimental = true
 * #CANCELLED "Pré-admission annulée"
 * #CREATED "Pré-admission créée"
 * #IN_PROGRESS "Pré-admission en cours"

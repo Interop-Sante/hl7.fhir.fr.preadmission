@@ -2,6 +2,8 @@ Instance: consent-dmp
 InstanceOf: PreadmissionConsentFr
 Usage: #example
 * id = "consent-dmp"
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Consentements liés au DMP - préadmission.</p></div>"
 * status = #active
 * scope.coding[0].system = "http://terminology.hl7.org/CodeSystem/consentscope"
 * scope.coding[0].code = #patient-privacy

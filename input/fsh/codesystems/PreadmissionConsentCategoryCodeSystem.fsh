@@ -3,6 +3,7 @@ Id: preadmission-consent-type
 Title: "Types de consentements pour la préadmission"
 Description: "Types de consentement recueillis pendant la préadmission."
 * ^content = #complete
+* ^experimental = true
 * #alimentationDmp "Alimentation du DMP"
 * #consultationDmp "Consultation du DMP"
 * #portal-transfer "Envoi au portail de préadmission"

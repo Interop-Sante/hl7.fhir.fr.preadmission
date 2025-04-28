@@ -2,6 +2,8 @@ Instance: documentreference-cni-recto
 InstanceOf: PreadmissionDocumentReferenceFr
 Usage: #example
 * id = "documentreference-cni-recto"
+* text.status = #generated
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Scan du recto de la carte d'identité du patient - préadmission.</p></div>"
 * status = #current
 * type.coding[0].system = "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system"
 * type.coding[0].code = #CNI

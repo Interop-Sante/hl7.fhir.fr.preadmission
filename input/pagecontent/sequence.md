@@ -127,6 +127,27 @@ sequenceDiagram
     PortailPreadm->>Patient: Résultat (accepté / rejeté)
 ```
 
+### Annulation de rendez-vous
+
+```mermaid
+sequenceDiagram
+    participant Patient
+    participant PortailRdv as Portail de rendez-vous
+    participant PortailPreadm as Portail de préadmission
+    participant SAH as Système administratif de l'hôpital
+
+    %% Étape 1 : Annulation de RDV
+    Patient->>PortailRdv: Annulation du rendez-vous
+    PortailRdv-->>SAH: Notification de l'annulation du rendez-vous (Appointment)
+
+    %% Étape 2 : Système administratif de l'hôpital annule la préadmission
+    SAH->>PortailPreadm: Envoi d'un Encounter avec le statut CANCELLED
+    
+    %% Étape 3 : Optionnel : Notification de l'annulation au patient
+    PortailPreadm->>Patient: Notification de l'annulation du rendez-vous et de la préadmission
+
+```
+
 ## Conclusion
 
 Cette séquence garantit une gestion fluide et structurée des données administratives liées à la pré-admission hospitalière en ligne. Chaque acteur du processus contribue à l'efficacité du parcours patient, tout en respectant les normes d'interopérabilité et de sécurité des données.
