@@ -3,14 +3,14 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="dmp-alimentation-consent-status"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem dmp-alimentation-consent-status</b></p><a name="dmp-alimentation-consent-status"> </a><a name="hcdmp-alimentation-consent-status"> </a><a name="dmp-alimentation-consent-status-fr-FR"> </a><p>This  code system <code>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-alimentation-consent-status</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">NA<a name="dmp-alimentation-consent-status-NA"> </a></td><td>Information non recueillie</td></tr><tr><td style="white-space:nowrap">IO<a name="dmp-alimentation-consent-status-IO"> </a></td><td>Informé et opposé</td></tr><tr><td style="white-space:nowrap">INO<a name="dmp-alimentation-consent-status-INO"> </a></td><td>Informé et non opposé</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem dmp-alimentation-consent-status</b></p><a name="dmp-alimentation-consent-status"> </a><a name="hcdmp-alimentation-consent-status"> </a><a name="dmp-alimentation-consent-status-fr-FR"> </a><p>This  code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">NA<a name="dmp-alimentation-consent-status-NA"> </a></td><td>Information non recueillie</td></tr><tr><td style="white-space:nowrap">IO<a name="dmp-alimentation-consent-status-IO"> </a></td><td>Informé et opposé</td></tr><tr><td style="white-space:nowrap">INO<a name="dmp-alimentation-consent-status-INO"> </a></td><td>Informé et non opposé</td></tr></table></div>
   </text>
-  <url value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-alimentation-consent-status"/>
+  <url value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status"/>
   <version value="0.1.0"/>
   <name value="AlimentationDMPConsentStatus"/>
   <title value="Statut de consentement - alimentation du DMP"/>
   <status value="draft"/>
-  <date value="2025-04-25T16:50:14+00:00"/>
+  <date value="2025-04-28T06:55:35+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>

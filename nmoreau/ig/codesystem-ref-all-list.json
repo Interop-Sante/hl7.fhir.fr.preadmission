@@ -13,6 +13,62 @@
       "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
     },
     {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "AlimentationDMPConsentStatus",
+      "title" : "Statut de consentement - alimentation du DMP",
+      "description" : "Valeurs possibles pour le consentement à l’alimentation du DMP.",
+      "uses" : {
+      },
+      "ValueSet-dmp-feed-consent-status-vs.html" : "Valeurs de statut pour alimentation du DMP"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ConsultationDMPConsentStatus",
+      "title" : "Statut de consentement - consultation du DMP",
+      "description" : "Valeurs possibles pour le consentement à la consultation du DMP (Mon Espace Santé).",
+      "uses" : {
+      },
+      "ValueSet-dmp-access-consent-status-vs.html" : "Valeurs de statut pour consultation du DMP"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PreadmissionDocumentTypeCodeSystem",
+      "title" : "Code System des types de documents pour la préadmission",
+      "description" : "Code System listant les types de documents transmis lors de la préadmission hospitalière.",
+      "uses" : {
+      },
+      "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PreadmissionConsentCategoryCodeSystem",
+      "title" : "Types de consentements pour la préadmission",
+      "description" : "Types de consentement recueillis pendant la préadmission.",
+      "uses" : {
+      },
+      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement",
+      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PreadmissionStatusCodeSystem",
+      "title" : "CodeSystem des statuts de la préadmission",
+      "description" : "CodeSystem pour les statuts de la préadmission",
+      "uses" : {
+      },
+      "ValueSet-preadmission-status-value-set.html" : "ValueSet des statuts de préadmission"
+    },
+    {
       "url" : "http://hl7.org/fhir/appointmentstatus",
       "version" : "4.0.1",
       "status" : "draft",
@@ -189,8 +245,8 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-consent-content-code.html" : "Consent Content Codes",
       "http://hl7.org/fhir/R4/valueset-c80-doc-typecodes.html" : "Document Type Value Set",
+      "http://hl7.org/fhir/R4/valueset-consent-content-code.html" : "Consent Content Codes",
       "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set"
     },
     {
@@ -204,8 +260,8 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
-      "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
-      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set"
+      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
+      "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/admit-source",
@@ -493,9 +549,9 @@
       "uses" : {
       },
       "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode",
+      "ValueSet-type-venue-encounter-vs.html" : "ValueSet des classes d'Encounter pour la préadmission",
       "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActCode.html" : "v3 Code System ActCode",
-      "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission",
-      "ValueSet-type-venue-encounter-vs.html" : "ValueSet des classes d'Encounter pour la préadmission"
+      "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
@@ -593,62 +649,6 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
-    },
-    {
-      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-alimentation-consent-status",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "AlimentationDMPConsentStatus",
-      "title" : "Statut de consentement - alimentation du DMP",
-      "description" : "Valeurs possibles pour le consentement à l’alimentation du DMP.",
-      "uses" : {
-      },
-      "ValueSet-dmp-feed-consent-status-vs.html" : "Valeurs de statut pour alimentation du DMP"
-    },
-    {
-      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-consultation-consent-status",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "ConsultationDMPConsentStatus",
-      "title" : "Statut de consentement - consultation du DMP",
-      "description" : "Valeurs possibles pour le consentement à la consultation du DMP (Mon Espace Santé).",
-      "uses" : {
-      },
-      "ValueSet-dmp-access-consent-status-vs.html" : "Valeurs de statut pour consultation du DMP"
-    },
-    {
-      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/document-type-code-system",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "PreadmissionDocumentTypeCodeSystem",
-      "title" : "Code System des types de documents pour la préadmission",
-      "description" : "Code System listant les types de documents transmis lors de la préadmission hospitalière.",
-      "uses" : {
-      },
-      "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet"
-    },
-    {
-      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-consent-type",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "PreadmissionConsentCategoryCodeSystem",
-      "title" : "Types de consentements pour la préadmission",
-      "description" : "Types de consentement recueillis pendant la préadmission.",
-      "uses" : {
-      },
-      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement",
-      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient"
-    },
-    {
-      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-status-code-system",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "PreadmissionStatusCodeSystem",
-      "title" : "CodeSystem des statuts de la préadmission",
-      "description" : "CodeSystem pour les statuts de la préadmission",
-      "uses" : {
-      },
-      "ValueSet-preadmission-status-value-set.html" : "ValueSet des statuts de préadmission"
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-circonstances-sortie",

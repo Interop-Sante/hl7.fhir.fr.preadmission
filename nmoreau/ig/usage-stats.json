@@ -5,35 +5,35 @@
   "jurisdiction": "FR",
   "extensions": [
     {
-      "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/appointment-context-extension",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context-extension",
       "title": "Contexte du rendez-vous",
       "types": [
         "Reference"
       ]
     },
     {
-      "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/appointment-questionnaire-response",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",
       "title": "Questionnaire lié au rendez-vous",
       "types": [
         "Reference"
       ]
     },
     {
-      "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-agent-instructions",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions",
       "title": "Consignes de l\u0027agent administratif",
       "types": [
         "string"
       ]
     },
     {
-      "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-patient-comment",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment",
       "title": "Remarque du patient",
       "types": [
         "string"
       ]
     },
     {
-      "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/fr-coverage-amc-extended",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended",
       "title": "Extension AMC Étendue",
       "types": [
         "string",
@@ -94,7 +94,7 @@
       ]
     },
     {
-      "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission",
       "title": "PreadmissionStatutFr",
       "types": [
         "CodeableConcept",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr-exntension",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension",
       "title": "Consentement lié au rendez-vous",
       "types": [
         "Reference"
@@ -123,31 +123,31 @@
   "profiles": {
     "Appointment": [
       {
-        "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr",
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr",
         "title": "Fr Preadmission Appointment Profile"
       }
     ],
     "Consent": [
       {
-        "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr",
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr",
         "title": "Fr Preadmission Consent Profile"
       }
     ],
     "Coverage": [
       {
-        "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr",
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr",
         "title": "Profil Coverage pour la préadmission FR"
       }
     ],
     "DocumentReference": [
       {
-        "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-documentreference-fr",
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr",
         "title": "Fr Preadmission DocumentReference Profile"
       }
     ],
     "Encounter": [
       {
-        "url": "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr",
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr",
         "title": "Fr Preadmission Encounter Profile"
       }
     ]
@@ -159,7 +159,23 @@
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context": [
       "Appointment"
     ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response": [
+      "Appointment"
+    ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions": [
+      "Encounter"
+    ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment": [
+      "Encounter"
+    ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended": [
+      "Coverage"
+    ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission": [
+      "Encounter"
+    ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension": [
+      "Appointment",
       "Encounter"
     ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-status": [
@@ -207,25 +223,6 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
-    ],
-    "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/appointment-questionnaire-response": [
-      "Appointment"
-    ],
-    "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-agent-instructions": [
-      "Encounter"
-    ],
-    "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-patient-comment": [
-      "Encounter"
-    ],
-    "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/fr-coverage-amc-extended": [
-      "Coverage"
-    ],
-    "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission": [
-      "Encounter"
-    ],
-    "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr-exntension": [
-      "Appointment",
-      "Encounter"
     ],
     "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator": [
       "Appointment"

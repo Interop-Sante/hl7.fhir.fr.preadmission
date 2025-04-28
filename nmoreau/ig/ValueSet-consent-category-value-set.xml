@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="consent-category-value-set"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet consent-category-value-set</b></p><a name="consent-category-value-set"> </a><a name="hcconsent-category-value-set"> </a><a name="consent-category-value-set-fr-FR"> </a><ul><li>Include tous les codes définis dans <a href="CodeSystem-preadmission-consent-type.html"><code>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-consent-type</code></a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet consent-category-value-set</b></p><a name="consent-category-value-set"> </a><a name="hcconsent-category-value-set"> </a><a name="consent-category-value-set-fr-FR"> </a><ul><li>Include tous les codes définis dans <a href="CodeSystem-preadmission-consent-type.html"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</code></a></li></ul></div>
   </text>
-  <url value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/consent-category-value-set"/>
+  <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-category-value-set"/>
   <version value="0.1.0"/>
   <name value="PreadmissionConsentCategoryValueSet"/>
   <title value="ValueSet pour la catégorie de consentement"/>
   <status value="draft"/>
-  <date value="2025-04-25T16:50:14+00:00"/>
+  <date value="2025-04-28T06:55:35+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -37,7 +37,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-consent-type"/>
+      <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"/>
     </include>
   </compose>
 </ValueSet>

@@ -12,7 +12,7 @@
   <sch:pattern>
     <sch:title>f:Coverage</sch:title>
     <sch:rule context="f:Coverage">
-      <sch:assert test="count(f:extension[@url = 'https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/fr-coverage-amc-extended']) &lt;= 1">extension with URL = 'https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/fr-coverage-amc-extended': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended']) &lt;= 1">extension with URL = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:identifier) &gt;= 1">identifier: minimum cardinality of 'identifier' is 1</sch:assert>
       <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>

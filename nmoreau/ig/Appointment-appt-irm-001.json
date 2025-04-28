@@ -2,7 +2,7 @@
   "resourceType" : "Appointment",
   "id" : "appt-irm-001",
   "meta" : {
-    "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr"]
+    "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"]
   },
   "text" : {
     "status" : "extensions",

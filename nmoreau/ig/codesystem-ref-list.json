@@ -1,20 +1,7 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-      "version" : "9.0.0",
-      "status" : "active",
-      "name" : "ActCode",
-      "title" : "ActCode",
-      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
-      "oids" : ["2.16.840.1.113883.5.4"],
-      "uses" : {
-      },
-      "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission",
-      "ValueSet-type-venue-encounter-vs.html" : "ValueSet des classes d'Encounter pour la préadmission"
-    },
-    {
-      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-alimentation-consent-status",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "AlimentationDMPConsentStatus",
@@ -25,7 +12,7 @@
       "ValueSet-dmp-feed-consent-status-vs.html" : "Valeurs de statut pour alimentation du DMP"
     },
     {
-      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-consultation-consent-status",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "ConsultationDMPConsentStatus",
@@ -36,7 +23,7 @@
       "ValueSet-dmp-access-consent-status-vs.html" : "Valeurs de statut pour consultation du DMP"
     },
     {
-      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/document-type-code-system",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionDocumentTypeCodeSystem",
@@ -47,7 +34,7 @@
       "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet"
     },
     {
-      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-consent-type",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionConsentCategoryCodeSystem",
@@ -59,7 +46,7 @@
       "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient"
     },
     {
-      "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-status-code-system",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionStatusCodeSystem",
@@ -68,6 +55,19 @@
       "uses" : {
       },
       "ValueSet-preadmission-status-value-set.html" : "ValueSet des statuts de préadmission"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "version" : "9.0.0",
+      "status" : "active",
+      "name" : "ActCode",
+      "title" : "ActCode",
+      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "oids" : ["2.16.840.1.113883.5.4"],
+      "uses" : {
+      },
+      "ValueSet-type-venue-encounter-vs.html" : "ValueSet des classes d'Encounter pour la préadmission",
+      "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission"
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type",

@@ -10,7 +10,7 @@
   "name" : "PREADMISSIONFR",
   "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
   "status" : "draft",
-  "date" : "2025-04-25T16:50:14+00:00",
+  "date" : "2025-04-28T06:55:35+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -650,7 +650,7 @@
       },
       "name" : "appt-irm-001",
       "description" : "IRM cérébrale - préadmission",
-      "exampleCanonical" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr"
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"
     },
     {
       "extension" : [{
@@ -697,7 +697,7 @@
         "reference" : "Consent/consent-dmp"
       },
       "name" : "consent-dmp",
-      "exampleCanonical" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr"
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
     },
     {
       "extension" : [{
@@ -744,7 +744,7 @@
         "reference" : "Coverage/coverage-amc"
       },
       "name" : "coverage-amc",
-      "exampleCanonical" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr"
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"
     },
     {
       "extension" : [{
@@ -755,7 +755,7 @@
         "reference" : "Coverage/coverage-amo"
       },
       "name" : "coverage-amo",
-      "exampleCanonical" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr"
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"
     },
     {
       "extension" : [{
@@ -766,7 +766,7 @@
         "reference" : "DocumentReference/documentreference-cni-recto"
       },
       "name" : "documentreference-cni-recto",
-      "exampleCanonical" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-documentreference-fr"
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr"
     },
     {
       "extension" : [{
@@ -777,7 +777,7 @@
         "reference" : "Encounter/encounter-irm-externe"
       },
       "name" : "encounter-irm-externe",
-      "exampleCanonical" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr"
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"
     },
     {
       "extension" : [{
@@ -788,7 +788,7 @@
         "reference" : "Encounter/encounter-irm-refused"
       },
       "name" : "encounter-irm-refused",
-      "exampleCanonical" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr"
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"
     },
     {
       "extension" : [{
@@ -1186,6 +1186,15 @@
         }],
         "nameUrl" : "downloads.html",
         "title" : "Téléchargement du guide",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "history.html"
+        }],
+        "nameUrl" : "history.html",
+        "title" : "Historique des versions",
         "generation" : "markdown"
       }]
     },

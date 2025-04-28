@@ -2,44 +2,184 @@
   {
     "id" : "dmp-alimentation-consent-status",
     "type" : "CodeSystem",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-alimentation-consent-status",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
     "version" : "0.1.0",
     "name" : "AlimentationDMPConsentStatus"
   },
   {
     "id" : "dmp-consultation-consent-status",
     "type" : "CodeSystem",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-consultation-consent-status",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
     "version" : "0.1.0",
     "name" : "ConsultationDMPConsentStatus"
   },
   {
     "id" : "document-type-code-system",
     "type" : "CodeSystem",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/document-type-code-system",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
     "version" : "0.1.0",
     "name" : "PreadmissionDocumentTypeCodeSystem"
   },
   {
     "id" : "encounter-class-code-system",
     "type" : "CodeSystem",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/encounter-class-code-system",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system",
     "version" : "0.1.0",
     "name" : "EncounterClassCodeSystem"
   },
   {
     "id" : "preadmission-consent-type",
     "type" : "CodeSystem",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-consent-type",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
     "version" : "0.1.0",
     "name" : "PreadmissionConsentCategoryCodeSystem"
   },
   {
     "id" : "preadmission-status-code-system",
     "type" : "CodeSystem",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-status-code-system",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
     "version" : "0.1.0",
     "name" : "PreadmissionStatusCodeSystem"
+  },
+  {
+    "id" : "appointment-context-extension",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context-extension",
+    "version" : "0.1.0",
+    "name" : "PreadmissionContextExtension"
+  },
+  {
+    "id" : "appointment-questionnaire-response",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",
+    "version" : "0.1.0",
+    "name" : "PreadmissionAppointmentQuestionnaireResponseFr"
+  },
+  {
+    "id" : "encounter-agent-instructions",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions",
+    "version" : "0.1.0",
+    "name" : "EncounterAgentInstructions"
+  },
+  {
+    "id" : "encounter-patient-comment",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment",
+    "version" : "0.1.0",
+    "name" : "EncounterPatientComment"
+  },
+  {
+    "id" : "fr-coverage-amc-extended",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended",
+    "version" : "0.1.0",
+    "name" : "FrCoverageAMCExtension"
+  },
+  {
+    "id" : "hl7.fhir.fr.preadmission.statut-preadmission",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission",
+    "version" : "0.1.0",
+    "name" : "PreadmissionStatutFr"
+  },
+  {
+    "id" : "preadmission-appointment-fr",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr",
+    "version" : "0.1.0",
+    "name" : "PreadmissionAppointmentFr"
+  },
+  {
+    "id" : "preadmission-consent-fr",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr",
+    "version" : "0.1.0",
+    "name" : "PreadmissionConsentFr"
+  },
+  {
+    "id" : "preadmission-consent-fr-exntension",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension",
+    "version" : "0.1.0",
+    "name" : "PreadmissionConsentementsExtension"
+  },
+  {
+    "id" : "preadmission-coverage-fr",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr",
+    "version" : "0.1.0",
+    "name" : "PreadmissionCoverageFr"
+  },
+  {
+    "id" : "preadmission-documentreference-fr",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr",
+    "version" : "0.1.0",
+    "name" : "PreadmissionDocumentReferenceFr"
+  },
+  {
+    "id" : "preadmission-encounter-fr",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr",
+    "version" : "0.1.0",
+    "name" : "PreadmissionEncounterFr"
+  },
+  {
+    "id" : "consent-category-value-set",
+    "type" : "ValueSet",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-category-value-set",
+    "version" : "0.1.0",
+    "name" : "PreadmissionConsentCategoryValueSet"
+  },
+  {
+    "id" : "dmp-access-consent-status-vs",
+    "type" : "ValueSet",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-access-consent-status-vs",
+    "version" : "0.1.0",
+    "name" : "DmpConsultationConsentStatusVS"
+  },
+  {
+    "id" : "dmp-feed-consent-status-vs",
+    "type" : "ValueSet",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-feed-consent-status-vs",
+    "version" : "0.1.0",
+    "name" : "DmpAlimentationConsentStatusVS"
+  },
+  {
+    "id" : "preadmission-consent-value-set",
+    "type" : "ValueSet",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set",
+    "version" : "0.1.0",
+    "name" : "PreadmissionConsentValueSet"
+  },
+  {
+    "id" : "preadmission-document-type-valueset",
+    "type" : "ValueSet",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset",
+    "version" : "0.1.0",
+    "name" : "PreadmissionDocumentTypeFrValueSet"
+  },
+  {
+    "id" : "preadmission-status-value-set",
+    "type" : "ValueSet",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set",
+    "version" : "0.1.0",
+    "name" : "PreAdmissionStatusValueSet"
+  },
+  {
+    "id" : "type-couverture-sociale-vs",
+    "type" : "ValueSet",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
+    "version" : "0.1.0",
+    "name" : "TypeCouvertureSocialeValueSet"
+  },
+  {
+    "id" : "type-venue-encounter-vs",
+    "type" : "ValueSet",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
+    "version" : "0.1.0",
+    "name" : "TypeVenueEncounterValueSet"
   },
   {
     "id" : "hl7.fhir.fr.preadmission",
@@ -53,145 +193,5 @@
     "type" : "Questionnaire",
     "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Questionnaire/questionnaire-irm",
     "version" : "0.1.0"
-  },
-  {
-    "id" : "appointment-context-extension",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/appointment-context-extension",
-    "version" : "0.1.0",
-    "name" : "PreadmissionContextExtension"
-  },
-  {
-    "id" : "appointment-questionnaire-response",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/appointment-questionnaire-response",
-    "version" : "0.1.0",
-    "name" : "PreadmissionAppointmentQuestionnaireResponseFr"
-  },
-  {
-    "id" : "encounter-agent-instructions",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-agent-instructions",
-    "version" : "0.1.0",
-    "name" : "EncounterAgentInstructions"
-  },
-  {
-    "id" : "encounter-patient-comment",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-patient-comment",
-    "version" : "0.1.0",
-    "name" : "EncounterPatientComment"
-  },
-  {
-    "id" : "fr-coverage-amc-extended",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/fr-coverage-amc-extended",
-    "version" : "0.1.0",
-    "name" : "FrCoverageAMCExtension"
-  },
-  {
-    "id" : "hl7.fhir.fr.preadmission.statut-preadmission",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission",
-    "version" : "0.1.0",
-    "name" : "PreadmissionStatutFr"
-  },
-  {
-    "id" : "preadmission-appointment-fr",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr",
-    "version" : "0.1.0",
-    "name" : "PreadmissionAppointmentFr"
-  },
-  {
-    "id" : "preadmission-consent-fr",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr",
-    "version" : "0.1.0",
-    "name" : "PreadmissionConsentFr"
-  },
-  {
-    "id" : "preadmission-consent-fr-exntension",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr-exntension",
-    "version" : "0.1.0",
-    "name" : "PreadmissionConsentementsExtension"
-  },
-  {
-    "id" : "preadmission-coverage-fr",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr",
-    "version" : "0.1.0",
-    "name" : "PreadmissionCoverageFr"
-  },
-  {
-    "id" : "preadmission-documentreference-fr",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-documentreference-fr",
-    "version" : "0.1.0",
-    "name" : "PreadmissionDocumentReferenceFr"
-  },
-  {
-    "id" : "preadmission-encounter-fr",
-    "type" : "StructureDefinition",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr",
-    "version" : "0.1.0",
-    "name" : "PreadmissionEncounterFr"
-  },
-  {
-    "id" : "consent-category-value-set",
-    "type" : "ValueSet",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/consent-category-value-set",
-    "version" : "0.1.0",
-    "name" : "PreadmissionConsentCategoryValueSet"
-  },
-  {
-    "id" : "dmp-access-consent-status-vs",
-    "type" : "ValueSet",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/dmp-access-consent-status-vs",
-    "version" : "0.1.0",
-    "name" : "DmpConsultationConsentStatusVS"
-  },
-  {
-    "id" : "dmp-feed-consent-status-vs",
-    "type" : "ValueSet",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/dmp-feed-consent-status-vs",
-    "version" : "0.1.0",
-    "name" : "DmpAlimentationConsentStatusVS"
-  },
-  {
-    "id" : "preadmission-consent-value-set",
-    "type" : "ValueSet",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/preadmission-consent-value-set",
-    "version" : "0.1.0",
-    "name" : "PreadmissionConsentValueSet"
-  },
-  {
-    "id" : "preadmission-document-type-valueset",
-    "type" : "ValueSet",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/preadmission-document-type-valueset",
-    "version" : "0.1.0",
-    "name" : "PreadmissionDocumentTypeFrValueSet"
-  },
-  {
-    "id" : "preadmission-status-value-set",
-    "type" : "ValueSet",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/preadmission-status-value-set",
-    "version" : "0.1.0",
-    "name" : "PreAdmissionStatusValueSet"
-  },
-  {
-    "id" : "type-couverture-sociale-vs",
-    "type" : "ValueSet",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-couverture-sociale-vs",
-    "version" : "0.1.0",
-    "name" : "TypeCouvertureSocialeValueSet"
-  },
-  {
-    "id" : "type-venue-encounter-vs",
-    "type" : "ValueSet",
-    "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs",
-    "version" : "0.1.0",
-    "name" : "TypeVenueEncounterValueSet"
   }
 ]

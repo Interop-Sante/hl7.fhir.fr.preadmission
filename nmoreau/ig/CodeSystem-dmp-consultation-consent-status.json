@@ -3,14 +3,14 @@
   "id" : "dmp-consultation-consent-status",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dmp-consultation-consent-status</b></p><a name=\"dmp-consultation-consent-status\"> </a><a name=\"hcdmp-consultation-consent-status\"> </a><a name=\"dmp-consultation-consent-status-fr-FR\"> </a><p>This  code system <code>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-consultation-consent-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">NA<a name=\"dmp-consultation-consent-status-NA\"> </a></td><td>Information non recueillie</td></tr><tr><td style=\"white-space:nowrap\">IC<a name=\"dmp-consultation-consent-status-IC\"> </a></td><td>Informé et consent à la consultation de Mon Espace Santé</td></tr><tr><td style=\"white-space:nowrap\">INC<a name=\"dmp-consultation-consent-status-INC\"> </a></td><td>Informé et ne consent pas à la consultation de Mon Espace Santé</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dmp-consultation-consent-status</b></p><a name=\"dmp-consultation-consent-status\"> </a><a name=\"hcdmp-consultation-consent-status\"> </a><a name=\"dmp-consultation-consent-status-fr-FR\"> </a><p>This  code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">NA<a name=\"dmp-consultation-consent-status-NA\"> </a></td><td>Information non recueillie</td></tr><tr><td style=\"white-space:nowrap\">IC<a name=\"dmp-consultation-consent-status-IC\"> </a></td><td>Informé et consent à la consultation de Mon Espace Santé</td></tr><tr><td style=\"white-space:nowrap\">INC<a name=\"dmp-consultation-consent-status-INC\"> </a></td><td>Informé et ne consent pas à la consultation de Mon Espace Santé</td></tr></table></div>"
   },
-  "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-consultation-consent-status",
+  "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
   "version" : "0.1.0",
   "name" : "ConsultationDMPConsentStatus",
   "title" : "Statut de consentement - consultation du DMP",
   "status" : "draft",
-  "date" : "2025-04-25T16:50:14+00:00",
+  "date" : "2025-04-28T06:55:35+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

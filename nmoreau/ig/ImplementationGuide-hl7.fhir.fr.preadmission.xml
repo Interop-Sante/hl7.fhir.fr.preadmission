@@ -10,7 +10,7 @@
   <name value="PREADMISSIONFR"/>
   <title value="Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"/>
   <status value="draft"/>
-  <date value="2025-04-25T16:50:14+00:00"/>
+  <date value="2025-04-28T06:55:35+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -487,7 +487,7 @@
       </reference>
       <name value="appt-irm-001"/>
       <description value="IRM cérébrale - préadmission"/>
-      <exampleCanonical value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr"/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -530,7 +530,7 @@
         <reference value="Consent/consent-dmp"/>
       </reference>
       <name value="consent-dmp"/>
-      <exampleCanonical value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr"/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -573,7 +573,7 @@
         <reference value="Coverage/coverage-amc"/>
       </reference>
       <name value="coverage-amc"/>
-      <exampleCanonical value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr"/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -583,7 +583,7 @@
         <reference value="Coverage/coverage-amo"/>
       </reference>
       <name value="coverage-amo"/>
-      <exampleCanonical value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr"/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -593,7 +593,7 @@
         <reference value="DocumentReference/documentreference-cni-recto"/>
       </reference>
       <name value="documentreference-cni-recto"/>
-      <exampleCanonical value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-documentreference-fr"/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -603,7 +603,7 @@
         <reference value="Encounter/encounter-irm-externe"/>
       </reference>
       <name value="encounter-irm-externe"/>
-      <exampleCanonical value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr"/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -613,7 +613,7 @@
         <reference value="Encounter/encounter-irm-refused"/>
       </reference>
       <name value="encounter-irm-refused"/>
-      <exampleCanonical value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr"/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -974,6 +974,14 @@
         </extension>
         <nameUrl value="downloads.html"/>
         <title value="Téléchargement du guide"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="history.html"/>
+        </extension>
+        <nameUrl value="history.html"/>
+        <title value="Historique des versions"/>
         <generation value="markdown"/>
       </page>
     </page>

@@ -5,12 +5,12 @@
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet type-venue-encounter-vs</b></p><a name="type-venue-encounter-vs"> </a><a name="hctype-venue-encounter-vs"> </a><a name="type-venue-encounter-vs-fr-FR"> </a><ul><li>Include codes provenant de<a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html"><code>http://terminology.hl7.org/CodeSystem/v3-ActCode</code></a> où code  = <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-NONAC">NONAC</a>, code  = <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-SS">SS</a> et code  = <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-VR">VR</a></li></ul></div>
   </text>
-  <url value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs"/>
+  <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"/>
   <version value="0.1.0"/>
   <name value="TypeVenueEncounterValueSet"/>
   <title value="ValueSet des classes d'Encounter pour la préadmission"/>
   <status value="draft"/>
-  <date value="2025-04-25T16:50:14+00:00"/>
+  <date value="2025-04-28T06:55:35+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>

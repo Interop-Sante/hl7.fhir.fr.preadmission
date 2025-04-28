@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="preadmission-status-value-set"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet preadmission-status-value-set</b></p><a name="preadmission-status-value-set"> </a><a name="hcpreadmission-status-value-set"> </a><a name="preadmission-status-value-set-fr-FR"> </a><ul><li>Include tous les codes définis dans <a href="CodeSystem-preadmission-status-code-system.html"><code>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-status-code-system</code></a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet preadmission-status-value-set</b></p><a name="preadmission-status-value-set"> </a><a name="hcpreadmission-status-value-set"> </a><a name="preadmission-status-value-set-fr-FR"> </a><ul><li>Include tous les codes définis dans <a href="CodeSystem-preadmission-status-code-system.html"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system</code></a></li></ul></div>
   </text>
-  <url value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/preadmission-status-value-set"/>
+  <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set"/>
   <version value="0.1.0"/>
   <name value="PreAdmissionStatusValueSet"/>
   <title value="ValueSet des statuts de préadmission"/>
   <status value="draft"/>
-  <date value="2025-04-25T16:50:14+00:00"/>
+  <date value="2025-04-28T06:55:35+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -37,7 +37,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-status-code-system"/>
+      <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"/>
     </include>
   </compose>
 </ValueSet>

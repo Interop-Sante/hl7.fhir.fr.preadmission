@@ -11,8 +11,8 @@
   fhir:id [ fhir:v "consent-dmp"] ; # 
   fhir:meta [
      fhir:profile ( [
-       fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr"^^xsd:anyURI ;
-       fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr>
+       fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"^^xsd:anyURI ;
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr>
      ] )
   ] ; # 
   fhir:text [

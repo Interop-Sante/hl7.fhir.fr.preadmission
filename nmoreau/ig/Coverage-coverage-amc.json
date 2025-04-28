@@ -2,7 +2,7 @@
   "resourceType" : "Coverage",
   "id" : "coverage-amc",
   "meta" : {
-    "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr"]
+    "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"]
   },
   "text" : {
     "status" : "extensions",

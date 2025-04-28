@@ -13,12 +13,12 @@
      fhir:status [ fhir:v "generated" ] ;
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>L'identifiant de la préadmission doit être représenté dans l'élément <code>identifier</code> avec :</p><ul><li>un <strong>use</strong> de type <code>temp</code></li><li>un <strong>type</strong> codé avec la valeur <code>VN</code> (&quot;Visit Number&quot;) selon le système <code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type</code></li></ul></div>"^^rdf:XMLLiteral
   ] ; # 
-  fhir:url [ fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PreadmissionEncounterFr"] ; # 
   fhir:title [ fhir:v "Fr Preadmission Encounter Profile"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-25T16:50:14+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-28T06:55:35+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -797,8 +797,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-patient-comment"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-patient-comment>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -840,8 +840,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-agent-instructions"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-agent-instructions>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -883,8 +883,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -926,8 +926,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr-exntension"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr-exntension>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -2420,8 +2420,8 @@
        fhir:binding [
          fhir:strength [ fhir:v "required" ] ;
          fhir:valueSet [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs>
          ]
        ] ;
        fhir:mapping ( [
@@ -3360,8 +3360,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
          fhir:targetProfile ( [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -5247,8 +5247,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-patient-comment"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-patient-comment>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment>
          ] )
        ] )
      ] [
@@ -5260,8 +5260,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-agent-instructions"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-agent-instructions>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions>
          ] )
        ] )
      ] [
@@ -5273,8 +5273,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission>
          ] )
        ] )
      ] [
@@ -5286,8 +5286,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr-exntension"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr-exntension>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension>
          ] )
        ] )
      ] [
@@ -5340,8 +5340,8 @@
        fhir:binding [
          fhir:strength [ fhir:v "required" ] ;
          fhir:valueSet [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs>
          ]
        ]
      ] [
@@ -5355,8 +5355,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
          fhir:targetProfile ( [
-           fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr"^^xsd:anyURI ;
-           fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr>
          ] )
        ] )
      ] [

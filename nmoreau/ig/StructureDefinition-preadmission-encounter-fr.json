@@ -5,12 +5,12 @@
     "status" : "generated",
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>L'identifiant de la préadmission doit être représenté dans l'élément <code>identifier</code> avec :</p><ul><li>un <strong>use</strong> de type <code>temp</code></li><li>un <strong>type</strong> codé avec la valeur <code>VN</code> (&quot;Visit Number&quot;) selon le système <code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type</code></li></ul></div>"
   },
-  "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr",
+  "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr",
   "version" : "0.1.0",
   "name" : "PreadmissionEncounterFr",
   "title" : "Fr Preadmission Encounter Profile",
   "status" : "draft",
-  "date" : "2025-04-25T16:50:14+00:00",
+  "date" : "2025-04-28T06:55:35+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -708,7 +708,7 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-patient-comment"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -744,7 +744,7 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-agent-instructions"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -780,7 +780,7 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -816,7 +816,7 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr-exntension"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -2203,7 +2203,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs"
+        "valueSet" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -3077,7 +3077,7 @@
       },
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr"]
+        "targetProfile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -4797,7 +4797,7 @@
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-patient-comment"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment"]
       }]
     },
     {
@@ -4808,7 +4808,7 @@
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/encounter-agent-instructions"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"]
       }]
     },
     {
@@ -4819,7 +4819,7 @@
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"]
       }]
     },
     {
@@ -4830,7 +4830,7 @@
       "max" : "*",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-consent-fr-exntension"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"]
       }]
     },
     {
@@ -4877,7 +4877,7 @@
       "path" : "Encounter.class.code",
       "binding" : {
         "strength" : "required",
-        "valueSet" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-venue-encounter-vs"
+        "valueSet" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"
       }
     },
     {
@@ -4891,7 +4891,7 @@
       "max" : "1",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-appointment-fr"]
+        "targetProfile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"]
       }]
     },
     {

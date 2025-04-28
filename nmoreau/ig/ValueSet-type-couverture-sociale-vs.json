@@ -5,12 +5,12 @@
     "status" : "generated",
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet type-couverture-sociale-vs</b></p><a name=\"type-couverture-sociale-vs\"> </a><a name=\"hctype-couverture-sociale-vs\"> </a><a name=\"type-couverture-sociale-vs-fr-FR\"> </a><ul><li>Include codes provenant de<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html\"><code>http://terminology.hl7.org/CodeSystem/v3-ActCode</code></a> où code  = <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-PUBLICPOL\">PUBLICPOL</a> et code  = <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-EHCPOL\">EHCPOL</a></li></ul></div>"
   },
-  "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/type-couverture-sociale-vs",
+  "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
   "version" : "0.1.0",
   "name" : "TypeCouvertureSocialeValueSet",
   "title" : "ValueSet des types de couverture pour la préadmission",
   "status" : "draft",
-  "date" : "2025-04-25T16:50:14+00:00",
+  "date" : "2025-04-28T06:55:35+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

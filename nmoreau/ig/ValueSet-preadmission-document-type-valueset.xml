@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="preadmission-document-type-valueset"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet preadmission-document-type-valueset</b></p><a name="preadmission-document-type-valueset"> </a><a name="hcpreadmission-document-type-valueset"> </a><a name="preadmission-document-type-valueset-fr-FR"> </a><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Inclut tous les codes définis dans <a href="https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html"><code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</code></a></li><li>Inclut tous les codes définis dans <a href="CodeSystem-document-type-code-system.html"><code>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/document-type-code-system</code></a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet preadmission-document-type-valueset</b></p><a name="preadmission-document-type-valueset"> </a><a name="hcpreadmission-document-type-valueset"> </a><a name="preadmission-document-type-valueset-fr-FR"> </a><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Inclut tous les codes définis dans <a href="https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html"><code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</code></a></li><li>Inclut tous les codes définis dans <a href="CodeSystem-document-type-code-system.html"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system</code></a></li></ul></div>
   </text>
-  <url value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/preadmission-document-type-valueset"/>
+  <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset"/>
   <version value="0.1.0"/>
   <name value="PreadmissionDocumentTypeFrValueSet"/>
   <title value="Types de documents - ValueSet"/>
   <status value="draft"/>
-  <date value="2025-04-25T16:50:14+00:00"/>
+  <date value="2025-04-28T06:55:35+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -40,7 +40,7 @@
       <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity"/>
     </include>
     <include>
-      <system value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/document-type-code-system"/>
+      <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system"/>
     </include>
   </compose>
 </ValueSet>

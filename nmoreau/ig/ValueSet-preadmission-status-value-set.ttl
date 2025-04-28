@@ -11,14 +11,14 @@
   fhir:id [ fhir:v "preadmission-status-value-set"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet preadmission-status-value-set</b></p><a name=\"preadmission-status-value-set\"> </a><a name=\"hcpreadmission-status-value-set\"> </a><a name=\"preadmission-status-value-set-fr-FR\"> </a><ul><li>Include tous les codes définis dans <a href=\"CodeSystem-preadmission-status-code-system.html\"><code>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-status-code-system</code></a></li></ul></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet preadmission-status-value-set</b></p><a name=\"preadmission-status-value-set\"> </a><a name=\"hcpreadmission-status-value-set\"> </a><a name=\"preadmission-status-value-set-fr-FR\"> </a><ul><li>Include tous les codes définis dans <a href=\"CodeSystem-preadmission-status-code-system.html\"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system</code></a></li></ul></div>"^^rdf:XMLLiteral
   ] ; # 
-  fhir:url [ fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/preadmission-status-value-set"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PreAdmissionStatusValueSet"] ; # 
   fhir:title [ fhir:v "ValueSet des statuts de préadmission"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-25T16:50:14+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-04-28T06:55:35+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -44,7 +44,7 @@
   ] ) ; # 
   fhir:compose [
      fhir:include ( [
-       fhir:system [ fhir:v "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/preadmission-status-code-system"^^xsd:anyURI ]
+       fhir:system [ fhir:v "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"^^xsd:anyURI ]
      ] )
   ] . # 
 

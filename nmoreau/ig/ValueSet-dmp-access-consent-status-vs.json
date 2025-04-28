@@ -3,14 +3,14 @@
   "id" : "dmp-access-consent-status-vs",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dmp-access-consent-status-vs</b></p><a name=\"dmp-access-consent-status-vs\"> </a><a name=\"hcdmp-access-consent-status-vs\"> </a><a name=\"dmp-access-consent-status-vs-fr-FR\"> </a><ul><li>Include tous les codes définis dans <a href=\"CodeSystem-dmp-consultation-consent-status.html\"><code>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-consultation-consent-status</code></a></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dmp-access-consent-status-vs</b></p><a name=\"dmp-access-consent-status-vs\"> </a><a name=\"hcdmp-access-consent-status-vs\"> </a><a name=\"dmp-access-consent-status-vs-fr-FR\"> </a><ul><li>Include tous les codes définis dans <a href=\"CodeSystem-dmp-consultation-consent-status.html\"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status</code></a></li></ul></div>"
   },
-  "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/dmp-access-consent-status-vs",
+  "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-access-consent-status-vs",
   "version" : "0.1.0",
   "name" : "DmpConsultationConsentStatusVS",
   "title" : "Valeurs de statut pour consultation du DMP",
   "status" : "draft",
-  "date" : "2025-04-25T16:50:14+00:00",
+  "date" : "2025-04-28T06:55:35+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -36,7 +36,7 @@
   }],
   "compose" : {
     "include" : [{
-      "system" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/CodeSystem/dmp-consultation-consent-status"
+      "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status"
     }]
   }
 }

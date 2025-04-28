@@ -1,13 +1,9 @@
-<!-- get modelType -->
-
-
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Remarque du patient - Testing - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+    <title>Historique des versions - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -46,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14.12"}
-    h3,h4,h5,h6{--heading-prefix:"14.12"}</style>
+    <style type="text/css">h2{--heading-prefix:"13"}
+    h3,h4,h5,h6{--heading-prefix:"13"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -169,15 +165,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Remarque du patient</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Historique des versions</b></li>
 
           <span style="float:right;">
 
-            <a href="StructureDefinition-encounter-patient-comment-mappings.html">&lt;prev</a> | 
+            <a href="downloads.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="StructureDefinition-encounter-patient-comment.profile.xml.html">next&gt;</a>
+          | <a href="artifacts.html">next&gt;</a>
 
           </span>
 
@@ -191,8 +187,16 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div style="counter-reset: section 6" class="col-12">
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Historique des versions</h2>
   
 
 
@@ -205,99 +209,91 @@
 
 
 
-<ul class="nav nav-tabs">
 
-  <li>
-    <a href="StructureDefinition-encounter-patient-comment.html">Content</a>
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#historique-des-versions" id="markdown-toc-historique-des-versions">Historique des Versions</a>    <ul>
+      <li><a href="#version-010-draft" id="markdown-toc-version-010-draft">Version 0.1.0 (Draft)</a>        <ul>
+          <li><a href="#changements-principaux-" id="markdown-toc-changements-principaux-">Changements principaux :</a></li>
+        </ul>
+      </li>
+      <li><a href="#version-020-prévue" id="markdown-toc-version-020-prévue">Version 0.2.0 (Prévue)</a>        <ul>
+          <li><a href="#changements-prévus-" id="markdown-toc-changements-prévus-">Changements prévus :</a></li>
+        </ul>
+      </li>
+      <li><a href="#notes" id="markdown-toc-notes">Notes</a></li>
+    </ul>
   </li>
-
-
-
-  <li>
-    <a href="StructureDefinition-encounter-patient-comment-definitions.html">Detailed Descriptions</a>
-  </li>
-
-
-
-  
-    <li>
-      <a href="StructureDefinition-encounter-patient-comment-mappings.html">Mappings</a>
-    </li>
-  
-
-
-
-
-
-
-
-  
-    <li>
-      <a href="StructureDefinition-encounter-patient-comment.profile.xml.html">XML</a>
-    </li>
-  
-
-
-  
-    <li>
-      <a href="StructureDefinition-encounter-patient-comment.profile.json.html">JSON</a>
-    </li>
-  
-
-
-  
-    <li>
-      <a href="StructureDefinition-encounter-patient-comment.profile.ttl.html">TTL</a>
-    </li>
-  
-
-
 </ul>
 
+</div>
+<h1 id="historique-des-versions">Historique des Versions</h1>
 
-  <a name="root"> </a>
-  <h2 id="root">Extension: EncounterPatientComment - Testing</h2>
+<p>Ce document retrace les différentes versions du guide d’implémentation FHIR pour la préadmission hospitalière, en mettant en évidence les changements majeurs, les corrections et les ajouts.</p>
 
-  <table class="colsd">
-    <tr>
+<hr />
 
-      <td colspan="2">
-        
-          Draft
-          
-            as of 2025-04-28
-          
-        
-      </td>
+<h2 id="version-010-draft">Version 0.1.0 (Draft)</h2>
+<p><strong>Date de publication :</strong> 25 avril 2025<br />
+<strong>Statut :</strong> En cours de développement</p>
 
-    </tr>
-  </table>
+<h3 id="changements-principaux-">Changements principaux :</h3>
+<ul>
+  <li>Création initiale du guide d’implémentation.</li>
+  <li>Ajout des profils FHIR suivants :
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">PreadmissionAppointmentFr</code> : Gestion des rendez-vous.</li>
+      <li><code class="language-plaintext highlighter-rouge">PreadmissionEncounterFr</code> : Pré-admission administrative.</li>
+      <li><code class="language-plaintext highlighter-rouge">PreadmissionCoverageFr</code> : Gestion de la couverture sociale (AMO/AMC).</li>
+      <li><code class="language-plaintext highlighter-rouge">PreadmissionDocumentReferenceFr</code> : Transmission des documents justificatifs.</li>
+      <li><code class="language-plaintext highlighter-rouge">PreadmissionConsentFr</code> : Recueil des consentements.</li>
+    </ul>
+  </li>
+  <li>Définition des extensions spécifiques :
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">PreadmissionStatutFr</code> : Suivi du statut de la préadmission.</li>
+      <li><code class="language-plaintext highlighter-rouge">FrCoverageAMCExtension</code> : Informations spécifiques à l’AMC.</li>
+      <li><code class="language-plaintext highlighter-rouge">EncounterPatientComment</code> : Remarques du patient.</li>
+      <li><code class="language-plaintext highlighter-rouge">EncounterAgentInstructions</code> : Consignes de l’agent administratif.</li>
+    </ul>
+  </li>
+  <li>Documentation des flux d’échange et des processus de préadmission :
+    <ul>
+      <li>Diagrammes des flux.</li>
+      <li>Séquence des opérations.</li>
+    </ul>
+  </li>
+  <li>Ajout d’exemples d’utilisation pour les ressources FHIR (<code class="language-plaintext highlighter-rouge">Appointment</code>, <code class="language-plaintext highlighter-rouge">Encounter</code>, <code class="language-plaintext highlighter-rouge">Coverage</code>, etc.).</li>
+</ul>
 
+<hr />
 
+<h2 id="version-020-prévue">Version 0.2.0 (Prévue)</h2>
+<p><strong>Date de publication :</strong> À définir<br />
+<strong>Statut :</strong> En cours de planification</p>
 
+<h3 id="changements-prévus-">Changements prévus :</h3>
+<ul>
+  <li>Ajout de nouveaux cas d’utilisation pour les téléconsultations.</li>
+  <li>Amélioration des contraintes sur les profils existants.</li>
+  <li>Documentation des bonnes pratiques pour la gestion des consentements et des documents justificatifs.</li>
+  <li>Ajout d’exemples supplémentaires pour les cas complexes (ex. : patient mineur, couverture multiple).</li>
+</ul>
 
-<!-- insert intro if present -->
+<hr />
 
+<h2 id="notes">Notes</h2>
+<ul>
+  <li>Les versions futures incluront des mises à jour basées sur les retours des utilisateurs et les évolutions des standards FHIR.</li>
+  <li>Toute contribution ou suggestion est la bienvenue. Contactez-nous à <a href="mailto:fhir@interopsante.org">fhir@interopsante.org</a>.</li>
+</ul>
 
-
-
-<h3>Test Plans</h3>
-
-  <p><b>No test plans are currently available for the  Profile.</b></p>
-
-
-<h3>Test Scripts</h3>
-
-  <p><b>No test scripts are currently available for the  Profile.</b></p>
-
-
-<!-- insert notes if present -->
-
+<hr />
 
 
 
 </div>
-
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -305,8 +301,6 @@
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
-
-  <script type="text/javascript" src="assets/js/tabs.js"> </script>
 
   <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
@@ -319,7 +313,7 @@
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="StructureDefinition-encounter-patient-comment-mappings.html">&lt;prev</a>
+                <a href="downloads.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -327,7 +321,7 @@
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="StructureDefinition-encounter-patient-comment.profile.xml.html">next&gt;</a>
+                <a href="artifacts.html">next&gt;</a>
 
               </td>
             </tr>
