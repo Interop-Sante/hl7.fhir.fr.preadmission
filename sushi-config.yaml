@@ -1,5 +1,5 @@
 id: hl7.fhir.fr.preadmission
-canonical: https://github.com/Interop-Sante/hl7.fhir.fr.preadmission
+canonical: http://hl7.fr/fhir/fr/preadmission
 name: PREADMISSIONFR
 title: Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne
 publisher:
@@ -50,6 +50,8 @@ pages:
     title: Diagramme de séquence du processus
   downloads.md:
     title: Téléchargement du guide
+  history.md:
+    title: Historique des versions
 
 menu:
     Accueil: index.html
