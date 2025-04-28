@@ -18,7 +18,8 @@
   fhir:name [ fhir:v "ConsultationDMPConsentStatus"] ; # 
   fhir:title [ fhir:v "Statut de consentement - consultation du DMP"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-28T06:55:35+00:00"^^xsd:dateTime] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-04-28T10:41:02+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

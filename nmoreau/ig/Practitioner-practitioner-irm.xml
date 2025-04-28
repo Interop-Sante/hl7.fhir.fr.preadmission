@@ -3,7 +3,7 @@
 <Practitioner xmlns="http://hl7.org/fhir">
   <id value="practitioner-irm"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner practitioner-irm</b></p><a name="practitioner-irm"> </a><a name="hcpractitioner-irm"> </a><a name="practitioner-irm-fr-FR"> </a><p><b>identifier</b>: <code>http://example.com/practitioner-ids</code>/IRM-001</p><p><b>name</b>: Sophie Martin </p><p><b>gender</b>: Female</p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Médecin IRM, référencé dans les autres ressources - préadmission.</p></div>
   </text>
   <identifier>
     <system value="http://example.com/practitioner-ids"/>

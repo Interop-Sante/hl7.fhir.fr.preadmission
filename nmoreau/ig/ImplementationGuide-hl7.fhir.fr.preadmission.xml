@@ -10,7 +10,7 @@
   <name value="PREADMISSIONFR"/>
   <title value="Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"/>
   <status value="draft"/>
-  <date value="2025-04-28T06:55:35+00:00"/>
+  <date value="2025-04-28T10:41:02+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -486,7 +486,6 @@
         <reference value="Appointment/appt-irm-001"/>
       </reference>
       <name value="appt-irm-001"/>
-      <description value="IRM cérébrale - préadmission"/>
       <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"/>
     </resource>
     <resource>

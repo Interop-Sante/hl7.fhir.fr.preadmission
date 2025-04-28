@@ -612,9 +612,9 @@
       "uses" : {
       },
       "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
       "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR",
       "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
+      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
       "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
@@ -678,8 +678,8 @@
       "uses" : {
       },
       "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
       "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
+      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
       "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {

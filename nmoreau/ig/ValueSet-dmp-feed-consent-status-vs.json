@@ -10,7 +10,8 @@
   "name" : "DmpAlimentationConsentStatusVS",
   "title" : "Valeurs de statut pour alimentation du DMP",
   "status" : "draft",
-  "date" : "2025-04-28T06:55:35+00:00",
+  "experimental" : true,
+  "date" : "2025-04-28T10:41:02+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

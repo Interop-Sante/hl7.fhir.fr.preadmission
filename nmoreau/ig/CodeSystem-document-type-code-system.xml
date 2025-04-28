@@ -10,7 +10,8 @@
   <name value="PreadmissionDocumentTypeCodeSystem"/>
   <title value="Code System des types de documents pour la préadmission"/>
   <status value="draft"/>
-  <date value="2025-04-28T06:55:35+00:00"/>
+  <experimental value="true"/>
+  <date value="2025-04-28T10:41:02+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>

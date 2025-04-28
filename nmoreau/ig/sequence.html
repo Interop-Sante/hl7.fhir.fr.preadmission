@@ -226,6 +226,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li><a href="#récapitulatif-de-la-séquence" id="markdown-toc-récapitulatif-de-la-séquence">Récapitulatif de la Séquence</a></li>
       <li><a href="#diagramme-de-séquence" id="markdown-toc-diagramme-de-séquence">Diagramme de Séquence</a>        <ul>
           <li><a href="#si-le-portail-de-rendez-vous-est-en-dehors-du-sih" id="markdown-toc-si-le-portail-de-rendez-vous-est-en-dehors-du-sih">Si le Portail de rendez-vous est en dehors du SIH</a></li>
+          <li><a href="#annulation-de-rendez-vous" id="markdown-toc-annulation-de-rendez-vous">Annulation de rendez-vous</a></li>
         </ul>
       </li>
       <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
@@ -391,6 +392,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     PortailPreadm-&gt;&gt;Patient: Résultat (accepté / rejeté)
 </code></pre>
 
+<h3 id="annulation-de-rendez-vous">Annulation de rendez-vous</h3>
+
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Patient
+    participant PortailRdv as Portail de rendez-vous
+    participant PortailPreadm as Portail de préadmission
+    participant SAH as Système administratif de l'hôpital
+
+    %% Étape 1 : Annulation de RDV
+    Patient-&gt;&gt;PortailRdv: Annulation du rendez-vous
+    PortailRdv--&gt;&gt;SAH: Notification de l'annulation du rendez-vous (Appointment)
+
+    %% Étape 2 : Système administratif de l'hôpital annule la préadmission
+    SAH-&gt;&gt;PortailPreadm: Envoi d'un Encounter avec le statut CANCELLED
+    
+    %% Étape 3 : Optionnel : Notification de l'annulation au patient
+    PortailPreadm-&gt;&gt;Patient: Notification de l'annulation du rendez-vous et de la préadmission
+
+</code></pre>
+
 <h2 id="conclusion">Conclusion</h2>
 
 <p>Cette séquence garantit une gestion fluide et structurée des données administratives liées à la pré-admission hospitalière en ligne. Chaque acteur du processus contribue à l’efficacité du parcours patient, tout en respectant les normes d’interopérabilité et de sécurité des données.</p>
@@ -438,7 +459,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 28, 2025 06:56+0000">2025-04-28</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 28, 2025 10:41+0000">2025-04-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

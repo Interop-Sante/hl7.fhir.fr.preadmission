@@ -211,8 +211,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#processus-de-préadmission-hospitalière--vue-par-ressource-fhir" id="markdown-toc-processus-de-préadmission-hospitalière--vue-par-ressource-fhir">Processus de préadmission hospitalière – Vue par ressource FHIR</a>    <ul>
+      <li><a href="#️-appointment" id="markdown-toc-️-appointment">🗓️ Appointment</a></li>
+      <li><a href="#-questionnaire--questionnaireresponse" id="markdown-toc--questionnaire--questionnaireresponse">📄 Questionnaire / QuestionnaireResponse</a></li>
+      <li><a href="#-consent" id="markdown-toc--consent">✅ Consent</a></li>
+      <li><a href="#-encounter" id="markdown-toc--encounter">🏥 Encounter</a></li>
+      <li><a href="#-documentreference" id="markdown-toc--documentreference">📎 DocumentReference</a></li>
+      <li><a href="#-patient" id="markdown-toc--patient">👤 Patient</a></li>
+      <li><a href="#enchainements" id="markdown-toc-enchainements">Enchainements</a>        <ul>
+          <li><a href="#séquence-standard" id="markdown-toc-séquence-standard">Séquence standard</a></li>
+          <li><a href="#annulation" id="markdown-toc-annulation">Annulation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 </div>
 <h1 id="processus-de-préadmission-hospitalière--vue-par-ressource-fhir">Processus de préadmission hospitalière – Vue par ressource FHIR</h1>
 
@@ -303,6 +319,56 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Ce découpage par ressource permet une implémentation modulaire, chaque acteur (portail, secrétariat, SIH) manipulant uniquement les ressources pertinentes à son rôle tout en respectant les standards FHIR.</p>
 
+<h2 id="enchainements">Enchainements</h2>
+
+<h3 id="séquence-standard">Séquence standard</h3>
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Patient
+    participant PortailRdv as Portail de rendez-vous
+    participant PortailPreadm as Portail de préadmission
+    participant SAH as Système administratif de l'hôpital
+
+    %% Étape 1 : Prise de RDV
+    Patient-&gt;&gt;PortailRdv: Prend rendez-vous
+    PortailRdv--&gt;&gt;SAH: POST Appointment
+
+    %% Étape 2 : Système administratif de l'hôpital initie la préadmission
+    SAH-&gt;&gt;PortailPreadm: POST Encounter (pré-admission)
+    
+    %% Étape 3 : Notification au patient
+    PortailPreadm-&gt;&gt;Patient: Envoi lien sécurisé (SMS / e-mail)
+
+    %% Étape 4 : Patient renseigne ses données
+
+    %% Étape 5 : Polling du SAH
+    loop Polling régulier
+        SAH-&gt;&gt;PortailPreadm: GET Encounter / Patient / Coverage / DocumentReference / Consent
+    end
+
+    %% Étape 6 : Vérification par l'agent
+    AgentBDE-&gt;&gt;SAH: GET Encounter / Patient / Coverage / DocumentReference / Consent
+    AgentBDE-&gt;&gt;PortailPreadm: PATCH Encounter (acceptation ou refus)
+
+    %% Étape 7 : Notification finale
+    PortailPreadm-&gt;&gt;Patient: Résultat (accepté / rejeté) par SMS/e-mail
+</code></pre>
+
+<h3 id="annulation">Annulation</h3>
+
+<pre><code class="language-mermaid">sequenceDiagram
+    participant Patient
+    participant PortailRdv as Portail de rendez-vous
+    participant PortailPreadm as Portail de préadmission
+    participant SAH as Système administratif de l'hôpital
+    participant AgentBDE as Agent du Bureau des Entrées
+
+    %% Étape 1 : Annulation du RDV
+    Patient-&gt;&gt;PortailRdv: Annule le rendez-vous
+    PortailRdv--&gt;&gt;SAH: DELETE Appointment
+
+    %% Étape 2 : Système administratif de l'hôpital annule la préadmission
+    SAH-&gt;&gt;PortailPreadm: DELETE Encounter (pré-admission)
+</code></pre>
 
 
 
@@ -344,7 +410,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 28, 2025 06:56+0000">2025-04-28</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 28, 2025 10:41+0000">2025-04-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
