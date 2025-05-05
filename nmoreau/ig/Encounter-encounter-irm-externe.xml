@@ -8,11 +8,13 @@
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Initialisation de la préadmission par la GAP, suite à la réception dun rendez-vous - préadmission.</p></div>
   </text>
-  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-status">
-    <valueCode value="READY"/>
-  </extension>
-  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions">
-    <valueString value="Le patient est attendu pour une IRM en ambulatoire."/>
+  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"/>
+        <code value="READY"/>
+      </coding>
+    </valueCodeableConcept>
   </extension>
   <identifier>
     <use value="temp"/>
@@ -34,9 +36,11 @@
   </class>
   <subject>
     <reference value="Patient/patient-001"/>
+    <display value="Jean Dupont"/>
   </subject>
   <appointment>
     <reference value="Appointment/appt-irm-001"/>
+    <display value="Rendez-vous préadmission IRM"/>
   </appointment>
   <period>
     <start value="2025-05-15T10:30:00+01:00"/>

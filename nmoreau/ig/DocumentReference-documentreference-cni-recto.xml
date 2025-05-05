@@ -12,12 +12,13 @@
   <type>
     <coding>
       <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system"/>
-      <code value="CNI"/>
-      <display value="Carte Nationale d'Identité - Recto"/>
+      <code value="CN_RECTO"/>
+      <display value="Recto Carte d’identité"/>
     </coding>
   </type>
   <subject>
     <reference value="Patient/patient-001"/>
+    <display value="Jean Dupont"/>
   </subject>
   <date value="2025-05-01T10:00:00+01:00"/>
   <content>
@@ -31,6 +32,7 @@
   <context>
     <encounter>
       <reference value="Encounter/encounter-irm-refused"/>
+      <display value="Consultation IRM refusée"/>
     </encounter>
   </context>
 </DocumentReference>

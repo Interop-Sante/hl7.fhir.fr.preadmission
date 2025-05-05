@@ -9,9 +9,22 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Rendez vous pour une IRM cérébrale - préadmission.</p></div>"
   },
   "extension" : [{
-    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension",
     "valueReference" : {
-      "reference" : "QuestionnaireResponse/qr-irm-001"
+      "reference" : "Consent/consent-rgpd",
+      "display" : "Questionnaire préadmission IRM"
+    }
+  },
+  {
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension",
+    "valueReference" : {
+      "reference" : "Consent/consent-consultation-dmp"
+    }
+  },
+  {
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension",
+    "valueReference" : {
+      "reference" : "Consent/consent-alimentation-dmp"
     }
   }],
   "status" : "booked",
@@ -26,7 +39,8 @@
   "end" : "2025-05-15T11:00:00+01:00",
   "participant" : [{
     "actor" : {
-      "reference" : "Patient/patient-001"
+      "reference" : "Patient/patient-001",
+      "display" : "Jean Dupont"
     },
     "status" : "accepted"
   },

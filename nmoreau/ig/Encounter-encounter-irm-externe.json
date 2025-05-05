@@ -9,12 +9,13 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Initialisation de la préadmission par la GAP, suite à la réception dun rendez-vous - préadmission.</p></div>"
   },
   "extension" : [{
-    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-status",
-    "valueCode" : "READY"
-  },
-  {
-    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions",
-    "valueString" : "Le patient est attendu pour une IRM en ambulatoire."
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+        "code" : "READY"
+      }]
+    }
   }],
   "identifier" : [{
     "use" : "temp",
@@ -35,10 +36,12 @@
     "display" : "Externe"
   },
   "subject" : {
-    "reference" : "Patient/patient-001"
+    "reference" : "Patient/patient-001",
+    "display" : "Jean Dupont"
   },
   "appointment" : [{
-    "reference" : "Appointment/appt-irm-001"
+    "reference" : "Appointment/appt-irm-001",
+    "display" : "Rendez-vous préadmission IRM"
   }],
   "period" : {
     "start" : "2025-05-15T10:30:00+01:00",

@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Coverage/coverage-amc> a fhir:Coverage ;
+<http://hl7.fr/fhir/fr/preadmission/Coverage/coverage-amc> a fhir:Coverage ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "coverage-amc"] ; # 
   fhir:meta [
@@ -21,16 +21,16 @@
   ] ; # 
   fhir:extension ( [
      fhir:extension ( [
-       fhir:url [ fhir:v "nomAMC"^^xsd:anyURI ] ;
-       fhir:value [
-         a fhir:string ;
-         fhir:v "Mutuelle Santé Plus"
-       ]
-     ] [
        fhir:url [ fhir:v "numeroAMC"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:string ;
          fhir:v "987654321"
+       ]
+     ] [
+       fhir:url [ fhir:v "nomAMC"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Mutuelle Santé Plus"
        ]
      ] [
        fhir:url [ fhir:v "codeConvention"^^xsd:anyURI ] ;
@@ -45,7 +45,7 @@
          fhir:v "67890"
        ]
      ] ) ;
-     fhir:url [ fhir:v "http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended"^^xsd:anyURI ]
+     fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended"^^xsd:anyURI ]
   ] ) ; # 
   fhir:identifier ( [
      fhir:use [ fhir:v "official" ] ;
@@ -61,13 +61,15 @@
      ] )
   ] ; # 
   fhir:subscriber [
-     fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Patient/patient-001> ;
-     fhir:reference [ fhir:v "Patient/patient-001" ]
+     fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
+     fhir:reference [ fhir:v "Patient/patient-001" ] ;
+     fhir:display [ fhir:v "Jean Dupont" ]
   ] ; # 
   fhir:subscriberId [ fhir:v "AMC-987654321"] ; # 
   fhir:beneficiary [
-     fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Patient/patient-001> ;
-     fhir:reference [ fhir:v "Patient/patient-001" ]
+     fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
+     fhir:reference [ fhir:v "Patient/patient-001" ] ;
+     fhir:display [ fhir:v "Jean Dupont" ]
   ] ; # 
   fhir:period [
      fhir:start [ fhir:v "2025-01-01T00:00:00+01:00"^^xsd:dateTime ] ;

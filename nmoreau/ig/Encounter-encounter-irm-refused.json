@@ -9,8 +9,13 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Refus de la préadmission par l'agent du bureu des entrée suite à un manque de document - préadmission.</p></div>"
   },
   "extension" : [{
-    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-status",
-    "valueCode" : "REFUSED"
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+        "code" : "REFUSED"
+      }]
+    }
   },
   {
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions",
@@ -35,10 +40,12 @@
     "display" : "Externe"
   },
   "subject" : {
-    "reference" : "Patient/patient-001"
+    "reference" : "Patient/patient-001",
+    "display" : "Jean Dupont"
   },
   "appointment" : [{
-    "reference" : "Appointment/appt-irm-001"
+    "reference" : "Appointment/appt-irm-001",
+    "display" : "Rendez-vous préadmission IRM"
   }],
   "period" : {
     "start" : "2025-05-15T10:30:00+01:00",

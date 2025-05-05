@@ -6,9 +6,15 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Practitioner/practitioner-irm> a fhir:Practitioner ;
+<http://hl7.fr/fhir/fr/preadmission/Practitioner/practitioner-irm> a fhir:Practitioner ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "practitioner-irm"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"^^xsd:anyURI ;
+       fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner>
+     ] )
+  ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Médecin IRM, référencé dans les autres ressources - préadmission.</p></div>"^^rdf:XMLLiteral

@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Encounter/encounter-irm-externe> a fhir:Encounter ;
+<http://hl7.fr/fhir/fr/preadmission/Encounter/encounter-irm-externe> a fhir:Encounter ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "encounter-irm-externe"] ; # 
   fhir:meta [
@@ -20,16 +20,13 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Initialisation de la préadmission par la GAP, suite à la réception dun rendez-vous - préadmission.</p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
-     fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-status"^^xsd:anyURI ] ;
+     fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr"^^xsd:anyURI ] ;
      fhir:value [
-       a fhir:code ;
-       fhir:v "READY"
-     ]
-  ] [
-     fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"^^xsd:anyURI ] ;
-     fhir:value [
-       a fhir:string ;
-       fhir:v "Le patient est attendu pour une IRM en ambulatoire."
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "READY" ]
+       ] )
      ]
   ] ) ; # 
   fhir:identifier ( [
@@ -51,12 +48,14 @@
      fhir:display [ fhir:v "Externe" ]
   ] ; # 
   fhir:subject [
-     fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Patient/patient-001> ;
-     fhir:reference [ fhir:v "Patient/patient-001" ]
+     fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
+     fhir:reference [ fhir:v "Patient/patient-001" ] ;
+     fhir:display [ fhir:v "Jean Dupont" ]
   ] ; # 
   fhir:appointment ( [
-     fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Appointment/appt-irm-001> ;
-     fhir:reference [ fhir:v "Appointment/appt-irm-001" ]
+     fhir:link <http://hl7.fr/fhir/fr/preadmission/Appointment/appt-irm-001> ;
+     fhir:reference [ fhir:v "Appointment/appt-irm-001" ] ;
+     fhir:display [ fhir:v "Rendez-vous préadmission IRM" ]
   ] ) ; # 
   fhir:period [
      fhir:start [ fhir:v "2025-05-15T10:30:00+01:00"^^xsd:dateTime ] ;

@@ -5,12 +5,12 @@
     "status" : "generated",
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Réponse du patient au questionnaire posé lors de la prise de rendez-vous pour une IRM.</p></div>"
   },
-  "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Questionnaire/questionnaire-irm",
+  "url" : "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-irm",
   "version" : "0.1.0",
   "title" : "Questionnaire IRM - Préadmission",
   "status" : "active",
   "subjectType" : ["Patient"],
-  "date" : "2025-04-28T10:41:02+00:00",
+  "date" : "2025-05-05T08:51:40+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

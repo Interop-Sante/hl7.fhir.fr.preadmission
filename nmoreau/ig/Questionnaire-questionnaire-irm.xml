@@ -5,12 +5,12 @@
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Réponse du patient au questionnaire posé lors de la prise de rendez-vous pour une IRM.</p></div>
   </text>
-  <url value="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Questionnaire/questionnaire-irm"/>
+  <url value="http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-irm"/>
   <version value="0.1.0"/>
   <title value="Questionnaire IRM - Préadmission"/>
   <status value="active"/>
   <subjectType value="Patient"/>
-  <date value="2025-04-28T10:41:02+00:00"/>
+  <date value="2025-05-05T08:51:40+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>

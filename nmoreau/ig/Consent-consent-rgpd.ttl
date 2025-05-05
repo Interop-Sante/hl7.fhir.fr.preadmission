@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.fr/fhir/fr/preadmission/Consent/consent-rgpd> a fhir:Consent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "consent-rgpd"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"^^xsd:anyURI ;
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Consent consent-rgpd</b></p><a name=\"consent-rgpd\"> </a><a name=\"hcconsent-rgpd\"> </a><a name=\"consent-rgpd-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-consent-fr.html\">Fr Preadmission Consent Profile</a></p></div><p><b>status</b>: Active</p><p><b>scope</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Privacy Consent</span></p><p><b>category</b>: <span title=\"Codes:{http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type other}\">Autres (RGPD, etc.)</span></p><p><b>patient</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>dateTime</b>: 2025-04-29 14:30:00+0100</p><h3>Policies</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Authority</b></td><td><b>Uri</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://www.cnil.fr\">https://www.cnil.fr</a></td><td><a href=\"https://www.cnil.fr/fr/reglement-europeen-protection-donnees\">https://www.cnil.fr/fr/reglement-europeen-protection-donnees</a></td></tr></table><h3>Provisions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 225773000}\">Informed consent</span></td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:scope [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentscope"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "patient-privacy" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "other" ] ;
+       fhir:display [ fhir:v "Autres (RGPD, etc.)" ]
+     ] )
+  ] ) ; # 
+  fhir:patient [
+     fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
+     fhir:reference [ fhir:v "Patient/patient-001" ] ;
+     fhir:display [ fhir:v "Jean Dupont" ]
+  ] ; # 
+  fhir:dateTime [ fhir:v "2025-04-29T14:30:00+01:00"^^xsd:dateTime] ; # 
+  fhir:policy ( [
+     fhir:authority [ fhir:v "https://www.cnil.fr"^^xsd:anyURI ] ;
+     fhir:uri [ fhir:v "https://www.cnil.fr/fr/reglement-europeen-protection-donnees"^^xsd:anyURI ]
+  ] ) ; # 
+  fhir:provision [
+     fhir:code ( [
+       fhir:coding ( [
+         a sct:225773000 ;
+         fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "225773000" ] ;
+         fhir:display [ fhir:v "Informed consent" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

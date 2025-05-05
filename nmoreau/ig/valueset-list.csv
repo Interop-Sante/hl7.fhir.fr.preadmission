@@ -1,9 +1,8 @@
 URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
 http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-category-value-set,0.1.0,draft,,PreadmissionConsentCategoryValueSet,ValueSet pour la catégorie de consentement,"Valeurs autorisées pour la catégorie de consentement",,"Internal"
-http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-access-consent-status-vs,0.1.0,draft,,DmpConsultationConsentStatusVS,Valeurs de statut pour consultation du DMP,"",,"Internal"
-http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-feed-consent-status-vs,0.1.0,draft,,DmpAlimentationConsentStatusVS,Valeurs de statut pour alimentation du DMP,"",,"Internal"
+http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-information-status,0.1.0,draft,,ConsentInformationStatusVS,Statut d'information et de consentement,"Statut du patient concernant l'information et le consentement, incluant les cas d'opposition ou d'absence de recueil.",,"Internal"
 http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set,0.1.0,draft,,PreadmissionConsentValueSet,ValueSet des consentements du patient,"Consentements exprimés par le patient dans le cadre de la préadmission.",,"Internal"
 http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset,0.1.0,draft,,PreadmissionDocumentTypeFrValueSet,Types de documents - ValueSet,"Liste des types de documents autorisés pour la préadmission",,"hl7.fhir.fr.core,Internal"
 http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set,0.1.0,draft,,PreAdmissionStatusValueSet,ValueSet des statuts de préadmission,"Statuts valides qu'une préadmission peut prendre.",,"Internal"
 http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs,0.1.0,draft,,TypeCouvertureSocialeValueSet,ValueSet des types de couverture pour la préadmission,"Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)",,"THO (V3)"
-http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs,0.1.0,draft,,TypeVenueEncounterValueSet,ValueSet des classes d'Encounter pour la préadmission,"Restreint les classes d'Encounter aux valeurs NONAC, SS et VR",,"THO (V3)"
+http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter,0.1.0,draft,,TypeVenueEncounterValueSet,Type de venue Encounter,"Les différents types d'admission (hospitalisation, consultation, etc.)",,"THO"

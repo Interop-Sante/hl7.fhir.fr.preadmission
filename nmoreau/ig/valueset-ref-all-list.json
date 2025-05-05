@@ -15,32 +15,15 @@
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-access-consent-status-vs",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-information-status",
       "version" : "0.1.0",
       "status" : "draft",
-      "name" : "DmpConsultationConsentStatusVS",
-      "title" : "Valeurs de statut pour consultation du DMP",
-      "description" : null,
+      "name" : "ConsentInformationStatusVS",
+      "title" : "Statut d'information et de consentement",
+      "description" : "Statut du patient concernant l'information et le consentement, incluant les cas d'opposition ou d'absence de recueil.",
       "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
-    },
-    {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-feed-consent-status-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "DmpAlimentationConsentStatusVS",
-      "title" : "Valeurs de statut pour alimentation du DMP",
-      "description" : null,
-      "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs"
+      ]
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set",
@@ -51,7 +34,10 @@
       "description" : "Consentements exprimés par le patient dans le cadre de la préadmission.",
       "systems" : [
         "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"
-      ]
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset",
@@ -89,13 +75,13 @@
       "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "TypeVenueEncounterValueSet",
-      "title" : "ValueSet des classes d'Encounter pour la préadmission",
-      "description" : "Restreint les classes d'Encounter aux valeurs NONAC, SS et VR",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "title" : "Type de venue Encounter",
+      "description" : "Les différents types d'admission (hospitalisation, consultation, etc.)",
+      "systems" : ["http://terminology.hl7.org/ValueSet/v3-ActEncounterCode"],
       "uses" : {
       },
       "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
@@ -184,8 +170,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.79"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/composition-status",
@@ -492,8 +478,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.250"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/encounter-reason",
@@ -507,8 +493,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.261"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
@@ -611,11 +597,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
       "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR",
-      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
@@ -677,10 +663,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.47"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/security-role-type",
@@ -730,8 +716,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.518"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/subscriber-relationship",

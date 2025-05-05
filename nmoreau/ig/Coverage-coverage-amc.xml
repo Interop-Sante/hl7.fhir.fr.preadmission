@@ -8,12 +8,12 @@
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Couverture sociale AMC - préadmission.</p></div>
   </text>
-  <extension url="http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended">
-    <extension url="nomAMC">
-      <valueString value="Mutuelle Santé Plus"/>
-    </extension>
+  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended">
     <extension url="numeroAMC">
       <valueString value="987654321"/>
+    </extension>
+    <extension url="nomAMC">
+      <valueString value="Mutuelle Santé Plus"/>
     </extension>
     <extension url="codeConvention">
       <valueString value="12345"/>
@@ -37,10 +37,12 @@
   </type>
   <subscriber>
     <reference value="Patient/patient-001"/>
+    <display value="Jean Dupont"/>
   </subscriber>
   <subscriberId value="AMC-987654321"/>
   <beneficiary>
     <reference value="Patient/patient-001"/>
+    <display value="Jean Dupont"/>
   </beneficiary>
   <period>
     <start value="2025-01-01T00:00:00+01:00"/>

@@ -94,8 +94,15 @@
       ]
     },
     {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission",
-      "title": "PreadmissionStatutFr",
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension",
+      "title": "Consentement lié au rendez-vous",
+      "types": [
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr",
+      "title": "Extension Statut Pré-admission",
       "types": [
         "CodeableConcept",
         "CodeableConcept",
@@ -110,13 +117,6 @@
         "string",
         "boolean",
         "string"
-      ]
-    },
-    {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension",
-      "title": "Consentement lié au rendez-vous",
-      "types": [
-        "Reference"
       ]
     }
   ],
@@ -153,12 +153,6 @@
     ]
   },
   "usage": {
-    "http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended": [
-      "Coverage"
-    ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context": [
-      "Appointment"
-    ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response": [
       "Appointment"
     ],
@@ -171,18 +165,12 @@
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended": [
       "Coverage"
     ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission": [
-      "Encounter"
-    ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension": [
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension": [
       "Appointment",
       "Encounter"
     ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-status": [
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr": [
       "Encounter"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/birth-list-given-name": [
-      "Patient.name"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"

@@ -1,0 +1,54 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "valeurs-consent-cs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem valeurs-consent-cs</b></p><a name=\"valeurs-consent-cs\"> </a><a name=\"hcvaleurs-consent-cs\"> </a><a name=\"valeurs-consent-cs-fr-FR\"> </a><p>This case-insensitive code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">NA<a name=\"valeurs-consent-cs-NA\"> </a></td><td>Information non recueillie</td></tr><tr><td style=\"white-space:nowrap\">IC<a name=\"valeurs-consent-cs-IC\"> </a></td><td>Informé et consent</td></tr><tr><td style=\"white-space:nowrap\">INC<a name=\"valeurs-consent-cs-INC\"> </a></td><td>Informé et ne consent pas</td></tr></table></div>"
+  },
+  "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs",
+  "version" : "0.1.0",
+  "name" : "ValeursConsentementCodeSystem",
+  "title" : "Statuts de consentements",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-05-05T08:51:40+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  },
+  {
+    "name" : "InteropSanté",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "fhir@interopsante.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Valeurs possibles pour les consentements",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "caseSensitive" : false,
+  "content" : "complete",
+  "count" : 3,
+  "concept" : [{
+    "code" : "NA",
+    "display" : "Information non recueillie"
+  },
+  {
+    "code" : "IC",
+    "display" : "Informé et consent"
+  },
+  {
+    "code" : "INC",
+    "display" : "Informé et ne consent pas"
+  }]
+}

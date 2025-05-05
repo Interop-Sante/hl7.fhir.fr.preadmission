@@ -22,11 +22,13 @@
     }]
   },
   "subscriber" : {
-    "reference" : "Patient/patient-001"
+    "reference" : "Patient/patient-001",
+    "display" : "Jean Dupont"
   },
   "subscriberId" : "123456789012345",
   "beneficiary" : {
-    "reference" : "Patient/patient-001"
+    "reference" : "Patient/patient-001",
+    "display" : "Jean Dupont"
   },
   "period" : {
     "start" : "2025-01-01T00:00:00+01:00",

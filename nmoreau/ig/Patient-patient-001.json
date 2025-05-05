@@ -13,10 +13,6 @@
     "value" : "123456789012345"
   }],
   "name" : [{
-    "extension" : [{
-      "url" : "http://hl7.org/fhir/StructureDefinition/birth-list-given-name",
-      "valueString" : "Jean"
-    }],
     "use" : "official",
     "family" : "Dupont",
     "given" : ["Jean"]

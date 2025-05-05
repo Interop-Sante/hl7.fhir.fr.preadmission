@@ -195,7 +195,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.fr/fhir/fr/preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Consentements</h2>
   
 
@@ -225,7 +225,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           <li><a href="#contraintes-principales" id="markdown-toc-contraintes-principales"><strong>Contraintes principales</strong></a></li>
         </ul>
       </li>
-      <li><a href="#exemple-dutilisation" id="markdown-toc-exemple-dutilisation">Exemple d’utilisation</a></li>
       <li><a href="#liens-avec-les-autres-ressources" id="markdown-toc-liens-avec-les-autres-ressources">Liens avec les autres ressources</a></li>
       <li><a href="#bonnes-pratiques" id="markdown-toc-bonnes-pratiques">Bonnes pratiques</a></li>
       <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
@@ -269,21 +268,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <table>
   <thead>
     <tr>
-      <th>Description</th>
-      <th>Type</th>
+      <th><strong>Type de consentement</strong></th>
+      <th><strong>Description</strong></th>
+      <th><strong>Statuts possibles</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Opposition bris de glace</td>
-      <td>Oui / Non</td>
+      <td>Accès au DMP</td>
+      <td>Permet la consultation des données du DMP.</td>
+      <td>Informé et consent / Informé et ne consent pas / Information non recueillie</td>
     </tr>
     <tr>
-      <td>Opposition centre régulation</td>
-      <td>Oui / Non</td>
+      <td>Alimentation du DMP</td>
+      <td>Autorise l’ajout de documents dans le DMP.</td>
+      <td>Informé et consent / Informé et ne consent pas / Information non recueillie</td>
     </tr>
     <tr>
       <td>Date de recueil</td>
+      <td>Date à laquelle le consentement a été recueilli.</td>
       <td>Date</td>
     </tr>
   </tbody>
@@ -310,6 +313,35 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     </ul>
   </li>
 </ul>
+
+<h4 id="valeurs-autorisées">Valeurs autorisées</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Code</strong></th>
+      <th><strong>System</strong></th>
+      <th><strong>Libellé</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>225773000</td>
+      <td>http://snomed.info/sct</td>
+      <td>Informé et non opposé (consentement éclairé)</td>
+    </tr>
+    <tr>
+      <td>311401005</td>
+      <td>http://snomed.info/sct</td>
+      <td>Informé et opposé (refusé)</td>
+    </tr>
+    <tr>
+      <td>261665006</td>
+      <td>http://snomed.info/sct</td>
+      <td>Information non recueillie (non demandé)</td>
+    </tr>
+  </tbody>
+</table>
 
 <hr />
 
@@ -340,49 +372,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>Catégorie</strong> : Définit le type de consentement (RGPD, DMP, transmission à tiers).</li>
   <li><strong>Lien avec le patient</strong> : Chaque consentement doit référencer une ressource <code class="language-plaintext highlighter-rouge">Patient</code> via <code class="language-plaintext highlighter-rouge">Consent.patient</code>.</li>
   <li><strong>Règle applicable</strong> : Spécifiée via <code class="language-plaintext highlighter-rouge">Consent.policyRule</code> pour indiquer le cadre réglementaire (par exemple, RGPD ou DMP).</li>
-  <li><strong>Extensions spécifiques</strong> : Les consentements peuvent inclure des extensions pour des cas particuliers, comme l’opposition au “bris de glace” ou l’accès au centre de régulation.</li>
 </ul>
 
 <hr />
 
-<h2 id="exemple-dutilisation">Exemple d’utilisation</h2>
-
-<p>Voici un exemple minimal de ressource <code class="language-plaintext highlighter-rouge">Consent</code> pour un consentement à l’accès au DMP :</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Consent"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"scope"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/consentscope"</span><span class="p">,</span><span class="w">
-        </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"patient-privacy"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"category"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dmp-access"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accès au DMP"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"patient"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/1234"</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"dateTime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-04-22T10:00:00+01:00"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"policyRule"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FR-DMP-ACCESS"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
 <h2 id="liens-avec-les-autres-ressources">Liens avec les autres ressources</h2>
 <ul>
-  <li><strong>Lien avec le patient</strong> : Chaque consentement est directement lié à une ressource Patient.</li>
-  <li><strong>Lien avec la préadmission</strong> : Les consentements peuvent être référencés dans la ressource Encounter associée à la préadmission.</li>
+  <li><strong>Lien avec le patient</strong> : Chaque consentement est directement lié à une ressource <code class="language-plaintext highlighter-rouge">Patient</code>.</li>
+  <li><strong>Lien avec la préadmission</strong> : Les consentements peuvent être référencés dans la ressource <code class="language-plaintext highlighter-rouge">Encounter</code> ou <code class="language-plaintext highlighter-rouge">Appointment</code> associée à la préadmission.</li>
 </ul>
 
 <h2 id="bonnes-pratiques">Bonnes pratiques</h2>
@@ -436,7 +433,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 28, 2025 10:41+0000">2025-04-28</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 5, 2025 08:52+0000">2025-05-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -445,7 +442,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                 
           Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Historique des versions </a>
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.fr/fhir/fr/preadmission/history.html">Historique des versions </a>
                  
                 
 

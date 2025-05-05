@@ -2,6 +2,9 @@
 
 <Practitioner xmlns="http://hl7.org/fhir">
   <id value="practitioner-irm"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"/>
+  </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Médecin IRM, référencé dans les autres ressources - préadmission.</p></div>
   </text>

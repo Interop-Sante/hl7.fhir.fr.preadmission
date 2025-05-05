@@ -3,14 +3,14 @@
   "id" : "hl7.fhir.fr.preadmission",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name=\"hl7.fhir.fr.preadmission\"> </a><a name=\"hchl7.fhir.fr.preadmission\"> </a><a name=\"hl7.fhir.fr.preadmission-fr-FR\"> </a><h2>PREADMISSIONFR</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name=\"hl7.fhir.fr.preadmission\"> </a><a name=\"hchl7.fhir.fr.preadmission\"> </a><a name=\"hl7.fhir.fr.preadmission-fr-FR\"> </a><h2>PREADMISSIONFR</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>"
   },
-  "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ImplementationGuide/hl7.fhir.fr.preadmission",
+  "url" : "http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission",
   "version" : "0.1.0",
   "name" : "PREADMISSIONFR",
   "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
   "status" : "draft",
-  "date" : "2025-04-28T10:41:02+00:00",
+  "date" : "2025-05-05T08:51:40+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -45,7 +45,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.2.0"
+    "version" : "6.3.0"
   },
   {
     "id" : "hl7ext",
@@ -181,7 +181,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "history.html"
+        "valueString" : "http://hl7.fr/fhir/fr/preadmission/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -471,7 +471,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "history.html"
+        "valueString" : "http://hl7.fr/fhir/fr/preadmission/history.html"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -669,18 +669,6 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "CodeSystem/encounter-class-code-system"
-      },
-      "name" : "Code System du type de venue",
-      "description" : "Types de venue utilisés pour les préadmissions en France.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
         "reference" : "CodeSystem/preadmission-status-code-system"
       },
       "name" : "CodeSystem des statuts de la préadmission",
@@ -693,9 +681,31 @@
         "valueString" : "Consent"
       }],
       "reference" : {
-        "reference" : "Consent/consent-dmp"
+        "reference" : "Consent/consent-alimentation-dmp"
       },
-      "name" : "consent-dmp",
+      "name" : "consent-alimentation-dmp",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Consent"
+      }],
+      "reference" : {
+        "reference" : "Consent/consent-consultation-dmp"
+      },
+      "name" : "consent-consultation-dmp",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Consent"
+      }],
+      "reference" : {
+        "reference" : "Consent/consent-rgpd"
+      },
+      "name" : "consent-rgpd",
       "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
     },
     {
@@ -704,7 +714,7 @@
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/preadmission-consent-fr-exntension"
+        "reference" : "StructureDefinition/preadmission-consent-fr-extension"
       },
       "name" : "Consentement lié au rendez-vous",
       "description" : "Référence vers un ou plusieurs consentements donnés dans le cadre de la préadmission.",
@@ -804,6 +814,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/statut-preadmission-fr"
+      },
+      "name" : "Extension Statut Pré-admission",
+      "description" : "Extension transportant les statuts spécifiques de la pré-admission.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -874,18 +896,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"
-      },
-      "name" : "PreadmissionStatutFr",
-      "description" : "Statut spécifique de la pré-admission.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
@@ -944,13 +954,13 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "CodeSystem/dmp-alimentation-consent-status"
+        "reference" : "ValueSet/consent-information-status"
       },
-      "name" : "Statut de consentement - alimentation du DMP",
-      "description" : "Valeurs possibles pour le consentement à l’alimentation du DMP.",
+      "name" : "Statut d'information et de consentement",
+      "description" : "Statut du patient concernant l'information et le consentement, incluant les cas d'opposition ou d'absence de recueil.",
       "exampleBoolean" : false
     },
     {
@@ -959,10 +969,22 @@
         "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "CodeSystem/dmp-consultation-consent-status"
+        "reference" : "CodeSystem/valeurs-consent-cs"
       },
-      "name" : "Statut de consentement - consultation du DMP",
-      "description" : "Valeurs possibles pour le consentement à la consultation du DMP (Mon Espace Santé).",
+      "name" : "Statuts de consentements",
+      "description" : "Valeurs possibles pour les consentements",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/type-venue-encounter"
+      },
+      "name" : "Type de venue Encounter",
+      "description" : "Les différents types d'admission (hospitalisation, consultation, etc.)",
       "exampleBoolean" : false
     },
     {
@@ -987,40 +1009,6 @@
       },
       "name" : "Types de documents - ValueSet",
       "description" : "Liste des types de documents autorisés pour la préadmission",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/dmp-feed-consent-status-vs"
-      },
-      "name" : "Valeurs de statut pour alimentation du DMP",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/dmp-access-consent-status-vs"
-      },
-      "name" : "Valeurs de statut pour consultation du DMP",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/type-venue-encounter-vs"
-      },
-      "name" : "ValueSet des classes d'Encounter pour la préadmission",
-      "description" : "Restreint les classes d'Encounter aux valeurs NONAC, SS et VR",
       "exampleBoolean" : false
     },
     {

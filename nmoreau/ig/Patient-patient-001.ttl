@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Patient/patient-001> a fhir:Patient ;
+<http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> a fhir:Patient ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "patient-001"] ; # 
   fhir:meta [
@@ -24,13 +24,6 @@
      fhir:value [ fhir:v "123456789012345" ]
   ] ) ; # 
   fhir:name ( [
-     fhir:extension ( [
-       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/birth-list-given-name"^^xsd:anyURI ] ;
-       fhir:value [
-         a fhir:string ;
-         fhir:v "Jean"
-       ]
-     ] ) ;
      fhir:use [ fhir:v "official" ] ;
      fhir:family [ fhir:v "Dupont" ] ;
      fhir:given ( [ fhir:v "Jean" ] )

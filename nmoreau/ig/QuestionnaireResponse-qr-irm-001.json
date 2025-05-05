@@ -5,10 +5,11 @@
     "status" : "generated",
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Questionnaire posé lors de la prise de rendez-vous pour une IRM.</p></div>"
   },
-  "questionnaire" : "Questionnaire/questionnaire-irm",
+  "questionnaire" : "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-irm",
   "status" : "completed",
   "subject" : {
-    "reference" : "Patient/patient-001"
+    "reference" : "Patient/patient-001",
+    "display" : "Jean Dupont"
   },
   "authored" : "2025-04-22T11:00:00+01:00",
   "item" : [{

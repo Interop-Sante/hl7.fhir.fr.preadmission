@@ -23,10 +23,12 @@
   </type>
   <subscriber>
     <reference value="Patient/patient-001"/>
+    <display value="Jean Dupont"/>
   </subscriber>
   <subscriberId value="123456789012345"/>
   <beneficiary>
     <reference value="Patient/patient-001"/>
+    <display value="Jean Dupont"/>
   </beneficiary>
   <period>
     <start value="2025-01-01T00:00:00+01:00"/>

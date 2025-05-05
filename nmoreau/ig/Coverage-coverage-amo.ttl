@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Coverage/coverage-amo> a fhir:Coverage ;
+<http://hl7.fr/fhir/fr/preadmission/Coverage/coverage-amo> a fhir:Coverage ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "coverage-amo"] ; # 
   fhir:meta [
@@ -33,13 +33,15 @@
      ] )
   ] ; # 
   fhir:subscriber [
-     fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Patient/patient-001> ;
-     fhir:reference [ fhir:v "Patient/patient-001" ]
+     fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
+     fhir:reference [ fhir:v "Patient/patient-001" ] ;
+     fhir:display [ fhir:v "Jean Dupont" ]
   ] ; # 
   fhir:subscriberId [ fhir:v "123456789012345"] ; # 
   fhir:beneficiary [
-     fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Patient/patient-001> ;
-     fhir:reference [ fhir:v "Patient/patient-001" ]
+     fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
+     fhir:reference [ fhir:v "Patient/patient-001" ] ;
+     fhir:display [ fhir:v "Jean Dupont" ]
   ] ; # 
   fhir:period [
      fhir:start [ fhir:v "2025-01-01T00:00:00+01:00"^^xsd:dateTime ] ;

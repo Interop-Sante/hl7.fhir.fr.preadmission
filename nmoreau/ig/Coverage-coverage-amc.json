@@ -10,12 +10,12 @@
   },
   "extension" : [{
     "extension" : [{
-      "url" : "nomAMC",
-      "valueString" : "Mutuelle Santé Plus"
-    },
-    {
       "url" : "numeroAMC",
       "valueString" : "987654321"
+    },
+    {
+      "url" : "nomAMC",
+      "valueString" : "Mutuelle Santé Plus"
     },
     {
       "url" : "codeConvention",
@@ -25,7 +25,7 @@
       "url" : "codeCSR",
       "valueString" : "67890"
     }],
-    "url" : "http://fhir_interop.happytal.com/fhir/StructureDefinition/FrCoverageAMCExtended"
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended"
   }],
   "identifier" : [{
     "use" : "official",
@@ -41,11 +41,13 @@
     }]
   },
   "subscriber" : {
-    "reference" : "Patient/patient-001"
+    "reference" : "Patient/patient-001",
+    "display" : "Jean Dupont"
   },
   "subscriberId" : "AMC-987654321",
   "beneficiary" : {
-    "reference" : "Patient/patient-001"
+    "reference" : "Patient/patient-001",
+    "display" : "Jean Dupont"
   },
   "period" : {
     "start" : "2025-01-01T00:00:00+01:00",

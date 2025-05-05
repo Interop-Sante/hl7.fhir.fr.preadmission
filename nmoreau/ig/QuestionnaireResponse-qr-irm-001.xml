@@ -5,10 +5,11 @@
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Questionnaire posé lors de la prise de rendez-vous pour une IRM.</p></div>
   </text>
-  <questionnaire value="Questionnaire/questionnaire-irm"/>
+  <questionnaire value="http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-irm"/>
   <status value="completed"/>
   <subject>
     <reference value="Patient/patient-001"/>
+    <display value="Jean Dupont"/>
   </subject>
   <authored value="2025-04-22T11:00:00+01:00"/>
   <item>

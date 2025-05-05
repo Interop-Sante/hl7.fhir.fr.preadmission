@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/ValueSet/preadmission-status-value-set> a fhir:ValueSet ;
+<http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set> a fhir:ValueSet ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "preadmission-status-value-set"] ; # 
   fhir:text [
@@ -19,7 +19,7 @@
   fhir:title [ fhir:v "ValueSet des statuts de préadmission"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2025-04-28T10:41:02+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-05-05T08:51:40+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/QuestionnaireResponse/qr-irm-001> a fhir:QuestionnaireResponse ;
+<http://hl7.fr/fhir/fr/preadmission/QuestionnaireResponse/qr-irm-001> a fhir:QuestionnaireResponse ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "qr-irm-001"] ; # 
   fhir:text [
@@ -14,13 +14,14 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Questionnaire posé lors de la prise de rendez-vous pour une IRM.</p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:questionnaire [
-     fhir:v "Questionnaire/questionnaire-irm"^^xsd:anyURI ;
-     fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Questionnaire/questionnaire-irm>
+     fhir:v "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-irm"^^xsd:anyURI ;
+     fhir:link <http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-irm>
   ] ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:subject [
-     fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Patient/patient-001> ;
-     fhir:reference [ fhir:v "Patient/patient-001" ]
+     fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
+     fhir:reference [ fhir:v "Patient/patient-001" ] ;
+     fhir:display [ fhir:v "Jean Dupont" ]
   ] ; # 
   fhir:authored [ fhir:v "2025-04-22T11:00:00+01:00"^^xsd:dateTime] ; # 
   fhir:item ( [

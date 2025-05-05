@@ -1,19 +1,19 @@
 {
-  "url" : "https://github.com/Interop-Sante/hl7.fhir.fr.preadmission",
+  "url" : "http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission",
   "name" : "PREADMISSIONFR",
   "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
   "description" : null,
   "status" : "draft",
   "package-id" : "hl7.fhir.fr.preadmission",
   "ig-ver" : "0.1.0",
-  "date" : "Mon, 28 Apr, 2025 10:41:39 +0000",
-  "dateISO8601" : "2025-04-28T10:41:39+00:00",
-  "errs" : 95,
-  "warnings" : 71,
-  "hints" : 21,
+  "date" : "Mon, 05 May, 2025 08:52:21 +0000",
+  "dateISO8601" : "2025-05-05T08:52:21+00:00",
+  "errs" : 26,
+  "warnings" : 62,
+  "hints" : 13,
   "suppressed-hints" : 0,
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1799735336
+  "maxMemory" : 1806107832
 }

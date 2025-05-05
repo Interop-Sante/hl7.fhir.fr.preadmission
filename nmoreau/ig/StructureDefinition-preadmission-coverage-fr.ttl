@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-coverage-fr> a fhir:StructureDefinition ;
+<http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr> a fhir:StructureDefinition ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "preadmission-coverage-fr"] ; # 
   fhir:text [
@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PreadmissionCoverageFr"] ; # 
   fhir:title [ fhir:v "Profil Coverage pour la préadmission FR"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-28T10:41:02+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-05-05T08:51:40+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

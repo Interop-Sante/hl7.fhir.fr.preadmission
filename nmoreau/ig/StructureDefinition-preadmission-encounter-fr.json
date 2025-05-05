@@ -10,7 +10,7 @@
   "name" : "PreadmissionEncounterFr",
   "title" : "Fr Preadmission Encounter Profile",
   "status" : "draft",
-  "date" : "2025-04-28T10:41:02+00:00",
+  "date" : "2025-05-05T08:51:40+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -769,8 +769,8 @@
       "id" : "Encounter.extension:preadmissionStatus",
       "path" : "Encounter.extension",
       "sliceName" : "preadmissionStatus",
-      "short" : "Extension",
-      "definition" : "An Extension",
+      "short" : "Extension Statut Pré-admission",
+      "definition" : "Extension transportant les statuts spécifiques de la pré-admission.",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -780,7 +780,7 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -816,7 +816,7 @@
       },
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"]
       }],
       "constraint" : [{
         "key" : "ele-1",
@@ -2203,7 +2203,7 @@
       "isSummary" : true,
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"
+        "valueSet" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter"
       },
       "mapping" : [{
         "identity" : "v2",
@@ -4819,7 +4819,7 @@
       "max" : "1",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr"]
       }]
     },
     {
@@ -4830,7 +4830,7 @@
       "max" : "*",
       "type" : [{
         "code" : "Extension",
-        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"]
+        "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"]
       }]
     },
     {
@@ -4877,7 +4877,7 @@
       "path" : "Encounter.class.code",
       "binding" : {
         "strength" : "required",
-        "valueSet" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"
+        "valueSet" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter"
       }
     },
     {

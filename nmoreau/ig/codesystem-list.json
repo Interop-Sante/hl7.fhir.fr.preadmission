@@ -1,36 +1,12 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "AlimentationDMPConsentStatus",
-      "title" : "Statut de consentement - alimentation du DMP",
-      "description" : "Valeurs possibles pour le consentement à l’alimentation du DMP."
-    },
-    {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "ConsultationDMPConsentStatus",
-      "title" : "Statut de consentement - consultation du DMP",
-      "description" : "Valeurs possibles pour le consentement à la consultation du DMP (Mon Espace Santé)."
-    },
-    {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionDocumentTypeCodeSystem",
       "title" : "Code System des types de documents pour la préadmission",
       "description" : "Code System listant les types de documents transmis lors de la préadmission hospitalière."
-    },
-    {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/encounter-class-code-system",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "EncounterClassCodeSystem",
-      "title" : "Code System du type de venue",
-      "description" : "Types de venue utilisés pour les préadmissions en France."
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
@@ -47,6 +23,14 @@
       "name" : "PreadmissionStatusCodeSystem",
       "title" : "CodeSystem des statuts de la préadmission",
       "description" : "CodeSystem pour les statuts de la préadmission"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ValeursConsentementCodeSystem",
+      "title" : "Statuts de consentements",
+      "description" : "Valeurs possibles pour les consentements"
     }
   ]
 }

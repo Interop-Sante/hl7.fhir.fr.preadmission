@@ -195,7 +195,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.fr/fhir/fr/preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Artifacts Summary</h2>
   
   
@@ -288,8 +288,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-preadmission-consent-fr-exntension.html"
-                  title="StructureDefinition/preadmission-consent-fr-exntension">Consentement lié au rendez-vous</a>
+               <a href="StructureDefinition-preadmission-consent-fr-extension.html"
+                  title="StructureDefinition/preadmission-consent-fr-extension">Consentement lié au rendez-vous</a>
             </td>
             <td>
 <p>Référence vers un ou plusieurs consentements donnés dans le cadre de la préadmission.</p>
@@ -324,11 +324,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-hl7.fhir.fr.preadmission.statut-preadmission.html"
-                  title="StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission">PreadmissionStatutFr</a>
+               <a href="StructureDefinition-statut-preadmission-fr.html"
+                  title="StructureDefinition/statut-preadmission-fr">Extension Statut Pré-admission</a>
             </td>
             <td>
-<p>Statut spécifique de la pré-admission.</p>
+<p>Extension transportant les statuts spécifiques de la pré-admission.</p>
 </td>
          </tr>
          <tr>
@@ -359,38 +359,29 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="ValueSet-consent-information-status.html"
+                  title="ValueSet/consent-information-status">Statut d'information et de consentement</a>
+            </td>
+            <td>
+<p>Statut du patient concernant l’information et le consentement, incluant les cas d’opposition ou d’absence de recueil.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-type-venue-encounter.html"
+                  title="ValueSet/type-venue-encounter">Type de venue Encounter</a>
+            </td>
+            <td>
+<p>Les différents types d’admission (hospitalisation, consultation, etc.)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="ValueSet-preadmission-document-type-valueset.html"
                   title="ValueSet/preadmission-document-type-valueset">Types de documents - ValueSet</a>
             </td>
             <td>
 <p>Liste des types de documents autorisés pour la préadmission</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-dmp-feed-consent-status-vs.html"
-                  title="ValueSet/dmp-feed-consent-status-vs">Valeurs de statut pour alimentation du DMP</a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-dmp-access-consent-status-vs.html"
-                  title="ValueSet/dmp-access-consent-status-vs">Valeurs de statut pour consultation du DMP</a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-type-venue-encounter-vs.html"
-                  title="ValueSet/type-venue-encounter-vs">ValueSet des classes d'Encounter pour la préadmission</a>
-            </td>
-            <td>
-<p>Restreint les classes d’Encounter aux valeurs NONAC, SS et VR</p>
 </td>
          </tr>
          <tr>
@@ -448,15 +439,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-encounter-class-code-system.html"
-                  title="CodeSystem/encounter-class-code-system">Code System du type de venue</a>
-            </td>
-            <td>
-<p>Types de venue utilisés pour les préadmissions en France.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="CodeSystem-preadmission-status-code-system.html"
                   title="CodeSystem/preadmission-status-code-system">CodeSystem des statuts de la préadmission</a>
             </td>
@@ -466,20 +448,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="CodeSystem-dmp-alimentation-consent-status.html"
-                  title="CodeSystem/dmp-alimentation-consent-status">Statut de consentement - alimentation du DMP</a>
+               <a href="CodeSystem-valeurs-consent-cs.html"
+                  title="CodeSystem/valeurs-consent-cs">Statuts de consentements</a>
             </td>
             <td>
-<p>Valeurs possibles pour le consentement à l’alimentation du DMP.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="CodeSystem-dmp-consultation-consent-status.html"
-                  title="CodeSystem/dmp-consultation-consent-status">Statut de consentement - consultation du DMP</a>
-            </td>
-            <td>
-<p>Valeurs possibles pour le consentement à la consultation du DMP (Mon Espace Santé).</p>
+<p>Valeurs possibles pour les consentements</p>
 </td>
          </tr>
          <tr>
@@ -512,7 +485,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="Consent-consent-dmp.html" title="Consent/consent-dmp">consent-dmp</a>
+               <a href="Consent-consent-alimentation-dmp.html"
+                  title="Consent/consent-alimentation-dmp">consent-alimentation-dmp</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Consent-consent-consultation-dmp.html"
+                  title="Consent/consent-consultation-dmp">consent-consultation-dmp</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Consent-consent-rgpd.html" title="Consent/consent-rgpd">consent-rgpd</a>
             </td>
          </tr>
          <tr>
@@ -602,7 +587,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Apr 28, 2025 10:41+0000">2025-04-28</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 5, 2025 08:52+0000">2025-05-05</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -611,7 +596,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                 
           Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
-                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">Historique des versions </a>
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.fr/fhir/fr/preadmission/history.html">Historique des versions </a>
                  
                 
 

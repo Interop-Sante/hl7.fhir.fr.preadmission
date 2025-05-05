@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/DocumentReference/documentreference-cni-recto> a fhir:DocumentReference ;
+<http://hl7.fr/fhir/fr/preadmission/DocumentReference/documentreference-cni-recto> a fhir:DocumentReference ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "documentreference-cni-recto"] ; # 
   fhir:meta [
@@ -23,13 +23,14 @@
   fhir:type [
      fhir:coding ( [
        fhir:system [ fhir:v "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "CNI" ] ;
-       fhir:display [ fhir:v "Carte Nationale d'Identité - Recto" ]
+       fhir:code [ fhir:v "CN_RECTO" ] ;
+       fhir:display [ fhir:v "Recto Carte d’identité" ]
      ] )
   ] ; # 
   fhir:subject [
-     fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Patient/patient-001> ;
-     fhir:reference [ fhir:v "Patient/patient-001" ]
+     fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
+     fhir:reference [ fhir:v "Patient/patient-001" ] ;
+     fhir:display [ fhir:v "Jean Dupont" ]
   ] ; # 
   fhir:date [ fhir:v "2025-05-01T10:00:00+01:00"^^xsd:dateTime] ; # 
   fhir:content ( [
@@ -42,8 +43,9 @@
   ] ) ; # 
   fhir:context [
      fhir:encounter ( [
-       fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Encounter/encounter-irm-refused> ;
-       fhir:reference [ fhir:v "Encounter/encounter-irm-refused" ]
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/Encounter/encounter-irm-refused> ;
+       fhir:reference [ fhir:v "Encounter/encounter-irm-refused" ] ;
+       fhir:display [ fhir:v "Consultation IRM refusée" ]
      ] )
   ] . # 
 

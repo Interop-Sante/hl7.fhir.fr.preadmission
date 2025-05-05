@@ -12,12 +12,13 @@
   "type" : {
     "coding" : [{
       "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
-      "code" : "CNI",
-      "display" : "Carte Nationale d'Identité - Recto"
+      "code" : "CN_RECTO",
+      "display" : "Recto Carte d’identité"
     }]
   },
   "subject" : {
-    "reference" : "Patient/patient-001"
+    "reference" : "Patient/patient-001",
+    "display" : "Jean Dupont"
   },
   "date" : "2025-05-01T10:00:00+01:00",
   "content" : [{
@@ -30,7 +31,8 @@
   }],
   "context" : {
     "encounter" : [{
-      "reference" : "Encounter/encounter-irm-refused"
+      "reference" : "Encounter/encounter-irm-refused",
+      "display" : "Consultation IRM refusée"
     }]
   }
 }

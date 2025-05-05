@@ -7,7 +7,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Appointment/appt-irm-001> a fhir:Appointment ;
+<http://hl7.fr/fhir/fr/preadmission/Appointment/appt-irm-001> a fhir:Appointment ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "appt-irm-001"] ; # 
   fhir:meta [
@@ -21,11 +21,26 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Rendez vous pour une IRM cérébrale - préadmission.</p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
-     fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context"^^xsd:anyURI ] ;
+     fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"^^xsd:anyURI ] ;
      fhir:value [
        a fhir:Reference ;
-       fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/QuestionnaireResponse/qr-irm-001> ;
-       fhir:reference [ fhir:v "QuestionnaireResponse/qr-irm-001" ]
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consent-rgpd> ;
+       fhir:reference [ fhir:v "Consent/consent-rgpd" ] ;
+       fhir:display [ fhir:v "Questionnaire préadmission IRM" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consent-consultation-dmp> ;
+       fhir:reference [ fhir:v "Consent/consent-consultation-dmp" ]
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Reference ;
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consent-alimentation-dmp> ;
+       fhir:reference [ fhir:v "Consent/consent-alimentation-dmp" ]
      ]
   ] ) ; # 
   fhir:status [ fhir:v "booked"] ; # 
@@ -41,13 +56,14 @@
   fhir:end [ fhir:v "2025-05-15T11:00:00+01:00"^^xsd:dateTime] ; # 
   fhir:participant ( [
      fhir:actor [
-       fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Patient/patient-001> ;
-       fhir:reference [ fhir:v "Patient/patient-001" ]
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
+       fhir:reference [ fhir:v "Patient/patient-001" ] ;
+       fhir:display [ fhir:v "Jean Dupont" ]
      ] ;
      fhir:status [ fhir:v "accepted" ]
   ] [
      fhir:actor [
-       fhir:link <https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/Practitioner/practitioner-irm> ;
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/Practitioner/practitioner-irm> ;
        fhir:reference [ fhir:v "Practitioner/practitioner-irm" ]
      ] ;
      fhir:status [ fhir:v "accepted" ]

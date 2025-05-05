@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/StructureDefinition/preadmission-encounter-fr> a fhir:StructureDefinition ;
+<http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr> a fhir:StructureDefinition ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "preadmission-encounter-fr"] ; # 
   fhir:text [
@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PreadmissionEncounterFr"] ; # 
   fhir:title [ fhir:v "Fr Preadmission Encounter Profile"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-04-28T10:41:02+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-05-05T08:51:40+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -871,8 +871,8 @@
        fhir:id [ fhir:v "Encounter.extension:preadmissionStatus" ] ;
        fhir:path [ fhir:v "Encounter.extension" ] ;
        fhir:sliceName [ fhir:v "preadmissionStatus" ] ;
-       fhir:short [ fhir:v "Extension" ] ;
-       fhir:definition [ fhir:v "An Extension" ] ;
+       fhir:short [ fhir:v "Extension Statut Pré-admission" ] ;
+       fhir:definition [ fhir:v "Extension transportant les statuts spécifiques de la pré-admission." ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -883,8 +883,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -926,8 +926,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -2420,8 +2420,8 @@
        fhir:binding [
          fhir:strength [ fhir:v "required" ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter>
          ]
        ] ;
        fhir:mapping ( [
@@ -5273,8 +5273,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/hl7.fhir.fr.preadmission.statut-preadmission>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr>
          ] )
        ] )
      ] [
@@ -5286,8 +5286,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-exntension>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension>
          ] )
        ] )
      ] [
@@ -5340,8 +5340,8 @@
        fhir:binding [
          fhir:strength [ fhir:v "required" ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"^^xsd:anyURI ;
-           fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs>
+           fhir:v "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter"^^xsd:anyURI ;
+           fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter>
          ]
        ]
      ] [

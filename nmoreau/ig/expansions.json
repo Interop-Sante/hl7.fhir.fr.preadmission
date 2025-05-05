@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "ff6e07be-ca51-4e2a-8683-90350d4901a0",
+  "id" : "ef07dca6-1552-4ef7-b017-9066a02c0ee8",
   "meta" : {
-    "lastUpdated" : "2025-04-28T10:41:39.170+00:00"
+    "lastUpdated" : "2025-05-05T08:52:21.534+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "title" : "ValueSet pour la catégorie de consentement",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-04-28T10:41:02+00:00",
+      "date" : "2025-05-05T08:51:40+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -28,8 +28,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:b50c317a-f435-445a-86d6-dbbbc3c1a31a",
-        "timestamp" : "2025-04-28T10:42:10+00:00",
+        "identifier" : "urn:uuid:2edb04b8-7d6d-4060-a792-c54bf20650b2",
+        "timestamp" : "2025-05-05T08:52:47+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -72,20 +72,20 @@
     }
   },
   {
-    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-access-consent-status-vs",
+    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-information-status",
     "resource" : {
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-dmp-consultation-consent-status.html\">codesystem Statut de consentement - consultation du DMP v0.1.0 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 3 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status-NA\"> </a>\u00a0\u00a0<a href=\"CodeSystem-dmp-consultation-consent-status.html#dmp-consultation-consent-status-NA\">NA</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status-IC\"> </a>\u00a0\u00a0<a href=\"CodeSystem-dmp-consultation-consent-status.html#dmp-consultation-consent-status-IC\">IC</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status-INC\"> </a>\u00a0\u00a0<a href=\"CodeSystem-dmp-consultation-consent-status.html#dmp-consultation-consent-status-INC\">INC</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status</td><td/></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-valeurs-consent-cs.html\">codesystem Statuts de consentements v0.1.0 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 3 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs-NA\"> </a>\u00a0\u00a0<a href=\"CodeSystem-valeurs-consent-cs.html#valeurs-consent-cs-NA\">NA</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs-IC\"> </a>\u00a0\u00a0<a href=\"CodeSystem-valeurs-consent-cs.html#valeurs-consent-cs-IC\">IC</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs-INC\"> </a>\u00a0\u00a0<a href=\"CodeSystem-valeurs-consent-cs.html#valeurs-consent-cs-INC\">INC</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs</td><td/></tr></table></div>"
       },
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-access-consent-status-vs",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-information-status",
       "version" : "0.1.0",
-      "name" : "DmpConsultationConsentStatusVS",
-      "title" : "Valeurs de statut pour consultation du DMP",
+      "name" : "ConsentInformationStatusVS",
+      "title" : "Statut d'information et de consentement",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-04-28T10:41:02+00:00",
+      "date" : "2025-05-05T08:51:40+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -94,8 +94,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:4a85cb18-2aca-4677-9eb1-42dfaba0f5cc",
-        "timestamp" : "2025-04-28T10:42:10+00:00",
+        "identifier" : "urn:uuid:3d73079e-908d-4bf1-b308-07242a618ca2",
+        "timestamp" : "2025-05-05T08:52:47+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -116,81 +116,19 @@
         },
         {
           "name" : "used-codesystem",
-          "valueUri" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status|0.1.0"
+          "valueUri" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs|0.1.0"
         }],
         "contains" : [{
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs",
           "code" : "NA"
         },
         {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs",
           "code" : "IC"
         },
         {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs",
           "code" : "INC"
-        }]
-      }
-    }
-  },
-  {
-    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-feed-consent-status-vs",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-dmp-alimentation-consent-status.html\">codesystem Statut de consentement - alimentation du DMP v0.1.0 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 3 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status-NA\"> </a>\u00a0\u00a0<a href=\"CodeSystem-dmp-alimentation-consent-status.html#dmp-alimentation-consent-status-NA\">NA</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status-IO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-dmp-alimentation-consent-status.html#dmp-alimentation-consent-status-IO\">IO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status-INO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-dmp-alimentation-consent-status.html#dmp-alimentation-consent-status-INO\">INO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status</td><td/></tr></table></div>"
-      },
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/dmp-feed-consent-status-vs",
-      "version" : "0.1.0",
-      "name" : "DmpAlimentationConsentStatusVS",
-      "title" : "Valeurs de statut pour alimentation du DMP",
-      "status" : "draft",
-      "experimental" : true,
-      "date" : "2025-04-28T10:41:02+00:00",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:928773a4-4781-4d07-8181-9db9144728a1",
-        "timestamp" : "2025-04-28T10:42:10+00:00",
-        "total" : 3,
-        "offset" : 0,
-        "parameter" : [{
-          "name" : "displayLanguage",
-          "valueCode" : "fr-FR"
-        },
-        {
-          "name" : "count",
-          "valueInteger" : 1000
-        },
-        {
-          "name" : "offset",
-          "valueInteger" : 0
-        },
-        {
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "used-codesystem",
-          "valueUri" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status|0.1.0"
-        }],
-        "contains" : [{
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
-          "code" : "NA"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
-          "code" : "IO"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
-          "code" : "INO"
         }]
       }
     }
@@ -209,7 +147,7 @@
       "title" : "ValueSet des consentements du patient",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-04-28T10:41:02+00:00",
+      "date" : "2025-05-05T08:51:40+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -218,8 +156,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:1c748598-e58e-4b9d-9fb7-a67b89145852",
-        "timestamp" : "2025-04-28T10:42:10+00:00",
+        "identifier" : "urn:uuid:d9305361-01e3-4ba3-b86a-5f582fe2f36b",
+        "timestamp" : "2025-05-05T08:52:47+00:00",
         "total" : 4,
         "offset" : 0,
         "parameter" : [{
@@ -275,7 +213,7 @@
       "title" : "Types de documents - ValueSet",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-04-28T10:41:02+00:00",
+      "date" : "2025-05-05T08:51:40+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -284,8 +222,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:82542742-562e-4a81-be7f-25df4c71fb16",
-        "timestamp" : "2025-04-28T10:42:11+00:00",
+        "identifier" : "urn:uuid:56346ab7-75c5-49ab-83cc-d3aee2c89ba4",
+        "timestamp" : "2025-05-05T08:52:47+00:00",
         "total" : 19,
         "offset" : 0,
         "parameter" : [{
@@ -405,7 +343,7 @@
       "title" : "ValueSet des statuts de préadmission",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-04-28T10:41:02+00:00",
+      "date" : "2025-05-05T08:51:40+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -414,8 +352,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:c5096478-2e7b-4967-b808-e07c51be058f",
-        "timestamp" : "2025-04-28T10:42:11+00:00",
+        "identifier" : "urn:uuid:afc1813c-3673-4026-a360-31bab1a6d455",
+        "timestamp" : "2025-05-05T08:52:47+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -471,7 +409,7 @@
       "resourceType" : "ValueSet",
       "text" : {
         "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion from tx.fhir.org based on <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html\">codesystem ActCode v9.0.0 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr></table></div>"
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html\">codesystem ActCode v9.0.0 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 2 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td><td><b>Définition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-ActCode-PUBLICPOL\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-PUBLICPOL\">PUBLICPOL</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td><td/><td><div><p>Insurance policy funded by a public health system such as a provincial or national health plan. Examples include BC MSP (British Columbia Medical Services Plan) OHIP (Ontario Health Insurance Plan), NHS (National Health Service).</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-ActCode-EHCPOL\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-EHCPOL\">EHCPOL</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td><td/><td><div><p>Private insurance policy that provides coverage in addition to other policies (e.g. in addition to a Public Healthcare insurance policy).</p>\n</div></td></tr></table></div>"
       },
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
       "version" : "0.1.0",
@@ -479,7 +417,7 @@
       "title" : "ValueSet des types de couverture pour la préadmission",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-04-28T10:41:02+00:00",
+      "date" : "2025-05-05T08:51:40+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -488,95 +426,37 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:c5bab368-f8ec-48fd-bf5f-9600f75980a7",
-        "timestamp" : "2025-04-28T10:42:12.353Z",
-        "total" : 0,
+        "identifier" : "urn:uuid:74381d8f-8048-4194-997b-c151373ff9cb",
+        "timestamp" : "2025-05-05T08:52:47+00:00",
+        "total" : 2,
         "offset" : 0,
         "parameter" : [{
-          "name" : "limitedExpansion",
-          "valueBoolean" : true
-        },
-        {
           "name" : "displayLanguage",
           "valueCode" : "fr-FR"
-        },
-        {
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "offset",
-          "valueInteger" : 0
         },
         {
           "name" : "count",
           "valueInteger" : 1000
         },
         {
-          "name" : "used-codesystem",
-          "valueUri" : "http://terminology.hl7.org/CodeSystem/v3-ActCode|9.0.0"
-        },
-        {
-          "name" : "version",
-          "valueUri" : "http://terminology.hl7.org/CodeSystem/v3-ActCode|9.0.0"
-        }]
-      }
-    }
-  },
-  {
-    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>ValueSet </b></p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion from tx.fhir.org based on <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html\">codesystem ActCode v9.0.0 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 0 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr></table></div>"
-      },
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
-      "version" : "0.1.0",
-      "name" : "TypeVenueEncounterValueSet",
-      "title" : "ValueSet des classes d'Encounter pour la préadmission",
-      "status" : "draft",
-      "experimental" : true,
-      "date" : "2025-04-28T10:41:02+00:00",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:080f994a-5c7f-48c6-a6cf-e94f00c34af1",
-        "timestamp" : "2025-04-28T10:42:13.729Z",
-        "total" : 0,
-        "offset" : 0,
-        "parameter" : [{
-          "name" : "limitedExpansion",
-          "valueBoolean" : true
-        },
-        {
-          "name" : "displayLanguage",
-          "valueCode" : "fr-FR"
+          "name" : "offset",
+          "valueInteger" : 0
         },
         {
           "name" : "excludeNested",
           "valueBoolean" : false
         },
         {
-          "name" : "offset",
-          "valueInteger" : 0
-        },
-        {
-          "name" : "count",
-          "valueInteger" : 1000
-        },
-        {
           "name" : "used-codesystem",
           "valueUri" : "http://terminology.hl7.org/CodeSystem/v3-ActCode|9.0.0"
+        }],
+        "contains" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "PUBLICPOL"
         },
         {
-          "name" : "version",
-          "valueUri" : "http://terminology.hl7.org/CodeSystem/v3-ActCode|9.0.0"
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "EHCPOL"
         }]
       }
     }

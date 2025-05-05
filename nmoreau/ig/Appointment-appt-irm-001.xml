@@ -8,9 +8,20 @@
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Rendez vous pour une IRM cérébrale - préadmission.</p></div>
   </text>
-  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context">
+  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension">
     <valueReference>
-      <reference value="QuestionnaireResponse/qr-irm-001"/>
+      <reference value="Consent/consent-rgpd"/>
+      <display value="Questionnaire préadmission IRM"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension">
+    <valueReference>
+      <reference value="Consent/consent-consultation-dmp"/>
+    </valueReference>
+  </extension>
+  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension">
+    <valueReference>
+      <reference value="Consent/consent-alimentation-dmp"/>
     </valueReference>
   </extension>
   <status value="booked"/>
@@ -26,6 +37,7 @@
   <participant>
     <actor>
       <reference value="Patient/patient-001"/>
+      <display value="Jean Dupont"/>
     </actor>
     <status value="accepted"/>
   </participant>

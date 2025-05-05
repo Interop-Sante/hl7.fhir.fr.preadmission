@@ -11,7 +11,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for PREADMISSIONFR</h1>
- <p>Generated Mon Apr 28 10:42:36 UTC 2025, FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.1.0 (canonical = <a href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission">https://github.com/Interop-Sante/hl7.fhir.fr.preadmission</a> (<a href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/history.html">history</a>))</p>
+ <p>Generated Mon May 05 08:53:11 UTC 2025, FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.1.0 (canonical = <a href="http://hl7.fr/fhir/fr/preadmission">http://hl7.fr/fhir/fr/preadmission</a> (<a href="http://hl7.fr/fhir/fr/preadmission/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -61,6 +61,20 @@
     <td>auth = , candidates=</td>
   </tr>
   <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td></td>
+    <td>http://terminology.hl7.org/ValueSet/v3-ActEncounterCode</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
+    <td>System not handled by any servers. Using primary server</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-inc-0</td>
+    <td>http://terminology.hl7.org/ValueSet/v3-ActEncounterCode</td>
+    <td>auth = , candidates=</td>
+  </tr>
+  <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td>http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1</td>
@@ -70,7 +84,7 @@
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>PreAdmissionStatusValueSet</td>
+    <td>PreadmissionDocumentTypeFrValueSet</td>
     <td>http://loinc.org</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|http://tx.fhir.ch/r4</td>
   </tr>
@@ -82,18 +96,11 @@
     <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://apps.health.belgium.be/ontoserver/fhir|http://tx.hl7europe.eu/r4|http://tx.fhir.ch/r4</td>
   </tr>
   <tr>
-    <td>System not handled by any servers. Using primary server</td>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
     <td>null</td>
-    <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category</td>
-    <td>auth = , candidates=</td>
-  </tr>
-  <tr>
-    <td>Fallback: primary server</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>null</td>
-    <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category</td>
-    <td>auth = , candidates=</td>
+    <td>http://snomed.info/sct</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|https://smt.esante.gouv.fr/fhir|https://apps.health.belgium.be/ontoserver/fhir|http://tx.hl7europe.eu/r4|http://tx.fhir.ch/r4</td>
   </tr>
   <tr>
     <td>System not handled by any servers. Using primary server</td>
@@ -108,32 +115,11 @@
     <td>null</td>
     <td>http://terminology.hl7.org/CodeSystem/coverage-type</td>
     <td>auth = , candidates=</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:9e73791d-8dcb-4972-bff8-e52d8f8660dd</td>
-    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
-    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|http://tx.fhir.ch/r4</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:98908e70-b064-4a7c-a586-513e07557f46</td>
-    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
-    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|http://tx.fhir.ch/r4</td>
-  </tr>
-  <tr>
-    <td>Found authoritative server http://tx.fhir.org/r4</td>
-    <td>http://tx.fhir.org/r4</td>
-    <td>http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs|0.1.0</td>
-    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
-    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|http://tx.fhir.ch/r4</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:3f1111b2-425e-4ce5-bb38-ea99deeb7369</td>
+    <td>urn:uuid:83e9784c-83ea-4a08-9bd4-c97b24f15cdb</td>
     <td>urn:ietf:bcp:13</td>
     <td>auth = , candidates=http://tx.fhir.org/r4|http://tx.hl7europe.eu/r4|http://tx.fhir.ch/r4</td>
   </tr>
@@ -159,25 +145,25 @@
     <td>auth = , candidates=</td>
   </tr>
   <tr>
-    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>System not handled by any servers. Using primary server</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>urn:uuid:d5a36ac7-6f02-4e38-a04e-45430f276325</td>
-    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
-    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|http://tx.fhir.ch/r4</td>
+    <td>http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter|0.1.0</td>
+    <td>http://terminology.hl7.org/ValueSet/v3-ActEncounterCode</td>
+    <td>auth = , candidates=</td>
   </tr>
   <tr>
-    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>System not handled by any servers. Using primary server</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs|0.1.0</td>
-    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
-    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|http://tx.fhir.ch/r4</td>
+    <td></td>
+    <td>http://terminology.hl7.org/ValueSet/v3-ActEncounterCode</td>
+    <td>auth = , candidates=</td>
   </tr>
   <tr>
-    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>System not handled by any servers. Using primary server</td>
     <td>http://tx.fhir.org/r4</td>
-    <td>http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs|0.1.0</td>
-    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
-    <td>auth = http://tx.fhir.org/r4, candidates=https://tx.ontoserver.csiro.au/fhir|https://terminologystandardsservice.ca/tx/fhir|http://tx.hl7europe.eu/r4|http://tx.fhir.ch/r4</td>
+    <td>http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter|0.1.0</td>
+    <td>http://terminology.hl7.org/ValueSet/v3-ActEncounterCode</td>
+    <td>auth = , candidates=</td>
   </tr>
   <tr>
     <td>Found candidate server http://tx.fhir.org/r4</td>
@@ -217,7 +203,7 @@
 </table>
 <h2>Primary Server: http://tx.fhir.org/r4</h2>
 <a href="http://tx.fhir.org/r4"></a>
-<p>Use Count: 32. Code Systems used: </p>
+<p>Use Count: 31. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -232,12 +218,6 @@
     <th>
       <b>Details</b>
     </th>
-  </tr>
-  <tr>
-    <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category</td>
-    <td>0</td>
-    <td>1</td>
-    <td></td>
   </tr>
   <tr>
     <td>http://hl7.org/fhir/fhir-types</td>
@@ -262,7 +242,7 @@
   <tr>
     <td>http://snomed.info/sct</td>
     <td>0</td>
-    <td>1</td>
+    <td>2</td>
     <td>
       <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED CT (all versions)</a>
     </td>
@@ -274,12 +254,10 @@
     <td></td>
   </tr>
   <tr>
-    <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
-    <td>2</td>
+    <td>http://terminology.hl7.org/ValueSet/v3-ActEncounterCode</td>
     <td>4</td>
-    <td>
-      <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html">ActCode</a>
-    </td>
+    <td>1</td>
+    <td></td>
   </tr>
   <tr>
     <td>http://unstats.un.org/unsd/methods/m49/m49.htm</td>
@@ -314,8 +292,8 @@
 <ul>
   <li>PreAdmissionStatusValueSet</li>
   <li>PreadmissionDocumentTypeFrValueSet</li>
-  <li>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/PreAdmissionStatusValueSet</li>
-  <li>https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/PreadmissionDocumentTypeFrValueSet</li>
+  <li>http://hl7.fr/fhir/fr/preadmission/PreAdmissionStatusValueSet</li>
+  <li>http://hl7.fr/fhir/fr/preadmission/PreadmissionDocumentTypeFrValueSet</li>
 </ul>
 </body>
 </html>

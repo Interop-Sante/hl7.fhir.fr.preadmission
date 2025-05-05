@@ -1,28 +1,6 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-alimentation-consent-status",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "AlimentationDMPConsentStatus",
-      "title" : "Statut de consentement - alimentation du DMP",
-      "description" : "Valeurs possibles pour le consentement à l’alimentation du DMP.",
-      "uses" : {
-      },
-      "ValueSet-dmp-feed-consent-status-vs.html" : "Valeurs de statut pour alimentation du DMP"
-    },
-    {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/dmp-consultation-consent-status",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "ConsultationDMPConsentStatus",
-      "title" : "Statut de consentement - consultation du DMP",
-      "description" : "Valeurs possibles pour le consentement à la consultation du DMP (Mon Espace Santé).",
-      "uses" : {
-      },
-      "ValueSet-dmp-access-consent-status-vs.html" : "Valeurs de statut pour consultation du DMP"
-    },
-    {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
       "version" : "0.1.0",
       "status" : "draft",
@@ -57,6 +35,17 @@
       "ValueSet-preadmission-status-value-set.html" : "ValueSet des statuts de préadmission"
     },
     {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ValeursConsentementCodeSystem",
+      "title" : "Statuts de consentements",
+      "description" : "Valeurs possibles pour les consentements",
+      "uses" : {
+      },
+      "ValueSet-consent-information-status.html" : "Statut d'information et de consentement"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
       "version" : "9.0.0",
       "status" : "active",
@@ -66,8 +55,7 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
-      "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission",
-      "ValueSet-type-venue-encounter-vs.html" : "ValueSet des classes d'Encounter pour la préadmission"
+      "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission"
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type",
