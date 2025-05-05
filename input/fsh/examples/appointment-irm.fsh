@@ -7,12 +7,24 @@ Usage: #example
 * status = #booked
 * start = "2025-05-15T10:30:00+01:00"
 * end = "2025-05-15T11:00:00+01:00"
-* participant[0].actor.reference = "Patient/patient-001"
+* participant[0].actor = Reference(patient-001) "Jean Dupont"
 * participant[0].status = #accepted
-* participant[1].actor.reference = "Practitioner/practitioner-irm"
+* participant[1].actor = Reference(practitioner-irm)
 * participant[1].status = #accepted
 * reasonCode[0].coding[0].system = "http://snomed.info/sct"
 * reasonCode[0].coding[0].code = #241541005
 * reasonCode[0].coding[0].display = "IRM cérébrale (procédure)"
-* extension[0].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context"
-* extension[0].valueReference.reference = "QuestionnaireResponse/qr-irm-001"
+
+
+// Extensions pour les questionnaires
+* extension[questionnaire].valueReference = Reference(qr-irm-001) "Questionnaire préadmission IRM"
+
+// Extensions pour les consentements
+* extension[+].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"
+* extension[=].valueReference = Reference(Consent/consent-rgpd)
+
+* extension[+].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"
+* extension[=].valueReference = Reference(Consent/consent-consultation-dmp)
+
+* extension[+].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"
+* extension[=].valueReference = Reference(Consent/consent-alimentation-dmp)

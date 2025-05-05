@@ -8,8 +8,8 @@ Usage: #example
 * type.coding[0].system = "http://terminology.hl7.org/CodeSystem/coverage-type"
 * type.coding[0].code = #PUBLICPOL
 * type.coding[0].display = "Assurance Maladie Obligatoire"
-* beneficiary.reference = "Patient/patient-001"
-* subscriber.reference = "Patient/patient-001"
+* beneficiary = Reference(patient-001) "Jean Dupont"
+* subscriber = Reference(patient-001) "Jean Dupont"
 * subscriberId = "123456789012345" // Numéro de sécurité sociale (NIR)
 * period.start = "2025-01-01T00:00:00+01:00"
 * period.end = "2025-12-31T23:59:59+01:00"

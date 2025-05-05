@@ -12,8 +12,7 @@ Usage: #example
 // Nom officiel du patient
 * name[officialName].family = "Dupont"
 * name[officialName].given[0] = "Jean"
-* name[officialName].extension[0].url = "http://hl7.org/fhir/StructureDefinition/birth-list-given-name"
-* name[officialName].extension[0].valueString = "Jean"
+
 
 // Sexe et date de naissance
 * gender = #male

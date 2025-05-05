@@ -5,8 +5,8 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Questionnaire posé lors de la prise de rendez-vous pour une IRM.</p></div>"
 * status = #completed
-* subject.reference = "Patient/patient-001"
-* questionnaire = "Questionnaire/questionnaire-irm"
+* subject = Reference(patient-001) "Jean Dupont"
+* questionnaire = "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-irm"
 * authored = "2025-04-22T11:00:00+01:00"
 * item[0].linkId = "implant"
 * item[0].answer[0].valueBoolean = true

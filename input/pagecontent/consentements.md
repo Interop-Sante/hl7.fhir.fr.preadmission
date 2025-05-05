@@ -25,13 +25,11 @@ Ce consentement est obligatoire et permet de recueillir l’accord du patient po
 
 ### **2. Consentement à l’accès et à l’alimentation du DMP**
 
-
-| Description                      | Type     |
-|----------------------------------|----------|
-| Opposition bris de glace         | Oui / Non |
-| Opposition centre régulation     | Oui / Non |
-| Date de recueil                  | Date      |
-
+| **Type de consentement**       | **Description**                                                                 | **Statuts possibles**               |
+|--------------------------------|---------------------------------------------------------------------------------|-------------------------------------|
+| Accès au DMP                   | Permet la consultation des données du DMP.                                      | Informé et consent / Informé et ne consent pas / Information non recueillie |
+| Alimentation du DMP            | Autorise l’ajout de documents dans le DMP.                                      | Informé et consent / Informé et ne consent pas / Information non recueillie |
+| Date de recueil                | Date à laquelle le consentement a été recueilli.                                | Date                                 |
 
 Ce consentement permet à l’établissement de santé d’accéder au Dossier Médical Partagé (DMP) du patient et d’y inscrire des documents relatifs à la préadmission. Il est modélisé à l’aide de deux sous-catégories distinctes :
 - **Accès au DMP** : Permet la consultation des données du DMP.
@@ -45,6 +43,15 @@ Ce consentement permet à l’établissement de santé d’accéder au Dossier M
 - **Ressource FHIR** : 
   - `Consent.category = "consultationDmp"` ou `Consent.category = "alimentationDmp"`
   - `Consent.policyRule = "FR-DMP-ACCESS"`
+
+#### Valeurs autorisées
+
+| **Code**     | **System**                    | **Libellé**                                      |
+|--------------|-------------------------------|--------------------------------------------------|
+| 225773000    | http://snomed.info/sct        | Informé et non opposé (consentement éclairé)     |
+| 311401005    | http://snomed.info/sct        | Informé et opposé (refusé)                       |
+| 261665006    | http://snomed.info/sct        | Information non recueillie (non demandé)         |
+
 
 ---
 
@@ -69,48 +76,13 @@ La ressource `Consent` est utilisée pour modéliser chaque consentement recueil
 - **Catégorie** : Définit le type de consentement (RGPD, DMP, transmission à tiers).
 - **Lien avec le patient** : Chaque consentement doit référencer une ressource `Patient` via `Consent.patient`.
 - **Règle applicable** : Spécifiée via `Consent.policyRule` pour indiquer le cadre réglementaire (par exemple, RGPD ou DMP).
-- **Extensions spécifiques** : Les consentements peuvent inclure des extensions pour des cas particuliers, comme l’opposition au "bris de glace" ou l’accès au centre de régulation.
+
 
 ---
 
-## Exemple d’utilisation
-
-Voici un exemple minimal de ressource `Consent` pour un consentement à l’accès au DMP :
-
-```json
-{
-  "resourceType": "Consent",
-  "status": "active",
-  "scope": {
-    "coding": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/consentscope",
-        "code": "patient-privacy"
-      }
-    ]
-  },
-  "category": [
-    {
-      "coding": [
-        {
-          "system": "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-category",
-          "code": "dmp-access",
-          "display": "Accès au DMP"
-        }
-      ]
-    }
-  ],
-  "patient": {
-    "reference": "Patient/1234"
-  },
-  "dateTime": "2025-04-22T10:00:00+01:00",
-  "policyRule": "FR-DMP-ACCESS"
-}
-```
-
 ## Liens avec les autres ressources
-- **Lien avec le patient** : Chaque consentement est directement lié à une ressource Patient.
-- **Lien avec la préadmission** : Les consentements peuvent être référencés dans la ressource Encounter associée à la préadmission.
+- **Lien avec le patient** : Chaque consentement est directement lié à une ressource `Patient`.
+- **Lien avec la préadmission** : Les consentements peuvent être référencés dans la ressource `Encounter` ou `Appointment` associée à la préadmission.
 
 ## Bonnes pratiques
 - **Traçabilité** : Tous les consentements doivent être horodatés et archivés pour garantir une traçabilité complète.

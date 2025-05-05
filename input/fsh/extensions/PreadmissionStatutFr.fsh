@@ -1,6 +1,9 @@
 Extension: PreadmissionStatutFr
-Id: hl7.fhir.fr.preadmission.statut-preadmission
-* ^description = "Statut spécifique de la pré-admission."
+Id: statut-preadmission-fr
+Title:     "Extension Statut Pré-admission"
+Description: "Extension transportant les statuts spécifiques de la pré-admission."
+
+* ^description = "Extension transportant les statuts spécifiques de la pré-admission."
 * ^context.type = #element
 * ^context.expression = "Encounter"
 

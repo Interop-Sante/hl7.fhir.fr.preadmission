@@ -12,7 +12,6 @@ contact:
         value: fhir@interopsante.org
         use: work
 status: draft
-url : https://github.com/Interop-Sante/hl7.fhir.fr.preadmission
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+

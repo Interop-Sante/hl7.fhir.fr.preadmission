@@ -8,5 +8,5 @@ Description: "Profil FHIR pour un rendez-vous de préadmission"
     PreadmissionAppointmentQuestionnaireResponseFr named questionnaire 0..* and
     PreadmissionConsentementsExtension named consentements 0..*
 
-* participant.actor only Reference(FRCorePatientProfile or FRCorePatientProfile)
+* participant.actor only Reference(FRCorePatientProfile or FRCorePractitionerProfile)
 

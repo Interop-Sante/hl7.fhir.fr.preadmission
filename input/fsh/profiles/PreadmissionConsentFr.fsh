@@ -20,6 +20,6 @@ Description: "Profil FHIR pour les consentements lors de la préadmission"
     alimentationDmp 0..1 and
     consultationDmp 0..1
 
-* provision.code[alimentationDmp] from DmpAlimentationConsentStatusVS (required)
-* provision.code[consultationDmp] from DmpConsultationConsentStatusVS (required)
+* provision.code[alimentationDmp] from PreadmissionConsentValueSet (required)
+* provision.code[consultationDmp] from PreadmissionConsentValueSet (required)
 

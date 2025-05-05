@@ -1,5 +1,5 @@
 Instance: practitioner-irm
-InstanceOf: Practitioner
+InstanceOf: FRCorePractitionerProfile
 Usage: #example
 * id = "practitioner-irm"
 * text.status = #generated

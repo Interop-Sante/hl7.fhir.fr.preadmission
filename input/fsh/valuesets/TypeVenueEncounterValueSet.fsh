@@ -1,9 +1,9 @@
 ValueSet: TypeVenueEncounterValueSet
-Id: type-venue-encounter-vs
-Title: "ValueSet des classes d'Encounter pour la préadmission"
-Description: "Restreint les classes d'Encounter aux valeurs NONAC, SS et VR"
+Id: type-venue-encounter
+Title: "Type de venue Encounter"
+Description: "Les différents types d'admission (hospitalisation, consultation, etc.)"
 * ^experimental = true
-* include codes from system http://terminology.hl7.org/CodeSystem/v3-ActCode
-  where code = "NONAC" and code = "SS" and code = "VR"
-
+* http://terminology.hl7.org/ValueSet/v3-ActEncounterCode#VR "Venue régulière"
+* http://terminology.hl7.org/ValueSet/v3-ActEncounterCode#SS "Soins spécialisés"
+* http://terminology.hl7.org/ValueSet/v3-ActEncounterCode#NONAC "Non accompagné"
 
