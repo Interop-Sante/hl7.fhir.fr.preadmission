@@ -1,6 +1,4 @@
-# Pièces Justificatives dans la Preadmission
-
-## Objectif
+### Objectif
 
 Dans le cadre de la préadmission hospitalière, le patient est invité à fournir certains **documents administratifs** nécessaires à la validation de son dossier. Ces documents permettent à l’établissement de santé de vérifier l’identité, la couverture sociale du patient avant son admission.
 
@@ -8,7 +6,7 @@ Les documents sont modélisés dans FHIR à l’aide de la ressource `DocumentRe
 
 ---
 
-## Documents typiques à fournir
+### Documents typiques à fournir
 
 Voici une liste des documents les plus couramment demandés lors de la préadmission, basée sur le `ValueSet` des types de documents autorisés :
 
@@ -25,18 +23,18 @@ Ces documents sont modélisés dans FHIR à l’aide de la ressource `DocumentRe
 
 ---
 
-## Ressource FHIR : `DocumentReference`
+### Ressource FHIR : `DocumentReference`
 
 La ressource `DocumentReference` est utilisée pour représenter chaque document transmis par le patient. Elle contient des métadonnées essentielles telles que le type de document, la date de création, et un lien vers le fichier téléversé.
 
+#### **Contraintes principales**
 
-### **Contraintes principales**
 - **Type de document** : Obligatoire, défini via l’extension `PreadmissionTypeDocumentFr`.
 - **Lien avec la préadmission** : Chaque document doit être associé à un `Encounter` via `DocumentReference.context.encounter`.
 
 ---
 
-## Critères de recherche autorisés
+### Critères de recherche autorisés
 
 Les critères de recherche suivants sont disponibles pour la ressource `DocumentReference` dans le cadre de la préadmission hospitalière :
 
@@ -44,7 +42,7 @@ Les critères de recherche suivants sont disponibles pour la ressource `Document
 
 ---
 
-## Exemple d’utilisation
+### Exemple d’utilisation
 
 Voici un exemple minimal de ressource `DocumentReference` pour une carte d’identité téléversée par le patient :
 
@@ -82,12 +80,14 @@ Voici un exemple minimal de ressource `DocumentReference` pour une carte d’ide
   ]
 }
 ```
-## Bonnes pratiques
+
+### Bonnes pratiques
 
 - **Validation des documents** : Chaque document téléversé doit être vérifié par un agent administratif pour s’assurer de sa conformité (lisibilité, validité, etc.).
 - **Traçabilité** : Les documents doivent être horodatés et associés à un Encounter pour garantir une traçabilité complète.
 - **Respect des réglementations** : Les documents doivent être stockés conformément aux exigences légales (RGPD, hébergement HDS, etc.).
 - **Gestion des erreurs** : En cas de document manquant ou non conforme, une notification doit être envoyée au patient pour lui permettre de corriger ou compléter son dossier.
 
-## Conclusion
+### Conclusion
+
 La ressource `DocumentReference` joue un rôle clé dans la gestion des pièces justificatives pour la préadmission hospitalière. Elle garantit une organisation structurée et conforme des documents, tout en facilitant leur traitement par les agents administratifs.

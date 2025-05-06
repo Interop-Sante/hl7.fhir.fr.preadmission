@@ -1,10 +1,10 @@
-# Processus de préadmission hospitalière – Vue par ressource FHIR
+### Introduction
 
 Ce guide présente le processus de préadmission hospitalière en ligne à travers les principales ressources FHIR utilisées. Chaque ressource est décrite avec son rôle, les interactions dans lesquelles elle est impliquée, et les contraintes spécifiques liées à son usage dans ce contexte.
 
 ---
 
-## 🗓️ Appointment
+### 🗓️ Appointment
 
 **Rôle :** Prise de rendez-vous
 
@@ -14,7 +14,7 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-## 📄 Questionnaire / QuestionnaireResponse
+### 📄 Questionnaire / QuestionnaireResponse
 
 **Rôle :** Recueil d'informations médicales préalables
 
@@ -24,7 +24,7 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-## ✅ Consent
+### ✅ Consent
 
 **Rôle :** Consentements RGPD et médicaux
 
@@ -36,7 +36,7 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-## 🏥 Encounter
+### 🏥 Encounter
 
 **Rôle :** Support de la préadmission
 
@@ -48,7 +48,7 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-## 📎 DocumentReference
+### 📎 DocumentReference
 
 **Rôle :** Pièces justificatives du patient
 
@@ -58,7 +58,7 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-## 👤 Patient
+### 👤 Patient
 
 **Rôle :** Informations personnelles
 
@@ -69,9 +69,10 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 Ce découpage par ressource permet une implémentation modulaire, chaque acteur (portail, secrétariat, SIH) manipulant uniquement les ressources pertinentes à son rôle tout en respectant les standards FHIR.
 
-## Enchainements
+### Enchainements
 
-### Séquence standard
+#### Séquence standard
+
 ```mermaid
 sequenceDiagram
     participant Patient
@@ -104,7 +105,7 @@ sequenceDiagram
     PortailPreadm->>Patient: Résultat (accepté / rejeté) par SMS/e-mail
 ```
 
-### Annulation
+#### Annulation
 
 ```mermaid
 sequenceDiagram

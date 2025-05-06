@@ -1,14 +1,13 @@
-# Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne
+### Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne
 
 Bienvenue dans le guide d'implémentation FHIR pour la pré-admission hospitalière en ligne. Ce guide est structuré en plusieurs sections pour faciliter la compréhension et l'intégration des spécifications.
 
+#### 📘 Contexte et Objectif
 
-
-## 📘 Contexte et Objectif
-
-### Contexte
+##### Contexte
 
 La pré-admission hospitalière est une étape administrative essentielle permettant à l’établissement de santé de préparer l’accueil du patient en amont. Elle consiste à recueillir, à distance, les informations nécessaires à :
+
 - L’identification du patient,
 - La gestion de sa couverture sociale,
 - La collecte des documents justificatifs,
@@ -16,22 +15,22 @@ La pré-admission hospitalière est une étape administrative essentielle permet
 
 Ce guide repose sur le standard **FHIR** pour assurer des échanges fluides, sécurisés et interopérables entre les différents systèmes impliqués.
 
-### Objectif
+##### Objectif
 
 Définir les spécifications d’échange de données entre :
+
 - Un portail web de préadmission,
 - Un logiciel de gestion des rendez-vous,
 - Un système administratif hospitalier.
 
 Les profils FHIR décrits ici sont adaptés au contexte français, en tenant compte des spécificités comme l'INS, la couverture sociale, et les exigences réglementaires (RGPD, hébergement HDS).
 
+#### 🎯 Périmètre et Acteurs
 
-
-## 🎯 Périmètre et Acteurs
-
-### Périmètre
+##### Périmètre
 
 Les ressources FHIR couvertes par ce guide incluent :
+
 - **`Appointment`** : Planification d’un rendez-vous,
 - **`Encounter`** : Gestion de la pré-admission administrative,
 - **`Coverage`** : Déclaration de la couverture sociale (AMO/AMC),
@@ -39,26 +38,27 @@ Les ressources FHIR couvertes par ce guide incluent :
 - **`Consent`** : Recueil des consentements nécessaires,
 - **`QuestionnaireResponse`** : Réponses aux questionnaires administratifs ou médicaux.
 
-#### Hors périmètre :
+###### Hors périmètre
+
 - Aspects médicaux,
 - Urgences,
 - Intégration clinique.
 
-### Acteurs
+##### Acteurs
 
 Les principaux acteurs impliqués dans le processus sont :
+
 - **Patient** : Fournit ses informations administratives, ses documents justificatifs et ses consentements,
 - **Portail de pré-admission** : Plateforme en ligne pour collecter les données du patient,
 - **Logiciel de rendez-vous** : Planifie les consultations et séjours,
 - **Système administratif hospitalier** : Vérifie et valide les informations transmises.
 
+#### 🧩 Ressources FHIR & Profils
 
-
-## 🧩 Ressources FHIR & Profils
-
-### Ressources utilisées
+##### Ressources utilisées
 
 Les ressources FHIR suivantes sont utilisées dans le cadre de la pré-admission :
+
 - **`Appointment`** : Gestion des rendez-vous,
 - **`Encounter`** : Pré-admission administrative,
 - **`Coverage`** : Gestion de la couverture sociale,
@@ -66,20 +66,21 @@ Les ressources FHIR suivantes sont utilisées dans le cadre de la pré-admission
 - **`Consent`** : Recueil des consentements,
 - **`QuestionnaireResponse`** : Réponses aux questionnaires.
 
-### Profils personnalisés
+##### Profils personnalisés
 
 Les profils FHIR suivants ont été définis pour répondre aux besoins spécifiques de la pré-admission :
+
 - **`PreadmissionAppointmentFr`** : Profil pour les rendez-vous,
 - **`PreadmissionEncounterFr`** : Profil pour la pré-admission,
 - **`PreadmissionCoverageFr`** : Profil pour la couverture sociale,
 - **`PreadmissionDocumentReferenceFr`** : Profil pour les documents justificatifs,
 - **`PreadmissionConsentFr`** : Profil pour les consentements.
 
-### Extensions spécifiques
+##### Extensions spécifiques
 
 Des extensions ont été ajoutées pour enrichir les ressources FHIR et répondre aux besoins spécifiques de la préadmission hospitalière. Ces extensions permettent de capturer des informations supplémentaires essentielles au processus administratif et réglementaire.
 
-#### Rattachement complémentaire (AMC)
+###### Rattachement complémentaire (AMC)
 
 - **Extension :** `FrCoverageAMCExtension`
 - **Ressource concernée :** `Coverage`
@@ -94,9 +95,7 @@ Des extensions ont été ajoutées pour enrichir les ressources FHIR et répondr
   - Nom de l’AMC : Mutuelle Santé Plus
   - Numéro d’adhérent : 987654321
 
-
-
-#### Statut de la pré-admission
+###### Statut de la pré-admission
 
 - **Extension :** `PreadmissionStatutFr`
 - **Ressource concernée :** `Encounter`
@@ -110,20 +109,15 @@ Des extensions ont été ajoutées pour enrichir les ressources FHIR et répondr
 - **Exemple d’utilisation :**
   - Statut : `READY` (Prêt pour validation)
 
-
-
-#### Remarque du patient
+###### Remarque du patient
 
 - **Extension :** `EncounterPatientComment`
 - **Ressource concernée :** `Encounter`
 - **Description :** Permet au patient de fournir des commentaires libres à destination de l’agent administratif.
-
 - **Exemple d’utilisation :**
   - Remarque : "Je ne pourrai pas être présent à l’heure exacte du rendez-vous."
 
-
-
-#### Consignes de l’agent administratif
+###### Consignes de l’agent administratif
 
 - **Extension :** `EncounterAgentInstructions`
 - **Ressource concernée :** `Encounter`
@@ -132,9 +126,7 @@ Des extensions ont été ajoutées pour enrichir les ressources FHIR et répondr
 - **Exemple d’utilisation :**
   - Consigne : "Veuillez apporter votre carte Vitale et votre carte de mutuelle."
 
-
-
-#### Consentements liés à la préadmission
+###### Consentements liés à la préadmission
 
 - **Extension :** `PreadmissionConsentementsExtension`
 - **Ressource concernée :** `Encounter`, `Appointment`
@@ -143,32 +135,31 @@ Des extensions ont été ajoutées pour enrichir les ressources FHIR et répondr
 - **Exemple d’utilisation :**
   - Consentement à l’accès au DMP : Informé et consentant.
 
+#### 🔄 Enchaînement des Processus
 
+##### Parcours global
 
-## 🔄 Enchaînement des Processus
+###### Logiciel de rendez-vous
 
-### Parcours global
-
-#### Logiciel de rendez-vous
 - Création d’un rendez-vous (`Appointment`),
 - Association des réponses aux questionnaires (`QuestionnaireResponse`),
 - Référencement des consentements recueillis (`Consent`).
 
-#### Système administratif
+###### Système administratif
+
 - Récupération des données transmises par le portail,
 - Création d’une ressource `Encounter` pour la pré-admission,
 - Vérification des informations administratives, de la couverture sociale (`Coverage`), et des documents justificatifs.
 
-#### Portail de préadmission
+###### Portail de préadmission
+
 - Le patient remplit un formulaire de pré-admission,
 - Téléverse ses documents justificatifs (`DocumentReference`),
 - Fournit ses consentements (`Consent`).
 
+#### 📝 Exemples de Ressources
 
-
-## 📝 Exemples de Ressources
-
-### Identifiant de préadmission (VN)
+##### Identifiant de préadmission (VN)
 
 ```json
 "identifier": [

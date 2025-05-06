@@ -28,25 +28,25 @@ pages:
   index.md:
     title: Accueil
   processus.md:
-    title: Processus de Préadmission
+    title: Processus fonctionnelle de la préadmission
   processus-ressource-fhir.md:
     title: Processus centré sur les ressources
-  appointment.md:
-    title: Rendez-vous (Appointment)
-  encounter.md:
-    title: Preadmission (Encounter)
-  consentements.md:
-    title: Consentements
-  coverage.md:
-    title: Couverture Sociale (Coverage)
-  questionnaires.md:
-    title: Questionnaires
-  documents.md:
-    title: Documents Justificatifs
   flux.md:
     title: Diagrammes des flux
   sequence.md:
     title: Diagramme de séquence du processus
+  appointment.md:
+    title: Rendez-vous (Appointment)
+  encounter.md:
+    title: Preadmission (Encounter)
+  coverage.md:
+    title: Couverture Sociale (Coverage)
+  consentements.md:
+    title: Consentements (Consent)
+  questionnaires.md:
+    title: Questionnaires (QuestionnaireResponse)
+  documents.md:
+    title: Documents Justificatifs (DocumentReference)
   downloads.md:
     title: Téléchargement du guide
   history.md:
@@ -55,6 +55,7 @@ pages:
 menu:
     Accueil: index.html
     Processus de préadmission:
+        Processus fonctionnelle de la préadmission: processus.html
         Processus centré sur les ressources: processus-ressource-fhir.html
         Diagramme de flux: flux.html
         Diagramme de séquence: sequence.html

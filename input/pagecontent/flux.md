@@ -1,12 +1,10 @@
-# Flux d’échange – Préadmission
+### Objectif
 
-## Objectif
-
-Ce document décrit les échanges entre les différentes parties impliquées dans une **pré-admission hospitalière en ligne**, en tenant compte des **contraintes réseau** (pas d'accès direct au SIH depuis Internet) et des **retours manuels** de l’agent administratif. Les flux décrits ici s’appuient sur les ressources FHIR définies dans cet IG.
+Cette page décrit les échanges entre les différentes parties impliquées dans une **pré-admission hospitalière en ligne**, en tenant compte des **contraintes réseau** (pas d'accès direct au SIH depuis Internet) et des **retours manuels** de l’agent administratif. Les flux décrits ici s’appuient sur les ressources FHIR définies dans cet IG.
 
 ---
 
-## Acteurs
+### Acteurs
 
 | Acteur | Description |
 |--------|-------------|
@@ -18,9 +16,10 @@ Ce document décrit les échanges entre les différentes parties impliquées dan
 
 ---
 
-## Scénario global des flux
+### Scénario global des flux
 
-### 1. **Prise de rendez-vous**
+#### 1. **Prise de rendez-vous**
+
 - **Acteurs impliqués** : Patient, Portail de rendez-vous, Système administratif de l'hôpital.
 - **Description** : Le patient réserve une consultation ou un séjour via un portail externe. Une ressource `Appointment` est créée dans le Portail de rendez-vous et est transmis au Système administratif de l'hôpital pour planifier la venue.
 - **Ressources utilisées** :
@@ -30,13 +29,15 @@ Ce document décrit les échanges entre les différentes parties impliquées dan
   - `Patient` : Référence le patient concerné.
 
 **Schéma :**
+
 ```plaintext
 Patient → [Portail de rendez-vous] → Système administratif de l'hôpital
 ```
 
 ---
 
-### 2. **Soumission des informations de préadmission**
+#### 2. **Soumission des informations de préadmission**
+
 - **Acteurs impliqués** : Patient, Portail de préadmission, Système administratif de l'hôpital.
 - **Description** : Le patient remplit un formulaire de préadmission sur le portail de préadmission. Les informations administratives (identité, couverture sociale, etc.) et les documents justificatifs (carte d’identité, carte Vitale, etc.) sont collectés.
 - **Ressources utilisées** :
@@ -45,13 +46,15 @@ Patient → [Portail de rendez-vous] → Système administratif de l'hôpital
   - `DocumentReference` : Contient les pièces justificatives téléversées par le patient.
 
 **Schéma :**
+
 ```plaintext
 Patient → [Portail de préadmission] → Système administratif de l'hôpital
 ```
 
 ---
 
-### 3. **Recueil des consentements**
+#### 3. **Recueil des consentements**
+
 - **Acteurs impliqués** : Patient, Portail de préadmission, Système administratif de l'hôpital.
 - **Description** : Le patient donne son consentement pour le traitement de ses données personnelles (RGPD), l’accès au DMP, ou la transmission de données à des tiers. Ces consentements sont transmis au Système administratif de l'hôpital.
 - **Ressources utilisées** :
@@ -62,14 +65,17 @@ Patient → [Portail de préadmission] → Système administratif de l'hôpital
 ```plaintext
 Patient → [Portail de rendez-vous] → Système administratif de l'hôpital
 ```
+
 OU
+
 ```plaintext
 Patient → [Portail de préadmission] → Système administratif de l'hôpital
 ```
 
 ---
 
-### 4. **Vérification et validation par l’agent du BDE**
+#### 4. **Vérification et validation par l’agent du BDE**
+
 - **Acteurs impliqués** : Agent du BDE, Système administratif de l'hôpital.
 - **Description** : L’agent du Bureau des Entrées (BDE) vérifie les informations transmises (documents, consentements, couverture sociale) et valide ou refuse la préadmission.
 - **Ressources utilisées** :
@@ -83,7 +89,8 @@ Système administratif de l'hôpital ↔ Agent du BDE
 
 ---
 
-### 5. Notification au patient
+#### 5. Notification au patient
+
 - **Acteurs impliqués** : Système administratif de l'hôpital, Portail de préadmission, Patient.
 - **Description** : Une fois la préadmission validée ou refusée, le patient est notifié via le portail de préadmission. En cas de refus, le motif est communiqué.
 - **Ressources utilisées** :
@@ -95,7 +102,7 @@ Système administratif de l'hôpital ↔ Agent du BDE
 SIH → [Portail de préadmission] → Patient
 ```
 
-## Schéma global des flux
+### Schéma global des flux
 
 ```plaintext
 1. Prise de rendez-vous
@@ -139,6 +146,6 @@ flowchart TD
     SystemeAdmin -->|Notification| PortailPread -->|Consultation du statut| Patient3
 ```
 
-## Conclusion
+### Conclusion
 
 Les flux décrits dans ce document permettent de structurer et de coordonner les échanges entre les différents acteurs impliqués dans la préadmission hospitalière. En s’appuyant sur les ressources FHIR (`Appointment`, `Patient`, `Coverage`, `DocumentReference`, `Consent`, `Encounter`, etc.), ce processus garantit une gestion efficace et conforme aux exigences réglementaires.
