@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"5"}
-    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <style type="text/css">h2{--heading-prefix:"7"}
+    h3,h4,h5,h6{--heading-prefix:"7"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -98,6 +98,9 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="processus.html">Processus fonctionnelle de la préadmission</a>
+      </li>
       <li>
         <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
       </li>
@@ -173,7 +176,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="consentements.html">next&gt;</a>
+          | <a href="coverage.html">next&gt;</a>
 
           </span>
 
@@ -213,36 +216,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#encounter--preadmission" id="markdown-toc-encounter--preadmission">Encounter – Preadmission</a>    <ul>
-      <li><a href="#rôle-de-la-ressource-encounter" id="markdown-toc-rôle-de-la-ressource-encounter">Rôle de la ressource Encounter</a></li>
-      <li><a href="#suivi-de-la-préadmission--extension-preadmissionstatutfr" id="markdown-toc-suivi-de-la-préadmission--extension-preadmissionstatutfr">Suivi de la préadmission : Extension <code class="language-plaintext highlighter-rouge">PreadmissionStatutFr</code></a></li>
-      <li><a href="#cycle-de-vie-de-la-préadmission" id="markdown-toc-cycle-de-vie-de-la-préadmission">Cycle de vie de la préadmission</a></li>
-      <li><a href="#spécificités-du-profil-preadmissionencounterfr" id="markdown-toc-spécificités-du-profil-preadmissionencounterfr">Spécificités du profil <code class="language-plaintext highlighter-rouge">PreadmissionEncounterFr</code></a>        <ul>
-          <li><a href="#extensions-obligatoires" id="markdown-toc-extensions-obligatoires"><strong>Extensions obligatoires</strong></a></li>
-          <li><a href="#extensions-optionnelles" id="markdown-toc-extensions-optionnelles"><strong>Extensions optionnelles</strong></a></li>
-          <li><a href="#contraintes-sur-les-champs-principaux" id="markdown-toc-contraintes-sur-les-champs-principaux"><strong>Contraintes sur les champs principaux</strong></a></li>
-        </ul>
-      </li>
-      <li><a href="#critères-de-recherche-autorisés" id="markdown-toc-critères-de-recherche-autorisés">Critères de recherche autorisés</a></li>
-      <li><a href="#gestion-des-refus-et-validations" id="markdown-toc-gestion-des-refus-et-validations">Gestion des refus et validations</a>        <ul>
-          <li><a href="#en-cas-de-refus" id="markdown-toc-en-cas-de-refus"><strong>En cas de refus</strong></a></li>
-          <li><a href="#en-cas-de-validation" id="markdown-toc-en-cas-de-validation"><strong>En cas de validation</strong></a></li>
-        </ul>
-      </li>
-      <li><a href="#exemple-dutilisation" id="markdown-toc-exemple-dutilisation">Exemple d’utilisation</a></li>
-      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-    </ul>
-  </li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#rôle-de-la-ressource-encounter" id="markdown-toc-rôle-de-la-ressource-encounter">Rôle de la ressource Encounter</a></li>
+  <li><a href="#suivi-de-la-préadmission--extension-preadmissionstatutfr" id="markdown-toc-suivi-de-la-préadmission--extension-preadmissionstatutfr">Suivi de la préadmission : Extension <code class="language-plaintext highlighter-rouge">PreadmissionStatutFr</code></a></li>
+  <li><a href="#cycle-de-vie-de-la-préadmission" id="markdown-toc-cycle-de-vie-de-la-préadmission">Cycle de vie de la préadmission</a></li>
+  <li><a href="#spécificités-du-profil-preadmissionencounterfr" id="markdown-toc-spécificités-du-profil-preadmissionencounterfr">Spécificités du profil <code class="language-plaintext highlighter-rouge">PreadmissionEncounterFr</code></a></li>
+  <li><a href="#critères-de-recherche-autorisés" id="markdown-toc-critères-de-recherche-autorisés">Critères de recherche autorisés</a></li>
+  <li><a href="#gestion-des-refus-et-validations" id="markdown-toc-gestion-des-refus-et-validations">Gestion des refus et validations</a></li>
+  <li><a href="#exemple-dutilisation" id="markdown-toc-exemple-dutilisation">Exemple d’utilisation</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
 </ul>
 
 </div>
-<h1 id="encounter--preadmission">Encounter – Preadmission</h1>
+<h3 id="introduction">Introduction</h3>
 
 <p>La ressource <strong>Encounter</strong> est utilisée comme support central pour représenter une <strong>pré-admission hospitalière</strong>. Elle regroupe les informations essentielles pour le traitement administratif d’un séjour ou d’une consultation prévue à l’hôpital, en lien avec un rendez-vous initial.</p>
 
 <hr />
 
-<h2 id="rôle-de-la-ressource-encounter">Rôle de la ressource Encounter</h2>
+<h3 id="rôle-de-la-ressource-encounter">Rôle de la ressource Encounter</h3>
 
 <p>La ressource <code class="language-plaintext highlighter-rouge">Encounter</code> est créée par le <strong>système administratif</strong> de l’hôpital, généralement à partir d’un rendez-vous saisi via une plateforme ou par un professionnel de santé. Elle joue un rôle central dans la gestion de la préadmission en permettant de :</p>
 
@@ -255,7 +247,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="suivi-de-la-préadmission--extension-preadmissionstatutfr">Suivi de la préadmission : Extension <code class="language-plaintext highlighter-rouge">PreadmissionStatutFr</code></h2>
+<h3 id="suivi-de-la-préadmission--extension-preadmissionstatutfr">Suivi de la préadmission : Extension <code class="language-plaintext highlighter-rouge">PreadmissionStatutFr</code></h3>
 
 <p>Le <strong>statut de la préadmission</strong> est représenté à l’aide de l’extension <code class="language-plaintext highlighter-rouge">PreadmissionStatutFr</code>. Cette extension permet de suivre l’état administratif de la préadmission avec les valeurs suivantes :</p>
 
@@ -271,7 +263,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="cycle-de-vie-de-la-préadmission">Cycle de vie de la préadmission</h2>
+<h3 id="cycle-de-vie-de-la-préadmission">Cycle de vie de la préadmission</h3>
 
 <p>Le cycle de vie de la préadmission est géré à travers le champ <code class="language-plaintext highlighter-rouge">preadmission_status</code>, qui évolue en fonction des actions réalisées par le patient ou l’agent administratif. Voici les étapes principales :</p>
 
@@ -324,23 +316,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="spécificités-du-profil-preadmissionencounterfr">Spécificités du profil <code class="language-plaintext highlighter-rouge">PreadmissionEncounterFr</code></h2>
+<h3 id="spécificités-du-profil-preadmissionencounterfr">Spécificités du profil <code class="language-plaintext highlighter-rouge">PreadmissionEncounterFr</code></h3>
 
 <p>Le profil <strong>PreadmissionEncounterFr</strong> apporte les contraintes suivantes :</p>
 
-<h3 id="extensions-obligatoires"><strong>Extensions obligatoires</strong></h3>
+<h4 id="extensions-obligatoires"><strong>Extensions obligatoires</strong></h4>
+
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionStatutFr</code></strong> : Permet de suivre l’état administratif de la préadmission. Cette extension est obligatoire et utilise un <code class="language-plaintext highlighter-rouge">ValueSet</code> spécifique pour définir les statuts possibles (<code class="language-plaintext highlighter-rouge">CREATED</code>, <code class="language-plaintext highlighter-rouge">IN_PROGRESS</code>, <code class="language-plaintext highlighter-rouge">READY</code>, <code class="language-plaintext highlighter-rouge">COMPLETED</code>, <code class="language-plaintext highlighter-rouge">REFUSED</code>).</li>
 </ul>
 
-<h3 id="extensions-optionnelles"><strong>Extensions optionnelles</strong></h3>
+<h4 id="extensions-optionnelles"><strong>Extensions optionnelles</strong></h4>
+
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">EncounterPatientComment</code></strong> : Permet d’ajouter des commentaires libres fournis par le patient à destination de l’agent administratif. Ces commentaires sont représentés sous forme de texte libre (<code class="language-plaintext highlighter-rouge">string</code>).</li>
   <li><strong><code class="language-plaintext highlighter-rouge">EncounterAgentInstructions</code></strong> : Permet de transmettre des consignes spécifiques aux agents hospitaliers. Ces consignes sont également représentées sous forme de texte libre (<code class="language-plaintext highlighter-rouge">string</code>).</li>
   <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionConsentementsExtension</code></strong> : Référence un ou plusieurs consentements recueillis dans le cadre de la préadmission. Ces consentements sont modélisés à l’aide de la ressource <code class="language-plaintext highlighter-rouge">Consent</code> et incluent des informations comme l’accès au DMP ou d’autres autorisations administratives.</li>
 </ul>
 
-<h3 id="contraintes-sur-les-champs-principaux"><strong>Contraintes sur les champs principaux</strong></h3>
+<h4 id="contraintes-sur-les-champs-principaux"><strong>Contraintes sur les champs principaux</strong></h4>
+
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">Encounter.status</code></strong> : Fixé à <code class="language-plaintext highlighter-rouge">planned</code> pour indiquer que l’Encounter est prévu.</li>
   <li><strong><code class="language-plaintext highlighter-rouge">Encounter.type</code></strong> : Définit le type d’Encounter (hospitalisation, consultation externe, téléconsultation).</li>
@@ -350,7 +345,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="critères-de-recherche-autorisés">Critères de recherche autorisés</h2>
+<h3 id="critères-de-recherche-autorisés">Critères de recherche autorisés</h3>
 
 <p>Les critères de recherche suivants sont disponibles pour le profil <code class="language-plaintext highlighter-rouge">PreadmissionEncounterFr</code> :</p>
 
@@ -362,16 +357,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="gestion-des-refus-et-validations">Gestion des refus et validations</h2>
+<h3 id="gestion-des-refus-et-validations">Gestion des refus et validations</h3>
 
-<h3 id="en-cas-de-refus"><strong>En cas de refus</strong></h3>
+<h4 id="en-cas-de-refus"><strong>En cas de refus</strong></h4>
+
 <ul>
   <li>Le statut de la préadmission est mis à <code class="language-plaintext highlighter-rouge">REFUSED</code>.</li>
   <li>Le motif du refus est renseigné dans l’extension <code class="language-plaintext highlighter-rouge">EncounterAgentInstructions</code>, qui permet de transmettre des consignes ou des commentaires spécifiques à l’agent du Bureau des Entrées (BDE).</li>
   <li>Le portail de préadmission est notifié du refus, accompagné du motif explicatif.</li>
 </ul>
 
-<h3 id="en-cas-de-validation"><strong>En cas de validation</strong></h3>
+<h4 id="en-cas-de-validation"><strong>En cas de validation</strong></h4>
+
 <ul>
   <li>Le statut de la préadmission est mis à <code class="language-plaintext highlighter-rouge">ACCEPTED</code>.</li>
   <li>Le portail de préadmission est notifié de la validation, confirmant que la préadmission est complète et prête pour la venue du patient.</li>
@@ -379,7 +376,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="exemple-dutilisation">Exemple d’utilisation</h2>
+<h3 id="exemple-dutilisation">Exemple d’utilisation</h3>
 
 <p>Voici un exemple d’utilisation de la ressource <code class="language-plaintext highlighter-rouge">Encounter</code> pour une préadmission :</p>
 
@@ -392,9 +389,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="conclusion">Conclusion</h2>
+<h3 id="conclusion">Conclusion</h3>
 
 <p>La ressource <code class="language-plaintext highlighter-rouge">Encounter</code>, enrichie d’extensions spécifiques, est le <strong>pivot de la coordination des informations de préadmission</strong>. Elle permet d’aligner les processus numériques sur les réalités administratives hospitalières tout en conservant une traçabilité complète du traitement des dossiers.</p>
+
 
 
 
@@ -426,7 +424,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="consentements.html">next&gt;</a>
+                <a href="coverage.html">next&gt;</a>
 
               </td>
             </tr>
@@ -436,7 +434,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 5, 2025 08:52+0000">2025-05-05</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 6, 2025 13:55+0000">2025-05-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

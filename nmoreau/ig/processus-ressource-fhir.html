@@ -99,6 +99,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="processus.html">Processus fonctionnelle de la préadmission</a>
+      </li>
+      <li>
         <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
       </li>
       <li>
@@ -173,7 +176,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="appointment.html">next&gt;</a>
+          | <a href="flux.html">next&gt;</a>
 
           </span>
 
@@ -213,30 +216,24 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#processus-de-préadmission-hospitalière--vue-par-ressource-fhir" id="markdown-toc-processus-de-préadmission-hospitalière--vue-par-ressource-fhir">Processus de préadmission hospitalière – Vue par ressource FHIR</a>    <ul>
-      <li><a href="#️-appointment" id="markdown-toc-️-appointment">🗓️ Appointment</a></li>
-      <li><a href="#-questionnaire--questionnaireresponse" id="markdown-toc--questionnaire--questionnaireresponse">📄 Questionnaire / QuestionnaireResponse</a></li>
-      <li><a href="#-consent" id="markdown-toc--consent">✅ Consent</a></li>
-      <li><a href="#-encounter" id="markdown-toc--encounter">🏥 Encounter</a></li>
-      <li><a href="#-documentreference" id="markdown-toc--documentreference">📎 DocumentReference</a></li>
-      <li><a href="#-patient" id="markdown-toc--patient">👤 Patient</a></li>
-      <li><a href="#enchainements" id="markdown-toc-enchainements">Enchainements</a>        <ul>
-          <li><a href="#séquence-standard" id="markdown-toc-séquence-standard">Séquence standard</a></li>
-          <li><a href="#annulation" id="markdown-toc-annulation">Annulation</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#️-appointment" id="markdown-toc-️-appointment">🗓️ Appointment</a></li>
+  <li><a href="#-questionnaire--questionnaireresponse" id="markdown-toc--questionnaire--questionnaireresponse">📄 Questionnaire / QuestionnaireResponse</a></li>
+  <li><a href="#-consent" id="markdown-toc--consent">✅ Consent</a></li>
+  <li><a href="#-encounter" id="markdown-toc--encounter">🏥 Encounter</a></li>
+  <li><a href="#-documentreference" id="markdown-toc--documentreference">📎 DocumentReference</a></li>
+  <li><a href="#-patient" id="markdown-toc--patient">👤 Patient</a></li>
+  <li><a href="#enchainements" id="markdown-toc-enchainements">Enchainements</a></li>
 </ul>
 
 </div>
-<h1 id="processus-de-préadmission-hospitalière--vue-par-ressource-fhir">Processus de préadmission hospitalière – Vue par ressource FHIR</h1>
+<h3 id="introduction">Introduction</h3>
 
 <p>Ce guide présente le processus de préadmission hospitalière en ligne à travers les principales ressources FHIR utilisées. Chaque ressource est décrite avec son rôle, les interactions dans lesquelles elle est impliquée, et les contraintes spécifiques liées à son usage dans ce contexte.</p>
 
 <hr />
 
-<h2 id="️-appointment">🗓️ Appointment</h2>
+<h3 id="️-appointment">🗓️ Appointment</h3>
 
 <p><strong>Rôle :</strong> Prise de rendez-vous</p>
 
@@ -248,7 +245,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="-questionnaire--questionnaireresponse">📄 Questionnaire / QuestionnaireResponse</h2>
+<h3 id="-questionnaire--questionnaireresponse">📄 Questionnaire / QuestionnaireResponse</h3>
 
 <p><strong>Rôle :</strong> Recueil d’informations médicales préalables</p>
 
@@ -260,7 +257,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="-consent">✅ Consent</h2>
+<h3 id="-consent">✅ Consent</h3>
 
 <p><strong>Rôle :</strong> Consentements RGPD et médicaux</p>
 
@@ -277,7 +274,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="-encounter">🏥 Encounter</h2>
+<h3 id="-encounter">🏥 Encounter</h3>
 
 <p><strong>Rôle :</strong> Support de la préadmission</p>
 
@@ -294,7 +291,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="-documentreference">📎 DocumentReference</h2>
+<h3 id="-documentreference">📎 DocumentReference</h3>
 
 <p><strong>Rôle :</strong> Pièces justificatives du patient</p>
 
@@ -306,7 +303,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="-patient">👤 Patient</h2>
+<h3 id="-patient">👤 Patient</h3>
 
 <p><strong>Rôle :</strong> Informations personnelles</p>
 
@@ -319,9 +316,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Ce découpage par ressource permet une implémentation modulaire, chaque acteur (portail, secrétariat, SIH) manipulant uniquement les ressources pertinentes à son rôle tout en respectant les standards FHIR.</p>
 
-<h2 id="enchainements">Enchainements</h2>
+<h3 id="enchainements">Enchainements</h3>
 
-<h3 id="séquence-standard">Séquence standard</h3>
+<h4 id="séquence-standard">Séquence standard</h4>
+
 <pre><code class="language-mermaid">sequenceDiagram
     participant Patient
     participant PortailRdv as Portail de rendez-vous
@@ -353,7 +351,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     PortailPreadm-&gt;&gt;Patient: Résultat (accepté / rejeté) par SMS/e-mail
 </code></pre>
 
-<h3 id="annulation">Annulation</h3>
+<h4 id="annulation">Annulation</h4>
 
 <pre><code class="language-mermaid">sequenceDiagram
     participant Patient
@@ -369,6 +367,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     %% Étape 2 : Système administratif de l'hôpital annule la préadmission
     SAH-&gt;&gt;PortailPreadm: DELETE Encounter (pré-admission)
 </code></pre>
+
 
 
 
@@ -400,7 +399,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="appointment.html">next&gt;</a>
+                <a href="flux.html">next&gt;</a>
 
               </td>
             </tr>
@@ -410,7 +409,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 5, 2025 08:52+0000">2025-05-05</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 6, 2025 13:55+0000">2025-05-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

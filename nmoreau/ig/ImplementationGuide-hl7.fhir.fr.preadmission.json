@@ -10,7 +10,7 @@
   "name" : "PREADMISSIONFR",
   "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
   "status" : "draft",
-  "date" : "2025-05-05T08:51:40+00:00",
+  "date" : "2025-05-06T13:54:59+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -1082,7 +1082,7 @@
           "valueUrl" : "processus.html"
         }],
         "nameUrl" : "processus.html",
-        "title" : "Processus de Préadmission",
+        "title" : "Processus fonctionnelle de la préadmission",
         "generation" : "markdown"
       },
       {
@@ -1092,6 +1092,24 @@
         }],
         "nameUrl" : "processus-ressource-fhir.html",
         "title" : "Processus centré sur les ressources",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "flux.html"
+        }],
+        "nameUrl" : "flux.html",
+        "title" : "Diagrammes des flux",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "sequence.html"
+        }],
+        "nameUrl" : "sequence.html",
+        "title" : "Diagramme de séquence du processus",
         "generation" : "markdown"
       },
       {
@@ -1115,15 +1133,6 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "consentements.html"
-        }],
-        "nameUrl" : "consentements.html",
-        "title" : "Consentements",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "coverage.html"
         }],
         "nameUrl" : "coverage.html",
@@ -1133,10 +1142,19 @@
       {
         "extension" : [{
           "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "consentements.html"
+        }],
+        "nameUrl" : "consentements.html",
+        "title" : "Consentements (Consent)",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
           "valueUrl" : "questionnaires.html"
         }],
         "nameUrl" : "questionnaires.html",
-        "title" : "Questionnaires",
+        "title" : "Questionnaires (QuestionnaireResponse)",
         "generation" : "markdown"
       },
       {
@@ -1145,25 +1163,7 @@
           "valueUrl" : "documents.html"
         }],
         "nameUrl" : "documents.html",
-        "title" : "Documents Justificatifs",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "flux.html"
-        }],
-        "nameUrl" : "flux.html",
-        "title" : "Diagrammes des flux",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "sequence.html"
-        }],
-        "nameUrl" : "sequence.html",
-        "title" : "Diagramme de séquence du processus",
+        "title" : "Documents Justificatifs (DocumentReference)",
         "generation" : "markdown"
       },
       {

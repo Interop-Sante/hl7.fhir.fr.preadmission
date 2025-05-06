@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"4"}
-    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -98,6 +98,9 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="processus.html">Processus fonctionnelle de la préadmission</a>
+      </li>
       <li>
         <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
       </li>
@@ -169,7 +172,7 @@
 
           <span style="float:right;">
 
-            <a href="processus-ressource-fhir.html">&lt;prev</a> | 
+            <a href="sequence.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
@@ -213,37 +216,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#rendez-vous-dans-la-preadmission" id="markdown-toc-rendez-vous-dans-la-preadmission">Rendez-vous dans la Preadmission</a>    <ul>
-      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-      <li><a href="#rôle-de-la-ressource-appointment" id="markdown-toc-rôle-de-la-ressource-appointment">Rôle de la ressource <code class="language-plaintext highlighter-rouge">Appointment</code></a></li>
-      <li><a href="#spécificités-du-profil-preadmissionappointmentfr" id="markdown-toc-spécificités-du-profil-preadmissionappointmentfr">Spécificités du profil <code class="language-plaintext highlighter-rouge">PreadmissionAppointmentFr</code></a>        <ul>
-          <li><a href="#extensions-spécifiques" id="markdown-toc-extensions-spécifiques"><strong>Extensions spécifiques</strong></a></li>
-          <li><a href="#contraintes-principales" id="markdown-toc-contraintes-principales"><strong>Contraintes principales</strong></a></li>
-        </ul>
-      </li>
-      <li><a href="#ressource-fhir--appointment" id="markdown-toc-ressource-fhir--appointment">Ressource FHIR : <code class="language-plaintext highlighter-rouge">Appointment</code></a>        <ul>
-          <li><a href="#contraintes-principales-1" id="markdown-toc-contraintes-principales-1"><strong>Contraintes principales</strong></a></li>
-        </ul>
-      </li>
-      <li><a href="#exemple-dutilisation" id="markdown-toc-exemple-dutilisation">Exemple d’utilisation</a></li>
-      <li><a href="#liens-avec-les-autres-ressources" id="markdown-toc-liens-avec-les-autres-ressources">Liens avec les autres ressources</a></li>
-      <li><a href="#bonnes-pratiques" id="markdown-toc-bonnes-pratiques">Bonnes pratiques</a></li>
-      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-    </ul>
-  </li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#rôle-de-la-ressource-appointment" id="markdown-toc-rôle-de-la-ressource-appointment">Rôle de la ressource <code class="language-plaintext highlighter-rouge">Appointment</code></a></li>
+  <li><a href="#spécificités-du-profil-preadmissionappointmentfr" id="markdown-toc-spécificités-du-profil-preadmissionappointmentfr">Spécificités du profil <code class="language-plaintext highlighter-rouge">PreadmissionAppointmentFr</code></a></li>
+  <li><a href="#ressource-fhir--appointment" id="markdown-toc-ressource-fhir--appointment">Ressource FHIR : <code class="language-plaintext highlighter-rouge">Appointment</code></a></li>
+  <li><a href="#exemple-dutilisation" id="markdown-toc-exemple-dutilisation">Exemple d’utilisation</a></li>
+  <li><a href="#liens-avec-les-autres-ressources" id="markdown-toc-liens-avec-les-autres-ressources">Liens avec les autres ressources</a></li>
+  <li><a href="#bonnes-pratiques" id="markdown-toc-bonnes-pratiques">Bonnes pratiques</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
 </ul>
 
 </div>
-<h1 id="rendez-vous-dans-la-preadmission">Rendez-vous dans la Preadmission</h1>
-
-<h2 id="introduction">Introduction</h2>
+<h3 id="introduction">Introduction</h3>
 
 <p>Dans le cadre de la préadmission hospitalière, la prise de rendez-vous est une étape essentielle qui initie le processus administratif. Elle permet de planifier une consultation ou un séjour hospitalier et de collecter les informations nécessaires à la préparation de l’admission.<br />
 Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code class="language-plaintext highlighter-rouge">Appointment</code>, enrichie d’extensions spécifiques pour répondre aux besoins du processus de préadmission.</p>
 
 <hr />
 
-<h2 id="rôle-de-la-ressource-appointment">Rôle de la ressource <code class="language-plaintext highlighter-rouge">Appointment</code></h2>
+<h3 id="rôle-de-la-ressource-appointment">Rôle de la ressource <code class="language-plaintext highlighter-rouge">Appointment</code></h3>
 
 <p>La ressource <code class="language-plaintext highlighter-rouge">Appointment</code> joue un rôle central dans la gestion des rendez-vous liés à la préadmission. Elle permet de :</p>
 
@@ -256,17 +247,19 @@ Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code cla
 
 <hr />
 
-<h2 id="spécificités-du-profil-preadmissionappointmentfr">Spécificités du profil <code class="language-plaintext highlighter-rouge">PreadmissionAppointmentFr</code></h2>
+<h3 id="spécificités-du-profil-preadmissionappointmentfr">Spécificités du profil <code class="language-plaintext highlighter-rouge">PreadmissionAppointmentFr</code></h3>
 
 <p>Le profil <strong>PreadmissionAppointmentFr</strong> apporte des contraintes et des extensions spécifiques pour répondre aux besoins de la préadmission.</p>
 
-<h3 id="extensions-spécifiques"><strong>Extensions spécifiques</strong></h3>
+<h4 id="extensions-spécifiques"><strong>Extensions spécifiques</strong></h4>
+
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionAppointmentQuestionnaireResponseFr</code></strong> : Permet de référencer un ou plusieurs <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> remplis par le patient dans le cadre de la préadmission.</li>
   <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionConsentementsExtension</code></strong> : Permet de référencer un ou plusieurs consentements recueillis lors de la prise de rendez-vous. Ces consentements sont modélisés à l’aide de la ressource <code class="language-plaintext highlighter-rouge">Consent</code>.</li>
 </ul>
 
-<h3 id="contraintes-principales"><strong>Contraintes principales</strong></h3>
+<h4 id="contraintes-principales"><strong>Contraintes principales</strong></h4>
+
 <ul>
   <li><strong>Participant</strong> : Le participant principal doit être un patient, référencé via <code class="language-plaintext highlighter-rouge">participant.actor</code> avec une ressource <code class="language-plaintext highlighter-rouge">Patient</code>.</li>
   <li><strong>Lien avec les questionnaires</strong> : Les questionnaires médicaux remplis par le patient sont référencés via l’extension <code class="language-plaintext highlighter-rouge">PreadmissionAppointmentQuestionnaireResponseFr</code>.</li>
@@ -275,11 +268,12 @@ Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code cla
 
 <hr />
 
-<h2 id="ressource-fhir--appointment">Ressource FHIR : <code class="language-plaintext highlighter-rouge">Appointment</code></h2>
+<h3 id="ressource-fhir--appointment">Ressource FHIR : <code class="language-plaintext highlighter-rouge">Appointment</code></h3>
 
 <p>La ressource <code class="language-plaintext highlighter-rouge">Appointment</code> contient les informations nécessaires à la planification d’un rendez-vous. Elle inclut des métadonnées essentielles telles que la date, l’heure, les participants, et les raisons du rendez-vous.</p>
 
-<h3 id="contraintes-principales-1"><strong>Contraintes principales</strong></h3>
+<h4 id="contraintes-principales-1">Contraintes principales</h4>
+
 <ul>
   <li><strong>Statut du rendez-vous</strong> : Défini via <code class="language-plaintext highlighter-rouge">Appointment.status</code> (par exemple, <code class="language-plaintext highlighter-rouge">booked</code>, <code class="language-plaintext highlighter-rouge">cancelled</code>).</li>
   <li><strong>Description</strong> : Permet de préciser la nature du rendez-vous (par exemple, “IRM cérébrale”).</li>
@@ -289,7 +283,7 @@ Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code cla
 
 <hr />
 
-<h2 id="exemple-dutilisation">Exemple d’utilisation</h2>
+<h3 id="exemple-dutilisation">Exemple d’utilisation</h3>
 
 <p>Voici un exemple minimal de ressource <code class="language-plaintext highlighter-rouge">Appointment</code> pour un rendez-vous d’IRM cérébrale :</p>
 
@@ -342,22 +336,26 @@ Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code cla
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<h2 id="liens-avec-les-autres-ressources">Liens avec les autres ressources</h2>
+<h3 id="liens-avec-les-autres-ressources">Liens avec les autres ressources</h3>
+
 <ul>
   <li><strong>Lien avec le patient</strong> : Chaque rendez-vous est directement lié à une ressource <code class="language-plaintext highlighter-rouge">Patient</code> via <code class="language-plaintext highlighter-rouge">participant.actor</code>.</li>
   <li><strong>Lien avec les questionnaires</strong> : Les questionnaires remplis par le patient sont référencés via l’extension <code class="language-plaintext highlighter-rouge">PreadmissionAppointmentQuestionnaireResponseFr</code>.</li>
   <li><strong>Lien avec les consentements</strong> : Les consentements recueillis sont référencés via l’extension <code class="language-plaintext highlighter-rouge">PreadmissionConsentementsExtension</code>.</li>
 </ul>
 
-<h2 id="bonnes-pratiques">Bonnes pratiques</h2>
+<h3 id="bonnes-pratiques">Bonnes pratiques</h3>
+
 <ul>
   <li><strong>Planification précise</strong> : Assurez-vous que les dates et heures des rendez-vous sont correctement définies pour éviter les conflits.</li>
   <li><strong>Traçabilité des consentements</strong> : Associez systématiquement les consentements recueillis au rendez-vous pour garantir une traçabilité complète.</li>
   <li><strong>Validation des questionnaires</strong> : Vérifiez que les questionnaires médicaux sont remplis avant la date du rendez-vous.</li>
 </ul>
 
-<h2 id="conclusion">Conclusion</h2>
+<h3 id="conclusion">Conclusion</h3>
+
 <p>La ressource <code class="language-plaintext highlighter-rouge">Appointment</code>, enrichie d’extensions spécifiques, joue un rôle clé dans la gestion des rendez-vous liés à la préadmission hospitalière. Elle garantit une organisation structurée et conforme des informations, tout en facilitant leur traitement par les systèmes administratifs et médicaux.</p>
+
 
 
 
@@ -381,7 +379,7 @@ Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code cla
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="processus-ressource-fhir.html">&lt;prev</a>
+                <a href="sequence.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -399,7 +397,7 @@ Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code cla
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 5, 2025 08:52+0000">2025-05-05</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 6, 2025 13:55+0000">2025-05-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

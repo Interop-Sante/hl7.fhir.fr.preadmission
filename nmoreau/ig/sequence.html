@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"11"}
-    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -98,6 +98,9 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="processus.html">Processus fonctionnelle de la préadmission</a>
+      </li>
       <li>
         <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
       </li>
@@ -173,7 +176,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="downloads.html">next&gt;</a>
+          | <a href="appointment.html">next&gt;</a>
 
           </span>
 
@@ -213,58 +216,50 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#séquence-des-opérations--preadmission-hospitalière-en-ligne" id="markdown-toc-séquence-des-opérations--preadmission-hospitalière-en-ligne">Séquence des Opérations – Preadmission Hospitalière en Ligne</a>    <ul>
-      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-      <li><a href="#séquence-des-étapes" id="markdown-toc-séquence-des-étapes">Séquence des étapes</a>        <ul>
-          <li><a href="#1-prise-de-rendez-vous-par-le-patient" id="markdown-toc-1-prise-de-rendez-vous-par-le-patient">1. <strong>Prise de Rendez-vous par le Patient</strong></a></li>
-          <li><a href="#2-remplissage-du-formulaire-de-pré-admission" id="markdown-toc-2-remplissage-du-formulaire-de-pré-admission">2. <strong>Remplissage du Formulaire de Pré-admission</strong></a></li>
-          <li><a href="#3-transmission-des-données-au-système-administratif-de-lhôpital" id="markdown-toc-3-transmission-des-données-au-système-administratif-de-lhôpital">3. <strong>Transmission des Données au Système administratif de l’hôpital</strong></a></li>
-          <li><a href="#4-vérification-par-le-bureau-des-entrées-bde" id="markdown-toc-4-vérification-par-le-bureau-des-entrées-bde">4. <strong>Vérification par le Bureau des Entrées (BDE)</strong></a></li>
-          <li><a href="#5-retour-au-patient" id="markdown-toc-5-retour-au-patient">5. <strong>Retour au Patient</strong></a></li>
-        </ul>
-      </li>
-      <li><a href="#récapitulatif-de-la-séquence" id="markdown-toc-récapitulatif-de-la-séquence">Récapitulatif de la Séquence</a></li>
-      <li><a href="#diagramme-de-séquence" id="markdown-toc-diagramme-de-séquence">Diagramme de Séquence</a>        <ul>
-          <li><a href="#si-le-portail-de-rendez-vous-est-en-dehors-du-sih" id="markdown-toc-si-le-portail-de-rendez-vous-est-en-dehors-du-sih">Si le Portail de rendez-vous est en dehors du SIH</a></li>
-          <li><a href="#annulation-de-rendez-vous" id="markdown-toc-annulation-de-rendez-vous">Annulation de rendez-vous</a></li>
-        </ul>
-      </li>
-      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-    </ul>
-  </li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#séquence-des-étapes" id="markdown-toc-séquence-des-étapes">Séquence des étapes</a></li>
+  <li><a href="#récapitulatif-de-la-séquence" id="markdown-toc-récapitulatif-de-la-séquence">Récapitulatif de la Séquence</a></li>
+  <li><a href="#diagramme-de-séquence" id="markdown-toc-diagramme-de-séquence">Diagramme de Séquence</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
 </ul>
 
 </div>
-<h1 id="séquence-des-opérations--preadmission-hospitalière-en-ligne">Séquence des Opérations – Preadmission Hospitalière en Ligne</h1>
-
-<h2 id="introduction">Introduction</h2>
+<h3 id="introduction">Introduction</h3>
 
 <p>La pré-admission hospitalière en ligne repose sur une séquence d’opérations bien définies qui permettent la collecte et la validation des informations administratives nécessaires avant l’admission physique du patient à l’hôpital. Cette séquence est orchestrée par plusieurs acteurs du système de santé, chacun ayant un rôle spécifique à jouer dans le processus.</p>
 
-<h2 id="séquence-des-étapes">Séquence des étapes</h2>
+<h3 id="séquence-des-étapes">Séquence des étapes</h3>
 
-<h3 id="1-prise-de-rendez-vous-par-le-patient">1. <strong>Prise de Rendez-vous par le Patient</strong></h3>
+<h4 id="prise-de-rendez-vous-par-le-patient"><strong>Prise de Rendez-vous par le Patient</strong></h4>
+
 <p>Le patient réserve une consultation via un <strong>portail externe</strong>. Lors de cette prise de rendez-vous :</p>
+
 <ul>
   <li>Un <code class="language-plaintext highlighter-rouge">Appointment</code> est créé pour planifier la consultation.</li>
 </ul>
 
-<h3 id="2-remplissage-du-formulaire-de-pré-admission">2. <strong>Remplissage du Formulaire de Pré-admission</strong></h3>
+<h4 id="remplissage-du-formulaire-de-pré-admission"><strong>Remplissage du Formulaire de Pré-admission</strong></h4>
+
 <p>Une fois le rendez-vous pris, le patient remplit un formulaire de pré-admission via le <strong>portail de préadmission</strong>. Ce formulaire inclut des informations personnelles, des détails sur la couverture sociale, des documents justificatifs, ainsi que des consentements :</p>
+
 <ul>
   <li>Les données personnelles sont envoyées sous forme de <code class="language-plaintext highlighter-rouge">Patient</code>.</li>
   <li>Les documents justificatifs sont téléchargés sous forme de <code class="language-plaintext highlighter-rouge">DocumentReference</code>.</li>
   <li>Le consentement du patient est recueilli via une ressource <code class="language-plaintext highlighter-rouge">Consent</code>.</li>
 </ul>
 
-<h3 id="3-transmission-des-données-au-système-administratif-de-lhôpital">3. <strong>Transmission des Données au Système administratif de l’hôpital</strong></h3>
+<h4 id="transmission-des-données-au-système-administratif-de-lhôpital"><strong>Transmission des Données au Système administratif de l’hôpital</strong></h4>
+
 <p>Une fois les informations saisies et validées par le patient, le <strong>Système administratif de l’hôpital</strong> reçoit les données :</p>
+
 <ul>
   <li>Un <code class="language-plaintext highlighter-rouge">Encounter</code> de type préadmission est créé dans le <strong>Système administratif de l’hôpital</strong> pour amorcer le processus de validation des informations administratives.</li>
 </ul>
 
-<h3 id="4-vérification-par-le-bureau-des-entrées-bde">4. <strong>Vérification par le Bureau des Entrées (BDE)</strong></h3>
+<h4 id="vérification-par-le-bureau-des-entrées-bde"><strong>Vérification par le Bureau des Entrées (BDE)</strong></h4>
+
 <p>Un agent du <strong>Bureau des Entrées (BDE)</strong> vérifie les données récupérées, notamment :</p>
+
 <ul>
   <li>La validité des informations du patient.</li>
   <li>La conformité des documents justificatifs.</li>
@@ -273,12 +268,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Le BDE peut accepter ou refuser la pré-admission, et dans ce cas, une cause de rejet peut être spécifiée à l’aide d’une ressource <code class="language-plaintext highlighter-rouge">Extension</code>.</p>
 
-<h3 id="5-retour-au-patient">5. <strong>Retour au Patient</strong></h3>
+<h4 id="retour-au-patient"><strong>Retour au Patient</strong></h4>
 <p>Après vérification, le <strong>portail de préadmission</strong> notifie le patient de l’issue de la pré-admission (acceptation ou rejet), avec des justifications éventuelles.</p>
 
 <hr />
 
-<h2 id="récapitulatif-de-la-séquence">Récapitulatif de la Séquence</h2>
+<h3 id="récapitulatif-de-la-séquence">Récapitulatif de la Séquence</h3>
 
 <table>
   <thead>
@@ -313,7 +308,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="diagramme-de-séquence">Diagramme de Séquence</h2>
+<h3 id="diagramme-de-séquence">Diagramme de Séquence</h3>
 
 <p>Voici le diagramme de séquence Mermaid illustrant la procédure de pré-admission :</p>
 
@@ -351,7 +346,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     PortailPreadm-&gt;&gt;Patient: Résultat (accepté / rejeté)
 </code></pre>
 
-<h3 id="si-le-portail-de-rendez-vous-est-en-dehors-du-sih">Si le Portail de rendez-vous est en dehors du SIH</h3>
+<h4 id="si-le-portail-de-rendez-vous-est-en-dehors-du-sih">Si le Portail de rendez-vous est en dehors du SIH</h4>
 
 <pre><code class="language-mermaid">sequenceDiagram
     participant Patient
@@ -392,7 +387,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     PortailPreadm-&gt;&gt;Patient: Résultat (accepté / rejeté)
 </code></pre>
 
-<h3 id="annulation-de-rendez-vous">Annulation de rendez-vous</h3>
+<h4 id="annulation-de-rendez-vous">Annulation de rendez-vous</h4>
 
 <pre><code class="language-mermaid">sequenceDiagram
     participant Patient
@@ -412,7 +407,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 </code></pre>
 
-<h2 id="conclusion">Conclusion</h2>
+<h3 id="conclusion">Conclusion</h3>
 
 <p>Cette séquence garantit une gestion fluide et structurée des données administratives liées à la pré-admission hospitalière en ligne. Chaque acteur du processus contribue à l’efficacité du parcours patient, tout en respectant les normes d’interopérabilité et de sécurité des données.</p>
 
@@ -449,7 +444,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="downloads.html">next&gt;</a>
+                <a href="appointment.html">next&gt;</a>
 
               </td>
             </tr>
@@ -459,7 +454,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 5, 2025 08:52+0000">2025-05-05</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 6, 2025 13:55+0000">2025-05-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Processus de Préadmission - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+    <title>Processus fonctionnelle de la préadmission - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -99,6 +99,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="processus.html">Processus fonctionnelle de la préadmission</a>
+      </li>
+      <li>
         <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
       </li>
       <li>
@@ -165,7 +168,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Processus de Préadmission</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Processus fonctionnelle de la préadmission</b></li>
 
           <span style="float:right;">
 
@@ -196,7 +199,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.fr/fhir/fr/preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Processus de Préadmission</h2>
+  <h2>Processus fonctionnelle de la préadmission</h2>
   
 
 
@@ -211,22 +214,34 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#étape-1--prise-de-rendez-vous" id="markdown-toc-étape-1--prise-de-rendez-vous">Étape 1 – Prise de rendez-vous</a></li>
+  <li><a href="#étape-2--transmission-des-informations" id="markdown-toc-étape-2--transmission-des-informations">Étape 2 – Transmission des informations</a></li>
+  <li><a href="#étape-3--création-de-la-préadmission" id="markdown-toc-étape-3--création-de-la-préadmission">Étape 3 – Création de la préadmission</a></li>
+  <li><a href="#étape-4--saisie-par-le-patient" id="markdown-toc-étape-4--saisie-par-le-patient">Étape 4 – Saisie par le patient</a></li>
+  <li><a href="#étape-5--envoi-à-lhôpital" id="markdown-toc-étape-5--envoi-à-lhôpital">Étape 5 – Envoi à l’hôpital</a></li>
+  <li><a href="#étape-6--vérification" id="markdown-toc-étape-6--vérification">Étape 6 – Vérification</a></li>
+  <li><a href="#étape-7--correction-en-cas-de-refus" id="markdown-toc-étape-7--correction-en-cas-de-refus">Étape 7 – Correction (en cas de refus)</a></li>
+</ul>
+
 </div>
-<h1 id="processus-de-préadmission-hospitalière-en-ligne">Processus de préadmission hospitalière en ligne</h1>
+<h3 id="introduction">Introduction</h3>
 
-<p>Ce guide décrit le processus de préadmission hospitalière en ligne, permettant aux patients de préparer leur admission avant leur venue à l’hôpital, en coordination avec une plateforme web et le système administratif de l’établissement de santé.</p>
+<p>Cette page décrit le processus de préadmission hospitalière en ligne, permettant aux patients de préparer leur admission avant leur venue à l’hôpital, en coordination avec une plateforme web et le système administratif de l’établissement de santé.</p>
 
-<h2 id="étape-1--prise-de-rendez-vous">Étape 1 – Prise de rendez-vous</h2>
+<h3 id="étape-1--prise-de-rendez-vous">Étape 1 – Prise de rendez-vous</h3>
 
 <p>Le processus débute par la prise de rendez-vous, qui peut se faire :</p>
+
 <ul>
   <li>Directement en ligne par le patient sur une <strong>plateforme de préadmission</strong>.</li>
   <li>Par téléphone via une <strong>secrétaire médicale</strong>, qui saisit le rendez-vous dans le système.</li>
 </ul>
 
 <p>Le rendez-vous est enrichi avec :</p>
+
 <ul>
   <li>Les réponses à un <strong>questionnaire médical</strong>, permettant d’anticiper les besoins spécifiques du patient (ex. : grossesse, pacemaker, allergies).</li>
   <li>Une ou plusieurs <strong>demandes de consentement</strong> concernant :
@@ -238,23 +253,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h2 id="étape-2--transmission-des-informations">Étape 2 – Transmission des informations</h2>
+<h3 id="étape-2--transmission-des-informations">Étape 2 – Transmission des informations</h3>
 
 <p>Toutes les informations collectées (rendez-vous, réponses aux questionnaires, consentements) sont transmises au <strong>système administratif de l’hôpital</strong> pour traitement.</p>
 
-<h2 id="étape-3--création-de-la-préadmission">Étape 3 – Création de la préadmission</h2>
+<h3 id="étape-3--création-de-la-préadmission">Étape 3 – Création de la préadmission</h3>
 
 <p>Le système administratif de l’hôpital :</p>
+
 <ul>
   <li>Crée une ressource <strong>Encounter</strong> représentant la préadmission.</li>
   <li>Transmet cette préadmission au <strong>portail de préadmission en ligne</strong>.</li>
 </ul>
 
-<h2 id="étape-4--saisie-par-le-patient">Étape 4 – Saisie par le patient</h2>
+<h3 id="étape-4--saisie-par-le-patient">Étape 4 – Saisie par le patient</h3>
 
 <p>Le portail notifie le patient qu’il peut compléter sa préadmission.</p>
 
 <p>Le patient est invité à :</p>
+
 <ul>
   <li>Saisir ses <strong>informations administratives</strong> :
     <ul>
@@ -271,13 +288,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h2 id="étape-5--envoi-à-lhôpital">Étape 5 – Envoi à l’hôpital</h2>
+<h3 id="étape-5--envoi-à-lhôpital">Étape 5 – Envoi à l’hôpital</h3>
 
 <p>Une fois complétées, les données et documents sont transmis au <strong>système administratif de l’hôpital</strong>.</p>
 
-<h2 id="étape-6--vérification">Étape 6 – Vérification</h2>
+<h3 id="étape-6--vérification">Étape 6 – Vérification</h3>
 
 <p>Un <strong>agent du bureau des entrées</strong> vérifie les informations reçues :</p>
+
 <ul>
   <li>Si tout est conforme :
     <ul>
@@ -293,9 +311,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h2 id="étape-7--correction-en-cas-de-refus">Étape 7 – Correction (en cas de refus)</h2>
+<h3 id="étape-7--correction-en-cas-de-refus">Étape 7 – Correction (en cas de refus)</h3>
 
 <p>Le patient peut alors :</p>
+
 <ul>
   <li>Accéder à son dossier en ligne,</li>
   <li>Corriger ou compléter les éléments demandés,</li>
@@ -305,6 +324,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <hr />
 
 <p>Ce processus vise à :</p>
+
 <ul>
   <li>Réduire les délais et les erreurs lors de l’admission physique,</li>
   <li>Offrir un meilleur confort au patient,</li>
@@ -352,7 +372,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 5, 2025 08:52+0000">2025-05-05</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 6, 2025 13:55+0000">2025-05-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

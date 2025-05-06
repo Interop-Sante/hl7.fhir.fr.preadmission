@@ -99,6 +99,9 @@
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="processus.html">Processus fonctionnelle de la préadmission</a>
+      </li>
+      <li>
         <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
       </li>
       <li>
@@ -226,7 +229,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2025-05-05
+            as of 2025-05-06
           
         
       </td>
@@ -250,47 +253,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div class="markdown-toc">
-<ul id="markdown-toc">
-  <li><a href="#guide-dimplémentation-fhir--pré-admission-hospitalière-en-ligne" id="markdown-toc-guide-dimplémentation-fhir--pré-admission-hospitalière-en-ligne">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</a>    <ul>
-      <li><a href="#-contexte-et-objectif" id="markdown-toc--contexte-et-objectif">📘 Contexte et Objectif</a>        <ul>
-          <li><a href="#contexte" id="markdown-toc-contexte">Contexte</a></li>
-          <li><a href="#objectif" id="markdown-toc-objectif">Objectif</a></li>
-        </ul>
-      </li>
-      <li><a href="#-périmètre-et-acteurs" id="markdown-toc--périmètre-et-acteurs">🎯 Périmètre et Acteurs</a>        <ul>
-          <li><a href="#périmètre" id="markdown-toc-périmètre">Périmètre</a></li>
-          <li><a href="#acteurs" id="markdown-toc-acteurs">Acteurs</a></li>
-        </ul>
-      </li>
-      <li><a href="#-ressources-fhir--profils" id="markdown-toc--ressources-fhir--profils">🧩 Ressources FHIR &amp; Profils</a>        <ul>
-          <li><a href="#ressources-utilisées" id="markdown-toc-ressources-utilisées">Ressources utilisées</a></li>
-          <li><a href="#profils-personnalisés" id="markdown-toc-profils-personnalisés">Profils personnalisés</a></li>
-          <li><a href="#extensions-spécifiques" id="markdown-toc-extensions-spécifiques">Extensions spécifiques</a></li>
-        </ul>
-      </li>
-      <li><a href="#-enchaînement-des-processus" id="markdown-toc--enchaînement-des-processus">🔄 Enchaînement des Processus</a>        <ul>
-          <li><a href="#parcours-global" id="markdown-toc-parcours-global">Parcours global</a></li>
-        </ul>
-      </li>
-      <li><a href="#-exemples-de-ressources" id="markdown-toc--exemples-de-ressources">📝 Exemples de Ressources</a>        <ul>
-          <li><a href="#identifiant-de-préadmission-vn" id="markdown-toc-identifiant-de-préadmission-vn">Identifiant de préadmission (VN)</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<h1 id="guide-dimplémentation-fhir--pré-admission-hospitalière-en-ligne">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</h1>
+<h3 id="guide-dimplémentation-fhir--pré-admission-hospitalière-en-ligne">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</h3>
 
 <p>Bienvenue dans le guide d’implémentation FHIR pour la pré-admission hospitalière en ligne. Ce guide est structuré en plusieurs sections pour faciliter la compréhension et l’intégration des spécifications.</p>
 
-<h2 id="-contexte-et-objectif">📘 Contexte et Objectif</h2>
+<h4 id="-contexte-et-objectif">📘 Contexte et Objectif</h4>
 
-<h3 id="contexte">Contexte</h3>
+<h5 id="contexte">Contexte</h5>
 
 <p>La pré-admission hospitalière est une étape administrative essentielle permettant à l’établissement de santé de préparer l’accueil du patient en amont. Elle consiste à recueillir, à distance, les informations nécessaires à :</p>
+
 <ul>
   <li>L’identification du patient,</li>
   <li>La gestion de sa couverture sociale,</li>
@@ -300,9 +275,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Ce guide repose sur le standard <strong>FHIR</strong> pour assurer des échanges fluides, sécurisés et interopérables entre les différents systèmes impliqués.</p>
 
-<h3 id="objectif">Objectif</h3>
+<h5 id="objectif">Objectif</h5>
 
 <p>Définir les spécifications d’échange de données entre :</p>
+
 <ul>
   <li>Un portail web de préadmission,</li>
   <li>Un logiciel de gestion des rendez-vous,</li>
@@ -311,11 +287,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>Les profils FHIR décrits ici sont adaptés au contexte français, en tenant compte des spécificités comme l’INS, la couverture sociale, et les exigences réglementaires (RGPD, hébergement HDS).</p>
 
-<h2 id="-périmètre-et-acteurs">🎯 Périmètre et Acteurs</h2>
+<h4 id="-périmètre-et-acteurs">🎯 Périmètre et Acteurs</h4>
 
-<h3 id="périmètre">Périmètre</h3>
+<h5 id="périmètre">Périmètre</h5>
 
 <p>Les ressources FHIR couvertes par ce guide incluent :</p>
+
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">Appointment</code></strong> : Planification d’un rendez-vous,</li>
   <li><strong><code class="language-plaintext highlighter-rouge">Encounter</code></strong> : Gestion de la pré-admission administrative,</li>
@@ -325,16 +302,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code></strong> : Réponses aux questionnaires administratifs ou médicaux.</li>
 </ul>
 
-<h4 id="hors-périmètre-">Hors périmètre :</h4>
+<h6 id="hors-périmètre">Hors périmètre</h6>
+
 <ul>
   <li>Aspects médicaux,</li>
   <li>Urgences,</li>
   <li>Intégration clinique.</li>
 </ul>
 
-<h3 id="acteurs">Acteurs</h3>
+<h5 id="acteurs">Acteurs</h5>
 
 <p>Les principaux acteurs impliqués dans le processus sont :</p>
+
 <ul>
   <li><strong>Patient</strong> : Fournit ses informations administratives, ses documents justificatifs et ses consentements,</li>
   <li><strong>Portail de pré-admission</strong> : Plateforme en ligne pour collecter les données du patient,</li>
@@ -342,11 +321,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>Système administratif hospitalier</strong> : Vérifie et valide les informations transmises.</li>
 </ul>
 
-<h2 id="-ressources-fhir--profils">🧩 Ressources FHIR &amp; Profils</h2>
+<h4 id="-ressources-fhir--profils">🧩 Ressources FHIR &amp; Profils</h4>
 
-<h3 id="ressources-utilisées">Ressources utilisées</h3>
+<h5 id="ressources-utilisées">Ressources utilisées</h5>
 
 <p>Les ressources FHIR suivantes sont utilisées dans le cadre de la pré-admission :</p>
+
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">Appointment</code></strong> : Gestion des rendez-vous,</li>
   <li><strong><code class="language-plaintext highlighter-rouge">Encounter</code></strong> : Pré-admission administrative,</li>
@@ -356,9 +336,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code></strong> : Réponses aux questionnaires.</li>
 </ul>
 
-<h3 id="profils-personnalisés">Profils personnalisés</h3>
+<h5 id="profils-personnalisés">Profils personnalisés</h5>
 
 <p>Les profils FHIR suivants ont été définis pour répondre aux besoins spécifiques de la pré-admission :</p>
+
 <ul>
   <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionAppointmentFr</code></strong> : Profil pour les rendez-vous,</li>
   <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionEncounterFr</code></strong> : Profil pour la pré-admission,</li>
@@ -367,11 +348,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionConsentFr</code></strong> : Profil pour les consentements.</li>
 </ul>
 
-<h3 id="extensions-spécifiques">Extensions spécifiques</h3>
+<h5 id="extensions-spécifiques">Extensions spécifiques</h5>
 
 <p>Des extensions ont été ajoutées pour enrichir les ressources FHIR et répondre aux besoins spécifiques de la préadmission hospitalière. Ces extensions permettent de capturer des informations supplémentaires essentielles au processus administratif et réglementaire.</p>
 
-<h4 id="rattachement-complémentaire-amc">Rattachement complémentaire (AMC)</h4>
+<h6 id="rattachement-complémentaire-amc">Rattachement complémentaire (AMC)</h6>
 
 <ul>
   <li><strong>Extension :</strong> <code class="language-plaintext highlighter-rouge">FrCoverageAMCExtension</code></li>
@@ -393,7 +374,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h4 id="statut-de-la-pré-admission">Statut de la pré-admission</h4>
+<h6 id="statut-de-la-pré-admission">Statut de la pré-admission</h6>
 
 <ul>
   <li><strong>Extension :</strong> <code class="language-plaintext highlighter-rouge">PreadmissionStatutFr</code></li>
@@ -414,14 +395,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h4 id="remarque-du-patient">Remarque du patient</h4>
+<h6 id="remarque-du-patient">Remarque du patient</h6>
 
 <ul>
   <li><strong>Extension :</strong> <code class="language-plaintext highlighter-rouge">EncounterPatientComment</code></li>
   <li><strong>Ressource concernée :</strong> <code class="language-plaintext highlighter-rouge">Encounter</code></li>
-  <li>
-    <p><strong>Description :</strong> Permet au patient de fournir des commentaires libres à destination de l’agent administratif.</p>
-  </li>
+  <li><strong>Description :</strong> Permet au patient de fournir des commentaires libres à destination de l’agent administratif.</li>
   <li><strong>Exemple d’utilisation :</strong>
     <ul>
       <li>Remarque : “Je ne pourrai pas être présent à l’heure exacte du rendez-vous.”</li>
@@ -429,7 +408,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h4 id="consignes-de-lagent-administratif">Consignes de l’agent administratif</h4>
+<h6 id="consignes-de-lagent-administratif">Consignes de l’agent administratif</h6>
 
 <ul>
   <li><strong>Extension :</strong> <code class="language-plaintext highlighter-rouge">EncounterAgentInstructions</code></li>
@@ -444,7 +423,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h4 id="consentements-liés-à-la-préadmission">Consentements liés à la préadmission</h4>
+<h6 id="consentements-liés-à-la-préadmission">Consentements liés à la préadmission</h6>
 
 <ul>
   <li><strong>Extension :</strong> <code class="language-plaintext highlighter-rouge">PreadmissionConsentementsExtension</code></li>
@@ -459,34 +438,37 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h2 id="-enchaînement-des-processus">🔄 Enchaînement des Processus</h2>
+<h4 id="-enchaînement-des-processus">🔄 Enchaînement des Processus</h4>
 
-<h3 id="parcours-global">Parcours global</h3>
+<h5 id="parcours-global">Parcours global</h5>
 
-<h4 id="logiciel-de-rendez-vous">Logiciel de rendez-vous</h4>
+<h6 id="logiciel-de-rendez-vous">Logiciel de rendez-vous</h6>
+
 <ul>
   <li>Création d’un rendez-vous (<code class="language-plaintext highlighter-rouge">Appointment</code>),</li>
   <li>Association des réponses aux questionnaires (<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>),</li>
   <li>Référencement des consentements recueillis (<code class="language-plaintext highlighter-rouge">Consent</code>).</li>
 </ul>
 
-<h4 id="système-administratif">Système administratif</h4>
+<h6 id="système-administratif">Système administratif</h6>
+
 <ul>
   <li>Récupération des données transmises par le portail,</li>
   <li>Création d’une ressource <code class="language-plaintext highlighter-rouge">Encounter</code> pour la pré-admission,</li>
   <li>Vérification des informations administratives, de la couverture sociale (<code class="language-plaintext highlighter-rouge">Coverage</code>), et des documents justificatifs.</li>
 </ul>
 
-<h4 id="portail-de-préadmission">Portail de préadmission</h4>
+<h6 id="portail-de-préadmission">Portail de préadmission</h6>
+
 <ul>
   <li>Le patient remplit un formulaire de pré-admission,</li>
   <li>Téléverse ses documents justificatifs (<code class="language-plaintext highlighter-rouge">DocumentReference</code>),</li>
   <li>Fournit ses consentements (<code class="language-plaintext highlighter-rouge">Consent</code>).</li>
 </ul>
 
-<h2 id="-exemples-de-ressources">📝 Exemples de Ressources</h2>
+<h4 id="-exemples-de-ressources">📝 Exemples de Ressources</h4>
 
-<h3 id="identifiant-de-préadmission-vn">Identifiant de préadmission (VN)</h3>
+<h5 id="identifiant-de-préadmission-vn">Identifiant de préadmission (VN)</h5>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -505,6 +487,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
+
 
 
 
@@ -546,7 +529,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 5, 2025 08:52+0000">2025-05-05</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 6, 2025 13:55+0000">2025-05-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

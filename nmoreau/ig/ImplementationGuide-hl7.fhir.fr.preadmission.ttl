@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PREADMISSIONFR"] ; # 
   fhir:title [ fhir:v "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-05-05T08:51:40+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-05-06T13:54:59+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -1556,7 +1556,7 @@
            a fhir:url ;
            fhir:v "processus.html"^^xsd:anyURI
          ] ;
-         fhir:title [ fhir:v "Processus de Préadmission" ] ;
+         fhir:title [ fhir:v "Processus fonctionnelle de la préadmission" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -1571,6 +1571,34 @@
            fhir:v "processus-ressource-fhir.html"^^xsd:anyURI
          ] ;
          fhir:title [ fhir:v "Processus centré sur les ressources" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "flux.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "flux.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Diagrammes des flux" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
+             fhir:v "sequence.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "sequence.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Diagramme de séquence du processus" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -1605,20 +1633,6 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:url ;
-             fhir:v "consentements.html"^^xsd:anyURI
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:url ;
-           fhir:v "consentements.html"^^xsd:anyURI
-         ] ;
-         fhir:title [ fhir:v "Consentements" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [
-             a fhir:url ;
              fhir:v "coverage.html"^^xsd:anyURI
            ]
          ] ) ;
@@ -1633,6 +1647,20 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:url ;
+             fhir:v "consentements.html"^^xsd:anyURI
+           ]
+         ] ) ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "consentements.html"^^xsd:anyURI
+         ] ;
+         fhir:title [ fhir:v "Consentements (Consent)" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [
+             a fhir:url ;
              fhir:v "questionnaires.html"^^xsd:anyURI
            ]
          ] ) ;
@@ -1640,7 +1668,7 @@
            a fhir:url ;
            fhir:v "questionnaires.html"^^xsd:anyURI
          ] ;
-         fhir:title [ fhir:v "Questionnaires" ] ;
+         fhir:title [ fhir:v "Questionnaires (QuestionnaireResponse)" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
@@ -1654,35 +1682,7 @@
            a fhir:url ;
            fhir:v "documents.html"^^xsd:anyURI
          ] ;
-         fhir:title [ fhir:v "Documents Justificatifs" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [
-             a fhir:url ;
-             fhir:v "flux.html"^^xsd:anyURI
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:url ;
-           fhir:v "flux.html"^^xsd:anyURI
-         ] ;
-         fhir:title [ fhir:v "Diagrammes des flux" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [
-             a fhir:url ;
-             fhir:v "sequence.html"^^xsd:anyURI
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:url ;
-           fhir:v "sequence.html"^^xsd:anyURI
-         ] ;
-         fhir:title [ fhir:v "Diagramme de séquence du processus" ] ;
+         fhir:title [ fhir:v "Documents Justificatifs (DocumentReference)" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

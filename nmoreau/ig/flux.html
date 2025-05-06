@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"10"}
-    h3,h4,h5,h6{--heading-prefix:"10"}</style>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -98,6 +98,9 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="processus.html">Processus fonctionnelle de la préadmission</a>
+      </li>
       <li>
         <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
       </li>
@@ -169,7 +172,7 @@
 
           <span style="float:right;">
 
-            <a href="documents.html">&lt;prev</a> | 
+            <a href="processus-ressource-fhir.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
@@ -213,33 +216,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#flux-déchange--préadmission" id="markdown-toc-flux-déchange--préadmission">Flux d’échange – Préadmission</a>    <ul>
-      <li><a href="#objectif" id="markdown-toc-objectif">Objectif</a></li>
-      <li><a href="#acteurs" id="markdown-toc-acteurs">Acteurs</a></li>
-      <li><a href="#scénario-global-des-flux" id="markdown-toc-scénario-global-des-flux">Scénario global des flux</a>        <ul>
-          <li><a href="#1-prise-de-rendez-vous" id="markdown-toc-1-prise-de-rendez-vous">1. <strong>Prise de rendez-vous</strong></a></li>
-          <li><a href="#2-soumission-des-informations-de-préadmission" id="markdown-toc-2-soumission-des-informations-de-préadmission">2. <strong>Soumission des informations de préadmission</strong></a></li>
-          <li><a href="#3-recueil-des-consentements" id="markdown-toc-3-recueil-des-consentements">3. <strong>Recueil des consentements</strong></a></li>
-          <li><a href="#4-vérification-et-validation-par-lagent-du-bde" id="markdown-toc-4-vérification-et-validation-par-lagent-du-bde">4. <strong>Vérification et validation par l’agent du BDE</strong></a></li>
-          <li><a href="#5-notification-au-patient" id="markdown-toc-5-notification-au-patient">5. Notification au patient</a></li>
-        </ul>
-      </li>
-      <li><a href="#schéma-global-des-flux" id="markdown-toc-schéma-global-des-flux">Schéma global des flux</a></li>
-      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-    </ul>
-  </li>
+  <li><a href="#objectif" id="markdown-toc-objectif">Objectif</a></li>
+  <li><a href="#acteurs" id="markdown-toc-acteurs">Acteurs</a></li>
+  <li><a href="#scénario-global-des-flux" id="markdown-toc-scénario-global-des-flux">Scénario global des flux</a></li>
+  <li><a href="#schéma-global-des-flux" id="markdown-toc-schéma-global-des-flux">Schéma global des flux</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
 </ul>
 
 </div>
-<h1 id="flux-déchange--préadmission">Flux d’échange – Préadmission</h1>
+<h3 id="objectif">Objectif</h3>
 
-<h2 id="objectif">Objectif</h2>
-
-<p>Ce document décrit les échanges entre les différentes parties impliquées dans une <strong>pré-admission hospitalière en ligne</strong>, en tenant compte des <strong>contraintes réseau</strong> (pas d’accès direct au SIH depuis Internet) et des <strong>retours manuels</strong> de l’agent administratif. Les flux décrits ici s’appuient sur les ressources FHIR définies dans cet IG.</p>
+<p>Cette page décrit les échanges entre les différentes parties impliquées dans une <strong>pré-admission hospitalière en ligne</strong>, en tenant compte des <strong>contraintes réseau</strong> (pas d’accès direct au SIH depuis Internet) et des <strong>retours manuels</strong> de l’agent administratif. Les flux décrits ici s’appuient sur les ressources FHIR définies dans cet IG.</p>
 
 <hr />
 
-<h2 id="acteurs">Acteurs</h2>
+<h3 id="acteurs">Acteurs</h3>
 
 <table>
   <thead>
@@ -274,9 +265,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="scénario-global-des-flux">Scénario global des flux</h2>
+<h3 id="scénario-global-des-flux">Scénario global des flux</h3>
 
-<h3 id="1-prise-de-rendez-vous">1. <strong>Prise de rendez-vous</strong></h3>
+<h4 id="1-prise-de-rendez-vous">1. <strong>Prise de rendez-vous</strong></h4>
+
 <ul>
   <li><strong>Acteurs impliqués</strong> : Patient, Portail de rendez-vous, Système administratif de l’hôpital.</li>
   <li><strong>Description</strong> : Le patient réserve une consultation ou un séjour via un portail externe. Une ressource <code class="language-plaintext highlighter-rouge">Appointment</code> est créée dans le Portail de rendez-vous et est transmis au Système administratif de l’hôpital pour planifier la venue.</li>
@@ -291,12 +283,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 <p><strong>Schéma :</strong></p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Patient → [Portail de rendez-vous] → Système administratif de l'hôpital
 </code></pre></div></div>
 
 <hr />
 
-<h3 id="2-soumission-des-informations-de-préadmission">2. <strong>Soumission des informations de préadmission</strong></h3>
+<h4 id="2-soumission-des-informations-de-préadmission">2. <strong>Soumission des informations de préadmission</strong></h4>
+
 <ul>
   <li><strong>Acteurs impliqués</strong> : Patient, Portail de préadmission, Système administratif de l’hôpital.</li>
   <li><strong>Description</strong> : Le patient remplit un formulaire de préadmission sur le portail de préadmission. Les informations administratives (identité, couverture sociale, etc.) et les documents justificatifs (carte d’identité, carte Vitale, etc.) sont collectés.</li>
@@ -310,12 +304,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 <p><strong>Schéma :</strong></p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Patient → [Portail de préadmission] → Système administratif de l'hôpital
 </code></pre></div></div>
 
 <hr />
 
-<h3 id="3-recueil-des-consentements">3. <strong>Recueil des consentements</strong></h3>
+<h4 id="3-recueil-des-consentements">3. <strong>Recueil des consentements</strong></h4>
+
 <ul>
   <li><strong>Acteurs impliqués</strong> : Patient, Portail de préadmission, Système administratif de l’hôpital.</li>
   <li><strong>Description</strong> : Le patient donne son consentement pour le traitement de ses données personnelles (RGPD), l’accès au DMP, ou la transmission de données à des tiers. Ces consentements sont transmis au Système administratif de l’hôpital.</li>
@@ -330,13 +326,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Patient → [Portail de rendez-vous] → Système administratif de l'hôpital
 </code></pre></div></div>
+
 <p>OU</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Patient → [Portail de préadmission] → Système administratif de l'hôpital
 </code></pre></div></div>
 
 <hr />
 
-<h3 id="4-vérification-et-validation-par-lagent-du-bde">4. <strong>Vérification et validation par l’agent du BDE</strong></h3>
+<h4 id="4-vérification-et-validation-par-lagent-du-bde">4. <strong>Vérification et validation par l’agent du BDE</strong></h4>
+
 <ul>
   <li><strong>Acteurs impliqués</strong> : Agent du BDE, Système administratif de l’hôpital.</li>
   <li><strong>Description</strong> : L’agent du Bureau des Entrées (BDE) vérifie les informations transmises (documents, consentements, couverture sociale) et valide ou refuse la préadmission.</li>
@@ -354,7 +353,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h3 id="5-notification-au-patient">5. Notification au patient</h3>
+<h4 id="5-notification-au-patient">5. Notification au patient</h4>
+
 <ul>
   <li><strong>Acteurs impliqués</strong> : Système administratif de l’hôpital, Portail de préadmission, Patient.</li>
   <li><strong>Description</strong> : Une fois la préadmission validée ou refusée, le patient est notifié via le portail de préadmission. En cas de refus, le motif est communiqué.</li>
@@ -370,7 +370,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SIH → [Portail de préadmission] → Patient
 </code></pre></div></div>
 
-<h2 id="schéma-global-des-flux">Schéma global des flux</h2>
+<h3 id="schéma-global-des-flux">Schéma global des flux</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Prise de rendez-vous
    Patient → [Portail de rendez-vous] → Système administratif de l'hôpital
@@ -412,9 +412,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     SystemeAdmin --&gt;|Notification| PortailPread --&gt;|Consultation du statut| Patient3
 </code></pre>
 
-<h2 id="conclusion">Conclusion</h2>
+<h3 id="conclusion">Conclusion</h3>
 
 <p>Les flux décrits dans ce document permettent de structurer et de coordonner les échanges entre les différents acteurs impliqués dans la préadmission hospitalière. En s’appuyant sur les ressources FHIR (<code class="language-plaintext highlighter-rouge">Appointment</code>, <code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Coverage</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code>, <code class="language-plaintext highlighter-rouge">Consent</code>, <code class="language-plaintext highlighter-rouge">Encounter</code>, etc.), ce processus garantit une gestion efficace et conforme aux exigences réglementaires.</p>
+
 
 
 
@@ -438,7 +439,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="documents.html">&lt;prev</a>
+                <a href="processus-ressource-fhir.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -456,7 +457,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 5, 2025 08:52+0000">2025-05-05</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 6, 2025 13:55+0000">2025-05-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

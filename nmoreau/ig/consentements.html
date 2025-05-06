@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Consentements - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+    <title>Consentements (Consent) - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"6"}
-    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <style type="text/css">h2{--heading-prefix:"9"}
+    h3,h4,h5,h6{--heading-prefix:"9"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -98,6 +98,9 @@
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu">
+      <li>
+        <a href="processus.html">Processus fonctionnelle de la préadmission</a>
+      </li>
       <li>
         <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
       </li>
@@ -165,15 +168,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Consentements</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Consentements (Consent)</b></li>
 
           <span style="float:right;">
 
-            <a href="encounter.html">&lt;prev</a> | 
+            <a href="coverage.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="coverage.html">next&gt;</a>
+          | <a href="questionnaires.html">next&gt;</a>
 
           </span>
 
@@ -196,7 +199,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </style>
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://hl7.fr/fhir/fr/preadmission/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Consentements</h2>
+  <h2>Consentements (Consent)</h2>
   
 
 
@@ -213,29 +216,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#consentements-dans-la-preadmission" id="markdown-toc-consentements-dans-la-preadmission">Consentements dans la Preadmission</a>    <ul>
-      <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
-      <li><a href="#types-de-consentements-recueillis" id="markdown-toc-types-de-consentements-recueillis">Types de consentements recueillis</a>        <ul>
-          <li><a href="#1-consentement-au-traitement-des-données-personnelles-rgpd" id="markdown-toc-1-consentement-au-traitement-des-données-personnelles-rgpd"><strong>1. Consentement au traitement des données personnelles (RGPD)</strong></a></li>
-          <li><a href="#2-consentement-à-laccès-et-à-lalimentation-du-dmp" id="markdown-toc-2-consentement-à-laccès-et-à-lalimentation-du-dmp"><strong>2. Consentement à l’accès et à l’alimentation du DMP</strong></a></li>
-          <li><a href="#3-consentement-à-la-transmission-à-une-plateforme-de-préadmission" id="markdown-toc-3-consentement-à-la-transmission-à-une-plateforme-de-préadmission"><strong>3. Consentement à la transmission à une plateforme de préadmission</strong></a></li>
-        </ul>
-      </li>
-      <li><a href="#ressource-fhir--consent" id="markdown-toc-ressource-fhir--consent">Ressource FHIR : <code class="language-plaintext highlighter-rouge">Consent</code></a>        <ul>
-          <li><a href="#contraintes-principales" id="markdown-toc-contraintes-principales"><strong>Contraintes principales</strong></a></li>
-        </ul>
-      </li>
-      <li><a href="#liens-avec-les-autres-ressources" id="markdown-toc-liens-avec-les-autres-ressources">Liens avec les autres ressources</a></li>
-      <li><a href="#bonnes-pratiques" id="markdown-toc-bonnes-pratiques">Bonnes pratiques</a></li>
-      <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
-    </ul>
-  </li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#types-de-consentements-recueillis" id="markdown-toc-types-de-consentements-recueillis">Types de consentements recueillis</a></li>
+  <li><a href="#ressource-fhir--consent" id="markdown-toc-ressource-fhir--consent">Ressource FHIR : <code class="language-plaintext highlighter-rouge">Consent</code></a></li>
+  <li><a href="#liens-avec-les-autres-ressources" id="markdown-toc-liens-avec-les-autres-ressources">Liens avec les autres ressources</a></li>
+  <li><a href="#bonnes-pratiques" id="markdown-toc-bonnes-pratiques">Bonnes pratiques</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
 </ul>
 
 </div>
-<h1 id="consentements-dans-la-preadmission">Consentements dans la Preadmission</h1>
-
-<h2 id="introduction">Introduction</h2>
+<h3 id="introduction">Introduction</h3>
 
 <p>Dans le cadre de la préadmission hospitalière, plusieurs consentements doivent être recueillis auprès du patient pour se conformer aux exigences réglementaires et garantir une gestion transparente et sécurisée des données personnelles et médicales. Ces consentements couvrent des aspects variés, tels que le traitement des données personnelles (RGPD), l’accès au Dossier Médical Partagé (DMP), ou encore la transmission de données à des tiers.</p>
 
@@ -243,9 +233,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="types-de-consentements-recueillis">Types de consentements recueillis</h2>
+<h3 id="types-de-consentements-recueillis">Types de consentements recueillis</h3>
 
-<h3 id="1-consentement-au-traitement-des-données-personnelles-rgpd"><strong>1. Consentement au traitement des données personnelles (RGPD)</strong></h3>
+<h4 id="1-consentement-au-traitement-des-données-personnelles-rgpd"><strong>1. Consentement au traitement des données personnelles (RGPD)</strong></h4>
 
 <p>Ce consentement est obligatoire et permet de recueillir l’accord du patient pour le traitement de ses données personnelles dans le cadre de la préadmission. Il garantit la conformité avec les exigences du RGPD.</p>
 
@@ -253,7 +243,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>Catégorie</strong> : <code class="language-plaintext highlighter-rouge">other</code> (traitement des données personnelles)</li>
   <li><strong>Statut</strong> : Actif ou refusé</li>
   <li><strong>Règle applicable</strong> : RGPD</li>
-  <li><strong>Ressource FHIR</strong> :
+  <li>
+    <p><strong>Ressource FHIR</strong></p>
+
     <ul>
       <li><code class="language-plaintext highlighter-rouge">Consent.category = "other"</code></li>
       <li><code class="language-plaintext highlighter-rouge">Consent.policyRule = "RGPD"</code></li>
@@ -263,7 +255,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h3 id="2-consentement-à-laccès-et-à-lalimentation-du-dmp"><strong>2. Consentement à l’accès et à l’alimentation du DMP</strong></h3>
+<h4 id="2-consentement-à-laccès-et-à-lalimentation-du-dmp"><strong>2. Consentement à l’accès et à l’alimentation du DMP</strong></h4>
 
 <table>
   <thead>
@@ -292,21 +284,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tbody>
 </table>
 
-<p>Ce consentement permet à l’établissement de santé d’accéder au Dossier Médical Partagé (DMP) du patient et d’y inscrire des documents relatifs à la préadmission. Il est modélisé à l’aide de deux sous-catégories distinctes :</p>
+<p>Ce consentement permet à l’établissement de santé d’accéder au Dossier Médical Partagé (DMP) du patient et d’y inscrire des documents relatifs à la préadmission. Il est modélisé à l’aide de deux sous-catégories distinctes</p>
+
 <ul>
   <li><strong>Accès au DMP</strong> : Permet la consultation des données du DMP.</li>
   <li>
     <p><strong>Alimentation du DMP</strong> : Autorise l’ajout de documents dans le DMP.</p>
   </li>
   <li><strong>Catégories</strong> : <code class="language-plaintext highlighter-rouge">consultationDmp</code> et <code class="language-plaintext highlighter-rouge">alimentationDmp</code></li>
-  <li><strong>Statuts possibles</strong> :
+  <li>
+    <p><strong>Statuts possibles</strong></p>
+
     <ul>
       <li><code class="language-plaintext highlighter-rouge">Informé et consent</code> (autorisé)</li>
       <li><code class="language-plaintext highlighter-rouge">Informé et ne consent pas</code> (refusé)</li>
       <li><code class="language-plaintext highlighter-rouge">Information non recueillie</code></li>
     </ul>
   </li>
-  <li><strong>Ressource FHIR</strong> :
+  <li>
+    <p><strong>Ressource FHIR</strong></p>
+
     <ul>
       <li><code class="language-plaintext highlighter-rouge">Consent.category = "consultationDmp"</code> ou <code class="language-plaintext highlighter-rouge">Consent.category = "alimentationDmp"</code></li>
       <li><code class="language-plaintext highlighter-rouge">Consent.policyRule = "FR-DMP-ACCESS"</code></li>
@@ -314,30 +311,26 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </li>
 </ul>
 
-<h4 id="valeurs-autorisées">Valeurs autorisées</h4>
+<h5 id="valeurs-autorisées">Valeurs autorisées</h5>
 
 <table>
   <thead>
     <tr>
       <th><strong>Code</strong></th>
-      <th><strong>System</strong></th>
       <th><strong>Libellé</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>225773000</td>
-      <td>http://snomed.info/sct</td>
+      <td>IC</td>
       <td>Informé et non opposé (consentement éclairé)</td>
     </tr>
     <tr>
-      <td>311401005</td>
-      <td>http://snomed.info/sct</td>
+      <td>INC</td>
       <td>Informé et opposé (refusé)</td>
     </tr>
     <tr>
-      <td>261665006</td>
-      <td>http://snomed.info/sct</td>
+      <td>NA</td>
       <td>Information non recueillie (non demandé)</td>
     </tr>
   </tbody>
@@ -345,14 +338,14 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h3 id="3-consentement-à-la-transmission-à-une-plateforme-de-préadmission"><strong>3. Consentement à la transmission à une plateforme de préadmission</strong></h3>
+<h4 id="3-consentement-à-la-transmission-à-une-plateforme-de-préadmission"><strong>3. Consentement à la transmission à une plateforme de préadmission</strong></h4>
 
 <p>Ce consentement permet de transmettre certaines données administratives et médicales du patient à un tiers hébergeur de solution numérique de préadmission. Il est facultatif et dépend de l’utilisation d’un portail externe.</p>
 
 <ul>
   <li><strong>Catégorie</strong> : <code class="language-plaintext highlighter-rouge">portal-transfer</code></li>
   <li><strong>Statut</strong> : Actif ou refusé</li>
-  <li><strong>Ressource FHIR</strong> :
+  <li><strong>Ressource FHIR</strong>
     <ul>
       <li><code class="language-plaintext highlighter-rouge">Consent.category = "portal-transfer"</code></li>
       <li><code class="language-plaintext highlighter-rouge">Consent.policyRule = "PLATFORM-TRANSFER"</code></li>
@@ -362,11 +355,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="ressource-fhir--consent">Ressource FHIR : <code class="language-plaintext highlighter-rouge">Consent</code></h2>
+<h3 id="ressource-fhir--consent">Ressource FHIR : <code class="language-plaintext highlighter-rouge">Consent</code></h3>
 
 <p>La ressource <code class="language-plaintext highlighter-rouge">Consent</code> est utilisée pour modéliser chaque consentement recueilli auprès du patient. Elle contient des métadonnées essentielles telles que le type de consentement, le statut, et les règles applicables.</p>
 
-<h3 id="contraintes-principales"><strong>Contraintes principales</strong></h3>
+<h4 id="contraintes-principales"><strong>Contraintes principales</strong></h4>
+
 <ul>
   <li><strong>Statut du consentement</strong> : Obligatoire, avec des valeurs possibles comme <code class="language-plaintext highlighter-rouge">active</code>, <code class="language-plaintext highlighter-rouge">inactive</code>, ou <code class="language-plaintext highlighter-rouge">rejected</code>.</li>
   <li><strong>Catégorie</strong> : Définit le type de consentement (RGPD, DMP, transmission à tiers).</li>
@@ -376,13 +370,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h2 id="liens-avec-les-autres-ressources">Liens avec les autres ressources</h2>
+<h3 id="liens-avec-les-autres-ressources">Liens avec les autres ressources</h3>
+
 <ul>
   <li><strong>Lien avec le patient</strong> : Chaque consentement est directement lié à une ressource <code class="language-plaintext highlighter-rouge">Patient</code>.</li>
   <li><strong>Lien avec la préadmission</strong> : Les consentements peuvent être référencés dans la ressource <code class="language-plaintext highlighter-rouge">Encounter</code> ou <code class="language-plaintext highlighter-rouge">Appointment</code> associée à la préadmission.</li>
 </ul>
 
-<h2 id="bonnes-pratiques">Bonnes pratiques</h2>
+<h3 id="bonnes-pratiques">Bonnes pratiques</h3>
+
 <ul>
   <li><strong>Traçabilité</strong> : Tous les consentements doivent être horodatés et archivés pour garantir une traçabilité complète.</li>
   <li><strong>Mise à jour des statuts</strong> : L’état du consentement (active, rejected, etc.) doit être mis à jour en cas de modification ou de retrait.</li>
@@ -390,8 +386,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><strong>Notification au patient</strong> : En cas de modification des règles ou des politiques, le patient doit être informé et son consentement mis à jour si nécessaire.</li>
 </ul>
 
-<h2 id="conclusion">Conclusion</h2>
+<h3 id="conclusion">Conclusion</h3>
+
 <p>La ressource <code class="language-plaintext highlighter-rouge">Consent</code>, enrichie de contraintes spécifiques, joue un rôle central dans la gestion des autorisations nécessaires au processus de préadmission. Elle garantit une conformité réglementaire tout en facilitant la gestion des données administratives et médicales du patient.</p>
+
 
 
 
@@ -415,7 +413,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="encounter.html">&lt;prev</a>
+                <a href="coverage.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -423,7 +421,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="coverage.html">next&gt;</a>
+                <a href="questionnaires.html">next&gt;</a>
 
               </td>
             </tr>
@@ -433,7 +431,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 5, 2025 08:52+0000">2025-05-05</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 6, 2025 13:55+0000">2025-05-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

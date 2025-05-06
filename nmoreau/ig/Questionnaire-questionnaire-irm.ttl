@@ -18,7 +18,7 @@
   fhir:title [ fhir:v "Questionnaire IRM - Préadmission"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:subjectType ( [ fhir:v "Patient"] ) ; # 
-  fhir:date [ fhir:v "2025-05-05T08:51:40+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-05-06T13:54:59+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
