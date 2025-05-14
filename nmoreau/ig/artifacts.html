@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"14"}
-    h3,h4,h5,h6{--heading-prefix:"14.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -109,31 +109,6 @@
       </li>
       <li>
         <a href="sequence.html">Diagramme de séquence</a>
-      </li>
-    </ul>
-  </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Ressources
-      <b class="caret"></b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="appointment.html">Appointment</a>
-      </li>
-      <li>
-        <a href="encounter.html">Encounter</a>
-      </li>
-      <li>
-        <a href="coverage.html">Coverage</a>
-      </li>
-      <li>
-        <a href="consentements.html">Consentements</a>
-      </li>
-      <li>
-        <a href="questionnaires.html">Questionnaires</a>
-      </li>
-      <li>
-        <a href="documents.html">Documents</a>
       </li>
     </ul>
   </li>
@@ -362,11 +337,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-consent-information-status.html"
-                  title="ValueSet/consent-information-status">Statut d'information et de consentement</a>
+               <a href="ValueSet-preadmission-consent-code-value-set.html"
+                  title="ValueSet/preadmission-consent-code-value-set">Codes des actions de consentement (standard HL7)</a>
             </td>
             <td>
-<p>Statut du patient concernant l’information et le consentement, incluant les cas d’opposition ou d’absence de recueil.</p>
+<p>Code HL7 v3 ActCode représentant les types d’action concernées par le consentement. Tous les codes sont standards et existants.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-preadmission-consent-purpose-reason-vs.html"
+                  title="ValueSet/preadmission-consent-purpose-reason-vs">Finalités du traitement dans le cadre des consentements</a>
+            </td>
+            <td>
+<p>Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason).</p>
 </td>
          </tr>
          <tr>
@@ -389,15 +373,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
          <tr>
             <td style="column-width:30%">
-               <a href="ValueSet-preadmission-consent-value-set.html"
-                  title="ValueSet/preadmission-consent-value-set">ValueSet des consentements du patient</a>
-            </td>
-            <td>
-<p>Consentements exprimés par le patient dans le cadre de la préadmission.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="ValueSet-preadmission-status-value-set.html"
                   title="ValueSet/preadmission-status-value-set">ValueSet des statuts de préadmission</a>
             </td>
@@ -412,15 +387,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </td>
             <td>
 <p>Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="ValueSet-consent-category-value-set.html"
-                  title="ValueSet/consent-category-value-set">ValueSet pour la catégorie de consentement</a>
-            </td>
-            <td>
-<p>Valeurs autorisées pour la catégorie de consentement</p>
 </td>
          </tr>
       </tbody>
@@ -477,6 +443,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
+               <a href="Consent-consentement-multi.html"
+                  title="Consent/consentement-multi">Consentement global incluant consultation DMP, RGPD, et partage d'information</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Consent-consentement-one.html" title="Consent/consentement-one">Consentement unique représentant le non reccueil de la consultation DMP</a>
+            </td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
                <a href="Questionnaire-questionnaire-irm.html"
                   title="Questionnaire/questionnaire-irm">Questionnaire IRM - Préadmission</a>
             </td>
@@ -484,23 +461,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tr>
             <td style="column-width:30%">
                <a href="Appointment-appt-irm-001.html" title="Appointment/appt-irm-001">appt-irm-001</a>
-            </td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Consent-consent-alimentation-dmp.html"
-                  title="Consent/consent-alimentation-dmp">consent-alimentation-dmp</a>
-            </td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Consent-consent-consultation-dmp.html"
-                  title="Consent/consent-consultation-dmp">consent-consultation-dmp</a>
-            </td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="Consent-consent-rgpd.html" title="Consent/consent-rgpd">consent-rgpd</a>
             </td>
          </tr>
          <tr>
@@ -590,7 +550,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 6, 2025 13:55+0000">2025-05-06</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, May 14, 2025 09:01+0000">2025-05-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

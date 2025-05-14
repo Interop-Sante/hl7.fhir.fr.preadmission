@@ -24,18 +24,6 @@
       "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "PreadmissionConsentCategoryCodeSystem",
-      "title" : "Types de consentements pour la préadmission",
-      "description" : "Types de consentement recueillis pendant la préadmission.",
-      "uses" : {
-      },
-      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement",
-      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient"
-    },
-    {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
       "version" : "0.1.0",
       "status" : "draft",
@@ -45,17 +33,6 @@
       "uses" : {
       },
       "ValueSet-preadmission-status-value-set.html" : "ValueSet des statuts de préadmission"
-    },
-    {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "ValeursConsentementCodeSystem",
-      "title" : "Statuts de consentements",
-      "description" : "Valeurs possibles pour les consentements",
-      "uses" : {
-      },
-      "ValueSet-consent-information-status.html" : "Statut d'information et de consentement"
     },
     {
       "url" : "http://hl7.org/fhir/appointmentstatus",
@@ -235,6 +212,7 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-c80-doc-typecodes.html" : "Document Type Value Set",
+      "http://hl7.org/fhir/R4/valueset-consent-category.html" : "Consent Category Codes",
       "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set",
       "http://hl7.org/fhir/R4/valueset-consent-content-code.html" : "Consent Content Codes"
     },
@@ -248,9 +226,9 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
+      "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
       "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
-      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
-      "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes"
+      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/admit-source",
@@ -299,6 +277,18 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-consent-action.html" : "Consent Action Codes"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/consentcategorycodes",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "ConsentCategoryCodes",
+      "title" : "Consent Category Codes",
+      "description" : "This value set includes sample Consent Directive Type codes, including several consent directive related LOINC codes; HL7 VALUE SET: ActConsentType(2.16.840.1.113883.1.11.19897); examples of US realm consent directive legal descriptions and references to online and/or downloadable forms such as the SSA-827 Authorization to Disclose Information to the Social Security Administration; and other anticipated consent directives related to participation in a clinical trial, medical procedures, reproductive procedures; health care directive (Living Will); advance directive, do not resuscitate (DNR); Physician Orders for Life-Sustaining Treatment (POLST)",
+      "oids" : ["2.16.840.1.113883.4.642.1.1226"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-consent-category.html" : "Consent Category Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
@@ -538,8 +528,9 @@
       "uses" : {
       },
       "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission",
+      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode",
       "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActCode.html" : "v3 Code System ActCode",
-      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode"
+      "ValueSet-preadmission-consent-code-value-set.html" : "Codes des actions de consentement (standard HL7)"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
@@ -563,6 +554,7 @@
       "oids" : ["2.16.840.1.113883.5.8"],
       "uses" : {
       },
+      "ValueSet-preadmission-consent-purpose-reason-vs.html" : "Finalités du traitement dans le cadre des consentements",
       "http://terminology.hl7.org/6.0.2/ValueSet-v3-PurposeOfUse.html" : "PurposeOfUse"
     },
     {

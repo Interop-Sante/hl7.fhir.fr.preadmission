@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="preadmission-consent-purpose-reason-vs"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet preadmission-consent-purpose-reason-vs</b></p><a name="preadmission-consent-purpose-reason-vs"> </a><a name="hcpreadmission-consent-purpose-reason-vs"> </a><a name="preadmission-consent-purpose-reason-vs-fr-FR"> </a><ul><li>Include les codes sont définis dans <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html"><code>http://terminology.hl7.org/CodeSystem/v3-ActReason</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT">TREAT</a></td><td style="color: #cccccc">treatment</td><td>To perform one or more operations on information for provision of health care.</td></tr><tr><td><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-CAREMGT">CAREMGT</a></td><td style="color: #cccccc">care management</td><td>To perform analytics, evaluation and other secondary uses of treatment and healthcare related information to manage the quality, efficacy, patient safety, population health, and cost effectiveness of healthcare delivery. Explicitly excludes the use of information to organize the delivery of health care for care coordination and case management, or to provide healthcare treatment.<br/><br/>*Usage Note:* The concept of care management is narrower than the list of activities related to more general organizational objectives such as provider profiling, education of healthcare and non-healthcare professionals; insurance underwriting, premium rating, reinsurance; organizational legal, medical review, auditing, compliance and fraud and abuse detection; business planning, development, and restructuring; fund-raising; and customer service.<br/><br/>*Map:* Maps to ISO 14265 Classification Term &quot;Health service management and quality assurance&quot; described as &quot;To inform persons or processes responsible for determining the availability, quality, safety, equity and cost-effectiveness of health care services.&quot;<br/><br/>There is a semantic gap in concepts. This classification term is described as activities, i.e., &quot;to inform persons&quot; or &quot;to inform processes&quot; rather than the rationale for performing actions/operations on information related to the activity.</td></tr><tr><td><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-INFORMATION">INFORMATION</a></td><td/><td/></tr></table></li></ul></div>
+  </text>
+  <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs"/>
+  <version value="0.1.0"/>
+  <name value="PreadmissionConsentPurposeReasonVS"/>
+  <title value="Finalités du traitement dans le cadre des consentements"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2025-05-14T09:00:47+00:00"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="InteropSanté"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@interopsante.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <concept>
+        <code value="TREAT"/>
+      </concept>
+      <concept>
+        <code value="CAREMGT"/>
+      </concept>
+      <concept>
+        <code value="INFORMATION"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

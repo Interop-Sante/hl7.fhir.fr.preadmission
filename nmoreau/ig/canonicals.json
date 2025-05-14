@@ -125,25 +125,18 @@
     "name" : "PreadmissionStatutFr"
   },
   {
-    "id" : "consent-category-value-set",
+    "id" : "preadmission-consent-code-value-set",
     "type" : "ValueSet",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-category-value-set",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-value-set",
     "version" : "0.1.0",
-    "name" : "PreadmissionConsentCategoryValueSet"
+    "name" : "PreadmissionConsentCodeValueSet"
   },
   {
-    "id" : "consent-information-status",
+    "id" : "preadmission-consent-purpose-reason-vs",
     "type" : "ValueSet",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-information-status",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs",
     "version" : "0.1.0",
-    "name" : "ConsentInformationStatusVS"
-  },
-  {
-    "id" : "preadmission-consent-value-set",
-    "type" : "ValueSet",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set",
-    "version" : "0.1.0",
-    "name" : "PreadmissionConsentValueSet"
+    "name" : "PreadmissionConsentPurposeReasonVS"
   },
   {
     "id" : "preadmission-document-type-valueset",

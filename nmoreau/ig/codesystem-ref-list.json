@@ -12,18 +12,6 @@
       "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "PreadmissionConsentCategoryCodeSystem",
-      "title" : "Types de consentements pour la préadmission",
-      "description" : "Types de consentement recueillis pendant la préadmission.",
-      "uses" : {
-      },
-      "ValueSet-consent-category-value-set.html" : "ValueSet pour la catégorie de consentement",
-      "ValueSet-preadmission-consent-value-set.html" : "ValueSet des consentements du patient"
-    },
-    {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
       "version" : "0.1.0",
       "status" : "draft",
@@ -35,15 +23,16 @@
       "ValueSet-preadmission-status-value-set.html" : "ValueSet des statuts de préadmission"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs",
-      "version" : "0.1.0",
+      "url" : "http://hl7.org/fhir/consent-provision-type",
+      "version" : "4.0.1",
       "status" : "draft",
-      "name" : "ValeursConsentementCodeSystem",
-      "title" : "Statuts de consentements",
-      "description" : "Valeurs possibles pour les consentements",
+      "name" : "ConsentProvisionType",
+      "title" : "ConsentProvisionType",
+      "description" : "How a rule statement is applied, such as adding additional consent or removing consent.",
+      "oids" : ["2.16.840.1.113883.4.642.4.758"],
       "uses" : {
       },
-      "ValueSet-consent-information-status.html" : "Statut d'information et de consentement"
+      "http://hl7.org/fhir/R4/valueset-consent-provision-type.html" : "ConsentProvisionType"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
@@ -55,7 +44,20 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
-      "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission"
+      "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission",
+      "ValueSet-preadmission-consent-code-value-set.html" : "Codes des actions de consentement (standard HL7)"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "ActReason",
+      "title" : "ActReason",
+      "description" : "A set of codes specifying the motivation, cause, or rationale of an Act, when such rationale is not reasonably represented as an ActRelationship of type \"has reason\" linking to another Act.\r\n\r\n*Examples:* Example reasons that might qualify for being coded in this field might be: \"routine requirement\", \"infectious disease reporting requirement\", \"on patient request\", \"required by law\".",
+      "oids" : ["2.16.840.1.113883.5.8"],
+      "uses" : {
+      },
+      "ValueSet-preadmission-consent-purpose-reason-vs.html" : "Finalités du traitement dans le cadre des consentements"
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type",

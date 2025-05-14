@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PREADMISSIONFR"] ; # 
   fhir:title [ fhir:v "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-05-06T13:54:59+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-05-14T09:00:47+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -912,6 +912,24 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-value-set> ;
+         fhir:reference [ fhir:v "ValueSet/preadmission-consent-code-value-set" ]
+       ] ;
+       fhir:name [ fhir:v "Codes des actions de consentement (standard HL7)" ] ;
+       fhir:description [ fhir:v "Code HL7 v3 ActCode représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
            fhir:v "CodeSystem"
          ]
        ] ) ;
@@ -934,46 +952,10 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consent-alimentation-dmp> ;
-         fhir:reference [ fhir:v "Consent/consent-alimentation-dmp" ]
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consentement-multi> ;
+         fhir:reference [ fhir:v "Consent/consentement-multi" ]
        ] ;
-       fhir:name [ fhir:v "consent-alimentation-dmp" ] ;
-       fhir:example [
-         a fhir:canonical ;
-         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"^^xsd:anyURI ;
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "Consent"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consent-consultation-dmp> ;
-         fhir:reference [ fhir:v "Consent/consent-consultation-dmp" ]
-       ] ;
-       fhir:name [ fhir:v "consent-consultation-dmp" ] ;
-       fhir:example [
-         a fhir:canonical ;
-         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"^^xsd:anyURI ;
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "Consent"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consent-rgpd> ;
-         fhir:reference [ fhir:v "Consent/consent-rgpd" ]
-       ] ;
-       fhir:name [ fhir:v "consent-rgpd" ] ;
+       fhir:name [ fhir:v "Consentement global incluant consultation DMP, RGPD, et partage d'information" ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"^^xsd:anyURI ;
@@ -996,6 +978,24 @@
        fhir:example [
          a fhir:boolean ;
          fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Consent"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consentement-one> ;
+         fhir:reference [ fhir:v "Consent/consentement-one" ]
+       ] ;
+       fhir:name [ fhir:v "Consentement unique représentant le non reccueil de la consultation DMP" ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"^^xsd:anyURI ;
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr>
        ]
      ] [
        fhir:extension ( [
@@ -1155,6 +1155,24 @@
        ] ;
        fhir:name [ fhir:v "Extension Statut Pré-admission" ] ;
        fhir:description [ fhir:v "Extension transportant les statuts spécifiques de la pré-admission." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs> ;
+         fhir:reference [ fhir:v "ValueSet/preadmission-consent-purpose-reason-vs" ]
+       ] ;
+       fhir:name [ fhir:v "Finalités du traitement dans le cadre des consentements" ] ;
+       fhir:description [ fhir:v "Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason)." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1358,24 +1376,6 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-information-status> ;
-         fhir:reference [ fhir:v "ValueSet/consent-information-status" ]
-       ] ;
-       fhir:name [ fhir:v "Statut d'information et de consentement" ] ;
-       fhir:description [ fhir:v "Statut du patient concernant l'information et le consentement, incluant les cas d'opposition ou d'absence de recueil." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
            fhir:v "CodeSystem"
          ]
        ] ) ;
@@ -1452,24 +1452,6 @@
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set> ;
-         fhir:reference [ fhir:v "ValueSet/preadmission-consent-value-set" ]
-       ] ;
-       fhir:name [ fhir:v "ValueSet des consentements du patient" ] ;
-       fhir:description [ fhir:v "Consentements exprimés par le patient dans le cadre de la préadmission." ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
          fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set> ;
          fhir:reference [ fhir:v "ValueSet/preadmission-status-value-set" ]
        ] ;
@@ -1493,24 +1475,6 @@
        ] ;
        fhir:name [ fhir:v "ValueSet des types de couverture pour la préadmission" ] ;
        fhir:description [ fhir:v "Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "ValueSet"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-category-value-set> ;
-         fhir:reference [ fhir:v "ValueSet/consent-category-value-set" ]
-       ] ;
-       fhir:name [ fhir:v "ValueSet pour la catégorie de consentement" ] ;
-       fhir:description [ fhir:v "Valeurs autorisées pour la catégorie de consentement" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1599,90 +1563,6 @@
            fhir:v "sequence.html"^^xsd:anyURI
          ] ;
          fhir:title [ fhir:v "Diagramme de séquence du processus" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [
-             a fhir:url ;
-             fhir:v "appointment.html"^^xsd:anyURI
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:url ;
-           fhir:v "appointment.html"^^xsd:anyURI
-         ] ;
-         fhir:title [ fhir:v "Rendez-vous (Appointment)" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [
-             a fhir:url ;
-             fhir:v "encounter.html"^^xsd:anyURI
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:url ;
-           fhir:v "encounter.html"^^xsd:anyURI
-         ] ;
-         fhir:title [ fhir:v "Preadmission (Encounter)" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [
-             a fhir:url ;
-             fhir:v "coverage.html"^^xsd:anyURI
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:url ;
-           fhir:v "coverage.html"^^xsd:anyURI
-         ] ;
-         fhir:title [ fhir:v "Couverture Sociale (Coverage)" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [
-             a fhir:url ;
-             fhir:v "consentements.html"^^xsd:anyURI
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:url ;
-           fhir:v "consentements.html"^^xsd:anyURI
-         ] ;
-         fhir:title [ fhir:v "Consentements (Consent)" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [
-             a fhir:url ;
-             fhir:v "questionnaires.html"^^xsd:anyURI
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:url ;
-           fhir:v "questionnaires.html"^^xsd:anyURI
-         ] ;
-         fhir:title [ fhir:v "Questionnaires (QuestionnaireResponse)" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [
-             a fhir:url ;
-             fhir:v "documents.html"^^xsd:anyURI
-           ]
-         ] ) ;
-         fhir:name [
-           a fhir:url ;
-           fhir:v "documents.html"^^xsd:anyURI
-         ] ;
-         fhir:title [ fhir:v "Documents Justificatifs (DocumentReference)" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [

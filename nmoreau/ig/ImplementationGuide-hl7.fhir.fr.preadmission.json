@@ -10,7 +10,7 @@
   "name" : "PREADMISSIONFR",
   "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
   "status" : "draft",
-  "date" : "2025-05-06T13:54:59+00:00",
+  "date" : "2025-05-14T09:00:47+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -666,6 +666,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/preadmission-consent-code-value-set"
+      },
+      "name" : "Codes des actions de consentement (standard HL7)",
+      "description" : "Code HL7 v3 ActCode représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -681,31 +693,9 @@
         "valueString" : "Consent"
       }],
       "reference" : {
-        "reference" : "Consent/consent-alimentation-dmp"
+        "reference" : "Consent/consentement-multi"
       },
-      "name" : "consent-alimentation-dmp",
-      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Consent"
-      }],
-      "reference" : {
-        "reference" : "Consent/consent-consultation-dmp"
-      },
-      "name" : "consent-consultation-dmp",
-      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Consent"
-      }],
-      "reference" : {
-        "reference" : "Consent/consent-rgpd"
-      },
-      "name" : "consent-rgpd",
+      "name" : "Consentement global incluant consultation DMP, RGPD, et partage d'information",
       "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
     },
     {
@@ -719,6 +709,17 @@
       "name" : "Consentement lié au rendez-vous",
       "description" : "Référence vers un ou plusieurs consentements donnés dans le cadre de la préadmission.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Consent"
+      }],
+      "reference" : {
+        "reference" : "Consent/consentement-one"
+      },
+      "name" : "Consentement unique représentant le non reccueil de la consultation DMP",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
     },
     {
       "extension" : [{
@@ -821,6 +822,18 @@
       },
       "name" : "Extension Statut Pré-admission",
       "description" : "Extension transportant les statuts spécifiques de la pré-admission.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/preadmission-consent-purpose-reason-vs"
+      },
+      "name" : "Finalités du traitement dans le cadre des consentements",
+      "description" : "Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason).",
       "exampleBoolean" : false
     },
     {
@@ -954,18 +967,6 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/consent-information-status"
-      },
-      "name" : "Statut d'information et de consentement",
-      "description" : "Statut du patient concernant l'information et le consentement, incluant les cas d'opposition ou d'absence de recueil.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
       }],
       "reference" : {
@@ -1017,18 +1018,6 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/preadmission-consent-value-set"
-      },
-      "name" : "ValueSet des consentements du patient",
-      "description" : "Consentements exprimés par le patient dans le cadre de la préadmission.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
         "reference" : "ValueSet/preadmission-status-value-set"
       },
       "name" : "ValueSet des statuts de préadmission",
@@ -1045,18 +1034,6 @@
       },
       "name" : "ValueSet des types de couverture pour la préadmission",
       "description" : "Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/consent-category-value-set"
-      },
-      "name" : "ValueSet pour la catégorie de consentement",
-      "description" : "Valeurs autorisées pour la catégorie de consentement",
       "exampleBoolean" : false
     }],
     "page" : {
@@ -1110,60 +1087,6 @@
         }],
         "nameUrl" : "sequence.html",
         "title" : "Diagramme de séquence du processus",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "appointment.html"
-        }],
-        "nameUrl" : "appointment.html",
-        "title" : "Rendez-vous (Appointment)",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "encounter.html"
-        }],
-        "nameUrl" : "encounter.html",
-        "title" : "Preadmission (Encounter)",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "coverage.html"
-        }],
-        "nameUrl" : "coverage.html",
-        "title" : "Couverture Sociale (Coverage)",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "consentements.html"
-        }],
-        "nameUrl" : "consentements.html",
-        "title" : "Consentements (Consent)",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "questionnaires.html"
-        }],
-        "nameUrl" : "questionnaires.html",
-        "title" : "Questionnaires (QuestionnaireResponse)",
-        "generation" : "markdown"
-      },
-      {
-        "extension" : [{
-          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-          "valueUrl" : "documents.html"
-        }],
-        "nameUrl" : "documents.html",
-        "title" : "Documents Justificatifs (DocumentReference)",
         "generation" : "markdown"
       },
       {

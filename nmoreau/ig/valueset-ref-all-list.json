@@ -1,40 +1,25 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-category-value-set",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-value-set",
       "version" : "0.1.0",
       "status" : "draft",
-      "name" : "PreadmissionConsentCategoryValueSet",
-      "title" : "ValueSet pour la catégorie de consentement",
-      "description" : "Valeurs autorisées pour la catégorie de consentement",
-      "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"
-      ],
+      "name" : "PreadmissionConsentCodeValueSet",
+      "title" : "Codes des actions de consentement (standard HL7)",
+      "description" : "Code HL7 v3 ActCode représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
       "uses" : {
       },
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-information-status",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs",
       "version" : "0.1.0",
       "status" : "draft",
-      "name" : "ConsentInformationStatusVS",
-      "title" : "Statut d'information et de consentement",
-      "description" : "Statut du patient concernant l'information et le consentement, incluant les cas d'opposition ou d'absence de recueil.",
-      "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs"
-      ]
-    },
-    {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "PreadmissionConsentValueSet",
-      "title" : "ValueSet des consentements du patient",
-      "description" : "Consentements exprimés par le patient dans le cadre de la préadmission.",
-      "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"
-      ],
+      "name" : "PreadmissionConsentPurposeReasonVS",
+      "title" : "Finalités du traitement dans le cadre des consentements",
+      "description" : "Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason).",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
       "uses" : {
       },
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
@@ -197,6 +182,24 @@
       "systems" : ["http://terminology.hl7.org/CodeSystem/consentaction"],
       "oids" : ["2.16.840.1.113883.4.642.3.753"],
       "sources" : ["2.16.840.1.113883.4.642.3.753"],
+      "uses" : {
+      },
+      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/consent-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ConsentCategoryCodes",
+      "title" : "Consent Category Codes",
+      "description" : "This value set includes sample Consent Directive Type codes, including several consent directive related LOINC codes; HL7 VALUE SET: ActConsentType(2.16.840.1.113883.1.11.19897); examples of US realm consent directive legal descriptions and references to online and/or downloadable forms such as the SSA-827 Authorization to Disclose Information to the Social Security Administration; and other anticipated consent directives related to participation in a clinical trial, medical procedures, reproductive procedures; health care directive (Living Will); advance directive, do not resuscitate (DNR); Physician Orders for Life-Sustaining Treatment (POLST)",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "http://loinc.org",
+        "http://terminology.hl7.org/CodeSystem/consentcategorycodes"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.751"],
+      "sources" : ["2.16.840.1.113883.4.642.3.751"],
       "uses" : {
       },
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
@@ -598,9 +601,9 @@
       "uses" : {
       },
       "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
+      "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR",
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
       "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR",
       "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="f855e2e2-d4d0-4b09-99ba-26deb06c4662"/>
+  <id value="91c310b6-ad8b-4865-9380-5506bc22c983"/>
   <meta>
-    <lastUpdated value="2025-05-06T13:55:39.762+00:00"/>
+    <lastUpdated value="2025-05-14T09:01:27.007+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
-    <fullUrl value="http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-category-value-set"/>
+    <fullUrl value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-value-set"/>
     <resource>
       <ValueSet>
         <text>
@@ -17,9 +17,9 @@
               <b>ValueSet </b>
             </p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-preadmission-consent-type.html">codesystem Types de consentements pour la préadmission v0.1.0 (CodeSystem)</a>
+              <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html">codesystem ActCode v9.0.0 (CodeSystem)</a>
             </p>
-            <p>Ce jeu de valeur (ValueSet) contient 4 concepts</p>
+            <p>Ce jeu de valeur (ValueSet) contient 0 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -32,48 +32,16 @@
                   <b>Display (fr-FR)</b>
                 </td>
               </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type-alimentationDmp"> </a>  
-                  <a href="CodeSystem-preadmission-consent-type.html#preadmission-consent-type-alimentationDmp">alimentationDmp</a>
-                </td>
-                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type-consultationDmp"> </a>  
-                  <a href="CodeSystem-preadmission-consent-type.html#preadmission-consent-type-consultationDmp">consultationDmp</a>
-                </td>
-                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type-portal-transfer"> </a>  
-                  <a href="CodeSystem-preadmission-consent-type.html#preadmission-consent-type-portal-transfer">portal-transfer</a>
-                </td>
-                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type-other"> </a>  
-                  <a href="CodeSystem-preadmission-consent-type.html#preadmission-consent-type-other">other</a>
-                </td>
-                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</td>
-                <td/>
-              </tr>
             </table>
           </div>
         </text>
-        <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-category-value-set"/>
+        <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-value-set"/>
         <version value="0.1.0"/>
-        <name value="PreadmissionConsentCategoryValueSet"/>
-        <title value="ValueSet pour la catégorie de consentement"/>
+        <name value="PreadmissionConsentCodeValueSet"/>
+        <title value="Codes des actions de consentement (standard HL7)"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-06T13:54:59+00:00"/>
+        <date value="2025-05-14T09:00:47+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -82,9 +50,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a3ac4c16-02e5-4730-91c0-d1a93d4125c3"/>
-          <timestamp value="2025-05-06T13:56:05+00:00"/>
-          <total value="4"/>
+          <identifier value="urn:uuid:b394409d-56b5-468a-8735-417f83cd6421"/>
+          <timestamp value="2025-05-14T09:01:58+00:00"/>
+          <total value="0"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -104,30 +72,14 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type|0.1.0"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/v3-ActCode|9.0.0"/>
           </parameter>
-          <contains>
-            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"/>
-            <code value="alimentationDmp"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"/>
-            <code value="consultationDmp"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"/>
-            <code value="portal-transfer"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"/>
-            <code value="other"/>
-          </contains>
         </expansion>
       </ValueSet>
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-information-status"/>
+    <fullUrl value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs"/>
     <resource>
       <ValueSet>
         <text>
@@ -137,9 +89,9 @@
               <b>ValueSet </b>
             </p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-valeurs-consent-cs.html">codesystem Statuts de consentements v0.1.0 (CodeSystem)</a>
+              <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html">codesystem ActReason v3.1.0 (CodeSystem)</a>
             </p>
-            <p>Ce jeu de valeur (ValueSet) contient 3 concepts</p>
+            <p>Ce jeu de valeur (ValueSet) contient 2 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -151,41 +103,58 @@
                 <td>
                   <b>Display (fr-FR)</b>
                 </td>
+                <td>
+                  <b>Définition</b>
+                </td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs-NA"> </a>  
-                  <a href="CodeSystem-valeurs-consent-cs.html#valeurs-consent-cs-NA">NA</a>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-ActReason-TREAT"> </a>  
+                  <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT">TREAT</a>
                 </td>
-                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs</td>
-                <td/>
+                <td>http://terminology.hl7.org/CodeSystem/v3-ActReason</td>
+                <td>treatment</td>
+                <td>
+                  <div>
+                    <p>To perform one or more operations on information for provision of health care.</p>
+
+                  </div>
+                </td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs-IC"> </a>  
-                  <a href="CodeSystem-valeurs-consent-cs.html#valeurs-consent-cs-IC">IC</a>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-ActReason-CAREMGT"> </a>  
+                  <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-CAREMGT">CAREMGT</a>
                 </td>
-                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs-INC"> </a>  
-                  <a href="CodeSystem-valeurs-consent-cs.html#valeurs-consent-cs-INC">INC</a>
+                <td>http://terminology.hl7.org/CodeSystem/v3-ActReason</td>
+                <td>care management</td>
+                <td>
+                  <div>
+                    <p>To perform analytics, evaluation and other secondary uses of treatment and healthcare related information to manage the quality, efficacy, patient safety, population health, and cost effectiveness of healthcare delivery. Explicitly excludes the use of information to organize the delivery of health care for care coordination and case management, or to provide healthcare treatment.</p>
+
+                    <p>
+                      <em>Usage Note:</em> The concept of care management is narrower than the list of activities related to more general organizational objectives such as provider profiling, education of healthcare and non-healthcare professionals; insurance underwriting, premium rating, reinsurance; organizational legal, medical review, auditing, compliance and fraud and abuse detection; business planning, development, and restructuring; fund-raising; and customer service.
+                    </p>
+
+                    <p>
+                      <em>Map:</em> Maps to ISO 14265 Classification Term &quot;Health service management and quality assurance&quot; described as &quot;To inform persons or processes responsible for determining the availability, quality, safety, equity and cost-effectiveness of health care services.&quot;
+                    </p>
+
+                    <p>There is a semantic gap in concepts. This classification term is described as activities, i.e., &quot;to inform persons&quot; or &quot;to inform processes&quot; rather than the rationale for performing actions/operations on information related to the activity.</p>
+
+                  </div>
                 </td>
-                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs</td>
-                <td/>
               </tr>
             </table>
           </div>
         </text>
-        <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/consent-information-status"/>
+        <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs"/>
         <version value="0.1.0"/>
-        <name value="ConsentInformationStatusVS"/>
-        <title value="Statut d'information et de consentement"/>
+        <name value="PreadmissionConsentPurposeReasonVS"/>
+        <title value="Finalités du traitement dans le cadre des consentements"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-06T13:54:59+00:00"/>
+        <date value="2025-05-14T09:00:47+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -194,9 +163,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:cb938993-b64f-4569-bbac-bb6a3b0fa775"/>
-          <timestamp value="2025-05-06T13:56:05+00:00"/>
-          <total value="3"/>
+          <identifier value="urn:uuid:ec1df781-e43a-4b0c-9ef9-c05f1cee2da5"/>
+          <timestamp value="2025-05-14T09:01:58+00:00"/>
+          <total value="2"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -216,139 +185,17 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs|0.1.0"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/v3-ActReason|3.1.0"/>
           </parameter>
           <contains>
-            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs"/>
-            <code value="NA"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+            <code value="TREAT"/>
+            <display value="treatment"/>
           </contains>
           <contains>
-            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs"/>
-            <code value="IC"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs"/>
-            <code value="INC"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set"/>
-    <resource>
-      <ValueSet>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-preadmission-consent-type.html">codesystem Types de consentements pour la préadmission v0.1.0 (CodeSystem)</a>
-            </p>
-            <p>Ce jeu de valeur (ValueSet) contient 4 concepts</p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Système</b>
-                </td>
-                <td>
-                  <b>Display (fr-FR)</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type-alimentationDmp"> </a>  
-                  <a href="CodeSystem-preadmission-consent-type.html#preadmission-consent-type-alimentationDmp">alimentationDmp</a>
-                </td>
-                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type-consultationDmp"> </a>  
-                  <a href="CodeSystem-preadmission-consent-type.html#preadmission-consent-type-consultationDmp">consultationDmp</a>
-                </td>
-                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type-portal-transfer"> </a>  
-                  <a href="CodeSystem-preadmission-consent-type.html#preadmission-consent-type-portal-transfer">portal-transfer</a>
-                </td>
-                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type-other"> </a>  
-                  <a href="CodeSystem-preadmission-consent-type.html#preadmission-consent-type-other">other</a>
-                </td>
-                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type</td>
-                <td/>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-value-set"/>
-        <version value="0.1.0"/>
-        <name value="PreadmissionConsentValueSet"/>
-        <title value="ValueSet des consentements du patient"/>
-        <status value="draft"/>
-        <experimental value="true"/>
-        <date value="2025-05-06T13:54:59+00:00"/>
-        <jurisdiction>
-          <coding>
-            <system value="urn:iso:std:iso:3166"/>
-            <code value="FR"/>
-            <display value="FRANCE"/>
-          </coding>
-        </jurisdiction>
-        <expansion>
-          <identifier value="urn:uuid:0bbd021e-7067-4a66-9aa9-94a136a44e54"/>
-          <timestamp value="2025-05-06T13:56:05+00:00"/>
-          <total value="4"/>
-          <offset value="0"/>
-          <parameter>
-            <name value="displayLanguage"/>
-            <valueCode value="fr-FR"/>
-          </parameter>
-          <parameter>
-            <name value="count"/>
-            <valueInteger value="1000"/>
-          </parameter>
-          <parameter>
-            <name value="offset"/>
-            <valueInteger value="0"/>
-          </parameter>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="used-codesystem"/>
-            <valueUri value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type|0.1.0"/>
-          </parameter>
-          <contains>
-            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"/>
-            <code value="alimentationDmp"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"/>
-            <code value="consultationDmp"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"/>
-            <code value="portal-transfer"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type"/>
-            <code value="other"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+            <code value="CAREMGT"/>
+            <display value="care management"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -549,7 +396,7 @@
         <title value="Types de documents - ValueSet"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-06T13:54:59+00:00"/>
+        <date value="2025-05-14T09:00:47+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -558,8 +405,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:ae7f9321-0642-4793-9743-33d5f5bcf5a2"/>
-          <timestamp value="2025-05-06T13:56:05+00:00"/>
+          <identifier value="urn:uuid:b5d9a170-e8b3-417d-979e-96c8f38a97f1"/>
+          <timestamp value="2025-05-14T09:01:58+00:00"/>
           <total value="19"/>
           <offset value="0"/>
           <parameter>
@@ -749,7 +596,7 @@
         <title value="ValueSet des statuts de préadmission"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-06T13:54:59+00:00"/>
+        <date value="2025-05-14T09:00:47+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -758,8 +605,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:b549dd19-3331-47c7-9207-eb1136b66559"/>
-          <timestamp value="2025-05-06T13:56:05+00:00"/>
+          <identifier value="urn:uuid:b207e02a-5234-4bb3-91cf-136a44dbcf5e"/>
+          <timestamp value="2025-05-14T09:01:58+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -876,7 +723,7 @@
         <title value="ValueSet des types de couverture pour la préadmission"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-06T13:54:59+00:00"/>
+        <date value="2025-05-14T09:00:47+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -885,8 +732,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:20d80815-b9b4-44a4-8218-6da16c25f471"/>
-          <timestamp value="2025-05-06T13:56:05+00:00"/>
+          <identifier value="urn:uuid:bb0e1992-ac78-4e17-aa1e-f61a941ae295"/>
+          <timestamp value="2025-05-14T09:01:58+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>

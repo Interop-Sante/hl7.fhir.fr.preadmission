@@ -6,14 +6,14 @@
   "status" : "draft",
   "package-id" : "hl7.fhir.fr.preadmission",
   "ig-ver" : "0.1.0",
-  "date" : "Tue, 06 May, 2025 13:55:39 +0000",
-  "dateISO8601" : "2025-05-06T13:55:39+00:00",
-  "errs" : 26,
-  "warnings" : 62,
+  "date" : "Wed, 14 May, 2025 09:01:27 +0000",
+  "dateISO8601" : "2025-05-14T09:01:27+00:00",
+  "errs" : 40,
+  "warnings" : 57,
   "hints" : 13,
   "suppressed-hints" : 0,
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1985412136
+  "maxMemory" : 1926440960
 }
