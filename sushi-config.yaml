@@ -35,18 +35,6 @@ pages:
     title: Diagrammes des flux
   sequence.md:
     title: Diagramme de séquence du processus
-  appointment.md:
-    title: Rendez-vous (Appointment)
-  encounter.md:
-    title: Preadmission (Encounter)
-  coverage.md:
-    title: Couverture Sociale (Coverage)
-  consentements.md:
-    title: Consentements (Consent)
-  questionnaires.md:
-    title: Questionnaires (QuestionnaireResponse)
-  documents.md:
-    title: Documents Justificatifs (DocumentReference)
   downloads.md:
     title: Téléchargement du guide
   history.md:
@@ -59,13 +47,6 @@ menu:
         Processus centré sur les ressources: processus-ressource-fhir.html
         Diagramme de flux: flux.html
         Diagramme de séquence: sequence.html
-    Ressources:
-        Appointment: appointment.html
-        Encounter: encounter.html
-        Coverage: coverage.html
-        Consentements: consentements.html
-        Questionnaires: questionnaires.html
-        Documents: documents.html
     Ressources de conformité: artifacts.html
     Documentations: 
         Documentation des IGs: new-tab https://interop.esante.gouv.fr/ig/documentation/
