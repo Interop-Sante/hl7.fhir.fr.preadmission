@@ -7,19 +7,26 @@ Description: "Profil FHIR pour les consentements lors de la préadmission"
 * patient 1..1
 * patient only Reference(FRCorePatientProfile)
 
-* category 1..1
-* category from PreadmissionConsentCategoryValueSet (required)
 
+* status 1..1
+* status = #active (exactly)
+* scope 1..1
+* scope = http://terminology.hl7.org/CodeSystem/consentscope#patient-privacy
+* category 1..*
+* category = http://loinc.org#59284-0
+* patient 1..1
 * dateTime 1..1
 
-* provision.code ^slicing.discriminator.type = #value
-* provision.code ^slicing.discriminator.path = "coding.code"
-* provision.code ^slicing.rules = #open
+// provision unique racine
+* provision 1..1
+* provision.type 1..1
+* provision.type from ConsentProvisionType (required) // #permit or #deny
+* provision.provision 0..*
 
-* provision.code contains
-    alimentationDmp 0..1 and
-    consultationDmp 0..1
-
-* provision.code[alimentationDmp] from PreadmissionConsentValueSet (required)
-* provision.code[consultationDmp] from PreadmissionConsentValueSet (required)
-
+// Chaque sous-provision doit avoir un type, un code, et une purpose
+* provision.provision.type 0..1
+* provision.provision.type from ConsentProvisionType (required) // #permit or #deny
+* provision.provision.code 1..1
+* provision.provision.code from PreadmissionConsentCodeValueSet (required)
+* provision.provision.purpose 1..1
+* provision.provision.purpose from PreadmissionConsentPurposeReasonVS (required)
