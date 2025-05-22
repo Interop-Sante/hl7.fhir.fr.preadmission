@@ -4,7 +4,7 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-### 🗓️ Appointment
+### Appointment
 
 **Rôle :** Prise de rendez-vous
 
@@ -14,7 +14,7 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-### 📄 Questionnaire / QuestionnaireResponse
+### Questionnaire / QuestionnaireResponse
 
 **Rôle :** Recueil d'informations médicales préalables
 
@@ -24,7 +24,7 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-### ✅ Consent
+### Consent
 
 **Rôle :** Consentements RGPD et médicaux
 
@@ -36,7 +36,7 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-### 🏥 Encounter
+### Encounter
 
 **Rôle :** Support de la préadmission
 
@@ -48,7 +48,7 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-### 📎 DocumentReference
+### DocumentReference
 
 **Rôle :** Pièces justificatives du patient
 
@@ -58,7 +58,7 @@ Ce guide présente le processus de préadmission hospitalière en ligne à trave
 
 ---
 
-### 👤 Patient
+### Patient
 
 **Rôle :** Informations personnelles
 

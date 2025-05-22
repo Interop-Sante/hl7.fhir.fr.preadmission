@@ -23,69 +23,9 @@ Exemple de questions courantes :
 | `allergies`              | Souffrez-vous d’allergies connues ?                      | boolean  |
 | `allergies_details`      | Si oui, lesquelles ?                                     | string   |
 
-Exemple de structure FHIR (simplifiée) :
-
-```json
-{
-  "resourceType": "Questionnaire",
-  "status": "active",
-  "item": [
-    {
-      "linkId": "pregnant",
-      "text": "Êtes-vous enceinte ?",
-      "type": "boolean"
-    },
-    {
-      "linkId": "allergies",
-      "text": "Souffrez-vous d’allergies connues ?",
-      "type": "boolean"
-    },
-    {
-      "linkId": "allergies_details",
-      "text": "Si oui, lesquelles ?",
-      "type": "string",
-      "enableWhen": [
-        {
-          "question": "allergies",
-          "operator": "=",
-          "answerBoolean": true
-        }
-      ]
-    }
-  ]
-}
-```
-
 ### Ressource FHIR : QuestionnaireResponse
 
 Cette ressource contient les réponses spécifiques du patient à un questionnaire donné. Elle est liée à une ressource `Patient`, `Encounter`, ou `Appointment`.
-
-Exemple abrégé :
-
-```json
-{
-  "resourceType": "QuestionnaireResponse",
-  "questionnaire": "Questionnaire/Preadmission-Questionnaire",
-  "status": "completed",
-  "subject": {
-    "reference": "Patient/1234"
-  },
-  "item": [
-    {
-      "linkId": "pregnant",
-      "answer": [{ "valueBoolean": false }]
-    },
-    {
-      "linkId": "allergies",
-      "answer": [{ "valueBoolean": true }]
-    },
-    {
-      "linkId": "allergies_details",
-      "answer": [{ "valueString": "Penicilline, pollen" }]
-    }
-  ]
-}
-```
 
 ### Bonnes pratiques
 
@@ -94,4 +34,4 @@ Associer le questionnaire au Appointment (prise de RDV) ou à l’Encounter (pr�
 - Utiliser les éléments enableWhen pour conditionner les réponses.
 - Archiver les réponses avec la préadmission pour réutilisation le jour de l’admission.
 
-📋 Les questionnaires sont un outil essentiel pour garantir la sécurité du patient et anticiper toute contrainte clinique dès la préadmission.
+Les questionnaires sont un outil essentiel pour garantir la sécurité du patient et anticiper toute contrainte clinique dès la préadmission.

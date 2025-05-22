@@ -1,32 +1,58 @@
-### Objectif
+### Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne
 
-Cette page décrit les échanges entre les différentes parties impliquées dans une **pré-admission hospitalière en ligne**, en tenant compte des **contraintes réseau** (pas d'accès direct au SIH depuis Internet) et des **retours manuels** de l’agent administratif. Les flux décrits ici s’appuient sur les ressources FHIR définies dans cet IG.
-
----
-
-### Acteurs
-
-| Acteur | Description |
-|--------|-------------|
-| 👤 **Patient** | Fournit ses informations de préadmission via un portail en ligne. |
-| 🗓 **Portail de rendez-vous** | Plateforme externe pour réserver les consultations. |
-| 🌐 **Portail de préadmission** | Plateforme en ligne, gérée par un tiers pour recueillir les données administratives et médicales. |
-| 🏥 **Système administratif de l'hôpital** | Système central de l’hôpital pour gérer les données administratives. |
-| 👨‍💼 **Agent du Bureau des Entrées (BDE)** | Vérifie et valide manuellement les informations reçues. |
+Bienvenue dans le guide d'implémentation FHIR pour la pré-admission hospitalière en ligne. Ce document est structuré en plusieurs sections afin de faciliter la compréhension et l'intégration des spécifications de notre IG.
 
 ---
 
-### Scénario global des flux
+#### Contexte et Objectif
 
-#### 1. **Prise de rendez-vous**
+##### Contexte
+
+La pré-admission hospitalière est une étape administrative essentielle qui permet à l'établissement de santé de préparer l'accueil du patient en amont. Elle consiste à recueillir, à distance, les informations nécessaires pour :
+
+- L’identification du patient,
+- La gestion de sa couverture sociale,
+- La collecte des documents justificatifs,
+- Le recueil des consentements requis.
+
+Ce guide s'appuie sur le standard **FHIR** afin d'assurer des échanges fluides, sécurisés et interopérables entre les différents systèmes impliqués, tout en respectant les contraintes réseau (pas d'accès direct au SIH depuis Internet) et en intégrant les retours manuels de l’agent administratif.
+
+##### Objectif
+
+Cette page décrit les échanges entre les différentes parties impliquées dans une **pré-admission hospitalière en ligne**. Elle définit notamment les spécifications d’échange de données entre :
+
+- Un portail web de pré-admission,
+- Un système de gestion des rendez-vous,
+- Le système administratif de l'hôpital.
+
+Les processus s’appuient sur les ressources FHIR définies dans cet IG.
+
+---
+
+#### Acteurs
+
+| Acteur                                | Description                                                                 |
+|---------------------------------------|-----------------------------------------------------------------------------|
+|   **Patient**                        | Fournit ses informations de pré-admission via un portail en ligne.            |
+|   **Portail de rendez-vous**          | Plateforme externe pour réserver des consultations ou des séjours.          |
+|   **Portail de pré-admission**         | Plateforme en ligne (gérée par un tiers) pour recueillir les données administratives et médicales. |
+|   **Système administratif de l'hôpital** | Système central de l’hôpital pour gérer les données administratives.         |
+|   **Agent du Bureau des Entrées (BDE)**  | Vérifie et valide manuellement les informations reçues.                      |
+
+---
+
+#### Scénario Global des Flux
+
+##### 1. **Prise de rendez-vous**
 
 - **Acteurs impliqués** : Patient, Portail de rendez-vous, Système administratif de l'hôpital.
-- **Description** : Le patient réserve une consultation ou un séjour via un portail externe. Une ressource `Appointment` est créée dans le Portail de rendez-vous et est transmis au Système administratif de l'hôpital pour planifier la venue.
+- **Description** :  
+  Le patient réserve une consultation ou un séjour via un portail externe. Une ressource `Appointment` est créée dans le Portail de rendez-vous et transmise ensuite au système administratif de l'hôpital pour planifier l'accueil.
 - **Ressources utilisées** :
-  - `Appointment` : Contient les informations sur le rendez-vous (date, heure, participants, raison).
-  - `Consent` : Contient les consentements du patient.
-  - `QuestionnaireResponse`: Contient les réponses du patient au questionnaire soumis lors de sa prise de rendez-vous.
-  - `Patient` : Référence le patient concerné.
+  - `Appointment` : Informations sur la planification (date, heure, participants, motif).
+  - `Consent` : Recueil des consentements associés.
+  - `QuestionnaireResponse` : Réponses au questionnaire de prise de rendez-vous.
+  - `Patient` : Identification du patient.
 
 **Schéma :**
 
@@ -124,28 +150,24 @@ SIH → [Portail de préadmission] → Patient
 ```mermaid
 flowchart TD
     %% Étape 1 : Prise de rendez-vous
-    Patient1[Patient]
-    PortailRDV[Portail de rendez-vous]
-    SystemeAdmin[Système administratif de l'hôpital]
-    Patient1 -->|Prise de rendez-vous| PortailRDV -->|Transmission du rendez-vous| SystemeAdmin
+    A[Patient] --> B[Portail de rendez-vous]
+    B --> C[Système administratif de l'hôpital]
 
-    %% Étape 2 : Soumission des informations de préadmission
-    Patient2[Patient]
-    PortailPread[Portail de préadmission]
-    Patient2 -->|Soumission des infos| PortailPread -->|Transmission des infos| SystemeAdmin
+    %% Étape 2 : Soumission des infos de pré-admission
+    D[Patient] --> E[Portail de pré-admission]
+    E --> C
 
     %% Étape 3 : Recueil des consentements
-    Patient3[Patient]
-    Patient3 -->|Consentements| PortailPread -->|Transmission des consentements| SystemeAdmin
+    F[Patient] --> E
 
-    %% Étape 4 : Vérification par l'agent du BDE
-    AgentBDE[Agent du BDE]
-    SystemeAdmin <-->|Vérification et validation| AgentBDE
+    %% Étape 4 : Vérification et validation
+    C <--> G[Agent du BDE]
 
     %% Étape 5 : Notification au patient
-    SystemeAdmin -->|Notification| PortailPread -->|Consultation du statut| Patient3
+    C --> E
+    E --> H[Patient]
 ```
 
 ### Conclusion
 
-Les flux décrits dans ce document permettent de structurer et de coordonner les échanges entre les différents acteurs impliqués dans la préadmission hospitalière. En s’appuyant sur les ressources FHIR (`Appointment`, `Patient`, `Coverage`, `DocumentReference`, `Consent`, `Encounter`, etc.), ce processus garantit une gestion efficace et conforme aux exigences réglementaires.
+Les flux décrits dans ce document permettent de coordonner efficacement l'échange d'informations entre les différents acteurs impliqués dans la pré-admission hospitalière. En s’appuyant sur les ressources FHIR telles que `Appointment`, `Patient`, `Coverage`, `DocumentReference`, `Consent`, `QuestionnaireResponse` et `Encounter`, ce processus vise à garantir à la fois la conformité réglementaire et une gestion efficace des données.

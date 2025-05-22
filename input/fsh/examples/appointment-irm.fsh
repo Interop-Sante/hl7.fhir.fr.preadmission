@@ -1,5 +1,7 @@
 Instance: appt-irm-001
 InstanceOf: PreadmissionAppointmentFr
+Title: "Prise de rendez-vous IRM cérébrale"
+Description: "Rendez-vous pour une IRM cérébrale - préadmission."
 Usage: #example
 * id = "appt-irm-001"
 * text.status = #generated
@@ -21,10 +23,7 @@ Usage: #example
 
 // Extensions pour les consentements
 * extension[+].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"
-* extension[=].valueReference = Reference(Consent/consent-rgpd)
+* extension[=].valueReference = Reference(Consent/consentement-multi)
 
 * extension[+].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"
-* extension[=].valueReference = Reference(Consent/consent-consultation-dmp)
-
-* extension[+].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"
-* extension[=].valueReference = Reference(Consent/consent-alimentation-dmp)
+* extension[=].valueReference = Reference(Consent/consentement-refus-rgpd)

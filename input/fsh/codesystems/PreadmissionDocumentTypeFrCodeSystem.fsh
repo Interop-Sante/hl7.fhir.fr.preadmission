@@ -1,7 +1,8 @@
 CodeSystem: PreadmissionDocumentTypeCodeSystem
-Id: document-type-code-system
-Title: "Code System des types de documents pour la préadmission"
-Description: "Code System listant les types de documents transmis lors de la préadmission hospitalière."
+Id: document-type-cs
+Title: "document-type-cs"
+Description: "Types de documents additionnels pour la préadmission"
+* ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^content = #complete
 * ^experimental = true
 * ^caseSensitive = true

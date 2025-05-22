@@ -1,5 +1,7 @@
 Instance: qr-irm-001
 InstanceOf: QuestionnaireResponse
+Title: "Questionnaire préadmission IRM"
+Description: "Questionnaire posé lors de la prise de rendez-vous pour une IRM."
 Usage: #example
 * id = "qr-irm-001"
 * text.status = #generated

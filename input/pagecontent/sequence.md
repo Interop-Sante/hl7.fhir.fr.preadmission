@@ -41,13 +41,13 @@ Après vérification, le **portail de préadmission** notifie le patient de l'is
 
 ### Récapitulatif de la Séquence
 
-| Étape                          | Ressources FHIR utilisées                                       |
-|-------------------------------|------------------------------------------------------------------|
-| 1. Prise de rendez-vous       | `Appointment`                                                   |
-| 2. Remplissage du formulaire  | `QuestionnaireResponse`, `Consent`                              |
-| 3. Transmission au SIH        | `Encounter`                                                     |
-| 4. Vérification par le BDE    | `Patient`, `Coverage`, `DocumentReference`, `Consent`, `Extension` |
-| 5. Retour au patient          | `Consent`                                                       |
+| Étape                                       | Ressources FHIR utilisées                                               |
+|--------------------------------------------|-------------------------------------------------------------------------|
+| 1. Prise de rendez-vous                    | `Appointment`, `Patient`                                               |
+| 2. Soumission des informations de pré-admission | `Patient`, `Encounter`                                                 |
+| 3. Transmission au système administratif   | `Encounter`, `Patient`, `Coverage`, `DocumentReference`, `Consent`     |
+| 4. Vérification et validation par le BDE   | `Encounter`                                                             |
+| 5. Notification au patient                 | **SMS** ou **e-mail**                                                  |
 
 ---
 

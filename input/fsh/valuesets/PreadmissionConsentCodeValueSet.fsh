@@ -1,9 +1,10 @@
 ValueSet: PreadmissionConsentCodeValueSet
-Id: preadmission-consent-code-value-set
-Title: "Codes des actions de consentement (standard HL7)"
-Description: "Code HL7 v3 ActCode représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants."
+Id: preadmission-consent-code-vs
+Title: "preadmission-consent-code-vs"
+Description: "Code HL7 représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants."
+* ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^experimental = true
 
-* include http://terminology.hl7.org/CodeSystem/v3-ActCode#INFAUTHR     // Information authorization transfer
-* include http://terminology.hl7.org/CodeSystem/v3-ActCode#DISCL        // Information disclosure
-* include http://terminology.hl7.org/CodeSystem/v3-ActCode#INFORMATION  // Access to personal information
+* http://terminology.hl7.org/CodeSystem/consentaction#collect "Collect data"
+* http://terminology.hl7.org/CodeSystem/consentaction#access "Access data"
+* http://terminology.hl7.org/CodeSystem/consentaction#disclose "Disclose data"

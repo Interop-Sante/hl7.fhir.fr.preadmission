@@ -1,7 +1,8 @@
 CodeSystem: PreadmissionStatusCodeSystem
-Id: preadmission-status-code-system
-Title: "CodeSystem des statuts de la préadmission"
-Description: "CodeSystem pour les statuts de la préadmission"
+Id: preadmission-statuts-cs
+Title: "preadmission-statuts-cs"
+Description: "Statut de pré-admission"
+* ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^content = #complete
 * ^caseSensitive = false
 * ^experimental = true

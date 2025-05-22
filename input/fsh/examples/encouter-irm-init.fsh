@@ -1,5 +1,7 @@
 Instance: encounter-irm-externe
 InstanceOf: PreadmissionEncounterFr
+Title: "Consultation IRM externe"
+Description: "Initialisation de la préadmission par la GAP, suite à la réception dun rendez-vous - préadmission."
 Usage: #example
 * id = "encounter-irm-externe"
 * text.status = #generated

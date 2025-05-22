@@ -1,5 +1,7 @@
 Instance: coverage-amc
 InstanceOf: PreadmissionCoverageFr
+Title: "Couverture sociale AMC"
+Description: "Couverture sociale AMC - préadmission."
 Usage: #example
 * id = "coverage-amc"
 * text.status = #generated
@@ -15,7 +17,6 @@ Usage: #example
 * period.end = "2025-12-31T23:59:59+01:00"
 
 // Extension pour les informations spécifiques à l'AMC
-* extension[informationsAmc].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended"
 * extension[informationsAmc].extension[nomAMC].url = "nomAMC"
 * extension[informationsAmc].extension[nomAMC].valueString = "Mutuelle Santé Plus"
 * extension[informationsAmc].extension[numeroAMC].url = "numeroAMC"

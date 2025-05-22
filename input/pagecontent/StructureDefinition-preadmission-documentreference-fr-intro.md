@@ -8,17 +8,6 @@ Les documents sont modélisés dans FHIR à l’aide de la ressource `DocumentRe
 
 ### Documents typiques à fournir
 
-Voici une liste des documents les plus couramment demandés lors de la préadmission, basée sur le `ValueSet` des types de documents autorisés :
-
-- 📄 **Carte nationale d’identité (CNI)** : Document officiel permettant d'attester de l'identité du patient.
-- 🟩 **Carte Vitale** : Document permettant de certifier la couverture sociale du patient.
-- 🧾 **Carte de mutuelle** : Justificatif de couverture complémentaire.
-- 📃 **Justificatif de domicile** : Document attestant du lieu de résidence du patient.
-- 📑 **Attestation de droits à la sécurité sociale** : Document émis par l’assurance maladie pour prouver les droits du patient.
-- 🧭 **Carte de séjour** : Document permettant de certifier le statut de séjour du patient.
-- 📚 **Livret de famille** : Document permettant de certifier la composition de la famille du patient.
-- 📝 **Arrêt de travail** : Document médical validant une période d'arrêt de travail du patient.
-
 Ces documents sont modélisés dans FHIR à l’aide de la ressource `DocumentReference`, avec le type de document contraint par le `ValueSet` [`PreadmissionValueSetDocumentTypeFr`](preadmission-document-type-valueset.html).
 
 ---
@@ -39,47 +28,6 @@ La ressource `DocumentReference` est utilisée pour représenter chaque document
 Les critères de recherche suivants sont disponibles pour la ressource `DocumentReference` dans le cadre de la préadmission hospitalière :
 
 - **Lien avec la préadmission** : Permet de rechercher les documents associés à un `Encounter` spécifique.
-
----
-
-### Exemple d’utilisation
-
-Voici un exemple minimal de ressource `DocumentReference` pour une carte d’identité téléversée par le patient :
-
-```json
-{
-  "resourceType": "DocumentReference",
-  "status": "current",
-  "type": {
-    "coding": [
-      {
-        "system": "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
-        "code": "CNI",
-        "display": "Carte d’identité"
-      }
-    ]
-  },
-  "subject": {
-    "reference": "Patient/1234"
-  },
-  "context": {
-    "encounter": {
-      "reference": "Encounter/encounter1234"
-    }
-  },
-  "date": "2025-04-15T10:12:00+02:00",
-  "content": [
-    {
-      "attachment": {
-        "contentType": "application/pdf",
-        "url": "https://pre-adm.fr/docs/1234/cni.pdf",
-        "title": "Carte d’identité",
-        "creation": "2025-04-15T10:10:00+02:00"
-      }
-    }
-  ]
-}
-```
 
 ### Bonnes pratiques
 

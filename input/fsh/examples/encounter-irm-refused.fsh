@@ -1,9 +1,11 @@
 Instance: encounter-irm-refused
 InstanceOf: PreadmissionEncounterFr
+Title: "Consultation IRM refusée"
+Description: "Consultation IRM refusée par l'agent du bureau des entrées - préadmission."
 Usage: #example
 * id = "encounter-irm-refused"
 * text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Refus de la préadmission par l'agent du bureu des entrée suite à un manque de document - préadmission.</p></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Refus de la préadmission par l'agent du bureau des entrées suite à un manque de document - préadmission.</p></div>"
 * status = #planned
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #SS

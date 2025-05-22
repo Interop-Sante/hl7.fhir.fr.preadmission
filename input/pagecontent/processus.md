@@ -9,13 +9,13 @@ Le processus débute par la prise de rendez-vous, qui peut se faire :
 - Directement en ligne par le patient sur une **plateforme de préadmission**.
 - Par téléphone via une **secrétaire médicale**, qui saisit le rendez-vous dans le système.
 
-Le rendez-vous est enrichi avec :
+Le rendez-vous est enrichi avec :
 
-- Les réponses à un **questionnaire médical**, permettant d’anticiper les besoins spécifiques du patient (ex. : grossesse, pacemaker, allergies).
+- Les réponses à un **questionnaire médical**, permettant d’anticiper les besoins spécifiques du patient (ex. : grossesse, pacemaker, allergies).
 - Une ou plusieurs **demandes de consentement** concernant :
   - L’accès à son Dossier Médical Partagé (DMP),
-  - Le traitement des données personnelles (RGPD),
-  - La transmission à un portail de préadmission.
+  - Le traitement de ses données personnelles (RGPD),
+  - La transmission des informations vers le portail de préadmission.
 
 ### Étape 2 – Transmission des informations
 
@@ -32,13 +32,13 @@ Le système administratif de l’hôpital :
 
 Le portail notifie le patient qu’il peut compléter sa préadmission.
 
-Le patient est invité à :
+Le patient est alors invité à :
 
 - Saisir ses **informations administratives** :
   - Identité, coordonnées, personne à prévenir, numéro de sécurité sociale, etc.
 - **Téléverser ses pièces justificatives** :
   - Pièce d’identité (CNI, passeport),
-  - Carte vitale,
+  - Carte Vitale,
   - Carte de mutuelle,
   - Autres documents nécessaires.
 
@@ -48,27 +48,27 @@ Une fois complétées, les données et documents sont transmis au **système adm
 
 ### Étape 6 – Vérification
 
-Un **agent du bureau des entrées** vérifie les informations reçues :
+Un **agent du Bureau des Entrées (BDE)** vérifie les informations reçues :
 
 - Si tout est conforme :
   - La préadmission est **validée**.
   - Le portail envoie une **notification au patient** pour l’en informer.
 - Si des informations sont incorrectes ou manquantes :
   - La préadmission est **refusée avec un commentaire explicatif**.
-  - Le portail en informe le patient.
+  - Le portail informe le patient du refus en précisant les corrections nécessaires.
 
 ### Étape 7 – Correction (en cas de refus)
 
-Le patient peut alors :
+Le patient peut alors :
 
 - Accéder à son dossier en ligne,
-- Corriger ou compléter les éléments demandés,
+- Corriger ou compléter les informations demandées,
 - Soumettre à nouveau sa préadmission pour vérification.
 
 ---
 
-Ce processus vise à :
+Ce processus vise à :
 
 - Réduire les délais et les erreurs lors de l’admission physique,
 - Offrir un meilleur confort au patient,
-- Améliorer l'efficacité des services administratifs de l’hôpital.
+- Améliorer l’efficacité des services administratifs de l’hôpital.

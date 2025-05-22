@@ -1,9 +1,10 @@
 ValueSet: PreadmissionConsentPurposeReasonVS
 Id: preadmission-consent-purpose-reason-vs
-Title: "Finalités du traitement dans le cadre des consentements"
+Title: "preadmission-consent-purpose-reason-vs"
 Description: "Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason)."
+* ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^experimental = true
 
-* include http://terminology.hl7.org/CodeSystem/v3-ActReason#TREAT // Traitement (consultation et alimentation DMP)
-* include http://terminology.hl7.org/CodeSystem/v3-ActReason#CAREMGT // Gestion de parcours (transport du consentement)
-* include http://terminology.hl7.org/CodeSystem/v3-ActReason#INFORMATION // Envoi de données personnelles vers un autre logiciel
+* http://terminology.hl7.org/CodeSystem/v3-ActReason#TREAT "Treatment"
+* http://terminology.hl7.org/CodeSystem/v3-ActReason#PATREQ "Patient Request"
+* http://terminology.hl7.org/CodeSystem/v3-ActReason#HMO "Healthcare Operations"

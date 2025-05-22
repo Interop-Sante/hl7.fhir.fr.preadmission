@@ -1,7 +1,7 @@
 Extension: FrCoverageAMCExtension
 Id:        fr-coverage-amc-extended
 Title:     "Extension AMC Étendue"
-Description: "Extension pour les données spécifiques AMC incluant nom, numéro, code convention, code CSR et datamatrix"
+Description: "Extension pour les informations AMC étendues"
 * ^context.type = #element
 * ^context.expression = "Coverage"
 

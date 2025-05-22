@@ -1,5 +1,7 @@
 Instance: practitioner-irm
 InstanceOf: FRCorePractitionerProfile
+Title: "Praticien IRM"
+Description: "Médecin IRM, référencé dans les autres ressources - préadmission."
 Usage: #example
 * id = "practitioner-irm"
 * text.status = #generated

@@ -1,5 +1,7 @@
 Instance: documentreference-cni-recto
 InstanceOf: PreadmissionDocumentReferenceFr
+Title: "Document de préadmission - CNI recto"
+Description: "Scan du recto de la carte d'identité du patient - préadmission."
 Usage: #example
 * id = "documentreference-cni-recto"
 * text.status = #generated

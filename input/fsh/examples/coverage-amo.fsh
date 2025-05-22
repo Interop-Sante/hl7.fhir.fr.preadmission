@@ -1,5 +1,7 @@
 Instance: coverage-amo
 InstanceOf: PreadmissionCoverageFr
+Title: "Couverture sociale AMO"
+Description: "Couverture sociale AMO - préadmission."
 Usage: #example
 * id = "coverage-amo"
 * text.status = #generated

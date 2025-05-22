@@ -1,5 +1,7 @@
 Instance: patient-001
 InstanceOf: FRCorePatientProfile
+Title: "Patient de préadmission"
+Description: "Patient de préadmission - référencé dans les autres exemples."
 Usage: #example
 * id = "patient-001"
 * text.status = #generated

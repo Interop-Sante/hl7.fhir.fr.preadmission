@@ -2,7 +2,7 @@ Profile: PreadmissionConsentFr
 Parent: Consent
 Id: preadmission-consent-fr
 Title: "Fr Preadmission Consent Profile"
-Description: "Profil FHIR pour les consentements lors de la préadmission"
+Description: "Profil Consent pour les consentements lors de la préadmission"
 
 * patient 1..1
 * patient only Reference(FRCorePatientProfile)
@@ -13,13 +13,13 @@ Description: "Profil FHIR pour les consentements lors de la préadmission"
 * scope 1..1
 * scope = http://terminology.hl7.org/CodeSystem/consentscope#patient-privacy
 * category 1..*
-* category = http://loinc.org#59284-0
+* category.coding 1..*
+* category.coding from PreadmissionConsentCategoryVS (required)
 * patient 1..1
 * dateTime 1..1
 
 // provision unique racine
 * provision 1..1
-* provision.type 1..1
 * provision.type from ConsentProvisionType (required) // #permit or #deny
 * provision.provision 0..*
 

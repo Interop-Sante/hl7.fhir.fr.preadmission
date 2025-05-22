@@ -1,91 +1,106 @@
-### Consentements dans le cadre de la préadmission hospitalière
+# Consentements dans le cadre de la préadmission hospitalière
 
-Les consentements relatifs à la préadmission hospitalière peuvent être exprimés par une ou plusieurs **ressources `Consent`**, chacune pouvant couvrir plusieurs aspects comme la consultation du DMP, l’alimentation du DMP, l'acceptation du RGPD, et le partage d'informations personnelles avec un autre logiciel (par exemple, un portail de préadmission).
+Les consentements relatifs à la préadmission hospitalière doivent être exprimés par **des ressources `Consent` distinctes** conformes à FHIR R4, chacune couvrant un aspect spécifique tel que la consultation du DMP, l’alimentation du DMP, le traitement des données personnelles (RGPD) ou le partage d'informations personnelles avec un autre logiciel (par exemple, un portail de préadmission pour contacter le patient par SMS ou e-mail). En raison des catégories différentes utilisées (`57016-8` pour le RGPD et `59284-0` pour les autres consentements), les consentements RGPD doivent être séparés des autres consentements dans des ressources `Consent` distinctes. Il est recommandé d’utiliser une ressource `Consent` par type de consentement pour une clarté maximale, bien que les consentements DMP et partage avec un logiciel puissent être regroupés dans une même ressource si nécessaire, car ils partagent la même catégorie (`59284-0`).
 
-#### Structure de la ressource `Consent`
+## Structure de la ressource `Consent`
 
-Chaque consentement est structuré par des **provisions**. Une **provision** définit l'action et le consentement du patient (acceptation ou refus). Chaque provision comporte un **code** et un **but** spécifiant l’objectif de l’action (ex. consultation, alimentation du DMP, RGPD, etc.). Une ressource `Consent` peut contenir plusieurs provisions, chaque provision étant liée à un consentement spécifique.
+Chaque consentement est structuré par des **provisions**. Une provision définit l'action pour laquelle le patient consent ou refuse un traitement. Chaque provision comporte un **code** (définissant le contenu du consentement) et un **purpose** (précisant la finalité de l'action). Une ressource `Consent` contient généralement une seule provision pour représenter un consentement spécifique (par exemple, RGPD ou consultation DMP). Dans certains cas, une ressource peut contenir plusieurs provisions si elles partagent la même catégorie (par exemple, consultation et alimentation du DMP).
 
-Il est également possible de transmettre chaque consentement dans une ressource `Consent` séparée, notamment lorsque le patient est interrogé sur chaque aspect de son consentement de manière distincte. Dans ce cas, la ressource `Consent` contiendra une seule **provision** par consentement (par exemple, une ressource `Consent` pour le consentement à la consultation du DMP, une autre pour l'alimentation du DMP, etc.).
+## Définition des champs `scope` et `category`
 
-Lorsque chaque consentement est envoyé dans une ressource séparée, le champ **`provision`** dans chaque ressource `Consent` doit être utilisé pour décrire un seul aspect du consentement du patient.
+Les champs **`scope`** et **`category`** aident à classifier le consentement de façon uniforme :
 
-#### Définition des champs `scope` et `category`
+- **`scope`** :  
+  - **scope.coding.system** : `http://terminology.hl7.org/CodeSystem/consentscope`  
+  - **scope.coding.code** : `patient-privacy`  
+  Cela indique que le consentement concerne la confidentialité des informations du patient.
 
-Les champs **`scope`** et **`category`** sont utilisés pour spécifier les détails supplémentaires relatifs au consentement du patient. Ces champs permettent de classifier et d'identifier plus précisément le type de consentement.
+- **`category`** :  
+  - **category.coding.system** : `http://loinc.org`  
+  - **category.coding.code** : 
+    - `59284-0` (Consent Document) pour les consentements liés à l’alimentation du DMP, la consultation du DMP, et le partage avec un logiciel.
+    - `57016-8` (Privacy Policy Acknowledgment Document) pour le consentement RGPD.  
+  Ces codes LOINC standardisés identifient le type de document de consentement. En raison de ces catégories différentes, une ressource `Consent` ne peut pas combiner le RGPD avec les autres consentements ; ils doivent être séparés en ressources distinctes.
 
-- **`scope`** : Ce champ précise l'étendue du consentement. Par exemple, pour un consentement lié à la confidentialité du patient, le système de codage utilisé est le suivant :
-  - **scope.coding.system** : `http://terminology.hl7.org/CodeSystem/consentscope`
-  - **scope.coding.code** : `#patient-privacy`
-  
-  Cela indique que le consentement concerne des aspects liés à la confidentialité des informations personnelles du patient.
+Ces valeurs sont appliquées systématiquement afin d’assurer une classification conforme aux standards d’interopérabilité FHIR R4.
 
-- **`category`** : Ce champ définit la catégorie du consentement, permettant de spécifier le type de document ou de contenu auquel le consentement est associé. Par exemple, pour un consentement qui concerne un document lié à des données de santé, le système de codage est le suivant :
-  - **category.coding.system** : `http://loinc.org`
-  - **category.coding.code** : `#59284-0`
-  
-  Cela spécifie que le consentement est lié à un type de document de santé, tel que des informations ou des rapports médicaux.
+## Types de consentements et leurs champs
 
-Ces champs sont cruciaux pour la classification et l'organisation des consentements dans le cadre de l’interopérabilité des systèmes de santé, permettant ainsi d’identifier clairement les intentions et les types d'informations couvertes par chaque consentement.
+### Consentement pour la consultation du DMP
 
-#### Types de consentements et leurs champs
+- **Objectif** : Permettre au patient de donner ou de refuser son consentement pour la consultation de son Dossier Médical Partagé (DMP).
+- **Ressource dédiée** : Une ressource `Consent` distincte avec `category` `59284-0`.
+- **Provisions** :
+  - **Code** : `access` (indiquant l’accès aux données du DMP, issu du `CodeSystem` `http://terminology.hl7.org/CodeSystem/consentaction`).
+  - **Purpose** : `TREAT`  
+    (Ce code, issu du `ValueSet` `http://hl7.org/fhir/ValueSet/v3-PurposeOfUse`, signale que l'accès au DMP a pour finalité la prise en charge clinique.)
+  - **Validation** :
+    - `permit` si le consentement est donné.
+    - `deny` en cas de refus.
+  - **Cas d'absence de consentement explicite** :  
+    En l'absence d'une réponse claire (ni consentement ni refus), le champ `provision.type` est laissé vide pour indiquer l'absence de consentement explicite.
 
-##### **Consentement pour la consultation du DMP**
-   - **Objectif** : Permet au patient de donner ou non son consentement pour la consultation de son DMP.
-   - **Provisions** :
-     - **Code** : `INFORMATION` (indique la consultation du DMP).
-     - **Purpose** : `TREAT` (consultation du DMP).
-     - **Provisons acceptation/refus** :
-       - Si le consentement est donné, utiliser `permit`.
-       - Si le consentement est refusé, utiliser `deny`.
-     - **Cas d'absence de consentement explicite** : Si aucune position explicite n’a été recueillie (ni acceptation ni refus), une **provision** de type `permit` est utilisée sans opposer de refus explicite (voir chapitre dédié).
-     
-##### **Consentement pour l'alimentation du DMP**
-   - **Objectif** : Permet au patient de consentir ou de refuser l’alimentation de son DMP.
-   - **Provisions** :
-     - **Code** : `INFORMATION` (indique l’alimentation du DMP).
-     - **Purpose** : `CAREMGT` (gestion des soins).
-     - **Provisions acceptation/refus** :
-       - Si le consentement est donné, utiliser `permit`.
-       - Si le consentement est refusé, utiliser `deny`.
-     - **Cas d'absence de consentement explicite** : Si aucune position explicite n’a été recueillie, une **provision** de type `permit` est utilisée sans refus explicite (voir chapitre dédié).
+### Consentement pour l’alimentation du DMP
 
-##### **Consentement au RGPD**
-   - **Objectif** : Permet au patient d’accepter ou de refuser le traitement de ses données personnelles dans le cadre du RGPD.
-   - **Provisions** :
-     - **Code** : `INFAUTHR` (indique l’autorisation de traitement des données dans le cadre du RGPD).
-     - **Purpose** : `INFORMATION` (traitement des informations personnelles).
-     - **Provisions acceptation/refus** :
-       - Si le consentement est donné, utiliser `permit`.
-       - Si le consentement est refusé, utiliser `deny`.
+- **Objectif** : Permettre au patient de consentir ou refuser l'alimentation (mise à jour) de son DMP.
+- **Ressource dédiée** : Une ressource `Consent` distincte avec `category` `59284-0`, ou combinée avec la consultation DMP ou le partage avec un logiciel si plusieurs provisions sont nécessaires.
+- **Provisions** :
+  - **Code** : `collect` (indiquant la collecte de données pour le DMP, issu du `CodeSystem` `http://terminology.hl7.org/CodeSystem/consentaction`).
+  - **Purpose** : `TREAT`  
+    (Ce code précise que l’alimentation du DMP s’inscrit dans la prise en charge clinique.)
+  - **Validation** :
+    - `permit` en cas d'accord.
+    - `deny` en cas de refus.
+  - **Cas d'absence de position explicite** :  
+    En l'absence d'une réponse claire (ni consentement ni refus), le champ `provision.type` est laissé vide pour indiquer l'absence de consentement explicite.
 
-##### **Consentement pour le partage des informations personnelles avec un autre logiciel**
-   - **Objectif** : Permet au patient de consentir ou de refuser le partage de ses informations personnelles (par exemple, adresse e-mail, numéro de téléphone) avec un autre logiciel.
-   - **Provisions** :
-     - **Code** : `DISCL` (indique le partage des informations personnelles).
-     - **Purpose** : `INFORMATION` (partage d’informations avec un autre logiciel).
-     - **Provisions acceptation/refus** :
-       - Si le consentement est donné, utiliser `permit`.
-       - Si le consentement est refusé, utiliser `deny`.
+### Consentement au RGPD
 
-#### Cas particulier : consentements DMP non recueillis
+- **Objectif** : Permettre au patient de consentir ou refuser le traitement de ses données personnelles dans le cadre du RGPD.
+- **Ressource dédiée** : Une ressource `Consent` distincte avec `category` `57016-8`, séparée des autres consentements en raison de la catégorie différente.
+- **Provisions** :
+  - **Code** : `collect` (indiquant la collecte de données personnelles, issu du `CodeSystem` `http://terminology.hl7.org/CodeSystem/consentaction`).
+  - **Purpose** : `PATREQ`  
+    (Ce code, issu du `ValueSet` `http://hl7.org/fhir/ValueSet/v3-PurposeOfUse`, indique que le traitement des données repose sur une demande explicite du patient, conformément aux exigences du RGPD.)
+  - **Validation** :
+    - `permit` si le consentement est accordé.
+    - `deny` en cas de refus.
 
-Dans certaines situations, le consentement pour la **consultation** ou l'**alimentation** du DMP peut ne pas avoir été explicitement recueilli (ni accepté, ni refusé). Il est important de traiter cette situation de manière transparente et conforme :
+### Consentement pour le partage des informations personnelles avec un autre logiciel
 
-- **Approche recommandée** :
-  - Créer une ressource `Consent`, même si le consentement explicite n’a pas été recueilli.
-  - Utiliser **`provision.type = permit`**, ce qui signifie qu'aucun refus n’a été exprimé par le patient.
-  - Utiliser une provision fille avec les codes et le but dans **`provision.code`** et **`provision.purpose`** sans renseigner le type (**deny**/**permit**) afin de préciser qu'il n'y a pas eu de refus explicite.
-  - Il est possible d'ajouter une note dans **`Consent.note`** pour indiquer :  
-    > "Consentement non recueilli : le patient n’a pas exprimé de position explicite lors de la préadmission."
+- **Objectif** : Permettre au patient de consentir ou refuser le partage de ses informations personnelles (par exemple, numéro de téléphone ou adresse e-mail) avec un logiciel tiers pour des communications directes, telles que l’envoi de SMS ou d’e-mails (par exemple, rappels de rendez-vous ou informations administratives).
+- **Ressource dédiée** : Une ressource `Consent` distincte avec `category` `59284-0`, ou combinée avec les consentements DMP si plusieurs provisions sont nécessaires.
+- **Provisions** :
+  - **Code** : `disclose` (indiquant la divulgation d'informations à un tiers, issu du `CodeSystem` `http://terminology.hl7.org/CodeSystem/consentaction`).
+  - **Purpose** : `PATREQ`  
+    (Ce code, issu du `ValueSet` `http://hl7.org/fhir/ValueSet/v3-PurposeOfUse`, indique que le partage d’informations est effectué à la demande explicite du patient pour permettre des communications directes.)
+  - **Validation** :
+    - `permit` en cas d'autorisation.
+    - `deny` en cas de refus.
 
-Cette approche garantit une traçabilité claire et conforme, distinguant un refus explicite d’une absence de réponse. Elle assure également que les consentements peuvent être correctement suivis même en l’absence d’une décision explicite du patient.
+## Cas particulier : consentements DMP non recueillis
 
-#### Résumé des champs à renseigner pour chaque consentement
+Dans certains cas, le consentement pour la consultation ou l'alimentation du DMP peut ne pas être explicitement exprimé (ni acceptation, ni refus clairement indiqué). Dans ce contexte, il est recommandé de :
 
-| **Consentement**                          | **Code**         | **Purpose**     | **Type de provision** | **Exemple de note** |
-|-------------------------------------------|------------------|-----------------|-----------------------|---------------------|
-| Consultation DMP                          | INFORMATION      | TREAT           | `permit` ou `deny`    | "Consentement non recueilli : le patient n’a pas exprimé de position explicite." |
-| Alimentation DMP                          | INFORMATION      | CAREMGT         | `permit` ou `deny`    | "Consentement non recueilli : le patient n’a pas exprimé de position explicite." |
-| RGPD                                      | INFAUTHR         | INFORMATION     | `permit` ou `deny`    | "Consentement non recueilli : le patient n’a pas exprimé de position explicite." |
-| Partage des informations personnelles     | DISCL            | INFORMATION     | `permit` ou `deny`    | "Consentement non recueilli : le patient n’a pas exprimé de position explicite." |
+- Créer une ressource `Consent` pour documenter l'absence de consentement explicite, avec `category` `59284-0`.
+- Laisser le champ **`provision.type`** vide (non défini) pour indiquer qu’aucune décision formelle n’a été exprimée.
+
+Cette approche permet de garantir une traçabilité précise et de distinguer un refus explicite d'une absence de réponse.
+
+## Résumé des champs à renseigner pour chaque consentement
+
+| **Consentement**                        | **Category Code** | **Provision Code** | **Purpose** | **Type de provision** |
+|-----------------------------------------|-------------------|--------------------|-------------|-----------------------|
+| Consultation du DMP                     | 59284-0           | access             | TREAT       | `permit`, `deny` ou vide |
+| Alimentation du DMP                     | 59284-0           | collect            | TREAT       | `permit`, `deny` ou vide |
+| RGPD                                    | 57016-8           | collect            | PATREQ      | `permit` ou `deny`    |
+| Partage des informations personnelles   | 59284-0           | disclose           | PATREQ      | `permit` ou `deny`    |
+
+## Utilisation des codes pour le champ provision.purpose dans les Consent
+
+Dans le cadre de la préadmission hospitalière, nous utilisons des codes issus du `ValueSet` `http://hl7.org/fhir/ValueSet/v3-PurposeOfUse` pour préciser la finalité des provisions dans la ressource `Consent`. Les choix retenus sont :
+
+- **TREAT** pour la consultation et l’alimentation du DMP  
+  (Indiquant que le consentement soutient la prise en charge clinique.)
+- **PATREQ** pour le traitement des données personnelles (RGPD) et le partage d’informations personnelles avec un logiciel tiers  
+  (Indiquant que ces actions reposent sur une demande explicite du patient, conforme au RGPD ou aux préférences de communication du patient.)
