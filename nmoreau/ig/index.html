@@ -204,7 +204,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2025-05-14
+            as of 2025-05-22
           
         
       </td>
@@ -233,13 +233,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h3 id="guide-dimplémentation-fhir--pré-admission-hospitalière-en-ligne">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</h3>
 
-<p>Bienvenue dans le guide d’implémentation FHIR pour la pré-admission hospitalière en ligne. Ce guide est structuré en plusieurs sections pour faciliter la compréhension et l’intégration des spécifications.</p>
+<p>Bienvenue dans le guide d’implémentation FHIR pour la pré-admission hospitalière en ligne. Ce document est structuré en plusieurs sections pour faciliter la compréhension et l’intégration des spécifications de notre Interopérabilité.</p>
 
-<h4 id="-contexte-et-objectif">📘 Contexte et Objectif</h4>
+<h4 id="contexte-et-objectif">Contexte et Objectif</h4>
 
 <h5 id="contexte">Contexte</h5>
 
-<p>La pré-admission hospitalière est une étape administrative essentielle permettant à l’établissement de santé de préparer l’accueil du patient en amont. Elle consiste à recueillir, à distance, les informations nécessaires à :</p>
+<p>La pré-admission hospitalière est une étape administrative essentielle qui permet à l’établissement de santé de préparer l’accueil du patient en amont. Elle consiste à recueillir, à distance, les informations nécessaires pour :</p>
 
 <ul>
   <li>L’identification du patient,</li>
@@ -248,40 +248,40 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li>Le recueil des consentements nécessaires.</li>
 </ul>
 
-<p>Ce guide repose sur le standard <strong>FHIR</strong> pour assurer des échanges fluides, sécurisés et interopérables entre les différents systèmes impliqués.</p>
+<p>Ce guide s’appuie sur le standard <strong>FHIR</strong> afin d’assurer des échanges fluides, sécurisés et interopérables entre les différents systèmes impliqués.</p>
 
 <h5 id="objectif">Objectif</h5>
 
 <p>Définir les spécifications d’échange de données entre :</p>
 
 <ul>
-  <li>Un portail web de préadmission,</li>
+  <li>Un portail web de pré-admission,</li>
   <li>Un logiciel de gestion des rendez-vous,</li>
   <li>Un système administratif hospitalier.</li>
 </ul>
 
-<p>Les profils FHIR décrits ici sont adaptés au contexte français, en tenant compte des spécificités comme l’INS, la couverture sociale, et les exigences réglementaires (RGPD, hébergement HDS).</p>
+<p>Les profils FHIR décrits ici ont été adaptés au contexte français, en tenant compte des spécificités telles que l’INS, la couverture sociale (AMO/AMC) et les exigences réglementaires (Consentements au DMP, RGPD).</p>
 
-<h4 id="-périmètre-et-acteurs">🎯 Périmètre et Acteurs</h4>
+<h4 id="périmètre-et-acteurs">Périmètre et Acteurs</h4>
 
 <h5 id="périmètre">Périmètre</h5>
 
 <p>Les ressources FHIR couvertes par ce guide incluent :</p>
 
 <ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">Appointment</code></strong> : Planification d’un rendez-vous,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">Encounter</code></strong> : Gestion de la pré-admission administrative,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">Coverage</code></strong> : Déclaration de la couverture sociale (AMO/AMC),</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">DocumentReference</code></strong> : Transmission des documents justificatifs,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">Consent</code></strong> : Recueil des consentements nécessaires,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code></strong> : Réponses aux questionnaires administratifs ou médicaux.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Appointment</code></strong> : Planification d’un rendez-vous.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Encounter</code></strong> : Gestion de la pré-admission administrative, incluant les réponses aux questionnaires administratifs.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Coverage</code></strong> : Déclaration de la couverture sociale (AMO/AMC).</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">DocumentReference</code></strong> : Transmission des documents justificatifs.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Consent</code></strong> : Recueil des consentements nécessaires.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code></strong> : Réponses aux questionnaires administratifs ou préparant une prise de rendez-vous.</li>
 </ul>
 
 <h6 id="hors-périmètre">Hors périmètre</h6>
 
 <ul>
-  <li>Aspects médicaux,</li>
-  <li>Urgences,</li>
+  <li>Aspects purement médicaux (par exemple, antécédents cliniques, diagnostics).</li>
+  <li>Cas d’urgence.</li>
   <li>Intégration clinique.</li>
 </ul>
 
@@ -290,63 +290,49 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Les principaux acteurs impliqués dans le processus sont :</p>
 
 <ul>
-  <li><strong>Patient</strong> : Fournit ses informations administratives, ses documents justificatifs et ses consentements,</li>
-  <li><strong>Portail de pré-admission</strong> : Plateforme en ligne pour collecter les données du patient,</li>
-  <li><strong>Logiciel de rendez-vous</strong> : Planifie les consultations et séjours,</li>
-  <li><strong>Système administratif hospitalier</strong> : Vérifie et valide les informations transmises.</li>
+  <li><strong>Le Patient</strong> : Fournit ses informations administratives, ses documents justificatifs, ses consentements, et ses réponses aux questionnaires.</li>
+  <li><strong>Le Portail de pré-admission</strong> : Plateforme en ligne pour la collecte des données du patient.</li>
+  <li><strong>Le Logiciel de rendez-vous</strong> : Organise et planifie les consultations et séjours.</li>
+  <li><strong>Le Système administratif hospitalier</strong> : Vérifie et valide les informations reçues.</li>
 </ul>
 
-<h4 id="-ressources-fhir--profils">🧩 Ressources FHIR &amp; Profils</h4>
+<h4 id="ressources-fhir--profils">Ressources FHIR &amp; Profils</h4>
 
 <h5 id="ressources-utilisées">Ressources utilisées</h5>
 
 <p>Les ressources FHIR suivantes sont utilisées dans le cadre de la pré-admission :</p>
 
 <ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">Appointment</code></strong> : Gestion des rendez-vous,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">Encounter</code></strong> : Pré-admission administrative,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">Coverage</code></strong> : Gestion de la couverture sociale,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">DocumentReference</code></strong> : Transmission des documents justificatifs,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">Consent</code></strong> : Recueil des consentements,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code></strong> : Réponses aux questionnaires.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Appointment</code></strong> : Gestion des rendez-vous.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Encounter</code></strong> : Pré-admission administrative, liée à des <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> pour les réponses aux questionnaires administratifs via l’extension <code class="language-plaintext highlighter-rouge">PreadmissionQuestionnaireExtension</code>.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Coverage</code></strong> : Gestion de la couverture sociale.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">DocumentReference</code></strong> : Transmission des documents justificatifs.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">Consent</code></strong> : Recueil des consentements.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code></strong> : Réponses aux questionnaires administratifs.</li>
 </ul>
 
 <h5 id="profils-personnalisés">Profils personnalisés</h5>
 
-<p>Les profils FHIR suivants ont été définis pour répondre aux besoins spécifiques de la pré-admission :</p>
+<p>Les profils FHIR suivants ont été créés pour répondre aux besoins spécifiques de la pré-admission, basés sur les profils <strong>FR Core</strong> :</p>
 
 <ul>
-  <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionAppointmentFr</code></strong> : Profil pour les rendez-vous,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionEncounterFr</code></strong> : Profil pour la pré-admission,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionCoverageFr</code></strong> : Profil pour la couverture sociale,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionDocumentReferenceFr</code></strong> : Profil pour les documents justificatifs,</li>
-  <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionConsentFr</code></strong> : Profil pour les consentements.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionAppointmentFr</code></strong> : Profil pour la planification des rendez-vous, basé sur <code class="language-plaintext highlighter-rouge">FRCoreAppointmentProfile</code>.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionEncounterFr</code></strong> : Profil pour la gestion de la pré-admission, basé sur <code class="language-plaintext highlighter-rouge">FRCoreEncounterProfile</code>.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionCoverageFr</code></strong> : Profil pour la couverture sociale, basé sur <code class="language-plaintext highlighter-rouge">FRCoreCoverageProfile</code>.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionDocumentReferenceFr</code></strong> : Profil pour les documents justificatifs, basé sur <code class="language-plaintext highlighter-rouge">FRCoreDocumentReferenceProfile</code>.</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">PreadmissionConsentFr</code></strong> : Profil pour le recueil des consentements, basé sur <code class="language-plaintext highlighter-rouge">Consent</code>.</li>
 </ul>
 
 <h5 id="extensions-spécifiques">Extensions spécifiques</h5>
 
-<p>Des extensions ont été ajoutées pour enrichir les ressources FHIR et répondre aux besoins spécifiques de la préadmission hospitalière. Ces extensions permettent de capturer des informations supplémentaires essentielles au processus administratif et réglementaire.</p>
+<p>Pour enrichir les ressources FHIR et répondre aux besoins particuliers de la pré-admission hospitalière, plusieurs extensions personnalisées ont été créées. Ces extensions permettent de saisir des informations supplémentaires essentielles au processus administratif et réglementaire :</p>
 
 <h6 id="rattachement-complémentaire-amc">Rattachement complémentaire (AMC)</h6>
 
 <ul>
   <li><strong>Extension :</strong> <code class="language-plaintext highlighter-rouge">FrCoverageAMCExtension</code></li>
   <li><strong>Ressource concernée :</strong> <code class="language-plaintext highlighter-rouge">Coverage</code></li>
-  <li><strong>Description :</strong> Permet de détailler les informations spécifiques à une Assurance Maladie Complémentaire (AMC), telles que :
-    <ul>
-      <li>Le nom de l’organisme complémentaire (<code class="language-plaintext highlighter-rouge">nomAMC</code>),</li>
-      <li>Le numéro d’adhérent (<code class="language-plaintext highlighter-rouge">numeroAMC</code>),</li>
-      <li>Le code de convention (<code class="language-plaintext highlighter-rouge">codeConvention</code>),</li>
-      <li>Le code CSR (<code class="language-plaintext highlighter-rouge">codeCSR</code>),</li>
-      <li>Un datamatrix pour les échanges numériques.</li>
-    </ul>
-  </li>
-  <li><strong>Exemple d’utilisation :</strong>
-    <ul>
-      <li>Nom de l’AMC : Mutuelle Santé Plus</li>
-      <li>Numéro d’adhérent : 987654321</li>
-    </ul>
-  </li>
+  <li><strong>Description :</strong> Permet de détailler les informations spécifiques à une Assurance Maladie Complémentaire (AMC), telles que le nom de l’organisme complémentaire, le numéro d’adhérent, le code de convention, le code CSR, et un datamatrix pour les échanges numériques.</li>
 </ul>
 
 <h6 id="statut-de-la-pré-admission">Statut de la pré-admission</h6>
@@ -354,20 +340,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>Extension :</strong> <code class="language-plaintext highlighter-rouge">PreadmissionStatutFr</code></li>
   <li><strong>Ressource concernée :</strong> <code class="language-plaintext highlighter-rouge">Encounter</code></li>
-  <li><strong>Description :</strong> Permet de suivre l’état administratif de la préadmission. Les statuts possibles incluent :
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">CREATED</code> : Pré-admission créée,</li>
-      <li><code class="language-plaintext highlighter-rouge">IN_PROGRESS</code> : Pré-admission en cours,</li>
-      <li><code class="language-plaintext highlighter-rouge">READY</code> : Pré-admission prête,</li>
-      <li><code class="language-plaintext highlighter-rouge">COMPLETED</code> : Pré-admission validée,</li>
-      <li><code class="language-plaintext highlighter-rouge">REFUSED</code> : Pré-admission refusée.</li>
-    </ul>
-  </li>
-  <li><strong>Exemple d’utilisation :</strong>
-    <ul>
-      <li>Statut : <code class="language-plaintext highlighter-rouge">READY</code> (Prêt pour validation)</li>
-    </ul>
-  </li>
+  <li><strong>Description :</strong> Permet de suivre l’état administratif de la pré-admission, avec des statuts tels que créé, en cours, prêt, validé, ou refusé.</li>
 </ul>
 
 <h6 id="remarque-du-patient">Remarque du patient</h6>
@@ -375,12 +348,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>Extension :</strong> <code class="language-plaintext highlighter-rouge">EncounterPatientComment</code></li>
   <li><strong>Ressource concernée :</strong> <code class="language-plaintext highlighter-rouge">Encounter</code></li>
-  <li><strong>Description :</strong> Permet au patient de fournir des commentaires libres à destination de l’agent administratif.</li>
-  <li><strong>Exemple d’utilisation :</strong>
-    <ul>
-      <li>Remarque : “Je ne pourrai pas être présent à l’heure exacte du rendez-vous.”</li>
-    </ul>
-  </li>
+  <li><strong>Description :</strong> Permet au patient de fournir des commentaires libres destinés à l’agent administratif.</li>
 </ul>
 
 <h6 id="consignes-de-lagent-administratif">Consignes de l’agent administratif</h6>
@@ -388,62 +356,57 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <ul>
   <li><strong>Extension :</strong> <code class="language-plaintext highlighter-rouge">EncounterAgentInstructions</code></li>
   <li><strong>Ressource concernée :</strong> <code class="language-plaintext highlighter-rouge">Encounter</code></li>
-  <li>
-    <p><strong>Description :</strong> Permet à l’agent administratif de transmettre des consignes spécifiques au patient.</p>
-  </li>
-  <li><strong>Exemple d’utilisation :</strong>
-    <ul>
-      <li>Consigne : “Veuillez apporter votre carte Vitale et votre carte de mutuelle.”</li>
-    </ul>
-  </li>
+  <li><strong>Description :</strong> Permet à l’agent administratif de transmettre des consignes spécifiques au patient.</li>
 </ul>
 
-<h6 id="consentements-liés-à-la-préadmission">Consentements liés à la préadmission</h6>
+<h6 id="consentements-liés-à-la-pré-admission">Consentements liés à la pré-admission</h6>
 
 <ul>
   <li><strong>Extension :</strong> <code class="language-plaintext highlighter-rouge">PreadmissionConsentementsExtension</code></li>
-  <li><strong>Ressource concernée :</strong> <code class="language-plaintext highlighter-rouge">Encounter</code>, <code class="language-plaintext highlighter-rouge">Appointment</code></li>
-  <li>
-    <p><strong>Description :</strong> Permet de référencer un ou plusieurs consentements recueillis dans le cadre de la préadmission. Ces consentements incluent, par exemple, l’accès et l’alimentation du Dossier Médical Partagé (DMP).</p>
-  </li>
-  <li><strong>Exemple d’utilisation :</strong>
-    <ul>
-      <li>Consentement à l’accès au DMP : Informé et consentant.</li>
-    </ul>
-  </li>
+  <li><strong>Ressource concernée :</strong> <code class="language-plaintext highlighter-rouge">Encounter</code> et <code class="language-plaintext highlighter-rouge">Appointment</code></li>
+  <li><strong>Description :</strong> Permet de référencer un ou plusieurs consentements recueillis dans le cadre de la pré-admission, par exemple pour l’accès ou l’alimentation du Dossier Médical Partagé (DMP).</li>
 </ul>
 
-<h4 id="-enchaînement-des-processus">🔄 Enchaînement des Processus</h4>
+<h6 id="questionnaire-lié-à-la-pré-admission">Questionnaire lié à la pré-admission</h6>
+
+<ul>
+  <li><strong>Extension :</strong> <code class="language-plaintext highlighter-rouge">PreadmissionQuestionnaireExtension</code></li>
+  <li><strong>Ressource concernée :</strong> <code class="language-plaintext highlighter-rouge">Encounter</code> et <code class="language-plaintext highlighter-rouge">Appointment</code></li>
+  <li><strong>Description :</strong> Permet de référencer une ou plusieurs réponses à des questionnaires administratifs (par exemple, demande de chambre particulière) recueillies dans le cadre de la pré-admission.</li>
+</ul>
+
+<h4 id="enchaînement-des-processus">Enchaînement des Processus</h4>
 
 <h5 id="parcours-global">Parcours global</h5>
 
 <h6 id="logiciel-de-rendez-vous">Logiciel de rendez-vous</h6>
 
 <ul>
-  <li>Création d’un rendez-vous (<code class="language-plaintext highlighter-rouge">Appointment</code>),</li>
-  <li>Association des réponses aux questionnaires (<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>),</li>
+  <li>Création d’un rendez-vous (<code class="language-plaintext highlighter-rouge">Appointment</code>).</li>
+  <li>Association des réponses aux questionnaires (<code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>).</li>
   <li>Référencement des consentements recueillis (<code class="language-plaintext highlighter-rouge">Consent</code>).</li>
 </ul>
 
 <h6 id="système-administratif">Système administratif</h6>
 
 <ul>
-  <li>Récupération des données transmises par le portail,</li>
-  <li>Création d’une ressource <code class="language-plaintext highlighter-rouge">Encounter</code> pour la pré-admission,</li>
-  <li>Vérification des informations administratives, de la couverture sociale (<code class="language-plaintext highlighter-rouge">Coverage</code>), et des documents justificatifs.</li>
+  <li>Récupération des données transmises par le portail.</li>
+  <li>Création d’une ressource <code class="language-plaintext highlighter-rouge">Encounter</code> pour la pré-admission, incluant les références aux <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> pour les réponses aux questionnaires.</li>
+  <li>Vérification des informations administratives, de la couverture sociale (<code class="language-plaintext highlighter-rouge">Coverage</code>), et des documents justificatifs (<code class="language-plaintext highlighter-rouge">DocumentReference</code>).</li>
 </ul>
 
-<h6 id="portail-de-préadmission">Portail de préadmission</h6>
+<h6 id="portail-de-pré-admission">Portail de pré-admission</h6>
 
 <ul>
-  <li>Le patient remplit un formulaire de pré-admission,</li>
-  <li>Téléverse ses documents justificatifs (<code class="language-plaintext highlighter-rouge">DocumentReference</code>),</li>
+  <li>Le patient remplit un formulaire de pré-admission.</li>
+  <li>Téléverse ses documents justificatifs (<code class="language-plaintext highlighter-rouge">DocumentReference</code>).</li>
   <li>Fournit ses consentements (<code class="language-plaintext highlighter-rouge">Consent</code>).</li>
+  <li>Répond à des questionnaires administratifs, enregistrés dans des <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> liées à l’<code class="language-plaintext highlighter-rouge">Encounter</code>.</li>
 </ul>
 
-<h4 id="-exemples-de-ressources">📝 Exemples de Ressources</h4>
+<h4 id="exemples-de-ressources">Exemples de Ressources</h4>
 
-<h5 id="identifiant-de-préadmission-vn">Identifiant de préadmission (VN)</h5>
+<h5 id="identifiant-de-pré-admission-vn">Identifiant de pré-admission (VN)</h5>
 
 <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -462,7 +425,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre></div></div>
-
 
 
 
@@ -504,7 +466,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, May 14, 2025 09:01+0000">2025-05-14</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 22, 2025 16:13+0000">2025-05-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

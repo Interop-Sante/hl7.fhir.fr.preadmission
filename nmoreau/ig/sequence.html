@@ -260,23 +260,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td>1. Prise de rendez-vous</td>
-      <td><code class="language-plaintext highlighter-rouge">Appointment</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Appointment</code>, <code class="language-plaintext highlighter-rouge">Patient</code></td>
     </tr>
     <tr>
-      <td>2. Remplissage du formulaire</td>
-      <td><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>, <code class="language-plaintext highlighter-rouge">Consent</code></td>
+      <td>2. Soumission des informations de pré-admission</td>
+      <td><code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Encounter</code></td>
     </tr>
     <tr>
-      <td>3. Transmission au SIH</td>
+      <td>3. Transmission au système administratif</td>
+      <td><code class="language-plaintext highlighter-rouge">Encounter</code>, <code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Coverage</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code>, <code class="language-plaintext highlighter-rouge">Consent</code></td>
+    </tr>
+    <tr>
+      <td>4. Vérification et validation par le BDE</td>
       <td><code class="language-plaintext highlighter-rouge">Encounter</code></td>
     </tr>
     <tr>
-      <td>4. Vérification par le BDE</td>
-      <td><code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Coverage</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code>, <code class="language-plaintext highlighter-rouge">Consent</code>, <code class="language-plaintext highlighter-rouge">Extension</code></td>
-    </tr>
-    <tr>
-      <td>5. Retour au patient</td>
-      <td><code class="language-plaintext highlighter-rouge">Consent</code></td>
+      <td>5. Notification au patient</td>
+      <td><strong>SMS</strong> ou <strong>e-mail</strong></td>
     </tr>
   </tbody>
 </table>
@@ -429,7 +429,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, May 14, 2025 09:01+0000">2025-05-14</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 22, 2025 16:13+0000">2025-05-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

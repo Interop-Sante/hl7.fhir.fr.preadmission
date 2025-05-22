@@ -191,21 +191,48 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <p><!-- white space is critical inside of capture --></p>
 <div class="markdown-toc">
 <ul id="markdown-toc">
-  <li><a href="#objectif" id="markdown-toc-objectif">Objectif</a></li>
-  <li><a href="#acteurs" id="markdown-toc-acteurs">Acteurs</a></li>
-  <li><a href="#scénario-global-des-flux" id="markdown-toc-scénario-global-des-flux">Scénario global des flux</a></li>
+  <li><a href="#guide-dimplémentation-fhir--pré-admission-hospitalière-en-ligne" id="markdown-toc-guide-dimplémentation-fhir--pré-admission-hospitalière-en-ligne">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</a></li>
   <li><a href="#schéma-global-des-flux" id="markdown-toc-schéma-global-des-flux">Schéma global des flux</a></li>
   <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
 </ul>
 
 </div>
-<h3 id="objectif">Objectif</h3>
+<h3 id="guide-dimplémentation-fhir--pré-admission-hospitalière-en-ligne">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</h3>
 
-<p>Cette page décrit les échanges entre les différentes parties impliquées dans une <strong>pré-admission hospitalière en ligne</strong>, en tenant compte des <strong>contraintes réseau</strong> (pas d’accès direct au SIH depuis Internet) et des <strong>retours manuels</strong> de l’agent administratif. Les flux décrits ici s’appuient sur les ressources FHIR définies dans cet IG.</p>
+<p>Bienvenue dans le guide d’implémentation FHIR pour la pré-admission hospitalière en ligne. Ce document est structuré en plusieurs sections afin de faciliter la compréhension et l’intégration des spécifications de notre IG.</p>
 
 <hr />
 
-<h3 id="acteurs">Acteurs</h3>
+<h4 id="contexte-et-objectif">Contexte et Objectif</h4>
+
+<h5 id="contexte">Contexte</h5>
+
+<p>La pré-admission hospitalière est une étape administrative essentielle qui permet à l’établissement de santé de préparer l’accueil du patient en amont. Elle consiste à recueillir, à distance, les informations nécessaires pour :</p>
+
+<ul>
+  <li>L’identification du patient,</li>
+  <li>La gestion de sa couverture sociale,</li>
+  <li>La collecte des documents justificatifs,</li>
+  <li>Le recueil des consentements requis.</li>
+</ul>
+
+<p>Ce guide s’appuie sur le standard <strong>FHIR</strong> afin d’assurer des échanges fluides, sécurisés et interopérables entre les différents systèmes impliqués, tout en respectant les contraintes réseau (pas d’accès direct au SIH depuis Internet) et en intégrant les retours manuels de l’agent administratif.</p>
+
+<h5 id="objectif">Objectif</h5>
+
+<p>Cette page décrit les échanges entre les différentes parties impliquées dans une <strong>pré-admission hospitalière en ligne</strong>. Elle définit notamment les spécifications d’échange de données entre :</p>
+
+<ul>
+  <li>Un portail web de pré-admission,</li>
+  <li>Un système de gestion des rendez-vous,</li>
+  <li>Le système administratif de l’hôpital.</li>
+</ul>
+
+<p>Les processus s’appuient sur les ressources FHIR définies dans cet IG.</p>
+
+<hr />
+
+<h4 id="acteurs">Acteurs</h4>
 
 <table>
   <thead>
@@ -216,23 +243,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td>👤 <strong>Patient</strong></td>
-      <td>Fournit ses informations de préadmission via un portail en ligne.</td>
+      <td><strong>Patient</strong></td>
+      <td>Fournit ses informations de pré-admission via un portail en ligne.</td>
     </tr>
     <tr>
-      <td>🗓 <strong>Portail de rendez-vous</strong></td>
-      <td>Plateforme externe pour réserver les consultations.</td>
+      <td><strong>Portail de rendez-vous</strong></td>
+      <td>Plateforme externe pour réserver des consultations ou des séjours.</td>
     </tr>
     <tr>
-      <td>🌐 <strong>Portail de préadmission</strong></td>
-      <td>Plateforme en ligne, gérée par un tiers pour recueillir les données administratives et médicales.</td>
+      <td><strong>Portail de pré-admission</strong></td>
+      <td>Plateforme en ligne (gérée par un tiers) pour recueillir les données administratives et médicales.</td>
     </tr>
     <tr>
-      <td>🏥 <strong>Système administratif de l’hôpital</strong></td>
+      <td><strong>Système administratif de l’hôpital</strong></td>
       <td>Système central de l’hôpital pour gérer les données administratives.</td>
     </tr>
     <tr>
-      <td>👨‍💼 <strong>Agent du Bureau des Entrées (BDE)</strong></td>
+      <td><strong>Agent du Bureau des Entrées (BDE)</strong></td>
       <td>Vérifie et valide manuellement les informations reçues.</td>
     </tr>
   </tbody>
@@ -240,19 +267,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <hr />
 
-<h3 id="scénario-global-des-flux">Scénario global des flux</h3>
+<h4 id="scénario-global-des-flux">Scénario Global des Flux</h4>
 
-<h4 id="1-prise-de-rendez-vous">1. <strong>Prise de rendez-vous</strong></h4>
+<h5 id="1-prise-de-rendez-vous">1. <strong>Prise de rendez-vous</strong></h5>
 
 <ul>
   <li><strong>Acteurs impliqués</strong> : Patient, Portail de rendez-vous, Système administratif de l’hôpital.</li>
-  <li><strong>Description</strong> : Le patient réserve une consultation ou un séjour via un portail externe. Une ressource <code class="language-plaintext highlighter-rouge">Appointment</code> est créée dans le Portail de rendez-vous et est transmis au Système administratif de l’hôpital pour planifier la venue.</li>
+  <li><strong>Description</strong> :<br />
+Le patient réserve une consultation ou un séjour via un portail externe. Une ressource <code class="language-plaintext highlighter-rouge">Appointment</code> est créée dans le Portail de rendez-vous et transmise ensuite au système administratif de l’hôpital pour planifier l’accueil.</li>
   <li><strong>Ressources utilisées</strong> :
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">Appointment</code> : Contient les informations sur le rendez-vous (date, heure, participants, raison).</li>
-      <li><code class="language-plaintext highlighter-rouge">Consent</code> : Contient les consentements du patient.</li>
-      <li><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code>: Contient les réponses du patient au questionnaire soumis lors de sa prise de rendez-vous.</li>
-      <li><code class="language-plaintext highlighter-rouge">Patient</code> : Référence le patient concerné.</li>
+      <li><code class="language-plaintext highlighter-rouge">Appointment</code> : Informations sur la planification (date, heure, participants, motif).</li>
+      <li><code class="language-plaintext highlighter-rouge">Consent</code> : Recueil des consentements associés.</li>
+      <li><code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> : Réponses au questionnaire de prise de rendez-vous.</li>
+      <li><code class="language-plaintext highlighter-rouge">Patient</code> : Identification du patient.</li>
     </ul>
   </li>
 </ul>
@@ -365,32 +393,27 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <pre><code class="language-mermaid">flowchart TD
     %% Étape 1 : Prise de rendez-vous
-    Patient1[Patient]
-    PortailRDV[Portail de rendez-vous]
-    SystemeAdmin[Système administratif de l'hôpital]
-    Patient1 --&gt;|Prise de rendez-vous| PortailRDV --&gt;|Transmission du rendez-vous| SystemeAdmin
+    A[Patient] --&gt; B[Portail de rendez-vous]
+    B --&gt; C[Système administratif de l'hôpital]
 
-    %% Étape 2 : Soumission des informations de préadmission
-    Patient2[Patient]
-    PortailPread[Portail de préadmission]
-    Patient2 --&gt;|Soumission des infos| PortailPread --&gt;|Transmission des infos| SystemeAdmin
+    %% Étape 2 : Soumission des infos de pré-admission
+    D[Patient] --&gt; E[Portail de pré-admission]
+    E --&gt; C
 
     %% Étape 3 : Recueil des consentements
-    Patient3[Patient]
-    Patient3 --&gt;|Consentements| PortailPread --&gt;|Transmission des consentements| SystemeAdmin
+    F[Patient] --&gt; E
 
-    %% Étape 4 : Vérification par l'agent du BDE
-    AgentBDE[Agent du BDE]
-    SystemeAdmin &lt;--&gt;|Vérification et validation| AgentBDE
+    %% Étape 4 : Vérification et validation
+    C &lt;--&gt; G[Agent du BDE]
 
     %% Étape 5 : Notification au patient
-    SystemeAdmin --&gt;|Notification| PortailPread --&gt;|Consultation du statut| Patient3
+    C --&gt; E
+    E --&gt; H[Patient]
 </code></pre>
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>Les flux décrits dans ce document permettent de structurer et de coordonner les échanges entre les différents acteurs impliqués dans la préadmission hospitalière. En s’appuyant sur les ressources FHIR (<code class="language-plaintext highlighter-rouge">Appointment</code>, <code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Coverage</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code>, <code class="language-plaintext highlighter-rouge">Consent</code>, <code class="language-plaintext highlighter-rouge">Encounter</code>, etc.), ce processus garantit une gestion efficace et conforme aux exigences réglementaires.</p>
-
+<p>Les flux décrits dans ce document permettent de coordonner efficacement l’échange d’informations entre les différents acteurs impliqués dans la pré-admission hospitalière. En s’appuyant sur les ressources FHIR telles que <code class="language-plaintext highlighter-rouge">Appointment</code>, <code class="language-plaintext highlighter-rouge">Patient</code>, <code class="language-plaintext highlighter-rouge">Coverage</code>, <code class="language-plaintext highlighter-rouge">DocumentReference</code>, <code class="language-plaintext highlighter-rouge">Consent</code>, <code class="language-plaintext highlighter-rouge">QuestionnaireResponse</code> et <code class="language-plaintext highlighter-rouge">Encounter</code>, ce processus vise à garantir à la fois la conformité réglementaire et une gestion efficace des données.</p>
 
 
 
@@ -432,7 +455,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, May 14, 2025 09:01+0000">2025-05-14</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 22, 2025 16:13+0000">2025-05-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

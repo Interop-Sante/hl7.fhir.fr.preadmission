@@ -46,8 +46,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8.1"}
-    h3,h4,h5,h6{--heading-prefix:"8.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.3"}
+    h3,h4,h5,h6{--heading-prefix:"8.3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -151,7 +151,7 @@
 
           <span style="float:right;">
 
-            <a href="artifacts.html">&lt;prev</a> | 
+            <a href="SearchParameter-encounter-preadmission-status.ttl.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
@@ -276,7 +276,7 @@
         
           Draft
           
-            as of 2025-05-14
+            as of 2025-05-22
           
         
       </td>
@@ -292,7 +292,7 @@
   </table>
 
 <p>
-<p>Profil FHIR pour un rendez-vous de préadmission</p>
+<p>Profil Appointment pour un rendez-vous de préadmission</p>
 
 </p>
 
@@ -359,61 +359,6 @@ Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code cla
   <li><strong>Raisons du rendez-vous</strong> : Spécifiées via <code class="language-plaintext highlighter-rouge">Appointment.reasonCode</code>.</li>
 </ul>
 
-<hr />
-
-<h3 id="exemple-dutilisation">Exemple d’utilisation</h3>
-
-<p>Voici un exemple minimal de ressource <code class="language-plaintext highlighter-rouge">Appointment</code> pour un rendez-vous d’IRM cérébrale :</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Appointment"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"appt-irm-001"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"booked"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IRM cérébrale - préadmission"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-05-15T10:30:00+01:00"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-05-15T11:00:00+01:00"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"participant"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/patient-001"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"actor"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Practitioner/practitioner-irm"</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"reasonCode"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"coding"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-        </span><span class="p">{</span><span class="w">
-          </span><span class="nl">"system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://snomed.info/sct"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"241541005"</span><span class="p">,</span><span class="w">
-          </span><span class="nl">"display"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IRM cérébrale (procédure)"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-      </span><span class="p">]</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">],</span><span class="w">
-  </span><span class="nl">"extension"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"valueReference"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"QuestionnaireResponse/qr-irm-001"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"valueReference"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Consent/consent-dmp-001"</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">]</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div></div>
-
 <h3 id="liens-avec-les-autres-ressources">Liens avec les autres ressources</h3>
 
 <ul>
@@ -444,6 +389,7 @@ Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code cla
 <ul>
  <li>Refer to this Resource Profile: <a href="StructureDefinition-preadmission-encounter-fr.html">Fr Preadmission Encounter Profile</a></li>
  <li>Examples for this Resource Profile: <a href="Appointment-appt-irm-001.html">Appointment/appt-irm-001</a></li>
+ <li>CapabilityStatements using this Resource Profile: <a href="CapabilityStatement-PreadmissionCapabilityStatement.html">Capacités serveur FHIR pour l'IG Preadmission</a></li>
 </ul>
 
 
@@ -525,7 +471,7 @@ Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code cla
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-preadmission-consent-fr.html">Fr Preadmission Consent Profile</a>)</td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Consentement lié au rendez-vous<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/><span style="font-weight:bold">ele-1: </span>All FHIR elements must have a @value or children<br/><span style="font-weight:bold">ext-1: </span>Must have either extensions or value[x], not both<br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Consentements<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/><span style="font-weight:bold">ele-1: </span>All FHIR elements must have a @value or children<br/><span style="font-weight:bold">ext-1: </span>Must have either extensions or value[x], not both<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ac" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_modifier_extension_simple.png" alt="." style="background-color: white; background-color: inherit" title="Extension simple" class="hierarchy"/> <a no-external="true" href="StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.modifierExtension" title="May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
@@ -625,13 +571,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a>)</td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Questionnaire lié au rendez-vous</span><br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-appointment-questionnaire-response.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response</a><br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Questionnaire lié au rendez-vous<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-appointment-questionnaire-response.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response</a><br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a no-external="true" href="StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.extension:consentements" title="Extension URL = http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension" data-no-external="true">extension:consentements</a><a name="d-Appointment.extension.3"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-preadmission-consent-fr.html">Fr Preadmission Consent Profile</a>)</td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Consentement lié au rendez-vous</span><br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Consentements<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.participant" data-no-external="true">participant</a><a name="d-Appointment.participant"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -782,7 +728,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-preadmission-consent-fr.html">Fr Preadmission Consent Profile</a>)</td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Consentement lié au rendez-vous<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Consentements<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a7." data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_modifier_extension_simple.png" alt="." style="background-color: white; background-color: inherit" title="Extension simple" class="hierarchy"/> <a no-external="true" href="StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.modifierExtension" title="May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
@@ -1135,7 +1081,7 @@ The duration (usually in minutes) could also be provided to indicate the length 
         "url": "<a href="StructureDefinition-appointment-questionnaire-response.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response</a>",
         "<a href="StructureDefinition-preadmission-appointment-fr.html#Appointment.extension.valueReference" title="Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list)" class="dict"><span style="text-decoration: underline">valueReference</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></span>)} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Value of extension</span>
       },
-      { // <span style="color: navy; opacity: 0.8"> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children; ext-1: Must have either extensions or value[x], not both"><b>C?</b></span>Consentement lié au rendez-vous</span>
+      { // <span style="color: navy; opacity: 0.8"> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children; ext-1: Must have either extensions or value[x], not both"><b>C?</b></span>Consentements</span>
         "url": "<a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a>",
         "<a href="StructureDefinition-preadmission-appointment-fr.html#Appointment.extension.valueReference" title="Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list)" class="dict"><span style="text-decoration: underline">valueReference</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Value of extension</span>
       }
@@ -1262,7 +1208,7 @@ Résumé
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-preadmission-consent-fr.html">Fr Preadmission Consent Profile</a>)</td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Consentement lié au rendez-vous<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/><span style="font-weight:bold">ele-1: </span>All FHIR elements must have a @value or children<br/><span style="font-weight:bold">ext-1: </span>Must have either extensions or value[x], not both<br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Consentements<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/><span style="font-weight:bold">ele-1: </span>All FHIR elements must have a @value or children<br/><span style="font-weight:bold">ext-1: </span>Must have either extensions or value[x], not both<br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ac" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_modifier_extension_simple.png" alt="." style="background-color: white; background-color: inherit" title="Extension simple" class="hierarchy"/> <a no-external="true" href="StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.modifierExtension" title="May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
@@ -1362,13 +1308,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a>)</td>
-<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Questionnaire lié au rendez-vous</span><br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-appointment-questionnaire-response.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response</a><br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Questionnaire lié au rendez-vous<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-appointment-questionnaire-response.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response</a><br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck124.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end_slicer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a no-external="true" href="StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.extension:consentements" title="Extension URL = http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension" data-no-external="true">extension:consentements</a><a name="da-Appointment.extension.3"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-preadmission-consent-fr.html">Fr Preadmission Consent Profile</a>)</td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Consentement lié au rendez-vous</span><br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Consentements<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img onClick="tableRowAction(this)" src="tbl_vjoin_end-open.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.participant" data-no-external="true">participant</a><a name="da-Appointment.participant"> </a></td>
 <td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
@@ -1518,7 +1464,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-preadmission-consent-fr.html">Fr Preadmission Consent Profile</a>)</td>
-<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Consentement lié au rendez-vous<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/></td></tr>
+<td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Consentements<br/><span style="font-weight:bold">URL: </span><a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a><br/></td></tr>
 
 <tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a7." data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_modifier_extension_simple.png" alt="." style="background-color: white; background-color: inherit" title="Extension simple" class="hierarchy"/> <a no-external="true" href="StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.modifierExtension" title="May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
@@ -1871,7 +1817,7 @@ The duration (usually in minutes) could also be provided to indicate the length 
         "url": "<a href="StructureDefinition-appointment-questionnaire-response.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response</a>",
         "<a href="StructureDefinition-preadmission-appointment-fr.html#Appointment.extension.valueReference" title="Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list)" class="dict"><span style="text-decoration: underline">valueReference</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>(<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></span>)} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Value of extension</span>
       },
-      { // <span style="color: navy; opacity: 0.8"> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children; ext-1: Must have either extensions or value[x], not both"><b>C?</b></span>Consentement lié au rendez-vous</span>
+      { // <span style="color: navy; opacity: 0.8"> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children; ext-1: Must have either extensions or value[x], not both"><b>C?</b></span>Consentements</span>
         "url": "<a href="StructureDefinition-preadmission-consent-fr-extension.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension</a>",
         "<a href="StructureDefinition-preadmission-appointment-fr.html#Appointment.extension.valueReference" title="Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list)" class="dict"><span style="text-decoration: underline">valueReference</span></a>" : {<span style="color: darkgreen"><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a></span>([CanonicalType[http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr]])} <span style="color: Gray">//</span> <span style="color: brown" title="ele-1: All FHIR elements must have a @value or children"><b>C?</b></span> <span style="color: navy; opacity: 0.8">Value of extension</span>
       }
@@ -1988,7 +1934,7 @@ Résumé
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="artifacts.html">&lt;prev</a>
+                <a href="SearchParameter-encounter-preadmission-status.ttl.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -2006,7 +1952,7 @@ Résumé
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, May 14, 2025 09:01+0000">2025-05-14</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 22, 2025 16:13+0000">2025-05-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

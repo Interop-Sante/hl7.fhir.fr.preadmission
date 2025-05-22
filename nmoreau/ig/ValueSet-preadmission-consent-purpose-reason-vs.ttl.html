@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Finalités du traitement dans le cadre des consentements - TTL Representation - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+    <title>preadmission-consent-purpose-reason-vs - TTL Representation - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8.14"}
-    h3,h4,h5,h6{--heading-prefix:"8.14"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.17"}
+    h3,h4,h5,h6{--heading-prefix:"8.17"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -145,7 +145,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Finalités du traitement dans le cadre des consentements</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>preadmission-consent-purpose-reason-vs</b></li>
 
           <span style="float:right;">
 
@@ -153,7 +153,7 @@
 
             <a href="#bottom">bottom</a>
 
-          | <a href="ValueSet-type-venue-encounter.html">next&gt;</a>
+          | <a href="ValueSet-preadmission-document-type-vs.html">next&gt;</a>
 
           </span>
 
@@ -214,7 +214,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Finalités du traitement dans le cadre des consentements - TTL Representation</h2>
+<h2 id="root">: preadmission-consent-purpose-reason-vs - TTL Representation</h2>
 
   <table class="colsd">
     <tr>
@@ -223,7 +223,7 @@
         
           Draft
           
-            as of 2025-05-14
+            as of 2025-05-22
           
         
       </td>
@@ -251,17 +251,22 @@
  a fhir:ValueSet ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;preadmission-consent-purpose-reason-vs&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.meta">fhir:meta</a> [
+    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/shareablevalueset&quot;^^xsd:anyURI ;
+<a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/shareablevalueset&gt;     ] )
+  ] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;extensions&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet preadmission-consent-purpose-reason-vs&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;preadmission-consent-purpose-reason-vs\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcpreadmission-consent-purpose-reason-vs\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;preadmission-consent-purpose-reason-vs-fr-FR\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include les codes sont définis dans &lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html\&quot;&gt;&lt;code&gt;http://terminology.hl7.org/CodeSystem/v3-ActReason&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Définition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\&quot;&gt;TREAT&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;color: #cccccc\&quot;&gt;treatment&lt;/td&gt;&lt;td&gt;To perform one or more operations on information for provision of health care.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-CAREMGT\&quot;&gt;CAREMGT&lt;/a&gt;&lt;/td&gt;&lt;td style=\&quot;color: #cccccc\&quot;&gt;care management&lt;/td&gt;&lt;td&gt;To perform analytics, evaluation and other secondary uses of treatment and healthcare related information to manage the quality, efficacy, patient safety, population health, and cost effectiveness of healthcare delivery. Explicitly excludes the use of information to organize the delivery of health care for care coordination and case management, or to provide healthcare treatment.&lt;br/&gt;&lt;br/&gt;*Usage Note:* The concept of care management is narrower than the list of activities related to more general organizational objectives such as provider profiling, education of healthcare and non-healthcare professionals; insurance underwriting, premium rating, reinsurance; organizational legal, medical review, auditing, compliance and fraud and abuse detection; business planning, development, and restructuring; fund-raising; and customer service.&lt;br/&gt;&lt;br/&gt;*Map:* Maps to ISO 14265 Classification Term &amp;quot;Health service management and quality assurance&amp;quot; described as &amp;quot;To inform persons or processes responsible for determining the availability, quality, safety, equity and cost-effectiveness of health care services.&amp;quot;&lt;br/&gt;&lt;br/&gt;There is a semantic gap in concepts. This classification term is described as activities, i.e., &amp;quot;to inform persons&amp;quot; or &amp;quot;to inform processes&amp;quot; rather than the rationale for performing actions/operations on information related to the activity.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-INFORMATION\&quot;&gt;INFORMATION&lt;/a&gt;&lt;/td&gt;&lt;td/&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet preadmission-consent-purpose-reason-vs&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;preadmission-consent-purpose-reason-vs\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcpreadmission-consent-purpose-reason-vs\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;preadmission-consent-purpose-reason-vs-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;http://hl7.org/fhir/R4/shareablevalueset.html\&quot;&gt;Shareable ValueSet&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;ul&gt;&lt;li&gt;Include les codes sont définis dans &lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html\&quot;&gt;&lt;code&gt;http://terminology.hl7.org/CodeSystem/v3-ActReason&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Définition&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\&quot;&gt;TREAT&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Treatment&lt;/td&gt;&lt;td&gt;To perform one or more operations on information for provision of health care.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-PATREQ\&quot;&gt;PATREQ&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Patient Request&lt;/td&gt;&lt;td&gt;**Definition:**Patient requests information from their profile.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-HMO\&quot;&gt;HMO&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Healthcare Operations&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs&quot;^^xsd:anyURI] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;0.1.0&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;PreadmissionConsentPurposeReasonVS&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Finalités du traitement dans le cadre des consentements&quot;] ; # 
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;preadmission-consent-purpose-reason-vs&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;draft&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">fhir:experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> true] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-05-14T09:00:47+00:00&quot;^^xsd:dateTime] ; # 
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2025-05-22T16:12:30+00:00&quot;^^xsd:dateTime] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Interop'Santé&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">fhir:contact</a> ( [
 <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Interop'Santé&quot; ] ;
@@ -286,9 +291,12 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
     ( <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">fhir:include</a> [
 <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActReason&quot;^^xsd:anyURI ] ;
       ( <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">fhir:concept</a> [
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;TREAT&quot; ]       ] [
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;CAREMGT&quot; ]       ] [
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;INFORMATION&quot; ]       ] )     ] )
+<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;TREAT&quot; ] ;
+<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Treatment&quot; ]       ] [
+<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;PATREQ&quot; ] ;
+<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient Request&quot; ]       ] [
+<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;HMO&quot; ] ;
+<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Healthcare Operations&quot; ]       ] )     ] )
   ] . # 
 
 </code></pre>
@@ -328,7 +336,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="ValueSet-type-venue-encounter.html">next&gt;</a>
+                <a href="ValueSet-preadmission-document-type-vs.html">next&gt;</a>
 
               </td>
             </tr>
@@ -338,7 +346,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, May 14, 2025 09:01+0000">2025-05-14</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 22, 2025 16:13+0000">2025-05-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

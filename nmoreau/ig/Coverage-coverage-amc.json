@@ -10,12 +10,12 @@
   },
   "extension" : [{
     "extension" : [{
-      "url" : "numeroAMC",
-      "valueString" : "987654321"
-    },
-    {
       "url" : "nomAMC",
       "valueString" : "Mutuelle Santé Plus"
+    },
+    {
+      "url" : "numeroAMC",
+      "valueString" : "987654321"
     },
     {
       "url" : "codeConvention",

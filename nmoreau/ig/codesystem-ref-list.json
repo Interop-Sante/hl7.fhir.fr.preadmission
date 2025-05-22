@@ -1,26 +1,26 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionDocumentTypeCodeSystem",
-      "title" : "Code System des types de documents pour la préadmission",
-      "description" : "Code System listant les types de documents transmis lors de la préadmission hospitalière.",
+      "title" : "document-type-cs",
+      "description" : "Types de documents additionnels pour la préadmission",
       "uses" : {
       },
-      "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet"
+      "ValueSet-preadmission-document-type-vs.html" : "preadmission-document-type-vs"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionStatusCodeSystem",
-      "title" : "CodeSystem des statuts de la préadmission",
-      "description" : "CodeSystem pour les statuts de la préadmission",
+      "title" : "preadmission-statuts-cs",
+      "description" : "Statut de pré-admission",
       "uses" : {
       },
-      "ValueSet-preadmission-status-value-set.html" : "ValueSet des statuts de préadmission"
+      "ValueSet-preadmission-statuts-vs.html" : "preadmission-status-vs"
     },
     {
       "url" : "http://hl7.org/fhir/consent-provision-type",
@@ -35,6 +35,30 @@
       "http://hl7.org/fhir/R4/valueset-consent-provision-type.html" : "ConsentProvisionType"
     },
     {
+      "url" : "http://loinc.org",
+      "version" : "3.1.0",
+      "status" : "active",
+      "name" : "LOINC",
+      "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
+      "description" : "LOINC provides a set of universal names and ID codes for identifying laboratory and clinical test results.1,2 LOINC facilitates the exchange and pooling of results, such as blood hemoglobin, serum potassium, or vital signs, for clinical care, outcomes management, and research. LOINC's universal identifiers (names and codes) can be used in the context of order and observation exchanges between information systems that use syntax standards such as HL73, CEN TC251, ISO TC215, ASTM4, and DICOM. Specifically, the identifier can be used as the coded value for an observation in any other standard that uses the observation/observation value paradigm, whether messages, documents, application programming interface (API), etc. For example, LOINC codes are used widely in the OBX segment Observation Identifier field (OBX-3) of an ORU HL7 (HL7 version 2.x or ASTM 1238-9410) message that may be sent between a Clinical Laboratory Information Management Systems (LIMS) and Electronic Health Record Systems (EHR).5, 6 In this way, LOINC codes provide universal identifiers that allow the exchange of clinical data between heterogeneous computing environments.",
+      "oids" : ["2.16.840.1.113883.6.1"],
+      "uses" : {
+      },
+      "ValueSet-preadmission-consent-category-vs.html" : "preadmission-consent-category-vs"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/consentaction",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "ConsentActionCodes",
+      "title" : "Consent Action Codes",
+      "description" : "This value set includes sample Consent Action codes.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1227"],
+      "uses" : {
+      },
+      "ValueSet-preadmission-consent-code-vs.html" : "preadmission-consent-code-vs"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
       "version" : "9.0.0",
       "status" : "active",
@@ -44,8 +68,8 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
-      "ValueSet-type-couverture-sociale-vs.html" : "ValueSet des types de couverture pour la préadmission",
-      "ValueSet-preadmission-consent-code-value-set.html" : "Codes des actions de consentement (standard HL7)"
+      "ValueSet-type-venue-encounter-vs.html" : "type-venue-encounter-vs",
+      "ValueSet-type-couverture-sociale-vs.html" : "type-couverture-sociale-vs"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
@@ -57,7 +81,7 @@
       "oids" : ["2.16.840.1.113883.5.8"],
       "uses" : {
       },
-      "ValueSet-preadmission-consent-purpose-reason-vs.html" : "Finalités du traitement dans le cadre des consentements"
+      "ValueSet-preadmission-consent-purpose-reason-vs.html" : "preadmission-consent-purpose-reason-vs"
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type",
@@ -79,7 +103,7 @@
       "description" : "Mode de validation de l'identité",
       "uses" : {
       },
-      "ValueSet-preadmission-document-type-valueset.html" : "Types de documents - ValueSet"
+      "ValueSet-preadmission-document-type-vs.html" : "preadmission-document-type-vs"
     }
   ]
 }

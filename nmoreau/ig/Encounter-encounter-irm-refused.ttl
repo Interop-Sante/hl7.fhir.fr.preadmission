@@ -17,7 +17,7 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Refus de la préadmission par l'agent du bureu des entrée suite à un manque de document - préadmission.</p></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Refus de la préadmission par l'agent du bureau des entrées suite à un manque de document - préadmission.</p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr"^^xsd:anyURI ] ;

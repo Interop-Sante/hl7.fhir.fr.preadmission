@@ -10,7 +10,7 @@
   "name" : "PreadmissionContextExtension",
   "title" : "Contexte du rendez-vous",
   "status" : "draft",
-  "date" : "2025-05-14T09:00:47+00:00",
+  "date" : "2025-05-22T16:12:30+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -45,7 +45,7 @@
   "abstract" : false,
   "context" : [{
     "type" : "element",
-    "expression" : "Element"
+    "expression" : "Appointment"
   }],
   "type" : "Extension",
   "baseDefinition" : "http://hl7.org/fhir/StructureDefinition/Extension",

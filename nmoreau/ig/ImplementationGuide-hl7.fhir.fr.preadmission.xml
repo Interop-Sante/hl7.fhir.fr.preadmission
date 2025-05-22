@@ -10,7 +10,7 @@
   <name value="PREADMISSIONFR"/>
   <title value="Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"/>
   <status value="draft"/>
-  <date value="2025-05-14T09:00:47+00:00"/>
+  <date value="2025-05-22T16:12:30+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -480,46 +480,36 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Appointment"/>
+        <valueString value="CapabilityStatement"/>
       </extension>
       <reference>
-        <reference value="Appointment/appt-irm-001"/>
+        <reference value="CapabilityStatement/PreadmissionCapabilityStatement"/>
       </reference>
-      <name value="appt-irm-001"/>
-      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/document-type-code-system"/>
-      </reference>
-      <name value="Code System des types de documents pour la préadmission"/>
-      <description value="Code System listant les types de documents transmis lors de la préadmission hospitalière."/>
+      <name value="Capacités serveur FHIR pour l'IG Preadmission"/>
+      <description value="Décrit les capacités d’un serveur FHIR conforme à l’IG de préadmission hospitalière en France."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="Consent"/>
       </extension>
       <reference>
-        <reference value="ValueSet/preadmission-consent-code-value-set"/>
+        <reference value="Consent/consentement-dmp-alimentation"/>
       </reference>
-      <name value="Codes des actions de consentement (standard HL7)"/>
-      <description value="Code HL7 v3 ActCode représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants."/>
-      <exampleBoolean value="false"/>
+      <name value="Consentement alimentation DMP"/>
+      <description value="Consentement pour l’alimentation du DMP, non recueilli (provision.type vide)."/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
+        <valueString value="Consent"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/preadmission-status-code-system"/>
+        <reference value="Consent/consentement-dmp-consultation"/>
       </reference>
-      <name value="CodeSystem des statuts de la préadmission"/>
-      <description value="CodeSystem pour les statuts de la préadmission"/>
-      <exampleBoolean value="false"/>
+      <name value="Consentement consultation DMP"/>
+      <description value="Consentement pour la consultation du DMP, non recueilli (provision.type vide)."/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -528,7 +518,8 @@
       <reference>
         <reference value="Consent/consentement-multi"/>
       </reference>
-      <name value="Consentement global incluant consultation DMP, RGPD, et partage d'information"/>
+      <name value="Consentement global incluant consultation DMP, alimentation DMP et partage d'information"/>
+      <description value="Exemple d'une ressource Consent combinant plusieurs provisions pour la consultation du DMP, l'alimentation du DMP et le partage d'informations avec un logiciel tiers pour des communications par SMS ou e-mail."/>
       <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"/>
     </resource>
     <resource>
@@ -539,18 +530,8 @@
         <reference value="StructureDefinition/preadmission-consent-fr-extension"/>
       </reference>
       <name value="Consentement lié au rendez-vous"/>
-      <description value="Référence vers un ou plusieurs consentements donnés dans le cadre de la préadmission."/>
+      <description value="Consentement lié à la préadmission"/>
       <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Consent"/>
-      </extension>
-      <reference>
-        <reference value="Consent/consentement-one"/>
-      </reference>
-      <name value="Consentement unique représentant le non reccueil de la consultation DMP"/>
-      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -562,6 +543,28 @@
       <name value="Consignes de l'agent administratif"/>
       <description value="Consignes à destination du patient, fournies par l'agent administratif"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-irm-externe"/>
+      </reference>
+      <name value="Consultation IRM externe"/>
+      <description value="Initialisation de la préadmission par la GAP, suite à la réception dun rendez-vous - préadmission."/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Encounter"/>
+      </extension>
+      <reference>
+        <reference value="Encounter/encounter-irm-refused"/>
+      </reference>
+      <name value="Consultation IRM refusée"/>
+      <description value="Consultation IRM refusée par l'agent du bureau des entrées - préadmission."/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -581,7 +584,8 @@
       <reference>
         <reference value="Coverage/coverage-amc"/>
       </reference>
-      <name value="coverage-amc"/>
+      <name value="Couverture sociale AMC"/>
+      <description value="Couverture sociale AMC - préadmission."/>
       <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"/>
     </resource>
     <resource>
@@ -591,7 +595,8 @@
       <reference>
         <reference value="Coverage/coverage-amo"/>
       </reference>
-      <name value="coverage-amo"/>
+      <name value="Couverture sociale AMO"/>
+      <description value="Couverture sociale AMO - préadmission."/>
       <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"/>
     </resource>
     <resource>
@@ -601,28 +606,42 @@
       <reference>
         <reference value="DocumentReference/documentreference-cni-recto"/>
       </reference>
-      <name value="documentreference-cni-recto"/>
+      <name value="Document de préadmission - CNI recto"/>
+      <description value="Scan du recto de la carte d'identité du patient - préadmission."/>
       <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Encounter"/>
+        <valueString value="CodeSystem"/>
       </extension>
       <reference>
-        <reference value="Encounter/encounter-irm-externe"/>
+        <reference value="CodeSystem/document-type-cs"/>
       </reference>
-      <name value="encounter-irm-externe"/>
-      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
+      <name value="document-type-cs"/>
+      <description value="Types de documents additionnels pour la préadmission"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Encounter"/>
       </extension>
       <reference>
-        <reference value="Encounter/encounter-irm-refused"/>
+        <reference value="Encounter/encounter-irm-complete"/>
       </reference>
-      <name value="encounter-irm-refused"/>
+      <name value="Encounter IRM complété par le patient"/>
+      <description value="Exemple d'une ressource Encounter complété par le patient sur le portail de préadmission pour une préadmission liée à un rendez-vous IRM externe, avec statut READY, consentements DMP, et réponse au questionnaire sur la chambre particulière."/>
       <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/encounter-preadmission-status"/>
+      </reference>
+      <name value="EncounterPreadmissionStatus"/>
+      <description value="Recherche des encounters par statut de pré-admission (extension PreadmissionStatutFr)."/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -632,7 +651,7 @@
         <reference value="StructureDefinition/fr-coverage-amc-extended"/>
       </reference>
       <name value="Extension AMC Étendue"/>
-      <description value="Extension pour les données spécifiques AMC incluant nom, numéro, code convention, code CSR et datamatrix"/>
+      <description value="Extension pour les informations AMC étendues"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -643,18 +662,7 @@
         <reference value="StructureDefinition/statut-preadmission-fr"/>
       </reference>
       <name value="Extension Statut Pré-admission"/>
-      <description value="Extension transportant les statuts spécifiques de la pré-admission."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/preadmission-consent-purpose-reason-vs"/>
-      </reference>
-      <name value="Finalités du traitement dans le cadre des consentements"/>
-      <description value="Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason)."/>
+      <description value="Statut de pré-admission"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -665,7 +673,7 @@
         <reference value="StructureDefinition/preadmission-appointment-fr"/>
       </reference>
       <name value="Fr Preadmission Appointment Profile"/>
-      <description value="Profil FHIR pour un rendez-vous de préadmission"/>
+      <description value="Profil Appointment pour un rendez-vous de préadmission"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -676,7 +684,18 @@
         <reference value="StructureDefinition/preadmission-consent-fr"/>
       </reference>
       <name value="Fr Preadmission Consent Profile"/>
-      <description value="Profil FHIR pour les consentements lors de la préadmission"/>
+      <description value="Profil Consent pour les consentements lors de la préadmission"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/preadmission-coverage-fr"/>
+      </reference>
+      <name value="Fr Preadmission Coverage Profile"/>
+      <description value="Profil Coverage pour les couvertures sociales lors de la préadmission"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -687,7 +706,7 @@
         <reference value="StructureDefinition/preadmission-documentreference-fr"/>
       </reference>
       <name value="Fr Preadmission DocumentReference Profile"/>
-      <description value="Profil FHIR pour un document administratif de préadmission"/>
+      <description value="Profil DocumentReference pour un document administratif de préadmission"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -698,7 +717,18 @@
         <reference value="StructureDefinition/preadmission-encounter-fr"/>
       </reference>
       <name value="Fr Preadmission Encounter Profile"/>
-      <description value="Profil FHIR pour un encounter lié à une préadmission"/>
+      <description value="Profil Encounter pour une préadmission"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/appointment-questionnaire-response"/>
+      </reference>
+      <name value="Fr QuestionnaireResponse de préadmission"/>
+      <description value="Référence vers un ou plusieurs QuestionnaireResponse remplis dans le cadre de la préadmission."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -708,7 +738,8 @@
       <reference>
         <reference value="Patient/patient-001"/>
       </reference>
-      <name value="patient-001"/>
+      <name value="Patient de préadmission"/>
+      <description value="Patient de préadmission - référencé dans les autres exemples."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -718,19 +749,86 @@
       <reference>
         <reference value="Practitioner/practitioner-irm"/>
       </reference>
-      <name value="practitioner-irm"/>
+      <name value="Praticien IRM"/>
+      <description value="Médecin IRM, référencé dans les autres ressources - préadmission."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
+        <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/preadmission-coverage-fr"/>
+        <reference value="ValueSet/preadmission-consent-category-vs"/>
       </reference>
-      <name value="Profil Coverage pour la préadmission FR"/>
-      <description value="Profil Coverage pour la gestion des informations liées à la couverture sociale AMO et AMC pour la préadmission hospitalière."/>
+      <name value="preadmission-consent-category-vs"/>
+      <description value="ValueSet pour les catégories de consentement. Tous les codes sont standards et existants."/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/preadmission-consent-code-vs"/>
+      </reference>
+      <name value="preadmission-consent-code-vs"/>
+      <description value="Code HL7 représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/preadmission-consent-purpose-reason-vs"/>
+      </reference>
+      <name value="preadmission-consent-purpose-reason-vs"/>
+      <description value="Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/preadmission-document-type-vs"/>
+      </reference>
+      <name value="preadmission-document-type-vs"/>
+      <description value="Liste des types de documents autorisés pour la préadmission"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/preadmission-statuts-vs"/>
+      </reference>
+      <name value="preadmission-status-vs"/>
+      <description value="Statuts valides qu'une préadmission peut prendre."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/preadmission-statuts-cs"/>
+      </reference>
+      <name value="preadmission-statuts-cs"/>
+      <description value="Statut de pré-admission"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Appointment"/>
+      </extension>
+      <reference>
+        <reference value="Appointment/appt-irm-001"/>
+      </reference>
+      <name value="Prise de rendez-vous IRM cérébrale"/>
+      <description value="Rendez-vous pour une IRM cérébrale - préadmission."/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -739,7 +837,8 @@
       <reference>
         <reference value="QuestionnaireResponse/qr-irm-001"/>
       </reference>
-      <name value="qr-irm-001"/>
+      <name value="Questionnaire préadmission IRM"/>
+      <description value="Questionnaire posé lors de la prise de rendez-vous pour une IRM."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
@@ -747,21 +846,22 @@
         <valueString value="Questionnaire"/>
       </extension>
       <reference>
-        <reference value="Questionnaire/questionnaire-irm"/>
+        <reference value="Questionnaire/questionnaire-chb-part"/>
       </reference>
-      <name value="Questionnaire IRM - Préadmission"/>
+      <name value="Questionnaire préadmission IRM"/>
+      <description value="Questionnaire posé par le portail de pré-admission."/>
       <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
+        <valueString value="Consent"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/appointment-questionnaire-response"/>
+        <reference value="Consent/consentement-refus-rgpd"/>
       </reference>
-      <name value="Questionnaire lié au rendez-vous"/>
-      <description value="Référence vers un ou plusieurs QuestionnaireResponse remplis dans le cadre de la préadmission."/>
-      <exampleBoolean value="false"/>
+      <name value="Refus du consentement RGPD"/>
+      <description value="Exemple d'une ressource Consent en FHIR pour un refus explicite du traitement des données personnelles dans le cadre du RGPD."/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -776,58 +876,25 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
+        <valueString value="Questionnaire"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/valeurs-consent-cs"/>
+        <reference value="Questionnaire/questionnaire-irm"/>
       </reference>
-      <name value="Statuts de consentements"/>
-      <description value="Valeurs possibles pour les consentements"/>
-      <exampleBoolean value="false"/>
+      <name value="Reponse Questionnaire préadmission IRM"/>
+      <description value="Réponses au questionnaire posé lors de la prise de rendez-vous pour une IRM."/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="QuestionnaireResponse"/>
       </extension>
       <reference>
-        <reference value="ValueSet/type-venue-encounter"/>
+        <reference value="QuestionnaireResponse/qr-chb-part"/>
       </reference>
-      <name value="Type de venue Encounter"/>
-      <description value="Les différents types d'admission (hospitalisation, consultation, etc.)"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/preadmission-consent-type"/>
-      </reference>
-      <name value="Types de consentements pour la préadmission"/>
-      <description value="Types de consentement recueillis pendant la préadmission."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/preadmission-document-type-valueset"/>
-      </reference>
-      <name value="Types de documents - ValueSet"/>
-      <description value="Liste des types de documents autorisés pour la préadmission"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/preadmission-status-value-set"/>
-      </reference>
-      <name value="ValueSet des statuts de préadmission"/>
-      <description value="Statuts valides qu'une préadmission peut prendre."/>
-      <exampleBoolean value="false"/>
+      <name value="Réponse questionnaire chambre particulière"/>
+      <description value="Réponse du patient au questionnaire posé par le portail de pré-admission."/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -836,8 +903,19 @@
       <reference>
         <reference value="ValueSet/type-couverture-sociale-vs"/>
       </reference>
-      <name value="ValueSet des types de couverture pour la préadmission"/>
+      <name value="type-couverture-sociale-vs"/>
       <description value="Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/type-venue-encounter-vs"/>
+      </reference>
+      <name value="type-venue-encounter-vs"/>
+      <description value="Les différents types d'admission (hospitalisation, consultation, etc.)"/>
       <exampleBoolean value="false"/>
     </resource>
     <page>

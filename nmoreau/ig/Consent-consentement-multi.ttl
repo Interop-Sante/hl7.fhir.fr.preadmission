@@ -18,20 +18,22 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Consent consentement-multi</b></p><a name=\"consentement-multi\"> </a><a name=\"hcconsentement-multi\"> </a><a name=\"consentement-multi-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-consent-fr.html\">Fr Preadmission Consent Profile</a></p></div><p><b>status</b>: Active</p><p><b>scope</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Privacy Consent</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 59284-0}\">Consent Document</span></p><p><b>patient</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>dateTime</b>: 2025-05-14 08:30:00+0000</p><blockquote><p><b>provision</b></p><p><b>type</b>: Opt Out</p><h3>Provisions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Purpose</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>Opt Out</td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\">ActReason TREAT</a>: treatment</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode INFORMATION}\">INFORMATION</span></td></tr><tr><td style=\"display: none\">*</td><td>Opt Out</td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-CAREMGT\">ActReason CAREMGT</a>: care management</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode INFORMATION}\">INFORMATION</span></td></tr><tr><td style=\"display: none\">*</td><td>Opt In</td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-INFORMATION\">ActReason INFORMATION</a>: INFORMATION</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode INFAUTHR}\">INFAUTHR</span></td></tr><tr><td style=\"display: none\">*</td><td>Opt In</td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-INFORMATION\">ActReason INFORMATION</a>: INFORMATION</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode DISCL}\">DISCL</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Consent consentement-multi</b></p><a name=\"consentement-multi\"> </a><a name=\"hcconsentement-multi\"> </a><a name=\"consentement-multi-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-consent-fr.html\">Fr Preadmission Consent Profile</a></p></div><p><b>status</b>: Active</p><p><b>scope</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Patient Privacy</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 59284-0}\">Consent Document</span></p><p><b>patient</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>dateTime</b>: 2025-05-14 08:30:00+0000</p><blockquote><p><b>provision</b></p><h3>Provisions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Purpose</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td> </td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\">ActReason TREAT</a>: Treatment</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentaction access}\">Access data</span></td></tr><tr><td style=\"display: none\">*</td><td> </td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\">ActReason TREAT</a>: Treatment</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentaction collect}\">Collect data</span></td></tr><tr><td style=\"display: none\">*</td><td>Opt In</td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-PATREQ\">ActReason PATREQ</a>: Patient Request</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentaction disclose}\">Disclose data</span></td></tr></table></blockquote></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:scope [
      fhir:coding ( [
        fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentscope"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "patient-privacy" ]
+       fhir:code [ fhir:v "patient-privacy" ] ;
+       fhir:display [ fhir:v "Patient Privacy" ]
      ] )
   ] ; # 
   fhir:category ( [
      fhir:coding ( [
        a loinc:59284-0 ;
        fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
-       fhir:code [ fhir:v "59284-0" ]
+       fhir:code [ fhir:v "59284-0" ] ;
+       fhir:display [ fhir:v "Consent Document" ]
      ] )
   ] ) ; # 
   fhir:patient [
@@ -41,53 +43,44 @@
   ] ; # 
   fhir:dateTime [ fhir:v "2025-05-14T08:30:00+00:00"^^xsd:dateTime] ; # 
   fhir:provision [
-     fhir:type [ fhir:v "deny" ] ;
      fhir:provision ( [
-       fhir:type [ fhir:v "deny" ] ;
        fhir:purpose ( [
          fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "TREAT" ]
+         fhir:code [ fhir:v "TREAT" ] ;
+         fhir:display [ fhir:v "Treatment" ]
        ] ) ;
        fhir:code ( [
          fhir:coding ( [
-           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
-           fhir:code [ fhir:v "INFORMATION" ]
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentaction"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "access" ] ;
+           fhir:display [ fhir:v "Access data" ]
          ] )
        ] )
      ] [
-       fhir:type [ fhir:v "deny" ] ;
        fhir:purpose ( [
          fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "CAREMGT" ]
+         fhir:code [ fhir:v "TREAT" ] ;
+         fhir:display [ fhir:v "Treatment" ]
        ] ) ;
        fhir:code ( [
          fhir:coding ( [
-           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
-           fhir:code [ fhir:v "INFORMATION" ]
-         ] )
-       ] )
-     ] [
-       fhir:type [ fhir:v "permit" ] ;
-       fhir:purpose ( [
-         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "INFORMATION" ]
-       ] ) ;
-       fhir:code ( [
-         fhir:coding ( [
-           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
-           fhir:code [ fhir:v "INFAUTHR" ]
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentaction"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "collect" ] ;
+           fhir:display [ fhir:v "Collect data" ]
          ] )
        ] )
      ] [
        fhir:type [ fhir:v "permit" ] ;
        fhir:purpose ( [
          fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActReason"^^xsd:anyURI ] ;
-         fhir:code [ fhir:v "INFORMATION" ]
+         fhir:code [ fhir:v "PATREQ" ] ;
+         fhir:display [ fhir:v "Patient Request" ]
        ] ) ;
        fhir:code ( [
          fhir:coding ( [
-           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
-           fhir:code [ fhir:v "DISCL" ]
+           fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentaction"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "disclose" ] ;
+           fhir:display [ fhir:v "Disclose data" ]
          ] )
        ] )
      ] )

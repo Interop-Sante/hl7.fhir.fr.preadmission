@@ -1,31 +1,24 @@
 [
   {
-    "id" : "document-type-code-system",
+    "id" : "PreadmissionCapabilityStatement",
+    "type" : "CapabilityStatement",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/CapabilityStatement/PreadmissionCapabilityStatement",
+    "version" : "0.1.0",
+    "name" : "PreadmissionCapabilityStatement"
+  },
+  {
+    "id" : "document-type-cs",
     "type" : "CodeSystem",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
     "version" : "0.1.0",
     "name" : "PreadmissionDocumentTypeCodeSystem"
   },
   {
-    "id" : "preadmission-consent-type",
+    "id" : "preadmission-statuts-cs",
     "type" : "CodeSystem",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
-    "version" : "0.1.0",
-    "name" : "PreadmissionConsentCategoryCodeSystem"
-  },
-  {
-    "id" : "preadmission-status-code-system",
-    "type" : "CodeSystem",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs",
     "version" : "0.1.0",
     "name" : "PreadmissionStatusCodeSystem"
-  },
-  {
-    "id" : "valeurs-consent-cs",
-    "type" : "CodeSystem",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs",
-    "version" : "0.1.0",
-    "name" : "ValeursConsentementCodeSystem"
   },
   {
     "id" : "hl7.fhir.fr.preadmission",
@@ -35,10 +28,23 @@
     "name" : "PREADMISSIONFR"
   },
   {
+    "id" : "questionnaire-chb-part",
+    "type" : "Questionnaire",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-chb-part",
+    "version" : "0.1.0"
+  },
+  {
     "id" : "questionnaire-irm",
     "type" : "Questionnaire",
     "url" : "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-irm",
     "version" : "0.1.0"
+  },
+  {
+    "id" : "encounter-preadmission-status",
+    "type" : "SearchParameter",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/SearchParameter/encounter-preadmission-status",
+    "version" : "0.1.0",
+    "name" : "EncounterPreadmissionStatus"
   },
   {
     "id" : "appointment-context-extension",
@@ -125,9 +131,16 @@
     "name" : "PreadmissionStatutFr"
   },
   {
-    "id" : "preadmission-consent-code-value-set",
+    "id" : "preadmission-consent-category-vs",
     "type" : "ValueSet",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-value-set",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs",
+    "version" : "0.1.0",
+    "name" : "PreadmissionConsentCategoryVS"
+  },
+  {
+    "id" : "preadmission-consent-code-vs",
+    "type" : "ValueSet",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs",
     "version" : "0.1.0",
     "name" : "PreadmissionConsentCodeValueSet"
   },
@@ -139,16 +152,16 @@
     "name" : "PreadmissionConsentPurposeReasonVS"
   },
   {
-    "id" : "preadmission-document-type-valueset",
+    "id" : "preadmission-document-type-vs",
     "type" : "ValueSet",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs",
     "version" : "0.1.0",
     "name" : "PreadmissionDocumentTypeFrValueSet"
   },
   {
-    "id" : "preadmission-status-value-set",
+    "id" : "preadmission-statuts-vs",
     "type" : "ValueSet",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs",
     "version" : "0.1.0",
     "name" : "PreAdmissionStatusValueSet"
   },
@@ -160,9 +173,9 @@
     "name" : "TypeCouvertureSocialeValueSet"
   },
   {
-    "id" : "type-venue-encounter",
+    "id" : "type-venue-encounter-vs",
     "type" : "ValueSet",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
     "version" : "0.1.0",
     "name" : "TypeVenueEncounterValueSet"
   }

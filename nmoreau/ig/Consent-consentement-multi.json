@@ -6,19 +6,21 @@
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Consent consentement-multi</b></p><a name=\"consentement-multi\"> </a><a name=\"hcconsentement-multi\"> </a><a name=\"consentement-multi-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-consent-fr.html\">Fr Preadmission Consent Profile</a></p></div><p><b>status</b>: Active</p><p><b>scope</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Privacy Consent</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 59284-0}\">Consent Document</span></p><p><b>patient</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>dateTime</b>: 2025-05-14 08:30:00+0000</p><blockquote><p><b>provision</b></p><p><b>type</b>: Opt Out</p><h3>Provisions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Purpose</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>Opt Out</td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\">ActReason TREAT</a>: treatment</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode INFORMATION}\">INFORMATION</span></td></tr><tr><td style=\"display: none\">*</td><td>Opt Out</td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-CAREMGT\">ActReason CAREMGT</a>: care management</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode INFORMATION}\">INFORMATION</span></td></tr><tr><td style=\"display: none\">*</td><td>Opt In</td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-INFORMATION\">ActReason INFORMATION</a>: INFORMATION</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode INFAUTHR}\">INFAUTHR</span></td></tr><tr><td style=\"display: none\">*</td><td>Opt In</td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-INFORMATION\">ActReason INFORMATION</a>: INFORMATION</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode DISCL}\">DISCL</span></td></tr></table></blockquote></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Consent consentement-multi</b></p><a name=\"consentement-multi\"> </a><a name=\"hcconsentement-multi\"> </a><a name=\"consentement-multi-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-consent-fr.html\">Fr Preadmission Consent Profile</a></p></div><p><b>status</b>: Active</p><p><b>scope</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Patient Privacy</span></p><p><b>category</b>: <span title=\"Codes:{http://loinc.org 59284-0}\">Consent Document</span></p><p><b>patient</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>dateTime</b>: 2025-05-14 08:30:00+0000</p><blockquote><p><b>provision</b></p><h3>Provisions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Purpose</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td> </td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\">ActReason TREAT</a>: Treatment</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentaction access}\">Access data</span></td></tr><tr><td style=\"display: none\">*</td><td> </td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\">ActReason TREAT</a>: Treatment</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentaction collect}\">Collect data</span></td></tr><tr><td style=\"display: none\">*</td><td>Opt In</td><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-PATREQ\">ActReason PATREQ</a>: Patient Request</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/consentaction disclose}\">Disclose data</span></td></tr></table></blockquote></div>"
   },
   "status" : "active",
   "scope" : {
     "coding" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/consentscope",
-      "code" : "patient-privacy"
+      "code" : "patient-privacy",
+      "display" : "Patient Privacy"
     }]
   },
   "category" : [{
     "coding" : [{
       "system" : "http://loinc.org",
-      "code" : "59284-0"
+      "code" : "59284-0",
+      "display" : "Consent Document"
     }]
   }],
   "patient" : {
@@ -27,43 +29,31 @@
   },
   "dateTime" : "2025-05-14T08:30:00+00:00",
   "provision" : {
-    "type" : "deny",
     "provision" : [{
-      "type" : "deny",
       "purpose" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code" : "TREAT"
+        "code" : "TREAT",
+        "display" : "Treatment"
       }],
       "code" : [{
         "coding" : [{
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code" : "INFORMATION"
+          "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+          "code" : "access",
+          "display" : "Access data"
         }]
       }]
     },
     {
-      "type" : "deny",
       "purpose" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code" : "CAREMGT"
+        "code" : "TREAT",
+        "display" : "Treatment"
       }],
       "code" : [{
         "coding" : [{
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code" : "INFORMATION"
-        }]
-      }]
-    },
-    {
-      "type" : "permit",
-      "purpose" : [{
-        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code" : "INFORMATION"
-      }],
-      "code" : [{
-        "coding" : [{
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code" : "INFAUTHR"
+          "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+          "code" : "collect",
+          "display" : "Collect data"
         }]
       }]
     },
@@ -71,12 +61,14 @@
       "type" : "permit",
       "purpose" : [{
         "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code" : "INFORMATION"
+        "code" : "PATREQ",
+        "display" : "Patient Request"
       }],
       "code" : [{
         "coding" : [{
-          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code" : "DISCL"
+          "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+          "code" : "disclose",
+          "display" : "Disclose data"
         }]
       }]
     }]

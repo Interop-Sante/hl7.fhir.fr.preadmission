@@ -1,36 +1,20 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionDocumentTypeCodeSystem",
-      "title" : "Code System des types de documents pour la préadmission",
-      "description" : "Code System listant les types de documents transmis lors de la préadmission hospitalière."
+      "title" : "document-type-cs",
+      "description" : "Types de documents additionnels pour la préadmission"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "PreadmissionConsentCategoryCodeSystem",
-      "title" : "Types de consentements pour la préadmission",
-      "description" : "Types de consentement recueillis pendant la préadmission."
-    },
-    {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionStatusCodeSystem",
-      "title" : "CodeSystem des statuts de la préadmission",
-      "description" : "CodeSystem pour les statuts de la préadmission"
-    },
-    {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs",
-      "version" : "0.1.0",
-      "status" : "draft",
-      "name" : "ValeursConsentementCodeSystem",
-      "title" : "Statuts de consentements",
-      "description" : "Valeurs possibles pour les consentements"
+      "title" : "preadmission-statuts-cs",
+      "description" : "Statut de pré-admission"
     }
   ]
 }

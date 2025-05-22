@@ -63,7 +63,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Questionnaire lié au rendez-vous","Référence vers un ou plusieurs QuestionnaireResponse remplis dans le cadre de la préadmission.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Appointment.extension:consentements","Appointment.extension","consentements","","",0,*,"","","","Extension {[CanonicalType[http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension]]} {[]}
-","Consentement lié au rendez-vous","Référence vers un ou plusieurs consentements donnés dans le cadre de la préadmission.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Consentements","Consentement lié à la préadmission","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Appointment.modifierExtension","Appointment.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}

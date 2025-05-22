@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Consentement global incluant consultation DMP, RGPD, et partage d&#39;information - JSON Representation - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+    <title>Consentement global incluant consultation DMP, alimentation DMP et partage d&#39;information - JSON Representation - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8.24"}
-    h3,h4,h5,h6{--heading-prefix:"8.24"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.26"}
+    h3,h4,h5,h6{--heading-prefix:"8.26"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -145,7 +145,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Consentement global incluant consultation DMP, RGPD, et partage d'information</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Consentement global incluant consultation DMP, alimentation DMP et partage d'information</b></li>
 
           <span style="float:right;">
 
@@ -214,7 +214,7 @@
 <a name="root"> </a>
 
 
-<h2 id="root">: Consentement global incluant consultation DMP, RGPD, et partage d&#39;information - JSON Representation</h2>
+<h2 id="root">: Consentement global incluant consultation DMP, alimentation DMP et partage d&#39;information - JSON Representation</h2>
 
 
 <p><a href="Consent-consentement-multi.json" no-download="true">Raw json</a> | <a href="Consent-consentement-multi.json" download>Download</a></p>
@@ -234,14 +234,15 @@
   },
   "<a href="http://hl7.org/fhir/R4/consent.html#Consent.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Consent consentement-multi&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;consentement-multi\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcconsentement-multi\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;consentement-multi-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-preadmission-consent-fr.html\&quot;&gt;Fr Preadmission Consent Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Active&lt;/p&gt;&lt;p&gt;&lt;b&gt;scope&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\&quot;&gt;Privacy Consent&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 59284-0}\&quot;&gt;Consent Document&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Patient-patient-001.html\&quot;&gt;Jean Dupont&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dateTime&lt;/b&gt;: 2025-05-14 08:30:00+0000&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;provision&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Opt Out&lt;/p&gt;&lt;h3&gt;Provisions&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Purpose&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Opt Out&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\&quot;&gt;ActReason TREAT&lt;/a&gt;: treatment&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode INFORMATION}\&quot;&gt;INFORMATION&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Opt Out&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-CAREMGT\&quot;&gt;ActReason CAREMGT&lt;/a&gt;: care management&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode INFORMATION}\&quot;&gt;INFORMATION&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Opt In&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-INFORMATION\&quot;&gt;ActReason INFORMATION&lt;/a&gt;: INFORMATION&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode INFAUTHR}\&quot;&gt;INFAUTHR&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Opt In&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-INFORMATION\&quot;&gt;ActReason INFORMATION&lt;/a&gt;: INFORMATION&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode DISCL}\&quot;&gt;DISCL&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Consent consentement-multi&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;consentement-multi\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcconsentement-multi\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;consentement-multi-fr-FR\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-preadmission-consent-fr.html\&quot;&gt;Fr Preadmission Consent Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Active&lt;/p&gt;&lt;p&gt;&lt;b&gt;scope&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\&quot;&gt;Patient Privacy&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://loinc.org 59284-0}\&quot;&gt;Consent Document&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Patient-patient-001.html\&quot;&gt;Jean Dupont&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dateTime&lt;/b&gt;: 2025-05-14 08:30:00+0000&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;provision&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Provisions&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Purpose&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\&quot;&gt;ActReason TREAT&lt;/a&gt;: Treatment&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/consentaction access}\&quot;&gt;Access data&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\&quot;&gt;ActReason TREAT&lt;/a&gt;: Treatment&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/consentaction collect}\&quot;&gt;Collect data&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;Opt In&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-PATREQ\&quot;&gt;ActReason PATREQ&lt;/a&gt;: Patient Request&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/consentaction disclose}\&quot;&gt;Disclose data&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/consent.html#Consent.status">status</a>" : "active",
   "<a href="http://hl7.org/fhir/R4/consent.html#Consent.scope">scope</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
       {
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/consentscope",
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "patient-privacy"
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "patient-privacy",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Patient Privacy"
       }
     ]
   },
@@ -250,7 +251,8 @@
       "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
         {
           "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
-          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "59284-0"
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "59284-0",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Consent Document"
         }
       ]
     }
@@ -261,60 +263,42 @@
   },
   "<a href="http://hl7.org/fhir/R4/consent.html#Consent.dateTime">dateTime</a>" : "2025-05-14T08:30:00+00:00",
   "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision">provision</a>" : {
-    "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.type">type</a>" : "deny",
     "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.provision">provision</a>" : [
       {
-        "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.type">type</a>" : "deny",
         "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.purpose">purpose</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "TREAT"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "TREAT",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Treatment"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.code">code</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
               {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "INFORMATION"
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/consentaction",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "access",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Access data"
               }
             ]
           }
         ]
       },
       {
-        "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.type">type</a>" : "deny",
         "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.purpose">purpose</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "CAREMGT"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "TREAT",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Treatment"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.code">code</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
               {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "INFORMATION"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.type">type</a>" : "permit",
-        "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.purpose">purpose</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "INFORMATION"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.code">code</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
-              {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "INFAUTHR"
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/consentaction",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "collect",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Collect data"
               }
             ]
           }
@@ -325,15 +309,17 @@
         "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.purpose">purpose</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "INFORMATION"
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "PATREQ",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Patient Request"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.code">code</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
               {
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "DISCL"
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/consentaction",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "disclose",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Disclose data"
               }
             ]
           }
@@ -387,7 +373,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, May 14, 2025 09:01+0000">2025-05-14</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 22, 2025 16:13+0000">2025-05-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

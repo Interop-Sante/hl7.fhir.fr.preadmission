@@ -10,18 +10,13 @@
   </text>
   <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension">
     <valueReference>
-      <reference value="Consent/consent-rgpd"/>
+      <reference value="Consent/consentement-multi"/>
       <display value="Questionnaire préadmission IRM"/>
     </valueReference>
   </extension>
   <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension">
     <valueReference>
-      <reference value="Consent/consent-consultation-dmp"/>
-    </valueReference>
-  </extension>
-  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension">
-    <valueReference>
-      <reference value="Consent/consent-alimentation-dmp"/>
+      <reference value="Consent/consentement-refus-rgpd"/>
     </valueReference>
   </extension>
   <status value="booked"/>

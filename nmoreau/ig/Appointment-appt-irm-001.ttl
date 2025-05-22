@@ -24,23 +24,16 @@
      fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"^^xsd:anyURI ] ;
      fhir:value [
        a fhir:Reference ;
-       fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consent-rgpd> ;
-       fhir:reference [ fhir:v "Consent/consent-rgpd" ] ;
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consentement-multi> ;
+       fhir:reference [ fhir:v "Consent/consentement-multi" ] ;
        fhir:display [ fhir:v "Questionnaire préadmission IRM" ]
      ]
   ] [
      fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"^^xsd:anyURI ] ;
      fhir:value [
        a fhir:Reference ;
-       fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consent-consultation-dmp> ;
-       fhir:reference [ fhir:v "Consent/consent-consultation-dmp" ]
-     ]
-  ] [
-     fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"^^xsd:anyURI ] ;
-     fhir:value [
-       a fhir:Reference ;
-       fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consent-alimentation-dmp> ;
-       fhir:reference [ fhir:v "Consent/consent-alimentation-dmp" ]
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/Consent/consentement-refus-rgpd> ;
+       fhir:reference [ fhir:v "Consent/consentement-refus-rgpd" ]
      ]
   ] ) ; # 
   fhir:status [ fhir:v "booked"] ; # 

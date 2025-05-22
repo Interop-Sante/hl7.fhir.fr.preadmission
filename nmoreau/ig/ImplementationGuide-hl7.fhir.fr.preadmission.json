@@ -10,7 +10,7 @@
   "name" : "PREADMISSIONFR",
   "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
   "status" : "draft",
-  "date" : "2025-05-14T09:00:47+00:00",
+  "date" : "2025-05-22T16:12:30+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -643,49 +643,38 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Appointment"
+        "valueString" : "CapabilityStatement"
       }],
       "reference" : {
-        "reference" : "Appointment/appt-irm-001"
+        "reference" : "CapabilityStatement/PreadmissionCapabilityStatement"
       },
-      "name" : "appt-irm-001",
-      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/document-type-code-system"
-      },
-      "name" : "Code System des types de documents pour la préadmission",
-      "description" : "Code System listant les types de documents transmis lors de la préadmission hospitalière.",
+      "name" : "Capacités serveur FHIR pour l'IG Preadmission",
+      "description" : "Décrit les capacités d’un serveur FHIR conforme à l’IG de préadmission hospitalière en France.",
       "exampleBoolean" : false
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "Consent"
       }],
       "reference" : {
-        "reference" : "ValueSet/preadmission-consent-code-value-set"
+        "reference" : "Consent/consentement-dmp-alimentation"
       },
-      "name" : "Codes des actions de consentement (standard HL7)",
-      "description" : "Code HL7 v3 ActCode représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants.",
-      "exampleBoolean" : false
+      "name" : "Consentement alimentation DMP",
+      "description" : "Consentement pour l’alimentation du DMP, non recueilli (provision.type vide).",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
+        "valueString" : "Consent"
       }],
       "reference" : {
-        "reference" : "CodeSystem/preadmission-status-code-system"
+        "reference" : "Consent/consentement-dmp-consultation"
       },
-      "name" : "CodeSystem des statuts de la préadmission",
-      "description" : "CodeSystem pour les statuts de la préadmission",
-      "exampleBoolean" : false
+      "name" : "Consentement consultation DMP",
+      "description" : "Consentement pour la consultation du DMP, non recueilli (provision.type vide).",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
     },
     {
       "extension" : [{
@@ -695,7 +684,8 @@
       "reference" : {
         "reference" : "Consent/consentement-multi"
       },
-      "name" : "Consentement global incluant consultation DMP, RGPD, et partage d'information",
+      "name" : "Consentement global incluant consultation DMP, alimentation DMP et partage d'information",
+      "description" : "Exemple d'une ressource Consent combinant plusieurs provisions pour la consultation du DMP, l'alimentation du DMP et le partage d'informations avec un logiciel tiers pour des communications par SMS ou e-mail.",
       "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
     },
     {
@@ -707,19 +697,8 @@
         "reference" : "StructureDefinition/preadmission-consent-fr-extension"
       },
       "name" : "Consentement lié au rendez-vous",
-      "description" : "Référence vers un ou plusieurs consentements donnés dans le cadre de la préadmission.",
+      "description" : "Consentement lié à la préadmission",
       "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Consent"
-      }],
-      "reference" : {
-        "reference" : "Consent/consentement-one"
-      },
-      "name" : "Consentement unique représentant le non reccueil de la consultation DMP",
-      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
     },
     {
       "extension" : [{
@@ -732,6 +711,30 @@
       "name" : "Consignes de l'agent administratif",
       "description" : "Consignes à destination du patient, fournies par l'agent administratif",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/encounter-irm-externe"
+      },
+      "name" : "Consultation IRM externe",
+      "description" : "Initialisation de la préadmission par la GAP, suite à la réception dun rendez-vous - préadmission.",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/encounter-irm-refused"
+      },
+      "name" : "Consultation IRM refusée",
+      "description" : "Consultation IRM refusée par l'agent du bureau des entrées - préadmission.",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"
     },
     {
       "extension" : [{
@@ -753,7 +756,8 @@
       "reference" : {
         "reference" : "Coverage/coverage-amc"
       },
-      "name" : "coverage-amc",
+      "name" : "Couverture sociale AMC",
+      "description" : "Couverture sociale AMC - préadmission.",
       "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"
     },
     {
@@ -764,7 +768,8 @@
       "reference" : {
         "reference" : "Coverage/coverage-amo"
       },
-      "name" : "coverage-amo",
+      "name" : "Couverture sociale AMO",
+      "description" : "Couverture sociale AMO - préadmission.",
       "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"
     },
     {
@@ -775,19 +780,21 @@
       "reference" : {
         "reference" : "DocumentReference/documentreference-cni-recto"
       },
-      "name" : "documentreference-cni-recto",
+      "name" : "Document de préadmission - CNI recto",
+      "description" : "Scan du recto de la carte d'identité du patient - préadmission.",
       "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr"
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "Encounter"
+        "valueString" : "CodeSystem"
       }],
       "reference" : {
-        "reference" : "Encounter/encounter-irm-externe"
+        "reference" : "CodeSystem/document-type-cs"
       },
-      "name" : "encounter-irm-externe",
-      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"
+      "name" : "document-type-cs",
+      "description" : "Types de documents additionnels pour la préadmission",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -795,10 +802,23 @@
         "valueString" : "Encounter"
       }],
       "reference" : {
-        "reference" : "Encounter/encounter-irm-refused"
+        "reference" : "Encounter/encounter-irm-complete"
       },
-      "name" : "encounter-irm-refused",
+      "name" : "Encounter IRM complété par le patient",
+      "description" : "Exemple d'une ressource Encounter complété par le patient sur le portail de préadmission pour une préadmission liée à un rendez-vous IRM externe, avec statut READY, consentements DMP, et réponse au questionnaire sur la chambre particulière.",
       "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/encounter-preadmission-status"
+      },
+      "name" : "EncounterPreadmissionStatus",
+      "description" : "Recherche des encounters par statut de pré-admission (extension PreadmissionStatutFr).",
+      "exampleBoolean" : false
     },
     {
       "extension" : [{
@@ -809,7 +829,7 @@
         "reference" : "StructureDefinition/fr-coverage-amc-extended"
       },
       "name" : "Extension AMC Étendue",
-      "description" : "Extension pour les données spécifiques AMC incluant nom, numéro, code convention, code CSR et datamatrix",
+      "description" : "Extension pour les informations AMC étendues",
       "exampleBoolean" : false
     },
     {
@@ -821,19 +841,7 @@
         "reference" : "StructureDefinition/statut-preadmission-fr"
       },
       "name" : "Extension Statut Pré-admission",
-      "description" : "Extension transportant les statuts spécifiques de la pré-admission.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/preadmission-consent-purpose-reason-vs"
-      },
-      "name" : "Finalités du traitement dans le cadre des consentements",
-      "description" : "Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason).",
+      "description" : "Statut de pré-admission",
       "exampleBoolean" : false
     },
     {
@@ -845,7 +853,7 @@
         "reference" : "StructureDefinition/preadmission-appointment-fr"
       },
       "name" : "Fr Preadmission Appointment Profile",
-      "description" : "Profil FHIR pour un rendez-vous de préadmission",
+      "description" : "Profil Appointment pour un rendez-vous de préadmission",
       "exampleBoolean" : false
     },
     {
@@ -857,7 +865,19 @@
         "reference" : "StructureDefinition/preadmission-consent-fr"
       },
       "name" : "Fr Preadmission Consent Profile",
-      "description" : "Profil FHIR pour les consentements lors de la préadmission",
+      "description" : "Profil Consent pour les consentements lors de la préadmission",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/preadmission-coverage-fr"
+      },
+      "name" : "Fr Preadmission Coverage Profile",
+      "description" : "Profil Coverage pour les couvertures sociales lors de la préadmission",
       "exampleBoolean" : false
     },
     {
@@ -869,7 +889,7 @@
         "reference" : "StructureDefinition/preadmission-documentreference-fr"
       },
       "name" : "Fr Preadmission DocumentReference Profile",
-      "description" : "Profil FHIR pour un document administratif de préadmission",
+      "description" : "Profil DocumentReference pour un document administratif de préadmission",
       "exampleBoolean" : false
     },
     {
@@ -881,7 +901,19 @@
         "reference" : "StructureDefinition/preadmission-encounter-fr"
       },
       "name" : "Fr Preadmission Encounter Profile",
-      "description" : "Profil FHIR pour un encounter lié à une préadmission",
+      "description" : "Profil Encounter pour une préadmission",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/appointment-questionnaire-response"
+      },
+      "name" : "Fr QuestionnaireResponse de préadmission",
+      "description" : "Référence vers un ou plusieurs QuestionnaireResponse remplis dans le cadre de la préadmission.",
       "exampleBoolean" : false
     },
     {
@@ -892,7 +924,8 @@
       "reference" : {
         "reference" : "Patient/patient-001"
       },
-      "name" : "patient-001",
+      "name" : "Patient de préadmission",
+      "description" : "Patient de préadmission - référencé dans les autres exemples.",
       "exampleBoolean" : true
     },
     {
@@ -903,20 +936,93 @@
       "reference" : {
         "reference" : "Practitioner/practitioner-irm"
       },
-      "name" : "practitioner-irm",
+      "name" : "Praticien IRM",
+      "description" : "Médecin IRM, référencé dans les autres ressources - préadmission.",
       "exampleBoolean" : true
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/preadmission-coverage-fr"
+        "reference" : "ValueSet/preadmission-consent-category-vs"
       },
-      "name" : "Profil Coverage pour la préadmission FR",
-      "description" : "Profil Coverage pour la gestion des informations liées à la couverture sociale AMO et AMC pour la préadmission hospitalière.",
+      "name" : "preadmission-consent-category-vs",
+      "description" : "ValueSet pour les catégories de consentement. Tous les codes sont standards et existants.",
       "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/preadmission-consent-code-vs"
+      },
+      "name" : "preadmission-consent-code-vs",
+      "description" : "Code HL7 représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/preadmission-consent-purpose-reason-vs"
+      },
+      "name" : "preadmission-consent-purpose-reason-vs",
+      "description" : "Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason).",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/preadmission-document-type-vs"
+      },
+      "name" : "preadmission-document-type-vs",
+      "description" : "Liste des types de documents autorisés pour la préadmission",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/preadmission-statuts-vs"
+      },
+      "name" : "preadmission-status-vs",
+      "description" : "Statuts valides qu'une préadmission peut prendre.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/preadmission-statuts-cs"
+      },
+      "name" : "preadmission-statuts-cs",
+      "description" : "Statut de pré-admission",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Appointment"
+      }],
+      "reference" : {
+        "reference" : "Appointment/appt-irm-001"
+      },
+      "name" : "Prise de rendez-vous IRM cérébrale",
+      "description" : "Rendez-vous pour une IRM cérébrale - préadmission.",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"
     },
     {
       "extension" : [{
@@ -926,7 +1032,8 @@
       "reference" : {
         "reference" : "QuestionnaireResponse/qr-irm-001"
       },
-      "name" : "qr-irm-001",
+      "name" : "Questionnaire préadmission IRM",
+      "description" : "Questionnaire posé lors de la prise de rendez-vous pour une IRM.",
       "exampleBoolean" : true
     },
     {
@@ -935,22 +1042,23 @@
         "valueString" : "Questionnaire"
       }],
       "reference" : {
-        "reference" : "Questionnaire/questionnaire-irm"
+        "reference" : "Questionnaire/questionnaire-chb-part"
       },
-      "name" : "Questionnaire IRM - Préadmission",
+      "name" : "Questionnaire préadmission IRM",
+      "description" : "Questionnaire posé par le portail de pré-admission.",
       "exampleBoolean" : true
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
+        "valueString" : "Consent"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/appointment-questionnaire-response"
+        "reference" : "Consent/consentement-refus-rgpd"
       },
-      "name" : "Questionnaire lié au rendez-vous",
-      "description" : "Référence vers un ou plusieurs QuestionnaireResponse remplis dans le cadre de la préadmission.",
-      "exampleBoolean" : false
+      "name" : "Refus du consentement RGPD",
+      "description" : "Exemple d'une ressource Consent en FHIR pour un refus explicite du traitement des données personnelles dans le cadre du RGPD.",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
     },
     {
       "extension" : [{
@@ -967,62 +1075,26 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
+        "valueString" : "Questionnaire"
       }],
       "reference" : {
-        "reference" : "CodeSystem/valeurs-consent-cs"
+        "reference" : "Questionnaire/questionnaire-irm"
       },
-      "name" : "Statuts de consentements",
-      "description" : "Valeurs possibles pour les consentements",
-      "exampleBoolean" : false
+      "name" : "Reponse Questionnaire préadmission IRM",
+      "description" : "Réponses au questionnaire posé lors de la prise de rendez-vous pour une IRM.",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
+        "valueString" : "QuestionnaireResponse"
       }],
       "reference" : {
-        "reference" : "ValueSet/type-venue-encounter"
+        "reference" : "QuestionnaireResponse/qr-chb-part"
       },
-      "name" : "Type de venue Encounter",
-      "description" : "Les différents types d'admission (hospitalisation, consultation, etc.)",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/preadmission-consent-type"
-      },
-      "name" : "Types de consentements pour la préadmission",
-      "description" : "Types de consentement recueillis pendant la préadmission.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/preadmission-document-type-valueset"
-      },
-      "name" : "Types de documents - ValueSet",
-      "description" : "Liste des types de documents autorisés pour la préadmission",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/preadmission-status-value-set"
-      },
-      "name" : "ValueSet des statuts de préadmission",
-      "description" : "Statuts valides qu'une préadmission peut prendre.",
-      "exampleBoolean" : false
+      "name" : "Réponse questionnaire chambre particulière",
+      "description" : "Réponse du patient au questionnaire posé par le portail de pré-admission.",
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -1032,8 +1104,20 @@
       "reference" : {
         "reference" : "ValueSet/type-couverture-sociale-vs"
       },
-      "name" : "ValueSet des types de couverture pour la préadmission",
+      "name" : "type-couverture-sociale-vs",
       "description" : "Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/type-venue-encounter-vs"
+      },
+      "name" : "type-venue-encounter-vs",
+      "description" : "Les différents types d'admission (hospitalisation, consultation, etc.)",
       "exampleBoolean" : false
     }],
     "page" : {

@@ -1,13 +1,25 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-value-set",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PreadmissionConsentCategoryVS",
+      "title" : "preadmission-consent-category-vs",
+      "description" : "ValueSet pour les catégories de consentement. Tous les codes sont standards et existants.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionConsentCodeValueSet",
-      "title" : "Codes des actions de consentement (standard HL7)",
-      "description" : "Code HL7 v3 ActCode représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants.",
-      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "title" : "preadmission-consent-code-vs",
+      "description" : "Code HL7 représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/consentaction"],
       "uses" : {
       },
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
@@ -17,7 +29,7 @@
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionConsentPurposeReasonVS",
-      "title" : "Finalités du traitement dans le cadre des consentements",
+      "title" : "preadmission-consent-purpose-reason-vs",
       "description" : "Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason).",
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
       "uses" : {
@@ -25,48 +37,54 @@
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-valueset",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionDocumentTypeFrValueSet",
-      "title" : "Types de documents - ValueSet",
+      "title" : "preadmission-document-type-vs",
       "description" : "Liste des types de documents autorisés pour la préadmission",
       "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system",
-        "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity"
-      ]
+        "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-status-value-set",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreAdmissionStatusValueSet",
-      "title" : "ValueSet des statuts de préadmission",
+      "title" : "preadmission-status-vs",
       "description" : "Statuts valides qu'une préadmission peut prendre.",
       "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"
-      ]
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-statut-preadmission-fr.html" : "Extension Statut Pré-admission"
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "TypeCouvertureSocialeValueSet",
-      "title" : "ValueSet des types de couverture pour la préadmission",
+      "title" : "type-couverture-sociale-vs",
       "description" : "Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)",
       "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR"
+      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
       "version" : "0.1.0",
       "status" : "draft",
       "name" : "TypeVenueEncounterValueSet",
-      "title" : "Type de venue Encounter",
+      "title" : "type-venue-encounter-vs",
       "description" : "Les différents types d'admission (hospitalisation, consultation, etc.)",
-      "systems" : ["http://terminology.hl7.org/ValueSet/v3-ActEncounterCode"],
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
       "uses" : {
       },
       "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
@@ -100,20 +118,6 @@
       "uses" : {
       },
       "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/c80-doc-typecodes",
-      "version" : "4.0.1",
-      "status" : "active",
-      "name" : "DocumentTypeValueSet",
-      "title" : "Document Type Value Set",
-      "description" : "This is the code specifying the precise type of document (e.g. Pulmonary History and  Physical, Discharge Summary, Ultrasound Report, etc.). The Document Type value set includes all LOINC  values listed in HITSP C80 Table 2-144 Document Class Value Set Definition above used for Document Class,  and all LOINC values whose SCALE is DOC in the LOINC database.",
-      "systems" : ["http://loinc.org"],
-      "oids" : ["2.16.840.1.113883.3.88.12.80.47"],
-      "sources" : ["2.16.840.1.113883.3.88.12.80.47"],
-      "uses" : {
-      },
-      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/c80-facilitycodes",
@@ -155,8 +159,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.79"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/composition-status",
@@ -319,7 +323,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1009"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR"
+      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/coverage-copay-type",
@@ -333,7 +337,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.527"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR"
+      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/coverage-financial-exception",
@@ -349,7 +353,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1328"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR"
+      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/coverage-type",
@@ -366,7 +370,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.520"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR"
+      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/diagnosis-role",
@@ -481,8 +485,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.250"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/encounter-reason",
@@ -496,8 +500,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.261"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
@@ -558,7 +562,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.592"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR"
+      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/formatcodes",
@@ -600,11 +604,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
-      "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR",
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
@@ -666,10 +670,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.47"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/security-role-type",
@@ -719,8 +723,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.518"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/subscriber-relationship",
@@ -736,7 +740,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1385"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-coverage-fr.html" : "Profil Coverage pour la préadmission FR"
+      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v2-0092",

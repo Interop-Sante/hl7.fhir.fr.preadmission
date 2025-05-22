@@ -11,20 +11,14 @@
   "extension" : [{
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension",
     "valueReference" : {
-      "reference" : "Consent/consent-rgpd",
+      "reference" : "Consent/consentement-multi",
       "display" : "Questionnaire préadmission IRM"
     }
   },
   {
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension",
     "valueReference" : {
-      "reference" : "Consent/consent-consultation-dmp"
-    }
-  },
-  {
-    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension",
-    "valueReference" : {
-      "reference" : "Consent/consent-alimentation-dmp"
+      "reference" : "Consent/consentement-refus-rgpd"
     }
   }],
   "status" : "booked",

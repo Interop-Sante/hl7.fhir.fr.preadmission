@@ -21,16 +21,16 @@
   ] ; # 
   fhir:extension ( [
      fhir:extension ( [
-       fhir:url [ fhir:v "numeroAMC"^^xsd:anyURI ] ;
-       fhir:value [
-         a fhir:string ;
-         fhir:v "987654321"
-       ]
-     ] [
        fhir:url [ fhir:v "nomAMC"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:string ;
          fhir:v "Mutuelle Santé Plus"
+       ]
+     ] [
+       fhir:url [ fhir:v "numeroAMC"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "987654321"
        ]
      ] [
        fhir:url [ fhir:v "codeConvention"^^xsd:anyURI ] ;

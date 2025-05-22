@@ -46,8 +46,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8.3"}
-    h3,h4,h5,h6{--heading-prefix:"8.3"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.6"}
+    h3,h4,h5,h6{--heading-prefix:"8.6"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -253,7 +253,7 @@
         
           Draft
           
-            as of 2025-05-14
+            as of 2025-05-22
           
         
       </td>
@@ -326,10 +326,6 @@ Composition.date</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>interim: .completionCode=&quot;IN&quot; &amp; ./statusCode[isNormalDatatype()]=&quot;active&quot;;  final: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and not(./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseDocument&quot;, code) and isNormalAct()]);  amended: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and ./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseDocument&quot;, code) and isNormalAct() and statusCode=&quot;completed&quot;];  withdrawn : .completionCode=NI &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;obsolete&quot;</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;docStatus</td><td>.statusCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>./code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>union(., ./translation)</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>./originalText[mediaType/code=&quot;text/plain&quot;]/data</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>.outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>.participation[typeCode=&quot;SBJ&quot;].role[typeCode=&quot;PAT&quot;]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;date</td><td>.availabilityTime[type=&quot;TS&quot;]</td> </tr>
@@ -421,8 +417,6 @@ serviceEvent/effectiveTime/high/
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>TXA-19</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;docStatus</td><td>TXA-17</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>TXA-2</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;coding</td><td>C*E.1-8, C*E.10-22</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>C*E.9. But note many systems use C*E.2 for this</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>PID-3 (No standard way to define a Practitioner or Group subject in HL7 v2 MDM message)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;author</td><td>TXA-9 (No standard way to indicate a Device in HL7 v2 MDM message)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;authenticator</td><td>TXA-10</td> </tr>
@@ -509,7 +503,7 @@ serviceEvent/effectiveTime/high/
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, May 14, 2025 09:01+0000">2025-05-14</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 22, 2025 16:13+0000">2025-05-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

@@ -1,5 +1,3 @@
 URL,Version,Status,OIDs,Name,Title,Description,Used
-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system,0.1.0,draft,,PreadmissionDocumentTypeCodeSystem,Code System des types de documents pour la préadmission,"Code System listant les types de documents transmis lors de la préadmission hospitalière.",
-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-consent-type,0.1.0,draft,,PreadmissionConsentCategoryCodeSystem,Types de consentements pour la préadmission,"Types de consentement recueillis pendant la préadmission.",
-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system,0.1.0,draft,,PreadmissionStatusCodeSystem,CodeSystem des statuts de la préadmission,"CodeSystem pour les statuts de la préadmission",
-http://hl7.fr/fhir/fr/preadmission/CodeSystem/valeurs-consent-cs,0.1.0,draft,,ValeursConsentementCodeSystem,Statuts de consentements,"Valeurs possibles pour les consentements",
+http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs,0.1.0,draft,,PreadmissionDocumentTypeCodeSystem,document-type-cs,"Types de documents additionnels pour la préadmission",
+http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs,0.1.0,draft,,PreadmissionStatusCodeSystem,preadmission-statuts-cs,"Statut de pré-admission",

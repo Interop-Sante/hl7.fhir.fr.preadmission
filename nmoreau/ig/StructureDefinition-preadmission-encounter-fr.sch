@@ -17,7 +17,6 @@
       <sch:assert test="count(f:extension[@url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions']) &lt;= 1">extension with URL = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr']) &gt;= 1">extension with URL = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr': minimum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr']) &lt;= 1">extension with URL = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr': maximum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>
       <sch:assert test="count(f:appointment) &lt;= 1">appointment: maximum cardinality of 'appointment' is 1</sch:assert>
       <sch:assert test="count(f:location) &lt;= 1">location: maximum cardinality of 'location' is 1</sch:assert>
     </sch:rule>

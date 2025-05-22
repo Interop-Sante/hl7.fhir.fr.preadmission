@@ -1,0 +1,69 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "preadmission-statuts-cs",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem preadmission-statuts-cs</b></p><a name=\"preadmission-statuts-cs\"> </a><a name=\"hcpreadmission-statuts-cs\"> </a><a name=\"preadmission-statuts-cs-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-insensitive code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CANCELLED<a name=\"preadmission-statuts-cs-CANCELLED\"> </a></td><td>Pré-admission annulée</td></tr><tr><td style=\"white-space:nowrap\">CREATED<a name=\"preadmission-statuts-cs-CREATED\"> </a></td><td>Pré-admission créée</td></tr><tr><td style=\"white-space:nowrap\">IN_PROGRESS<a name=\"preadmission-statuts-cs-IN_PROGRESS\"> </a></td><td>Pré-admission en cours</td></tr><tr><td style=\"white-space:nowrap\">READY<a name=\"preadmission-statuts-cs-READY\"> </a></td><td>Pré-admission prête</td></tr><tr><td style=\"white-space:nowrap\">COMPLETED<a name=\"preadmission-statuts-cs-COMPLETED\"> </a></td><td>Pré-admission terminée</td></tr><tr><td style=\"white-space:nowrap\">REFUSED<a name=\"preadmission-statuts-cs-REFUSED\"> </a></td><td>Pré-admission refusée</td></tr></table></div>"
+  },
+  "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs",
+  "version" : "0.1.0",
+  "name" : "PreadmissionStatusCodeSystem",
+  "title" : "preadmission-statuts-cs",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2025-05-22T16:12:30+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  },
+  {
+    "name" : "InteropSanté",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "fhir@interopsante.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Statut de pré-admission",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "caseSensitive" : false,
+  "content" : "complete",
+  "count" : 6,
+  "concept" : [{
+    "code" : "CANCELLED",
+    "display" : "Pré-admission annulée"
+  },
+  {
+    "code" : "CREATED",
+    "display" : "Pré-admission créée"
+  },
+  {
+    "code" : "IN_PROGRESS",
+    "display" : "Pré-admission en cours"
+  },
+  {
+    "code" : "READY",
+    "display" : "Pré-admission prête"
+  },
+  {
+    "code" : "COMPLETED",
+    "display" : "Pré-admission terminée"
+  },
+  {
+    "code" : "REFUSED",
+    "display" : "Pré-admission refusée"
+  }]
+}

@@ -9,11 +9,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>Couverture sociale AMC - préadmission.</p></div>
   </text>
   <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended">
-    <extension url="numeroAMC">
-      <valueString value="987654321"/>
-    </extension>
     <extension url="nomAMC">
       <valueString value="Mutuelle Santé Plus"/>
+    </extension>
+    <extension url="numeroAMC">
+      <valueString value="987654321"/>
     </extension>
     <extension url="codeConvention">
       <valueString value="12345"/>

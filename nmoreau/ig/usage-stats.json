@@ -13,7 +13,7 @@
     },
     {
       "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",
-      "title": "Questionnaire lié au rendez-vous",
+      "title": "Fr QuestionnaireResponse de préadmission",
       "types": [
         "Reference"
       ]
@@ -105,17 +105,9 @@
       "title": "Extension Statut Pré-admission",
       "types": [
         "CodeableConcept",
-        "CodeableConcept",
         "string",
         "Extension",
         "Coding",
-        "string",
-        "Extension",
-        "uri",
-        "string",
-        "code",
-        "string",
-        "boolean",
         "string"
       ]
     }
@@ -136,7 +128,7 @@
     "Coverage": [
       {
         "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr",
-        "title": "Profil Coverage pour la préadmission FR"
+        "title": "Fr Preadmission Coverage Profile"
       }
     ],
     "DocumentReference": [
@@ -154,7 +146,8 @@
   },
   "usage": {
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response": [
-      "Appointment"
+      "Appointment",
+      "Encounter"
     ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions": [
       "Encounter"
