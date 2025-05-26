@@ -72,7 +72,7 @@ Lors de la préadmission, le patient fournit ses informations de couverture soci
 
 ---
 
-### Critère de recherche
+### Critère de recherche autorisé
 
 Dans le contexte de la préadmission, la ressource `Coverage` ne peut être recherchée qu'à partir du **patient**. Cela signifie que les systèmes doivent utiliser uniquement le critère `patient` pour interroger les informations de couverture, conformément aux contraintes d'implémentation définies.
 

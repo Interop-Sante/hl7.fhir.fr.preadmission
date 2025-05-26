@@ -131,6 +131,12 @@ Les critères de recherche suivants sont disponibles pour le profil `Preadmissio
 > `GET [base]/Encounter?subject=Patient/12345`  
 > Cette requête retourne toutes les préadmissions associées au patient d’ID `12345`.
 
+
+> **Exemple de requête** :  
+> `GET [base]/Encounter?date=lt2025-06-09&_lastUpdated=ge2025-05-26T10:00:00Z&preadmission-status=ready,cancelled`
+> Cette requête retourne toutes les préadmissions prévues dans moins de 7 jours, qui ont été modifiées sur le portail de préadmission depuis 1 heure et qui sont, soit prêtes à être traitées par le bureau des entrées, soit annulées.
+
+
 ---
 
 ### Conclusion

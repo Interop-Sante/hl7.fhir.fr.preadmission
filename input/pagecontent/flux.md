@@ -149,23 +149,48 @@ SIH → [Portail de préadmission] → Patient
 
 ```mermaid
 flowchart TD
-    %% Étape 1 : Prise de rendez-vous
-    A[Patient] --> B[Portail de rendez-vous]
-    B --> C[Système administratif de l'hôpital]
+    %% Styles
+    classDef patient fill:#E3F2FD,stroke:#2196F3,color:#000
+    classDef portailRDV fill:#FFF3E0,stroke:#FF9800,color:#000
+    classDef portailPA fill:#E8F5E9,stroke:#4CAF50,color:#000
+    classDef sih fill:#F3E5F5,stroke:#9C27B0,color:#000
+    classDef agent fill:#FCE4EC,stroke:#E91E63,color:#000
 
-    %% Étape 2 : Soumission des infos de pré-admission
-    D[Patient] --> E[Portail de pré-admission]
-    E --> C
+    %% Acteurs
+    A[Patient]:::patient
+    B[Portail de rendez-vous]:::portailRDV
+    C[Système administratif de l'hôpital]:::sih
+    E[Portail de pré-admission]:::portailPA
+    G[Agent du BDE]:::agent
+
+    %% Étape 1 : Prise de rendez-vous
+    subgraph Prise de rendez-vous
+        A -->|1. Réserve un rendez-vous| B
+        B -->|2. Transmet Appointment| C
+    end
+
+    %% Étape 2 : Soumission des informations de pré-admission
+    subgraph Soumission des informations
+        A -->|3. Remplit formulaire| E
+        E -->|4. Transmet Patient, Coverage, DocumentReference| C
+    end
 
     %% Étape 3 : Recueil des consentements
-    F[Patient] --> E
+    subgraph Recueil des consentements
+        A -->|5. Fournit consentements| E
+        E -->|6. Transmet Consent| C
+    end
 
     %% Étape 4 : Vérification et validation
-    C <--> G[Agent du BDE]
+    subgraph Vérification et validation
+        C <-->|7. Vérifie et valide Encounter| G
+    end
 
     %% Étape 5 : Notification au patient
-    C --> E
-    E --> H[Patient]
+    subgraph Notification
+        C -->|8. Transmet statut Encounter| E
+        E -->|9. Notifie ACCEPTED/REFUSED| A
+    end
 ```
 
 ### Conclusion

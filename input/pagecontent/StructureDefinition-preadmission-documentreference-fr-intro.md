@@ -23,11 +23,13 @@ La ressource `DocumentReference` est utilisée pour représenter chaque document
 
 ---
 
-### Critères de recherche autorisés
+### Critère de recherche autorisé
 
-Les critères de recherche suivants sont disponibles pour la ressource `DocumentReference` dans le cadre de la préadmission hospitalière :
+Dans le contexte de la préadmission, la ressource `DocumentReference` ne peut être recherchée qu'à partir de l**encounter**. Cela signifie que les systèmes doivent utiliser uniquement le critère `encounter` pour récupérer les documents liés à la pré-admission, conformément aux contraintes d'implémentation définies.
 
-- **Lien avec la préadmission** : Permet de rechercher les documents associés à un `Encounter` spécifique.
+```plaintext
+documentreference?encounter=
+```
 
 ### Bonnes pratiques
 

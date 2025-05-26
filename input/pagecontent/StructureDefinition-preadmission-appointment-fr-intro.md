@@ -28,7 +28,7 @@ Le profil **PreadmissionAppointmentFr** apporte des contraintes et des extension
 #### **Contraintes principales**
 
 - **Participant** : Le participant principal doit être un patient, référencé via `participant.actor` avec une ressource `Patient`.
-- **Lien avec les questionnaires** : Les questionnaires médicaux remplis par le patient sont référencés via l’extension `PreadmissionAppointmentQuestionnaireResponseFr`.
+- **Lien avec les questionnaires** : Les questionnaires nécessaires à la prise de rendez-vous remplis par le patient sont référencés via l’extension `PreadmissionAppointmentQuestionnaireResponseFr`.
 - **Lien avec les consentements** : Les consentements recueillis sont référencés via l’extension `PreadmissionConsentementsExtension`.
 
 ---
@@ -54,7 +54,8 @@ La ressource `Appointment` contient les informations nécessaires à la planific
 
 - **Planification précise** : Assurez-vous que les dates et heures des rendez-vous sont correctement définies pour éviter les conflits.
 - **Traçabilité des consentements** : Associez systématiquement les consentements recueillis au rendez-vous pour garantir une traçabilité complète.
-- **Validation des questionnaires** : Vérifiez que les questionnaires médicaux sont remplis avant la date du rendez-vous.
+- **Validation des questionnaires** : Vérifiez que les questionnaires sont remplis avant la date du rendez-vous.
+- **Contexte** : un commentaire peutr être ajouté dans `Appointment.comment` pour préciser le contexte de la venue à venir (Par exemple: ALD, accident du travail, etc.).
 
 ### Conclusion
 
