@@ -13,6 +13,7 @@
     <sch:title>f:DocumentReference</sch:title>
     <sch:rule context="f:DocumentReference">
       <sch:assert test="count(f:type) &gt;= 1">type: minimum cardinality of 'type' is 1</sch:assert>
+      <sch:assert test="count(f:context) &gt;= 1">context: minimum cardinality of 'context' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

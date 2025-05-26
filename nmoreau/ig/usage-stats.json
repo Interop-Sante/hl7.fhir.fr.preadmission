@@ -5,13 +5,6 @@
   "jurisdiction": "FR",
   "extensions": [
     {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context-extension",
-      "title": "Contexte du rendez-vous",
-      "types": [
-        "Reference"
-      ]
-    },
-    {
       "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",
       "title": "Fr QuestionnaireResponse de préadmission",
       "types": [

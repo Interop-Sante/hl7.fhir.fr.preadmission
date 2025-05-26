@@ -47,13 +47,6 @@
     "name" : "EncounterPreadmissionStatus"
   },
   {
-    "id" : "appointment-context-extension",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context-extension",
-    "version" : "0.1.0",
-    "name" : "PreadmissionContextExtension"
-  },
-  {
     "id" : "appointment-questionnaire-response",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",

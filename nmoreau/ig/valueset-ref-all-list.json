@@ -159,8 +159,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.79"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/composition-status",
@@ -485,8 +485,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.250"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/encounter-reason",
@@ -500,8 +500,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.261"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
@@ -604,11 +604,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
       "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
       "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
@@ -670,10 +670,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.47"],
       "uses" : {
       },
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
       "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/security-role-type",
@@ -723,8 +723,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.518"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/subscriber-relationship",

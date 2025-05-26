@@ -392,23 +392,48 @@ Le patient réserve une consultation ou un séjour via un portail externe. Une r
 </code></pre></div></div>
 
 <pre><code class="language-mermaid">flowchart TD
-    %% Étape 1 : Prise de rendez-vous
-    A[Patient] --&gt; B[Portail de rendez-vous]
-    B --&gt; C[Système administratif de l'hôpital]
+    %% Styles
+    classDef patient fill:#E3F2FD,stroke:#2196F3,color:#000
+    classDef portailRDV fill:#FFF3E0,stroke:#FF9800,color:#000
+    classDef portailPA fill:#E8F5E9,stroke:#4CAF50,color:#000
+    classDef sih fill:#F3E5F5,stroke:#9C27B0,color:#000
+    classDef agent fill:#FCE4EC,stroke:#E91E63,color:#000
 
-    %% Étape 2 : Soumission des infos de pré-admission
-    D[Patient] --&gt; E[Portail de pré-admission]
-    E --&gt; C
+    %% Acteurs
+    A[Patient]:::patient
+    B[Portail de rendez-vous]:::portailRDV
+    C[Système administratif de l'hôpital]:::sih
+    E[Portail de pré-admission]:::portailPA
+    G[Agent du BDE]:::agent
+
+    %% Étape 1 : Prise de rendez-vous
+    subgraph Prise de rendez-vous
+        A --&gt;|1. Réserve un rendez-vous| B
+        B --&gt;|2. Transmet Appointment| C
+    end
+
+    %% Étape 2 : Soumission des informations de pré-admission
+    subgraph Soumission des informations
+        A --&gt;|3. Remplit formulaire| E
+        E --&gt;|4. Transmet Patient, Coverage, DocumentReference| C
+    end
 
     %% Étape 3 : Recueil des consentements
-    F[Patient] --&gt; E
+    subgraph Recueil des consentements
+        A --&gt;|5. Fournit consentements| E
+        E --&gt;|6. Transmet Consent| C
+    end
 
     %% Étape 4 : Vérification et validation
-    C &lt;--&gt; G[Agent du BDE]
+    subgraph Vérification et validation
+        C &lt;--&gt;|7. Vérifie et valide Encounter| G
+    end
 
     %% Étape 5 : Notification au patient
-    C --&gt; E
-    E --&gt; H[Patient]
+    subgraph Notification
+        C --&gt;|8. Transmet statut Encounter| E
+        E --&gt;|9. Notifie ACCEPTED/REFUSED| A
+    end
 </code></pre>
 
 <h3 id="conclusion">Conclusion</h3>
@@ -455,7 +480,7 @@ Le patient réserve une consultation ou un séjour via un portail externe. Une r
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 22, 2025 16:13+0000">2025-05-22</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 26, 2025 07:00+0000">2025-05-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

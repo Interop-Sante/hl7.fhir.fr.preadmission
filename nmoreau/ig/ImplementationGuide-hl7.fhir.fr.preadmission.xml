@@ -10,7 +10,7 @@
   <name value="PREADMISSIONFR"/>
   <title value="Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"/>
   <status value="draft"/>
-  <date value="2025-05-22T16:12:30+00:00"/>
+  <date value="2025-05-26T06:59:47+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -565,17 +565,6 @@
       <name value="Consultation IRM refusée"/>
       <description value="Consultation IRM refusée par l'agent du bureau des entrées - préadmission."/>
       <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/appointment-context-extension"/>
-      </reference>
-      <name value="Contexte du rendez-vous"/>
-      <description value="Contexte lié au rendez-vous (ex : ALD, maternité, accidents du travail, etc.)"/>
-      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

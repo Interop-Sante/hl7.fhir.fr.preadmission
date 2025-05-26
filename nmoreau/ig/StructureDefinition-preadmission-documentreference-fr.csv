@@ -152,7 +152,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "DocumentReference.content.format","DocumentReference.content.format","","","",0,1,"","","Y","Coding {[]} {[]}
 ","Format/content rules for the document","An identifier of the document encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.","Note that while IHE mostly issues URNs for format types, not all documents can be identified by a URI.","","","","","","","","",,"preferred","Document Format Codes.","http://hl7.org/fhir/ValueSet/formatcodes","",,,,"DocumentReference.content.format",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Composition.meta.profile","document.text","derived from the IHE Profile or Implementation Guide templateID","DocumentEntry.formatCode"
-"DocumentReference.context","DocumentReference.context","","","",0,1,"","","Y","BackboneElement {[]} {[]}
+"DocumentReference.context","DocumentReference.context","","","",1,1,"","","Y","BackboneElement {[]} {[]}
 ","Clinical context of document","The clinical context in which the document was prepared.","These values are primarily added to help with searching for interesting/relevant documents.","","","","","","","","",,,,,"",,,,"DocumentReference.context",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","outboundRelationship[typeCode=""SUBJ""].target[classCode<'ACT']"
 "DocumentReference.context.id","DocumentReference.context.id","","","",0,1,"","","","string {[]} {[]}

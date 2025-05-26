@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PREADMISSIONFR"] ; # 
   fhir:title [ fhir:v "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-05-22T16:12:30+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-05-26T06:59:47+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -1019,24 +1019,6 @@
          a fhir:canonical ;
          fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"^^xsd:anyURI ;
          fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr>
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:extension"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-context-extension> ;
-         fhir:reference [ fhir:v "StructureDefinition/appointment-context-extension" ]
-       ] ;
-       fhir:name [ fhir:v "Contexte du rendez-vous" ] ;
-       fhir:description [ fhir:v "Contexte lié au rendez-vous (ex : ALD, maternité, accidents du travail, etc.)" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
        ]
      ] [
        fhir:extension ( [

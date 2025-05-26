@@ -276,7 +276,7 @@
         
           Draft
           
-            as of 2025-05-22
+            as of 2025-05-26
           
         
       </td>
@@ -340,7 +340,7 @@ Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code cla
 
 <ul>
   <li><strong>Participant</strong> : Le participant principal doit être un patient, référencé via <code class="language-plaintext highlighter-rouge">participant.actor</code> avec une ressource <code class="language-plaintext highlighter-rouge">Patient</code>.</li>
-  <li><strong>Lien avec les questionnaires</strong> : Les questionnaires médicaux remplis par le patient sont référencés via l’extension <code class="language-plaintext highlighter-rouge">PreadmissionAppointmentQuestionnaireResponseFr</code>.</li>
+  <li><strong>Lien avec les questionnaires</strong> : Les questionnaires nécessaires à la prise de rendez-vous remplis par le patient sont référencés via l’extension <code class="language-plaintext highlighter-rouge">PreadmissionAppointmentQuestionnaireResponseFr</code>.</li>
   <li><strong>Lien avec les consentements</strong> : Les consentements recueillis sont référencés via l’extension <code class="language-plaintext highlighter-rouge">PreadmissionConsentementsExtension</code>.</li>
 </ul>
 
@@ -372,7 +372,8 @@ Les rendez-vous sont modélisés dans FHIR à l’aide de la ressource <code cla
 <ul>
   <li><strong>Planification précise</strong> : Assurez-vous que les dates et heures des rendez-vous sont correctement définies pour éviter les conflits.</li>
   <li><strong>Traçabilité des consentements</strong> : Associez systématiquement les consentements recueillis au rendez-vous pour garantir une traçabilité complète.</li>
-  <li><strong>Validation des questionnaires</strong> : Vérifiez que les questionnaires médicaux sont remplis avant la date du rendez-vous.</li>
+  <li><strong>Validation des questionnaires</strong> : Vérifiez que les questionnaires sont remplis avant la date du rendez-vous.</li>
+  <li><strong>Contexte</strong> : un commentaire peutr être ajouté dans <code class="language-plaintext highlighter-rouge">Appointment.comment</code> pour préciser le contexte de la venue à venir (Par exemple: ALD, accident du travail, etc.).</li>
 </ul>
 
 <h3 id="conclusion">Conclusion</h3>
@@ -1952,7 +1953,7 @@ Résumé
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, May 22, 2025 16:13+0000">2025-05-22</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 26, 2025 07:00+0000">2025-05-26</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

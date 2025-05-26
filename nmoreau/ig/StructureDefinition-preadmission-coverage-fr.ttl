@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PreadmissionCoverageFr"] ; # 
   fhir:title [ fhir:v "Fr Preadmission Coverage Profile"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-05-22T16:12:30+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-05-26T06:59:47+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

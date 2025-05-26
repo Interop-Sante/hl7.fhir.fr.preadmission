@@ -10,7 +10,7 @@
   "name" : "PREADMISSIONFR",
   "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
   "status" : "draft",
-  "date" : "2025-05-22T16:12:30+00:00",
+  "date" : "2025-05-26T06:59:47+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -735,18 +735,6 @@
       "name" : "Consultation IRM refusée",
       "description" : "Consultation IRM refusée par l'agent du bureau des entrées - préadmission.",
       "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/appointment-context-extension"
-      },
-      "name" : "Contexte du rendez-vous",
-      "description" : "Contexte lié au rendez-vous (ex : ALD, maternité, accidents du travail, etc.)",
-      "exampleBoolean" : false
     },
     {
       "extension" : [{
