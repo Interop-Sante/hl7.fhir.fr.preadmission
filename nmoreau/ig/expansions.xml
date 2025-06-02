@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="4dca5cb3-dea6-4add-8aeb-ccce7d744e16"/>
+  <id value="b04d0a57-2ffd-4497-9a89-b23a7666ba98"/>
   <meta>
-    <lastUpdated value="2025-05-26T07:00:26.573+00:00"/>
+    <lastUpdated value="2025-06-02T15:03:03.313+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -16,9 +16,7 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
+            <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on Loinc v2.80</p>
             <p>Ce jeu de valeur (ValueSet) contient 2 concepts</p>
             <table class="codes">
@@ -58,7 +56,7 @@
         <title value="preadmission-consent-category-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-26T06:59:47+00:00"/>
+        <date value="2025-06-02T15:02:23+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -67,8 +65,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:57b6bc43-ddb4-4a1e-8cb1-fb4d89e197bf"/>
-          <timestamp value="2025-05-26T07:00:57+00:00"/>
+          <identifier value="urn:uuid:c1171b36-dd72-406b-8f58-f46aaadad099"/>
+          <timestamp value="2025-06-02T15:03:37+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -123,9 +121,7 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
+            <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="http://terminology.hl7.org/6.0.2/CodeSystem-consentaction.html">codesystem Consent Action Codes v1.0.1 (CodeSystem)</a>
             </p>
@@ -196,7 +192,7 @@
         <title value="preadmission-consent-code-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-26T06:59:47+00:00"/>
+        <date value="2025-06-02T15:02:23+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -205,8 +201,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:862e6442-4224-4d79-aef9-ff0216bcd7b6"/>
-          <timestamp value="2025-05-26T07:00:58+00:00"/>
+          <identifier value="urn:uuid:8f9cdb97-d139-4b9f-a9de-a2296624237c"/>
+          <timestamp value="2025-06-02T15:03:37+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -255,9 +251,7 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
+            <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html">codesystem ActReason v3.1.0 (CodeSystem)</a>
             </p>
@@ -314,7 +308,7 @@
         <title value="preadmission-consent-purpose-reason-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-26T06:59:47+00:00"/>
+        <date value="2025-06-02T15:02:23+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -323,8 +317,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:fd98a6c2-a783-465c-a0ea-a22df0067f9e"/>
-          <timestamp value="2025-05-26T07:00:58+00:00"/>
+          <identifier value="urn:uuid:7df7044e-742e-4956-94d6-1959659337c4"/>
+          <timestamp value="2025-06-02T15:03:37+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -369,9 +363,7 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
+            <p class="res-header-id"/>
             <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
               <p>Expansion performed internally based on:</p>
               <ul>
@@ -557,7 +549,7 @@
         <title value="preadmission-document-type-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-26T06:59:47+00:00"/>
+        <date value="2025-06-02T15:02:23+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -566,8 +558,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2bb75799-fdc1-4843-a03f-da19fb3c6cc5"/>
-          <timestamp value="2025-05-26T07:00:58+00:00"/>
+          <identifier value="urn:uuid:4bfa62b2-3b80-4e7a-a256-485f0059b6d1"/>
+          <timestamp value="2025-06-02T15:03:37+00:00"/>
           <total value="19"/>
           <offset value="0"/>
           <parameter>
@@ -684,9 +676,7 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
+            <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="CodeSystem-preadmission-statuts-cs.html">codesystem preadmission-statuts-cs v0.1.0 (CodeSystem)</a>
             </p>
@@ -760,7 +750,7 @@
         <title value="preadmission-status-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-26T06:59:47+00:00"/>
+        <date value="2025-06-02T15:02:23+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -769,8 +759,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:00984e73-69fb-4aa7-a226-9687c1439c4a"/>
-          <timestamp value="2025-05-26T07:00:58+00:00"/>
+          <identifier value="urn:uuid:fb545bbe-a81c-4127-b510-09aa0b2545ee"/>
+          <timestamp value="2025-06-02T15:03:37+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -831,9 +821,7 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
+            <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html">codesystem ActCode v9.0.0 (CodeSystem)</a>
             </p>
@@ -890,7 +878,7 @@
         <title value="type-couverture-sociale-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-26T06:59:47+00:00"/>
+        <date value="2025-06-02T15:02:23+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -899,8 +887,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:6cdb7883-83da-4b43-90f2-cddb2f07008c"/>
-          <timestamp value="2025-05-26T07:00:58+00:00"/>
+          <identifier value="urn:uuid:95147886-a1a8-4d1a-b134-2849ede61285"/>
+          <timestamp value="2025-06-02T15:03:37+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -945,9 +933,7 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p class="res-header-id">
-              <b>ValueSet </b>
-            </p>
+            <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
               <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html">codesystem ActCode v9.0.0 (CodeSystem)</a>
             </p>
@@ -1018,7 +1004,7 @@
         <title value="type-venue-encounter-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-05-26T06:59:47+00:00"/>
+        <date value="2025-06-02T15:02:23+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1027,8 +1013,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:52c143e0-25ed-4cdd-8255-fb2b43feeb25"/>
-          <timestamp value="2025-05-26T07:00:58+00:00"/>
+          <identifier value="urn:uuid:421c98a6-13b1-4aae-a287-ffa5cbfe2175"/>
+          <timestamp value="2025-06-02T15:03:37+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
