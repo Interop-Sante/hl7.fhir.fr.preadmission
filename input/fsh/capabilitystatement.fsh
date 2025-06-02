@@ -28,19 +28,19 @@ Usage: #definition
 * rest[0].resource[=].searchParam[0].name = "preadmission-status"
 * rest[0].resource[=].searchParam[0].definition = "http://hl7.fr/fhir/fr/preadmission/SearchParameter/encounter-preadmission-status"
 * rest[0].resource[=].searchParam[0].type = #token
-* rest[0].resource[=].searchParam[0].documentation = "Recherche par statut de pré-admission"
+* rest[0].resource[=].searchParam[0].documentation = "Le serveur DOIT permettre la recherche des préadmission par son statut (extension PreadmissionStatutFr)."
 * rest[0].resource[=].searchParam[+].name = "patient"
 * rest[0].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Encounter-patient"
 * rest[0].resource[=].searchParam[=].type = #reference
-* rest[0].resource[=].searchParam[=].documentation = "Recherche par patient associé"
+* rest[0].resource[=].searchParam[=].documentation = "Le serveur DOIT permettre la recherche par patient associé"
 * rest[0].resource[=].searchParam[+].name = "date"
 * rest[0].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Encounter-date"
 * rest[0].resource[=].searchParam[=].type = #date
-* rest[0].resource[=].searchParam[=].documentation = "Recherche par date de l'Encounter"
+* rest[0].resource[=].searchParam[=].documentation = "Le serveur DOIT permettre la recherche par date de l'Encounter"
 * rest[0].resource[=].searchParam[+].name = "_lastUpdated"
 * rest[0].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest[0].resource[=].searchParam[=].type = #date
-* rest[0].resource[=].searchParam[=].documentation = "Recherche par date de dernière mise à jour"
+* rest[0].resource[=].searchParam[=].documentation = "Le serveur DOIT permettre la recherche par date de dernière mise à jour de l'Encounter"
 
 // Appointment
 * rest[0].resource[+].type = #Appointment
@@ -62,8 +62,7 @@ Usage: #definition
 * rest[0].resource[=].searchParam[0].name = "patient"
 * rest[0].resource[=].searchParam[0].type = #reference
 * rest[0].resource[=].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Coverage-patient"
-* rest[0].resource[=].searchParam[0].documentation = "Recherche de la couverture par patient uniquement"
-
+* rest[0].resource[=].searchParam[0].documentation = "Le serveur DOIT permettre la recherche de la couverture par patient"
 
 // DocumentReference
 * rest[0].resource[+].type = #DocumentReference
@@ -73,7 +72,7 @@ Usage: #definition
 * rest[0].resource[=].searchParam[0].name = "encounter"
 * rest[0].resource[=].searchParam[0].type = #reference
 * rest[0].resource[=].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-encounter"
-* rest[0].resource[=].searchParam[0].documentation = "Recherche des documents liés à une pré-admission (context.encounter)"
+* rest[0].resource[=].searchParam[0].documentation = "Le serveur DOIT permettre la recherche des documets par encounter (context.encounter)"
 
 // Patient
 * rest[0].resource[+].type = #Patient
