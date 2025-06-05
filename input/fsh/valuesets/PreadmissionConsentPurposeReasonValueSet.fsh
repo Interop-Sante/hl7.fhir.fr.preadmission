@@ -7,4 +7,3 @@ Description: "Raisons justifiant l’utilisation des données personnelles (HL7 
 
 * http://terminology.hl7.org/CodeSystem/v3-ActReason#TREAT "Treatment"
 * http://terminology.hl7.org/CodeSystem/v3-ActReason#PATREQ "Patient Request"
-* http://terminology.hl7.org/CodeSystem/v3-ActReason#HMO "Healthcare Operations"

@@ -65,8 +65,9 @@ Patient → [Portail de rendez-vous] → Système administratif de l'hôpital
 #### 2. **Soumission des informations de préadmission**
 
 - **Acteurs impliqués** : Patient, Portail de préadmission, Système administratif de l'hôpital.
-- **Description** : Le patient remplit un formulaire de préadmission sur le portail de préadmission. Les informations administratives (identité, couverture sociale, etc.) et les documents justificatifs (carte d’identité, carte Vitale, etc.) sont collectés.
+- **Description** : Le patient remplit un formulaire de préadmission sur le portail de préadmission. Les informations administratives (identité, couverture sociale, etc.) et les documents justificatifs (carte d’identité, carte Vitale, etc.) sont collectés. Une ressource `Encounter` est utilisée pour lier ces informations.
 - **Ressources utilisées** :
+  - `Encounter` : Informations sur la pré-admission.
   - `Patient` : Contient les informations administratives du patient.
   - `Coverage` : Référence les informations sur la couverture sociale (AMO/AMC).
   - `DocumentReference` : Contient les pièces justificatives téléversées par le patient.
@@ -128,7 +129,7 @@ Système administratif de l'hôpital ↔ Agent du BDE
 SIH → [Portail de préadmission] → Patient
 ```
 
-### Schéma global des flux
+### Schéma global des interactions
 
 ```plaintext
 1. Prise de rendez-vous
@@ -147,51 +148,6 @@ SIH → [Portail de préadmission] → Patient
    Système administratif de l'hôpital → [Portail de préadmission] → Patient
 ```
 
-```mermaid
-flowchart TD
-    %% Styles
-    classDef patient fill:#E3F2FD,stroke:#2196F3,color:#000
-    classDef portailRDV fill:#FFF3E0,stroke:#FF9800,color:#000
-    classDef portailPA fill:#E8F5E9,stroke:#4CAF50,color:#000
-    classDef sih fill:#F3E5F5,stroke:#9C27B0,color:#000
-    classDef agent fill:#FCE4EC,stroke:#E91E63,color:#000
-
-    %% Acteurs
-    A[Patient]:::patient
-    B[Portail de rendez-vous]:::portailRDV
-    C[Système administratif de l'hôpital]:::sih
-    E[Portail de pré-admission]:::portailPA
-    G[Agent du BDE]:::agent
-
-    %% Étape 1 : Prise de rendez-vous
-    subgraph Prise de rendez-vous
-        A -->|1. Réserve un rendez-vous| B
-        B -->|2. Transmet Appointment| C
-    end
-
-    %% Étape 2 : Soumission des informations de pré-admission
-    subgraph Soumission des informations
-        A -->|3. Remplit formulaire| E
-        E -->|4. Transmet Patient, Coverage, DocumentReference| C
-    end
-
-    %% Étape 3 : Recueil des consentements
-    subgraph Recueil des consentements
-        A -->|5. Fournit consentements| E
-        E -->|6. Transmet Consent| C
-    end
-
-    %% Étape 4 : Vérification et validation
-    subgraph Vérification et validation
-        C <-->|7. Vérifie et valide Encounter| G
-    end
-
-    %% Étape 5 : Notification au patient
-    subgraph Notification
-        C -->|8. Transmet statut Encounter| E
-        E -->|9. Notifie ACCEPTED/REFUSED| A
-    end
-```
 
 ### Conclusion
 

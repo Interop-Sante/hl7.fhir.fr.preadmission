@@ -4,8 +4,6 @@ Title: "Prise de rendez-vous IRM cérébrale"
 Description: "Rendez-vous pour une IRM cérébrale - préadmission."
 Usage: #example
 * id = "appt-irm-001"
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Rendez vous pour une IRM cérébrale - préadmission.</p></div>"
 * status = #booked
 * start = "2025-05-15T10:30:00+01:00"
 * end = "2025-05-15T11:00:00+01:00"
@@ -22,8 +20,5 @@ Usage: #example
 * extension[questionnaire].valueReference = Reference(qr-irm-001) "Questionnaire préadmission IRM"
 
 // Extensions pour les consentements
-* extension[+].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"
-* extension[=].valueReference = Reference(Consent/consentement-multi)
-
-* extension[+].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension"
-* extension[=].valueReference = Reference(Consent/consentement-refus-rgpd)
+* extension[consentements][0].valueReference = Reference(Consent/consentement-multi)
+* extension[consentements][1].valueReference = Reference(Consent/consentement-refus-rgpd)

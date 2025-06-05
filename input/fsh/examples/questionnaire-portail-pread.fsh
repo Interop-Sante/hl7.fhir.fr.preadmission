@@ -4,8 +4,6 @@ Title: "Questionnaire préadmission IRM"
 Description: "Questionnaire posé par le portail de pré-admission."
 Usage: #example
 * id = "questionnaire-chb-part"
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Réponse du patient au questionnaire posé par le portail de pré-admission.</p></div>"
 * title = "Questionnaire IRM - Préadmission"
 * status = #active
 * subjectType = #Patient

@@ -4,8 +4,6 @@ Title: "Questionnaire préadmission IRM"
 Description: "Questionnaire posé lors de la prise de rendez-vous pour une IRM."
 Usage: #example
 * id = "qr-irm-001"
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Questionnaire posé lors de la prise de rendez-vous pour une IRM.</p></div>"
 * status = #completed
 * subject = Reference(patient-001) "Jean Dupont"
 * questionnaire = "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-irm"

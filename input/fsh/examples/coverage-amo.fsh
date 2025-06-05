@@ -4,8 +4,6 @@ Title: "Couverture sociale AMO"
 Description: "Couverture sociale AMO - préadmission."
 Usage: #example
 * id = "coverage-amo"
-* text.status = #generated
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><p>Couverture sociale AMO - préadmission.</p></div>"
 * status = #active
 * type.coding[0].system = "http://terminology.hl7.org/CodeSystem/coverage-type"
 * type.coding[0].code = #PUBLICPOL

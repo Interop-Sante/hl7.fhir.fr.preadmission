@@ -6,6 +6,8 @@ Description: "Profil DocumentReference pour un document administratif de préadm
 
 * context 1..1
 * context.encounter 1..1
+* context.encounter only Reference(PreadmissionEncounterFr)
+
 * content 1..*
 * content.attachment 1..1
 * content.attachment.contentType 1..1
