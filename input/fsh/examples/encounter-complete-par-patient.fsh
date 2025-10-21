@@ -21,4 +21,3 @@ Description: "Exemple d'une ressource Encounter complété par le patient sur le
 * extension[preadmissionStatus].valueCodeableConcept.coding.system = "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"
 * extension[preadmissionStatus].valueCodeableConcept.coding.code = #READY
 * extension[preadmissionStatus].valueCodeableConcept.coding.display = "Ready"
-* extension[questionnaire].valueReference = Reference(QuestionnaireResponse/qr-chb-part) "Réponse questionnaire chambre particulière"

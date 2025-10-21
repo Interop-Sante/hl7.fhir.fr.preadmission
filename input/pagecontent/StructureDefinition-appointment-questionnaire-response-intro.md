@@ -27,6 +27,16 @@ Exemple de questions courantes :
 
 Cette ressource contient les réponses spécifiques du patient à un questionnaire donné. Elle est liée à une ressource `Patient`, `Encounter`, ou `Appointment`.
 
+### Récupération des QuestionnaireResponse
+
+#### Lien à un Encounter (séjour)
+
+Le lien entre un QuestionnaireResponse et un séjour hospitalier se fait via le champ standard `QuestionnaireResponse.encounter`. Pour récupérer toutes les réponses liées à un séjour donné, il suffit de filtrer sur ce champ dans la requête FHIR.
+
+#### Lien à un Appointment (rendez-vous)
+
+Par défaut, FHIR ne prévoit pas de champ natif pour relier un `QuestionnaireResponse` à un rendez-vous. Afin de couvrir ce besoin, une extension personnalisée a été ajoutée à la ressource `Appointment` pour permettre l'association avec les réponses aux questionnaires.
+
 ### Bonnes pratiques
 
 Associer le questionnaire au Appointment (prise de RDV) ou à l’Encounter (préadmission).
