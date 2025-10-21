@@ -64,7 +64,6 @@ Le profil **PreadmissionEncounterFr** apporte les contraintes suivantes :
 
 - **`EncounterPatientComment`** : Permet d’ajouter des commentaires libres fournis par le patient à destination de l’agent administratif. Ces commentaires sont représentés sous forme de texte libre (`string`).
 - **`EncounterAgentInstructions`** : Permet de transmettre des consignes spécifiques aux agents hospitaliers. Ces consignes sont également représentées sous forme de texte libre (`string`).
-- **`PreadmissionConsentementsExtension`** : Référence un ou plusieurs consentements recueillis dans le cadre de la préadmission. Ces consentements sont modélisés à l’aide de la ressource `Consent` et incluent des informations comme l’accès au DMP ou d’autres autorisations administratives.
 
 #### **Contraintes sur les champs principaux**
 
@@ -72,6 +71,27 @@ Le profil **PreadmissionEncounterFr** apporte les contraintes suivantes :
 - **`Encounter.type`** : Définit le type d’Encounter (hospitalisation, consultation externe, téléconsultation).
 - **`Encounter.subject`** : Référence obligatoire vers le `Patient` concerné.
 - **`Encounter.appointment`** : Référence obligatoire vers le `Appointment` à l’origine de la préadmission.
+
+---
+
+### **Récupération des consentements et des réponses aux questionnaires**
+
+Pour garantir une traçabilité complète du dossier de préadmission, il est essentiel de pouvoir accéder facilement aux consentements du patient et aux réponses aux questionnaires administratifs ou médicaux.
+
+#### Consentements (Consent)
+
+Les consentements liés à une préadmission sont stockés sous forme de ressources `Consent`.
+La récupération de ces consentements se fait via le champ `Consent.data`, qui référence explicitement l’`Encounter` associé.
+
+> **Exemple de requête FHIR pour récupérer les consentements liés à un Encounter :**
+> `GET [base]/Consent?data=Encounter/[id-encounter]`
+
+#### QuestionnaireResponse
+
+Pour un séjour : chaque ressource `QuestionnaireResponse` liée à la préadmission référence directement l’`Encounter` via le champ natif `QuestionnaireResponse.encounter`.
+
+> **Exemple de requête FHIR pour récupérer les réponses aux questionnaires d’un Encounter :**
+> `GET [base]/QuestionnaireResponse?encounter=Encounter/[id-encounter]`
 
 ---
 
@@ -114,7 +134,6 @@ Voici un exemple d’utilisation de la ressource `Encounter` pour une préadmiss
 - **Statut administratif** : `IN_PROGRESS`
 - **Patient** : Référencé via `Encounter.subject`.
 - **Rendez-vous initial** : Référencé via `Encounter.appointment`.
-- **Consentements** : Transmis via l’extension dédiée `PreadmissionConsentementsExtension`, qui référence un ou plusieurs consentements modélisés à l’aide de la ressource `Consent`.
 
 ---
 

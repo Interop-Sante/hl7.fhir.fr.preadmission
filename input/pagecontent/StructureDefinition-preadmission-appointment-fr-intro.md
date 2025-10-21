@@ -23,13 +23,11 @@ Le profil **PreadmissionAppointmentFr** apporte des contraintes et des extension
 #### **Extensions spécifiques**
 
 - **`PreadmissionAppointmentQuestionnaireResponseFr`** : Permet de référencer un ou plusieurs `QuestionnaireResponse` remplis par le patient dans le cadre de la préadmission.
-- **`PreadmissionConsentementsExtension`** : Permet de référencer un ou plusieurs consentements recueillis lors de la prise de rendez-vous. Ces consentements sont modélisés à l’aide de la ressource `Consent`.
 
 #### **Contraintes principales**
 
 - **Participant** : Le participant principal doit être un patient, référencé via `participant.actor` avec une ressource `Patient`.
 - **Lien avec les questionnaires** : Les questionnaires nécessaires à la prise de rendez-vous remplis par le patient sont référencés via l’extension `PreadmissionAppointmentQuestionnaireResponseFr`.
-- **Lien avec les consentements** : Les consentements recueillis sont référencés via l’extension `PreadmissionConsentementsExtension`.
 
 ---
 
@@ -48,7 +46,6 @@ La ressource `Appointment` contient les informations nécessaires à la planific
 
 - **Lien avec le patient** : Chaque rendez-vous est directement lié à une ressource `Patient` via `participant.actor`.
 - **Lien avec les questionnaires** : Les questionnaires remplis par le patient sont référencés via l’extension `PreadmissionAppointmentQuestionnaireResponseFr`.
-- **Lien avec les consentements** : Les consentements recueillis sont référencés via l’extension `PreadmissionConsentementsExtension`.
 
 ### Bonnes pratiques
 

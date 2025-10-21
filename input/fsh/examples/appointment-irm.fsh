@@ -18,7 +18,3 @@ Usage: #example
 
 // Extensions pour les questionnaires
 * extension[questionnaire].valueReference = Reference(qr-irm-001) "Questionnaire préadmission IRM"
-
-// Extensions pour les consentements
-* extension[consentements][0].valueReference = Reference(Consent/consentement-multi)
-* extension[consentements][1].valueReference = Reference(Consent/consentement-refus-rgpd)
