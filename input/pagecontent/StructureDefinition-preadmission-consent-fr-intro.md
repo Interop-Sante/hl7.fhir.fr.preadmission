@@ -17,7 +17,7 @@ Les champs **`scope`** et **`category`** aident à classifier le consentement de
 
 - **`category`** :  
   - **category.coding.system** : `http://loinc.org`  
-  - **category.coding.code** : 
+  - **category.coding.code** :
     - `59284-0` (Consent Document) pour les consentements liés à l’alimentation du DMP, la consultation du DMP, et le partage avec un logiciel.
     - `57016-8` (Privacy Policy Acknowledgment Document) pour le consentement RGPD.  
   Ces codes LOINC standardisés identifient le type de document de consentement. En raison de ces catégories différentes, une ressource `Consent` ne peut pas combiner le RGPD avec les autres consentements ; ils doivent être séparés en ressources distinctes.
@@ -25,6 +25,15 @@ Les champs **`scope`** et **`category`** aident à classifier le consentement de
 Ces valeurs sont appliquées systématiquement afin d’assurer une classification conforme aux standards d’interopérabilité FHIR R4.
 
 ## Types de consentements et leurs champs
+
+### Recueil des consentements liés à Mon Espace Santé
+
+Le recueil des consentements des patients est défini conformément aux dispositions de l’article **R. 1111-46 du Code de la santé publique**, tel que précisé dans **l’annexe 4** disponible sur Légifrance :  
+[https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000048368264](https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000048368264)
+
+Ce dispositif encadre les conditions de **recueil**, de **conservation** et de **traçabilité du consentement** des personnes concernées, afin de garantir le respect de leurs droits en matière d’information, de confidentialité et de protection des données de santé.
+
+Le **recueil du consentement** doit être effectué **à chaque nouvel épisode de soin**, afin de s’assurer que le patient est pleinement informé et consentant pour **chaque prise en charge**.
 
 ### Consentement pour la consultation du DMP
 
@@ -104,3 +113,4 @@ Dans le cadre de la préadmission hospitalière, nous utilisons des codes issus 
   (Indiquant que le consentement soutient la prise en charge clinique.)
 - **PATREQ** pour le traitement des données personnelles (RGPD) et le partage d’informations personnelles avec un logiciel tiers  
   (Indiquant que ces actions reposent sur une demande explicite du patient, conforme au RGPD ou aux préférences de communication du patient.)
+  
