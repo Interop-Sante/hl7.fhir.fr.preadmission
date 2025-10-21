@@ -16,7 +16,6 @@ jobs:
 
         with:      
           bake: "false"
-          nos: "false"
           validator_cli: "false"     
           generate_plantuml : "false"
           repo_ig: "./igSource"   
