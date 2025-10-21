@@ -114,3 +114,14 @@ Dans le cadre de la préadmission hospitalière, nous utilisons des codes issus 
 - **PATREQ** pour le traitement des données personnelles (RGPD) et le partage d’informations personnelles avec un logiciel tiers  
   (Indiquant que ces actions reposent sur une demande explicite du patient, conforme au RGPD ou aux préférences de communication du patient.)
   
+## Récupération de la ressource Consent liée à un Appointment ou un Encounter
+
+Pour récupérer les ressources Consent associées à un rendez-vous (Appointment) ou à un séjour (Encounter), il est recommandé d’utiliser le champ Consent.data. Ce champ permet de référencer directement les ressources concernées par le consentement.
+
+> **Exemple de requête GET : récupérer les consentements liés à un rendez-vous (Appointment)** :  
+> `GET [base]/Consent?data=Appointment/5678`  
+> Cette requête retourne tous les consentments associées au rendez-vous d’ID `5678`.
+
+> **Exemple de requête GET : récupérer les consentements liés à un séjour (Encounter)** :
+> `GET [base]/Consent?data=Encounter/9876`
+> Cette requête retourne tous les consentments associées à l'encounter d’ID `9876`.

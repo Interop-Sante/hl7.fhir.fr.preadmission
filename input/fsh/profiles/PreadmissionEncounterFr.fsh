@@ -8,13 +8,11 @@ Description: "Profil Encounter pour une préadmission"
     EncounterPatientComment named remarquePatient 0..1 and
     EncounterAgentInstructions named consignesAgent 0..1 and
     PreadmissionStatutFr named preadmissionStatus 1..1 and
-    PreadmissionConsentementsExtension named consentements 0..* and
     PreadmissionAppointmentQuestionnaireResponseFr named questionnaire 0..*
 
 * extension[remarquePatient] ^short = "Remarque patient"
 * extension[consignesAgent] ^short = "Consignes agent"  
 * extension[preadmissionStatus] ^short = "Statut de préadmission"
-* extension[consentements] ^short = "Consentements"
 * extension[questionnaire] ^short = "Questionnaire libre lié à la préadmission"
 
 * identifier.use = #temp
