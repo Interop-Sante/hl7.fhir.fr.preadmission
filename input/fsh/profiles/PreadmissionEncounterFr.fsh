@@ -27,7 +27,6 @@ Description: "Profil Encounter pour une préadmission"
 * status 1..1 MS
 * participant 0..* MS
 * period 1..1 MS
-* location 0..1 MS
 
 // Précision pour le champ class
 * class 1..1 MS
