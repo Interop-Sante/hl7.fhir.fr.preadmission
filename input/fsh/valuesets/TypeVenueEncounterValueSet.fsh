@@ -6,8 +6,5 @@ Description: "Les différents types d'admission (hospitalisation, consultation, 
 * ^experimental = true
 
 * http://terminology.hl7.org/CodeSystem/v3-ActCode#VR "Teleconsultation"
-* http://terminology.hl7.org/CodeSystem/v3-ActCode#SS "Outpatient"
-* http://terminology.hl7.org/CodeSystem/v3-ActCode#NONAC "Inpatient"
-
-
-
+* http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "Consultation externe"
+* http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "Hospitalisation"
