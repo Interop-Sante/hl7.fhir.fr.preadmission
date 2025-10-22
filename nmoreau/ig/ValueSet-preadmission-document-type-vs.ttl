@@ -17,15 +17,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ValueSet preadmission-document-type-vs</b></p><a name=\"preadmission-document-type-vs\"> </a><a name=\"hcpreadmission-document-type-vs\"> </a><a name=\"preadmission-document-type-vs-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Inclut tous les codes définis dans <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html\"><code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</code></a></li><li>Inclut tous les codes définis dans <a href=\"CodeSystem-document-type-cs.html\"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</code></a></li></ul></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : EnsembleValeurs preadmission-document-type-vs</b></p><a name=\"preadmission-document-type-vs\"> </a><a name=\"hcpreadmission-document-type-vs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><p>Ce jeu de valeur (ValueSet) inclut les codes selon les règles suivantes :</p><ul><li>Inclut tous les codes définis dans <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html\"><code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</code></a></li><li>Inclut tous les codes définis dans <a href=\"CodeSystem-document-type-cs.html\"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</code></a></li></ul></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "PreadmissionDocumentTypeFrValueSet"] ; # 
   fhir:title [ fhir:v "preadmission-document-type-vs"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2025-06-02T15:02:23+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-22T09:09:51+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

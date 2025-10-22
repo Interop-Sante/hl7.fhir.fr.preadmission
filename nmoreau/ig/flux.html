@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Diagrammes des flux - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+    <title>Diagrammes des flux - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.2.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -31,10 +31,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -59,7 +59,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - ci-build
+            <span style="display:inline-block;">0.2.0 - ci-build
 
 
 
@@ -173,7 +173,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.2.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Diagrammes des flux</h2>
   
 
@@ -192,7 +192,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div class="markdown-toc">
 <ul id="markdown-toc">
   <li><a href="#guide-dimplémentation-fhir--pré-admission-hospitalière-en-ligne" id="markdown-toc-guide-dimplémentation-fhir--pré-admission-hospitalière-en-ligne">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</a></li>
-  <li><a href="#schéma-global-des-flux" id="markdown-toc-schéma-global-des-flux">Schéma global des flux</a></li>
+  <li><a href="#schéma-global-des-interactions" id="markdown-toc-schéma-global-des-interactions">Schéma global des interactions</a></li>
   <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
 </ul>
 
@@ -296,9 +296,10 @@ Le patient réserve une consultation ou un séjour via un portail externe. Une r
 
 <ul>
   <li><strong>Acteurs impliqués</strong> : Patient, Portail de préadmission, Système administratif de l’hôpital.</li>
-  <li><strong>Description</strong> : Le patient remplit un formulaire de préadmission sur le portail de préadmission. Les informations administratives (identité, couverture sociale, etc.) et les documents justificatifs (carte d’identité, carte Vitale, etc.) sont collectés.</li>
+  <li><strong>Description</strong> : Le patient remplit un formulaire de préadmission sur le portail de préadmission. Les informations administratives (identité, couverture sociale, etc.) et les documents justificatifs (carte d’identité, carte Vitale, etc.) sont collectés. Une ressource <code class="language-plaintext highlighter-rouge">Encounter</code> est utilisée pour lier ces informations.</li>
   <li><strong>Ressources utilisées</strong> :
     <ul>
+      <li><code class="language-plaintext highlighter-rouge">Encounter</code> : Informations sur la pré-admission.</li>
       <li><code class="language-plaintext highlighter-rouge">Patient</code> : Contient les informations administratives du patient.</li>
       <li><code class="language-plaintext highlighter-rouge">Coverage</code> : Référence les informations sur la couverture sociale (AMO/AMC).</li>
       <li><code class="language-plaintext highlighter-rouge">DocumentReference</code> : Contient les pièces justificatives téléversées par le patient.</li>
@@ -373,7 +374,7 @@ Le patient réserve une consultation ou un séjour via un portail externe. Une r
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SIH → [Portail de préadmission] → Patient
 </code></pre></div></div>
 
-<h3 id="schéma-global-des-flux">Schéma global des flux</h3>
+<h3 id="schéma-global-des-interactions">Schéma global des interactions</h3>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1. Prise de rendez-vous
    Patient → [Portail de rendez-vous] → Système administratif de l'hôpital
@@ -390,51 +391,6 @@ Le patient réserve une consultation ou un séjour via un portail externe. Une r
 5. Notification au patient
    Système administratif de l'hôpital → [Portail de préadmission] → Patient
 </code></pre></div></div>
-
-<pre><code class="language-mermaid">flowchart TD
-    %% Styles
-    classDef patient fill:#E3F2FD,stroke:#2196F3,color:#000
-    classDef portailRDV fill:#FFF3E0,stroke:#FF9800,color:#000
-    classDef portailPA fill:#E8F5E9,stroke:#4CAF50,color:#000
-    classDef sih fill:#F3E5F5,stroke:#9C27B0,color:#000
-    classDef agent fill:#FCE4EC,stroke:#E91E63,color:#000
-
-    %% Acteurs
-    A[Patient]:::patient
-    B[Portail de rendez-vous]:::portailRDV
-    C[Système administratif de l'hôpital]:::sih
-    E[Portail de pré-admission]:::portailPA
-    G[Agent du BDE]:::agent
-
-    %% Étape 1 : Prise de rendez-vous
-    subgraph Prise de rendez-vous
-        A --&gt;|1. Réserve un rendez-vous| B
-        B --&gt;|2. Transmet Appointment| C
-    end
-
-    %% Étape 2 : Soumission des informations de pré-admission
-    subgraph Soumission des informations
-        A --&gt;|3. Remplit formulaire| E
-        E --&gt;|4. Transmet Patient, Coverage, DocumentReference| C
-    end
-
-    %% Étape 3 : Recueil des consentements
-    subgraph Recueil des consentements
-        A --&gt;|5. Fournit consentements| E
-        E --&gt;|6. Transmet Consent| C
-    end
-
-    %% Étape 4 : Vérification et validation
-    subgraph Vérification et validation
-        C &lt;--&gt;|7. Vérifie et valide Encounter| G
-    end
-
-    %% Étape 5 : Notification au patient
-    subgraph Notification
-        C --&gt;|8. Transmet statut Encounter| E
-        E --&gt;|9. Notifie ACCEPTED/REFUSED| A
-    end
-</code></pre>
 
 <h3 id="conclusion">Conclusion</h3>
 
@@ -480,7 +436,7 @@ Le patient réserve une consultation ou un séjour via un portail externe. Une r
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Jun 2, 2025 15:03+0000">2025-06-02</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 22, 2025 09:10+0000">2025-10-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

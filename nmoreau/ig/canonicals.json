@@ -3,173 +3,166 @@
     "id" : "PreadmissionCapabilityStatement",
     "type" : "CapabilityStatement",
     "url" : "http://hl7.fr/fhir/fr/preadmission/CapabilityStatement/PreadmissionCapabilityStatement",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionCapabilityStatement"
   },
   {
     "id" : "document-type-cs",
     "type" : "CodeSystem",
     "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionDocumentTypeCodeSystem"
   },
   {
     "id" : "preadmission-statuts-cs",
     "type" : "CodeSystem",
     "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionStatusCodeSystem"
   },
   {
     "id" : "hl7.fhir.fr.preadmission",
     "type" : "ImplementationGuide",
     "url" : "http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PREADMISSIONFR"
   },
   {
     "id" : "questionnaire-chb-part",
     "type" : "Questionnaire",
     "url" : "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-chb-part",
-    "version" : "0.1.0"
+    "version" : "0.2.0"
   },
   {
     "id" : "questionnaire-irm",
     "type" : "Questionnaire",
     "url" : "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-irm",
-    "version" : "0.1.0"
+    "version" : "0.2.0"
   },
   {
     "id" : "encounter-preadmission-status",
     "type" : "SearchParameter",
     "url" : "http://hl7.fr/fhir/fr/preadmission/SearchParameter/encounter-preadmission-status",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "EncounterPreadmissionStatus"
   },
   {
     "id" : "appointment-questionnaire-response",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionAppointmentQuestionnaireResponseFr"
   },
   {
     "id" : "encounter-agent-instructions",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "EncounterAgentInstructions"
   },
   {
     "id" : "encounter-patient-comment",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "EncounterPatientComment"
   },
   {
     "id" : "fr-coverage-amc-extended",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "FrCoverageAMCExtension"
   },
   {
     "id" : "preadmission-appointment-fr",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionAppointmentFr"
   },
   {
     "id" : "preadmission-consent-fr",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionConsentFr"
-  },
-  {
-    "id" : "preadmission-consent-fr-extension",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension",
-    "version" : "0.1.0",
-    "name" : "PreadmissionConsentementsExtension"
   },
   {
     "id" : "preadmission-coverage-fr",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionCoverageFr"
   },
   {
     "id" : "preadmission-documentreference-fr",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionDocumentReferenceFr"
   },
   {
     "id" : "preadmission-encounter-fr",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionEncounterFr"
   },
   {
     "id" : "statut-preadmission-fr",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionStatutFr"
   },
   {
     "id" : "preadmission-consent-category-vs",
     "type" : "ValueSet",
     "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionConsentCategoryVS"
   },
   {
     "id" : "preadmission-consent-code-vs",
     "type" : "ValueSet",
     "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionConsentCodeValueSet"
   },
   {
     "id" : "preadmission-consent-purpose-reason-vs",
     "type" : "ValueSet",
     "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionConsentPurposeReasonVS"
   },
   {
     "id" : "preadmission-document-type-vs",
     "type" : "ValueSet",
     "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreadmissionDocumentTypeFrValueSet"
   },
   {
     "id" : "preadmission-statuts-vs",
     "type" : "ValueSet",
     "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "PreAdmissionStatusValueSet"
   },
   {
     "id" : "type-couverture-sociale-vs",
     "type" : "ValueSet",
     "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "TypeCouvertureSocialeValueSet"
   },
   {
     "id" : "type-venue-encounter-vs",
     "type" : "ValueSet",
     "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
-    "version" : "0.1.0",
+    "version" : "0.2.0",
     "name" : "TypeVenueEncounterValueSet"
   }
 ]

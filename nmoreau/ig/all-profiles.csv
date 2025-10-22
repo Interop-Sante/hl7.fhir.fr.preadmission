@@ -192,9 +192,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "preadmission-appointment-fr","Appointment.extension:questionnaire","Appointment.extension","questionnaire","","",0,*,"","","","Extension {[CanonicalType[http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response]]} {[]}
 ","Questionnaire lié au rendez-vous","Référence vers un ou plusieurs QuestionnaireResponse remplis dans le cadre de la préadmission.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"preadmission-appointment-fr","Appointment.extension:consentements","Appointment.extension","consentements","","",0,*,"","","","Extension {[CanonicalType[http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension]]} {[]}
-","Consentements","Consentement lié à la préadmission","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "preadmission-appointment-fr","Appointment.modifierExtension","Appointment.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
 ","Extensions that cannot be ignored","May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
@@ -298,21 +295,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Potential date/time interval(s) requested to allocate the appointment within","A set of date ranges (potentially including times) that the appointment is preferred to be scheduled within.
 
 The duration (usually in minutes) could also be provided to indicate the length of the appointment to fill and populate the start/end times for the actual allocated time. However, in other situations the duration may be calculated by the scheduling system.","This does not introduce a capacity for recurring appointments.","","","","","","","","",,,,,"",,,,"Appointment.requestedPeriod",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-"
-"preadmission-consent-fr-extension","Extension","Extension","","","",0,*,"","","","null {[]} {[]}
-","Consentement lié au rendez-vous","Consentement lié à la préadmission","","","","","","","","","",,,,,"",,,,"Extension",0,*,"ele-1
-","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"preadmission-consent-fr-extension","Extension.id","Extension.id","","","",0,1,"","","","string {[]} {[]}
-","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"",""
-"preadmission-consent-fr-extension","Extension.extension","Extension.extension","","","",0,0,"","","","Extension {[]} {[]}
-","Extension","An Extension","","","","","","","","","",,,,,"","value:url}
-","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"preadmission-consent-fr-extension","Extension.url","Extension.url","","","",1,1,"","","","uri {[]} {[]}
-","identifies the meaning of the extension","Source of the definition for the extension code - a logical name or a URL.","The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.","","","","<valueUri xmlns=""http://hl7.org/fhir"" value=""http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension""/>","","","","",,,,,"",,,,"Extension.url",1,1,"",""
-"preadmission-consent-fr-extension","Extension.value[x]","Extension.value[x]","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr]]}
-","Value of extension","Value of extension - must be one of a constrained set of the data types (see [Extensibility](http://hl7.org/fhir/R4/extensibility.html) for a list).","","","","","","","","","",,,,,"",,,,"Extension.value[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "preadmission-consent-fr","Consent","Consent","","","",0,*,"","","","null {[]} {[]}
 ","A healthcare consumer's  choices to permit or deny recipients or roles to perform actions for specific purposes and periods of time","A record of a healthcare consumer’s  choices, which permits or denies identified recipient(s) or recipient role(s) to perform one or more actions within a given policy context, for specific purposes and periods of time.","Broadly, there are 3 key areas of consent for patients: Consent around sharing information (aka Privacy Consent Directive - Authorization to Collect, Use, or Disclose information), consent for specific treatment, or kinds of treatment, and general advance care directives.","","","","","","","","",,,,,"",,,,"Consent",0,*,"","dom-2:If the resource is contained in another resource, it SHALL NOT contain nested Resources {contained.contained.empty()}
@@ -971,7 +953,7 @@ user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
 
 Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"preadmission-documentreference-fr","DocumentReference.context.encounter","DocumentReference.context.encounter","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter], CanonicalType[http://hl7.org/fhir/StructureDefinition/EpisodeOfCare]]}
+"preadmission-documentreference-fr","DocumentReference.context.encounter","DocumentReference.context.encounter","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr]]}
 ","Context of the document  content","Describes the clinical encounter or type of care that the document content is associated with.","","","","","","","","","",,,,,"",,,,"DocumentReference.context.encounter",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "preadmission-documentreference-fr","DocumentReference.context.event","DocumentReference.context.event","","","",0,*,"","","","CodeableConcept {[]} {[]}
@@ -1061,12 +1043,6 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "preadmission-encounter-fr","Encounter.extension:preadmissionStatus","Encounter.extension","preadmissionStatus","","",1,1,"","","","Extension {[CanonicalType[http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr]]} {[]}
 ","Statut de préadmission","Statut de pré-admission","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"preadmission-encounter-fr","Encounter.extension:consentements","Encounter.extension","consentements","","",0,*,"","","","Extension {[CanonicalType[http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension]]} {[]}
-","Consentements","Consentement lié à la préadmission","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
-ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
-"preadmission-encounter-fr","Encounter.extension:questionnaire","Encounter.extension","questionnaire","","",0,*,"","","","Extension {[CanonicalType[http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response]]} {[]}
-","Questionnaire libre lié à la préadmission","Référence vers un ou plusieurs QuestionnaireResponse remplis dans le cadre de la préadmission.","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "preadmission-encounter-fr","Encounter.modifierExtension","Encounter.modifierExtension","","extensions
 user content","",0,*,"","Y","","Extension {[]} {[]}
@@ -1365,7 +1341,7 @@ Le namespace est défini à partir de la racine d'identification (gérée par l'
 "preadmission-encounter-fr","Encounter.hospitalization.dischargeDisposition","Encounter.hospitalization.dischargeDisposition","","","",0,1,"","","","CodeableConcept {[]} {[]}
 ","Category or kind of location after discharge","Category or kind of location after discharge.","","","","","","","","","",,"example","","https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-discharge-disposition","",,,,"Encounter.hospitalization.dischargeDisposition",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"preadmission-encounter-fr","Encounter.location","Encounter.location","","","",0,1,"Y","","","BackboneElement {[]} {[]}
+"preadmission-encounter-fr","Encounter.location","Encounter.location","","","",0,*,"","","","BackboneElement {[]} {[]}
 ","List of locations where the patient has been","List of locations where  the patient has been during this encounter.","Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type ""kind"" such as ""client's home"" and an encounter.class = ""virtual"".","","","","","","","","",,,,,"",,,,"Encounter.location",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "preadmission-encounter-fr","Encounter.location.id","Encounter.location.id","","","",0,1,"","","","string {[]} {[]}

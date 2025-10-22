@@ -6,7 +6,7 @@
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Couverture sociale AMO - préadmission.</p></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Couverture coverage-amo</b></p><a name=\"coverage-amo\"> </a><a name=\"hccoverage-amo\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-coverage-fr.html\">Fr Preadmission Coverage Profile</a></p></div><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMO-2025-001\u00a0(use:\u00a0official,\u00a0)</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/coverage-type PUBLICPOL}\">Assurance Maladie Obligatoire</span></p><p><b>subscriber</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>subscriberId</b>: 123456789012345</p><p><b>beneficiary</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Assurance Maladie Obligatoire</p></div>"
   },
   "identifier" : [{
     "use" : "official",

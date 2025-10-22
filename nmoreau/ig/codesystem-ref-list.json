@@ -2,7 +2,7 @@
   "codeSystems" : [
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-      "version" : "0.1.0",
+      "version" : "0.2.0",
       "status" : "draft",
       "name" : "PreadmissionDocumentTypeCodeSystem",
       "title" : "document-type-cs",
@@ -13,7 +13,7 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs",
-      "version" : "0.1.0",
+      "version" : "0.2.0",
       "status" : "draft",
       "name" : "PreadmissionStatusCodeSystem",
       "title" : "preadmission-statuts-cs",
@@ -68,8 +68,8 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
-      "ValueSet-type-venue-encounter-vs.html" : "type-venue-encounter-vs",
-      "ValueSet-type-couverture-sociale-vs.html" : "type-couverture-sociale-vs"
+      "ValueSet-type-couverture-sociale-vs.html" : "type-couverture-sociale-vs",
+      "ValueSet-type-venue-encounter-vs.html" : "type-venue-encounter-vs"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",

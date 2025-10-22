@@ -1,3 +1,3 @@
 URL,Version,Status,OIDs,Name,Title,Description,Used
-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs,0.1.0,draft,,PreadmissionDocumentTypeCodeSystem,document-type-cs,"Types de documents additionnels pour la préadmission",
-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs,0.1.0,draft,,PreadmissionStatusCodeSystem,preadmission-statuts-cs,"Statut de pré-admission",
+http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs,0.2.0,draft,,PreadmissionDocumentTypeCodeSystem,document-type-cs,"Types de documents additionnels pour la préadmission",
+http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs,0.2.0,draft,,PreadmissionStatusCodeSystem,preadmission-statuts-cs,"Statut de pré-admission",

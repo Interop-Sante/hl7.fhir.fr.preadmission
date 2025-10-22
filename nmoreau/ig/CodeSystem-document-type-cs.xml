@@ -6,15 +6,15 @@
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : CodeSystem document-type-cs</b></p><a name="document-type-cs"> </a><a name="hcdocument-type-cs"> </a><a name="document-type-cs-fr-FR"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">CN_RECTO<a name="document-type-cs-CN_RECTO"> </a></td><td>Recto Carte d’identité</td></tr><tr><td style="white-space:nowrap">CN_VERSO<a name="document-type-cs-CN_VERSO"> </a></td><td>Verso Carte d’identité</td></tr><tr><td style="white-space:nowrap">ATTEST_VITALE<a name="document-type-cs-ATTEST_VITALE"> </a></td><td>Carte Vitale</td></tr><tr><td style="white-space:nowrap">JUSTIFICATIF_ID<a name="document-type-cs-JUSTIFICATIF_ID"> </a></td><td>Justificatif d'identité</td></tr><tr><td style="white-space:nowrap">MUTUELLE<a name="document-type-cs-MUTUELLE"> </a></td><td>Carte mutuelle</td></tr><tr><td style="white-space:nowrap">MUTUELLE_RECTO<a name="document-type-cs-MUTUELLE_RECTO"> </a></td><td>Recto Carte mutuelle</td></tr><tr><td style="white-space:nowrap">MUTUELLE_VERSO<a name="document-type-cs-MUTUELLE_VERSO"> </a></td><td>Verso Carte mutuelle</td></tr><tr><td style="white-space:nowrap">JUSTIFICATIF_DOM<a name="document-type-cs-JUSTIFICATIF_DOM"> </a></td><td>Justificatif de domicile</td></tr><tr><td style="white-space:nowrap">ARRET_TRAVAIL<a name="document-type-cs-ARRET_TRAVAIL"> </a></td><td>Arrêt de travail</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : CodeSystem document-type-cs</b></p><a name="document-type-cs"> </a><a name="hcdocument-type-cs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">CN_RECTO<a name="document-type-cs-CN_RECTO"> </a></td><td>Recto Carte d’identité</td></tr><tr><td style="white-space:nowrap">CN_VERSO<a name="document-type-cs-CN_VERSO"> </a></td><td>Verso Carte d’identité</td></tr><tr><td style="white-space:nowrap">ATTEST_VITALE<a name="document-type-cs-ATTEST_VITALE"> </a></td><td>Carte Vitale</td></tr><tr><td style="white-space:nowrap">JUSTIFICATIF_ID<a name="document-type-cs-JUSTIFICATIF_ID"> </a></td><td>Justificatif d'identité</td></tr><tr><td style="white-space:nowrap">MUTUELLE<a name="document-type-cs-MUTUELLE"> </a></td><td>Carte mutuelle</td></tr><tr><td style="white-space:nowrap">MUTUELLE_RECTO<a name="document-type-cs-MUTUELLE_RECTO"> </a></td><td>Recto Carte mutuelle</td></tr><tr><td style="white-space:nowrap">MUTUELLE_VERSO<a name="document-type-cs-MUTUELLE_VERSO"> </a></td><td>Verso Carte mutuelle</td></tr><tr><td style="white-space:nowrap">JUSTIFICATIF_DOM<a name="document-type-cs-JUSTIFICATIF_DOM"> </a></td><td>Justificatif de domicile</td></tr><tr><td style="white-space:nowrap">ARRET_TRAVAIL<a name="document-type-cs-ARRET_TRAVAIL"> </a></td><td>Arrêt de travail</td></tr><tr><td style="white-space:nowrap">PERS_PREVENIR<a name="document-type-cs-PERS_PREVENIR"> </a></td><td>Fiche de déclaration de la personne à prévenir</td></tr><tr><td style="white-space:nowrap">PERS_CONFIANCE<a name="document-type-cs-PERS_CONFIANCE"> </a></td><td>Fiche de déclaration de la personne de confiance</td></tr></table></div>
   </text>
   <url value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs"/>
-  <version value="0.1.0"/>
+  <version value="0.2.0"/>
   <name value="PreadmissionDocumentTypeCodeSystem"/>
   <title value="document-type-cs"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2025-06-02T15:02:23+00:00"/>
+  <date value="2025-10-22T09:09:51+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -41,7 +41,7 @@
   </jurisdiction>
   <caseSensitive value="true"/>
   <content value="complete"/>
-  <count value="9"/>
+  <count value="11"/>
   <concept>
     <code value="CN_RECTO"/>
     <display value="Recto Carte d’identité"/>
@@ -77,5 +77,13 @@
   <concept>
     <code value="ARRET_TRAVAIL"/>
     <display value="Arrêt de travail"/>
+  </concept>
+  <concept>
+    <code value="PERS_PREVENIR"/>
+    <display value="Fiche de déclaration de la personne à prévenir"/>
+  </concept>
+  <concept>
+    <code value="PERS_CONFIANCE"/>
+    <display value="Fiche de déclaration de la personne de confiance"/>
   </concept>
 </CodeSystem>

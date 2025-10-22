@@ -2,7 +2,7 @@
   "codeSystems" : [
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs",
-      "version" : "0.1.0",
+      "version" : "0.2.0",
       "status" : "draft",
       "name" : "PreadmissionConsentCategoryVS",
       "title" : "preadmission-consent-category-vs",
@@ -11,7 +11,7 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs",
-      "version" : "0.1.0",
+      "version" : "0.2.0",
       "status" : "draft",
       "name" : "PreadmissionConsentCodeValueSet",
       "title" : "preadmission-consent-code-vs",
@@ -20,7 +20,7 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs",
-      "version" : "0.1.0",
+      "version" : "0.2.0",
       "status" : "draft",
       "name" : "PreadmissionConsentPurposeReasonVS",
       "title" : "preadmission-consent-purpose-reason-vs",
@@ -29,7 +29,7 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs",
-      "version" : "0.1.0",
+      "version" : "0.2.0",
       "status" : "draft",
       "name" : "PreadmissionDocumentTypeFrValueSet",
       "title" : "preadmission-document-type-vs",
@@ -41,7 +41,7 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs",
-      "version" : "0.1.0",
+      "version" : "0.2.0",
       "status" : "draft",
       "name" : "PreAdmissionStatusValueSet",
       "title" : "preadmission-status-vs",
@@ -52,7 +52,7 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
-      "version" : "0.1.0",
+      "version" : "0.2.0",
       "status" : "draft",
       "name" : "TypeCouvertureSocialeValueSet",
       "title" : "type-couverture-sociale-vs",
@@ -61,7 +61,7 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
-      "version" : "0.1.0",
+      "version" : "0.2.0",
       "status" : "draft",
       "name" : "TypeVenueEncounterValueSet",
       "title" : "type-venue-encounter-vs",

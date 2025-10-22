@@ -6,15 +6,15 @@
   },
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ValueSet preadmission-consent-code-vs</b></p><a name=\"preadmission-consent-code-vs\"> </a><a name=\"hcpreadmission-consent-code-vs\"> </a><a name=\"preadmission-consent-code-vs-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include les codes sont définis dans <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-consentaction.html\"><code>http://terminology.hl7.org/CodeSystem/consentaction</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-consentaction.html#consentaction-collect\">collect</a></td><td>Collect data</td><td>Gather retrieved information for storage</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-consentaction.html#consentaction-access\">access</a></td><td>Access data</td><td>Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-consentaction.html#consentaction-disclose\">disclose</a></td><td>Disclose data</td><td>Transfer retrieved information</td></tr></table></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : EnsembleValeurs preadmission-consent-code-vs</b></p><a name=\"preadmission-consent-code-vs\"> </a><a name=\"hcpreadmission-consent-code-vs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include les codes sont définis dans <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-consentaction.html\"><code>http://terminology.hl7.org/CodeSystem/consentaction</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-consentaction.html#consentaction-collect\">collect</a></td><td>Collect data</td><td>Gather retrieved information for storage</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-consentaction.html#consentaction-access\">access</a></td><td>Access data</td><td>Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-consentaction.html#consentaction-disclose\">disclose</a></td><td>Disclose data</td><td>Transfer retrieved information</td></tr></table></li></ul></div>"
   },
   "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "PreadmissionConsentCodeValueSet",
   "title" : "preadmission-consent-code-vs",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2025-06-02T15:02:23+00:00",
+  "date" : "2025-10-22T09:09:51+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",

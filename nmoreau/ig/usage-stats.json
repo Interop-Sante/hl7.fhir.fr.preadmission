@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.fr.preadmission",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "FR",
   "extensions": [
@@ -87,13 +87,6 @@
       ]
     },
     {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension",
-      "title": "Consentement lié au rendez-vous",
-      "types": [
-        "Reference"
-      ]
-    },
-    {
       "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr",
       "title": "Extension Statut Pré-admission",
       "types": [
@@ -139,8 +132,7 @@
   },
   "usage": {
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response": [
-      "Appointment",
-      "Encounter"
+      "Appointment"
     ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions": [
       "Encounter"
@@ -150,10 +142,6 @@
     ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended": [
       "Coverage"
-    ],
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr-extension": [
-      "Appointment",
-      "Encounter"
     ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr": [
       "Encounter"

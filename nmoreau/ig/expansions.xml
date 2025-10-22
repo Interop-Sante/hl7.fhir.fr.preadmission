@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="b04d0a57-2ffd-4497-9a89-b23a7666ba98"/>
+  <id value="6a7f0b05-ca23-4f13-805d-fa8248332267"/>
   <meta>
-    <lastUpdated value="2025-06-02T15:03:03.313+00:00"/>
+    <lastUpdated value="2025-10-22T09:10:27.217+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -17,7 +17,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id"/>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on Loinc v2.80</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion from tx.fhir.org based on Loinc v2.81</p>
             <p>Ce jeu de valeur (ValueSet) contient 2 concepts</p>
             <table class="codes">
               <tr>
@@ -51,12 +51,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="PreadmissionConsentCategoryVS"/>
         <title value="preadmission-consent-category-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-06-02T15:02:23+00:00"/>
+        <date value="2025-10-22T09:09:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -65,8 +65,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:c1171b36-dd72-406b-8f58-f46aaadad099"/>
-          <timestamp value="2025-06-02T15:03:37+00:00"/>
+          <identifier value="urn:uuid:5548a356-7e71-400a-96ba-11e28abdd0f9"/>
+          <timestamp value="2025-10-22T09:10:47+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -91,11 +91,11 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://loinc.org|2.80"/>
+            <valueUri value="http://loinc.org|2.81"/>
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://loinc.org|2.80"/>
+            <valueUri value="http://loinc.org|2.81"/>
           </parameter>
           <contains>
             <system value="http://loinc.org"/>
@@ -148,12 +148,7 @@
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/consentaction</td>
                 <td/>
-                <td>
-                  <div>
-                    <p>Gather retrieved information for storage</p>
-
-                  </div>
-                </td>
+                <td>Gather retrieved information for storage</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -162,12 +157,7 @@
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/consentaction</td>
                 <td/>
-                <td>
-                  <div>
-                    <p>Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)</p>
-
-                  </div>
-                </td>
+                <td>Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
@@ -176,23 +166,18 @@
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/consentaction</td>
                 <td/>
-                <td>
-                  <div>
-                    <p>Transfer retrieved information</p>
-
-                  </div>
-                </td>
+                <td>Transfer retrieved information</td>
               </tr>
             </table>
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="PreadmissionConsentCodeValueSet"/>
         <title value="preadmission-consent-code-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-06-02T15:02:23+00:00"/>
+        <date value="2025-10-22T09:09:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -201,8 +186,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8f9cdb97-d139-4b9f-a9de-a2296624237c"/>
-          <timestamp value="2025-06-02T15:03:37+00:00"/>
+          <identifier value="urn:uuid:77615982-f1bf-4aff-96d2-c33a43d4d4da"/>
+          <timestamp value="2025-10-22T09:10:47+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -303,12 +288,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="PreadmissionConsentPurposeReasonVS"/>
         <title value="preadmission-consent-purpose-reason-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-06-02T15:02:23+00:00"/>
+        <date value="2025-10-22T09:09:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -317,8 +302,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:7df7044e-742e-4956-94d6-1959659337c4"/>
-          <timestamp value="2025-06-02T15:03:37+00:00"/>
+          <identifier value="urn:uuid:218d4309-6062-44f4-8bf8-6bfa1533d4e9"/>
+          <timestamp value="2025-10-22T09:10:47+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -368,14 +353,14 @@
               <p>Expansion performed internally based on:</p>
               <ul>
                 <li>
-                  <a href="CodeSystem-document-type-cs.html">codesystem document-type-cs v0.1.0 (CodeSystem)</a>
+                  <a href="CodeSystem-document-type-cs.html">codesystem document-type-cs v0.2.0 (CodeSystem)</a>
                 </li>
                 <li>
                   <a href="https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html">codesystem FR Core CodeSystem Mode Validation Identite v2.1.0 (CodeSystem)</a>
                 </li>
               </ul>
             </div>
-            <p>Ce jeu de valeur (ValueSet) contient 19 concepts</p>
+            <p>Ce jeu de valeur (ValueSet) contient 21 concepts</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -540,16 +525,32 @@
                 <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td>
                 <td/>
               </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-PERS_PREVENIR"> </a>  
+                  <a href="CodeSystem-document-type-cs.html#document-type-cs-PERS_PREVENIR">PERS_PREVENIR</a>
+                </td>
+                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td>
+                <td/>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-PERS_CONFIANCE"> </a>  
+                  <a href="CodeSystem-document-type-cs.html#document-type-cs-PERS_CONFIANCE">PERS_CONFIANCE</a>
+                </td>
+                <td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td>
+                <td/>
+              </tr>
             </table>
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="PreadmissionDocumentTypeFrValueSet"/>
         <title value="preadmission-document-type-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-06-02T15:02:23+00:00"/>
+        <date value="2025-10-22T09:09:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -558,9 +559,9 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:4bfa62b2-3b80-4e7a-a256-485f0059b6d1"/>
-          <timestamp value="2025-06-02T15:03:37+00:00"/>
-          <total value="19"/>
+          <identifier value="urn:uuid:7054007f-cfa1-4106-a5f3-e8f6a3674de6"/>
+          <timestamp value="2025-10-22T09:10:47+00:00"/>
+          <total value="21"/>
           <offset value="0"/>
           <parameter>
             <name value="displayLanguage"/>
@@ -584,7 +585,7 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs|0.1.0"/>
+            <valueUri value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs|0.2.0"/>
           </parameter>
           <contains>
             <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity"/>
@@ -662,6 +663,14 @@
             <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs"/>
             <code value="ARRET_TRAVAIL"/>
           </contains>
+          <contains>
+            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs"/>
+            <code value="PERS_PREVENIR"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs"/>
+            <code value="PERS_CONFIANCE"/>
+          </contains>
         </expansion>
       </ValueSet>
     </resource>
@@ -678,7 +687,7 @@
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-preadmission-statuts-cs.html">codesystem preadmission-statuts-cs v0.1.0 (CodeSystem)</a>
+              <a href="CodeSystem-preadmission-statuts-cs.html">codesystem preadmission-statuts-cs v0.2.0 (CodeSystem)</a>
             </p>
             <p>Ce jeu de valeur (ValueSet) contient 6 concepts</p>
             <table class="codes">
@@ -745,12 +754,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="PreAdmissionStatusValueSet"/>
         <title value="preadmission-status-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-06-02T15:02:23+00:00"/>
+        <date value="2025-10-22T09:09:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -759,8 +768,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:fb545bbe-a81c-4127-b510-09aa0b2545ee"/>
-          <timestamp value="2025-06-02T15:03:37+00:00"/>
+          <identifier value="urn:uuid:358b051e-f88b-4cef-a71f-d02427734f00"/>
+          <timestamp value="2025-10-22T09:10:47+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -781,7 +790,7 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs|0.1.0"/>
+            <valueUri value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs|0.2.0"/>
           </parameter>
           <contains>
             <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs"/>
@@ -873,12 +882,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="TypeCouvertureSocialeValueSet"/>
         <title value="type-couverture-sociale-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-06-02T15:02:23+00:00"/>
+        <date value="2025-10-22T09:09:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -887,8 +896,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:95147886-a1a8-4d1a-b134-2849ede61285"/>
-          <timestamp value="2025-06-02T15:03:37+00:00"/>
+          <identifier value="urn:uuid:6fa1a719-557c-4a8f-9d04-5ef57024b9f1"/>
+          <timestamp value="2025-10-22T09:10:48+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -969,28 +978,28 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-ActCode-SS"> </a>  
-                  <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-SS">SS</a>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-ActCode-AMB"> </a>  
+                  <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">AMB</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
                 <td/>
                 <td>
                   <div>
-                    <p>An encounter where the patient is admitted to a health care facility for a predetermined length of time, usually less than 24 hours.</p>
+                    <p>A comprehensive term for health care provided in a healthcare facility (e.g. a practitioneraTMs office, clinic setting, or hospital) on a nonresident basis. The term ambulatory usually implies that the patient has come to the location and is not assigned to a bed. Sometimes referred to as an outpatient encounter.</p>
 
                   </div>
                 </td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-ActCode-NONAC"> </a>  
-                  <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-NONAC">NONAC</a>
+                  <a name="x-http://terminology.hl7.org/CodeSystem/v3-ActCode-IMP"> </a>  
+                  <a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-IMP">IMP</a>
                 </td>
                 <td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td>
                 <td/>
                 <td>
                   <div>
-                    <p>Any category of inpatient encounter except 'acute'</p>
+                    <p>A patient encounter where a patient is admitted by a hospital or equivalent facility, assigned to a location where patients generally stay at least overnight and provided with room, board, and continuous nursing service.</p>
 
                   </div>
                 </td>
@@ -999,12 +1008,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"/>
-        <version value="0.1.0"/>
+        <version value="0.2.0"/>
         <name value="TypeVenueEncounterValueSet"/>
         <title value="type-venue-encounter-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-06-02T15:02:23+00:00"/>
+        <date value="2025-10-22T09:09:51+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1013,8 +1022,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:421c98a6-13b1-4aae-a287-ffa5cbfe2175"/>
-          <timestamp value="2025-06-02T15:03:37+00:00"/>
+          <identifier value="urn:uuid:3e2a4814-ffe7-43d0-83fe-ff997c302a90"/>
+          <timestamp value="2025-10-22T09:10:48+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -1043,11 +1052,11 @@
           </contains>
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
-            <code value="SS"/>
+            <code value="AMB"/>
           </contains>
           <contains>
             <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
-            <code value="NONAC"/>
+            <code value="IMP"/>
           </contains>
         </expansion>
       </ValueSet>

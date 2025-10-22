@@ -16,8 +16,8 @@
      ] )
   ] ; # 
   fhir:text [
-     fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Refus de la préadmission par l'agent du bureau des entrées suite à un manque de document - préadmission.</p></div>"^^rdf:XMLLiteral
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Venue encounter-irm-refused</b></p><a name=\"encounter-irm-refused\"> </a><a name=\"hcencounter-irm-refused\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-encounter-fr.html\">Fr Preadmission Encounter Profile</a></p></div><p><b>Extension Statut Pré-admission</b>: <span title=\"Codes:{http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system REFUSED}\">REFUSED</span></p><p><b>Consignes de l'agent administratif</b>: Le patient n'a pas fourni les documents nécessaires pour valider la préadmission.</p><p><b>identifier</b>: Visit Number/15655244 (use: temp, )</p><p><b>status</b>: Planned</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode AMB</a>: Externe</p><p><b>subject</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>appointment</b>: <a href=\"Appointment-appt-irm-001.html\">Rendez-vous préadmission IRM</a></p><p><b>period</b>: 2025-05-15 10:30:00+0100 --&gt; 2025-05-15 11:00:00+0100</p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr"^^xsd:anyURI ] ;
@@ -50,7 +50,7 @@
   fhir:status [ fhir:v "planned"] ; # 
   fhir:class [
      fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
-     fhir:code [ fhir:v "SS" ] ;
+     fhir:code [ fhir:v "AMB" ] ;
      fhir:display [ fhir:v "Externe" ]
   ] ; # 
   fhir:subject [

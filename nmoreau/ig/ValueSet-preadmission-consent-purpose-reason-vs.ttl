@@ -17,15 +17,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ValueSet preadmission-consent-purpose-reason-vs</b></p><a name=\"preadmission-consent-purpose-reason-vs\"> </a><a name=\"hcpreadmission-consent-purpose-reason-vs\"> </a><a name=\"preadmission-consent-purpose-reason-vs-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include les codes sont définis dans <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html\"><code>http://terminology.hl7.org/CodeSystem/v3-ActReason</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\">TREAT</a></td><td>Treatment</td><td>To perform one or more operations on information for provision of health care.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-PATREQ\">PATREQ</a></td><td>Patient Request</td><td>**Definition:**Patient requests information from their profile.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-HMO\">HMO</a></td><td>Healthcare Operations</td><td/></tr></table></li></ul></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : EnsembleValeurs preadmission-consent-purpose-reason-vs</b></p><a name=\"preadmission-consent-purpose-reason-vs\"> </a><a name=\"hcpreadmission-consent-purpose-reason-vs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include les codes sont définis dans <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html\"><code>http://terminology.hl7.org/CodeSystem/v3-ActReason</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\">TREAT</a></td><td>Treatment</td><td>To perform one or more operations on information for provision of health care.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-PATREQ\">PATREQ</a></td><td>Patient Request</td><td>**Definition:**Patient requests information from their profile.</td></tr></table></li></ul></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
   fhir:name [ fhir:v "PreadmissionConsentPurposeReasonVS"] ; # 
   fhir:title [ fhir:v "preadmission-consent-purpose-reason-vs"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2025-06-02T15:02:23+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-22T09:09:51+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -58,9 +58,6 @@
        ] [
          fhir:code [ fhir:v "PATREQ" ] ;
          fhir:display [ fhir:v "Patient Request" ]
-       ] [
-         fhir:code [ fhir:v "HMO" ] ;
-         fhir:display [ fhir:v "Healthcare Operations" ]
        ] )
      ] )
   ] . # 

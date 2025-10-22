@@ -6,15 +6,15 @@
   },
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ValueSet preadmission-consent-purpose-reason-vs</b></p><a name=\"preadmission-consent-purpose-reason-vs\"> </a><a name=\"hcpreadmission-consent-purpose-reason-vs\"> </a><a name=\"preadmission-consent-purpose-reason-vs-fr-FR\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include les codes sont définis dans <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html\"><code>http://terminology.hl7.org/CodeSystem/v3-ActReason</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\">TREAT</a></td><td>Treatment</td><td>To perform one or more operations on information for provision of health care.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-PATREQ\">PATREQ</a></td><td>Patient Request</td><td>**Definition:**Patient requests information from their profile.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-HMO\">HMO</a></td><td>Healthcare Operations</td><td/></tr></table></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : EnsembleValeurs preadmission-consent-purpose-reason-vs</b></p><a name=\"preadmission-consent-purpose-reason-vs\"> </a><a name=\"hcpreadmission-consent-purpose-reason-vs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><ul><li>Include les codes sont définis dans <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html\"><code>http://terminology.hl7.org/CodeSystem/v3-ActReason</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\">TREAT</a></td><td>Treatment</td><td>To perform one or more operations on information for provision of health care.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-ActReason.html#v3-ActReason-PATREQ\">PATREQ</a></td><td>Patient Request</td><td>**Definition:**Patient requests information from their profile.</td></tr></table></li></ul></div>"
   },
   "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs",
-  "version" : "0.1.0",
+  "version" : "0.2.0",
   "name" : "PreadmissionConsentPurposeReasonVS",
   "title" : "preadmission-consent-purpose-reason-vs",
   "status" : "draft",
   "experimental" : true,
-  "date" : "2025-06-02T15:02:23+00:00",
+  "date" : "2025-10-22T09:09:51+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -49,10 +49,6 @@
       {
         "code" : "PATREQ",
         "display" : "Patient Request"
-      },
-      {
-        "code" : "HMO",
-        "display" : "Healthcare Operations"
       }]
     }]
   }
