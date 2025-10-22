@@ -1,0 +1,21 @@
+# hl7.fhir.fr.preadmission#0.1.0: Préadmission en ligne
+
+## Pages
+
+* [Accueil](index.md)
+* [Artifacts Summary](artifacts.md)
+* [Téléchargement du guide](downloads.md)
+
+## Resources
+
+### Resource Profiles
+
+* [Patient français](StructureDefinition-fr-patient.md)
+
+### ImplementationGuides
+
+* [Préadmission en ligne](index.md)
+
+### Examples
+
+* [frpatient-exemple (Patient)](Patient-frpatient-exemple.md)
