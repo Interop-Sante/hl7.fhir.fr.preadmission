@@ -104,16 +104,10 @@ Pour enrichir les ressources FHIR et répondre aux besoins particuliers de la pr
 - **Ressource concernée :** `Encounter`
 - **Description :** Permet à l'agent administratif de transmettre des consignes spécifiques au patient.
 
-###### Consentements liés à la pré-admission
-
-- **Extension :** `PreadmissionConsentementsExtension`
-- **Ressource concernée :** `Encounter` et `Appointment`
-- **Description :** Permet de référencer un ou plusieurs consentements recueillis dans le cadre de la pré-admission, par exemple pour l’accès ou l’alimentation du Dossier Médical Partagé (DMP).
-
 ###### Questionnaire lié à la pré-admission
 
 - **Extension :** `PreadmissionQuestionnaireExtension`
-- **Ressource concernée :** `Encounter` et `Appointment`
+- **Ressource concernée :** `Appointment`
 - **Description :** Permet de référencer une ou plusieurs réponses à des questionnaires administratifs (par exemple, demande de chambre particulière) recueillies dans le cadre de la pré-admission.
 
 #### Enchaînement des Processus
@@ -124,12 +118,11 @@ Pour enrichir les ressources FHIR et répondre aux besoins particuliers de la pr
 
 - Création d’un rendez-vous (`Appointment`).
 - Association des réponses aux questionnaires (`QuestionnaireResponse`).
-- Référencement des consentements recueillis (`Consent`).
 
 ###### Système administratif
 
 - Récupération des données transmises par le portail.
-- Création d’une ressource `Encounter` pour la pré-admission, incluant les références aux `QuestionnaireResponse` pour les réponses aux questionnaires.
+- Création d’une ressource `Encounter` pour la pré-admission
 - Vérification des informations administratives, de la couverture sociale (`Coverage`), et des documents justificatifs (`DocumentReference`).
 
 ###### Portail de pré-admission

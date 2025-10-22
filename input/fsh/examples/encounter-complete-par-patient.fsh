@@ -6,7 +6,7 @@ Description: "Exemple d'une ressource Encounter complété par le patient sur le
 * id = "encounter-irm-complete"
 * status = #planned
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* class.code = #SS
+* class.code = #AMB
 * class.display = "Externe"
 * subject = Reference(Patient/patient-001) "Jean Dupont"
 * appointment = Reference(Appointment/appt-irm-001) "Rendez-vous préadmission IRM"

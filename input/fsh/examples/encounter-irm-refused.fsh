@@ -6,7 +6,7 @@ Usage: #example
 * id = "encounter-irm-refused"
 * status = #planned
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
-* class.code = #SS
+* class.code = #AMB
 * class.display = "Externe"
 * subject = Reference(patient-001) "Jean Dupont"
 * appointment = Reference(appt-irm-001) "Rendez-vous préadmission IRM"
