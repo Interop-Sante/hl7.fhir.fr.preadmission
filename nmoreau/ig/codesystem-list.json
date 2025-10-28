@@ -9,6 +9,14 @@
       "description" : "Types de documents additionnels pour la préadmission"
     },
     {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-ins-cs",
+      "version" : "0.2.0",
+      "status" : "draft",
+      "name" : "PreadmissionDocumentTypeINSCodeSystem",
+      "title" : "document-type-ins-cs",
+      "description" : "Types de documents additionnels pour qualifer une identité"
+    },
+    {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs",
       "version" : "0.2.0",
       "status" : "draft",

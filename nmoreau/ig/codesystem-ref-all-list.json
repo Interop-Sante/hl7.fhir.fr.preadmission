@@ -212,8 +212,8 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-consent-category.html" : "Consent Category Codes",
-      "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set",
       "ValueSet-preadmission-consent-category-vs.html" : "preadmission-consent-category-vs",
+      "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set",
       "http://hl7.org/fhir/R4/valueset-consent-content-code.html" : "Consent Content Codes"
     },
     {
@@ -529,9 +529,9 @@
       "uses" : {
       },
       "ValueSet-type-couverture-sociale-vs.html" : "type-couverture-sociale-vs",
-      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActCode.html" : "v3 Code System ActCode",
       "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode",
-      "ValueSet-type-venue-encounter-vs.html" : "type-venue-encounter-vs"
+      "ValueSet-type-venue-encounter-vs.html" : "type-venue-encounter-vs",
+      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActCode.html" : "v3 Code System ActCode"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
@@ -604,8 +604,8 @@
       "oids" : ["2.16.840.1.113883.5.90"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType",
-      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type"
+      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type",
+      "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleClass",

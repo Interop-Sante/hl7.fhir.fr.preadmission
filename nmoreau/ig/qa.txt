@@ -1,26 +1,29 @@
 PREADMISSIONFR : Validation Results
 =========================================
 
-err = 41, warn = 46, info = 16
-IG Publisher Version: 2.0.10 Out of date - current version is 2.0.21
-Generated Wed Oct 22 09:11:14 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.2.0 (canonical = http://hl7.fr/fhir/fr/preadmission)
+err = 42, warn = 51, info = 17
+IG Publisher Version: 2.0.10 Out of date - current version is 2.0.22
+Generated Tue Oct 28 10:02:07 UTC 2025. FHIR version 4.0.1 for hl7.fhir.fr.preadmission#0.2.0 (canonical = http://hl7.fr/fhir/fr/preadmission)
  Build Errors : 2 / 5 / 0
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Appointment-appt-irm-001 : 1 / 0 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CapabilityStatement-PreadmissionCapabilityStatement : 4 / 0 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-document-type-cs : 0 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-document-type-ins-cs : 0 / 1 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CodeSystem-preadmission-statuts-cs : 0 / 1 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Consent-consentement-dmp-alimentation : 3 / 0 / 3
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Consent-consentement-dmp-consultation : 3 / 0 / 3
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Consent-consentement-multi : 9 / 1 / 4
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Consent-consentement-refus-rgpd : 5 / 1 / 1
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Coverage-coverage-amc : 1 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Coverage-coverage-amc : 0 / 2 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Coverage-coverage-amo : 1 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Coverage-coverage-amo-enfant : 2 / 2 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/DocumentReference-documentreference-cni-recto : 1 / 1 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-complete : 4 / 5 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-externe : 4 / 3 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-refused : 4 / 3 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission : 0 / 0 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Patient-patient-001 : 0 / 1 / 2
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Patient-patient-parent : 0 / 1 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Practitioner-practitioner-irm : 0 / 0 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Questionnaire-questionnaire-chb-part : 0 / 0 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Questionnaire-questionnaire-irm : 0 / 0 / 2
@@ -63,6 +66,8 @@ ERROR: CapabilityStatement/PreadmissionCapabilityStatement: CapabilityStatement.
 ERROR: CapabilityStatement/PreadmissionCapabilityStatement: CapabilityStatement: Constraint failed: cpb-14: 'If kind = instance, implementation must be present and software may be present'
 == fsh-generated/resources/CodeSystem-document-type-cs.json ==
 WARNING: CodeSystem/document-type-cs: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
+== fsh-generated/resources/CodeSystem-document-type-ins-cs.json ==
+WARNING: CodeSystem/document-type-ins-cs: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
 == fsh-generated/resources/CodeSystem-preadmission-statuts-cs.json ==
 WARNING: CodeSystem/preadmission-statuts-cs: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
 == fsh-generated/resources/Consent-consentement-dmp-alimentation.json ==
@@ -99,11 +104,16 @@ WARNING: Consent/consentement-refus-rgpd: Consent.provision.purpose[0]: The prov
 ERROR: Consent/consentement-refus-rgpd: Consent.provision.code[0].coding[0].display: Wrong Display Name 'Collect data' for http://terminology.hl7.org/CodeSystem/consentaction#collect. Valid display is 'Collect' (for the language(s) 'fr-FR')
 ERROR: Consent/consentement-refus-rgpd: Consent: Constraint failed: ppc-1: 'Either a Policy or PolicyRule' (defined in http://hl7.org/fhir/StructureDefinition/Consent)
 == fsh-generated/resources/Coverage-coverage-amc.json ==
-WARNING: Coverage/coverage-amc: Coverage.type.coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/coverage-type' could not be found, so the code cannot be validated
-ERROR: Coverage/coverage-amc: Coverage.type.coding[0].system: No definition could be found for URL value 'http://terminology.hl7.org/CodeSystem/coverage-type'
+WARNING: Coverage/coverage-amc: Coverage.type.coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: Coverage/coverage-amc: Coverage.payor[0].identifier.system: No definition could be found for URL value 'urn:oid:1.2.250.1.213.1.1.4.6'
 == fsh-generated/resources/Coverage-coverage-amo.json ==
-WARNING: Coverage/coverage-amo: Coverage.type.coding[0]: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/coverage-type' could not be found, so the code cannot be validated
+WARNING: Coverage/coverage-amo: Coverage.type.coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/coverage-type' could not be found, so the code cannot be validated
 ERROR: Coverage/coverage-amo: Coverage.type.coding[0].system: No definition could be found for URL value 'http://terminology.hl7.org/CodeSystem/coverage-type'
+== fsh-generated/resources/Coverage-coverage-amo-enfant.json ==
+WARNING: Coverage/coverage-amo-enfant: Coverage.type.coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/coverage-type' could not be found, so the code cannot be validated
+ERROR: Coverage/coverage-amo-enfant: Coverage.type.coding[0].system: No definition could be found for URL value 'http://terminology.hl7.org/CodeSystem/coverage-type'
+WARNING: Coverage/coverage-amo-enfant: Coverage.relationship.coding[0].system: A definition for CodeSystem 'http://hl7.org/fhir/coverage-relationship' could not be found, so the code cannot be validated
+ERROR: Coverage/coverage-amo-enfant: Coverage.relationship.coding[0].system: No definition could be found for URL value 'http://hl7.org/fhir/coverage-relationship'
 == fsh-generated/resources/DocumentReference-documentreference-cni-recto.json ==
 WARNING: DocumentReference/documentreference-cni-recto: DocumentReference.type.coding[0].system: A definition for CodeSystem 'http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system' could not be found, so the code cannot be validated
 ERROR: DocumentReference/documentreference-cni-recto: DocumentReference.type: None of the codings provided are in the value set 'preadmission-document-type-vs' (http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs|0.2.0), and a coding from this value set is required) (codes = http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system#CN_RECTO)
@@ -140,6 +150,9 @@ ERROR: Encounter/encounter-irm-refused: Encounter.class.display: Wrong Display N
 == fsh-generated/resources/Patient-patient-001.json ==
 INFORMATION: Patient/patient-001: Patient.identifier[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: Patient/patient-001: Patient.identifier[0].system: No definition could be found for URL value 'http://interopsante.org/fhir/NIR'
+== fsh-generated/resources/Patient-patient-parent.json ==
+INFORMATION: Patient/patient-parent: Patient.identifier[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+WARNING: Patient/patient-parent: Patient.identifier[0].system: No definition could be found for URL value 'http://interopsante.org/fhir/NIR'
 == fsh-generated/resources/Practitioner-practitioner-irm.json ==
 INFORMATION: Practitioner/practitioner-irm: Practitioner.identifier[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 == fsh-generated/resources/Questionnaire-questionnaire-chb-part.json ==

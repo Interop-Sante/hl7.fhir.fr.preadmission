@@ -10,7 +10,7 @@
   "name" : "PREADMISSIONFR",
   "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
   "status" : "draft",
-  "date" : "2025-10-22T09:09:51+00:00",
+  "date" : "2025-10-28T10:00:18+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -673,7 +673,7 @@
         "reference" : "Consent/consentement-dmp-consultation"
       },
       "name" : "Consentement consultation DMP",
-      "description" : "Consentement pour la consultation du DMP, non recueilli (provision.type vide).",
+      "description" : "Consentement pour la consultation du DMP, recueilli (provision.type permit).",
       "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
     },
     {
@@ -742,6 +742,18 @@
         "valueString" : "Coverage"
       }],
       "reference" : {
+        "reference" : "Coverage/coverage-amo-enfant"
+      },
+      "name" : "Couverture sociale AMO",
+      "description" : "Couverture sociale AMO - préadmission.",
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Coverage"
+      }],
+      "reference" : {
         "reference" : "Coverage/coverage-amo"
       },
       "name" : "Couverture sociale AMO",
@@ -770,6 +782,18 @@
       },
       "name" : "document-type-cs",
       "description" : "Types de documents additionnels pour la préadmission",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/document-type-ins-cs"
+      },
+      "name" : "document-type-ins-cs",
+      "description" : "Types de documents additionnels pour qualifer une identité",
       "exampleBoolean" : false
     },
     {
@@ -804,7 +828,7 @@
       "reference" : {
         "reference" : "StructureDefinition/fr-coverage-amc-extended"
       },
-      "name" : "Extension AMC Étendue",
+      "name" : "Extension AMC Étendue ROC",
       "description" : "Extension pour les informations AMC étendues",
       "exampleBoolean" : false
     },
@@ -899,6 +923,18 @@
       }],
       "reference" : {
         "reference" : "Patient/patient-001"
+      },
+      "name" : "Patient de préadmission",
+      "description" : "Patient de préadmission - référencé dans les autres exemples.",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/patient-parent"
       },
       "name" : "Patient de préadmission",
       "description" : "Patient de préadmission - référencé dans les autres exemples.",

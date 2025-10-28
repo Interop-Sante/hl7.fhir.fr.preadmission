@@ -27,10 +27,8 @@
     },
     {
       "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended",
-      "title": "Extension AMC Étendue",
+      "title": "Extension AMC Étendue ROC",
       "types": [
-        "string",
-        "string",
         "string",
         "string",
         "string",

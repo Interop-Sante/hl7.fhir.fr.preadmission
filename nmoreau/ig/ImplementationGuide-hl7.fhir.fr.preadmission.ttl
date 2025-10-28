@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PREADMISSIONFR"] ; # 
   fhir:title [ fhir:v "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-10-22T09:09:51+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-28T10:00:18+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -921,7 +921,7 @@
          fhir:reference [ fhir:v "Consent/consentement-dmp-consultation" ]
        ] ;
        fhir:name [ fhir:v "Consentement consultation DMP" ] ;
-       fhir:description [ fhir:v "Consentement pour la consultation du DMP, non recueilli (provision.type vide)." ] ;
+       fhir:description [ fhir:v "Consentement pour la consultation du DMP, recueilli (provision.type permit)." ] ;
        fhir:example [
          a fhir:canonical ;
          fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"^^xsd:anyURI ;
@@ -1030,6 +1030,25 @@
          ]
        ] ) ;
        fhir:reference [
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/Coverage/coverage-amo-enfant> ;
+         fhir:reference [ fhir:v "Coverage/coverage-amo-enfant" ]
+       ] ;
+       fhir:name [ fhir:v "Couverture sociale AMO" ] ;
+       fhir:description [ fhir:v "Couverture sociale AMO - préadmission." ] ;
+       fhir:example [
+         a fhir:canonical ;
+         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"^^xsd:anyURI ;
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Coverage"
+         ]
+       ] ) ;
+       fhir:reference [
          fhir:link <http://hl7.fr/fhir/fr/preadmission/Coverage/coverage-amo> ;
          fhir:reference [ fhir:v "Coverage/coverage-amo" ]
        ] ;
@@ -1073,6 +1092,24 @@
        ] ;
        fhir:name [ fhir:v "document-type-cs" ] ;
        fhir:description [ fhir:v "Types de documents additionnels pour la préadmission" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-ins-cs> ;
+         fhir:reference [ fhir:v "CodeSystem/document-type-ins-cs" ]
+       ] ;
+       fhir:name [ fhir:v "document-type-ins-cs" ] ;
+       fhir:description [ fhir:v "Types de documents additionnels pour qualifer une identité" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1126,7 +1163,7 @@
          fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended> ;
          fhir:reference [ fhir:v "StructureDefinition/fr-coverage-amc-extended" ]
        ] ;
-       fhir:name [ fhir:v "Extension AMC Étendue" ] ;
+       fhir:name [ fhir:v "Extension AMC Étendue ROC" ] ;
        fhir:description [ fhir:v "Extension pour les informations AMC étendues" ] ;
        fhir:example [
          a fhir:boolean ;
@@ -1269,6 +1306,24 @@
        fhir:reference [
          fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
          fhir:reference [ fhir:v "Patient/patient-001" ]
+       ] ;
+       fhir:name [ fhir:v "Patient de préadmission" ] ;
+       fhir:description [ fhir:v "Patient de préadmission - référencé dans les autres exemples." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-parent> ;
+         fhir:reference [ fhir:v "Patient/patient-parent" ]
        ] ;
        fhir:name [ fhir:v "Patient de préadmission" ] ;
        fhir:description [ fhir:v "Patient de préadmission - référencé dans les autres exemples." ] ;

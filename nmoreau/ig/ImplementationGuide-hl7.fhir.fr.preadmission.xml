@@ -10,7 +10,7 @@
   <name value="PREADMISSIONFR"/>
   <title value="Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"/>
   <status value="draft"/>
-  <date value="2025-10-22T09:09:51+00:00"/>
+  <date value="2025-10-28T10:00:18+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -508,7 +508,7 @@
         <reference value="Consent/consentement-dmp-consultation"/>
       </reference>
       <name value="Consentement consultation DMP"/>
-      <description value="Consentement pour la consultation du DMP, non recueilli (provision.type vide)."/>
+      <description value="Consentement pour la consultation du DMP, recueilli (provision.type permit)."/>
       <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"/>
     </resource>
     <resource>
@@ -571,6 +571,17 @@
         <valueString value="Coverage"/>
       </extension>
       <reference>
+        <reference value="Coverage/coverage-amo-enfant"/>
+      </reference>
+      <name value="Couverture sociale AMO"/>
+      <description value="Couverture sociale AMO - préadmission."/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Coverage"/>
+      </extension>
+      <reference>
         <reference value="Coverage/coverage-amo"/>
       </reference>
       <name value="Couverture sociale AMO"/>
@@ -597,6 +608,17 @@
       </reference>
       <name value="document-type-cs"/>
       <description value="Types de documents additionnels pour la préadmission"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/document-type-ins-cs"/>
+      </reference>
+      <name value="document-type-ins-cs"/>
+      <description value="Types de documents additionnels pour qualifer une identité"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -628,7 +650,7 @@
       <reference>
         <reference value="StructureDefinition/fr-coverage-amc-extended"/>
       </reference>
-      <name value="Extension AMC Étendue"/>
+      <name value="Extension AMC Étendue ROC"/>
       <description value="Extension pour les informations AMC étendues"/>
       <exampleBoolean value="false"/>
     </resource>
@@ -715,6 +737,17 @@
       </extension>
       <reference>
         <reference value="Patient/patient-001"/>
+      </reference>
+      <name value="Patient de préadmission"/>
+      <description value="Patient de préadmission - référencé dans les autres exemples."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/patient-parent"/>
       </reference>
       <name value="Patient de préadmission"/>
       <description value="Patient de préadmission - référencé dans les autres exemples."/>

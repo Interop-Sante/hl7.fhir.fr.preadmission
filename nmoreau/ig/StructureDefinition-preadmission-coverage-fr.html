@@ -276,7 +276,7 @@
         
           Draft
           
-            as of 2025-10-22
+            as of 2025-10-28
           
         
       </td>
@@ -368,14 +368,15 @@
   <li><strong>Bénéficiaire</strong> : Référencez le patient concerné via le champ <code class="language-plaintext highlighter-rouge">beneficiary</code>.</li>
   <li><strong>Assuré principal</strong> : Si l’assuré principal est différent du bénéficiaire, renseignez le champ <code class="language-plaintext highlighter-rouge">subscriber</code> avec une référence vers la ressource <code class="language-plaintext highlighter-rouge">Patient</code> correspondante.</li>
   <li><strong>Numéro d’adhérent</strong> : Renseignez le champ <code class="language-plaintext highlighter-rouge">subscriberId</code> avec le numéro d’adhérent fourni par l’organisme complémentaire.</li>
-  <li>
-    <p><strong>Détails spécifiques à l’AMC</strong> : Utilisez l’extension <code class="language-plaintext highlighter-rouge">FrCoverageAMCExtension</code> pour ajouter des informations comme :</p>
-
+  <li><strong>Détails spécifiques à l’AMC</strong>
     <ul>
-      <li>Le nom de l’organisme complémentaire (<code class="language-plaintext highlighter-rouge">nomAMC</code>).</li>
-      <li>Le numéro de l’AMC (<code class="language-plaintext highlighter-rouge">numeroAMC</code>).</li>
-      <li>Un code de convention ou un code CSR, si applicable.</li>
-      <li>Il est possible aussi de transmettre le contenu du Datamatrix</li>
+      <li>Le numéro de l’AMC doit être renseigné comme <strong>identifier</strong> du <code class="language-plaintext highlighter-rouge">payor</code> (<code class="language-plaintext highlighter-rouge">Organization</code>).</li>
+      <li>Utilisez l’extension <code class="language-plaintext highlighter-rouge">FrCoverageAMCExtension</code> pour ajouter des informations comme :
+        <ul>
+          <li>Un code de convention ou un code CSR, si applicable.</li>
+          <li>Le contenu du <strong>Datamatrix</strong>, s’il est disponible.</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ol>
@@ -414,7 +415,7 @@
 
 <p><b>Usages:</b></p>
 <ul>
- <li>Examples for this Profile: <a href="Coverage-coverage-amc.html">Coverage/coverage-amc</a> and <a href="Coverage-coverage-amo.html">Coverage/coverage-amo</a></li>
+ <li>Examples for this Profile: <a href="Coverage-coverage-amc.html">Coverage/coverage-amc</a>, <a href="Coverage-coverage-amo-enfant.html">Coverage/coverage-amo-enfant</a> and <a href="Coverage-coverage-amo.html">Coverage/coverage-amo</a></li>
  <li>CapabilityStatements using this Profile: <a href="CapabilityStatement-PreadmissionCapabilityStatement.html">Capacités serveur FHIR pour l'IG Preadmission</a></li>
 </ul>
 <p>You can also check for <a href="https://packages2.fhir.org/xig/hl7.fhir.fr.preadmission|current/StructureDefinition/preadmission-coverage-fr">usages in the FHIR IG Statistics</a></p>
@@ -545,7 +546,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/organization.html">Organization</a> | <a href="http://hl7.org/fhir/R4/patient.html">Patient</a> | <a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Issuer of the policy<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 676412ac-7054-4595-84ab-2170e4fa43cf
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 25d43eaa-d010-46b2-8cad-1010bb2a8956
 document.getElementById('cbpreadmission-coverage-frK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-coverage-frK'), 'binding', document.getElementById('cbpreadmission-coverage-frK-binding').checked, document.getElementById('pppreadmission-coverage-frK'));
 document.getElementById('cbpreadmission-coverage-frK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -657,7 +658,7 @@ filterDesc(document.getElementById('preadmission-coverage-frK'), 'obligation', d
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Code defined by a terminology system</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 676412ac-7054-4595-84ab-2170e4fa43cf
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 25d43eaa-d010-46b2-8cad-1010bb2a8956
 document.getElementById('cbpreadmission-coverage-frD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-coverage-frD'), 'binding', document.getElementById('cbpreadmission-coverage-frD-binding').checked, document.getElementById('pppreadmission-coverage-frD'));
 document.getElementById('cbpreadmission-coverage-frD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1001,7 +1002,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/contract.html">Contract</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Contract details<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 676412ac-7054-4595-84ab-2170e4fa43cf
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 25d43eaa-d010-46b2-8cad-1010bb2a8956
 document.getElementById('cbpreadmission-coverage-frS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-coverage-frS'), 'binding', document.getElementById('cbpreadmission-coverage-frS-binding').checked, document.getElementById('pppreadmission-coverage-frS'));
 document.getElementById('cbpreadmission-coverage-frS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1282,7 +1283,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/organization.html">Organization</a> | <a href="http://hl7.org/fhir/R4/patient.html">Patient</a> | <a href="http://hl7.org/fhir/R4/relatedperson.html">RelatedPerson</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Issuer of the policy<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 676412ac-7054-4595-84ab-2170e4fa43cf
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 25d43eaa-d010-46b2-8cad-1010bb2a8956
 document.getElementById('cbpreadmission-coverage-frKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-coverage-frKA'), 'binding', document.getElementById('cbpreadmission-coverage-frKA-binding').checked, document.getElementById('pppreadmission-coverage-frKA'));
 document.getElementById('cbpreadmission-coverage-frKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1394,7 +1395,7 @@ filterDesc(document.getElementById('preadmission-coverage-frKA'), 'obligation', 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5; opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Code defined by a terminology system</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 676412ac-7054-4595-84ab-2170e4fa43cf
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 25d43eaa-d010-46b2-8cad-1010bb2a8956
 document.getElementById('cbpreadmission-coverage-frDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-coverage-frDA'), 'binding', document.getElementById('cbpreadmission-coverage-frDA-binding').checked, document.getElementById('pppreadmission-coverage-frDA'));
 document.getElementById('cbpreadmission-coverage-frDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1737,7 +1738,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/contract.html">Contract</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Contract details<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 676412ac-7054-4595-84ab-2170e4fa43cf
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 25d43eaa-d010-46b2-8cad-1010bb2a8956
 document.getElementById('cbpreadmission-coverage-frSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-coverage-frSA'), 'binding', document.getElementById('cbpreadmission-coverage-frSA-binding').checked, document.getElementById('pppreadmission-coverage-frSA'));
 document.getElementById('cbpreadmission-coverage-frSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1978,17 +1979,17 @@ Résumé
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 22, 2025 09:10+0000">2025-10-22</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Oct 28, 2025 10:00+0000">2025-10-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
-                 
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/issues/new">New Issue</a>
                 
           Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières </a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA </a> |
                  <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://hl7.fr/fhir/fr/preadmission/history.html">Historique des versions </a>
-                 
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/Interop-Sante/hl7.fhir.fr.preadmission/issues/new">New Issue</a>
                 
 
           </span>

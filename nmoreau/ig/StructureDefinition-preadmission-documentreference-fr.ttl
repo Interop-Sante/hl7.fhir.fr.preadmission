@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PreadmissionDocumentReferenceFr"] ; # 
   fhir:title [ fhir:v "Fr Preadmission DocumentReference Profile"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2025-10-22T09:09:51+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2025-10-28T10:00:18+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

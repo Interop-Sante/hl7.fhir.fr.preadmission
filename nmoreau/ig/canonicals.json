@@ -14,6 +14,13 @@
     "name" : "PreadmissionDocumentTypeCodeSystem"
   },
   {
+    "id" : "document-type-ins-cs",
+    "type" : "CodeSystem",
+    "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-ins-cs",
+    "version" : "0.2.0",
+    "name" : "PreadmissionDocumentTypeINSCodeSystem"
+  },
+  {
     "id" : "preadmission-statuts-cs",
     "type" : "CodeSystem",
     "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs",

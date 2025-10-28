@@ -6,18 +6,10 @@
   },
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Couverture coverage-amc</b></p><a name=\"coverage-amc\"> </a><a name=\"hccoverage-amc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-coverage-fr.html\">Fr Preadmission Coverage Profile</a></p></div><blockquote><p><b>Extension AMC Étendue</b></p><ul><li>nomAMC: Mutuelle Santé Plus</li><li>numeroAMC: 987654321</li><li>codeConvention: 12345</li><li>codeCSR: 67890</li></ul></blockquote><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMC-2025-001\u00a0(use:\u00a0official,\u00a0)</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/coverage-type EHCPOL}\">Assurance Maladie Complémentaire</span></p><p><b>subscriber</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>subscriberId</b>: AMC-987654321</p><p><b>beneficiary</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Assurance Maladie Complémentaire</p></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Couverture coverage-amc</b></p><a name=\"coverage-amc\"> </a><a name=\"hccoverage-amc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-coverage-fr.html\">Fr Preadmission Coverage Profile</a></p></div><blockquote><p><b>Extension AMC Étendue ROC</b></p><ul><li>codeConvention: 12345</li><li>codeCSR: 67890</li></ul></blockquote><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMC-2025-001\u00a0(use:\u00a0official,\u00a0)</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:\">Assurance Maladie Complémentaire</span></p><p><b>subscriber</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>subscriberId</b>: AMC-987654321</p><p><b>beneficiary</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Nom Assurance Maladie Complémentaire (Identifier: <code>urn:oid:1.2.250.1.213.1.1.4.6</code>/987654321)</p></div>"
   },
   "extension" : [{
     "extension" : [{
-      "url" : "nomAMC",
-      "valueString" : "Mutuelle Santé Plus"
-    },
-    {
-      "url" : "numeroAMC",
-      "valueString" : "987654321"
-    },
-    {
       "url" : "codeConvention",
       "valueString" : "12345"
     },
@@ -35,7 +27,6 @@
   "status" : "active",
   "type" : {
     "coding" : [{
-      "system" : "http://terminology.hl7.org/CodeSystem/coverage-type",
       "code" : "EHCPOL",
       "display" : "Assurance Maladie Complémentaire"
     }]
@@ -54,6 +45,10 @@
     "end" : "2025-12-31T23:59:59+01:00"
   },
   "payor" : [{
-    "display" : "Assurance Maladie Complémentaire"
+    "identifier" : {
+      "system" : "urn:oid:1.2.250.1.213.1.1.4.6",
+      "value" : "987654321"
+    },
+    "display" : "Nom Assurance Maladie Complémentaire"
   }]
 }
