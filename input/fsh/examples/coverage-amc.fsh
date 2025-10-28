@@ -14,10 +14,6 @@ Usage: #example
 * period.end = "2025-12-31T23:59:59+01:00"
 
 // Extension pour les informations spécifiques à l'AMC
-* extension[informationsAmc].extension[nomAMC].url = "nomAMC"
-* extension[informationsAmc].extension[nomAMC].valueString = "Mutuelle Santé Plus"
-* extension[informationsAmc].extension[numeroAMC].url = "numeroAMC"
-* extension[informationsAmc].extension[numeroAMC].valueString = "987654321"
 * extension[informationsAmc].extension[codeConvention].url = "codeConvention"
 * extension[informationsAmc].extension[codeConvention].valueString = "12345"
 * extension[informationsAmc].extension[codeCSR].url = "codeCSR"
@@ -28,4 +24,6 @@ Usage: #example
 * identifier[0].value = "AMC-2025-001"
 * identifier[0].use = #official
 
-* payor.display = "Assurance Maladie Complémentaire"
+* payor.display = "Nom Assurance Maladie Complémentaire"
+* payor.identifier[0].system = "urn:oid:1.2.250.1.213.1.1.4.6"
+* payor.identifier[0].value = "987654321"
