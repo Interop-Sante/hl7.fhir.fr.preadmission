@@ -1,7 +1,7 @@
 Instance: consentement-dmp-consultation
 InstanceOf: PreadmissionConsentFr
 Title: "Consentement consultation DMP"
-Description: "Consentement pour la consultation du DMP, non recueilli (provision.type vide)."
+Description: "Consentement pour la consultation du DMP, recueilli (provision.type permit)."
 Usage: #example
 * status = #active
 * scope.coding.system = "http://terminology.hl7.org/CodeSystem/consentscope"
@@ -12,6 +12,7 @@ Usage: #example
 * category.coding.display = "Consent Document"
 * patient = Reference(Patient/patient-001) "Jean Dupont"
 * dateTime = "2025-05-14T08:30:00+01:00"
+* provision.type = #permit
 * provision.code.coding.system = "http://terminology.hl7.org/CodeSystem/consentaction"
 * provision.code.coding.code = #access
 * provision.code.coding.display = "Access data"

@@ -12,6 +12,7 @@ Usage: #example
 * category.coding.display = "Consent Document"
 * patient = Reference(Patient/patient-001) "Jean Dupont"
 * dateTime = "2025-05-14T08:30:00+01:00"
+* provision.type = #permit
 * provision.code.coding.system = "http://terminology.hl7.org/CodeSystem/consentaction"
 * provision.code.coding.code = #collect
 * provision.code.coding.display = "Collect data"

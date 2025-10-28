@@ -5,7 +5,6 @@ Description: "Couverture sociale AMC - préadmission."
 Usage: #example
 * id = "coverage-amc"
 * status = #active
-* type.coding[0].system = "http://terminology.hl7.org/CodeSystem/coverage-type"
 * type.coding[0].code = #EHCPOL
 * type.coding[0].display = "Assurance Maladie Complémentaire"
 * beneficiary = Reference(patient-001) "Jean Dupont"
