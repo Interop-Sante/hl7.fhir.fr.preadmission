@@ -17,7 +17,7 @@ Description: "Profil Encounter pour une préadmission"
 * identifier.type.coding.system from FRCoreValueSetEncounterIdentifierType
 * identifier.type.coding.code = #VN
 
-* subject only Reference(FRCorePatientProfile)
+* subject only Reference(FRCorePatientProfile or FRCorePatientINSProfile)
 * appointment 0..1
 * appointment only Reference(PreadmissionAppointmentFr)
 * status 1..1 MS

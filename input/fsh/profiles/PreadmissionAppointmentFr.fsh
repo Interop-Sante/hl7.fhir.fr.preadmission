@@ -9,6 +9,6 @@ Description: "Profil Appointment pour un rendez-vous de préadmission"
 
 * extension[questionnaire] ^short = "Questionnaire lié au rendez-vous"
 
-* participant.actor only Reference(FRCorePatientProfile or FRCorePractitionerProfile)
+* participant.actor only Reference(FRCorePatientProfile or FRCorePatientINSProfile or FRCorePractitionerProfile)
 
 
