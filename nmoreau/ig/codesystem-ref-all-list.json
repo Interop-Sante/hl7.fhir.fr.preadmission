@@ -226,9 +226,9 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
+      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
       "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
-      "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
-      "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set"
+      "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/admit-source",
@@ -276,8 +276,8 @@
       "oids" : ["2.16.840.1.113883.4.642.1.1227"],
       "uses" : {
       },
-      "ValueSet-preadmission-consent-code-vs.html" : "preadmission-consent-code-vs",
-      "http://hl7.org/fhir/R4/valueset-consent-action.html" : "Consent Action Codes"
+      "http://hl7.org/fhir/R4/valueset-consent-action.html" : "Consent Action Codes",
+      "ValueSet-preadmission-consent-code-vs.html" : "preadmission-consent-code-vs"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/consentcategorycodes",
@@ -529,8 +529,8 @@
       "uses" : {
       },
       "ValueSet-type-couverture-sociale-vs.html" : "type-couverture-sociale-vs",
-      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode",
       "ValueSet-type-venue-encounter-vs.html" : "type-venue-encounter-vs",
+      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode",
       "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActCode.html" : "v3 Code System ActCode"
     },
     {
@@ -555,8 +555,8 @@
       "oids" : ["2.16.840.1.113883.5.8"],
       "uses" : {
       },
-      "http://terminology.hl7.org/6.0.2/ValueSet-v3-PurposeOfUse.html" : "PurposeOfUse",
-      "ValueSet-preadmission-consent-purpose-reason-vs.html" : "preadmission-consent-purpose-reason-vs"
+      "ValueSet-preadmission-consent-purpose-reason-vs.html" : "preadmission-consent-purpose-reason-vs",
+      "http://terminology.hl7.org/6.0.2/ValueSet-v3-PurposeOfUse.html" : "PurposeOfUse"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",

@@ -1,7 +1,7 @@
 PREADMISSIONFR : Validation Results
 =========================================
 
-err = 42, warn = 51, info = 17
+err = 42, warn = 52, info = 17
 $--
 Generated $--. FHIR version $-- for hl7.fhir.fr.preadmission#$-- (canonical = http://hl7.fr/fhir/fr/preadmission)
  Build Errors : 2 / 5 / 0
@@ -21,7 +21,7 @@ Generated $--. FHIR version $-- for hl7.fhir.fr.preadmission#$-- (canonical = ht
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-complete : 4 / 5 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-externe : 4 / 3 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-refused : 4 / 3 / 2
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission : 0 / 0 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission : 0 / 1 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Patient-patient-001 : 0 / 1 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Patient-patient-parent : 0 / 1 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Practitioner-practitioner-irm : 0 / 0 / 2
@@ -147,6 +147,7 @@ ERROR: Encounter/encounter-irm-refused: Encounter.identifier[0].type.coding[0].s
 ERROR: Encounter/encounter-irm-refused: Encounter.identifier[0].type.coding[0].system: The value provided ('http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type') was not found in the value set 'FR Core ValueSet Encounter identifier type' (https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.1.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type' in the ValueSet 'https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.1.0'; The provided code '#http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type' was not found in the value set 'https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.1.0')
 ERROR: Encounter/encounter-irm-refused: Encounter.class.display: Wrong Display Name 'Externe' for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB. There are no valid display names found for language(s) 'fr-FR'. Default display is 'ambulatory'
 == fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission.json ==
+WARNING: ImplementationGuide/hl7.fhir.fr.preadmission: ImplementationGuide.dependsOn[1]: The ImplementationGuide uses package hl7.fhir.uv.extensions.r4#5.3.0-ballot-tc1 released on 2025-08-03, but the most recent appropriate version is 5.2.0. This reference is getting old and the more recent version should be considered
 == fsh-generated/resources/Patient-patient-001.json ==
 INFORMATION: Patient/patient-001: Patient.identifier[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient|2.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 WARNING: Patient/patient-001: Patient.identifier[0].system: No definition could be found for URL value 'http://interopsante.org/fhir/NIR'

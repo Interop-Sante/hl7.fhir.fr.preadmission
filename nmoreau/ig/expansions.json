@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "cbb80af9-fd46-4112-a98f-23bc26388d44",
+  "id" : "ee954649-7b4e-4875-b80a-093cf51e80dc",
   "meta" : {
-    "lastUpdated" : "2025-10-28T10:00:59.973+00:00"
+    "lastUpdated" : "2025-11-19T09:47:45.539+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -22,7 +22,7 @@
       "title" : "preadmission-consent-category-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-10-28T10:00:18+00:00",
+      "date" : "2025-11-19T09:47:12+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -31,8 +31,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:c3db8ee0-3bd3-4419-b244-16afd6c1b460",
-        "timestamp" : "2025-10-28T10:01:34+00:00",
+        "identifier" : "urn:uuid:7ae73461-5b9a-49ce-8e16-25996aa13776",
+        "timestamp" : "2025-11-19T09:48:06+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -57,10 +57,6 @@
         },
         {
           "name" : "used-codesystem",
-          "valueUri" : "http://loinc.org|2.81"
-        },
-        {
-          "name" : "version",
           "valueUri" : "http://loinc.org|2.81"
         }],
         "contains" : [{
@@ -93,7 +89,7 @@
       "title" : "preadmission-consent-code-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-10-28T10:00:18+00:00",
+      "date" : "2025-11-19T09:47:12+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -102,8 +98,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:e8ffb89c-ec78-46ba-9857-f9be869a621c",
-        "timestamp" : "2025-10-28T10:01:35+00:00",
+        "identifier" : "urn:uuid:14668c5e-e8f2-413a-ac2a-a5202864c55f",
+        "timestamp" : "2025-11-19T09:48:07+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -158,7 +154,7 @@
       "title" : "preadmission-consent-purpose-reason-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-10-28T10:00:18+00:00",
+      "date" : "2025-11-19T09:47:12+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -167,8 +163,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:47d47ea5-55a8-4bd2-8de0-edf1d8f9f065",
-        "timestamp" : "2025-10-28T10:01:35+00:00",
+        "identifier" : "urn:uuid:8b46bcbc-7f39-47b1-8898-442edf3b8bfb",
+        "timestamp" : "2025-11-19T09:48:07+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -219,7 +215,7 @@
       "title" : "preadmission-document-type-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-10-28T10:00:18+00:00",
+      "date" : "2025-11-19T09:47:12+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -228,8 +224,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:f1dac670-2a1e-4905-9d21-c95d01e2bca9",
-        "timestamp" : "2025-10-28T10:01:35+00:00",
+        "identifier" : "urn:uuid:f1c098dc-e7d8-4b10-b55c-f52e76c87e0f",
+        "timestamp" : "2025-11-19T09:48:07+00:00",
         "total" : 21,
         "offset" : 0,
         "parameter" : [{
@@ -360,7 +356,7 @@
       "title" : "preadmission-status-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-10-28T10:00:18+00:00",
+      "date" : "2025-11-19T09:47:12+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -369,8 +365,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:85721dc2-b722-4d03-b083-ebb836b2061f",
-        "timestamp" : "2025-10-28T10:01:35+00:00",
+        "identifier" : "urn:uuid:a4222164-9706-42b5-b404-88d9f764174b",
+        "timestamp" : "2025-11-19T09:48:07+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -437,7 +433,7 @@
       "title" : "type-couverture-sociale-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-10-28T10:00:18+00:00",
+      "date" : "2025-11-19T09:47:12+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -446,8 +442,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:d16758f4-7b40-434b-a14e-1c40ebf1163c",
-        "timestamp" : "2025-10-28T10:01:35+00:00",
+        "identifier" : "urn:uuid:38f3fa71-31ab-4ee9-9090-bfb31c1bbc4e",
+        "timestamp" : "2025-11-19T09:48:07+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -498,7 +494,7 @@
       "title" : "type-venue-encounter-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2025-10-28T10:00:18+00:00",
+      "date" : "2025-11-19T09:47:12+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -507,8 +503,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:1cb64cb3-f05e-42de-8356-6766481e5502",
-        "timestamp" : "2025-10-28T10:01:35+00:00",
+        "identifier" : "urn:uuid:69edbbf4-7dc8-4972-a2df-7d2932803edc",
+        "timestamp" : "2025-11-19T09:48:07+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
