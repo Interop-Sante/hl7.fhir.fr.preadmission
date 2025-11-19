@@ -53,7 +53,7 @@ Pour une Assurance Maladie Complémentaire (AMC), les informations suivantes doi
 3. **Assuré principal** : Si l'assuré principal est différent du bénéficiaire, renseignez le champ `subscriber` avec une référence vers la ressource `Patient` correspondante.
 4. **Numéro d'adhérent** : Renseignez le champ `subscriberId` avec le numéro d'adhérent fourni par l'organisme complémentaire.
 5. **Détails spécifiques à l'AMC**  
-   - Le numéro de l'AMC doit être renseigné comme **identifier** du `payor` (`Organization`).  
+   - Le numéro de l'AMC doit être renseigné comme **identifier** du `payor` (`Organization`), l'oid associé est `1.2.250.1.213.1.1.4.6`.  
    - Utilisez l'extension `FrCoverageAMCExtension` pour ajouter des informations comme :  
      - Un code de convention ou un code CSR, si applicable.  
      - Le contenu du **Datamatrix**, s’il est disponible.
