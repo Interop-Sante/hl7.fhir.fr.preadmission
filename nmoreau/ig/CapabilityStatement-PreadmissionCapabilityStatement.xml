@@ -12,7 +12,7 @@
 </div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Patient1-6" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Patient</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-4"><span class="lead">Ressource FHIR coeur</span><br/><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></div><div class="col-lg-4"><span class="lead">Reference Policy</span><br/></div><div class="col-lg-4"><span class="lead">Résumé des interactions</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><p/></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="QuestionnaireResponse1-7" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>QuestionnaireResponse</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-4"><span class="lead">Ressource FHIR coeur</span><br/><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></div><div class="col-lg-4"><span class="lead">Reference Policy</span><br/></div><div class="col-lg-4"><span class="lead">Résumé des interactions</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><p/></div></div></div></div>
   </text>
   <url value="http://hl7.fr/fhir/fr/preadmission/CapabilityStatement/PreadmissionCapabilityStatement"/>
-  <version value="0.2.0"/>
+  <version value="0.1.0"/>
   <name value="PreadmissionCapabilityStatement"/>
   <title value="Capacités serveur FHIR pour l'IG Preadmission"/>
   <status value="active"/>
@@ -42,7 +42,11 @@
       <display value="FRANCE"/>
     </coding>
   </jurisdiction>
-  <kind value="instance"/>
+  <kind value="capability"/>
+  <software>
+    <name value="Serveur FHIR Preadmission"/>
+    <version value="1.0.0"/>
+  </software>
   <fhirVersion value="4.0.1"/>
   <format value="xml"/>
   <rest>

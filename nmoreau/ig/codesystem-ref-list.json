@@ -2,7 +2,7 @@
   "codeSystems" : [
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-      "version" : "0.2.0",
+      "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionDocumentTypeCodeSystem",
       "title" : "document-type-cs",
@@ -13,7 +13,7 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs",
-      "version" : "0.2.0",
+      "version" : "0.1.0",
       "status" : "draft",
       "name" : "PreadmissionStatusCodeSystem",
       "title" : "preadmission-statuts-cs",

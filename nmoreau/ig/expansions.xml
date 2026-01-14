@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="ee954649-7b4e-4875-b80a-093cf51e80dc"/>
+  <id value="3e5b37b2-bb75-44cc-8ada-44d87d65bec2"/>
   <meta>
-    <lastUpdated value="2025-11-19T09:47:45.539+00:00"/>
+    <lastUpdated value="2026-01-14T12:51:57.959+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -51,12 +51,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs"/>
-        <version value="0.2.0"/>
+        <version value="0.1.0"/>
         <name value="PreadmissionConsentCategoryVS"/>
         <title value="preadmission-consent-category-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-11-19T09:47:12+00:00"/>
+        <date value="2026-01-14T12:51:21+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -65,8 +65,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:7ae73461-5b9a-49ce-8e16-25996aa13776"/>
-          <timestamp value="2025-11-19T09:48:06+00:00"/>
+          <identifier value="urn:uuid:c7f8ce2c-1616-47d4-a903-dc0c3d8d04fb"/>
+          <timestamp value="2026-01-14T12:52:29+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -168,12 +168,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs"/>
-        <version value="0.2.0"/>
+        <version value="0.1.0"/>
         <name value="PreadmissionConsentCodeValueSet"/>
         <title value="preadmission-consent-code-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-11-19T09:47:12+00:00"/>
+        <date value="2026-01-14T12:51:21+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -182,8 +182,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:14668c5e-e8f2-413a-ac2a-a5202864c55f"/>
-          <timestamp value="2025-11-19T09:48:07+00:00"/>
+          <identifier value="urn:uuid:4465072b-97e0-4683-914f-4ad548a6541b"/>
+          <timestamp value="2026-01-14T12:52:30+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -284,12 +284,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs"/>
-        <version value="0.2.0"/>
+        <version value="0.1.0"/>
         <name value="PreadmissionConsentPurposeReasonVS"/>
         <title value="preadmission-consent-purpose-reason-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-11-19T09:47:12+00:00"/>
+        <date value="2026-01-14T12:51:21+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -298,8 +298,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8b46bcbc-7f39-47b1-8898-442edf3b8bfb"/>
-          <timestamp value="2025-11-19T09:48:07+00:00"/>
+          <identifier value="urn:uuid:a2bfa751-acb8-465b-b31c-f8e6ad7fe004"/>
+          <timestamp value="2026-01-14T12:52:30+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -349,7 +349,7 @@
               <p>Expansion performed internally based on:</p>
               <ul>
                 <li>
-                  <a href="CodeSystem-document-type-cs.html">codesystem document-type-cs v0.2.0 (CodeSystem)</a>
+                  <a href="CodeSystem-document-type-cs.html">codesystem document-type-cs v0.1.0 (CodeSystem)</a>
                 </li>
                 <li>
                   <a href="https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html">codesystem FR Core CodeSystem Mode Validation Identite v2.1.0 (CodeSystem)</a>
@@ -541,12 +541,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs"/>
-        <version value="0.2.0"/>
+        <version value="0.1.0"/>
         <name value="PreadmissionDocumentTypeFrValueSet"/>
         <title value="preadmission-document-type-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-11-19T09:47:12+00:00"/>
+        <date value="2026-01-14T12:51:21+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -555,8 +555,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:f1c098dc-e7d8-4b10-b55c-f52e76c87e0f"/>
-          <timestamp value="2025-11-19T09:48:07+00:00"/>
+          <identifier value="urn:uuid:39bb7f28-9bea-441f-8de9-14ed70ba0c1c"/>
+          <timestamp value="2026-01-14T12:52:30+00:00"/>
           <total value="21"/>
           <offset value="0"/>
           <parameter>
@@ -581,7 +581,7 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs|0.2.0"/>
+            <valueUri value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs|0.1.0"/>
           </parameter>
           <contains>
             <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity"/>
@@ -683,7 +683,7 @@
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p class="res-header-id"/>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on 
-              <a href="CodeSystem-preadmission-statuts-cs.html">codesystem preadmission-statuts-cs v0.2.0 (CodeSystem)</a>
+              <a href="CodeSystem-preadmission-statuts-cs.html">codesystem preadmission-statuts-cs v0.1.0 (CodeSystem)</a>
             </p>
             <p>Ce jeu de valeur (ValueSet) contient 6 concepts</p>
             <table class="codes">
@@ -750,12 +750,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs"/>
-        <version value="0.2.0"/>
+        <version value="0.1.0"/>
         <name value="PreAdmissionStatusValueSet"/>
         <title value="preadmission-status-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-11-19T09:47:12+00:00"/>
+        <date value="2026-01-14T12:51:21+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -764,8 +764,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a4222164-9706-42b5-b404-88d9f764174b"/>
-          <timestamp value="2025-11-19T09:48:07+00:00"/>
+          <identifier value="urn:uuid:b6c1f267-b497-44e8-82b3-bccdbb2d076c"/>
+          <timestamp value="2026-01-14T12:52:30+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -786,7 +786,7 @@
           </parameter>
           <parameter>
             <name value="used-codesystem"/>
-            <valueUri value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs|0.2.0"/>
+            <valueUri value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs|0.1.0"/>
           </parameter>
           <contains>
             <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs"/>
@@ -878,12 +878,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs"/>
-        <version value="0.2.0"/>
+        <version value="0.1.0"/>
         <name value="TypeCouvertureSocialeValueSet"/>
         <title value="type-couverture-sociale-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-11-19T09:47:12+00:00"/>
+        <date value="2026-01-14T12:51:21+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -892,8 +892,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:38f3fa71-31ab-4ee9-9090-bfb31c1bbc4e"/>
-          <timestamp value="2025-11-19T09:48:07+00:00"/>
+          <identifier value="urn:uuid:5bfe6de6-9633-45d7-bdbe-3032a3ea0108"/>
+          <timestamp value="2026-01-14T12:52:30+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -1004,12 +1004,12 @@
           </div>
         </text>
         <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs"/>
-        <version value="0.2.0"/>
+        <version value="0.1.0"/>
         <name value="TypeVenueEncounterValueSet"/>
         <title value="type-venue-encounter-vs"/>
         <status value="draft"/>
         <experimental value="true"/>
-        <date value="2025-11-19T09:47:12+00:00"/>
+        <date value="2026-01-14T12:51:21+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
@@ -1018,8 +1018,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:69edbbf4-7dc8-4972-a2df-7d2932803edc"/>
-          <timestamp value="2025-11-19T09:48:07+00:00"/>
+          <identifier value="urn:uuid:0127c342-6d11-44a2-a5eb-8fbe70fc2acf"/>
+          <timestamp value="2026-01-14T12:52:30+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>

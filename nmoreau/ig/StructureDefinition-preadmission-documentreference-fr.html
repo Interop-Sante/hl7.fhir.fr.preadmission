@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>Fr Preadmission DocumentReference Profile - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.2.0</title>
+    <title>Fr Preadmission DocumentReference Profile - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -59,11 +59,11 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
             <br/>
-            <span style="display:inline-block;">0.2.0 - ci-build
+            <span style="display:inline-block;">0.1.0 - ci-build
 
 
 
-  <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+  <span title="null">FR</span>
 
 
             </span>
@@ -166,7 +166,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.2.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://hl7.fr/fhir/fr/preadmission/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+    <!-- ReleaseHeader --><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="http://hl7.fr/fhir/fr/preadmission/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
   
 
 
@@ -256,7 +256,7 @@
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr<button data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr" title="Click to copy URL" class="btn-copy"></button></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.2.0<button data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr|0.2.0" title="Click to copy versioned URL" class="btn-copy"></button></span>
+      <span class="copy-text">0.1.0<button data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr|0.1.0" title="Click to copy versioned URL" class="btn-copy"></button></span>
       </td>
     </tr>
 
@@ -268,16 +268,20 @@
 
 
 
-      <td colspan="4">
+      <td colspan="3">
         
           Draft
           
-            as of 2025-11-19
+            as of 2026-01-14
           
         
       </td>
 
 
+
+      <td>
+        <i>Realm:</i> <img src="assets/images/fra.svg" alt="France flag" title="France" height="16"/>
+      </td>
 
       <td><i>Computable Name</i>: <span style="font-family: monospace;">PreadmissionDocumentReferenceFr</span></td>
     </tr>
@@ -311,7 +315,7 @@
 
 <h3 id="documents-typiques-à-fournir">Documents typiques à fournir</h3>
 
-<p><a name="l434">​</a>Ces documents sont modélisés dans FHIR à l’aide de la ressource <code class="language-plaintext highlighter-rouge">DocumentReference</code>, avec le type de document contraint par le <code class="language-plaintext highlighter-rouge">ValueSet</code> <a href="preadmission-document-type-valueset.html"><code class="language-plaintext highlighter-rouge">PreadmissionValueSetDocumentTypeFr</code></a>.</p>
+<p><a name="l443">​</a>Ces documents sont modélisés dans FHIR à l’aide de la ressource <code class="language-plaintext highlighter-rouge">DocumentReference</code>, avec le type de document contraint par le <code class="language-plaintext highlighter-rouge">ValueSet</code> <a href="preadmission-document-type-valueset.html"><code class="language-plaintext highlighter-rouge">PreadmissionValueSetDocumentTypeFr</code></a>.</p>
 
 <hr/>
 
@@ -471,7 +475,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-preadmission-encounter-fr.html">Fr Preadmission Encounter Profile</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Context of the document  content<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 995cf927-a255-4b2b-acf9-b86061cb30e2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 49c79d79-834d-408c-aadb-e730e8c75a64
 document.getElementById('cbpreadmission-documentreference-frK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-documentreference-frK'), 'binding', document.getElementById('cbpreadmission-documentreference-frK-binding').checked, document.getElementById('pppreadmission-documentreference-frK'));
 document.getElementById('cbpreadmission-documentreference-frK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -552,7 +556,7 @@ filterDesc(document.getElementById('preadmission-documentreference-frK'), 'oblig
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-preadmission-encounter-fr.html">Fr Preadmission Encounter Profile</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Context of the document  content</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 995cf927-a255-4b2b-acf9-b86061cb30e2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 49c79d79-834d-408c-aadb-e730e8c75a64
 document.getElementById('cbpreadmission-documentreference-frD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-documentreference-frD'), 'binding', document.getElementById('cbpreadmission-documentreference-frD-binding').checked, document.getElementById('pppreadmission-documentreference-frD'));
 document.getElementById('cbpreadmission-documentreference-frD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -869,7 +873,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/resource.html">Resource</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Related identifiers or resources<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 995cf927-a255-4b2b-acf9-b86061cb30e2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 49c79d79-834d-408c-aadb-e730e8c75a64
 document.getElementById('cbpreadmission-documentreference-frS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-documentreference-frS'), 'binding', document.getElementById('cbpreadmission-documentreference-frS-binding').checked, document.getElementById('pppreadmission-documentreference-frS'));
 document.getElementById('cbpreadmission-documentreference-frS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1137,7 +1141,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-preadmission-encounter-fr.html">Fr Preadmission Encounter Profile</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Context of the document  content<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 995cf927-a255-4b2b-acf9-b86061cb30e2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 49c79d79-834d-408c-aadb-e730e8c75a64
 document.getElementById('cbpreadmission-documentreference-frKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-documentreference-frKA'), 'binding', document.getElementById('cbpreadmission-documentreference-frKA-binding').checked, document.getElementById('pppreadmission-documentreference-frKA'));
 document.getElementById('cbpreadmission-documentreference-frKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1218,7 +1222,7 @@ filterDesc(document.getElementById('preadmission-documentreference-frKA'), 'obli
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-preadmission-encounter-fr.html">Fr Preadmission Encounter Profile</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Context of the document  content</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 995cf927-a255-4b2b-acf9-b86061cb30e2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 49c79d79-834d-408c-aadb-e730e8c75a64
 document.getElementById('cbpreadmission-documentreference-frDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-documentreference-frDA'), 'binding', document.getElementById('cbpreadmission-documentreference-frDA-binding').checked, document.getElementById('pppreadmission-documentreference-frDA'));
 document.getElementById('cbpreadmission-documentreference-frDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1534,7 +1538,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="http://hl7.org/fhir/R4/resource.html">Resource</a>)</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Related identifiers or resources<br/></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 995cf927-a255-4b2b-acf9-b86061cb30e2
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 49c79d79-834d-408c-aadb-e730e8c75a64
 document.getElementById('cbpreadmission-documentreference-frSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('preadmission-documentreference-frSA'), 'binding', document.getElementById('cbpreadmission-documentreference-frSA-binding').checked, document.getElementById('pppreadmission-documentreference-frSA'));
 document.getElementById('cbpreadmission-documentreference-frSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1778,7 +1782,7 @@ Résumé
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.preadmission#0.2.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Nov 19, 2025 09:47+0000">2025-11-19</span>
+          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop'Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jan 14, 2026 12:51+0000">2026-01-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

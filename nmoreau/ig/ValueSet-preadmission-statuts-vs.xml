@@ -9,12 +9,12 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : EnsembleValeurs preadmission-statuts-vs</b></p><a name="preadmission-statuts-vs"> </a><a name="hcpreadmission-statuts-vs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/R4/shareablevalueset.html">Shareable ValueSet</a></p></div><ul><li>Include tous les codes définis dans <a href="CodeSystem-preadmission-statuts-cs.html"><code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs</code></a></li></ul></div>
   </text>
   <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs"/>
-  <version value="0.2.0"/>
+  <version value="0.1.0"/>
   <name value="PreAdmissionStatusValueSet"/>
   <title value="preadmission-status-vs"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2025-11-19T09:47:12+00:00"/>
+  <date value="2026-01-14T12:51:21+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
