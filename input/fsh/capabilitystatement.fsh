@@ -10,7 +10,9 @@ Usage: #definition
 * date = "2025-05-22"
 * publisher = "InteropSanté"
 * description = "Décrit les capacités d’un serveur FHIR conforme à l’IG de préadmission hospitalière en France."
-* kind = #instance
+* kind = #capability
+* software.name = "Serveur FHIR Preadmission"
+* software.version = "1.0.0"
 * fhirVersion = #4.0.1
 * format = #json
 * format = #xml

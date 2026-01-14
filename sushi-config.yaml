@@ -12,7 +12,7 @@ contact:
         value: fhir@interopsante.org
         use: work
 status: draft
-version: 0.2.0
+version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2024+
 releaseLabel: ci-build
@@ -23,6 +23,7 @@ parameters:
   
 dependencies:
   hl7.fhir.fr.core: 2.1.0
+  # terminologyServer n'est pas une dépendance FHIR IG, à retirer
 
 pages:
   index.md:

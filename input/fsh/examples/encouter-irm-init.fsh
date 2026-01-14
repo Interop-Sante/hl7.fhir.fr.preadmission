@@ -7,7 +7,7 @@ Usage: #example
 * status = #planned
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #AMB
-* class.display = "Externe"
+* class.display = "ambulatory"
 * subject = Reference(patient-001) "Jean Dupont"
 * appointment = Reference(appt-irm-001) "Rendez-vous préadmission IRM"
 * period.start = "2025-05-15T10:30:00+01:00"

@@ -7,7 +7,7 @@ Description: "Exemple d'une ressource Encounter complété par le patient sur le
 * status = #planned
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * class.code = #AMB
-* class.display = "Externe"
+* class.display = "ambulatory"
 * subject = Reference(Patient/patient-001) "Jean Dupont"
 * appointment = Reference(Appointment/appt-irm-001) "Rendez-vous préadmission IRM"
 * period.start = "2025-05-15T10:30:00+01:00"
