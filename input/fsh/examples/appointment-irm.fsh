@@ -14,7 +14,3 @@ Usage: #example
 * reasonCode[0].coding[0].system = "http://snomed.info/sct"
 * reasonCode[0].coding[0].code = #241541005
 * reasonCode[0].coding[0].display = "IRM cérébrale (procédure)"
-
-
-// Extensions pour les questionnaires
-* extension[questionnaire].valueReference = Reference(qr-irm-001) "Questionnaire préadmission IRM"

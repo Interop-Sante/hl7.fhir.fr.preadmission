@@ -6,7 +6,7 @@ Usage: #example
 * id = "questionnaire-irm"
 * title = "Questionnaire IRM - Préadmission"
 * status = #active
-* subjectType = #Patient
+* subjectType = #Appointment
 * item[0].linkId = "implant"
 * item[0].text = "Avez-vous un implant métallique ou un pacemaker ?"
 * item[0].type = #boolean

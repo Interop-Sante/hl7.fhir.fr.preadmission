@@ -27,7 +27,8 @@ Le profil **PreadmissionAppointmentFr** apporte des contraintes et des extension
 #### **Contraintes principales**
 
 - **Participant** : Le participant principal doit être un patient, référencé via `participant.actor` avec une ressource `Patient`.
-- **Lien avec les questionnaires** : Les questionnaires nécessaires à la prise de rendez-vous remplis par le patient sont référencés via l’extension `PreadmissionAppointmentQuestionnaireResponseFr`.
+è- **Lien avec les questionnaires** : Les questionnaires de pré-admission sont associés **au rendez-vous** via `QuestionnaireResponse.subject=Appointment/{id}`.  
+  Recherche : `GET /QuestionnaireResponse?subject=Appointment/1234` 
 
 ---
 
@@ -42,10 +43,40 @@ La ressource `Appointment` contient les informations nécessaires à la planific
 - **Participants** : Inclut le patient et les professionnels de santé impliqués.
 - **Raisons du rendez-vous** : Spécifiées via `Appointment.reasonCode`.
 
-### Liens avec les autres ressources
-
+### Lien avec le patient
+ 
 - **Lien avec le patient** : Chaque rendez-vous est directement lié à une ressource `Patient` via `participant.actor`.
-- **Lien avec les questionnaires** : Les questionnaires remplis par le patient sont référencés via l’extension `PreadmissionAppointmentQuestionnaireResponseFr`.
+
+### Lien avec les questionnaires
+
+Les questionnaires de pré-admission sont associés au rendez-vous via  
+`QuestionnaireResponse.subject = Appointment/{id}`.
+
+- **Questionnaire**  
+  Définit la structure (questions, règles, etc.).  
+  Le champ `subjectType: ["Appointment"]` est **obligatoire**.
+
+- **QuestionnaireResponse**  
+  - Référence le questionnaire via  
+    `questionnaire: "Questionnaire/preadmission-rdv"`
+  - Lie les réponses au rendez-vous via  
+    `subject = Appointment/{id}`
+
+#### Recherche des réponses pour un RDV
+
+```http
+GET /QuestionnaireResponse?subject=Appointment/1234&status=completed
+```
+
+#### Schéma des relations
+Questionnaire/preadmission-rdv
+  └─ subjectType: ["Appointment"]
+          │
+          └─ questionnaire (référence)
+                │
+QuestionnaireResponse/resp-001
+  └─ subject: Appointment/1234   ← Lien direct RDV ↔ réponses
+
 
 ### Bonnes pratiques
 

@@ -5,7 +5,8 @@ Description: "Réponse du patient au questionnaire posé par le portail de pré-
 Usage: #example
 * id = "qr-chb-part"
 * status = #completed
-* subject = Reference(patient-001) "Jean Dupont"
+* subject = Reference(appt-irm-001) "Rendez-vous préadmission IRM"
+* author = Reference(patient-001) "Jean Dupont"
 * questionnaire = "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-portail-pread"
 * authored = "2025-04-22T11:00:00+01:00"
 
