@@ -7,3 +7,4 @@ Description: "Liste des types de documents autorisés pour la préadmission"
 
 * include codes from system FRCoreCodeSystemModeValidationIdentite
 * include codes from system PreadmissionDocumentTypeCodeSystem
+* include codes from system $JDV-J66-TypeCode-DMP
