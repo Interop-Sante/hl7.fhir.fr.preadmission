@@ -8,10 +8,14 @@
   "questionnaire" : "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-portail-pread",
   "status" : "completed",
   "subject" : {
+    "reference" : "Appointment/appt-irm-001",
+    "display" : "Rendez-vous préadmission IRM"
+  },
+  "authored" : "2025-04-22T11:00:00+01:00",
+  "author" : {
     "reference" : "Patient/patient-001",
     "display" : "Jean Dupont"
   },
-  "authored" : "2025-04-22T11:00:00+01:00",
   "item" : [{
     "linkId" : "private-room",
     "text" : "Souhaitez-vous une chambre particulière ?",

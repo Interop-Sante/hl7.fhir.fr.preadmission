@@ -19,11 +19,16 @@
   ] ; # 
   fhir:status [ fhir:v "completed"] ; # 
   fhir:subject [
+     fhir:link <http://hl7.fr/fhir/fr/preadmission/Appointment/appt-irm-001> ;
+     fhir:reference [ fhir:v "Appointment/appt-irm-001" ] ;
+     fhir:display [ fhir:v "Rendez-vous préadmission IRM" ]
+  ] ; # 
+  fhir:authored [ fhir:v "2025-04-22T11:00:00+01:00"^^xsd:dateTime] ; # 
+  fhir:author [
      fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
      fhir:reference [ fhir:v "Patient/patient-001" ] ;
      fhir:display [ fhir:v "Jean Dupont" ]
   ] ; # 
-  fhir:authored [ fhir:v "2025-04-22T11:00:00+01:00"^^xsd:dateTime] ; # 
   fhir:item ( [
      fhir:linkId [ fhir:v "private-room" ] ;
      fhir:text [ fhir:v "Souhaitez-vous une chambre particulière ?" ] ;

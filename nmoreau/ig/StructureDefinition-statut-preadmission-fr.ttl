@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PreadmissionStatutFr"] ; # 
   fhir:title [ fhir:v "Extension Statut Pré-admission"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-01-14T12:51:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-24T09:27:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

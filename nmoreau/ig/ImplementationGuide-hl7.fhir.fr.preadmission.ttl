@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "PREADMISSIONFR"] ; # 
   fhir:title [ fhir:v "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-01-14T12:51:21+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-24T09:27:09+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -1273,24 +1273,6 @@
        ] ;
        fhir:name [ fhir:v "Fr Preadmission Encounter Profile" ] ;
        fhir:description [ fhir:v "Profil Encounter pour une préadmission" ] ;
-       fhir:example [
-         a fhir:boolean ;
-         fhir:v false
-       ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [
-           a fhir:string ;
-           fhir:v "StructureDefinition:extension"
-         ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response> ;
-         fhir:reference [ fhir:v "StructureDefinition/appointment-questionnaire-response" ]
-       ] ;
-       fhir:name [ fhir:v "Fr QuestionnaireResponse de préadmission" ] ;
-       fhir:description [ fhir:v "Référence vers un ou plusieurs QuestionnaireResponse remplis dans le cadre de la préadmission." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false

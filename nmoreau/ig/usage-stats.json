@@ -5,13 +5,6 @@
   "jurisdiction": "FR",
   "extensions": [
     {
-      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",
-      "title": "Fr QuestionnaireResponse de préadmission",
-      "types": [
-        "Reference"
-      ]
-    },
-    {
       "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions",
       "title": "Consignes de l\u0027agent administratif",
       "types": [
@@ -129,9 +122,6 @@
     ]
   },
   "usage": {
-    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response": [
-      "Appointment"
-    ],
     "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions": [
       "Encounter"
     ],

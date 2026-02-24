@@ -10,10 +10,14 @@
   <questionnaire value="http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-portail-pread"/>
   <status value="completed"/>
   <subject>
-    <reference value="Patient/patient-001"/>
-    <display value="Jean Dupont"/>
+    <reference value="Appointment/appt-irm-001"/>
+    <display value="Rendez-vous préadmission IRM"/>
   </subject>
   <authored value="2025-04-22T11:00:00+01:00"/>
+  <author>
+    <reference value="Patient/patient-001"/>
+    <display value="Jean Dupont"/>
+  </author>
   <item>
     <linkId value="private-room"/>
     <text value="Souhaitez-vous une chambre particulière ?"/>

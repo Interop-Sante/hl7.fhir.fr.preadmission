@@ -54,13 +54,6 @@
     "name" : "EncounterPreadmissionStatus"
   },
   {
-    "id" : "appointment-questionnaire-response",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/appointment-questionnaire-response",
-    "version" : "0.1.0",
-    "name" : "PreadmissionAppointmentQuestionnaireResponseFr"
-  },
-  {
     "id" : "encounter-agent-instructions",
     "type" : "StructureDefinition",
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions",

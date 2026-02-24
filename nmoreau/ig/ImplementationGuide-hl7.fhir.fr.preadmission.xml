@@ -10,7 +10,7 @@
   <name value="PREADMISSIONFR"/>
   <title value="Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"/>
   <status value="draft"/>
-  <date value="2026-01-14T12:51:21+00:00"/>
+  <date value="2026-02-24T09:27:09+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -718,17 +718,6 @@
       </reference>
       <name value="Fr Preadmission Encounter Profile"/>
       <description value="Profil Encounter pour une préadmission"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/appointment-questionnaire-response"/>
-      </reference>
-      <name value="Fr QuestionnaireResponse de préadmission"/>
-      <description value="Référence vers un ou plusieurs QuestionnaireResponse remplis dans le cadre de la préadmission."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

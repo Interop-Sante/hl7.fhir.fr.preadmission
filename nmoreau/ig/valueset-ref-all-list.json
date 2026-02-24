@@ -44,6 +44,7 @@
       "title" : "preadmission-document-type-vs",
       "description" : "Liste des types de documents autorisés pour la préadmission",
       "systems" : [
+        "https://mos.esante.gouv.fr/NOS/JDV_J66-TypeCode-DMP/FHIR/JDV-J66-TypeCode-DMP",
         "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
         "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs"
       ],
@@ -605,10 +606,10 @@
       "uses" : {
       },
       "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
-      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile",
-      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
       "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
+      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
@@ -671,9 +672,9 @@
       "uses" : {
       },
       "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
-      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
       "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/security-role-type",

@@ -35,6 +35,7 @@
       "title" : "preadmission-document-type-vs",
       "description" : "Liste des types de documents autorisés pour la préadmission",
       "systems" : [
+        "https://mos.esante.gouv.fr/NOS/JDV_J66-TypeCode-DMP/FHIR/JDV-J66-TypeCode-DMP",
         "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
         "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs"
       ]

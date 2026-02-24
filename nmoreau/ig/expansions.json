@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "3e5b37b2-bb75-44cc-8ada-44d87d65bec2",
+  "id" : "ee355d42-5bb9-454d-ae99-edf010802281",
   "meta" : {
-    "lastUpdated" : "2026-01-14T12:51:57.959+00:00"
+    "lastUpdated" : "2026-02-24T09:27:44.244+00:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -22,7 +22,7 @@
       "title" : "preadmission-consent-category-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-01-14T12:51:21+00:00",
+      "date" : "2026-02-24T09:27:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -31,8 +31,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:c7f8ce2c-1616-47d4-a903-dc0c3d8d04fb",
-        "timestamp" : "2026-01-14T12:52:29+00:00",
+        "identifier" : "urn:uuid:cf83391d-47fd-47da-8137-a11931add053",
+        "timestamp" : "2026-02-24T09:28:15+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -54,6 +54,10 @@
         {
           "name" : "used-valueset",
           "valueUri" : "null"
+        },
+        {
+          "name" : "includeDefinition",
+          "valueBoolean" : false
         },
         {
           "name" : "used-codesystem",
@@ -89,7 +93,7 @@
       "title" : "preadmission-consent-code-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-01-14T12:51:21+00:00",
+      "date" : "2026-02-24T09:27:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -98,8 +102,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:4465072b-97e0-4683-914f-4ad548a6541b",
-        "timestamp" : "2026-01-14T12:52:30+00:00",
+        "identifier" : "urn:uuid:f77c6a34-920c-495c-8d21-9e36b137533b",
+        "timestamp" : "2026-02-24T09:28:16+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
@@ -154,7 +158,7 @@
       "title" : "preadmission-consent-purpose-reason-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-01-14T12:51:21+00:00",
+      "date" : "2026-02-24T09:27:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -163,8 +167,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:a2bfa751-acb8-465b-b31c-f8e6ad7fe004",
-        "timestamp" : "2026-01-14T12:52:30+00:00",
+        "identifier" : "urn:uuid:ba4f6068-6987-4ecf-b527-53c1b1f3a681",
+        "timestamp" : "2026-02-24T09:28:16+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -199,147 +203,6 @@
     }
   },
   {
-    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs",
-    "resource" : {
-      "resourceType" : "ValueSet",
-      "meta" : {
-        "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
-      },
-      "text" : {
-        "status" : "generated",
-        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion performed internally based on:</p><ul><li><a href=\"CodeSystem-document-type-cs.html\">codesystem document-type-cs v0.1.0 (CodeSystem)</a></li><li><a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html\">codesystem FR Core CodeSystem Mode Validation Identite v2.1.0 (CodeSystem)</a></li></ul></div><p>Ce jeu de valeur (ValueSet) contient 21 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-AN\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-AN\">AN</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-CC\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-CC\">CC</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-CE\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-CE\">CE</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-CM\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-CM\">CM</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-CN\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-CN\">CN</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-CS\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-CS\">CS</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-LE\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-LE\">LE</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-PA\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-PA\">PA</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-PC\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-PC\">PC</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-TC\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.1.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-TC\">TC</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-CN_RECTO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-CN_RECTO\">CN_RECTO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-CN_VERSO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-CN_VERSO\">CN_VERSO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-ATTEST_VITALE\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-ATTEST_VITALE\">ATTEST_VITALE</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-JUSTIFICATIF_ID\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-JUSTIFICATIF_ID\">JUSTIFICATIF_ID</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-MUTUELLE\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-MUTUELLE\">MUTUELLE</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-MUTUELLE_RECTO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-MUTUELLE_RECTO\">MUTUELLE_RECTO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-MUTUELLE_VERSO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-MUTUELLE_VERSO\">MUTUELLE_VERSO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-JUSTIFICATIF_DOM\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-JUSTIFICATIF_DOM\">JUSTIFICATIF_DOM</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-ARRET_TRAVAIL\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-ARRET_TRAVAIL\">ARRET_TRAVAIL</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-PERS_PREVENIR\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-PERS_PREVENIR\">PERS_PREVENIR</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-PERS_CONFIANCE\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-PERS_CONFIANCE\">PERS_CONFIANCE</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/></tr></table></div>"
-      },
-      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs",
-      "version" : "0.1.0",
-      "name" : "PreadmissionDocumentTypeFrValueSet",
-      "title" : "preadmission-document-type-vs",
-      "status" : "draft",
-      "experimental" : true,
-      "date" : "2026-01-14T12:51:21+00:00",
-      "jurisdiction" : [{
-        "coding" : [{
-          "system" : "urn:iso:std:iso:3166",
-          "code" : "FR",
-          "display" : "FRANCE"
-        }]
-      }],
-      "expansion" : {
-        "identifier" : "urn:uuid:39bb7f28-9bea-441f-8de9-14ed70ba0c1c",
-        "timestamp" : "2026-01-14T12:52:30+00:00",
-        "total" : 21,
-        "offset" : 0,
-        "parameter" : [{
-          "name" : "displayLanguage",
-          "valueCode" : "fr-FR"
-        },
-        {
-          "name" : "count",
-          "valueInteger" : 1000
-        },
-        {
-          "name" : "offset",
-          "valueInteger" : 0
-        },
-        {
-          "name" : "excludeNested",
-          "valueBoolean" : false
-        },
-        {
-          "name" : "used-codesystem",
-          "valueUri" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity|2.1.0"
-        },
-        {
-          "name" : "used-codesystem",
-          "valueUri" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs|0.1.0"
-        }],
-        "contains" : [{
-          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-          "code" : "AN"
-        },
-        {
-          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-          "code" : "CC"
-        },
-        {
-          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-          "code" : "CE"
-        },
-        {
-          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-          "code" : "CM"
-        },
-        {
-          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-          "code" : "CN"
-        },
-        {
-          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-          "code" : "CS"
-        },
-        {
-          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-          "code" : "LE"
-        },
-        {
-          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-          "code" : "PA"
-        },
-        {
-          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-          "code" : "PC"
-        },
-        {
-          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-          "code" : "TC"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-          "code" : "CN_RECTO"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-          "code" : "CN_VERSO"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-          "code" : "ATTEST_VITALE"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-          "code" : "JUSTIFICATIF_ID"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-          "code" : "MUTUELLE"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-          "code" : "MUTUELLE_RECTO"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-          "code" : "MUTUELLE_VERSO"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-          "code" : "JUSTIFICATIF_DOM"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-          "code" : "ARRET_TRAVAIL"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-          "code" : "PERS_PREVENIR"
-        },
-        {
-          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-          "code" : "PERS_CONFIANCE"
-        }]
-      }
-    }
-  },
-  {
     "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs",
     "resource" : {
       "resourceType" : "ValueSet",
@@ -356,7 +219,7 @@
       "title" : "preadmission-status-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-01-14T12:51:21+00:00",
+      "date" : "2026-02-24T09:27:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -365,8 +228,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:b6c1f267-b497-44e8-82b3-bccdbb2d076c",
-        "timestamp" : "2026-01-14T12:52:30+00:00",
+        "identifier" : "urn:uuid:b0f00c8f-5dce-40c8-b880-6f9be13a83f6",
+        "timestamp" : "2026-02-24T09:28:17+00:00",
         "total" : 6,
         "offset" : 0,
         "parameter" : [{
@@ -433,7 +296,7 @@
       "title" : "type-couverture-sociale-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-01-14T12:51:21+00:00",
+      "date" : "2026-02-24T09:27:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -442,8 +305,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:5bfe6de6-9633-45d7-bdbe-3032a3ea0108",
-        "timestamp" : "2026-01-14T12:52:30+00:00",
+        "identifier" : "urn:uuid:18f7c95d-bbbc-4ef1-92de-e7ba5c790d76",
+        "timestamp" : "2026-02-24T09:28:18+00:00",
         "total" : 2,
         "offset" : 0,
         "parameter" : [{
@@ -494,7 +357,7 @@
       "title" : "type-venue-encounter-vs",
       "status" : "draft",
       "experimental" : true,
-      "date" : "2026-01-14T12:51:21+00:00",
+      "date" : "2026-02-24T09:27:09+00:00",
       "jurisdiction" : [{
         "coding" : [{
           "system" : "urn:iso:std:iso:3166",
@@ -503,8 +366,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:0127c342-6d11-44a2-a5eb-8fbe70fc2acf",
-        "timestamp" : "2026-01-14T12:52:30+00:00",
+        "identifier" : "urn:uuid:1514a9c1-80da-4030-b3c7-652a1a956002",
+        "timestamp" : "2026-02-24T09:28:18+00:00",
         "total" : 3,
         "offset" : 0,
         "parameter" : [{
