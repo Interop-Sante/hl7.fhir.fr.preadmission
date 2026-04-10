@@ -1,1 +1,4 @@
 URL,Version,Status,OIDs,Name,Title,Description,Used
+http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs,1.0.0-ballot,active,,PreadmissionDocumentTypeCodeSystem,document-type-cs,"Types de documents additionnels pour la préadmission",
+http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-ins-cs,1.0.0-ballot,active,,PreadmissionDocumentTypeINSCodeSystem,document-type-ins-cs,"Types de documents additionnels pour qualifer une identité",
+http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system,1.0.0-ballot,active,,PreadmissionStatusCodeSystem,preadmission-status-code-system,"Statut de pré-admission",

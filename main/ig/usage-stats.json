@@ -1,18 +1,197 @@
 {
   "package": "hl7.fhir.fr.preadmission",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot",
   "fhirVersion": "4.0.1",
   "jurisdiction": "FR",
-  "extensions": [],
+  "extensions": [
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions",
+      "title": "Consignes de l\u0027agent administratif",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment",
+      "title": "Remarque du patient",
+      "types": [
+        "string"
+      ]
+    },
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended",
+      "title": "Extension AMC Étendue ROC",
+      "types": [
+        "code",
+        "string",
+        "code",
+        "code",
+        "boolean",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
+        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta"
+      ]
+    },
+    {
+      "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr",
+      "title": "Extension Statut Pré-admission",
+      "types": [
+        "CodeableConcept",
+        "string",
+        "Extension",
+        "Coding",
+        "string"
+      ]
+    }
+  ],
   "profiles": {
-    "Patient": [
+    "Appointment": [
       {
-        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-patient",
-        "title": "Patient français"
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr",
+        "title": "Fr Preadmission Appointment Profile"
+      }
+    ],
+    "Consent": [
+      {
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr",
+        "title": "Fr Preadmission Consent Profile"
+      }
+    ],
+    "Coverage": [
+      {
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr",
+        "title": "Fr Preadmission Coverage Profile"
+      }
+    ],
+    "DocumentReference": [
+      {
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr",
+        "title": "Fr Preadmission DocumentReference Profile"
+      }
+    ],
+    "Encounter": [
+      {
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr",
+        "title": "Fr Preadmission Encounter Profile"
+      }
+    ],
+    "QuestionnaireResponse": [
+      {
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr",
+        "title": "Fr Preadmission QuestionnaireResponse Profile"
       }
     ]
   },
   "usage": {
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions": [
+      "Encounter"
+    ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment": [
+      "Encounter"
+    ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended": [
+      "Coverage"
+    ],
+    "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr": [
+      "Encounter"
+    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
     ],
@@ -24,6 +203,9 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
@@ -49,6 +231,12 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator|2.2.0": [
+      "Appointment"
+    ],
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-estimated-discharge-date|2.2.0": [
+      "Encounter"
     ]
   }
 }

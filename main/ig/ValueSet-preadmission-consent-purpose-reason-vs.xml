@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="preadmission-consent-purpose-reason-vs"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : EnsembleValeurs preadmission-consent-purpose-reason-vs</b></p><a name="preadmission-consent-purpose-reason-vs"> </a><a name="hcpreadmission-consent-purpose-reason-vs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/R4/shareablevalueset.html">Shareable ValueSet</a></p></div><ul><li>Include les codes sont définis dans <a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActReason.html"><code>http://terminology.hl7.org/CodeSystem/v3-ActReason</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Définition</b></td></tr><tr><td><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT">TREAT</a></td><td>Treatment</td><td>To perform one or more operations on information for provision of health care.</td></tr><tr><td><a href="http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActReason.html#v3-ActReason-PATREQ">PATREQ</a></td><td>Patient Request</td><td>**Definition:**Patient requests information from their profile.</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs"/>
+  <version value="1.0.0-ballot"/>
+  <name value="PreadmissionConsentPurposeReasonVS"/>
+  <title value="preadmission-consent-purpose-reason-vs"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2026-04-10T12:15:18+00:00"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="InteropSanté"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@interopsante.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="FRANCE"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <concept>
+        <code value="TREAT"/>
+        <display value="Treatment"/>
+      </concept>
+      <concept>
+        <code value="PATREQ"/>
+        <display value="Patient Request"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

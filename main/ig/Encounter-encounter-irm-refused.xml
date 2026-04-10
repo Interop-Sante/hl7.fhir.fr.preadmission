@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="encounter-irm-refused"/>
+  <meta>
+    <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : Venue encounter-irm-refused</b></p><a name="encounter-irm-refused"> </a><a name="hcencounter-irm-refused"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-preadmission-encounter-fr.html">Fr Preadmission Encounter Profile</a></p></div><p><b>Extension Statut Pré-admission</b>: <span title="Codes:{http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system REFUSED}">Pré-admission refusée</span></p><p><b>Consignes de l'agent administratif</b>: Le patient n'a pas fourni les documents nécessaires pour valider la préadmission.</p><p><b>identifier</b>: Visit Number/15655244 (use: temp, )</p><p><b>status</b>: Planned</p><p><b>class</b>: <a href="https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB">ActCode AMB</a>: ambulatory</p><p><b>subject</b>: <a href="Patient-patient-001.html">Jean Dupont</a></p><p><b>appointment</b>: <a href="Appointment-appt-irm-001.html">Rendez-vous préadmission IRM</a></p><p><b>period</b>: 2025-05-15 10:30:00+0100 --&gt; 2025-05-15 11:00:00+0100</p></div>
+  </text>
+  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"/>
+        <code value="REFUSED"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions">
+    <valueString value="Le patient n'a pas fourni les documents nécessaires pour valider la préadmission."/>
+  </extension>
+  <identifier>
+    <use value="temp"/>
+    <type>
+      <coding>
+        <system value="https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type"/>
+        <code value="VN"/>
+        <display value="Visit Number"/>
+      </coding>
+    </type>
+    <system value="http://example.com/identifiers/encounters"/>
+    <value value="15655244"/>
+  </identifier>
+  <status value="planned"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="AMB"/>
+    <display value="ambulatory"/>
+  </class>
+  <subject>
+    <reference value="Patient/patient-001"/>
+    <display value="Jean Dupont"/>
+  </subject>
+  <appointment>
+    <reference value="Appointment/appt-irm-001"/>
+    <display value="Rendez-vous préadmission IRM"/>
+  </appointment>
+  <period>
+    <start value="2025-05-15T10:30:00+01:00"/>
+    <end value="2025-05-15T11:00:00+01:00"/>
+  </period>
+</Encounter>

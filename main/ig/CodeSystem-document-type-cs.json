@@ -1,0 +1,89 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "document-type-cs",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablecodesystem"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CodeSystem document-type-cs</b></p><a name=\"document-type-cs\"> </a><a name=\"hcdocument-type-cs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CN_RECTO<a name=\"document-type-cs-CN_RECTO\"> </a></td><td>Recto Carte d’identité</td></tr><tr><td style=\"white-space:nowrap\">CN_VERSO<a name=\"document-type-cs-CN_VERSO\"> </a></td><td>Verso Carte d’identité</td></tr><tr><td style=\"white-space:nowrap\">ATTEST_VITALE<a name=\"document-type-cs-ATTEST_VITALE\"> </a></td><td>Carte Vitale</td></tr><tr><td style=\"white-space:nowrap\">JUSTIFICATIF_ID<a name=\"document-type-cs-JUSTIFICATIF_ID\"> </a></td><td>Justificatif d'identité</td></tr><tr><td style=\"white-space:nowrap\">MUTUELLE<a name=\"document-type-cs-MUTUELLE\"> </a></td><td>Carte mutuelle</td></tr><tr><td style=\"white-space:nowrap\">MUTUELLE_RECTO<a name=\"document-type-cs-MUTUELLE_RECTO\"> </a></td><td>Recto Carte mutuelle</td></tr><tr><td style=\"white-space:nowrap\">MUTUELLE_VERSO<a name=\"document-type-cs-MUTUELLE_VERSO\"> </a></td><td>Verso Carte mutuelle</td></tr><tr><td style=\"white-space:nowrap\">JUSTIFICATIF_DOM<a name=\"document-type-cs-JUSTIFICATIF_DOM\"> </a></td><td>Justificatif de domicile</td></tr><tr><td style=\"white-space:nowrap\">ARRET_TRAVAIL<a name=\"document-type-cs-ARRET_TRAVAIL\"> </a></td><td>Arrêt de travail</td></tr><tr><td style=\"white-space:nowrap\">PERS_PREVENIR<a name=\"document-type-cs-PERS_PREVENIR\"> </a></td><td>Fiche de déclaration de la personne à prévenir</td></tr><tr><td style=\"white-space:nowrap\">PERS_CONFIANCE<a name=\"document-type-cs-PERS_CONFIANCE\"> </a></td><td>Fiche de déclaration de la personne de confiance</td></tr></table></div>"
+  },
+  "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+  "version" : "1.0.0-ballot",
+  "name" : "PreadmissionDocumentTypeCodeSystem",
+  "title" : "document-type-cs",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2026-04-10T12:15:18+00:00",
+  "publisher" : "Interop'Santé",
+  "contact" : [{
+    "name" : "Interop'Santé",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://interopsante.org/"
+    }]
+  },
+  {
+    "name" : "InteropSanté",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "fhir@interopsante.org",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Types de documents additionnels pour la préadmission",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "FR",
+      "display" : "FRANCE"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "count" : 11,
+  "concept" : [{
+    "code" : "CN_RECTO",
+    "display" : "Recto Carte d’identité"
+  },
+  {
+    "code" : "CN_VERSO",
+    "display" : "Verso Carte d’identité"
+  },
+  {
+    "code" : "ATTEST_VITALE",
+    "display" : "Carte Vitale"
+  },
+  {
+    "code" : "JUSTIFICATIF_ID",
+    "display" : "Justificatif d'identité"
+  },
+  {
+    "code" : "MUTUELLE",
+    "display" : "Carte mutuelle"
+  },
+  {
+    "code" : "MUTUELLE_RECTO",
+    "display" : "Recto Carte mutuelle"
+  },
+  {
+    "code" : "MUTUELLE_VERSO",
+    "display" : "Verso Carte mutuelle"
+  },
+  {
+    "code" : "JUSTIFICATIF_DOM",
+    "display" : "Justificatif de domicile"
+  },
+  {
+    "code" : "ARRET_TRAVAIL",
+    "display" : "Arrêt de travail"
+  },
+  {
+    "code" : "PERS_PREVENIR",
+    "display" : "Fiche de déclaration de la personne à prévenir"
+  },
+  {
+    "code" : "PERS_CONFIANCE",
+    "display" : "Fiche de déclaration de la personne de confiance"
+  }]
+}

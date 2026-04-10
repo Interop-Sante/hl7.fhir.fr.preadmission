@@ -1,3 +1,28 @@
 {
-  "codeSystems" : []
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
+      "name" : "PreadmissionDocumentTypeCodeSystem",
+      "title" : "document-type-cs",
+      "description" : "Types de documents additionnels pour la préadmission"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-ins-cs",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
+      "name" : "PreadmissionDocumentTypeINSCodeSystem",
+      "title" : "document-type-ins-cs",
+      "description" : "Types de documents additionnels pour qualifer une identité"
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
+      "name" : "PreadmissionStatusCodeSystem",
+      "title" : "preadmission-status-code-system",
+      "description" : "Statut de pré-admission"
+    }
+  ]
 }

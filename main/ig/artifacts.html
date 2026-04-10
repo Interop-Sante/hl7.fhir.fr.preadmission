@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Artifacts Summary - Préadmission en ligne v0.1.0</title>
+    <title>Artifacts Summary - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v1.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +42,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"3"}
-    h3,h4,h5,h6{--heading-prefix:"3.0"}</style>
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8.0"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -57,13 +57,13 @@
 </div>
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Préadmission en ligne</span>
+          <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - ci-build
+            <span style="display:inline-block;">1.0.0-ballot - ballot
 
 
 
-  <img alt="France flag" src="assets/images/fra.svg" height="16" title="France"/>
+  FRANCE
 
 
             </span>
@@ -92,6 +92,25 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
     <a href="index.html">Accueil</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Processus de préadmission
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="processus.html">Processus fonctionnelle de la préadmission</a>
+      </li>
+      <li>
+        <a href="processus-ressource-fhir.html">Processus centré sur les ressources</a>
+      </li>
+      <li>
+        <a href="flux.html">Diagramme de flux</a>
+      </li>
+      <li>
+        <a href="sequence.html">Diagramme de séquence</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">Ressources de conformité</a>
@@ -128,11 +147,11 @@
 
           <span style="float:right;">
 
-            <a href="downloads.html">&lt;prev</a> | 
+            <a href="history.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="StructureDefinition-fr-patient.html">next&gt;</a>
+          | <a href="CapabilityStatement-PreadmissionCapabilityStatement.html">next&gt;</a>
 
           </span>
 
@@ -154,7 +173,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Préadmission en ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v1.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Artifacts Summary</h2>
   
   
@@ -166,10 +185,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Structures: Resource Profiles</a>
+         <a href="#1">Behavior: Capability Statements</a>
       </li>
       <li>
-         <a href="#2">Example: Example Instances</a>
+         <a href="#2">Behavior: Search Parameters</a>
+      </li>
+      <li>
+         <a href="#3">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#4">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#5">Terminology: Value Sets</a>
+      </li>
+      <li>
+         <a href="#6">Terminology: Code Systems</a>
+      </li>
+      <li>
+         <a href="#7">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -178,6 +212,40 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:html="http://www.w3.org/1999/xhtml">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
+   <h3>Behavior: Capability Statements </h3>
+    <p>The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems conforming to this implementation guide are expected to declare conformance to one or more of the following capability statements.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CapabilityStatement-PreadmissionCapabilityStatement.html"
+                  title="CapabilityStatement/PreadmissionCapabilityStatement">Capacités serveur FHIR pour l'IG Preadmission</a>
+            </td>
+            <td>
+<p>Décrit les capacités d’un serveur FHIR conforme à l’IG de préadmission hospitalière en France.</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="2"> </a>
+   <h3>Behavior: Search Parameters </h3>
+    <p>These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="SearchParameter-encounter-preadmission-status.html"
+                  title="SearchParameter/encounter-preadmission-status">Encounter Preadmission Status SearchParameter</a>
+            </td>
+            <td>
+<p>Recherche des encounters par statut de pré-admission (extension PreadmissionStatutFr).</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
    <h3>Structures: Resource Profiles </h3>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
 <table class="grid">
@@ -185,16 +253,211 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-fr-patient.html"
-                  title="StructureDefinition/fr-patient">Patient français</a>
+               <a href="StructureDefinition-preadmission-appointment-fr.html"
+                  title="StructureDefinition/preadmission-appointment-fr">Fr Preadmission Appointment Profile</a>
             </td>
             <td>
-<p>Description du patient français</p>
+<p>Profil Appointment pour un rendez-vous de préadmission</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-preadmission-consent-fr.html"
+                  title="StructureDefinition/preadmission-consent-fr">Fr Preadmission Consent Profile</a>
+            </td>
+            <td>
+<p>Profil Consent pour les consentements lors de la préadmission</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-preadmission-coverage-fr.html"
+                  title="StructureDefinition/preadmission-coverage-fr">Fr Preadmission Coverage Profile</a>
+            </td>
+            <td>
+<p>Profil Coverage pour les couvertures sociales lors de la préadmission</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-preadmission-documentreference-fr.html"
+                  title="StructureDefinition/preadmission-documentreference-fr">Fr Preadmission DocumentReference Profile</a>
+            </td>
+            <td>
+<p>Profil DocumentReference pour un document administratif de préadmission</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-preadmission-encounter-fr.html"
+                  title="StructureDefinition/preadmission-encounter-fr">Fr Preadmission Encounter Profile</a>
+            </td>
+            <td>
+<p>Profil Encounter pour une préadmission</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-preadmission-questionnaireresponse-fr.html"
+                  title="StructureDefinition/preadmission-questionnaireresponse-fr">Fr Preadmission QuestionnaireResponse Profile</a>
+            </td>
+            <td>
+<p>Profil QuestionnaireResponse pour les réponses aux questionnaires de préadmission</p>
 </td>
          </tr>
       </tbody>
    </table>
-   <a name="2"> </a>
+   <a name="4"> </a>
+   <h3>Structures: Extension Definitions </h3>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-encounter-agent-instructions.html"
+                  title="StructureDefinition/encounter-agent-instructions">Consignes de l'agent administratif</a>
+            </td>
+            <td>
+<p>Consignes à destination du patient, fournies par l’agent administratif</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-fr-coverage-amc-extended.html"
+                  title="StructureDefinition/fr-coverage-amc-extended">Extension AMC Étendue ROC</a>
+            </td>
+            <td>
+<p>Extension pour les informations AMC étendues issues de l’attestation harmonisée / DataMatrix AMC</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-statut-preadmission-fr.html"
+                  title="StructureDefinition/statut-preadmission-fr">Extension Statut Pré-admission</a>
+            </td>
+            <td>
+<p>Statut de pré-admission</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-encounter-patient-comment.html"
+                  title="StructureDefinition/encounter-patient-comment">Remarque du patient</a>
+            </td>
+            <td>
+<p>Remarque libre saisie par le patient à destination de l’agent administratif</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="5"> </a>
+   <h3>Terminology: Value Sets </h3>
+    <p>These define sets of codes used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-preadmission-consent-category-vs.html"
+                  title="ValueSet/preadmission-consent-category-vs">preadmission-consent-category-vs</a>
+            </td>
+            <td>
+<p>ValueSet pour les catégories de consentement. Tous les codes sont standards et existants.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-preadmission-consent-code-vs.html"
+                  title="ValueSet/preadmission-consent-code-vs">preadmission-consent-code-vs</a>
+            </td>
+            <td>
+<p>Code HL7 représentant les types d’action concernées par le consentement. Tous les codes sont standards et existants.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-preadmission-consent-purpose-reason-vs.html"
+                  title="ValueSet/preadmission-consent-purpose-reason-vs">preadmission-consent-purpose-reason-vs</a>
+            </td>
+            <td>
+<p>Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-preadmission-document-type-vs.html"
+                  title="ValueSet/preadmission-document-type-vs">preadmission-document-type-vs</a>
+            </td>
+            <td>
+<p>Liste des types de documents autorisés pour la préadmission</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-preadmission-statuts-vs.html"
+                  title="ValueSet/preadmission-statuts-vs">preadmission-status-vs</a>
+            </td>
+            <td>
+<p>Statuts valides qu’une préadmission peut prendre.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-type-couverture-sociale-vs.html"
+                  title="ValueSet/type-couverture-sociale-vs">type-couverture-sociale-vs</a>
+            </td>
+            <td>
+<p>Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="ValueSet-type-venue-encounter-vs.html"
+                  title="ValueSet/type-venue-encounter-vs">type-venue-encounter-vs</a>
+            </td>
+            <td>
+<p>Les différents types d’admission (hospitalisation, consultation, etc.)</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="6"> </a>
+   <h3>Terminology: Code Systems </h3>
+    <p>These define new code systems used by systems conforming to this implementation guide.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-document-type-cs.html"
+                  title="CodeSystem/document-type-cs">document-type-cs</a>
+            </td>
+            <td>
+<p>Types de documents additionnels pour la préadmission</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-document-type-ins-cs.html"
+                  title="CodeSystem/document-type-ins-cs">document-type-ins-cs</a>
+            </td>
+            <td>
+<p>Types de documents additionnels pour qualifer une identité</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="CodeSystem-preadmission-status-code-system.html"
+                  title="CodeSystem/preadmission-status-code-system">preadmission-status-code-system</a>
+            </td>
+            <td>
+<p>Statut de pré-admission</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="7"> </a>
    <h3>Example: Example Instances </h3>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
 <table class="grid">
@@ -202,10 +465,168 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="Patient-frpatient-exemple.html" title="Patient/frpatient-exemple">frpatient-exemple</a>
+               <a href="Consent-consentement-dmp-alimentation.html"
+                  title="Consent/consentement-dmp-alimentation">Consentement alimentation DMP</a>
             </td>
             <td>
-<p>Exemple d’un patient français</p>
+<p>Consentement pour l’alimentation du DMP, non recueilli (provision.type vide).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Consent-consentement-dmp-consultation.html"
+                  title="Consent/consentement-dmp-consultation">Consentement consultation DMP</a>
+            </td>
+            <td>
+<p>Consentement pour la consultation du DMP, recueilli (provision.type permit).</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Consent-consentement-multi.html"
+                  title="Consent/consentement-multi">Consentement global incluant consultation DMP, alimentation DMP et partage d'information</a>
+            </td>
+            <td>
+<p>Exemple d’une ressource Consent combinant plusieurs provisions pour la consultation du DMP, l’alimentation du DMP et le partage d’informations avec un logiciel tiers pour des communications par SMS ou e-mail.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-encounter-irm-externe.html"
+                  title="Encounter/encounter-irm-externe">Consultation IRM externe</a>
+            </td>
+            <td>
+<p>Initialisation de la préadmission par la GAP, suite à la réception dun rendez-vous - préadmission.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-encounter-irm-refused.html"
+                  title="Encounter/encounter-irm-refused">Consultation IRM refusée</a>
+            </td>
+            <td>
+<p>Consultation IRM refusée par l’agent du bureau des entrées - préadmission.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Coverage-coverage-amc.html" title="Coverage/coverage-amc">Couverture sociale AMC</a>
+            </td>
+            <td>
+<p>Couverture sociale AMC - préadmission.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Coverage-coverage-amo.html" title="Coverage/coverage-amo">Couverture sociale AMO</a>
+            </td>
+            <td>
+<p>Couverture sociale AMO - préadmission.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Coverage-coverage-amo-enfant.html"
+                  title="Coverage/coverage-amo-enfant">Couverture sociale AMO</a>
+            </td>
+            <td>
+<p>Couverture sociale AMO - préadmission.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="DocumentReference-documentreference-cni-recto.html"
+                  title="DocumentReference/documentreference-cni-recto">Document de préadmission - CNI recto</a>
+            </td>
+            <td>
+<p>Scan du recto de la carte d’identité du patient - préadmission.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Encounter-encounter-irm-complete.html"
+                  title="Encounter/encounter-irm-complete">Encounter IRM complété par le patient</a>
+            </td>
+            <td>
+<p>Exemple d’une ressource Encounter complété par le patient sur le portail de préadmission pour une préadmission liée à un rendez-vous IRM externe, avec statut READY, consentements DMP, et réponse au questionnaire sur la chambre particulière.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-patient-001.html" title="Patient/patient-001">Patient de préadmission</a>
+            </td>
+            <td>
+<p>Patient de préadmission - référencé dans les autres exemples.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Patient-patient-parent.html" title="Patient/patient-parent">Patient de préadmission</a>
+            </td>
+            <td>
+<p>Patient de préadmission - référencé dans les autres exemples.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Practitioner-practitioner-irm.html"
+                  title="Practitioner/practitioner-irm">Praticien IRM</a>
+            </td>
+            <td>
+<p>Médecin IRM, référencé dans les autres ressources - préadmission.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Appointment-appt-irm-001.html" title="Appointment/appt-irm-001">Prise de rendez-vous IRM cérébrale</a>
+            </td>
+            <td>
+<p>Rendez-vous pour une IRM cérébrale - préadmission.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-questionnaire-chb-part.html"
+                  title="Questionnaire/questionnaire-chb-part">Questionnaire préadmission IRM</a>
+            </td>
+            <td>
+<p>Questionnaire posé par le portail de pré-admission.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-qr-irm-001.html"
+                  title="QuestionnaireResponse/qr-irm-001">Questionnaire préadmission IRM</a>
+            </td>
+            <td>
+<p>Questionnaire posé lors de la prise de rendez-vous pour une IRM.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Consent-consentement-refus-rgpd.html"
+                  title="Consent/consentement-refus-rgpd">Refus du consentement RGPD</a>
+            </td>
+            <td>
+<p>Exemple d’une ressource Consent en FHIR pour un refus explicite du traitement des données personnelles dans le cadre du RGPD.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="Questionnaire-questionnaire-irm.html"
+                  title="Questionnaire/questionnaire-irm">Reponse Questionnaire préadmission IRM</a>
+            </td>
+            <td>
+<p>Réponses au questionnaire posé lors de la prise de rendez-vous pour une IRM.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="QuestionnaireResponse-qr-chb-part.html"
+                  title="QuestionnaireResponse/qr-chb-part">Réponse questionnaire chambre particulière</a>
+            </td>
+            <td>
+<p>Réponse du patient au questionnaire posé par le portail de pré-admission.</p>
 </td>
          </tr>
       </tbody>
@@ -232,7 +653,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="downloads.html">&lt;prev</a>
+                <a href="history.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -240,7 +661,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="StructureDefinition-fr-patient.html">next&gt;</a>
+                <a href="CapabilityStatement-PreadmissionCapabilityStatement.html">next&gt;</a>
 
               </td>
             </tr>
@@ -250,7 +671,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Oct 22, 2025 09:21+0000">2025-10-22</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 12:16+0000">2026-04-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
