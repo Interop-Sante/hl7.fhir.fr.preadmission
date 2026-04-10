@@ -16,7 +16,7 @@ version: 1.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2024+
 releaseLabel: ballot
-jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
+jurisdiction: urn:iso:std:iso:3166#FR "France (la)"
 
 parameters:
   shownav: 'true'
