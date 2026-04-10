@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "EncounterPreadmissionStatus"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v false] ; # 
-  fhir:date [ fhir:v "2026-04-10T12:15:18+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-10T13:47:19+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -39,7 +39,7 @@
      fhir:coding ( [
        fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "FR" ] ;
-       fhir:display [ fhir:v "FRANCE" ]
+       fhir:display [ fhir:v "France (la)" ]
      ] )
   ] ) ; # 
   fhir:code [ fhir:v "preadmission-status"] ; # 

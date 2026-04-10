@@ -14,7 +14,7 @@
   <title value="preadmission-consent-code-vs"/>
   <status value="active"/>
   <experimental value="true"/>
-  <date value="2026-04-10T12:15:18+00:00"/>
+  <date value="2026-04-10T13:47:19+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -36,7 +36,7 @@
     <coding>
       <system value="urn:iso:std:iso:3166"/>
       <code value="FR"/>
-      <display value="FRANCE"/>
+      <display value="France (la)"/>
     </coding>
   </jurisdiction>
   <compose>

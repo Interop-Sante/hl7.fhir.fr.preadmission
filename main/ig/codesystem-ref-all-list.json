@@ -223,10 +223,10 @@
       "oids" : ["2.16.840.1.113883.6.1"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-consent-category.html" : "Consent Category Codes",
       "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set",
       "http://hl7.org/fhir/R4/valueset-consent-content-code.html" : "Consent Content Codes",
-      "ValueSet-preadmission-consent-category-vs.html" : "preadmission-consent-category-vs"
+      "ValueSet-preadmission-consent-category-vs.html" : "preadmission-consent-category-vs",
+      "http://hl7.org/fhir/R4/valueset-consent-category.html" : "Consent Category Codes"
     },
     {
       "url" : "http://snomed.info/sct",
@@ -238,10 +238,10 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-questionnaire-answers.html" : "Questionnaire Answer Codes",
-      "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
+      "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
       "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
-      "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set"
+      "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
+      "http://hl7.org/fhir/R4/valueset-questionnaire-answers.html" : "Questionnaire Answer Codes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/admit-source",
@@ -289,8 +289,8 @@
       "oids" : ["2.16.840.1.113883.4.642.1.1227"],
       "uses" : {
       },
-      "ValueSet-preadmission-consent-code-vs.html" : "preadmission-consent-code-vs",
-      "http://hl7.org/fhir/R4/valueset-consent-action.html" : "Consent Action Codes"
+      "http://hl7.org/fhir/R4/valueset-consent-action.html" : "Consent Action Codes",
+      "ValueSet-preadmission-consent-code-vs.html" : "preadmission-consent-code-vs"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/consentcategorycodes",
@@ -541,10 +541,10 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
-      "ValueSet-type-couverture-sociale-vs.html" : "type-couverture-sociale-vs",
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html" : "v3 Code System ActCode",
       "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode",
       "ValueSet-type-venue-encounter-vs.html" : "type-venue-encounter-vs",
-      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html" : "v3 Code System ActCode"
+      "ValueSet-type-couverture-sociale-vs.html" : "type-couverture-sociale-vs"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
@@ -568,8 +568,8 @@
       "oids" : ["2.16.840.1.113883.5.8"],
       "uses" : {
       },
-      "ValueSet-preadmission-consent-purpose-reason-vs.html" : "preadmission-consent-purpose-reason-vs",
-      "http://terminology.hl7.org/7.0.1/ValueSet-v3-PurposeOfUse.html" : "PurposeOfUse"
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-PurposeOfUse.html" : "PurposeOfUse",
+      "ValueSet-preadmission-consent-purpose-reason-vs.html" : "preadmission-consent-purpose-reason-vs"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
@@ -617,8 +617,8 @@
       "oids" : ["2.16.840.1.113883.5.90"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType",
-      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type"
+      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type",
+      "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleClass",

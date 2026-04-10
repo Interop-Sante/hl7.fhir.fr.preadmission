@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="83b45480-451f-41e2-ad2c-87f803943621"/>
+  <id value="93d5af60-1449-4f4a-8ba5-ff7664bc38e7"/>
   <meta>
-    <lastUpdated value="2026-04-10T12:16:01.206+00:00"/>
+    <lastUpdated value="2026-04-10T13:48:03.343+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -56,17 +56,17 @@
         <title value="preadmission-consent-category-vs"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-04-10T12:15:18+00:00"/>
+        <date value="2026-04-10T13:47:19+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="FR"/>
-            <display value="FRANCE"/>
+            <display value="France (la)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:04148b05-629b-4bdc-8b29-868ac9196dc4"/>
-          <timestamp value="2026-04-10T12:16:25+00:00"/>
+          <identifier value="urn:uuid:f339f209-c69b-450b-85da-956a1c84ef0c"/>
+          <timestamp value="2026-04-10T13:48:28+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -177,17 +177,17 @@
         <title value="preadmission-consent-code-vs"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-04-10T12:15:18+00:00"/>
+        <date value="2026-04-10T13:47:19+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="FR"/>
-            <display value="FRANCE"/>
+            <display value="France (la)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0866e1f7-807c-463b-800d-6688901a6b38"/>
-          <timestamp value="2026-04-10T12:16:26+00:00"/>
+          <identifier value="urn:uuid:363be78b-2e2b-4dbf-933f-5115a0be9339"/>
+          <timestamp value="2026-04-10T13:48:29+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
@@ -293,17 +293,17 @@
         <title value="preadmission-consent-purpose-reason-vs"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-04-10T12:15:18+00:00"/>
+        <date value="2026-04-10T13:47:19+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="FR"/>
-            <display value="FRANCE"/>
+            <display value="France (la)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:a4b7e04d-dbff-4fe2-84ff-71cf30cfc03b"/>
-          <timestamp value="2026-04-10T12:16:26+00:00"/>
+          <identifier value="urn:uuid:6a1c0c9b-05e5-4e15-9085-7efed9cc737a"/>
+          <timestamp value="2026-04-10T13:48:29+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -1583,17 +1583,17 @@
         <title value="preadmission-document-type-vs"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-04-10T12:15:18+00:00"/>
+        <date value="2026-04-10T13:47:19+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="FR"/>
-            <display value="FRANCE"/>
+            <display value="France (la)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:31ce7fab-991b-46f7-ab2b-4cd6444922db"/>
-          <timestamp value="2026-04-10T12:16:26+00:00"/>
+          <identifier value="urn:uuid:7f66afe0-c5b7-4213-bb86-f6989d7904d6"/>
+          <timestamp value="2026-04-10T13:48:29+00:00"/>
           <total value="132"/>
           <offset value="0"/>
           <parameter>
@@ -2385,17 +2385,17 @@
         <title value="preadmission-status-vs"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-04-10T12:15:18+00:00"/>
+        <date value="2026-04-10T13:47:19+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="FR"/>
-            <display value="FRANCE"/>
+            <display value="France (la)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:1f234898-b33f-4eee-bb96-51374b61c501"/>
-          <timestamp value="2026-04-10T12:16:26+00:00"/>
+          <identifier value="urn:uuid:4c73a574-8679-4ff4-8f52-f88a2a24a6db"/>
+          <timestamp value="2026-04-10T13:48:29+00:00"/>
           <total value="6"/>
           <offset value="0"/>
           <parameter>
@@ -2521,17 +2521,17 @@
         <title value="type-couverture-sociale-vs"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-04-10T12:15:18+00:00"/>
+        <date value="2026-04-10T13:47:19+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="FR"/>
-            <display value="FRANCE"/>
+            <display value="France (la)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:44a7198e-4a76-46d1-b4eb-11d020595a98"/>
-          <timestamp value="2026-04-10T12:16:26+00:00"/>
+          <identifier value="urn:uuid:131a4be1-ed89-4970-ada7-237aa0090307"/>
+          <timestamp value="2026-04-10T13:48:30+00:00"/>
           <total value="2"/>
           <offset value="0"/>
           <parameter>
@@ -2659,17 +2659,17 @@
         <title value="type-venue-encounter-vs"/>
         <status value="active"/>
         <experimental value="true"/>
-        <date value="2026-04-10T12:15:18+00:00"/>
+        <date value="2026-04-10T13:47:19+00:00"/>
         <jurisdiction>
           <coding>
             <system value="urn:iso:std:iso:3166"/>
             <code value="FR"/>
-            <display value="FRANCE"/>
+            <display value="France (la)"/>
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:78ffb749-e5cd-469e-8eeb-19d18950e18a"/>
-          <timestamp value="2026-04-10T12:16:26+00:00"/>
+          <identifier value="urn:uuid:a5a4cb57-7b6f-44a9-bed4-6bfbdb2dd502"/>
+          <timestamp value="2026-04-10T13:48:30+00:00"/>
           <total value="3"/>
           <offset value="0"/>
           <parameter>
