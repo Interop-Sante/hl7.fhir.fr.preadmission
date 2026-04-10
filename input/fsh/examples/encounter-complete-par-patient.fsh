@@ -1,0 +1,23 @@
+Instance: encounter-irm-complete
+InstanceOf: PreadmissionEncounterFr
+Usage: #example
+Title: "Encounter IRM complété par le patient"
+Description: "Exemple d'une ressource Encounter complété par le patient sur le portail de préadmission pour une préadmission liée à un rendez-vous IRM externe, avec statut READY, consentements DMP, et réponse au questionnaire sur la chambre particulière."
+* id = "encounter-irm-complete"
+* status = #planned
+* class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+* class.code = #AMB
+* class.display = "ambulatory"
+* subject = Reference(Patient/patient-001) "Jean Dupont"
+* appointment = Reference(Appointment/appt-irm-001) "Rendez-vous préadmission IRM"
+* period.start = "2025-05-15T10:30:00+01:00"
+* period.end = "2025-05-15T11:00:00+01:00"
+* identifier[0].use = #temp
+* identifier[0].type.coding.system = "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type"
+* identifier[0].type.coding.code = #VN
+* identifier[0].type.coding.display = "Visit Number"
+* identifier[0].system = "http://example.com/identifiers/encounters"
+* identifier[0].value = "15655244"
+* extension[preadmissionStatus].valueCodeableConcept.coding.system = "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"
+* extension[preadmissionStatus].valueCodeableConcept.coding.code = #READY
+* extension[preadmissionStatus].valueCodeableConcept.coding.display = "Pré-admission prête"

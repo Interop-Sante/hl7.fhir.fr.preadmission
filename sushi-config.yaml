@@ -1,7 +1,7 @@
 id: hl7.fhir.fr.preadmission
 canonical: http://hl7.fr/fhir/fr/preadmission
-name: PREAD
-title: Préadmission en ligne
+name: PREADMISSIONFR
+title: Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne
 publisher:
   name: Interop'Santé
   url: http://interopsante.org/
@@ -11,29 +11,46 @@ contact:
       - system: email
         value: fhir@interopsante.org
         use: work
-status: draft
-version: 0.1.0
+status: active
+version: 1.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2024+
-releaseLabel: ci-build
+releaseLabel: ballot
 jurisdiction: urn:iso:std:iso:3166#FR "FRANCE"
 
 parameters:
   shownav: 'true'
-
-
-# dependencies:
-#   ans.fr.nos: latest
+  
+dependencies:
+  hl7.fhir.fr.core: 2.2.0
 
 pages:
-    index.md:
-        title: Accueil
-    downloads.md:
-        title: Téléchargement du guide
+  index.md:
+    title: Accueil
+  processus.md:
+    title: Processus fonctionnelle de la préadmission
+  processus-ressource-fhir.md:
+    title: Processus centré sur les ressources
+  flux.md:
+    title: Diagrammes des flux
+  sequence.md:
+    title: Diagramme de séquence du processus
+  downloads.md:
+    title: Téléchargement du guide
+  history.md:
+    title: Historique des versions
+
 menu:
     Accueil: index.html
+    Processus de préadmission:
+        Processus fonctionnelle de la préadmission: processus.html
+        Processus centré sur les ressources: processus-ressource-fhir.html
+        Diagramme de flux: flux.html
+        Diagramme de séquence: sequence.html
     Ressources de conformité: artifacts.html
     Documentations: 
         Documentation des IGs: new-tab https://interop.esante.gouv.fr/ig/documentation/
         Site d'InteropSanté: new-tab https://www.interopsante.org/
         Téléchargements: downloads.html
+
+
