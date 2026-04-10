@@ -25,7 +25,7 @@
   fhir:title [ fhir:v "document-type-cs"] ; # 
   fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-04-10T13:10:35+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-10T14:40:25+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
