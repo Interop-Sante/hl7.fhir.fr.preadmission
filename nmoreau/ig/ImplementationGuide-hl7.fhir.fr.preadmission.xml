@@ -6,11 +6,11 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name="hl7.fhir.fr.preadmission"> </a><a name="hchl7.fhir.fr.preadmission"> </a><h2>PREADMISSIONFR</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>
   </text>
   <url value="http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0-ballot"/>
   <name value="PREADMISSIONFR"/>
   <title value="Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"/>
-  <status value="draft"/>
-  <date value="2026-02-24T09:27:09+00:00"/>
+  <status value="active"/>
+  <date value="2026-04-10T11:37:26+00:00"/>
   <publisher value="Interop'Santé"/>
   <contact>
     <name value="Interop'Santé"/>
@@ -43,7 +43,7 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="7.0.1"/>
+    <version value="7.1.0"/>
   </dependsOn>
   <dependsOn id="hl7ext">
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -56,7 +56,7 @@
   <dependsOn id="hl7_fhir_fr_core">
     <uri value="https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core"/>
     <packageId value="hl7.fhir.fr.core"/>
-    <version value="2.1.0"/>
+    <version value="2.2.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -72,7 +72,7 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="ci-build"/>
+        <valueString value="ballot"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -283,7 +283,7 @@
         <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="ci-build"/>
+        <valueString value="ballot"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -651,7 +651,7 @@
         <reference value="StructureDefinition/fr-coverage-amc-extended"/>
       </reference>
       <name value="Extension AMC Étendue ROC"/>
-      <description value="Extension pour les informations AMC étendues"/>
+      <description value="Extension pour les informations AMC étendues issues de l'attestation harmonisée / DataMatrix AMC"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -718,6 +718,17 @@
       </reference>
       <name value="Fr Preadmission Encounter Profile"/>
       <description value="Profil Encounter pour une préadmission"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/preadmission-questionnaireresponse-fr"/>
+      </reference>
+      <name value="Fr Preadmission QuestionnaireResponse Profile"/>
+      <description value="Profil QuestionnaireResponse pour les réponses aux questionnaires de préadmission"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -799,6 +810,17 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/preadmission-status-code-system"/>
+      </reference>
+      <name value="preadmission-status-code-system"/>
+      <description value="Statut de pré-admission"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="ValueSet"/>
       </extension>
       <reference>
@@ -806,17 +828,6 @@
       </reference>
       <name value="preadmission-status-vs"/>
       <description value="Statuts valides qu'une préadmission peut prendre."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/preadmission-statuts-cs"/>
-      </reference>
-      <name value="preadmission-statuts-cs"/>
-      <description value="Statut de pré-admission"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -839,7 +850,7 @@
       </reference>
       <name value="Questionnaire préadmission IRM"/>
       <description value="Questionnaire posé lors de la prise de rendez-vous pour une IRM."/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -894,7 +905,7 @@
       </reference>
       <name value="Réponse questionnaire chambre particulière"/>
       <description value="Réponse du patient au questionnaire posé par le portail de pré-admission."/>
-      <exampleBoolean value="true"/>
+      <exampleCanonical value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

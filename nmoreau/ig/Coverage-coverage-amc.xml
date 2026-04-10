@@ -6,14 +6,25 @@
     <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"/>
   </meta>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : Couverture coverage-amc</b></p><a name="coverage-amc"> </a><a name="hccoverage-amc"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-preadmission-coverage-fr.html">Fr Preadmission Coverage Profile</a></p></div><blockquote><p><b>Extension AMC Étendue ROC</b></p><ul><li>codeConvention: 12345</li><li>codeCSR: 67890</li></ul></blockquote><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMC-2025-001 (use: official, )</p><p><b>status</b>: Active</p><p><b>type</b>: <span title="Codes:">Assurance Maladie Complémentaire</span></p><p><b>subscriber</b>: <a href="Patient-patient-001.html">Jean Dupont</a></p><p><b>subscriberId</b>: AMC-987654321</p><p><b>beneficiary</b>: <a href="Patient-patient-001.html">Jean Dupont</a></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Nom Assurance Maladie Complémentaire (Identifier: <code>urn:oid:1.2.250.1.213.1.1.4.6</code>/987654321)</p></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : Couverture coverage-amc</b></p><a name="coverage-amc"> </a><a name="hccoverage-amc"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="StructureDefinition-preadmission-coverage-fr.html">Fr Preadmission Coverage Profile</a></p></div><blockquote><p><b>Extension AMC Étendue ROC</b></p><blockquote><p><b>url</b></p>codeCSR</blockquote><p><b>value</b>: CSR67890</p><blockquote><p><b>url</b></p>datamatrix</blockquote><p><b>value</b>: (exemple)DATAMATRIX-AMC-987654321</p><p><b>codeConvention</b>: CONV12345</p><p><b>domaine</b>: consultation</p><p><b>domaine</b>: hospitalisation</p><blockquote><p><b>url</b></p>conventionParDomaine</blockquote></blockquote><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMC-2025-001 (use: official, )</p><p><b>status</b>: Active</p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}">extended healthcare</span></p><p><b>subscriber</b>: <a href="Patient-patient-001.html">Jean Dupont</a></p><p><b>subscriberId</b>: AMC-987654321</p><p><b>beneficiary</b>: <a href="Patient-patient-001.html">Jean Dupont</a></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Nom Assurance Maladie Complémentaire (Identifier: <code>urn:oid:1.2.250.1.213.1.1.4.6</code>/987654321)</p></div>
   </text>
   <extension url="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended">
-    <extension url="codeConvention">
-      <valueString value="12345"/>
-    </extension>
     <extension url="codeCSR">
-      <valueString value="67890"/>
+      <valueCode value="CSR67890"/>
+    </extension>
+    <extension url="datamatrix">
+      <valueString value="(exemple)DATAMATRIX-AMC-987654321"/>
+    </extension>
+    <extension url="conventionParDomaine">
+      <extension url="codeConvention">
+        <valueCode value="CONV12345"/>
+      </extension>
+      <extension url="domaine">
+        <valueCode value="consultation"/>
+      </extension>
+      <extension url="domaine">
+        <valueCode value="hospitalisation"/>
+      </extension>
     </extension>
   </extension>
   <identifier>
@@ -24,8 +35,8 @@
   <status value="active"/>
   <type>
     <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
       <code value="EHCPOL"/>
-      <display value="Assurance Maladie Complémentaire"/>
     </coding>
   </type>
   <subscriber>

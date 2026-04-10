@@ -17,21 +17,42 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Couverture coverage-amc</b></p><a name=\"coverage-amc\"> </a><a name=\"hccoverage-amc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-coverage-fr.html\">Fr Preadmission Coverage Profile</a></p></div><blockquote><p><b>Extension AMC Étendue ROC</b></p><ul><li>codeConvention: 12345</li><li>codeCSR: 67890</li></ul></blockquote><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMC-2025-001 (use: official, )</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:\">Assurance Maladie Complémentaire</span></p><p><b>subscriber</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>subscriberId</b>: AMC-987654321</p><p><b>beneficiary</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Nom Assurance Maladie Complémentaire (Identifier: <code>urn:oid:1.2.250.1.213.1.1.4.6</code>/987654321)</p></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Couverture coverage-amc</b></p><a name=\"coverage-amc\"> </a><a name=\"hccoverage-amc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-coverage-fr.html\">Fr Preadmission Coverage Profile</a></p></div><blockquote><p><b>Extension AMC Étendue ROC</b></p><blockquote><p><b>url</b></p>codeCSR</blockquote><p><b>value</b>: CSR67890</p><blockquote><p><b>url</b></p>datamatrix</blockquote><p><b>value</b>: (exemple)DATAMATRIX-AMC-987654321</p><p><b>codeConvention</b>: CONV12345</p><p><b>domaine</b>: consultation</p><p><b>domaine</b>: hospitalisation</p><blockquote><p><b>url</b></p>conventionParDomaine</blockquote></blockquote><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMC-2025-001 (use: official, )</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}\">extended healthcare</span></p><p><b>subscriber</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>subscriberId</b>: AMC-987654321</p><p><b>beneficiary</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Nom Assurance Maladie Complémentaire (Identifier: <code>urn:oid:1.2.250.1.213.1.1.4.6</code>/987654321)</p></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
      fhir:extension ( [
-       fhir:url [ fhir:v "codeConvention"^^xsd:anyURI ] ;
-       fhir:value [
-         a fhir:string ;
-         fhir:v "12345"
-       ]
-     ] [
        fhir:url [ fhir:v "codeCSR"^^xsd:anyURI ] ;
        fhir:value [
-         a fhir:string ;
-         fhir:v "67890"
+         a fhir:code ;
+         fhir:v "CSR67890"
        ]
+     ] [
+       fhir:url [ fhir:v "datamatrix"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "(exemple)DATAMATRIX-AMC-987654321"
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "codeConvention"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "CONV12345"
+         ]
+       ] [
+         fhir:url [ fhir:v "domaine"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "consultation"
+         ]
+       ] [
+         fhir:url [ fhir:v "domaine"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:code ;
+           fhir:v "hospitalisation"
+         ]
+       ] ) ;
+       fhir:url [ fhir:v "conventionParDomaine"^^xsd:anyURI ]
      ] ) ;
      fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended"^^xsd:anyURI ]
   ] ) ; # 
@@ -43,8 +64,8 @@
   fhir:status [ fhir:v "active"] ; # 
   fhir:type [
      fhir:coding ( [
-       fhir:code [ fhir:v "EHCPOL" ] ;
-       fhir:display [ fhir:v "Assurance Maladie Complémentaire" ]
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "EHCPOL" ]
      ] )
   ] ; # 
   fhir:subscriber [

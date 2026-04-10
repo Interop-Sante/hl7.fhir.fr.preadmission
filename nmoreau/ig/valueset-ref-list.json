@@ -2,8 +2,8 @@
   "codeSystems" : [
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionConsentCategoryVS",
       "title" : "preadmission-consent-category-vs",
       "description" : "ValueSet pour les catégories de consentement. Tous les codes sont standards et existants.",
@@ -14,8 +14,8 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionConsentCodeValueSet",
       "title" : "preadmission-consent-code-vs",
       "description" : "Code HL7 représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants.",
@@ -26,8 +26,8 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionConsentPurposeReasonVS",
       "title" : "preadmission-consent-purpose-reason-vs",
       "description" : "Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason).",
@@ -38,13 +38,15 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionDocumentTypeFrValueSet",
       "title" : "preadmission-document-type-vs",
       "description" : "Liste des types de documents autorisés pour la préadmission",
       "systems" : [
-        "https://mos.esante.gouv.fr/NOS/JDV_J66-TypeCode-DMP/FHIR/JDV-J66-TypeCode-DMP",
+        "https://mos.esante.gouv.fr/NOS/TRE_A12-NomenclatureASTM/FHIR/TRE-A12-NomenclatureASTM",
+        "http://loinc.org",
+        "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
         "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
         "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs"
       ],
@@ -54,13 +56,13 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreAdmissionStatusValueSet",
       "title" : "preadmission-status-vs",
       "description" : "Statuts valides qu'une préadmission peut prendre.",
       "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs"
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"
       ],
       "uses" : {
       },
@@ -68,8 +70,8 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "TypeCouvertureSocialeValueSet",
       "title" : "type-couverture-sociale-vs",
       "description" : "Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)",
@@ -80,8 +82,8 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "TypeVenueEncounterValueSet",
       "title" : "type-venue-encounter-vs",
       "description" : "Les différents types d'admission (hospitalisation, consultation, etc.)",
@@ -106,7 +108,7 @@
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type",
-      "version" : "2.1.0",
+      "version" : "2.2.0",
       "status" : "active",
       "name" : "FRCoreValueSetEncounterIdentifierType",
       "title" : "FR Core ValueSet Encounter identifier type",
@@ -117,6 +119,24 @@
       "uses" : {
       },
       "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J66-TypeCode-DMP/FHIR/JDV-J66-TypeCode-DMP",
+      "version" : "20240927120000",
+      "status" : "active",
+      "name" : "JDV_J66_TypeCode_DMP",
+      "title" : null,
+      "description" : "Jeu de valeurs pour métadonnée typeCode DMP",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A12-NomenclatureASTM/FHIR/TRE-A12-NomenclatureASTM",
+        "http://loinc.org",
+        "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.7"],
+      "sources" : ["1.2.250.1.213.1.1.5.7"],
+      "uses" : {
+      },
+      "ValueSet-preadmission-document-type-vs.html" : "preadmission-document-type-vs"
     }
   ]
 }

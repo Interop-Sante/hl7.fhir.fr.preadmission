@@ -2,8 +2,8 @@
   "codeSystems" : [
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionDocumentTypeCodeSystem",
       "title" : "document-type-cs",
       "description" : "Types de documents additionnels pour la préadmission",
@@ -12,11 +12,11 @@
       "ValueSet-preadmission-document-type-vs.html" : "preadmission-document-type-vs"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionStatusCodeSystem",
-      "title" : "preadmission-statuts-cs",
+      "title" : "preadmission-status-code-system",
       "description" : "Statut de pré-admission",
       "uses" : {
       },
@@ -36,7 +36,7 @@
     },
     {
       "url" : "http://loinc.org",
-      "version" : "3.1.0",
+      "version" : "3.0.1",
       "status" : "active",
       "name" : "LOINC",
       "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
@@ -68,12 +68,12 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
-      "ValueSet-type-couverture-sociale-vs.html" : "type-couverture-sociale-vs",
-      "ValueSet-type-venue-encounter-vs.html" : "type-venue-encounter-vs"
+      "ValueSet-type-venue-encounter-vs.html" : "type-venue-encounter-vs",
+      "ValueSet-type-couverture-sociale-vs.html" : "type-couverture-sociale-vs"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-      "version" : "3.1.0",
+      "version" : "4.0.0",
       "status" : "active",
       "name" : "ActReason",
       "title" : "ActReason",
@@ -85,18 +85,18 @@
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type",
-      "version" : "2.1.0",
+      "version" : "2.2.0",
       "status" : "draft",
       "name" : "FRCoreCodeSystemIdentifierType",
       "title" : "FR Core CodeSystem Identifier Type",
       "description" : "Identifier type",
       "uses" : {
       },
-      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-identifier-type.html" : "FR Core ValueSet Encounter identifier type"
+      "https://hl7.fr/ig/fhir/core/2.2.0/ValueSet-fr-core-vs-encounter-identifier-type.html" : "FR Core ValueSet Encounter identifier type"
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-      "version" : "2.1.0",
+      "version" : "2.2.0",
       "status" : "active",
       "name" : "FRCoreCodeSystemModeValidationIdentite",
       "title" : "FR Core CodeSystem Mode Validation Identite",

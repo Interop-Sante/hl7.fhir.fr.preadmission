@@ -25,7 +25,7 @@ anonymous resourcescontained resources","",0,*,"","","","Resource {[]} {[]}
 ","",,"open","DomainResource.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Coverage.extension:informationsAmc","Coverage.extension","informationsAmc","","",0,1,"Y","","","Extension {[CanonicalType[http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended]]} {[]}
-","Informations AMC","Extension pour les informations AMC étendues","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
+","Informations AMC","Extension pour les informations AMC étendues issues de l'attestation harmonisée / DataMatrix AMC","","","","","","","","","",,,,,"",,,,"DomainResource.extension",0,*,"ele-1
 ","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}"
 "Coverage.modifierExtension","Coverage.modifierExtension","","extensions

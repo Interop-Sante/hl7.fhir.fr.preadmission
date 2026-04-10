@@ -14,11 +14,11 @@
      fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name=\"hl7.fhir.fr.preadmission\"> </a><a name=\"hchl7.fhir.fr.preadmission\"> </a><h2>PREADMISSIONFR</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot"] ; # 
   fhir:name [ fhir:v "PREADMISSIONFR"] ; # 
   fhir:title [ fhir:v "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-24T09:27:09+00:00"^^xsd:dateTime] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2026-04-10T11:37:26+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -58,7 +58,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "7.0.1" ]
+     fhir:version [ fhir:v "7.1.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
@@ -81,7 +81,7 @@
        fhir:link <https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core>
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.fr.core" ] ;
-     fhir:version [ fhir:v "2.1.0" ]
+     fhir:version [ fhir:v "2.2.0" ]
   ] ) ; # 
   fhir:definition [
      fhir:extension ( [
@@ -110,7 +110,7 @@
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "ci-build"
+           fhir:v "ballot"
          ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
@@ -506,7 +506,7 @@
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "ci-build"
+           fhir:v "ballot"
          ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
@@ -1164,7 +1164,7 @@
          fhir:reference [ fhir:v "StructureDefinition/fr-coverage-amc-extended" ]
        ] ;
        fhir:name [ fhir:v "Extension AMC Étendue ROC" ] ;
-       fhir:description [ fhir:v "Extension pour les informations AMC étendues" ] ;
+       fhir:description [ fhir:v "Extension pour les informations AMC étendues issues de l'attestation harmonisée / DataMatrix AMC" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1273,6 +1273,24 @@
        ] ;
        fhir:name [ fhir:v "Fr Preadmission Encounter Profile" ] ;
        fhir:description [ fhir:v "Profil Encounter pour une préadmission" ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v false
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr> ;
+         fhir:reference [ fhir:v "StructureDefinition/preadmission-questionnaireresponse-fr" ]
+       ] ;
+       fhir:name [ fhir:v "Fr Preadmission QuestionnaireResponse Profile" ] ;
+       fhir:description [ fhir:v "Profil QuestionnaireResponse pour les réponses aux questionnaires de préadmission" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1408,15 +1426,15 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "ValueSet"
+           fhir:v "CodeSystem"
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs> ;
-         fhir:reference [ fhir:v "ValueSet/preadmission-statuts-vs" ]
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system> ;
+         fhir:reference [ fhir:v "CodeSystem/preadmission-status-code-system" ]
        ] ;
-       fhir:name [ fhir:v "preadmission-status-vs" ] ;
-       fhir:description [ fhir:v "Statuts valides qu'une préadmission peut prendre." ] ;
+       fhir:name [ fhir:v "preadmission-status-code-system" ] ;
+       fhir:description [ fhir:v "Statut de pré-admission" ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1426,15 +1444,15 @@
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
          fhir:value [
            a fhir:string ;
-           fhir:v "CodeSystem"
+           fhir:v "ValueSet"
          ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs> ;
-         fhir:reference [ fhir:v "CodeSystem/preadmission-statuts-cs" ]
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs> ;
+         fhir:reference [ fhir:v "ValueSet/preadmission-statuts-vs" ]
        ] ;
-       fhir:name [ fhir:v "preadmission-statuts-cs" ] ;
-       fhir:description [ fhir:v "Statut de pré-admission" ] ;
+       fhir:name [ fhir:v "preadmission-status-vs" ] ;
+       fhir:description [ fhir:v "Statuts valides qu'une préadmission peut prendre." ] ;
        fhir:example [
          a fhir:boolean ;
          fhir:v false
@@ -1473,8 +1491,9 @@
        fhir:name [ fhir:v "Questionnaire préadmission IRM" ] ;
        fhir:description [ fhir:v "Questionnaire posé lors de la prise de rendez-vous pour une IRM." ] ;
        fhir:example [
-         a fhir:boolean ;
-         fhir:v true
+         a fhir:canonical ;
+         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr"^^xsd:anyURI ;
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr>
        ]
      ] [
        fhir:extension ( [
@@ -1564,8 +1583,9 @@
        fhir:name [ fhir:v "Réponse questionnaire chambre particulière" ] ;
        fhir:description [ fhir:v "Réponse du patient au questionnaire posé par le portail de pré-admission." ] ;
        fhir:example [
-         a fhir:boolean ;
-         fhir:v true
+         a fhir:canonical ;
+         fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr"^^xsd:anyURI ;
+         fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr>
        ]
      ] [
        fhir:extension ( [

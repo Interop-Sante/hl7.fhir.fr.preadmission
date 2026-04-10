@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.fr.preadmission",
-  "version": "0.1.0",
+  "version": "1.0.0-ballot",
   "fhirVersion": "4.0.1",
   "jurisdiction": "FR",
   "extensions": [
@@ -22,9 +22,61 @@
       "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended",
       "title": "Extension AMC Étendue ROC",
       "types": [
+        "code",
         "string",
+        "code",
+        "code",
+        "boolean",
+        "base64Binary",
+        "boolean",
+        "canonical",
+        "code",
+        "date",
+        "dateTime",
+        "decimal",
+        "id",
+        "instant",
+        "integer",
+        "markdown",
+        "oid",
+        "positiveInt",
         "string",
-        "string",
+        "time",
+        "unsignedInt",
+        "uri",
+        "url",
+        "uuid",
+        "Address",
+        "Age",
+        "Annotation",
+        "Attachment",
+        "CodeableConcept",
+        "Coding",
+        "ContactPoint",
+        "Count",
+        "Distance",
+        "Duration",
+        "HumanName",
+        "Identifier",
+        "Money",
+        "Period",
+        "Quantity",
+        "Range",
+        "Ratio",
+        "Reference",
+        "SampledData",
+        "Signature",
+        "Timing",
+        "ContactDetail",
+        "Contributor",
+        "DataRequirement",
+        "Expression",
+        "ParameterDefinition",
+        "RelatedArtifact",
+        "TriggerDefinition",
+        "UsageContext",
+        "Dosage",
+        "Meta",
         "base64Binary",
         "boolean",
         "canonical",
@@ -119,6 +171,12 @@
         "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr",
         "title": "Fr Preadmission Encounter Profile"
       }
+    ],
+    "QuestionnaireResponse": [
+      {
+        "url": "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr",
+        "title": "Fr Preadmission QuestionnaireResponse Profile"
+      }
     ]
   },
   "usage": {
@@ -174,10 +232,10 @@
     "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
       "StructureDefinition.snapshot"
     ],
-    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator|2.2.0": [
       "Appointment"
     ],
-    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-estimated-discharge-date": [
+    "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-estimated-discharge-date|2.2.0": [
       "Encounter"
     ]
   }

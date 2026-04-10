@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Couverture sociale AMC - TTL Representation - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+    <title>Couverture sociale AMC - TTL Representation - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v1.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8.27"}
-    h3,h4,h5,h6{--heading-prefix:"8.27"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.28"}
+    h3,h4,h5,h6{--heading-prefix:"8.28"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -61,7 +61,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - ci-build
+            <span style="display:inline-block;">1.0.0-ballot - ballot
 
 
 
@@ -168,7 +168,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v1.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -243,18 +243,32 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/coverage.html#Coverage.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;extensions&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Couverture coverage-amc&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;coverage-amc\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hccoverage-amc\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-preadmission-coverage-fr.html\&quot;&gt;Fr Preadmission Coverage Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;Extension AMC Étendue ROC&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;codeConvention: 12345&lt;/li&gt;&lt;li&gt;codeCSR: 67890&lt;/li&gt;&lt;/ul&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;http://example.com/identifiers/coverage&lt;/code&gt;/AMC-2025-001 (use: official, )&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Active&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:\&quot;&gt;Assurance Maladie Complémentaire&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subscriber&lt;/b&gt;: &lt;a href=\&quot;Patient-patient-001.html\&quot;&gt;Jean Dupont&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subscriberId&lt;/b&gt;: AMC-987654321&lt;/p&gt;&lt;p&gt;&lt;b&gt;beneficiary&lt;/b&gt;: &lt;a href=\&quot;Patient-patient-001.html\&quot;&gt;Jean Dupont&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: 2025-01-01 00:00:00+0100 --&amp;gt; 2025-12-31 23:59:59+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;payor&lt;/b&gt;: Nom Assurance Maladie Complémentaire (Identifier: &lt;code&gt;urn:oid:1.2.250.1.213.1.1.4.6&lt;/code&gt;/987654321)&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : Couverture coverage-amc&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;coverage-amc\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hccoverage-amc\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-preadmission-coverage-fr.html\&quot;&gt;Fr Preadmission Coverage Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;Extension AMC Étendue ROC&lt;/b&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;&lt;/p&gt;codeCSR&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: CSR67890&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;&lt;/p&gt;datamatrix&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: (exemple)DATAMATRIX-AMC-987654321&lt;/p&gt;&lt;p&gt;&lt;b&gt;codeConvention&lt;/b&gt;: CONV12345&lt;/p&gt;&lt;p&gt;&lt;b&gt;domaine&lt;/b&gt;: consultation&lt;/p&gt;&lt;p&gt;&lt;b&gt;domaine&lt;/b&gt;: hospitalisation&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;url&lt;/b&gt;&lt;/p&gt;conventionParDomaine&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: &lt;code&gt;http://example.com/identifiers/coverage&lt;/code&gt;/AMC-2025-001 (use: official, )&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Active&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}\&quot;&gt;extended healthcare&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subscriber&lt;/b&gt;: &lt;a href=\&quot;Patient-patient-001.html\&quot;&gt;Jean Dupont&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subscriberId&lt;/b&gt;: AMC-987654321&lt;/p&gt;&lt;p&gt;&lt;b&gt;beneficiary&lt;/b&gt;: &lt;a href=\&quot;Patient-patient-001.html\&quot;&gt;Jean Dupont&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: 2025-01-01 00:00:00+0100 --&amp;gt; 2025-12-31 23:59:59+0100&lt;/p&gt;&lt;p&gt;&lt;b&gt;payor&lt;/b&gt;: Nom Assurance Maladie Complémentaire (Identifier: &lt;code&gt;urn:oid:1.2.250.1.213.1.1.4.6&lt;/code&gt;/987654321)&lt;/p&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/R4/coverage.html#Coverage.extension">fhir:extension</a> ( [
     ( <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:extension</a> [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;codeConvention&quot;^^xsd:anyURI ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:string ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;12345&quot;       ]     ] [
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;codeCSR&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;CSR67890&quot;       ]     ] [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;datamatrix&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:string ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;67890&quot;       ]     ] ) ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;(exemple)DATAMATRIX-AMC-987654321&quot;       ]     ] [
+      ( <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.extension">fhir:extension</a> [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;codeConvention&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;CONV12345&quot;         ]       ] [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;domaine&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;consultation&quot;         ]       ] [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;domaine&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">a</a> fhir:code ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;hospitalisation&quot;         ]       ] ) ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;conventionParDomaine&quot;^^xsd:anyURI ]     ] ) ;
 <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended&quot;^^xsd:anyURI ]
   ] ) ; # 
   <a href="http://hl7.org/fhir/R4/coverage.html#Coverage.identifier">fhir:identifier</a> ( [
@@ -265,8 +279,8 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
   <a href="http://hl7.org/fhir/R4/coverage.html#Coverage.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;active&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/coverage.html#Coverage.type">fhir:type</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;EHCPOL&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Assurance Maladie Complémentaire&quot; ]     ] )
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/v3-ActCode&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;EHCPOL&quot; ]     ] )
   ] ; # 
   <a href="http://hl7.org/fhir/R4/coverage.html#Coverage.subscriber">fhir:subscriber</a> [
 <a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">fhir:reference</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Patient/patient-001&quot; ] ;
@@ -335,7 +349,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 24, 2026 09:27+0000">2026-02-24</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 11:38+0000">2026-04-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

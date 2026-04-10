@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Encounter Preadmission Status SearchParameter - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+    <title>Encounter Preadmission Status SearchParameter - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v1.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -59,7 +59,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - ci-build
+            <span style="display:inline-block;">1.0.0-ballot - ballot
 
 
 
@@ -166,7 +166,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v1.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -220,7 +220,7 @@
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.fr/fhir/fr/preadmission/SearchParameter/encounter-preadmission-status<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/SearchParameter/encounter-preadmission-status"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/SearchParameter/encounter-preadmission-status|0.1.0"/></span>
+      <span class="copy-text">1.0.0-ballot<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/SearchParameter/encounter-preadmission-status|1.0.0-ballot"/></span>
       </td>
     </tr>
 
@@ -236,7 +236,7 @@
         
           Active
           
-            as of 2026-02-24
+            as of 2026-04-10
           
         
       </td>
@@ -271,7 +271,7 @@
 
 
   <div xmlns="http://www.w3.org/1999/xhtml"><a name="encounter-preadmission-status"> </a><a name="hcencounter-preadmission-status"> </a><h2>EncounterPreadmissionStatus</h2><p>Paramètre <code>preadmission-status</code>:<code>token</code></p><div><p>Recherche des encounters par statut de pré-admission (extension PreadmissionStatutFr).</p>
-</div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td></tr><tr><td>Expression</td><td><code>Encounter.extension.where(url='http://hl7.fr/ig/preadmission/StructureDefinition/statut-preadmission-fr').value as CodeableConcept</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>
+</div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td></tr><tr><td>Expression</td><td><code>Encounter.extension.where(url='http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr').value as CodeableConcept</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>
 
   <!-- insert notes if present -->
   
@@ -318,7 +318,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 24, 2026 09:27+0000">2026-02-24</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 11:38+0000">2026-04-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

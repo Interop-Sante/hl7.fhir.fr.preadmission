@@ -6,16 +6,31 @@
   },
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Couverture coverage-amc</b></p><a name=\"coverage-amc\"> </a><a name=\"hccoverage-amc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-coverage-fr.html\">Fr Preadmission Coverage Profile</a></p></div><blockquote><p><b>Extension AMC Étendue ROC</b></p><ul><li>codeConvention: 12345</li><li>codeCSR: 67890</li></ul></blockquote><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMC-2025-001\u00a0(use:\u00a0official,\u00a0)</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:\">Assurance Maladie Complémentaire</span></p><p><b>subscriber</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>subscriberId</b>: AMC-987654321</p><p><b>beneficiary</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Nom Assurance Maladie Complémentaire (Identifier: <code>urn:oid:1.2.250.1.213.1.1.4.6</code>/987654321)</p></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Couverture coverage-amc</b></p><a name=\"coverage-amc\"> </a><a name=\"hccoverage-amc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-coverage-fr.html\">Fr Preadmission Coverage Profile</a></p></div><blockquote><p><b>Extension AMC Étendue ROC</b></p><blockquote><p><b>url</b></p>codeCSR</blockquote><p><b>value</b>: CSR67890</p><blockquote><p><b>url</b></p>datamatrix</blockquote><p><b>value</b>: (exemple)DATAMATRIX-AMC-987654321</p><p><b>codeConvention</b>: CONV12345</p><p><b>domaine</b>: consultation</p><p><b>domaine</b>: hospitalisation</p><blockquote><p><b>url</b></p>conventionParDomaine</blockquote></blockquote><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMC-2025-001\u00a0(use:\u00a0official,\u00a0)</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}\">extended healthcare</span></p><p><b>subscriber</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>subscriberId</b>: AMC-987654321</p><p><b>beneficiary</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Nom Assurance Maladie Complémentaire (Identifier: <code>urn:oid:1.2.250.1.213.1.1.4.6</code>/987654321)</p></div>"
   },
   "extension" : [{
     "extension" : [{
-      "url" : "codeConvention",
-      "valueString" : "12345"
+      "url" : "codeCSR",
+      "valueCode" : "CSR67890"
     },
     {
-      "url" : "codeCSR",
-      "valueString" : "67890"
+      "url" : "datamatrix",
+      "valueString" : "(exemple)DATAMATRIX-AMC-987654321"
+    },
+    {
+      "extension" : [{
+        "url" : "codeConvention",
+        "valueCode" : "CONV12345"
+      },
+      {
+        "url" : "domaine",
+        "valueCode" : "consultation"
+      },
+      {
+        "url" : "domaine",
+        "valueCode" : "hospitalisation"
+      }],
+      "url" : "conventionParDomaine"
     }],
     "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/fr-coverage-amc-extended"
   }],
@@ -27,8 +42,8 @@
   "status" : "active",
   "type" : {
     "coding" : [{
-      "code" : "EHCPOL",
-      "display" : "Assurance Maladie Complémentaire"
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "EHCPOL"
     }]
   },
   "subscriber" : {

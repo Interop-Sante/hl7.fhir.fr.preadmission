@@ -6,11 +6,11 @@
     "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : ImplementationGuide hl7.fhir.fr.preadmission</b></p><a name=\"hl7.fhir.fr.preadmission\"> </a><a name=\"hchl7.fhir.fr.preadmission\"> </a><h2>PREADMISSIONFR</h2><p>LURL officielle pour ce guide dimplémentation est : </p><pre>http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission</pre></div>"
   },
   "url" : "http://hl7.fr/fhir/fr/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission",
-  "version" : "0.1.0",
+  "version" : "1.0.0-ballot",
   "name" : "PREADMISSIONFR",
   "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
-  "status" : "draft",
-  "date" : "2026-02-24T09:27:09+00:00",
+  "status" : "active",
+  "date" : "2026-04-10T11:37:26+00:00",
   "publisher" : "Interop'Santé",
   "contact" : [{
     "name" : "Interop'Santé",
@@ -45,7 +45,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "7.0.1"
+    "version" : "7.1.0"
   },
   {
     "id" : "hl7ext",
@@ -61,7 +61,7 @@
     "id" : "hl7_fhir_fr_core",
     "uri" : "https://hl7.fr/ig/fhir/core/ImplementationGuide/hl7.fhir.fr.core",
     "packageId" : "hl7.fhir.fr.core",
-    "version" : "2.1.0"
+    "version" : "2.2.0"
   }],
   "definition" : {
     "extension" : [{
@@ -82,7 +82,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "ballot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -372,7 +372,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "ci-build"
+        "valueString" : "ballot"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -829,7 +829,7 @@
         "reference" : "StructureDefinition/fr-coverage-amc-extended"
       },
       "name" : "Extension AMC Étendue ROC",
-      "description" : "Extension pour les informations AMC étendues",
+      "description" : "Extension pour les informations AMC étendues issues de l'attestation harmonisée / DataMatrix AMC",
       "exampleBoolean" : false
     },
     {
@@ -902,6 +902,18 @@
       },
       "name" : "Fr Preadmission Encounter Profile",
       "description" : "Profil Encounter pour une préadmission",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/preadmission-questionnaireresponse-fr"
+      },
+      "name" : "Fr Preadmission QuestionnaireResponse Profile",
+      "description" : "Profil QuestionnaireResponse pour les réponses aux questionnaires de préadmission",
       "exampleBoolean" : false
     },
     {
@@ -991,6 +1003,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/preadmission-status-code-system"
+      },
+      "name" : "preadmission-status-code-system",
+      "description" : "Statut de pré-admission",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
@@ -998,18 +1022,6 @@
       },
       "name" : "preadmission-status-vs",
       "description" : "Statuts valides qu'une préadmission peut prendre.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "CodeSystem"
-      }],
-      "reference" : {
-        "reference" : "CodeSystem/preadmission-statuts-cs"
-      },
-      "name" : "preadmission-statuts-cs",
-      "description" : "Statut de pré-admission",
       "exampleBoolean" : false
     },
     {
@@ -1034,7 +1046,7 @@
       },
       "name" : "Questionnaire préadmission IRM",
       "description" : "Questionnaire posé lors de la prise de rendez-vous pour une IRM.",
-      "exampleBoolean" : true
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr"
     },
     {
       "extension" : [{
@@ -1094,7 +1106,7 @@
       },
       "name" : "Réponse questionnaire chambre particulière",
       "description" : "Réponse du patient au questionnaire posé par le portail de pré-admission.",
-      "exampleBoolean" : true
+      "exampleCanonical" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr"
     },
     {
       "extension" : [{

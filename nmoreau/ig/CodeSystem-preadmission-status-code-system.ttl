@@ -6,9 +6,9 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs> a fhir:CodeSystem ;
+<http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system> a fhir:CodeSystem ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "preadmission-statuts-cs"] ; # 
+  fhir:id [ fhir:v "preadmission-status-code-system"] ; # 
   fhir:meta [
      fhir:profile ( [
        fhir:v "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"^^xsd:anyURI ;
@@ -17,15 +17,15 @@
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CodeSystem preadmission-statuts-cs</b></p><a name=\"preadmission-statuts-cs\"> </a><a name=\"hcpreadmission-statuts-cs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-insensitive code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CANCELLED<a name=\"preadmission-statuts-cs-CANCELLED\"> </a></td><td>Pré-admission annulée</td></tr><tr><td style=\"white-space:nowrap\">CREATED<a name=\"preadmission-statuts-cs-CREATED\"> </a></td><td>Pré-admission créée</td></tr><tr><td style=\"white-space:nowrap\">IN_PROGRESS<a name=\"preadmission-statuts-cs-IN_PROGRESS\"> </a></td><td>Pré-admission en cours</td></tr><tr><td style=\"white-space:nowrap\">READY<a name=\"preadmission-statuts-cs-READY\"> </a></td><td>Pré-admission prête</td></tr><tr><td style=\"white-space:nowrap\">COMPLETED<a name=\"preadmission-statuts-cs-COMPLETED\"> </a></td><td>Pré-admission terminée</td></tr><tr><td style=\"white-space:nowrap\">REFUSED<a name=\"preadmission-statuts-cs-REFUSED\"> </a></td><td>Pré-admission refusée</td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : CodeSystem preadmission-status-code-system</b></p><a name=\"preadmission-status-code-system\"> </a><a name=\"hcpreadmission-status-code-system\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-insensitive code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CANCELLED<a name=\"preadmission-status-code-system-CANCELLED\"> </a></td><td>Pré-admission annulée</td></tr><tr><td style=\"white-space:nowrap\">CREATED<a name=\"preadmission-status-code-system-CREATED\"> </a></td><td>Pré-admission créée</td></tr><tr><td style=\"white-space:nowrap\">IN_PROGRESS<a name=\"preadmission-status-code-system-IN_PROGRESS\"> </a></td><td>Pré-admission en cours</td></tr><tr><td style=\"white-space:nowrap\">READY<a name=\"preadmission-status-code-system-READY\"> </a></td><td>Pré-admission prête</td></tr><tr><td style=\"white-space:nowrap\">COMPLETED<a name=\"preadmission-status-code-system-COMPLETED\"> </a></td><td>Pré-admission terminée</td></tr><tr><td style=\"white-space:nowrap\">REFUSED<a name=\"preadmission-status-code-system-REFUSED\"> </a></td><td>Pré-admission refusée</td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
-  fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot"] ; # 
   fhir:name [ fhir:v "PreadmissionStatusCodeSystem"] ; # 
-  fhir:title [ fhir:v "preadmission-statuts-cs"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
+  fhir:title [ fhir:v "preadmission-status-code-system"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
   fhir:experimental [ fhir:v true] ; # 
-  fhir:date [ fhir:v "2026-02-24T09:27:09+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-04-10T11:37:26+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;

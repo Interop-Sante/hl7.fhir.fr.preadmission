@@ -2,11 +2,11 @@
   "codeSystems" : [
     {
       "url" : "http://dicom.nema.org/resources/ontology/DCM",
-      "version" : "01",
+      "version" : "2022.4.20221006",
       "status" : "active",
-      "name" : "DICOM Controlled Terminology Definitions",
-      "title" : null,
-      "description" : "DICOM Code Definitions (Coding Scheme Designator \"DCM\" Coding Scheme Version \"01\")",
+      "name" : "DICOMTerminologyDefinitions",
+      "title" : "DICOM Controlled Terminology Definitions",
+      "description" : "DICOM Code Definitions (Coding Scheme Designator \"DCM\" Coding Scheme Version 2022.4.20221006",
       "oids" : ["1.2.840.10008.2.16.4"],
       "uses" : {
       },
@@ -14,8 +14,8 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionDocumentTypeCodeSystem",
       "title" : "document-type-cs",
       "description" : "Types de documents additionnels pour la préadmission",
@@ -24,11 +24,11 @@
       "ValueSet-preadmission-document-type-vs.html" : "preadmission-document-type-vs"
     },
     {
-      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "url" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionStatusCodeSystem",
-      "title" : "preadmission-statuts-cs",
+      "title" : "preadmission-status-code-system",
       "description" : "Statut de pré-admission",
       "uses" : {
       },
@@ -191,6 +191,18 @@
       "http://hl7.org/fhir/R4/valueset-participationstatus.html" : "ParticipationStatus"
     },
     {
+      "url" : "http://hl7.org/fhir/questionnaire-answers-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireResponseStatus",
+      "title" : "QuestionnaireResponseStatus",
+      "description" : "Lifecycle status of the questionnaire response.",
+      "oids" : ["2.16.840.1.113883.4.642.4.448"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-questionnaire-answers-status.html" : "QuestionnaireResponseStatus"
+    },
+    {
       "url" : "http://hl7.org/fhir/resource-types",
       "version" : "4.0.1",
       "status" : "active",
@@ -203,7 +215,7 @@
     },
     {
       "url" : "http://loinc.org",
-      "version" : "3.1.0",
+      "version" : "3.0.1",
       "status" : "active",
       "name" : "LOINC",
       "title" : "Logical Observation Identifiers, Names and Codes (LOINC)",
@@ -212,21 +224,22 @@
       "uses" : {
       },
       "ValueSet-preadmission-consent-category-vs.html" : "preadmission-consent-category-vs",
+      "http://hl7.org/fhir/R4/valueset-consent-category.html" : "Consent Category Codes",
       "http://hl7.org/fhir/R4/valueset-consent-content-code.html" : "Consent Content Codes",
-      "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set",
-      "http://hl7.org/fhir/R4/valueset-consent-category.html" : "Consent Category Codes"
+      "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set"
     },
     {
       "url" : "http://snomed.info/sct",
-      "version" : null,
+      "version" : "http://snomed.info/sct/900000000000207008/version/20260201",
       "status" : "active",
       "name" : "SNOMED_CT",
-      "title" : "SNOMED CT (all versions)",
+      "title" : "SNOMED CT core",
       "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
+      "http://hl7.org/fhir/R4/valueset-questionnaire-answers.html" : "Questionnaire Answer Codes",
       "http://hl7.org/fhir/R4/valueset-encounter-reason.html" : "Encounter Reason Codes",
       "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set"
     },
@@ -397,7 +410,7 @@
       "oids" : ["2.16.840.1.113883.4.642.1.1093"],
       "uses" : {
       },
-      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-discharge-disposition.html" : "FR Core ValueSet Encounter discharge disposition"
+      "https://hl7.fr/ig/fhir/core/2.2.0/ValueSet-fr-core-vs-encounter-discharge-disposition.html" : "FR Core ValueSet Encounter discharge disposition"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/encounter-special-arrangements",
@@ -460,8 +473,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/service-type",
-      "version" : "1.1.1",
-      "status" : "active",
+      "version" : "1.1.0",
+      "status" : "draft",
       "name" : "ServiceType",
       "title" : "Service type",
       "description" : "This value set defines an example set of codes of service-types.",
@@ -492,7 +505,7 @@
       "oids" : ["2.16.840.1.113883.18.9"],
       "uses" : {
       },
-      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-type.html" : "FR Core ValueSet Encounter type"
+      "https://hl7.fr/ig/fhir/core/2.2.0/ValueSet-fr-core-vs-encounter-type.html" : "FR Core ValueSet Encounter type"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0092",
@@ -504,7 +517,7 @@
       "oids" : ["2.16.840.1.113883.18.36"],
       "uses" : {
       },
-      "http://terminology.hl7.org/6.0.2/ValueSet-v2-0092.html" : "hl7VS-re-admissionIndicator"
+      "http://terminology.hl7.org/7.1.0/ValueSet-v2-0092.html" : "hl7VS-re-admissionIndicator"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0276",
@@ -516,7 +529,7 @@
       "oids" : ["2.16.840.1.113883.18.169"],
       "uses" : {
       },
-      "http://terminology.hl7.org/6.0.2/ValueSet-v2-0276.html" : "hl7VS-appointmentReasonCodes"
+      "http://terminology.hl7.org/7.1.0/ValueSet-v2-0276.html" : "hl7VS-appointmentReasonCodes"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
@@ -528,14 +541,14 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
-      "ValueSet-type-couverture-sociale-vs.html" : "type-couverture-sociale-vs",
       "ValueSet-type-venue-encounter-vs.html" : "type-venue-encounter-vs",
-      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActCode.html" : "v3 Code System ActCode",
-      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode"
+      "ValueSet-type-couverture-sociale-vs.html" : "type-couverture-sociale-vs",
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActCode.html" : "v3 Code System ActCode",
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActEncounterCode.html" : "ActEncounterCode"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActPriority",
-      "version" : "3.0.0",
+      "version" : "4.0.0",
       "status" : "active",
       "name" : "ActPriority",
       "title" : "ActPriority",
@@ -543,11 +556,11 @@
       "oids" : ["2.16.840.1.113883.5.7"],
       "uses" : {
       },
-      "http://terminology.hl7.org/6.0.2/ValueSet-v3-ActPriority.html" : "ActPriority"
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActPriority.html" : "ActPriority"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-      "version" : "3.1.0",
+      "version" : "4.0.0",
       "status" : "active",
       "name" : "ActReason",
       "title" : "ActReason",
@@ -555,12 +568,12 @@
       "oids" : ["2.16.840.1.113883.5.8"],
       "uses" : {
       },
-      "ValueSet-preadmission-consent-purpose-reason-vs.html" : "preadmission-consent-purpose-reason-vs",
-      "http://terminology.hl7.org/6.0.2/ValueSet-v3-PurposeOfUse.html" : "PurposeOfUse"
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-PurposeOfUse.html" : "PurposeOfUse",
+      "ValueSet-preadmission-consent-purpose-reason-vs.html" : "preadmission-consent-purpose-reason-vs"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy",
-      "version" : "3.0.0",
+      "version" : "4.0.0",
       "status" : "active",
       "name" : "EncounterSpecialCourtesy",
       "title" : "EncounterSpecialCourtesy",
@@ -572,7 +585,7 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-      "version" : "3.0.0",
+      "version" : "4.0.0",
       "status" : "active",
       "name" : "NullFlavor",
       "title" : "NullFlavor",
@@ -584,7 +597,7 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction",
-      "version" : "3.0.0",
+      "version" : "4.0.0",
       "status" : "active",
       "name" : "ParticipationFunction",
       "title" : "ParticipationFunction",
@@ -596,7 +609,7 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
-      "version" : "5.0.0",
+      "version" : "6.0.0",
       "status" : "active",
       "name" : "ParticipationType",
       "title" : "ParticipationType",
@@ -604,12 +617,12 @@
       "oids" : ["2.16.840.1.113883.5.90"],
       "uses" : {
       },
-      "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType",
-      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type"
+      "http://hl7.org/fhir/R4/valueset-encounter-participant-type.html" : "Participant type",
+      "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleClass",
-      "version" : "4.0.0",
+      "version" : "5.0.0",
       "status" : "active",
       "name" : "RoleClass",
       "title" : "RoleClass",
@@ -621,7 +634,7 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-      "version" : "3.0.0",
+      "version" : "4.0.0",
       "status" : "active",
       "name" : "RoleCode",
       "title" : "RoleCode",
@@ -633,40 +646,40 @@
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-circonstances-sortie",
-      "version" : "2.1.0",
+      "version" : "2.2.0",
       "status" : "draft",
       "name" : "FRCoreCodeSystemCirconstancesSortie",
       "title" : "FR Core CodeSystem Circonstances Sortie",
       "description" : "Discharge Disposition",
       "uses" : {
       },
-      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-discharge-disposition.html" : "FR Core ValueSet Encounter discharge disposition"
+      "https://hl7.fr/ig/fhir/core/2.2.0/ValueSet-fr-core-vs-encounter-discharge-disposition.html" : "FR Core ValueSet Encounter discharge disposition"
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type",
-      "version" : "2.1.0",
+      "version" : "2.2.0",
       "status" : "draft",
       "name" : "FRCoreCodeSystemIdentifierType",
       "title" : "FR Core CodeSystem Identifier Type",
       "description" : "Identifier type",
       "uses" : {
       },
-      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-identifier-type.html" : "FR Core ValueSet Encounter identifier type"
+      "https://hl7.fr/ig/fhir/core/2.2.0/ValueSet-fr-core-vs-encounter-identifier-type.html" : "FR Core ValueSet Encounter identifier type"
     },
     {
-      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-physical-type",
-      "version" : "2.1.0",
-      "status" : "draft",
-      "name" : "FRCoreCodeSystemLocationPhysicalType",
-      "title" : "FR Core CodeSystem Location Physical Type",
-      "description" : "Location physical type",
+      "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-type",
+      "version" : "2.2.0",
+      "status" : "active",
+      "name" : "FRCoreCodeSystemLocationType",
+      "title" : "FR Core CodeSystem Location Type",
+      "description" : "Location type",
       "uses" : {
       },
-      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-location-physical-type.html" : "FR Core ValueSet Location physical type"
+      "https://hl7.fr/ig/fhir/core/2.2.0/ValueSet-fr-core-vs-location-type.html" : "FR Core ValueSet Location type"
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
-      "version" : "2.1.0",
+      "version" : "2.2.0",
       "status" : "active",
       "name" : "FRCoreCodeSystemModeValidationIdentite",
       "title" : "FR Core CodeSystem Mode Validation Identite",
@@ -677,26 +690,26 @@
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-type-admission",
-      "version" : "2.1.0",
+      "version" : "2.2.0",
       "status" : "draft",
       "name" : "FRCoreCodeSystemTypeAdmission",
       "title" : "FR Core CodeSystem Type Admission",
       "description" : "Admission type",
       "uses" : {
       },
-      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-encounter-type.html" : "FR Core ValueSet Encounter type"
+      "https://hl7.fr/ig/fhir/core/2.2.0/ValueSet-fr-core-vs-encounter-type.html" : "FR Core ValueSet Encounter type"
     },
     {
       "url" : "https://mos.esante.gouv.fr/NOS/TRE_R38-SpecialiteOrdinale/FHIR/TRE-R38-SpecialiteOrdinale",
-      "version" : "1.3.0",
+      "version" : "20240531120000",
       "status" : "active",
-      "name" : "TRE_R38-SpecialiteOrdinale",
+      "name" : "TRE_R38_SpecialiteOrdinale",
       "title" : null,
       "description" : "Spécialité ordinale",
       "oids" : ["1.2.250.1.213.2.28"],
       "uses" : {
       },
-      "https://hl7.fr/ig/fhir/core/2.1.0/ValueSet-fr-core-vs-practitioner-specialty.html" : "FR Core ValueSet Practitioner specialty"
+      "https://hl7.fr/ig/fhir/core/2.2.0/ValueSet-fr-core-vs-practitioner-specialty.html" : "FR Core ValueSet Practitioner specialty"
     },
     {
       "url" : "urn:ietf:bcp:47",

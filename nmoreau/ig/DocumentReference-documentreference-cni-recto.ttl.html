@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Document de préadmission - CNI recto - TTL Representation - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+    <title>Document de préadmission - CNI recto - TTL Representation - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v1.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,8 +44,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8.30"}
-    h3,h4,h5,h6{--heading-prefix:"8.30"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.31"}
+    h3,h4,h5,h6{--heading-prefix:"8.31"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -61,7 +61,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - ci-build
+            <span style="display:inline-block;">1.0.0-ballot - ballot
 
 
 
@@ -168,7 +168,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v1.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -243,12 +243,12 @@
   ] ; # 
   <a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.text">fhir:text</a> [
 <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : RéférenceDocument documentreference-cni-recto&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;documentreference-cni-recto\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdocumentreference-cni-recto\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-preadmission-documentreference-fr.html\&quot;&gt;Fr Preadmission DocumentReference Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Current&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system CN_RECTO}\&quot;&gt;Recto Carte d’identité&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-patient-001.html\&quot;&gt;Jean Dupont&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2025-05-01 10:00:00+0100&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Attachments&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;ContentType&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Url&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Title&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Creation&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;application/pdf&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;https://example.com/documents/cni-recto.pdf\&quot;&gt;https://example.com/documents/cni-recto.pdf&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Carte d'identité - Recto&lt;/td&gt;&lt;td&gt;2025-04-30 15:00:00+0100&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;h3&gt;Contexts&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Encounter&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Encounter-encounter-irm-refused.html\&quot;&gt;Consultation IRM refusée&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
+fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Narratif généré : RéférenceDocument documentreference-cni-recto&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;documentreference-cni-recto\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcdocumentreference-cni-recto\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profil: &lt;a href=\&quot;StructureDefinition-preadmission-documentreference-fr.html\&quot;&gt;Fr Preadmission DocumentReference Profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: Current&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs CN_RECTO}\&quot;&gt;Recto Carte d’identité&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-patient-001.html\&quot;&gt;Jean Dupont&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2025-05-01 10:00:00+0100&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;content&lt;/b&gt;&lt;/p&gt;&lt;h3&gt;Attachments&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;ContentType&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Url&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Title&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Creation&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;application/pdf&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;https://example.com/documents/cni-recto.pdf\&quot;&gt;https://example.com/documents/cni-recto.pdf&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Carte d'identité - Recto&lt;/td&gt;&lt;td&gt;2025-04-30 15:00:00+0100&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/blockquote&gt;&lt;h3&gt;Contexts&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Encounter&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Encounter-encounter-irm-refused.html\&quot;&gt;Consultation IRM refusée&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral
   ] ; # 
   <a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;current&quot;] ; # 
   <a href="http://hl7.org/fhir/R4/documentreference.html#DocumentReference.type">fhir:type</a> [
     ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system&quot;^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs&quot;^^xsd:anyURI ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;CN_RECTO&quot; ] ;
 <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Recto Carte d’identité&quot; ]     ] )
   ] ; # 
@@ -317,7 +317,7 @@ fhir:div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 24, 2026 09:27+0000">2026-02-24</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 11:38+0000">2026-04-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

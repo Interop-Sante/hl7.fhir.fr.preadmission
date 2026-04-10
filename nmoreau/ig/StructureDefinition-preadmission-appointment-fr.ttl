@@ -11,14 +11,14 @@
   fhir:id [ fhir:v "preadmission-appointment-fr"] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : DéfinitionStructure preadmission-appointment-fr</b></p><a name=\"preadmission-appointment-fr\"> </a><a name=\"hcpreadmission-appointment-fr\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Le nom logique de lélément\">Nom</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Drapeaux</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description et contraintes</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment\">Appointment</a><a name=\"Appointment\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-appointment.html\">FRCoreAppointmentProfile</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s)</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.participant\">participant</a><a name=\"Appointment.participant\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.participant.actor\">actor</a><a name=\"Appointment.participant.actor\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient.html\">FR Core Patient Profile</a> | <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-patient-ins.html\">FR Core Patient INS Profile</a> | <a href=\"https://hl7.fr/ig/fhir/core/2.1.0/StructureDefinition-fr-core-practitioner.html\">FR Core Practitioner Profile</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Person, Location/HealthcareService or Device</span></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : DéfinitionStructure preadmission-appointment-fr</b></p><a name=\"preadmission-appointment-fr\"> </a><a name=\"hcpreadmission-appointment-fr\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Le nom logique de lélément\">Nom</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Drapeaux</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description et contraintes</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Ressource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment\">Appointment</a><a name=\"Appointment\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"https://hl7.fr/ig/fhir/core/2.2.0/StructureDefinition-fr-core-appointment.html\">FRCoreAppointmentProfile</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time. This may result in one or more Encounter(s)</span></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck01.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.participant\">participant</a><a name=\"Appointment.participant\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck000.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_blank.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-preadmission-appointment-fr-definitions.html#Appointment.participant.actor\">actor</a><a name=\"Appointment.participant.actor\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">1</span></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/references.html\">Reference</a>(<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/StructureDefinition-fr-core-patient.html\">FR Core Patient Profile</a> | <a href=\"https://hl7.fr/ig/fhir/core/2.2.0/StructureDefinition-fr-core-patient-ins.html\">FR Core Patient INS Profile</a> | <a href=\"https://hl7.fr/ig/fhir/core/2.2.0/StructureDefinition-fr-core-practitioner.html\">FR Core Practitioner Profile</a> | <a href=\"https://hl7.fr/ig/fhir/core/2.2.0/StructureDefinition-fr-core-healthcare-service.html\">FR Core Healthcare Service Profile</a>)</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Person, Location/HealthcareService or Device</span></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:url [ fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:version [ fhir:v "1.0.0-ballot"] ; # 
   fhir:name [ fhir:v "PreadmissionAppointmentFr"] ; # 
   fhir:title [ fhir:v "Fr Preadmission Appointment Profile"] ; # 
-  fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2026-02-24T09:27:09+00:00"^^xsd:dateTime] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2026-04-10T11:37:26+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
@@ -77,7 +77,7 @@
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ] ;
        fhir:value [
          a fhir:string ;
-         fhir:v "2.1.0"
+         fhir:v "2.2.0"
        ]
      ] ) ;
      fhir:element ( [
@@ -99,8 +99,8 @@
          fhir:expression [ fhir:v "start.exists() = end.exists()" ] ;
          fhir:xpath [ fhir:v "((exists(f:start) and exists(f:end)) or (not(exists(f:start)) and not(exists(f:end))))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Appointment"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Appointment>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Appointment|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Appointment|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "app-3" ] ;
@@ -109,8 +109,8 @@
          fhir:expression [ fhir:v "(start.exists() and end.exists()) or (status in ('proposed' | 'cancelled' | 'waitlist'))" ] ;
          fhir:xpath [ fhir:v "((exists(f:start) and exists(f:end)) or (f:status/@value='proposed') or (f:status/@value='cancelled') or (f:status/@value='waitlist'))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Appointment"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Appointment>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Appointment|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Appointment|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "app-4" ] ;
@@ -119,8 +119,8 @@
          fhir:expression [ fhir:v "Appointment.cancelationReason.exists() implies (Appointment.status='no-show' or Appointment.status='cancelled')" ] ;
          fhir:xpath [ fhir:v "not(exists(f:cancellationReason)) or f:status/@value=('no-show', 'cancelled')" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Appointment"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Appointment>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Appointment|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Appointment|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "dom-2" ] ;
@@ -129,8 +129,8 @@
          fhir:expression [ fhir:v "contained.contained.empty()" ] ;
          fhir:xpath [ fhir:v "not(parent::f:contained and f:contained)" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "dom-3" ] ;
@@ -139,8 +139,8 @@
          fhir:expression [ fhir:v "contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()" ] ;
          fhir:xpath [ fhir:v "not(exists(for $id in f:contained/*/f:id/@value return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "dom-4" ] ;
@@ -149,8 +149,8 @@
          fhir:expression [ fhir:v "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()" ] ;
          fhir:xpath [ fhir:v "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "dom-5" ] ;
@@ -159,8 +159,8 @@
          fhir:expression [ fhir:v "contained.meta.security.empty()" ] ;
          fhir:xpath [ fhir:v "not(exists(f:contained/*/f:meta/f:security))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1>
          ]
        ] [
          fhir:extension ( [
@@ -182,8 +182,8 @@
          fhir:expression [ fhir:v "text.`div`.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:text/h:div)" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -248,8 +248,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -315,8 +315,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "ext-1" ] ;
@@ -325,8 +325,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -358,8 +358,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -387,8 +387,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -416,8 +416,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -446,8 +446,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "canonical"^^xsd:anyURI ] ;
          fhir:targetProfile ( [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/StructureDefinition"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/StructureDefinition>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -457,8 +457,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -480,14 +480,14 @@
        fhir:type ( [
          fhir:code [ fhir:v "canonical"^^xsd:anyURI ] ;
          fhir:targetProfile ( [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/StructureDefinition"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/StructureDefinition>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1>
          ] )
        ] ) ;
        fhir:pattern [
          a fhir:canonical ;
-         fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment"^^xsd:anyURI ;
-         fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment>
+         fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment|2.2.0"^^xsd:anyURI ;
+         fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment|2.2.0>
        ] ;
        fhir:constraint ( [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -496,8 +496,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -525,8 +525,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -542,8 +542,8 @@
          fhir:strength [ fhir:v "extensible" ] ;
          fhir:description [ fhir:v "Security Labels from the Healthcare Privacy and Security Classification System." ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.org/fhir/ValueSet/security-labels"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/ValueSet/security-labels>
+           fhir:v "http://hl7.org/fhir/ValueSet/security-labels|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/security-labels|4.0.1>
          ]
        ]
      ] [
@@ -569,8 +569,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -586,8 +586,8 @@
          fhir:strength [ fhir:v "example" ] ;
          fhir:description [ fhir:v "Codes that represent various types of tags, commonly workflow-related; e.g. \"Needs review by Dr. Jones\"." ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.org/fhir/ValueSet/common-tags"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/ValueSet/common-tags>
+           fhir:v "http://hl7.org/fhir/ValueSet/common-tags|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/common-tags|4.0.1>
          ]
        ]
      ] [
@@ -613,8 +613,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v true ] ;
@@ -643,8 +643,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -654,8 +654,8 @@
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet"^^xsd:anyURI ] ;
            fhir:value [
              a fhir:canonical ;
-             fhir:v "http://hl7.org/fhir/ValueSet/all-languages"^^xsd:anyURI ;
-             fhir:link <http://hl7.org/fhir/ValueSet/all-languages>
+             fhir:v "http://hl7.org/fhir/ValueSet/all-languages|4.0.1"^^xsd:anyURI ;
+             fhir:link <http://hl7.org/fhir/ValueSet/all-languages|4.0.1>
            ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
@@ -667,8 +667,8 @@
          fhir:strength [ fhir:v "preferred" ] ;
          fhir:description [ fhir:v "A human language." ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.org/fhir/ValueSet/languages"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/ValueSet/languages>
+           fhir:v "http://hl7.org/fhir/ValueSet/languages|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/languages|4.0.1>
          ]
        ]
      ] [
@@ -695,8 +695,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -736,7 +736,6 @@
            fhir:type [ fhir:v "value" ] ;
            fhir:path [ fhir:v "url" ]
          ] ) ;
-         fhir:ordered [ fhir:v false ] ;
          fhir:rules [ fhir:v "open" ]
        ] ;
        fhir:short [ fhir:v "Extension" ] ;
@@ -758,8 +757,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "ext-1" ] ;
@@ -768,8 +767,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -779,7 +778,7 @@
        fhir:path [ fhir:v "Appointment.extension" ] ;
        fhir:sliceName [ fhir:v "appointmentOperator" ] ;
        fhir:short [ fhir:v "FR Core Appointment Operator Extension" ] ;
-       fhir:definition [ fhir:v "This extension adds the element appointmentOperator to the Appointment resource (operator of creation/update/cancel of the appointment | Cette extension ajoute l'élément appointmentOperator à la ressource Appointment (opérateur de création/modification/annulation du RDV)" ] ;
+       fhir:definition [ fhir:v "Cette extension ajoute l'élément appointmentOperator à la ressource Appointment (opérateur de création/modification/annulation du RDV). \r\nThis extension adds the element appointmentOperator to the Appointment resource (operator of creation/update/cancel of the appointment" ] ;
        fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -790,8 +789,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Extension"^^xsd:anyURI ] ;
          fhir:profile ( [
-           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator"^^xsd:anyURI ;
-           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator>
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator|2.2.0"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-appointment-operator|2.2.0>
          ] )
        ] ) ;
        fhir:condition ( [ fhir:v "ele-1" ] ) ;
@@ -802,8 +801,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "ext-1" ] ;
@@ -812,11 +811,12 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension|4.0.1>
          ]
        ] ) ;
-       fhir:isModifier [ fhir:v false ]
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:isSummary [ fhir:v false ]
      ] [
        fhir:id [ fhir:v "Appointment.modifierExtension" ] ;
        fhir:path [ fhir:v "Appointment.modifierExtension" ] ;
@@ -842,8 +842,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "ext-1" ] ;
@@ -852,8 +852,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v true ] ;
@@ -885,8 +885,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -930,8 +930,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v true ] ;
@@ -990,8 +990,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1006,8 +1006,8 @@
          ] ) ;
          fhir:strength [ fhir:v "example" ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.org/fhir/ValueSet/appointment-cancellation-reason"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/ValueSet/appointment-cancellation-reason>
+           fhir:v "http://hl7.org/fhir/ValueSet/appointment-cancellation-reason|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/appointment-cancellation-reason|4.0.1>
          ]
        ] ;
        fhir:mapping ( [
@@ -1036,8 +1036,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1052,8 +1052,8 @@
          ] ) ;
          fhir:strength [ fhir:v "example" ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.org/fhir/ValueSet/service-category"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/ValueSet/service-category>
+           fhir:v "http://hl7.org/fhir/ValueSet/service-category|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/service-category|4.0.1>
          ]
        ] ;
        fhir:mapping ( [
@@ -1086,8 +1086,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1102,8 +1102,8 @@
          ] ) ;
          fhir:strength [ fhir:v "example" ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.org/fhir/ValueSet/service-type"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/ValueSet/service-type>
+           fhir:v "http://hl7.org/fhir/ValueSet/service-type|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/service-type|4.0.1>
          ]
        ] ;
        fhir:mapping ( [
@@ -1135,8 +1135,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1151,8 +1151,8 @@
          ] ) ;
          fhir:strength [ fhir:v "required" ] ;
          fhir:valueSet [
-           fhir:v "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-practitioner-specialty"^^xsd:anyURI ;
-           fhir:link <https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-practitioner-specialty>
+           fhir:v "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-practitioner-specialty|2.2.0"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-practitioner-specialty|2.2.0>
          ]
        ] ;
        fhir:mapping ( [
@@ -1184,8 +1184,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1200,8 +1200,8 @@
          ] ) ;
          fhir:strength [ fhir:v "preferred" ] ;
          fhir:valueSet [
-           fhir:v "http://terminology.hl7.org/ValueSet/v2-0276"^^xsd:anyURI ;
-           fhir:link <http://terminology.hl7.org/ValueSet/v2-0276>
+           fhir:v "http://terminology.hl7.org/ValueSet/v2-0276|3.0.0"^^xsd:anyURI ;
+           fhir:link <http://terminology.hl7.org/ValueSet/v2-0276|3.0.0>
          ]
        ] ;
        fhir:mapping ( [
@@ -1236,8 +1236,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1253,8 +1253,8 @@
          fhir:strength [ fhir:v "preferred" ] ;
          fhir:description [ fhir:v "The Reason for the appointment to take place." ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.org/fhir/ValueSet/encounter-reason"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/ValueSet/encounter-reason>
+           fhir:v "http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/encounter-reason|4.0.1>
          ]
        ] ;
        fhir:mapping ( [
@@ -1282,17 +1282,17 @@
        fhir:type ( [
          fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
          fhir:targetProfile ( [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Condition"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Condition>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Condition|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Condition|4.0.1>
          ] [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Procedure"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Procedure>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1>
          ] [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Observation"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Observation>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Observation|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Observation|4.0.1>
          ] [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation|4.0.1>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -1302,8 +1302,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1338,8 +1338,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1382,8 +1382,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1413,8 +1413,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
          fhir:targetProfile ( [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Resource"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Resource|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Resource|4.0.1>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -1424,8 +1424,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1465,8 +1465,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1509,8 +1509,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1553,8 +1553,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1584,8 +1584,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
          fhir:targetProfile ( [
-           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot"^^xsd:anyURI ;
-           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot>
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot|2.2.0"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-slot|2.2.0>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -1595,8 +1595,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1628,8 +1628,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1667,8 +1667,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1708,8 +1708,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1740,8 +1740,8 @@
        fhir:type ( [
          fhir:code [ fhir:v "Reference"^^xsd:anyURI ] ;
          fhir:targetProfile ( [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/ServiceRequest"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/ServiceRequest>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/ServiceRequest|4.0.1>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -1751,8 +1751,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1786,8 +1786,8 @@
          fhir:expression [ fhir:v "type.exists() or actor.exists()" ] ;
          fhir:xpath [ fhir:v "(exists(f:type) or exists(f:actor))" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Appointment"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Appointment>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Appointment|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Appointment|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "ele-1" ] ;
@@ -1796,8 +1796,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1868,8 +1868,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "ext-1" ] ;
@@ -1878,8 +1878,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1913,8 +1913,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] [
          fhir:key [ fhir:v "ext-1" ] ;
@@ -1923,8 +1923,8 @@
          fhir:expression [ fhir:v "extension.exists() != value.exists()" ] ;
          fhir:xpath [ fhir:v "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v true ] ;
@@ -1957,8 +1957,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -1974,8 +1974,8 @@
          fhir:strength [ fhir:v "extensible" ] ;
          fhir:description [ fhir:v "Role of participant in encounter." ] ;
          fhir:valueSet [
-           fhir:v "http://hl7.org/fhir/ValueSet/encounter-participant-type"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/ValueSet/encounter-participant-type>
+           fhir:v "http://hl7.org/fhir/ValueSet/encounter-participant-type|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/ValueSet/encounter-participant-type|4.0.1>
          ]
        ] ;
        fhir:mapping ( [
@@ -2011,6 +2011,9 @@
          ] [
            fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"^^xsd:anyURI ;
            fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner>
+         ] [
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service>
          ] )
        ] ) ;
        fhir:constraint ( [
@@ -2020,8 +2023,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -2061,8 +2064,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -2111,8 +2114,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -2164,8 +2167,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -2197,8 +2200,8 @@
          fhir:expression [ fhir:v "hasValue() or (children().count() > id.count())" ] ;
          fhir:xpath [ fhir:v "@value|f:*|h:div" ] ;
          fhir:source [
-           fhir:v "http://hl7.org/fhir/StructureDefinition/Element"^^xsd:anyURI ;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+           fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element|4.0.1>
          ]
        ] ) ;
        fhir:isModifier [ fhir:v false ] ;
@@ -2233,6 +2236,9 @@
          ] [
            fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner"^^xsd:anyURI ;
            fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-practitioner>
+         ] [
+           fhir:v "https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service"^^xsd:anyURI ;
+           fhir:link <https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-healthcare-service>
          ] )
        ] )
      ] )

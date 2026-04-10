@@ -12,7 +12,7 @@
   <sch:pattern>
     <sch:title>f:Encounter</sch:title>
     <sch:rule context="f:Encounter">
-      <sch:assert test="count(f:extension[@url = 'https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-estimated-discharge-date']) &lt;= 1">extension with URL = 'https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-estimated-discharge-date': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-estimated-discharge-date|2.2.0']) &lt;= 1">extension with URL = 'https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-estimated-discharge-date|2.2.0': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment']) &lt;= 1">extension with URL = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions']) &lt;= 1">extension with URL = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:extension[@url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr']) &gt;= 1">extension with URL = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr': minimum cardinality of 'extension' is 1</sch:assert>

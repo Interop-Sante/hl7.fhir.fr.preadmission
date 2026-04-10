@@ -1,9 +1,13 @@
+<!-- get modelType -->
+
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>preadmission-statuts-cs - Testing - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+    <title>Fr Preadmission QuestionnaireResponse Profile - Examples - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v1.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +46,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8.21"}
-    h3,h4,h5,h6{--heading-prefix:"8.21"}</style>
+    <style type="text/css">h2{--heading-prefix:"8.8"}
+    h3,h4,h5,h6{--heading-prefix:"8.8"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -59,7 +63,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - ci-build
+            <span style="display:inline-block;">1.0.0-ballot - ballot
 
 
 
@@ -143,15 +147,15 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>preadmission-statuts-cs</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Fr Preadmission QuestionnaireResponse Profile</b></li>
 
           <span style="float:right;">
 
-            <a href="CodeSystem-preadmission-statuts-cs.html">&lt;prev</a> | 
+            <a href="StructureDefinition-preadmission-questionnaireresponse-fr-testing.html">&lt;prev</a> | 
 
             <a href="#bottom">bottom</a>
 
-          | <a href="CodeSystem-preadmission-statuts-cs.xml.html">next&gt;</a>
+          | <a href="StructureDefinition-preadmission-questionnaireresponse-fr.profile.xml.html">next&gt;</a>
 
           </span>
 
@@ -165,9 +169,12 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+<div style="counter-reset: section 6" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v1.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
+
+
+
 
 
 
@@ -179,49 +186,74 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="CodeSystem-preadmission-statuts-cs.html">Narrative Content</a>
+    <a href="StructureDefinition-preadmission-questionnaireresponse-fr.html">Content</a>
+  </li>
+
+
+
+  <li>
+    <a href="StructureDefinition-preadmission-questionnaireresponse-fr-definitions.html">Detailed Descriptions</a>
   </li>
 
 
 
   
     <li>
-      <a href="CodeSystem-preadmission-statuts-cs.xml.html">XML</a>
+      <a href="StructureDefinition-preadmission-questionnaireresponse-fr-mappings.html">Mappings</a>
+    </li>
+  
+
+
+
+
+
+
+  
+    
+      <li class="active">
+        <a href="#">Examples</a>
+      </li>
+    
+  
+
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-preadmission-questionnaireresponse-fr.profile.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="CodeSystem-preadmission-statuts-cs.json.html">JSON</a>
+      <a href="StructureDefinition-preadmission-questionnaireresponse-fr.profile.json.html">JSON</a>
     </li>
   
 
 
   
     <li>
-      <a href="CodeSystem-preadmission-statuts-cs.ttl.html">TTL</a>
+      <a href="StructureDefinition-preadmission-questionnaireresponse-fr.profile.ttl.html">TTL</a>
     </li>
   
-
 
 
 </ul>
 
+
   <a name="root"> </a>
-  <h2 id="root">CodeSystem: preadmission-statuts-cs - Testing
-(Experimental)
-  </h2>
+  <h2 id="root">Resource Profile: PreadmissionQuestionnaireResponseFr - Examples</h2>
 
-
-  <table class="colsd">
+  <table class="colsi">
     <tr>
 
       <td colspan="2">
         
-          Draft
+          Active
           
-            as of 2026-02-24
+            as of 2026-04-10
           
         
       </td>
@@ -230,21 +262,31 @@
   </table>
 
 
+   <!-- insert intro if present -->
+    
 
 
-<!-- insert intro if present -->
 
 
 
-
-<h3>Test Plans</h3>
-
-  <p><b>No test plans are currently available for the  CodeSystem.</b></p>
-
-
-<h3>Test Scripts</h3>
-
-  <p><b>No test scripts are currently available for the  CodeSystem.</b></p>
+  <p>Examples for the preadmission-questionnaireresponse-fr Profile.</p>
+  <table style="grid">
+    <tbody>
+      
+        <tr>
+          <td>
+            <a href="QuestionnaireResponse-qr-chb-part.html">Réponse questionnaire chambre particulière</a>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            <a href="QuestionnaireResponse-qr-irm-001.html">Questionnaire préadmission IRM</a>
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
 
 
 <!-- insert notes if present -->
@@ -252,9 +294,8 @@
 
 
 
-
-
 </div>
+
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -262,6 +303,8 @@
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
 
   <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
@@ -274,7 +317,7 @@
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="CodeSystem-preadmission-statuts-cs.html">&lt;prev</a>
+                <a href="StructureDefinition-preadmission-questionnaireresponse-fr-testing.html">&lt;prev</a>
 
               </td>
               <td style="text-align:center">
@@ -282,7 +325,7 @@
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="CodeSystem-preadmission-statuts-cs.xml.html">next&gt;</a>
+                <a href="StructureDefinition-preadmission-questionnaireresponse-fr.profile.xml.html">next&gt;</a>
 
               </td>
             </tr>
@@ -292,7 +335,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 24, 2026 09:27+0000">2026-02-24</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 11:38+0000">2026-04-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

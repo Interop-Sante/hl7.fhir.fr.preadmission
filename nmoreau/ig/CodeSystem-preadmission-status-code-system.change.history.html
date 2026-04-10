@@ -1,9 +1,13 @@
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>preadmission-statuts-cs - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v0.1.0</title>
+    <title> - Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne v1.0.0-ballot</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +46,8 @@
 	  <script src="assets/js/prism.js"></script>
     <script type="text/javascript" src="assets/js/mermaid.js"></script>
     <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
-    <style type="text/css">h2{--heading-prefix:"8.21"}
-    h3,h4,h5,h6{--heading-prefix:"8.21"}</style>
+    <style type="text/css">h2{--heading-prefix:""}
+    h3,h4,h5,h6{--heading-prefix:""}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
 
@@ -59,7 +63,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne</span>
             <br/>
-            <span style="display:inline-block;">0.1.0 - ci-build
+            <span style="display:inline-block;">1.0.0-ballot - ballot
 
 
 
@@ -143,15 +147,11 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>preadmission-statuts-cs</b></li>
+          
 
           <span style="float:right;">
 
-            <a href="CodeSystem-document-type-ins-cs.ttl.html">&lt;prev</a> | 
-
             <a href="#bottom">bottom</a>
-
-          | <a href="CodeSystem-preadmission-statuts-cs-testing.html">next&gt;</a>
 
           </span>
 
@@ -165,8 +165,9 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne - Local Development build (v1.0.0-ballot) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://hl7.fr/fhir/fr/preadmission/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -178,124 +179,45 @@
 
 <ul class="nav nav-tabs">
 
-  <li class="active">
-    <a href="#">Narrative Content</a>
+  <li>
+    <a href="CodeSystem-preadmission-status-code-system.html">Narrative Content</a>
   </li>
 
 
 
   
     <li>
-      <a href="CodeSystem-preadmission-statuts-cs.xml.html">XML</a>
+      <a href="CodeSystem-preadmission-status-code-system.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="CodeSystem-preadmission-statuts-cs.json.html">JSON</a>
+      <a href="CodeSystem-preadmission-status-code-system.json.html">JSON</a>
     </li>
   
 
 
   
     <li>
-      <a href="CodeSystem-preadmission-statuts-cs.ttl.html">TTL</a>
+      <a href="CodeSystem-preadmission-status-code-system.ttl.html">TTL</a>
     </li>
   
 
 
 
 </ul>
+
 
   <a name="root"> </a>
-  <h2 id="root">CodeSystem: preadmission-statuts-cs
-(Experimental)
-  </h2>
-
-  <table class="colsd">
-
-    <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs"/></span>
-      </td>
-      <td><i>Version</i>:
-      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs|0.1.0"/></span>
-      </td>
-    </tr>
-
-    <tr>
-
-
-
-
-
-
-
-      <td colspan="4">
-        
-          Draft
-          
-            as of 2026-02-24
-          
-        
-      </td>
-
-
-
-      <td><i>Computable Name</i>: <span style="font-family: monospace;">PreadmissionStatusCodeSystem</span></td>
-    </tr>
-
-
-
-
-  </table>
-
-<p>
-<p>Statut de pré-admission</p>
-
-</p>
-
-  <!-- insert intro if present -->
-  
-
-
-
-  <p>
-  This Code system is referenced in the content logical definition of the following value sets:
-  </p>
-
-  
-<ul>
- <li><a href="ValueSet-preadmission-statuts-vs.html">PreAdmissionStatusValueSet</a></li>
-</ul>
-
-
-  <div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"></p><a name="preadmission-statuts-cs"> </a><a name="hcpreadmission-statuts-cs"> </a>
-<div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"></p><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-insensitive code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs</code> defines the following codes:</p>
-<table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr>
-<tr><td style="white-space:nowrap">CANCELLED<a name="preadmission-statuts-cs-CANCELLED"> </a></td>
-<td>Pré-admission annulée</td></tr>
-<tr><td style="white-space:nowrap">CREATED<a name="preadmission-statuts-cs-CREATED"> </a></td>
-<td>Pré-admission créée</td></tr>
-<tr><td style="white-space:nowrap">IN_PROGRESS<a name="preadmission-statuts-cs-IN_PROGRESS"> </a></td>
-<td>Pré-admission en cours</td></tr>
-<tr><td style="white-space:nowrap">READY<a name="preadmission-statuts-cs-READY"> </a></td>
-<td>Pré-admission prête</td></tr>
-<tr><td style="white-space:nowrap">COMPLETED<a name="preadmission-statuts-cs-COMPLETED"> </a></td>
-<td>Pré-admission terminée</td></tr>
-<tr><td style="white-space:nowrap">REFUSED<a name="preadmission-statuts-cs-REFUSED"> </a></td>
-<td>Pré-admission refusée</td></tr></table></div>
-
-  
-
-  <!-- insert notes if present -->
-  
-
-
+  <h2 id="root">: PreadmissionStatusCodeSystem - Change History</h2>
+  <p>History of changes for preadmission-status-code-system .</p>
 
   
 
 </div>
+
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -303,6 +225,8 @@
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
 
   <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
@@ -315,7 +239,7 @@
             <tr>
               <td style="text-align:left">&#xA0;
 
-                <a href="CodeSystem-document-type-ins-cs.ttl.html">&lt;prev</a>
+                <span style="visibility:hidden">&lt;prev</span>
 
               </td>
               <td style="text-align:center">
@@ -323,7 +247,7 @@
               </td>
               <td style="text-align:right">&#xA0;
 
-                <a href="CodeSystem-preadmission-statuts-cs-testing.html">next&gt;</a>
+                <span style="visibility:hidden">next&gt;</span>
 
               </td>
             </tr>
@@ -333,7 +257,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 24, 2026 09:27+0000">2026-02-24</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://interopsante.org/">Interop&#39;Santé</a>.  Package hl7.fhir.fr.preadmission#1.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 10, 2026 11:38+0000">2026-04-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

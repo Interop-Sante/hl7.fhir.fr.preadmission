@@ -2,8 +2,8 @@
   "codeSystems" : [
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionConsentCategoryVS",
       "title" : "preadmission-consent-category-vs",
       "description" : "ValueSet pour les catégories de consentement. Tous les codes sont standards et existants.",
@@ -14,8 +14,8 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionConsentCodeValueSet",
       "title" : "preadmission-consent-code-vs",
       "description" : "Code HL7 représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants.",
@@ -26,8 +26,8 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionConsentPurposeReasonVS",
       "title" : "preadmission-consent-purpose-reason-vs",
       "description" : "Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason).",
@@ -38,13 +38,15 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreadmissionDocumentTypeFrValueSet",
       "title" : "preadmission-document-type-vs",
       "description" : "Liste des types de documents autorisés pour la préadmission",
       "systems" : [
-        "https://mos.esante.gouv.fr/NOS/JDV_J66-TypeCode-DMP/FHIR/JDV-J66-TypeCode-DMP",
+        "https://mos.esante.gouv.fr/NOS/TRE_A12-NomenclatureASTM/FHIR/TRE-A12-NomenclatureASTM",
+        "http://loinc.org",
+        "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
         "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
         "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs"
       ],
@@ -54,13 +56,13 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "PreAdmissionStatusValueSet",
       "title" : "preadmission-status-vs",
       "description" : "Statuts valides qu'une préadmission peut prendre.",
       "systems" : [
-        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-statuts-cs"
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"
       ],
       "uses" : {
       },
@@ -68,8 +70,8 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "TypeCouvertureSocialeValueSet",
       "title" : "type-couverture-sociale-vs",
       "description" : "Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)",
@@ -80,8 +82,8 @@
     },
     {
       "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
-      "version" : "0.1.0",
-      "status" : "draft",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
       "name" : "TypeVenueEncounterValueSet",
       "title" : "type-venue-encounter-vs",
       "description" : "Les différents types d'admission (hospitalisation, consultation, etc.)",
@@ -160,8 +162,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.79"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/composition-status",
@@ -486,8 +488,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.250"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/encounter-reason",
@@ -501,8 +503,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.261"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/encounter-special-arrangements",
@@ -605,11 +607,12 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
       "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-questionnaireresponse-fr.html" : "Fr Preadmission QuestionnaireResponse Profile",
       "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
-      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile"
+      "StructureDefinition-preadmission-coverage-fr.html" : "Fr Preadmission Coverage Profile",
+      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
@@ -654,6 +657,34 @@
       "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
     },
     {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-answers",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireAnswerCodes",
+      "title" : "Questionnaire Answer Codes",
+      "description" : "Example list of codes for answers to questions. (Not complete or necessarily appropriate.)",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.446"],
+      "sources" : ["2.16.840.1.113883.4.642.3.446"],
+      "uses" : {
+      },
+      "StructureDefinition-preadmission-questionnaireresponse-fr.html" : "Fr Preadmission QuestionnaireResponse Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/questionnaire-answers-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "QuestionnaireResponseStatus",
+      "title" : "QuestionnaireResponseStatus",
+      "description" : "Lifecycle status of the questionnaire response.",
+      "systems" : ["http://hl7.org/fhir/questionnaire-answers-status"],
+      "oids" : ["required"],
+      "sources" : ["required"],
+      "uses" : {
+      },
+      "StructureDefinition-preadmission-questionnaireresponse-fr.html" : "Fr Preadmission QuestionnaireResponse Profile"
+    },
+    {
       "url" : "http://hl7.org/fhir/ValueSet/security-labels",
       "version" : "4.0.1",
       "status" : "active",
@@ -671,10 +702,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.47"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
       "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
-      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile"
+      "StructureDefinition-preadmission-consent-fr.html" : "Fr Preadmission Consent Profile",
+      "StructureDefinition-preadmission-documentreference-fr.html" : "Fr Preadmission DocumentReference Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/security-role-type",
@@ -724,8 +755,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.518"],
       "uses" : {
       },
-      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile",
-      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+      "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile",
+      "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/subscriber-relationship",
@@ -745,7 +776,7 @@
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v2-0092",
-      "version" : "2.0.0",
+      "version" : "3.0.0",
       "status" : "active",
       "name" : "Hl7VSReAdmissionIndicator",
       "title" : "hl7VS-re-admissionIndicator",
@@ -759,7 +790,7 @@
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v2-0276",
-      "version" : "2.0.0",
+      "version" : "3.0.0",
       "status" : "active",
       "name" : "Hl7VSAppointmentReasonCodes",
       "title" : "hl7VS-appointmentReasonCodes",
@@ -827,11 +858,11 @@
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-discharge-disposition",
-      "version" : "2.1.0",
+      "version" : "2.2.0",
       "status" : "active",
       "name" : "FRCoreValueSetEncounterDischargeDisposition",
       "title" : "FR Core ValueSet Encounter discharge disposition",
-      "description" : "This value set defines a set of codes that can be used to where the patient left the hospital | Circonstances de sortie de l'hôpital.",
+      "description" : "Circonstances de sortie de l'hôpital.\r\nThis value set defines a set of codes that can be used to where the patient left the hospital",
       "systems" : [
         "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-circonstances-sortie",
         "http://terminology.hl7.org/CodeSystem/discharge-disposition"
@@ -842,7 +873,7 @@
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type",
-      "version" : "2.1.0",
+      "version" : "2.2.0",
       "status" : "active",
       "name" : "FRCoreValueSetEncounterIdentifierType",
       "title" : "FR Core ValueSet Encounter identifier type",
@@ -856,11 +887,11 @@
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-type",
-      "version" : "2.1.0",
+      "version" : "2.2.0",
       "status" : "active",
       "name" : "FRCoreValueSetEncounterType",
       "title" : "FR Core ValueSet Encounter type",
-      "description" : "A coded type for an encounter | Jeu de valeurs des types de rencontre.",
+      "description" : "Jeu de valeurs des types de rencontre.\r\nA coded type for an encounter",
       "systems" : [
         "http://terminology.hl7.org/CodeSystem/v2-0007",
         "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-type-admission"
@@ -870,14 +901,14 @@
       "StructureDefinition-preadmission-encounter-fr.html" : "Fr Preadmission Encounter Profile"
     },
     {
-      "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-location-physical-type",
-      "version" : "2.1.0",
+      "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-location-type",
+      "version" : "2.2.0",
       "status" : "active",
-      "name" : "FRCoreValueSetLocationPhysicalType",
-      "title" : "FR Core ValueSet Location physical type",
-      "description" : "French location physical type | Types de lieux physiques pour la France",
+      "name" : "FRCoreValueSetLocationType",
+      "title" : "FR Core ValueSet Location type",
+      "description" : "Jeu de valeurs du rôle joué par un lieu.\n\rA role for a location",
       "systems" : [
-        "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-physical-type"
+        "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-location-type"
       ],
       "uses" : {
       },
@@ -885,7 +916,7 @@
     },
     {
       "url" : "https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-practitioner-specialty",
-      "version" : "2.1.0",
+      "version" : "2.2.0",
       "status" : "active",
       "name" : "FRCoreValueSetPractitionerSpecialty",
       "title" : "FR Core ValueSet Practitioner specialty",
@@ -896,6 +927,24 @@
       "uses" : {
       },
       "StructureDefinition-preadmission-appointment-fr.html" : "Fr Preadmission Appointment Profile"
+    },
+    {
+      "url" : "https://mos.esante.gouv.fr/NOS/JDV_J66-TypeCode-DMP/FHIR/JDV-J66-TypeCode-DMP",
+      "version" : "20240927120000",
+      "status" : "active",
+      "name" : "JDV_J66_TypeCode_DMP",
+      "title" : null,
+      "description" : "Jeu de valeurs pour métadonnée typeCode DMP",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A12-NomenclatureASTM/FHIR/TRE-A12-NomenclatureASTM",
+        "http://loinc.org",
+        "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire"
+      ],
+      "oids" : ["1.2.250.1.213.1.1.5.7"],
+      "sources" : ["1.2.250.1.213.1.1.5.7"],
+      "uses" : {
+      },
+      "ValueSet-preadmission-document-type-vs.html" : "preadmission-document-type-vs"
     }
   ]
 }
