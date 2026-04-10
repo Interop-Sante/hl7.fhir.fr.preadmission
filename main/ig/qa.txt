@@ -3,7 +3,7 @@ PREADMISSIONFR : Validation Results
 
 err = 11, warn = 47, info = 28
 IG Publisher Version: 2.0.10 Out of date - current version is 2.2.5
-Generated Fri Apr 10 13:48:56 UTC 2026. FHIR version 4.0.1 for hl7.fhir.fr.preadmission#1.0.0-ballot (canonical = http://hl7.fr/fhir/fr/preadmission)
+Generated Fri Apr 10 14:45:12 UTC 2026. FHIR version 4.0.1 for hl7.fhir.fr.preadmission#1.0.0-ballot (canonical = http://hl7.fr/fhir/fr/preadmission)
  Build Errors : 0 / 5 / 0
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Appointment-appt-irm-001 : 1 / 0 / 2
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/CapabilityStatement-PreadmissionCapabilityStatement : 0 / 0 / 1
