@@ -18,17 +18,13 @@ La ressource `Appointment` joue un rôle central dans la gestion des rendez-vous
 
 ### Spécificités du profil `PreadmissionAppointmentFr`
 
-Le profil **PreadmissionAppointmentFr** apporte des contraintes et des extensions spécifiques pour répondre aux besoins de la préadmission.
-
-#### **Extensions spécifiques**
-
-- **`PreadmissionAppointmentQuestionnaireResponseFr`** : Permet de référencer un ou plusieurs `QuestionnaireResponse` remplis par le patient dans le cadre de la préadmission.
+Le profil **PreadmissionAppointmentFr** apporte des contraintes spécifiques pour répondre aux besoins de la préadmission.
 
 #### **Contraintes principales**
 
 - **Participant** : Le participant principal doit être un patient, référencé via `participant.actor` avec une ressource `Patient`.
-è- **Lien avec les questionnaires** : Les questionnaires de pré-admission sont associés **au rendez-vous** via `QuestionnaireResponse.subject=Appointment/{id}`.  
-  Recherche : `GET /QuestionnaireResponse?subject=Appointment/1234` 
+- **Lien avec les questionnaires** : Les questionnaires de pré-admission sont associés **au rendez-vous** via `QuestionnaireResponse.subject=Appointment/{id}`.  
+  Les réponses peuvent être récupérées via une recherche par patient : `GET /QuestionnaireResponse?patient=Patient/{id}` 
 
 ---
 
@@ -76,6 +72,77 @@ Questionnaire/preadmission-rdv
                 │
 QuestionnaireResponse/resp-001
   └─ subject: Appointment/1234   ← Lien direct RDV ↔ réponses
+
+
+### Récupération des ressources liées à un rendez-vous
+
+Dans le cadre de la préadmission, plusieurs ressources sont liées au patient associé au rendez-vous. Voici comment les récupérer :
+
+#### Récupérer les Coverage (couvertures sociales)
+
+Il n'existe pas de lien direct entre `Appointment` et `Coverage` dans FHIR. La méthode recommandée est :
+
+**Approche en 2 étapes :**
+
+```http
+# 1. Récupérer l'Appointment pour obtenir le patient
+GET /Appointment/appt-irm-001
+
+# 2. Extraire le patient.id depuis participant[].actor et chercher les Coverage
+GET /Coverage?patient=Patient/patient-001
+```
+
+Cette requête retourne l'Appointment ainsi que toutes les Coverage du patient dans un seul Bundle.
+
+#### Récupérer les QuestionnaireResponse
+
+**Par subject (Appointment) :**
+
+```http
+GET /QuestionnaireResponse?subject=Appointment/appt-irm-001
+```
+
+**Par patient :**
+
+```http
+GET /QuestionnaireResponse?patient=Patient/patient-001
+```
+
+#### Récupérer les Consent
+
+**Par patient :**
+
+```http
+GET /Consent?patient=Patient/patient-001
+```
+
+#### Récupérer l'Encounter de préadmission
+
+**Par appointment :**
+
+```http
+GET /Encounter?appointment=Appointment/appt-irm-001
+```
+
+**Par patient :**
+
+```http
+GET /Encounter?patient=Patient/patient-001
+```
+
+#### Récupérer les DocumentReference
+
+**Via l'Encounter (si déjà connu) :**
+
+```http
+GET /DocumentReference?encounter=Encounter/encounter-irm-001
+```
+
+**Via le patient :**
+
+```http
+GET /DocumentReference?patient=Patient/patient-001
+```
 
 
 ### Bonnes pratiques

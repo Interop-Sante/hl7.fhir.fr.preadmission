@@ -6,8 +6,6 @@ Description: "Profil Consent pour les consentements lors de la préadmission"
 
 * patient 1..1
 * patient only Reference(FRCorePatientProfile)
-
-
 * status 1..1
 * status = #active (exactly)
 * scope 1..1
@@ -15,7 +13,6 @@ Description: "Profil Consent pour les consentements lors de la préadmission"
 * category 1..*
 * category.coding 1..*
 * category.coding from PreadmissionConsentCategoryVS (required)
-* patient 1..1
 * dateTime 1..1
 
 // provision unique racine

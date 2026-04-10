@@ -15,7 +15,6 @@ Usage: #definition
 * software.version = "1.0.0"
 * fhirVersion = #4.0.1
 * format = #json
-* format = #xml
 
 * rest[0].mode = #server
 
@@ -32,13 +31,14 @@ Usage: #definition
 * rest[0].resource[=].searchParam[0].type = #token
 * rest[0].resource[=].searchParam[0].documentation = "Le serveur DOIT permettre la recherche des préadmission par son statut (extension PreadmissionStatutFr)."
 * rest[0].resource[=].searchParam[+].name = "patient"
-* rest[0].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Encounter-patient"
 * rest[0].resource[=].searchParam[=].type = #reference
 * rest[0].resource[=].searchParam[=].documentation = "Le serveur DOIT permettre la recherche par patient associé"
 * rest[0].resource[=].searchParam[+].name = "date"
-* rest[0].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Encounter-date"
 * rest[0].resource[=].searchParam[=].type = #date
 * rest[0].resource[=].searchParam[=].documentation = "Le serveur DOIT permettre la recherche par date de l'Encounter"
+* rest[0].resource[=].searchParam[+].name = "appointment"
+* rest[0].resource[=].searchParam[=].type = #reference
+* rest[0].resource[=].searchParam[=].documentation = "Le serveur DOIT permettre la recherche des préadmissions par rendez-vous"
 * rest[0].resource[=].searchParam[+].name = "_lastUpdated"
 * rest[0].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"
 * rest[0].resource[=].searchParam[=].type = #date
@@ -49,12 +49,24 @@ Usage: #definition
 * rest[0].resource[=].profile = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"
 * rest[0].resource[=].interaction[0].code = #read
 * rest[0].resource[=].interaction[1].code = #search-type
+* rest[0].resource[=].searchParam[0].name = "patient"
+* rest[0].resource[=].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/Appointment-patient"
+* rest[0].resource[=].searchParam[0].type = #reference
+* rest[0].resource[=].searchParam[0].documentation = "Le serveur DOIT permettre la recherche des rendez-vous par patient"
+* rest[0].resource[=].searchParam[+].name = "date"
+* rest[0].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Appointment-date"
+* rest[0].resource[=].searchParam[=].type = #date
+* rest[0].resource[=].searchParam[=].documentation = "Le serveur DOIT permettre la recherche des rendez-vous par date"
 
 // Consent
 * rest[0].resource[+].type = #Consent
 * rest[0].resource[=].profile = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
 * rest[0].resource[=].interaction[0].code = #read
 * rest[0].resource[=].interaction[1].code = #search-type
+* rest[0].resource[=].searchParam[0].name = "patient"
+* rest[0].resource[=].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
+* rest[0].resource[=].searchParam[0].type = #reference
+* rest[0].resource[=].searchParam[0].documentation = "Le serveur DOIT permettre la recherche des consentements par patient"
 
 // Coverage
 * rest[0].resource[+].type = #Coverage
@@ -73,8 +85,10 @@ Usage: #definition
 * rest[0].resource[=].interaction[1].code = #search-type
 * rest[0].resource[=].searchParam[0].name = "encounter"
 * rest[0].resource[=].searchParam[0].type = #reference
-* rest[0].resource[=].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-encounter"
-* rest[0].resource[=].searchParam[0].documentation = "Le serveur DOIT permettre la recherche des documets par encounter (context.encounter)"
+* rest[0].resource[=].searchParam[0].documentation = "Le serveur DOIT permettre la recherche des documents par encounter (context.encounter)"
+* rest[0].resource[=].searchParam[+].name = "patient"
+* rest[0].resource[=].searchParam[=].type = #reference
+* rest[0].resource[=].searchParam[=].documentation = "Le serveur DOIT permettre la recherche des documents par patient"
 
 // Patient
 * rest[0].resource[+].type = #Patient
@@ -83,5 +97,14 @@ Usage: #definition
 
 // QuestionnaireResponse
 * rest[0].resource[+].type = #QuestionnaireResponse
+* rest[0].resource[=].profile = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr"
 * rest[0].resource[=].interaction[0].code = #read
 * rest[0].resource[=].interaction[1].code = #search-type
+* rest[0].resource[=].searchParam[0].name = "subject"
+* rest[0].resource[=].searchParam[0].definition = "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-subject"
+* rest[0].resource[=].searchParam[0].type = #reference
+* rest[0].resource[=].searchParam[0].documentation = "Le serveur DOIT permettre la recherche des réponses par subject (Appointment ou Encounter)"
+* rest[0].resource[=].searchParam[+].name = "patient"
+* rest[0].resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-patient"
+* rest[0].resource[=].searchParam[=].type = #reference
+* rest[0].resource[=].searchParam[=].documentation = "Le serveur DOIT permettre la recherche des réponses par patient"

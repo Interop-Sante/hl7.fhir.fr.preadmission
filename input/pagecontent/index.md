@@ -104,11 +104,6 @@ Pour enrichir les ressources FHIR et répondre aux besoins particuliers de la pr
 - **Ressource concernée :** `Encounter`
 - **Description :** Permet à l'agent administratif de transmettre des consignes spécifiques au patient.
 
-###### Questionnaire lié à la pré-admission
-
-- **Extension :** `PreadmissionQuestionnaireExtension`
-- **Ressource concernée :** `Appointment`
-- **Description :** Permet de référencer une ou plusieurs réponses à des questionnaires administratifs (par exemple, demande de chambre particulière) recueillies dans le cadre de la pré-admission.
 
 #### Enchaînement des Processus
 

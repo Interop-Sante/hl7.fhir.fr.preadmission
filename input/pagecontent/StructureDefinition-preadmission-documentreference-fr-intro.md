@@ -8,7 +8,7 @@ Les documents sont modélisés dans FHIR à l’aide de la ressource `DocumentRe
 
 ### Documents typiques à fournir
 
-Ces documents sont modélisés dans FHIR à l’aide de la ressource `DocumentReference`, avec le type de document contraint par le `ValueSet` [`PreadmissionValueSetDocumentTypeFr`](preadmission-document-type-valueset.html).
+Ces documents sont modélisés dans FHIR à l’aide de la ressource `DocumentReference`, avec le type de document contraint par le `ValueSet` [`PreadmissionValueSetDocumentTypeFr`](ValueSet-preadmission-document-type-vs.html).
 
 ---
 
@@ -25,10 +25,17 @@ La ressource `DocumentReference` est utilisée pour représenter chaque document
 
 ### Critère de recherche autorisé
 
-Dans le contexte de la préadmission, la ressource `DocumentReference` ne peut être recherchée qu'à partir de l**encounter**. Cela signifie que les systèmes doivent utiliser uniquement le critère `encounter` pour récupérer les documents liés à la pré-admission, conformément aux contraintes d'implémentation définies.
+Dans le contexte de la préadmission, la ressource `DocumentReference` peut être recherchée :
+
+- à partir de l'**encounter** (documents liés à une préadmission)
+- et, si nécessaire, à partir du **patient** (liste des documents du patient)
 
 ```plaintext
 documentreference?encounter=
+```
+
+```plaintext
+documentreference?patient=
 ```
 
 ### Bonnes pratiques

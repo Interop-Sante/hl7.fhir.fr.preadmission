@@ -5,9 +5,8 @@ Description: "Couverture sociale AMO - préadmission."
 Usage: #example
 * id = "coverage-amo"
 * status = #active
-* type.coding[0].system = "http://terminology.hl7.org/CodeSystem/coverage-type"
+* type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * type.coding[0].code = #PUBLICPOL
-* type.coding[0].display = "Assurance Maladie Obligatoire"
 * beneficiary = Reference(patient-001) "Jean Dupont"
 * subscriber = Reference(patient-001) "Jean Dupont"
 * subscriberId = "123456789012345" // Numéro de sécurité sociale (NIR)

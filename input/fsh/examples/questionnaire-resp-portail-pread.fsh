@@ -1,5 +1,5 @@
 Instance: reponse-chambre-particuliere
-InstanceOf: QuestionnaireResponse
+InstanceOf: PreadmissionQuestionnaireResponseFr
 Title: "Réponse questionnaire chambre particulière"
 Description: "Réponse du patient au questionnaire posé par le portail de pré-admission."
 Usage: #example

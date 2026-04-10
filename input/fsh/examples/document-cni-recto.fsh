@@ -5,7 +5,7 @@ Description: "Scan du recto de la carte d'identité du patient - préadmission."
 Usage: #example
 * id = "documentreference-cni-recto"
 * status = #current
-* type.coding[0].system = "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-code-system"
+* type.coding[0].system = "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs"
 * type.coding[0].code = #CN_RECTO
 * type.coding[0].display = "Recto Carte d’identité"
 * subject = Reference(patient-001) "Jean Dupont"

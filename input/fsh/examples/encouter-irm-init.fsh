@@ -15,7 +15,7 @@ Usage: #example
 
 // Identifier tel que décrit dans le profil
 * identifier[0].use = #temp
-* identifier[0].type.coding[0].system = "http://interopsante.org/fhir/CodeSystem/fr-core-identifier-type"
+* identifier[0].type.coding[0].system = "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type"
 * identifier[0].type.coding[0].code = #VN
 * identifier[0].type.coding[0].display = "Visit Number"
 * identifier[0].system = "http://example.com/identifiers/encounters"

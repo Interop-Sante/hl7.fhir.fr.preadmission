@@ -5,8 +5,8 @@ Description: "Couverture sociale AMC - préadmission."
 Usage: #example
 * id = "coverage-amc"
 * status = #active
+* type.coding[0].system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
 * type.coding[0].code = #EHCPOL
-* type.coding[0].display = "Assurance Maladie Complémentaire"
 * beneficiary = Reference(patient-001) "Jean Dupont"
 * subscriber = Reference(patient-001) "Jean Dupont"
 * subscriberId = "AMC-987654321" // Numéro d'adhérent de l'AMC
@@ -14,10 +14,11 @@ Usage: #example
 * period.end = "2025-12-31T23:59:59+01:00"
 
 // Extension pour les informations spécifiques à l'AMC
-* extension[informationsAmc].extension[codeConvention].url = "codeConvention"
-* extension[informationsAmc].extension[codeConvention].valueString = "12345"
-* extension[informationsAmc].extension[codeCSR].url = "codeCSR"
-* extension[informationsAmc].extension[codeCSR].valueString = "67890"
+* extension[informationsAmc].extension[codeCSR].valueCode = #CSR67890
+* extension[informationsAmc].extension[datamatrix].valueString = "(exemple)DATAMATRIX-AMC-987654321"
+* extension[informationsAmc].extension[conventionParDomaine][+].extension[codeConvention].valueCode = #CONV12345
+* extension[informationsAmc].extension[conventionParDomaine][=].extension[domaine][+].valueCode = #consultation
+* extension[informationsAmc].extension[conventionParDomaine][=].extension[domaine][+].valueCode = #hospitalisation
 
 // Ajout d'un identifier
 * identifier[0].system = "http://example.com/identifiers/coverage"

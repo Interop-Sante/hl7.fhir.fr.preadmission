@@ -6,7 +6,7 @@ Usage: #example
 * id = "questionnaire-chb-part"
 * title = "Questionnaire IRM - Préadmission"
 * status = #active
-* subjectType = #appointment
+* subjectType = #Appointment
 * item[0].linkId = "private-room"
 * item[0].text = "Souhaitez-vous une chambre particulière ?"
 * item[0].type = #boolean
