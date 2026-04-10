@@ -1,0 +1,50 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "encounter-irm-externe",
+  "meta" : {
+    "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Venue encounter-irm-externe</b></p><a name=\"encounter-irm-externe\"> </a><a name=\"hcencounter-irm-externe\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-encounter-fr.html\">Fr Preadmission Encounter Profile</a></p></div><p><b>Extension Statut Pré-admission</b>: <span title=\"Codes:{http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system READY}\">Pré-admission prête</span></p><p><b>identifier</b>: Visit Number/15655244\u00a0(use:\u00a0temp,\u00a0)</p><p><b>status</b>: Planned</p><p><b>class</b>: <a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode AMB</a>: ambulatory</p><p><b>subject</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>appointment</b>: <a href=\"Appointment-appt-irm-001.html\">Rendez-vous préadmission IRM</a></p><p><b>period</b>: 2025-05-15 10:30:00+0100 --&gt; 2025-05-15 11:00:00+0100</p></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+        "code" : "READY"
+      }]
+    }
+  }],
+  "identifier" : [{
+    "use" : "temp",
+    "type" : {
+      "coding" : [{
+        "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type",
+        "code" : "VN",
+        "display" : "Visit Number"
+      }]
+    },
+    "system" : "http://example.com/identifiers/encounters",
+    "value" : "15655244"
+  }],
+  "status" : "planned",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "AMB",
+    "display" : "ambulatory"
+  },
+  "subject" : {
+    "reference" : "Patient/patient-001",
+    "display" : "Jean Dupont"
+  },
+  "appointment" : [{
+    "reference" : "Appointment/appt-irm-001",
+    "display" : "Rendez-vous préadmission IRM"
+  }],
+  "period" : {
+    "start" : "2025-05-15T10:30:00+01:00",
+    "end" : "2025-05-15T11:00:00+01:00"
+  }
+}

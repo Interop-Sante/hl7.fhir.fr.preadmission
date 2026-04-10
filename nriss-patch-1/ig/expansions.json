@@ -1,0 +1,1153 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "870088b7-7ff0-4d0f-9733-015110319fa7",
+  "meta" : {
+    "lastUpdated" : "2026-04-10T13:11:17.217+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion from tx.fhir.org based on Loinc v2.82</p><p>Ce jeu de valeur (ValueSet) contient 2 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-59284-0\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/59284-0/\">59284-0</a></td><td>http://loinc.org</td><td>Consent Document</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-57016-8\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/57016-8/\">57016-8</a></td><td>http://loinc.org</td><td>Privacy policy acknowledgment Document</td></tr></table></div>"
+      },
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs",
+      "version" : "1.0.0-ballot",
+      "name" : "PreadmissionConsentCategoryVS",
+      "title" : "preadmission-consent-category-vs",
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2026-04-10T13:10:35+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "France (la)"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:30a49575-2a34-4486-90d9-db0ac82adc08",
+        "timestamp" : "2026-04-10T13:11:38+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "fr-FR"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "includeDefinition",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://loinc.org|2.82"
+        }],
+        "contains" : [{
+          "system" : "http://loinc.org",
+          "code" : "59284-0",
+          "display" : "Consent Document"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "57016-8",
+          "display" : "Privacy policy acknowledgment Document"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://terminology.hl7.org/7.0.1/CodeSystem-consentaction.html\">codesystem Consent Action Codes v1.0.1 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 3 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td><td><b>Définition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/consentaction-collect\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.0.1/CodeSystem-consentaction.html#consentaction-collect\">collect</a></td><td>http://terminology.hl7.org/CodeSystem/consentaction</td><td/><td>Gather retrieved information for storage</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/consentaction-access\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.0.1/CodeSystem-consentaction.html#consentaction-access\">access</a></td><td>http://terminology.hl7.org/CodeSystem/consentaction</td><td/><td>Retrieval without permitting collection, use or disclosure. e.g., no screen-scraping for collection, use or disclosure (view-only access)</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/consentaction-disclose\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.0.1/CodeSystem-consentaction.html#consentaction-disclose\">disclose</a></td><td>http://terminology.hl7.org/CodeSystem/consentaction</td><td/><td>Transfer retrieved information</td></tr></table></div>"
+      },
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs",
+      "version" : "1.0.0-ballot",
+      "name" : "PreadmissionConsentCodeValueSet",
+      "title" : "preadmission-consent-code-vs",
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2026-04-10T13:10:35+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "France (la)"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:42e37191-c737-4e87-a886-265227835a11",
+        "timestamp" : "2026-04-10T13:11:39+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "fr-FR"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://terminology.hl7.org/CodeSystem/consentaction|1.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+          "code" : "collect"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+          "code" : "access"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+          "code" : "disclose"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActReason.html\">codesystem ActReason v4.0.0 (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 2 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td><td><b>Définition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-ActReason-TREAT\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActReason.html#v3-ActReason-TREAT\">TREAT</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ActReason</td><td/><td><div><p>To perform one or more operations on information for provision of health care.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-ActReason-PATREQ\"> </a>\u00a0\u00a0<a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActReason.html#v3-ActReason-PATREQ\">PATREQ</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ActReason</td><td/><td><div><p>**Definition:**Patient requests information from their profile.</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs",
+      "version" : "1.0.0-ballot",
+      "name" : "PreadmissionConsentPurposeReasonVS",
+      "title" : "preadmission-consent-purpose-reason-vs",
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2026-04-10T13:10:35+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "France (la)"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:06b389ed-2cc5-420d-a419-6e95003d758d",
+        "timestamp" : "2026-04-10T13:11:39+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "fr-FR"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://terminology.hl7.org/CodeSystem/v3-ActReason|4.0.0"
+        }],
+        "contains" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code" : "TREAT"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "code" : "PATREQ"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion from tx.fhir.org based on:</p><ul><li><a href=\"CodeSystem-document-type-cs.html\">codesystem document-type-cs v1.0.0-ballot (CodeSystem)</a></li><li>Loinc v2.82</li><li><a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html\">codesystem FR Core CodeSystem Mode Validation Identite v2.2.0 (CodeSystem)</a></li><li><a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html\">codesystem TRE_A05_TypeDocComplementaire v20240329120000 (CodeSystem)</a></li><li><a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A12-NomenclatureASTM.html\">codesystem TRE_A12_NomenclatureASTM v20231215120000 (CodeSystem)</a></li><li><a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/ValueSet-JDV-J66-TypeCode-DMP.html\">valueset JDV_J66_TypeCode_DMP v20240927120000 (ValueSet)</a></li></ul></div><p>Ce jeu de valeur (ValueSet) contient 132 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td><td><b>Définition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-AN\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-AN\">AN</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Extrait d'acte de naissance</td><td>Extrait d'acte de naissance</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-CC\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-CC\">CC</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Carnet de circulation</td><td>Carnet de circulation</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-CE\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-CE\">CE</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Carte Européenne</td><td>Carte Européenne</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-CM\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-CM\">CM</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Carte militaire</td><td>Carte militaire</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-CN\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-CN\">CN</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Carte nationale d'identité</td><td>Carte nationale d'identité</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-CS\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-CS\">CS</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Carte de séjour</td><td>Carte de séjour</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-LE\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-LE\">LE</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Livret de famille</td><td>Livret de famille</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-PA\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-PA\">PA</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Passeport</td><td>Passeport</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-PC\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-PC\">PC</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Permis de conduire</td><td>Permis de conduire</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-TC\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-TC\">TC</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Tiers de confiance</td><td>Tiers de confiance</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-DC\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-DC\">DC</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Document de Circulation pour étranger mineur</td><td>Document de Circulation pour étranger mineur</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-AC\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-AC\">AC</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Acte de naissance + Carte vitale avec photo</td><td>Acte de naissance + Carte vitale avec photo</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity-IE\"> </a>\u00a0\u00a0<a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html#fr-core-cs-mode-validation-identity-IE\">IE</a></td><td>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</td><td>Identification électronique EIDAS</td><td>Identification électronique EIDAS</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-CN_RECTO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-CN_RECTO\">CN_RECTO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-CN_VERSO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-CN_VERSO\">CN_VERSO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-ATTEST_VITALE\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-ATTEST_VITALE\">ATTEST_VITALE</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-JUSTIFICATIF_ID\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-JUSTIFICATIF_ID\">JUSTIFICATIF_ID</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-MUTUELLE\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-MUTUELLE\">MUTUELLE</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-MUTUELLE_RECTO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-MUTUELLE_RECTO\">MUTUELLE_RECTO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-MUTUELLE_VERSO\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-MUTUELLE_VERSO\">MUTUELLE_VERSO</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-JUSTIFICATIF_DOM\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-JUSTIFICATIF_DOM\">JUSTIFICATIF_DOM</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-ARRET_TRAVAIL\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-ARRET_TRAVAIL\">ARRET_TRAVAIL</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-PERS_PREVENIR\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-PERS_PREVENIR\">PERS_PREVENIR</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs-PERS_CONFIANCE\"> </a>\u00a0\u00a0<a href=\"CodeSystem-document-type-cs.html#document-type-cs-PERS_CONFIANCE\">PERS_CONFIANCE</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs</td><td/><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-AUTORIS-SOINS\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-AUTORIS-SOINS\">AUTORIS-SOINS</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Autorisation de soins et actes non usuels sanitaires</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-ATTEST-RESID\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-ATTEST-RESID\">ATTEST-RESID</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Attestation de résidence</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-ATTEST-DROITS-AM\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-ATTEST-DROITS-AM\">ATTEST-DROITS-AM</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Attestation de droits à l'assurance maladie</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-ATTEST-ASS-COMPL\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-ATTEST-ASS-COMPL\">ATTEST-ASS-COMPL</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Attestation assurance complémentaire</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-ATTEST-HEBGT\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-ATTEST-HEBGT\">ATTEST-HEBGT</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Attestation d'hébergement</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-BIL_AUTO\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-BIL_AUTO\">BIL_AUTO</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>CR de bilan d'évaluation de la perte d'autonomie</td><td>Document réalisé par un médecin ou par certains auxiliaires médicaux décrivant la perte d'autonomie dans la vie quotidienne d'un patient, suivant différents axes.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-CERT_DECL\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-CERT_DECL\">CERT_DECL</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Certificat, déclaration</td><td>Certificat : Document médical justificatif attestant de J48 de santé d'un patient et remis à celui-ci, à sa demande, par un médecin dans son domaine de compétence. Déclaration : Document à visée épidémiologique ou de prévention, établi à l'intention de l'autorité sanitaire et rédigé par tout médecin ayant fait le diagnostic d'une maladie à déclaration obligatoire listée au Code de la Santé Publique.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-DISP_AUT\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-DISP_AUT\">DISP_AUT</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Dispensation (autre)</td><td>Document listant les produits, autres que des médicaments, ou les dispositifs dispensés au patient.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-EXPPAT_1\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-EXPPAT_1\">EXPPAT_1</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Volontés et droits du patient</td><td>Personnes à prévenir en cas d'urgence, personne de confiance, directives anticipées, don d'organe, don du corps, accès au dossier du patient par ses ayants droit.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-EXPPAT_2\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-EXPPAT_2\">EXPPAT_2</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Autre document du patient</td><td>Informations personnelles saisies dans un éditeur de texte</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-EXPPAT_3\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-EXPPAT_3\">EXPPAT_3</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Directives anticipées</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-IMG-KOS\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-IMG-KOS\">IMG-KOS</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Reference d'objets d'un examen d'imagerie</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-PROT_ALD\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-PROT_ALD\">PROT_ALD</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Protocole de soins ALD</td><td>Document établi par le médecin traitant pour une demande de prise en charge à 100 % concernant les soins et les traitements d'un patient, liés à une affection de longue durée (A.L.D.) exonérante. Le caractère exonérant nécessite un suivi de la maladie et des soins prolongés de plus de six mois et des traitements coûteux.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-REMB\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-REMB\">REMB</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Données de remboursement</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-SYNTH\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-SYNTH\">SYNTH</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Synthèse</td><td>Document réalisé par un professionnel de santé, résumant et mettant en évidence les éléments essentiels de l'état de santé et de la prise en charge médicale d'un patient, à un instant donné. Il peut s'agir d'une synthèse globale ou d'une synthèse centrée sur une pathologie.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-DOCPAT01\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-DOCPAT01\">DOCPAT01</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Synthèse déposée par le patient</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-DOCPAT02\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-DOCPAT02\">DOCPAT02</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Traitement ou document de soins déposé par le patient</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-DOCPAT03\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-DOCPAT03\">DOCPAT03</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>CR déposé par le patient</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-DOCPAT04\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-DOCPAT04\">DOCPAT04</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Imagerie déposée par le patient</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-DOCPAT05\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-DOCPAT05\">DOCPAT05</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>CR de biologie déposé par le patient</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-DOCPAT06\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-DOCPAT06\">DOCPAT06</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>CR de prévention déposé par le patient</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-DOCPAT07\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-DOCPAT07\">DOCPAT07</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Certificat déposé par le patient</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-DOCPAT08\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-DOCPAT08\">DOCPAT08</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Profil médical Mon espace santé</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-DOCPAT09\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-DOCPAT09\">DOCPAT09</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Document administratif déposé par le patient</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-PRESC-AAT\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-PRESC-AAT\">PRESC-AAT</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Prescription arrêt de travail</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-PRESC-BIO\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-PRESC-BIO\">PRESC-BIO</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Prescription d'actes de biologie médicale</td><td>Prescription d'actes de biologie médicale</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-PRESC-KINE\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-PRESC-KINE\">PRESC-KINE</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Prescription d'actes de kinésithérapie</td><td>Prescription d'actes de kinésithérapie</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-PRESC-INF\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-PRESC-INF\">PRESC-INF</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Prescription d'actes infirmiers</td><td>Prescription d'actes infirmiers</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-PRESC-PEDI\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-PRESC-PEDI\">PRESC-PEDI</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Prescription d'actes de pédicurie</td><td>Prescription d'actes de pédicurie</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-PRESC-ORTHOPHO\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-PRESC-ORTHOPHO\">PRESC-ORTHOPHO</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Prescription d'actes d'orthophonie</td><td>Prescription d'actes d'orthophonie</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire-PRESC-ORTHOPTIE\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A05-TypeDocComplementaire.html#TRE-A05-TypeDocComplementaire-PRESC-ORTHOPTIE\">PRESC-ORTHOPTIE</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire</td><td>Prescription d'actes d'orthoptie</td><td>Prescription d'actes d'orthoptie</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-11369-6\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/11369-6/\">11369-6</a></td><td>http://loinc.org</td><td>History of Immunization note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-11488-4\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/11488-4/\">11488-4</a></td><td>http://loinc.org</td><td>Consult note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-11490-0\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/11490-0/\">11490-0</a></td><td>http://loinc.org</td><td>Physician Discharge summary</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-11502-2\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/11502-2/\">11502-2</a></td><td>http://loinc.org</td><td>Compte rendu du laboratoire [Recherche] Patient ; Document</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-11505-5\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/11505-5/\">11505-5</a></td><td>http://loinc.org</td><td>Physician procedure note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-11506-3\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/11506-3/\">11506-3</a></td><td>http://loinc.org</td><td>Progress note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-15507-7\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/15507-7/\">15507-7</a></td><td>http://loinc.org</td><td>Emergency department Progress note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-15508-5\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/15508-5/\">15508-5</a></td><td>http://loinc.org</td><td>Labor and delivery records</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-18748-4\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/18748-4/\">18748-4</a></td><td>http://loinc.org</td><td>Diagnostic imaging study</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-18761-7\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/18761-7/\">18761-7</a></td><td>http://loinc.org</td><td>Transfer summary note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-18776-5\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/18776-5/\">18776-5</a></td><td>http://loinc.org</td><td>Plan of care note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-28617-9\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/28617-9/\">28617-9</a></td><td>http://loinc.org</td><td>Dentistry Progress note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-28653-4\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/28653-4/\">28653-4</a></td><td>http://loinc.org</td><td>Social worker Note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-29274-8\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/29274-8/\">29274-8</a></td><td>http://loinc.org</td><td>Vital signs measurements</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-34112-3\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/34112-3/\">34112-3</a></td><td>http://loinc.org</td><td>Hospital Note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-34120-6\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/34120-6/\">34120-6</a></td><td>http://loinc.org</td><td>Outpatient Initial evaluation note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-34133-9\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/34133-9/\">34133-9</a></td><td>http://loinc.org</td><td>Summary of episode note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-34749-2\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/34749-2/\">34749-2</a></td><td>http://loinc.org</td><td>Anesthesiology Outpatient Consult note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-34794-8\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/34794-8/\">34794-8</a></td><td>http://loinc.org</td><td>Interdisciplinary Note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-34842-5\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/34842-5/\">34842-5</a></td><td>http://loinc.org</td><td>Social worker Evaluation note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-34874-8\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/34874-8/\">34874-8</a></td><td>http://loinc.org</td><td>Surgery Surgical operation note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-34875-5\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/34875-5/\">34875-5</a></td><td>http://loinc.org</td><td>Surgery Postoperative evaluation and management note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-47420-5\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/47420-5/\">47420-5</a></td><td>http://loinc.org</td><td>Functional status assessment note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-52040-3\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/52040-3/\">52040-3</a></td><td>http://loinc.org</td><td>Dental X-rays and other images (not DICOM)</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-51969-4\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/51969-4/\">51969-4</a></td><td>http://loinc.org</td><td>Compte rendu de génétique [Recherche] Sang/Tissu ; Document ; Biologie moléculaire</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-55115-0\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/55115-0/\">55115-0</a></td><td>http://loinc.org</td><td>Requested imaging studies information Document</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-56445-0\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/56445-0/\">56445-0</a></td><td>http://loinc.org</td><td>Medication summary Document</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-57057-2\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/57057-2/\">57057-2</a></td><td>http://loinc.org</td><td>Labor and delivery summary note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-57055-6\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/57055-6/\">57055-6</a></td><td>http://loinc.org</td><td>Antepartum summary note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-57075-4\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/57075-4/\">57075-4</a></td><td>http://loinc.org</td><td>Newborn delivery information</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-57828-6\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/57828-6/\">57828-6</a></td><td>http://loinc.org</td><td>Prescription list</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-57832-8\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/57832-8/\">57832-8</a></td><td>http://loinc.org</td><td>Prescription for diagnostic or specialist care</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-57833-6\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/57833-6/\">57833-6</a></td><td>http://loinc.org</td><td>Prescription for medication</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-59283-2\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/59283-2/\">59283-2</a></td><td>http://loinc.org</td><td>Well child visit note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-59284-0\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/59284-0/\">59284-0</a></td><td>http://loinc.org</td><td>Consent Document</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-60280-5\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/60280-5/\">60280-5</a></td><td>http://loinc.org</td><td>Emergency department Discharge instructions</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-60568-3\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/60568-3/\">60568-3</a></td><td>http://loinc.org</td><td>Pathology synoptic report</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-60591-5\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/60591-5/\">60591-5</a></td><td>http://loinc.org</td><td>Patient summary Document</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-60593-1\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/60593-1/\">60593-1</a></td><td>http://loinc.org</td><td>Medication dispensed.extended Document</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-61357-0\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/61357-0/\">61357-0</a></td><td>http://loinc.org</td><td>Medication pharmaceutical advice.brief Document</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-67851-6\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/67851-6/\">67851-6</a></td><td>http://loinc.org</td><td>Admission evaluation note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-68599-0\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/68599-0/\">68599-0</a></td><td>http://loinc.org</td><td>Psychiatry History and physical note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-68817-6\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/68817-6/\">68817-6</a></td><td>http://loinc.org</td><td>Pediatrics History and physical note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-70004-7\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/70004-7/\">70004-7</a></td><td>http://loinc.org</td><td>Diagnostic study note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-74207-2\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/74207-2/\">74207-2</a></td><td>http://loinc.org</td><td>Prehospital summary Document</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-74465-6\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/74465-6/\">74465-6</a></td><td>http://loinc.org</td><td>Questionnaire response Document</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-75468-9\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/75468-9/\">75468-9</a></td><td>http://loinc.org</td><td>Pharmacology Medication management note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-75482-0\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/75482-0/\">75482-0</a></td><td>http://loinc.org</td><td>Preventive medicine Note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-75492-9\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/75492-9/\">75492-9</a></td><td>http://loinc.org</td><td>Risk assessment and screening note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-75496-0\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/75496-0/\">75496-0</a></td><td>http://loinc.org</td><td>Telehealth Note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-77436-4\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/77436-4/\">77436-4</a></td><td>http://loinc.org</td><td>Anesthesiology Summary note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-77604-7\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/77604-7/\">77604-7</a></td><td>http://loinc.org</td><td>Medication treatment plan.brief Document</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-78341-5\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/78341-5/\">78341-5</a></td><td>http://loinc.org</td><td>Emergency department Transfer summary note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-78489-2\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/78489-2/\">78489-2</a></td><td>http://loinc.org</td><td>Neonatal perinatal medicine Transfer summary note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-78513-9\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/78513-9/\">78513-9</a></td><td>http://loinc.org</td><td>Ophthalmology Summary of encounters note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-78601-2\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/78601-2/\">78601-2</a></td><td>http://loinc.org</td><td>Pharmacology Education note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-80565-5\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/80565-5/\">80565-5</a></td><td>http://loinc.org</td><td>Medication administration record</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-80771-9\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/80771-9/\">80771-9</a></td><td>http://loinc.org</td><td>Pediatrics Plan of care note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-80788-3\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/80788-3/\">80788-3</a></td><td>http://loinc.org</td><td>Social worker Plan of care note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-80820-4\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/80820-4/\">80820-4</a></td><td>http://loinc.org</td><td>Medication reconciliation form</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-83836-7\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/83836-7/\">83836-7</a></td><td>http://loinc.org</td><td>Dentistry Summary note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-83869-8\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/83869-8/\">83869-8</a></td><td>http://loinc.org</td><td>Preventive medicine Counseling note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-83901-9\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/83901-9/\">83901-9</a></td><td>http://loinc.org</td><td>Psychology History and physical note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-83981-1\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/83981-1/\">83981-1</a></td><td>http://loinc.org</td><td>Social worker Transfer summary note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-85208-7\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/85208-7/\">85208-7</a></td><td>http://loinc.org</td><td>Telehealth Consult note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-86531-1\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/86531-1/\">86531-1</a></td><td>http://loinc.org</td><td>Discharge notification</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-87273-9\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/87273-9/\">87273-9</a></td><td>http://loinc.org</td><td>Immunization note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-88348-8\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/88348-8/\">88348-8</a></td><td>http://loinc.org</td><td>Nurse Long term care facility Transfer summary note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-89233-1\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/89233-1/\">89233-1</a></td><td>http://loinc.org</td><td>Obstetrics Progress note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-89235-6\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/89235-6/\">89235-6</a></td><td>http://loinc.org</td><td>Obstetrics Transfer summary note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-89601-9\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/89601-9/\">89601-9</a></td><td>http://loinc.org</td><td>Proof of encounter certificate</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-93024-8\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/93024-8/\">93024-8</a></td><td>http://loinc.org</td><td>Pharmacist Consult note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-96349-6\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/96349-6/\">96349-6</a></td><td>http://loinc.org</td><td>Referral letter</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-96173-0\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/96173-0/\">96173-0</a></td><td>http://loinc.org</td><td>Clinical pathology Evaluation note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-96874-3\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/96874-3/\">96874-3</a></td><td>http://loinc.org</td><td>COVID-19 Immunization note</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://loinc.org-101881-1\"> </a>\u00a0\u00a0<a href=\"https://loinc.org/101881-1/\">101881-1</a></td><td>http://loinc.org</td><td>Implant card</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-https://mos.esante.gouv.fr/NOS/TRE_A12-NomenclatureASTM/FHIR/TRE-A12-NomenclatureASTM-E1762\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-TRE-A12-NomenclatureASTM.html#TRE-A12-NomenclatureASTM-E1762\">E1762</a></td><td>https://mos.esante.gouv.fr/NOS/TRE_A12-NomenclatureASTM/FHIR/TRE-A12-NomenclatureASTM</td><td>Full Document</td><td/></tr></table></div>"
+      },
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs",
+      "version" : "1.0.0-ballot",
+      "name" : "PreadmissionDocumentTypeFrValueSet",
+      "title" : "preadmission-document-type-vs",
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2026-04-10T13:10:35+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "France (la)"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:e964af15-edb1-48d3-be98-8ee7835636f4",
+        "timestamp" : "2026-04-10T13:11:39+00:00",
+        "total" : 132,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "fr-FR"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity|2.2.0"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs|1.0.0-ballot"
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "https://mos.esante.gouv.fr/NOS/JDV_J66-TypeCode-DMP/FHIR/JDV-J66-TypeCode-DMP|20240927120000"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire|20240329120000"
+        },
+        {
+          "name" : "used-valueset",
+          "valueUri" : "null"
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : true
+        },
+        {
+          "name" : "includeDefinition",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://loinc.org|2.82"
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "https://mos.esante.gouv.fr/NOS/TRE_A12-NomenclatureASTM/FHIR/TRE-A12-NomenclatureASTM|20231215120000"
+        }],
+        "contains" : [{
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "AN",
+          "display" : "Extrait d'acte de naissance"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "CC",
+          "display" : "Carnet de circulation"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "CE",
+          "display" : "Carte Européenne"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "CM",
+          "display" : "Carte militaire"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "CN",
+          "display" : "Carte nationale d'identité"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "CS",
+          "display" : "Carte de séjour"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "LE",
+          "display" : "Livret de famille"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "PA",
+          "display" : "Passeport"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "PC",
+          "display" : "Permis de conduire"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "TC",
+          "display" : "Tiers de confiance"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "DC",
+          "display" : "Document de Circulation pour étranger mineur"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "AC",
+          "display" : "Acte de naissance + Carte vitale avec photo"
+        },
+        {
+          "system" : "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+          "code" : "IE",
+          "display" : "Identification électronique EIDAS"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+          "code" : "CN_RECTO"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+          "code" : "CN_VERSO"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+          "code" : "ATTEST_VITALE"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+          "code" : "JUSTIFICATIF_ID"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+          "code" : "MUTUELLE"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+          "code" : "MUTUELLE_RECTO"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+          "code" : "MUTUELLE_VERSO"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+          "code" : "JUSTIFICATIF_DOM"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+          "code" : "ARRET_TRAVAIL"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+          "code" : "PERS_PREVENIR"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs",
+          "code" : "PERS_CONFIANCE"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "AUTORIS-SOINS",
+          "display" : "Autorisation de soins et actes non usuels sanitaires"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "ATTEST-RESID",
+          "display" : "Attestation de résidence"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "ATTEST-DROITS-AM",
+          "display" : "Attestation de droits à l'assurance maladie"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "ATTEST-ASS-COMPL",
+          "display" : "Attestation assurance complémentaire"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "ATTEST-HEBGT",
+          "display" : "Attestation d'hébergement"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "BIL_AUTO",
+          "display" : "CR de bilan d'évaluation de la perte d'autonomie"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "CERT_DECL",
+          "display" : "Certificat, déclaration"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "DISP_AUT",
+          "display" : "Dispensation (autre)"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "EXPPAT_1",
+          "display" : "Volontés et droits du patient"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "EXPPAT_2",
+          "display" : "Autre document du patient"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "EXPPAT_3",
+          "display" : "Directives anticipées"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "IMG-KOS",
+          "display" : "Reference d'objets d'un examen d'imagerie"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "PROT_ALD",
+          "display" : "Protocole de soins ALD"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "REMB",
+          "display" : "Données de remboursement"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "SYNTH",
+          "display" : "Synthèse"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "DOCPAT01",
+          "display" : "Synthèse déposée par le patient"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "DOCPAT02",
+          "display" : "Traitement ou document de soins déposé par le patient"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "DOCPAT03",
+          "display" : "CR déposé par le patient"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "DOCPAT04",
+          "display" : "Imagerie déposée par le patient"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "DOCPAT05",
+          "display" : "CR de biologie déposé par le patient"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "DOCPAT06",
+          "display" : "CR de prévention déposé par le patient"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "DOCPAT07",
+          "display" : "Certificat déposé par le patient"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "DOCPAT08",
+          "display" : "Profil médical Mon espace santé"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "DOCPAT09",
+          "display" : "Document administratif déposé par le patient"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "PRESC-AAT",
+          "display" : "Prescription arrêt de travail"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "PRESC-BIO",
+          "display" : "Prescription d'actes de biologie médicale"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "PRESC-KINE",
+          "display" : "Prescription d'actes de kinésithérapie"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "PRESC-INF",
+          "display" : "Prescription d'actes infirmiers"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "PRESC-PEDI",
+          "display" : "Prescription d'actes de pédicurie"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "PRESC-ORTHOPHO",
+          "display" : "Prescription d'actes d'orthophonie"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+          "code" : "PRESC-ORTHOPTIE",
+          "display" : "Prescription d'actes d'orthoptie"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "11369-6",
+          "display" : "History of Immunization note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "11488-4",
+          "display" : "Consult note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "11490-0",
+          "display" : "Physician Discharge summary"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "11502-2",
+          "display" : "Compte rendu du laboratoire [Recherche] Patient ; Document"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "11505-5",
+          "display" : "Physician procedure note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "11506-3",
+          "display" : "Progress note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "15507-7",
+          "display" : "Emergency department Progress note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "15508-5",
+          "display" : "Labor and delivery records"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "18748-4",
+          "display" : "Diagnostic imaging study"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "18761-7",
+          "display" : "Transfer summary note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "18776-5",
+          "display" : "Plan of care note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "28617-9",
+          "display" : "Dentistry Progress note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "28653-4",
+          "display" : "Social worker Note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "29274-8",
+          "display" : "Vital signs measurements"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "34112-3",
+          "display" : "Hospital Note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "34120-6",
+          "display" : "Outpatient Initial evaluation note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "34133-9",
+          "display" : "Summary of episode note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "34749-2",
+          "display" : "Anesthesiology Outpatient Consult note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "34794-8",
+          "display" : "Interdisciplinary Note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "34842-5",
+          "display" : "Social worker Evaluation note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "34874-8",
+          "display" : "Surgery Surgical operation note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "34875-5",
+          "display" : "Surgery Postoperative evaluation and management note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "47420-5",
+          "display" : "Functional status assessment note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "52040-3",
+          "display" : "Dental X-rays and other images (not DICOM)"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "51969-4",
+          "display" : "Compte rendu de génétique [Recherche] Sang/Tissu ; Document ; Biologie moléculaire"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "55115-0",
+          "display" : "Requested imaging studies information Document"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "56445-0",
+          "display" : "Medication summary Document"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "57057-2",
+          "display" : "Labor and delivery summary note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "57055-6",
+          "display" : "Antepartum summary note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "57075-4",
+          "display" : "Newborn delivery information"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "57828-6",
+          "display" : "Prescription list"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "57832-8",
+          "display" : "Prescription for diagnostic or specialist care"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "57833-6",
+          "display" : "Prescription for medication"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "59283-2",
+          "display" : "Well child visit note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "59284-0",
+          "display" : "Consent Document"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "60280-5",
+          "display" : "Emergency department Discharge instructions"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "60568-3",
+          "display" : "Pathology synoptic report"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "60591-5",
+          "display" : "Patient summary Document"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "60593-1",
+          "display" : "Medication dispensed.extended Document"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "61357-0",
+          "display" : "Medication pharmaceutical advice.brief Document"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "67851-6",
+          "display" : "Admission evaluation note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "68599-0",
+          "display" : "Psychiatry History and physical note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "68817-6",
+          "display" : "Pediatrics History and physical note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "70004-7",
+          "display" : "Diagnostic study note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "74207-2",
+          "display" : "Prehospital summary Document"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "74465-6",
+          "display" : "Questionnaire response Document"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "75468-9",
+          "display" : "Pharmacology Medication management note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "75482-0",
+          "display" : "Preventive medicine Note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "75492-9",
+          "display" : "Risk assessment and screening note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "75496-0",
+          "display" : "Telehealth Note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "77436-4",
+          "display" : "Anesthesiology Summary note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "77604-7",
+          "display" : "Medication treatment plan.brief Document"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "78341-5",
+          "display" : "Emergency department Transfer summary note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "78489-2",
+          "display" : "Neonatal perinatal medicine Transfer summary note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "78513-9",
+          "display" : "Ophthalmology Summary of encounters note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "78601-2",
+          "display" : "Pharmacology Education note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "80565-5",
+          "display" : "Medication administration record"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "80771-9",
+          "display" : "Pediatrics Plan of care note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "80788-3",
+          "display" : "Social worker Plan of care note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "80820-4",
+          "display" : "Medication reconciliation form"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "83836-7",
+          "display" : "Dentistry Summary note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "83869-8",
+          "display" : "Preventive medicine Counseling note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "83901-9",
+          "display" : "Psychology History and physical note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "83981-1",
+          "display" : "Social worker Transfer summary note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "85208-7",
+          "display" : "Telehealth Consult note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "86531-1",
+          "display" : "Discharge notification"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "87273-9",
+          "display" : "Immunization note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "88348-8",
+          "display" : "Nurse Long term care facility Transfer summary note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "89233-1",
+          "display" : "Obstetrics Progress note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "89235-6",
+          "display" : "Obstetrics Transfer summary note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "89601-9",
+          "display" : "Proof of encounter certificate"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "93024-8",
+          "display" : "Pharmacist Consult note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "96349-6",
+          "display" : "Referral letter"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "96173-0",
+          "display" : "Clinical pathology Evaluation note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "96874-3",
+          "display" : "COVID-19 Immunization note"
+        },
+        {
+          "system" : "http://loinc.org",
+          "code" : "101881-1",
+          "display" : "Implant card"
+        },
+        {
+          "system" : "https://mos.esante.gouv.fr/NOS/TRE_A12-NomenclatureASTM/FHIR/TRE-A12-NomenclatureASTM",
+          "code" : "E1762",
+          "display" : "Full Document"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"/><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion performed internally based on <a href=\"CodeSystem-preadmission-status-code-system.html\">codesystem preadmission-status-code-system v1.0.0-ballot (CodeSystem)</a></p><p>Ce jeu de valeur (ValueSet) contient 6 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system-CANCELLED\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-CANCELLED\">CANCELLED</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system-CREATED\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-CREATED\">CREATED</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system-IN_PROGRESS\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-IN_PROGRESS\">IN_PROGRESS</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system-READY\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-READY\">READY</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system-COMPLETED\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-COMPLETED\">COMPLETED</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system</td><td/></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system-REFUSED\"> </a>\u00a0\u00a0<a href=\"CodeSystem-preadmission-status-code-system.html#preadmission-status-code-system-REFUSED\">REFUSED</a></td><td>http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system</td><td/></tr></table></div>"
+      },
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs",
+      "version" : "1.0.0-ballot",
+      "name" : "PreAdmissionStatusValueSet",
+      "title" : "preadmission-status-vs",
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2026-04-10T13:10:35+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "France (la)"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:d683724d-375c-41e8-8268-5168c84434fa",
+        "timestamp" : "2026-04-10T13:11:39+00:00",
+        "total" : 6,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "fr-FR"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system|1.0.0-ballot"
+        }],
+        "contains" : [{
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+          "code" : "CANCELLED"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+          "code" : "CREATED"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+          "code" : "IN_PROGRESS"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+          "code" : "READY"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+          "code" : "COMPLETED"
+        },
+        {
+          "system" : "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system",
+          "code" : "REFUSED"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion performed internally based on:</p><ul><li><a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-v3-ActCode.html\">codesystem ActCode v9.0.0 (CodeSystem)</a></li><li><a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-actCode-supplement-fr.html\">supplement ActCodeSupplementFr v1.0 (CodeSystem)</a></li></ul></div><p>Ce jeu de valeur (ValueSet) contient 2 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td><td><b>Définition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-ActCode-PUBLICPOL\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-v3-ActCode.html#v3-ActCode-PUBLICPOL\">PUBLICPOL</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td><td/><td><div><p>Insurance policy funded by a public health system such as a provincial or national health plan. Examples include BC MSP (British Columbia Medical Services Plan) OHIP (Ontario Health Insurance Plan), NHS (National Health Service).</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-ActCode-EHCPOL\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-v3-ActCode.html#v3-ActCode-EHCPOL\">EHCPOL</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td><td/><td><div><p>Private insurance policy that provides coverage in addition to other policies (e.g. in addition to a Public Healthcare insurance policy).</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
+      "version" : "1.0.0-ballot",
+      "name" : "TypeCouvertureSocialeValueSet",
+      "title" : "type-couverture-sociale-vs",
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2026-04-10T13:10:35+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "France (la)"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:13259950-5032-4f36-b92f-52f38638aa7e",
+        "timestamp" : "2026-04-10T13:11:39+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "fr-FR"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://terminology.hl7.org/CodeSystem/v3-ActCode|9.0.0"
+        },
+        {
+          "name" : "used-supplement",
+          "valueUri" : "https://smt.esante.gouv.fr/fhir/CodeSystem/actCode-supplement-fr|1.0"
+        }],
+        "contains" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "PUBLICPOL"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "EHCPOL"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "meta" : {
+        "profile" : ["http://hl7.org/fhir/StructureDefinition/shareablevalueset"]
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"/><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion performed internally based on:</p><ul><li><a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-v3-ActCode.html\">codesystem ActCode v9.0.0 (CodeSystem)</a></li><li><a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-actCode-supplement-fr.html\">supplement ActCodeSupplementFr v1.0 (CodeSystem)</a></li></ul></div><p>Ce jeu de valeur (ValueSet) contient 3 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Système</b></td><td><b>Display (fr-FR)</b></td><td><b>Définition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-ActCode-VR\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-v3-ActCode.html#v3-ActCode-VR\">VR</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td><td>Virtuelle (exemple : RCP en l'absence du patient)</td><td><div><p>A patient encounter where the patient and the practitioner(s) are not in the same physical location. Examples include telephone conference, email exchange, robotic surgery, and televideo conference.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-ActCode-AMB\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">AMB</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td><td>Ambulatoire (hors établissement)</td><td><div><p>A comprehensive term for health care provided in a healthcare facility (e.g. a practitioneraTMs office, clinic setting, or hospital) on a nonresident basis. The term ambulatory usually implies that the patient has come to the location and is not assigned to a bed. Sometimes referred to as an outpatient encounter.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"x-http://terminology.hl7.org/CodeSystem/v3-ActCode-IMP\"> </a>\u00a0\u00a0<a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/CodeSystem-v3-ActCode.html#v3-ActCode-IMP\">IMP</a></td><td>http://terminology.hl7.org/CodeSystem/v3-ActCode</td><td>Hospitalisation (établissement, y compris HAD)</td><td><div><p>A patient encounter where a patient is admitted by a hospital or equivalent facility, assigned to a location where patients generally stay at least overnight and provided with room, board, and continuous nursing service.</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
+      "version" : "1.0.0-ballot",
+      "name" : "TypeVenueEncounterValueSet",
+      "title" : "type-venue-encounter-vs",
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2026-04-10T13:10:35+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "FR",
+          "display" : "France (la)"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:6ccb4314-666b-4978-9239-b2127b97dee1",
+        "timestamp" : "2026-04-10T13:11:39+00:00",
+        "total" : 3,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "displayLanguage",
+          "valueCode" : "fr-FR"
+        },
+        {
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://terminology.hl7.org/CodeSystem/v3-ActCode|9.0.0"
+        },
+        {
+          "name" : "used-supplement",
+          "valueUri" : "https://smt.esante.gouv.fr/fhir/CodeSystem/actCode-supplement-fr|1.0"
+        }],
+        "contains" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "VR",
+          "display" : "Virtuelle (exemple : RCP en l'absence du patient)"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "AMB",
+          "display" : "Ambulatoire (hors établissement)"
+        },
+        {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "IMP",
+          "display" : "Hospitalisation (établissement, y compris HAD)"
+        }]
+      }
+    }
+  }]
+}

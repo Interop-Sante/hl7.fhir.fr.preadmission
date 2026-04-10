@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="encounter-preadmission-status"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : ParamètreRecherche encounter-preadmission-status</b></p><a name="encounter-preadmission-status"> </a><a name="hcencounter-preadmission-status"> </a><h2>EncounterPreadmissionStatus</h2><p>Paramètre <code>preadmission-status</code>:<code>token</code></p><div><p>Recherche des encounters par statut de pré-admission (extension PreadmissionStatutFr).</p>
+</div><table class="grid"><tr><td>Ressource</td><td><a href="http://hl7.org/fhir/R4/encounter.html">Encounter</a></td></tr><tr><td>Expression</td><td><code>Encounter.extension.where(url='http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr').value as CodeableConcept</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td><ul><li>multipleAnd: It's up to the server whether the parameter may repeat in order to specify multiple values that must all be true</li><li>multipleOr: It's up to the server whether the parameter can have multiple values (separated by comma) where at least one must be true</li></ul></td></tr></table></div>
+  </text>
+  <url value="http://hl7.fr/fhir/fr/preadmission/SearchParameter/encounter-preadmission-status"/>
+  <version value="1.0.0-ballot"/>
+  <name value="EncounterPreadmissionStatus"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-04-10T13:10:35+00:00"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="InteropSanté"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@interopsante.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Recherche des encounters par statut de pré-admission (extension PreadmissionStatutFr)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <code value="preadmission-status"/>
+  <base value="Encounter"/>
+  <type value="token"/>
+  <expression value="Encounter.extension.where(url='http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr').value as CodeableConcept"/>
+  <xpathUsage value="normal"/>
+</SearchParameter>

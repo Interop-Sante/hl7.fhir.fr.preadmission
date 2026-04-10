@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="document-type-ins-cs"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : CodeSystem document-type-ins-cs</b></p><a name="document-type-ins-cs"> </a><a name="hcdocument-type-ins-cs"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="http://hl7.org/fhir/R4/shareablecodesystem.html">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-ins-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">DIE<a name="document-type-ins-cs-DIE"> </a></td><td>Dispositif d'identification électronique</td></tr><tr><td style="white-space:nowrap">APPCV<a name="document-type-ins-cs-APPCV"> </a></td><td>Application Carte Vitale</td></tr></table></div>
+  </text>
+  <url value="http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-ins-cs"/>
+  <version value="1.0.0-ballot"/>
+  <name value="PreadmissionDocumentTypeINSCodeSystem"/>
+  <title value="document-type-ins-cs"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2026-04-10T13:10:35+00:00"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="InteropSanté"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@interopsante.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Types de documents additionnels pour qualifer une identité"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="DIE"/>
+    <display value="Dispositif d'identification électronique"/>
+  </concept>
+  <concept>
+    <code value="APPCV"/>
+    <display value="Application Carte Vitale"/>
+  </concept>
+</CodeSystem>

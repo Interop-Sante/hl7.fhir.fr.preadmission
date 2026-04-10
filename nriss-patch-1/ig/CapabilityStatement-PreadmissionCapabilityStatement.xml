@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="PreadmissionCapabilityStatement"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : CapabilityStatement PreadmissionCapabilityStatement</b></p><a name="PreadmissionCapabilityStatement"> </a><a name="hcPreadmissionCapabilityStatement"> </a><h2 id="title">Capacités serveur FHIR pour l'IG Preadmission</h2><ul><li>Version du guide dimplémentation : {0} </li><li>Version de FHIR : 4.0.1 </li><li>Supported Formats: <code>json</code></li><li>Supported Patch Formats: </li><li>Publié sur : 2025-05-22 </li><li>Publié par : Interop'Santé </li></ul><blockquote class="impl-note"><p><strong>Note aux implémenteurs : capacités FHIR</strong></p><p>Any FHIR capability may be 'allowed' by the system unless explicitly marked as 'SHALL NOT'. A few items are marked as MAY in the Implementation Guide to highlight their potential relevance to the use case.</p></blockquote><h2 id="rest">FHIR RESTful Capabilities</h2><div class="panel panel-default"><div class="panel-heading"><h3 id="mode1" class="panel-title">Mode: <code>server</code></h3></div><div class="panel-body"><div class="lead"><em>Summary of System-wide Interactions</em></div></div></div><h3 id="resourcesCap1">Capabilities by Resource/Profile</h3><h4 id="resourcesSummary1">Résumé</h4><p>Le tableau récapitulatif liste les ressources faisant partie de cette configuration, et pour chaque ressource, il liste :</p><ul><li>The relevant profiles (if any)</li><li>Les interactions supportées par chaque ressource (<b><span class="bg-info">R</span></b>ead, <b><span class="bg-info">S</span></b>earch, <b><span class="bg-info">U</span></b>pdate, and <b><span class="bg-info">C</span></b>reate, are always shown, while <b><span class="bg-info">VR</span></b>ead, <b><span class="bg-info">P</span></b>atch, <b><span class="bg-info">D</span></b>elete, <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">I</span></b>nstance, or <b><span class="bg-info">H</span></b>istory on <b><span class="bg-info">T</span></b>!!les types sont seulement présents si au moins une des ressources les prend en charge.</li><li><span>Les paramètres de recherche (SearchParameters) requis, recommandés, optionnels (le cas échéant). </span></li><li>The linked resources enabled for <code>_include</code></li><li>The other resources enabled for <code>_revinclude</code></li><li>The operations on the resource (if any)</li></ul><div class="table-responsive"><table class="table table-condensed table-hover"><thead><tr><th><b>Type de Ressource</b></th><th><b>Profil</b></th><th class="text-center"><b title="GET dune ressource (interaction read)">R</b></th><th class="text-center"><b title="GET all set of resources of the type (search interaction)">S</b></th><th class="text-center"><b title="PUT a new resource version (update interaction)">U</b></th><th class="text-center"><b title="POST dune nouvelle ressource (interaction create)">C</b></th><th class="text-center"><b title="DELETE dune nouvelle ressource (interaction delete)">D</b></th><th><b title="Paramètres de recherche requis et recommandés">Recherches</b></th><th><code><b>_include</b></code></th><th><code><b>_revinclude</b></code></th><th><b>Opérations</b></th></tr></thead><tbody><tr><td><a href="#Encounter1-1">Encounter</a></td><td><a href="StructureDefinition-preadmission-encounter-fr.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center">y</td><td>preadmission-status, patient, date, appointment, _lastUpdated</td><td/><td/><td/></tr><tr><td><a href="#Appointment1-2">Appointment</a></td><td><a href="StructureDefinition-preadmission-appointment-fr.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"/><td class="text-center"/><td class="text-center"/><td>patient, date</td><td/><td/><td/></tr><tr><td><a href="#Consent1-3">Consent</a></td><td><a href="StructureDefinition-preadmission-consent-fr.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"/><td class="text-center"/><td class="text-center"/><td>patient</td><td/><td/><td/></tr><tr><td><a href="#Coverage1-4">Coverage</a></td><td><a href="StructureDefinition-preadmission-coverage-fr.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"/><td class="text-center"/><td class="text-center"/><td>patient</td><td/><td/><td/></tr><tr><td><a href="#DocumentReference1-5">DocumentReference</a></td><td><a href="StructureDefinition-preadmission-documentreference-fr.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"/><td class="text-center"/><td class="text-center"/><td>encounter, patient</td><td/><td/><td/></tr><tr><td><a href="#Patient1-6">Patient</a></td><td> </td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"/><td class="text-center"/><td class="text-center"/><td/><td/><td/><td/></tr><tr><td><a href="#QuestionnaireResponse1-7">QuestionnaireResponse</a></td><td><a href="StructureDefinition-preadmission-questionnaireresponse-fr.html">http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr</a></td><td class="text-center">y</td><td class="text-center">y</td><td class="text-center"/><td class="text-center"/><td class="text-center"/><td>subject, patient</td><td/><td/><td/></tr></tbody></table></div><hr/><div class="panel panel-default"><div class="panel-heading"><h4 id="Encounter1-1" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Encounter</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-preadmission-encounter-fr.html">Fr Preadmission Encounter Profile</a></div><div class="col-lg-3"><span class="lead">Conformité au Profil</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Résumé des interactions</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>, <code>create</code>, <code>update</code>, <code>delete</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Paramètres de recherche</span><table class="table table-condensed table-hover"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="SearchParameter-encounter-preadmission-status.html">preadmission-status</a></td><td><code>token</code></td><td><div><p>Le serveur DOIT permettre la recherche des préadmission par son statut (extension PreadmissionStatutFr).</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div><p>Le serveur DOIT permettre la recherche par patient associé</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>date</td><td><code>date</code></td><td><div><p>Le serveur DOIT permettre la recherche par date de l'Encounter</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>appointment</td><td><code>reference</code></td><td><div><p>Le serveur DOIT permettre la recherche des préadmissions par rendez-vous</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/resource.html#search">_lastUpdated</a></td><td><code>date</code></td><td><div><p>Le serveur DOIT permettre la recherche par date de dernière mise à jour de l'Encounter</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Appointment1-2" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Appointment</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-preadmission-appointment-fr.html">Fr Preadmission Appointment Profile</a></div><div class="col-lg-3"><span class="lead">Conformité au Profil</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Résumé des interactions</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Paramètres de recherche</span><table class="table table-condensed table-hover"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/appointment.html#search">patient</a></td><td><code>reference</code></td><td><div><p>Le serveur DOIT permettre la recherche des rendez-vous par patient</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/appointment.html#search">date</a></td><td><code>date</code></td><td><div><p>Le serveur DOIT permettre la recherche des rendez-vous par date</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Consent1-3" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Consent</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-preadmission-consent-fr.html">Fr Preadmission Consent Profile</a></div><div class="col-lg-3"><span class="lead">Conformité au Profil</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Résumé des interactions</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Paramètres de recherche</span><table class="table table-condensed table-hover"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/consent.html#search">patient</a></td><td><code>reference</code></td><td><div><p>Le serveur DOIT permettre la recherche des consentements par patient</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Coverage1-4" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Coverage</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-preadmission-coverage-fr.html">Fr Preadmission Coverage Profile</a></div><div class="col-lg-3"><span class="lead">Conformité au Profil</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Résumé des interactions</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Paramètres de recherche</span><table class="table table-condensed table-hover"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/coverage.html#search">patient</a></td><td><code>reference</code></td><td><div><p>Le serveur DOIT permettre la recherche de la couverture par patient</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="DocumentReference1-5" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>DocumentReference</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-preadmission-documentreference-fr.html">Fr Preadmission DocumentReference Profile</a></div><div class="col-lg-3"><span class="lead">Conformité au Profil</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Résumé des interactions</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Paramètres de recherche</span><table class="table table-condensed table-hover"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td>encounter</td><td><code>reference</code></td><td><div><p>Le serveur DOIT permettre la recherche des documents par encounter (context.encounter)</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td>patient</td><td><code>reference</code></td><td><div><p>Le serveur DOIT permettre la recherche des documents par patient</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="Patient1-6" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>Patient</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-4"><span class="lead">Ressource FHIR coeur</span><br/><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></div><div class="col-lg-4"><span class="lead">Reference Policy</span><br/></div><div class="col-lg-4"><span class="lead">Résumé des interactions</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><p/></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 id="QuestionnaireResponse1-7" class="panel-title"><span style="float: right;">Resource Conformance: supported </span>QuestionnaireResponse</h4></div><div class="panel-body"><div class="container"><div class="row"><div class="col-lg-6"><span class="lead">Base System Profile</span><br/><a href="StructureDefinition-preadmission-questionnaireresponse-fr.html">Fr Preadmission QuestionnaireResponse Profile</a></div><div class="col-lg-3"><span class="lead">Conformité au Profil</span><br/><b>SHALL</b></div><div class="col-lg-3"><span class="lead">Reference Policy</span><br/></div></div><p/><div class="row"><div class="col-lg-6"><span class="lead">Résumé des interactions</span><br/><ul><li>Supports <code>read</code>, <code>search-type</code>.</li></ul></div></div><p/><div class="row"><div class="col-lg-7"><span class="lead">Paramètres de recherche</span><table class="table table-condensed table-hover"><thead><tr><th>Conformité</th><th>Paramètre</th><th>Type</th><th>Documentation</th></tr></thead><tbody><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html#search">subject</a></td><td><code>reference</code></td><td><div><p>Le serveur DOIT permettre la recherche des réponses par subject (Appointment ou Encounter)</p>
+</div></td></tr><tr><td><b>SHALL</b></td><td><a href="http://hl7.org/fhir/R4/questionnaireresponse.html#search">patient</a></td><td><code>reference</code></td><td><div><p>Le serveur DOIT permettre la recherche des réponses par patient</p>
+</div></td></tr></tbody></table></div><div class="col-lg-5"> </div></div></div></div></div></div>
+  </text>
+  <url value="http://hl7.fr/fhir/fr/preadmission/CapabilityStatement/PreadmissionCapabilityStatement"/>
+  <version value="1.0.0-ballot"/>
+  <name value="PreadmissionCapabilityStatement"/>
+  <title value="Capacités serveur FHIR pour l'IG Preadmission"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-05-22"/>
+  <publisher value="Interop'Santé"/>
+  <contact>
+    <name value="Interop'Santé"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://interopsante.org/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="InteropSanté"/>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@interopsante.org"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Décrit les capacités d’un serveur FHIR conforme à l’IG de préadmission hospitalière en France."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="FR"/>
+      <display value="France (la)"/>
+    </coding>
+  </jurisdiction>
+  <kind value="capability"/>
+  <software>
+    <name value="Serveur FHIR Preadmission"/>
+    <version value="1.0.0"/>
+  </software>
+  <fhirVersion value="4.0.1"/>
+  <format value="json"/>
+  <rest>
+    <mode value="server"/>
+    <resource>
+      <type value="Encounter"/>
+      <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <interaction>
+        <code value="create"/>
+      </interaction>
+      <interaction>
+        <code value="update"/>
+      </interaction>
+      <interaction>
+        <code value="delete"/>
+      </interaction>
+      <searchParam>
+        <name value="preadmission-status"/>
+        <definition value="http://hl7.fr/fhir/fr/preadmission/SearchParameter/encounter-preadmission-status"/>
+        <type value="token"/>
+        <documentation value="Le serveur DOIT permettre la recherche des préadmission par son statut (extension PreadmissionStatutFr)."/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <type value="reference"/>
+        <documentation value="Le serveur DOIT permettre la recherche par patient associé"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <type value="date"/>
+        <documentation value="Le serveur DOIT permettre la recherche par date de l'Encounter"/>
+      </searchParam>
+      <searchParam>
+        <name value="appointment"/>
+        <type value="reference"/>
+        <documentation value="Le serveur DOIT permettre la recherche des préadmissions par rendez-vous"/>
+      </searchParam>
+      <searchParam>
+        <name value="_lastUpdated"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Resource-lastUpdated"/>
+        <type value="date"/>
+        <documentation value="Le serveur DOIT permettre la recherche par date de dernière mise à jour de l'Encounter"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Appointment"/>
+      <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Appointment-patient"/>
+        <type value="reference"/>
+        <documentation value="Le serveur DOIT permettre la recherche des rendez-vous par patient"/>
+      </searchParam>
+      <searchParam>
+        <name value="date"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Appointment-date"/>
+        <type value="date"/>
+        <documentation value="Le serveur DOIT permettre la recherche des rendez-vous par date"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Consent"/>
+      <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+        <type value="reference"/>
+        <documentation value="Le serveur DOIT permettre la recherche des consentements par patient"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Coverage"/>
+      <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/Coverage-patient"/>
+        <type value="reference"/>
+        <documentation value="Le serveur DOIT permettre la recherche de la couverture par patient"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="DocumentReference"/>
+      <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="encounter"/>
+        <type value="reference"/>
+        <documentation value="Le serveur DOIT permettre la recherche des documents par encounter (context.encounter)"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <type value="reference"/>
+        <documentation value="Le serveur DOIT permettre la recherche des documents par patient"/>
+      </searchParam>
+    </resource>
+    <resource>
+      <type value="Patient"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+    </resource>
+    <resource>
+      <type value="QuestionnaireResponse"/>
+      <profile value="http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr"/>
+      <interaction>
+        <code value="read"/>
+      </interaction>
+      <interaction>
+        <code value="search-type"/>
+      </interaction>
+      <searchParam>
+        <name value="subject"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-subject"/>
+        <type value="reference"/>
+        <documentation value="Le serveur DOIT permettre la recherche des réponses par subject (Appointment ou Encounter)"/>
+      </searchParam>
+      <searchParam>
+        <name value="patient"/>
+        <definition value="http://hl7.org/fhir/SearchParameter/QuestionnaireResponse-patient"/>
+        <type value="reference"/>
+        <documentation value="Le serveur DOIT permettre la recherche des réponses par patient"/>
+      </searchParam>
+    </resource>
+  </rest>
+</CapabilityStatement>
