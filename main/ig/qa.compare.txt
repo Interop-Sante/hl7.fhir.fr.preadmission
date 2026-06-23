@@ -1,7 +1,7 @@
 PREADMISSIONFR : Validation Results
 =========================================
 
-err = 11, warn = 47, info = 28
+err = 10, warn = 46, info = 29
 $--
 Generated $--. FHIR version $-- for hl7.fhir.fr.preadmission#$-- (canonical = http://hl7.fr/fhir/fr/preadmission)
  Build Errors : 0 / 5 / 0
@@ -13,7 +13,7 @@ Generated $--. FHIR version $-- for hl7.fhir.fr.preadmission#$-- (canonical = ht
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Consent-consentement-dmp-alimentation : 0 / 2 / 3
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Consent-consentement-dmp-consultation : 0 / 2 / 3
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Consent-consentement-multi : 0 / 2 / 5
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Consent-consentement-refus-rgpd : 1 / 2 / 2
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Consent-consentement-refus-rgpd : 0 / 2 / 3
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Coverage-coverage-amc : 0 / 1 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Coverage-coverage-amo : 0 / 0 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Coverage-coverage-amo-enfant : 0 / 0 / 1
@@ -21,7 +21,7 @@ Generated $--. FHIR version $-- for hl7.fhir.fr.preadmission#$-- (canonical = ht
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-complete : 3 / 0 / 4
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-externe : 3 / 0 / 4
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Encounter-encounter-irm-refused : 3 / 0 / 4
- /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission : 0 / 1 / 1
+ /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission : 0 / 0 / 1
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Patient-patient-001 : 0 / 1 / 3
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Patient-patient-parent : 0 / 1 / 3
  /home/runner/work/hl7.fhir.fr.preadmission/hl7.fhir.fr.preadmission/igSource/fsh-generated/resources/Practitioner-practitioner-irm : 0 / 0 / 3
@@ -65,24 +65,24 @@ WARNING: CodeSystem/document-type-ins-cs: CodeSystem.concept[0]: HL7 Defined Cod
 == fsh-generated/resources/CodeSystem-preadmission-status-code-system.json ==
 WARNING: CodeSystem/preadmission-status-code-system: CodeSystem.concept[0]: HL7 Defined CodeSystems should ensure that every concept has a definition
 == fsh-generated/resources/Consent-consentement-dmp-alimentation.json ==
-INFORMATION: Consent/consentement-dmp-alimentation: Consent.category[0]: There are no valid display names found for the code http://loinc.org#59284-0 for language(s) 'fr-FR'. The display is 'Consent Document' which is the default language display
+INFORMATION: Consent/consentement-dmp-alimentation: Consent.category[0]: There are no valid display names found for the code http://loinc.org#59284-0 for language(s) 'fr-FR'. The display is 'Consent Document' which is a valid display for the default language
 WARNING: Consent/consentement-dmp-alimentation: Consent.policy[0].authority: No definition could be found for URL value 'https://esante.gouv.fr/'
 WARNING: Consent/consentement-dmp-alimentation: Consent.policy[0].uri: No definition could be found for URL value 'https://esante.gouv.fr/doctrine/mon-espace-sante'
 INFORMATION: Consent/consentement-dmp-alimentation: Consent.provision.purpose[0].display: 'Treatment' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-ActReason has no Display Names for the language fr-FR
 == fsh-generated/resources/Consent-consentement-dmp-consultation.json ==
-INFORMATION: Consent/consentement-dmp-consultation: Consent.category[0]: There are no valid display names found for the code http://loinc.org#59284-0 for language(s) 'fr-FR'. The display is 'Consent Document' which is the default language display
+INFORMATION: Consent/consentement-dmp-consultation: Consent.category[0]: There are no valid display names found for the code http://loinc.org#59284-0 for language(s) 'fr-FR'. The display is 'Consent Document' which is a valid display for the default language
 WARNING: Consent/consentement-dmp-consultation: Consent.policy[0].authority: No definition could be found for URL value 'https://esante.gouv.fr/'
 WARNING: Consent/consentement-dmp-consultation: Consent.policy[0].uri: No definition could be found for URL value 'https://esante.gouv.fr/doctrine/mon-espace-sante'
 INFORMATION: Consent/consentement-dmp-consultation: Consent.provision.purpose[0].display: 'Treatment' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-ActReason has no Display Names for the language fr-FR
 == fsh-generated/resources/Consent-consentement-multi.json ==
-INFORMATION: Consent/consentement-multi: Consent.category[0]: There are no valid display names found for the code http://loinc.org#59284-0 for language(s) 'fr-FR'. The display is 'Consent Document' which is the default language display
+INFORMATION: Consent/consentement-multi: Consent.category[0]: There are no valid display names found for the code http://loinc.org#59284-0 for language(s) 'fr-FR'. The display is 'Consent Document' which is a valid display for the default language
 WARNING: Consent/consentement-multi: Consent.policy[0].authority: No definition could be found for URL value 'https://esante.gouv.fr/'
 WARNING: Consent/consentement-multi: Consent.policy[0].uri: No definition could be found for URL value 'https://esante.gouv.fr/doctrine/mon-espace-sante'
 INFORMATION: Consent/consentement-multi: Consent.provision.provision[0].purpose[0].display: 'Treatment' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-ActReason has no Display Names for the language fr-FR
 INFORMATION: Consent/consentement-multi: Consent.provision.provision[1].purpose[0].display: 'Treatment' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-ActReason has no Display Names for the language fr-FR
 INFORMATION: Consent/consentement-multi: Consent.provision.provision[2].purpose[0].display: 'patient request query' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-ActReason has no Display Names for the language fr-FR
 == fsh-generated/resources/Consent-consentement-refus-rgpd.json ==
-ERROR: Consent/consentement-refus-rgpd: Consent.category[0]: Wrong Display Name 'Privacy Policy Acknowledgment Document' for http://loinc.org#57016-8. There are no valid display names found for language(s) 'fr-FR'. Default display is 'Privacy policy acknowledgment Document'
+INFORMATION: Consent/consentement-refus-rgpd: Consent.category[0]: There are no valid display names found for the code http://loinc.org#57016-8 for language(s) 'fr-FR'. The display is 'Privacy Policy Acknowledgment Document' which is a valid display for the default language
 WARNING: Consent/consentement-refus-rgpd: Consent.policy[0].authority: No definition could be found for URL value 'https://www.cnil.fr/'
 WARNING: Consent/consentement-refus-rgpd: Consent.policy[0].uri: No definition could be found for URL value 'https://eur-lex.europa.eu/eli/reg/2016/679/oj'
 INFORMATION: Consent/consentement-refus-rgpd: Consent.provision.purpose[0].display: 'patient request query' is the default display; the code system http://terminology.hl7.org/CodeSystem/v3-ActReason has no Display Names for the language fr-FR
@@ -113,7 +113,6 @@ ERROR: Encounter/encounter-irm-refused: Encounter.identifier[0].type.coding[0].s
 ERROR: Encounter/encounter-irm-refused: Encounter.identifier[0].type.coding[0].system: The value provided ('https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type') was not found in the value set 'FR Core ValueSet Encounter identifier type' (https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.2.0), and a code is required from this value set  (error message = The System URI could not be determined for the code 'https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type' in the ValueSet 'https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.2.0'; The provided code '#https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-identifier-type' was not found in the value set 'https://hl7.fr/ig/fhir/core/ValueSet/fr-core-vs-encounter-identifier-type|2.2.0')
 ERROR: Encounter/encounter-irm-refused: Encounter.class.display: Wrong Display Name 'ambulatory' for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB. Valid display is 'Ambulatoire (hors établissement)' (fr-FR) (for the language(s) 'fr-FR')
 == fsh-generated/resources/ImplementationGuide-hl7.fhir.fr.preadmission.json ==
-WARNING: ImplementationGuide/hl7.fhir.fr.preadmission: ImplementationGuide.dependsOn[1]: The ImplementationGuide uses package hl7.fhir.uv.extensions.r4#5.3.0-ballot-tc1 released on 2025-08-03, but the most recent appropriate version is 5.2.0. This reference is getting old and the more recent version should be considered
 == fsh-generated/resources/Patient-patient-001.json ==
 INFORMATION: Patient/patient-001: Patient.identifier[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient|2.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Patient/patient-001: Patient.meta.profile[0]: This element does not match any known slice defined in the profile https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient|2.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
@@ -140,7 +139,7 @@ WARNING: SearchParameter/encounter-preadmission-status: SearchParameter.expressi
 WARNING: StructureDefinition.where(url = 'http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-patient-comment'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-fr-coverage-amc-extended.json ==
 == fsh-generated/resources/StructureDefinition-preadmission-appointment-fr.json ==
-INFORMATION: StructureDefinition/preadmission-appointment-fr: StructureDefinition.snapshot.element[13].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note Use additionalBinding extension or element instead
+INFORMATION: StructureDefinition/preadmission-appointment-fr: StructureDefinition.snapshot.element[13].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note Use additionalBinding extension or element instead
 == fsh-generated/resources/StructureDefinition-preadmission-consent-fr.json ==
 WARNING: StructureDefinition/preadmission-consent-fr: StructureDefinition.snapshot.element[50].binding.valueSet: There are multiple different potential matches for the url 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse'. It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html). Using version '3.1.0', found versions: 2.0.0, 3.1.0. Suggested fix: change the canonical reference from 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse' to 'http://terminology.hl7.org/ValueSet/v3-PurposeOfUse|3.1.0'
 WARNING: StructureDefinition/preadmission-consent-fr: StructureDefinition.differential.element[3].binding: The definition for the element 'Consent.category.coding' binds to the value set 'http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs' which is experimental, but this structure is not labeled as experimental

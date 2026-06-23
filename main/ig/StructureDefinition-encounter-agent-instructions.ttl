@@ -18,7 +18,7 @@
   fhir:name [ fhir:v "EncounterAgentInstructions"] ; # 
   fhir:title [ fhir:v "Consignes de l'agent administratif"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2026-04-10T14:43:25+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-06-23T08:29:02+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Interop'Santé"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Interop'Santé" ] ;
