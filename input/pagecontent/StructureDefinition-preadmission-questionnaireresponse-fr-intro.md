@@ -46,7 +46,7 @@ Pour les questionnaires remplis lors de la **prise de rendez-vous**, le `subject
   "subject": {
     "reference": "Appointment/appt-irm-001"
   },
-  "questionnaire": "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-irm"
+  "questionnaire": "https://hl7.fr/ig/fhir/preadmission/Questionnaire/questionnaire-irm"
 }
 ```
 
@@ -65,7 +65,7 @@ Pour les questionnaires remplis lors de la **préadmission**, le `subject` doit 
   "subject": {
     "reference": "Encounter/encounter-irm-externe"
   },
-  "questionnaire": "http://hl7.fr/fhir/fr/preadmission/Questionnaire/questionnaire-portail"
+  "questionnaire": "https://hl7.fr/ig/fhir/preadmission/Questionnaire/questionnaire-portail"
 }
 ```
 

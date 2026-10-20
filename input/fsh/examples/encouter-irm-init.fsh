@@ -22,7 +22,7 @@ Usage: #example
 * identifier[0].value = "15655244"
 
 
-* extension[preadmissionStatus].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr"
-* extension[preadmissionStatus].valueCodeableConcept.coding[0].system = "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"
+* extension[preadmissionStatus].url = "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/statut-preadmission-fr"
+* extension[preadmissionStatus].valueCodeableConcept.coding[0].system = "https://hl7.fr/ig/fhir/preadmission/CodeSystem/preadmission-status-code-system"
 * extension[preadmissionStatus].valueCodeableConcept.coding[0].code = #READY
 

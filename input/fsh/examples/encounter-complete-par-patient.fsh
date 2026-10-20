@@ -18,6 +18,6 @@ Description: "Exemple d'une ressource Encounter complété par le patient sur le
 * identifier[0].type.coding.display = "Visit Number"
 * identifier[0].system = "http://example.com/identifiers/encounters"
 * identifier[0].value = "15655244"
-* extension[preadmissionStatus].valueCodeableConcept.coding.system = "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"
+* extension[preadmissionStatus].valueCodeableConcept.coding.system = "https://hl7.fr/ig/fhir/preadmission/CodeSystem/preadmission-status-code-system"
 * extension[preadmissionStatus].valueCodeableConcept.coding.code = #READY
 * extension[preadmissionStatus].valueCodeableConcept.coding.display = "Pré-admission prête"

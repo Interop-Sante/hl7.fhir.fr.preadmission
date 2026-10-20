@@ -2,7 +2,7 @@ Instance: PreadmissionCapabilityStatement
 InstanceOf: CapabilityStatement
 Usage: #definition
 
-* url = "http://hl7.fr/fhir/fr/preadmission/CapabilityStatement/PreadmissionCapabilityStatement"
+* url = "https://hl7.fr/ig/fhir/preadmission/CapabilityStatement/PreadmissionCapabilityStatement"
 * name = "PreadmissionCapabilityStatement"
 * title = "Capacités serveur FHIR pour l'IG Preadmission"
 * status = #active
@@ -20,14 +20,14 @@ Usage: #definition
 
 // Déclaration de support pour Encounter
 * rest[0].resource[+].type = #Encounter
-* rest[0].resource[=].profile = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-encounter-fr"
+* rest[0].resource[=].profile = "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/preadmission-encounter-fr"
 * rest[0].resource[=].interaction[0].code = #read
 * rest[0].resource[=].interaction[1].code = #search-type
 * rest[0].resource[=].interaction[2].code = #create
 * rest[0].resource[=].interaction[3].code = #update
 * rest[0].resource[=].interaction[4].code = #delete
 * rest[0].resource[=].searchParam[0].name = "preadmission-status"
-* rest[0].resource[=].searchParam[0].definition = "http://hl7.fr/fhir/fr/preadmission/SearchParameter/encounter-preadmission-status"
+* rest[0].resource[=].searchParam[0].definition = "https://hl7.fr/ig/fhir/preadmission/SearchParameter/encounter-preadmission-status"
 * rest[0].resource[=].searchParam[0].type = #token
 * rest[0].resource[=].searchParam[0].documentation = "Le serveur DOIT permettre la recherche des préadmission par son statut (extension PreadmissionStatutFr)."
 * rest[0].resource[=].searchParam[+].name = "patient"
@@ -46,7 +46,7 @@ Usage: #definition
 
 // Appointment
 * rest[0].resource[+].type = #Appointment
-* rest[0].resource[=].profile = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"
+* rest[0].resource[=].profile = "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/preadmission-appointment-fr"
 * rest[0].resource[=].interaction[0].code = #read
 * rest[0].resource[=].interaction[1].code = #search-type
 * rest[0].resource[=].searchParam[0].name = "patient"
@@ -60,7 +60,7 @@ Usage: #definition
 
 // Consent
 * rest[0].resource[+].type = #Consent
-* rest[0].resource[=].profile = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-consent-fr"
+* rest[0].resource[=].profile = "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/preadmission-consent-fr"
 * rest[0].resource[=].interaction[0].code = #read
 * rest[0].resource[=].interaction[1].code = #search-type
 * rest[0].resource[=].searchParam[0].name = "patient"
@@ -70,7 +70,7 @@ Usage: #definition
 
 // Coverage
 * rest[0].resource[+].type = #Coverage
-* rest[0].resource[=].profile = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"
+* rest[0].resource[=].profile = "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/preadmission-coverage-fr"
 * rest[0].resource[=].interaction[0].code = #read
 * rest[0].resource[=].interaction[1].code = #search-type
 * rest[0].resource[=].searchParam[0].name = "patient"
@@ -80,7 +80,7 @@ Usage: #definition
 
 // DocumentReference
 * rest[0].resource[+].type = #DocumentReference
-* rest[0].resource[=].profile = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-documentreference-fr"
+* rest[0].resource[=].profile = "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/preadmission-documentreference-fr"
 * rest[0].resource[=].interaction[0].code = #read
 * rest[0].resource[=].interaction[1].code = #search-type
 * rest[0].resource[=].searchParam[0].name = "encounter"
@@ -97,7 +97,7 @@ Usage: #definition
 
 // QuestionnaireResponse
 * rest[0].resource[+].type = #QuestionnaireResponse
-* rest[0].resource[=].profile = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr"
+* rest[0].resource[=].profile = "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/preadmission-questionnaireresponse-fr"
 * rest[0].resource[=].interaction[0].code = #read
 * rest[0].resource[=].interaction[1].code = #search-type
 * rest[0].resource[=].searchParam[0].name = "subject"

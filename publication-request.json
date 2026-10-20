@@ -1,0 +1,18 @@
+{
+    "package-id" : "hl7.fhir.fr.preadmission",
+    "version" : "1.0.0-ballot",
+    "path" : "https://hl7.fr/ig/fhir/preadmission/1.0.0-ballot",
+    "mode" : "working",
+    "status" : "ballot",
+    "sequence" : "draft",
+    "desc" : "Première publication en concertation publique du guide d'implémentation FHIR Pré-admission hospitalière en ligne",
+    "changes" : "history.html",
+    "first" : true,
+    "title" : "Guide d'Implémentation FHIR – Pré-admission Hospitalière en Ligne",
+    "ci-build" : "https://interop-sante.github.io/hl7.fhir.fr.preadmission/main/ig/",
+    "registry-description" : "Guide d'implémentation FHIR pour la pré-admission hospitalière en ligne en France",
+    "registry-country" : "fr",
+    "registry-authority" : "Interop'Santé",
+    "category" : "Administrative",
+    "introduction" : "Ce guide définit les spécifications FHIR pour les échanges liés à la pré-admission hospitalière en ligne."
+}
