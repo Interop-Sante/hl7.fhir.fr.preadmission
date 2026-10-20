@@ -22,10 +22,10 @@ Usage: #example
 * identifier[0].value = "15655244"
 
 // Extension pour le statut de la préadmission
-* extension[preadmissionStatus].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/statut-preadmission-fr"
-* extension[preadmissionStatus].valueCodeableConcept.coding[0].system = "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"
+* extension[preadmissionStatus].url = "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/statut-preadmission-fr"
+* extension[preadmissionStatus].valueCodeableConcept.coding[0].system = "https://hl7.fr/ig/fhir/preadmission/CodeSystem/preadmission-status-code-system"
 * extension[preadmissionStatus].valueCodeableConcept.coding[0].code = #REFUSED
 
 // Extension pour le commentaire de rejet
-* extension[consignesAgent].url = "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/encounter-agent-instructions"
+* extension[consignesAgent].url = "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/encounter-agent-instructions"
 * extension[consignesAgent].valueString = "Le patient n'a pas fourni les documents nécessaires pour valider la préadmission."

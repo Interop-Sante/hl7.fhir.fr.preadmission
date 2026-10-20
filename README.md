@@ -1,5 +1,5 @@
 Lien vers l'intégration continue : https://interop-sante.github.io/hl7.fhir.fr.preadmission/main/ig /!\ Cette version est soumise à des changements réguliers et ne doit pas être utilisée telle quelle, elle est uniquement publiée pour consultation.
-Exemple : http://hl7.fr/fhir/fr/preadmission
+Exemple : https://hl7.fr/ig/fhir/preadmission
 
 # Description
 Ceci est exemple d'ImplementationGuide très simplifié qui servira de template pour les prochains développement d'IGs. Pour créer un nouvel IG, il suffit de forker ce document et de mettre à jour :
