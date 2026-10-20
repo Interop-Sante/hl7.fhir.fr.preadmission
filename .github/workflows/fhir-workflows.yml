@@ -1,23 +1,36 @@
-name: Workflow Sushi Tests gitHubpages
+name: Workflow CI-build (GitHub pages)
 on:
   workflow_call:
   push:
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+
+# Annule tout run ci-build précédent encore en cours sur la même branche/PR
+# dès qu'un nouveau push arrive, pour économiser des minutes GitHub Actions.
+concurrency:
+  group: ci-build-${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   run-sushi-tests_gitHubPages:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/ansforge/fhir-ig-builder:latest
+    # Sérialise les écritures sur gh-pages entre branches (groupe distinct de la concurrency: ci-dessus, scopée par branche/PR).
+    concurrency:
+      group: gh-pages-${{ github.repository }}
+      cancel-in-progress: false
+      queue: max
     steps:
       - uses: actions/checkout@v3
-        with:      
+        with:
           path: igSource
       - uses: ansforge/IG-workflows@main
-        with:      
-          repo_ig: "./igSource"   
+        with:
+          repo_ig: "./igSource"
           github_page: "true"
           github_page_token: ${{ secrets.GITHUB_TOKEN }}
           bake: "false"
           validator_cli: "false"
           generate_testscript: "false"
-          generate_plantuml : "false"
-          ig-publisher-version: "2.0.10"
+          generate_plantuml: "false"
+          container_mode: "true"
