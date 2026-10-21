@@ -1,21 +1,16 @@
 {% if site.data.info.releaselabel == 'ci-build' %}
 <div style="width: 65%">
     <blockquote class="stu-note">
-    <p>Cet Implementation Guide n'est pas la version courante, il s'agit de la version en intégration continue soumise à des changements fréquents uniquement destinée à suivre les travaux en cours. La version courante sera accessible via l'URL canonique suite à la première release : http://hl7.fr/fhir/fr/preadmission</p>
+    <p><b>Attention !</b> Cet Implementation Guide n'est pas la version courante, il s'agit de la version en intégration continue soumise à des changements fréquents uniquement destinée à suivre les travaux en cours. La version courante et publiée à utiliser est accessible à l'adresse <a href="https://hl7.fr/ig/fhir/preadmission">https://hl7.fr/ig/fhir/preadmission</a></p>
     </blockquote>
 </div>
 {% endif %}
 
-
-{% if site.data.info.releaselabel == 'public-comment' %}
+{% if site.data.info.releaselabel == 'ballot' %}
 <div style="width: 65%">
-<blockquote class="stu-note">
-<p>
-  <b>Attention !</b>
-  <br>
- Cet Implementation Guide est actuellement en concertation. La version courante est accessible à l'adresse : http://hl7.fr/fhir/fr/preadmission
-</p>
-</blockquote>
+    <blockquote class="stu-note">
+    <p><b>Attention !</b> Cette version du guide d'implémentation est en concertation. La version officielle est accessible à l'adresse <a href="https://hl7.fr/ig/fhir/preadmission">https://hl7.fr/ig/fhir/preadmission</a></p>
+    </blockquote>
 </div>
 {% endif %}
 
