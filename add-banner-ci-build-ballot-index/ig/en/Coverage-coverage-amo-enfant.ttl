@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/preadmission/Coverage/coverage-amo-enfant> a fhir:Coverage ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "coverage-amo-enfant"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/preadmission-coverage-fr" ;
+       fhir:index -1 ;
+       fhir:link <https://hl7.fr/ig/fhir/preadmission/StructureDefinition/preadmission-coverage-fr>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Coverage coverage-amo-enfant</b></p><a name=\"coverage-amo-enfant\"> </a><a name=\"hccoverage-amo-enfant\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-preadmission-coverage-fr.html\">Fr Preadmission Coverage Profile</a></p></div><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMO-2025-001 (use: official)</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode PUBLICPOL}\">public healthcare</span></p><p><b>subscriber</b>: <a href=\"Patient-patient-parent.html\">Michel Dupont</a></p><p><b>subscriberId</b>: 123456789012345</p><p><b>beneficiary</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/subscriber-relationship child}\">Child</span></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Assurance Maladie Obligatoire</p></div>"
+  ] ;
+  fhir:Coverage.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.system [ fhir:value "http://example.com/identifiers/coverage" ] ;
+     fhir:Identifier.value [ fhir:value "AMO-2025-001" ]
+  ] ;
+  fhir:Coverage.status [ fhir:value "active"] ;
+  fhir:Coverage.type [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "PUBLICPOL" ]
+     ]
+  ] ;
+  fhir:Coverage.subscriber [
+     fhir:link <https://hl7.fr/ig/fhir/preadmission/Patient/patient-parent> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-parent" ] ;
+     fhir:Reference.display [ fhir:value "Michel Dupont" ]
+  ] ;
+  fhir:Coverage.subscriberId [ fhir:value "123456789012345"] ;
+  fhir:Coverage.beneficiary [
+     fhir:link <https://hl7.fr/ig/fhir/preadmission/Patient/patient-001> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-001" ] ;
+     fhir:Reference.display [ fhir:value "Jean Dupont" ]
+  ] ;
+  fhir:Coverage.relationship [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/subscriber-relationship" ] ;
+       fhir:Coding.code [ fhir:value "child" ]
+     ]
+  ] ;
+  fhir:Coverage.period [
+     fhir:Period.start [ fhir:value "2025-01-01T00:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2025-12-31T23:59:59+01:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Coverage.payor [
+     fhir:index -1 ;
+     fhir:Reference.display [ fhir:value "Assurance Maladie Obligatoire" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/preadmission/Coverage/coverage-amo-enfant.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

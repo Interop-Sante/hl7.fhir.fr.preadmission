@@ -1,0 +1,75 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-category-vs",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
+      "name" : "PreadmissionConsentCategoryVS",
+      "title" : "preadmission-consent-category-vs",
+      "description" : "ValueSet pour les catégories de consentement. Tous les codes sont standards et existants.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-code-vs",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
+      "name" : "PreadmissionConsentCodeValueSet",
+      "title" : "preadmission-consent-code-vs",
+      "description" : "Code HL7 représentant les types d'action concernées par le consentement. Tous les codes sont standards et existants.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/consentaction"]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-consent-purpose-reason-vs",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
+      "name" : "PreadmissionConsentPurposeReasonVS",
+      "title" : "preadmission-consent-purpose-reason-vs",
+      "description" : "Raisons justifiant l’utilisation des données personnelles (HL7 v3 ActReason).",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-document-type-vs",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
+      "name" : "PreadmissionDocumentTypeFrValueSet",
+      "title" : "preadmission-document-type-vs",
+      "description" : "Liste des types de documents autorisés pour la préadmission",
+      "systems" : [
+        "https://mos.esante.gouv.fr/NOS/TRE_A12-NomenclatureASTM/FHIR/TRE-A12-NomenclatureASTM",
+        "http://loinc.org",
+        "https://mos.esante.gouv.fr/NOS/TRE_A05-TypeDocComplementaire/FHIR/TRE-A05-TypeDocComplementaire",
+        "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity",
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/document-type-cs"
+      ]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/preadmission-statuts-vs",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
+      "name" : "PreAdmissionStatusValueSet",
+      "title" : "preadmission-status-vs",
+      "description" : "Statuts valides qu'une préadmission peut prendre.",
+      "systems" : [
+        "http://hl7.fr/fhir/fr/preadmission/CodeSystem/preadmission-status-code-system"
+      ]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-couverture-sociale-vs",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
+      "name" : "TypeCouvertureSocialeValueSet",
+      "title" : "type-couverture-sociale-vs",
+      "description" : "Restreint les types de couverture à PUBLICPOL (AMO) et EHCPOL (AMC)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"]
+    },
+    {
+      "url" : "http://hl7.fr/fhir/fr/preadmission/ValueSet/type-venue-encounter-vs",
+      "version" : "1.0.0-ballot",
+      "status" : "active",
+      "name" : "TypeVenueEncounterValueSet",
+      "title" : "type-venue-encounter-vs",
+      "description" : "Les différents types d'admission (hospitalisation, consultation, etc.)",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"]
+    }
+  ]
+}

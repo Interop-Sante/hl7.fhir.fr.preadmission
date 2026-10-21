@@ -1,0 +1,113 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/preadmission/CodeSystem/document-type-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "document-type-cs"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablecodesystem" ;
+       fhir:index 0 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablecodesystem>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem document-type-cs</b></p><a name=\"document-type-cs\"> </a><a name=\"hcdocument-type-cs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablecodesystem.html\">Shareable CodeSystem</a></p></div><p>This case-sensitive code system <code>https://hl7.fr/ig/fhir/preadmission/CodeSystem/document-type-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">CN_RECTO<a name=\"document-type-cs-CN_RECTO\"> </a></td><td>Recto Carte d’identité</td></tr><tr><td style=\"white-space:nowrap\">CN_VERSO<a name=\"document-type-cs-CN_VERSO\"> </a></td><td>Verso Carte d’identité</td></tr><tr><td style=\"white-space:nowrap\">ATTEST_VITALE<a name=\"document-type-cs-ATTEST_VITALE\"> </a></td><td>Carte Vitale</td></tr><tr><td style=\"white-space:nowrap\">JUSTIFICATIF_ID<a name=\"document-type-cs-JUSTIFICATIF_ID\"> </a></td><td>Justificatif d'identité</td></tr><tr><td style=\"white-space:nowrap\">MUTUELLE<a name=\"document-type-cs-MUTUELLE\"> </a></td><td>Carte mutuelle</td></tr><tr><td style=\"white-space:nowrap\">MUTUELLE_RECTO<a name=\"document-type-cs-MUTUELLE_RECTO\"> </a></td><td>Recto Carte mutuelle</td></tr><tr><td style=\"white-space:nowrap\">MUTUELLE_VERSO<a name=\"document-type-cs-MUTUELLE_VERSO\"> </a></td><td>Verso Carte mutuelle</td></tr><tr><td style=\"white-space:nowrap\">JUSTIFICATIF_DOM<a name=\"document-type-cs-JUSTIFICATIF_DOM\"> </a></td><td>Justificatif de domicile</td></tr><tr><td style=\"white-space:nowrap\">ARRET_TRAVAIL<a name=\"document-type-cs-ARRET_TRAVAIL\"> </a></td><td>Arrêt de travail</td></tr><tr><td style=\"white-space:nowrap\">PERS_PREVENIR<a name=\"document-type-cs-PERS_PREVENIR\"> </a></td><td>Fiche de déclaration de la personne à prévenir</td></tr><tr><td style=\"white-space:nowrap\">PERS_CONFIANCE<a name=\"document-type-cs-PERS_CONFIANCE\"> </a></td><td>Fiche de déclaration de la personne de confiance</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://hl7.fr/ig/fhir/preadmission/CodeSystem/document-type-cs"] ;
+  fhir:CodeSystem.version [ fhir:value "1.0.0-ballot"] ;
+  fhir:CodeSystem.name [ fhir:value "PreadmissionDocumentTypeCodeSystem"] ;
+  fhir:CodeSystem.title [ fhir:value "document-type-cs"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-10-21T07:37:29+00:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "Interop'Santé"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "Interop'Santé" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://interopsante.org/" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:ContactDetail.name [ fhir:value "InteropSanté" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "fhir@interopsante.org" ] ;
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Types de documents additionnels pour la préadmission"] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "11"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CN_RECTO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Recto Carte d’identité" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "CN_VERSO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Verso Carte d’identité" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ATTEST_VITALE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Carte Vitale" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "JUSTIFICATIF_ID" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Justificatif d'identité" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MUTUELLE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Carte mutuelle" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MUTUELLE_RECTO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Recto Carte mutuelle" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "MUTUELLE_VERSO" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Verso Carte mutuelle" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "JUSTIFICATIF_DOM" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Justificatif de domicile" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "ARRET_TRAVAIL" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Arrêt de travail" ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PERS_PREVENIR" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fiche de déclaration de la personne à prévenir" ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "PERS_CONFIANCE" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fiche de déclaration de la personne de confiance" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/preadmission/CodeSystem/document-type-cs.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

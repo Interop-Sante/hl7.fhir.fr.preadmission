@@ -1,0 +1,20 @@
+{
+  "url" : "https://hl7.fr/ig/fhir/preadmission/ImplementationGuide/hl7.fhir.fr.preadmission",
+  "name" : "PREADMISSIONFR",
+  "title" : "Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne",
+  "description" : "",
+  "status" : "active",
+  "package-id" : "hl7.fhir.fr.preadmission",
+  "ig-ver" : "1.0.0-ballot",
+  "date" : "Wed, 21 Oct, 2026 07:41:34 +0000",
+  "dateISO8601" : "2026-10-21T07:41:34+00:00",
+  "errs" : 47,
+  "warnings" : 50,
+  "hints" : 51,
+  "broken-links" : 8,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "6.0.0-snapshot1 (3)",
+  "maxMemory" : 1073001496
+}

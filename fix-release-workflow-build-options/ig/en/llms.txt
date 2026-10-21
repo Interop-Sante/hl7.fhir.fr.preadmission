@@ -1,0 +1,80 @@
+# hl7.fhir.fr.preadmission#1.0.0-ballot: Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne(en)
+
+## Pages
+
+* [Accueil](index.md)
+* [Diagramme de séquence du processus](sequence.md)
+* [Processus centré sur les ressources](processus-ressource-fhir.md)
+* [Historique des versions](history.md)
+* [Processus fonctionnelle de la préadmission](processus.md)
+* [Téléchargement du guide](downloads.md)
+* [Artifacts Summary](artifacts.md)
+* [Diagrammes des flux](flux.md)
+
+## Resources
+
+### CodeSystems
+
+* [document-type-cs](CodeSystem-document-type-cs.md)
+* [document-type-ins-cs](CodeSystem-document-type-ins-cs.md)
+* [preadmission-status-code-system](CodeSystem-preadmission-status-code-system.md)
+
+### ValueSets
+
+* [preadmission-consent-category-vs](ValueSet-preadmission-consent-category-vs.md)
+* [preadmission-consent-code-vs](ValueSet-preadmission-consent-code-vs.md)
+* [preadmission-consent-purpose-reason-vs](ValueSet-preadmission-consent-purpose-reason-vs.md)
+* [preadmission-document-type-vs](ValueSet-preadmission-document-type-vs.md)
+* [preadmission-status-vs](ValueSet-preadmission-statuts-vs.md)
+* [type-couverture-sociale-vs](ValueSet-type-couverture-sociale-vs.md)
+* [type-venue-encounter-vs](ValueSet-type-venue-encounter-vs.md)
+
+### Resource Profiles
+
+* [Fr Preadmission Appointment Profile](StructureDefinition-preadmission-appointment-fr.md)
+* [Fr Preadmission Consent Profile](StructureDefinition-preadmission-consent-fr.md)
+* [Fr Preadmission Coverage Profile](StructureDefinition-preadmission-coverage-fr.md)
+* [Fr Preadmission DocumentReference Profile](StructureDefinition-preadmission-documentreference-fr.md)
+* [Fr Preadmission Encounter Profile](StructureDefinition-preadmission-encounter-fr.md)
+* [Fr Preadmission QuestionnaireResponse Profile](StructureDefinition-preadmission-questionnaireresponse-fr.md)
+
+### Extensions
+
+* [Consignes de l'agent administratif](StructureDefinition-encounter-agent-instructions.md)
+* [Remarque du patient](StructureDefinition-encounter-patient-comment.md)
+* [Extension AMC Étendue ROC](StructureDefinition-fr-coverage-amc-extended.md)
+* [Extension Statut Pré-admission](StructureDefinition-statut-preadmission-fr.md)
+
+### CapabilityStatements
+
+* [Capacités serveur FHIR pour l'IG Preadmission](CapabilityStatement-PreadmissionCapabilityStatement.md)
+
+### ImplementationGuides
+
+* [Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne](ImplementationGuide-hl7.fhir.fr.preadmission.md)
+
+### SearchParameters
+
+* [EncounterPreadmissionStatus](SearchParameter-encounter-preadmission-status.md)
+
+### Examples
+
+* [appt-irm-001 (Appointment)](Appointment-appt-irm-001.md)
+* [consentement-dmp-alimentation (Consent)](Consent-consentement-dmp-alimentation.md)
+* [consentement-dmp-consultation (Consent)](Consent-consentement-dmp-consultation.md)
+* [consentement-multi (Consent)](Consent-consentement-multi.md)
+* [consentement-refus-rgpd (Consent)](Consent-consentement-refus-rgpd.md)
+* [coverage-amc (Coverage)](Coverage-coverage-amc.md)
+* [coverage-amo-enfant (Coverage)](Coverage-coverage-amo-enfant.md)
+* [coverage-amo (Coverage)](Coverage-coverage-amo.md)
+* [documentreference-cni-recto (DocumentReference)](DocumentReference-documentreference-cni-recto.md)
+* [encounter-irm-complete (Encounter)](Encounter-encounter-irm-complete.md)
+* [encounter-irm-externe (Encounter)](Encounter-encounter-irm-externe.md)
+* [encounter-irm-refused (Encounter)](Encounter-encounter-irm-refused.md)
+* [patient-001 (Patient)](Patient-patient-001.md)
+* [patient-parent (Patient)](Patient-patient-parent.md)
+* [practitioner-irm (Practitioner)](Practitioner-practitioner-irm.md)
+* [Questionnaire IRM - Préadmission (Questionnaire)](Questionnaire-questionnaire-chb-part.md)
+* [Questionnaire IRM - Préadmission (Questionnaire)](Questionnaire-questionnaire-irm.md)
+* [qr-chb-part (QuestionnaireResponse)](QuestionnaireResponse-qr-chb-part.md)
+* [qr-irm-001 (QuestionnaireResponse)](QuestionnaireResponse-qr-irm-001.md)

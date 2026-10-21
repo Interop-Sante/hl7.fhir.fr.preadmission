@@ -1,0 +1,95 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/preadmission/Coverage/coverage-amc> a fhir:Coverage ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "coverage-amc"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/preadmission-coverage-fr" ;
+       fhir:index 0 ;
+       fhir:link <https://hl7.fr/ig/fhir/preadmission/StructureDefinition/preadmission-coverage-fr>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Coverage coverage-amc</b></p><a name=\"coverage-amc\"> </a><a name=\"hccoverage-amc\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-preadmission-coverage-fr.html\">Fr Preadmission Coverage Profile</a></p></div><blockquote><p><b>Extension AMC Étendue ROC</b></p><blockquote><p><b>url</b></p>codeCSR</blockquote><p><b>value</b>: CSR67890</p><blockquote><p><b>url</b></p>datamatrix</blockquote><p><b>value</b>: (exemple)DATAMATRIX-AMC-987654321</p><p><b>codeConvention</b>: CONV12345</p><p><b>domaine</b>: consultation</p><p><b>domaine</b>: hospitalisation</p><blockquote><p><b>url</b></p>conventionParDomaine</blockquote></blockquote><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMC-2025-001 (use: official)</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode EHCPOL}\">extended healthcare</span></p><p><b>subscriber</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>subscriberId</b>: AMC-987654321</p><p><b>beneficiary</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Nom Assurance Maladie Complémentaire (Identifier: <code>urn:oid:1.2.250.1.213.1.1.4.6</code>/987654321)</p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "codeCSR" ] ;
+       fhir:Extension.valueCode [ fhir:value "CSR67890" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Extension.url [ fhir:value "datamatrix" ] ;
+       fhir:Extension.valueString [ fhir:value "(exemple)DATAMATRIX-AMC-987654321" ]
+     ], [
+       fhir:index 2 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "codeConvention" ] ;
+         fhir:Extension.valueCode [ fhir:value "CONV12345" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "domaine" ] ;
+         fhir:Extension.valueCode [ fhir:value "consultation" ]
+       ], [
+         fhir:index 2 ;
+         fhir:Extension.url [ fhir:value "domaine" ] ;
+         fhir:Extension.valueCode [ fhir:value "hospitalisation" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "conventionParDomaine" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "https://hl7.fr/ig/fhir/preadmission/StructureDefinition/fr-coverage-amc-extended" ]
+  ] ;
+  fhir:Coverage.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.use [ fhir:value "official" ] ;
+     fhir:Identifier.system [ fhir:value "http://example.com/identifiers/coverage" ] ;
+     fhir:Identifier.value [ fhir:value "AMC-2025-001" ]
+  ] ;
+  fhir:Coverage.status [ fhir:value "active"] ;
+  fhir:Coverage.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "EHCPOL" ]
+     ]
+  ] ;
+  fhir:Coverage.subscriber [
+     fhir:link <https://hl7.fr/ig/fhir/preadmission/Patient/patient-001> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-001" ] ;
+     fhir:Reference.display [ fhir:value "Jean Dupont" ]
+  ] ;
+  fhir:Coverage.subscriberId [ fhir:value "AMC-987654321"] ;
+  fhir:Coverage.beneficiary [
+     fhir:link <https://hl7.fr/ig/fhir/preadmission/Patient/patient-001> ;
+     fhir:Reference.reference [ fhir:value "Patient/patient-001" ] ;
+     fhir:Reference.display [ fhir:value "Jean Dupont" ]
+  ] ;
+  fhir:Coverage.period [
+     fhir:Period.start [ fhir:value "2025-01-01T00:00:00+01:00"^^xsd:dateTime ] ;
+     fhir:Period.end [ fhir:value "2025-12-31T23:59:59+01:00"^^xsd:dateTime ]
+  ] ;
+  fhir:Coverage.payor [
+     fhir:index 0 ;
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "urn:oid:1.2.250.1.213.1.1.4.6" ] ;
+       fhir:Identifier.value [ fhir:value "987654321" ]
+     ] ;
+     fhir:Reference.display [ fhir:value "Nom Assurance Maladie Complémentaire" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/preadmission/Coverage/coverage-amc.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

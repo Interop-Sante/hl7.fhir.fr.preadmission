@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/preadmission/ValueSet/preadmission-document-type-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "preadmission-document-type-vs"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/shareablevalueset" ;
+       fhir:index -1 ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "en"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet preadmission-document-type-vs</b></p><a name=\"preadmission-document-type-vs\"> </a><a name=\"hcpreadmission-document-type-vs\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/R4/shareablevalueset.html\">Shareable ValueSet</a></p></div><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"https://hl7.fr/ig/fhir/core/2.2.0/CodeSystem-fr-core-cs-mode-validation-identity.html\"><code>https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 2.2.0, the version found through the package references\"> version ?2.2.0</span></li><li>Include all codes defined in <a href=\"CodeSystem-document-type-cs.html\"><code>https://hl7.fr/ig/fhir/preadmission/CodeSystem/document-type-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1.0.0-ballot</span></li><li>Import all the codes that are contained in <a href=\"https://interop.esante.gouv.fr/terminologies/1.7.0/ValueSet-JDV-J66-TypeCode-DMP.html\">JDV_J66_TypeCode_DMP</a></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://hl7.fr/ig/fhir/preadmission/ValueSet/preadmission-document-type-vs"] ;
+  fhir:ValueSet.version [ fhir:value "1.0.0-ballot"] ;
+  fhir:ValueSet.name [ fhir:value "PreadmissionDocumentTypeFrValueSet"] ;
+  fhir:ValueSet.title [ fhir:value "preadmission-document-type-vs"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "true"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-10-21T07:37:29+00:00"^^xsd:dateTime] ;
+  fhir:ValueSet.publisher [ fhir:value "Interop'Santé"] ;
+  fhir:ValueSet.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "Interop'Santé" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "http://interopsante.org/" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "InteropSanté" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "email" ] ;
+       fhir:ContactPoint.value [ fhir:value "fhir@interopsante.org" ] ;
+       fhir:ContactPoint.use [ fhir:value "work" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "Liste des types de documents autorisés pour la préadmission"] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "FR" ] ;
+       fhir:Coding.display [ fhir:value "France (la)" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://hl7.fr/ig/fhir/core/CodeSystem/fr-core-cs-mode-validation-identity" ]
+     ], [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://hl7.fr/ig/fhir/preadmission/CodeSystem/document-type-cs" ]
+     ], [
+       fhir:index -1 ;
+       fhir:ValueSet.compose.include.valueSet [
+         fhir:value "https://mos.esante.gouv.fr/NOS/JDV_J66-TypeCode-DMP/FHIR/JDV-J66-TypeCode-DMP" ;
+         fhir:index -1 ;
+         fhir:link <https://mos.esante.gouv.fr/NOS/JDV_J66-TypeCode-DMP/FHIR/JDV-J66-TypeCode-DMP>
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://hl7.fr/ig/fhir/preadmission/ValueSet/preadmission-document-type-vs.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

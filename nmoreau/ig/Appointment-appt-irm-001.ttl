@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.fr/fhir/fr/preadmission/Appointment/appt-irm-001> a fhir:Appointment ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "appt-irm-001"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr"^^xsd:anyURI ;
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-appointment-fr>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : RendezVous appt-irm-001</b></p><a name=\"appt-irm-001\"> </a><a name=\"hcappt-irm-001\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-appointment-fr.html\">Fr Preadmission Appointment Profile</a></p></div><p><b>status</b>: Booked</p><p><b>reasonCode</b>: <span title=\"Codes:{http://snomed.info/sct 241541005}\">IRM cérébrale (procédure)</span></p><p><b>start</b>: 2025-05-15 10:30:00+0100</p><p><b>end</b>: 2025-05-15 11:00:00+0100</p><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>status</b>: Accepted</p></blockquote><blockquote><p><b>participant</b></p><p><b>actor</b>: <a href=\"Practitioner-practitioner-irm.html\">Practitioner Sophie Martin </a></p><p><b>status</b>: Accepted</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "booked"] ; # 
+  fhir:reasonCode ( [
+     fhir:coding ( [
+       a sct:241541005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "241541005" ] ;
+       fhir:display [ fhir:v "IRM cérébrale (procédure)" ]
+     ] )
+  ] ) ; # 
+  fhir:start [ fhir:v "2025-05-15T10:30:00+01:00"^^xsd:dateTime] ; # 
+  fhir:end [ fhir:v "2025-05-15T11:00:00+01:00"^^xsd:dateTime] ; # 
+  fhir:participant ( [
+     fhir:actor [
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/Patient/patient-001> ;
+       fhir:reference [ fhir:v "Patient/patient-001" ] ;
+       fhir:display [ fhir:v "Jean Dupont" ]
+     ] ;
+     fhir:status [ fhir:v "accepted" ]
+  ] [
+     fhir:actor [
+       fhir:link <http://hl7.fr/fhir/fr/preadmission/Practitioner/practitioner-irm> ;
+       fhir:reference [ fhir:v "Practitioner/practitioner-irm" ]
+     ] ;
+     fhir:status [ fhir:v "accepted" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

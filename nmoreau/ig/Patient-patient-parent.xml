@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="patient-parent"/>
+  <meta>
+    <profile value="https://hl7.fr/ig/fhir/core/StructureDefinition/fr-core-patient"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Narratif généré : Patient patient-parent</b></p><a name="patient-parent"> </a><a name="hcpatient-parent"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profil: <a href="https://hl7.fr/ig/fhir/core/2.2.0/StructureDefinition-fr-core-patient.html">FR Core Patient Profile</a></p></div><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Michel Dupont (official) Male, Date de Naissance :1960-01-01 ( http://interopsante.org/fhir/NIR#123456789012345)</p><hr/></div>
+  </text>
+  <identifier>
+    <system value="http://interopsante.org/fhir/NIR"/>
+    <value value="123456789012345"/>
+  </identifier>
+  <name>
+    <use value="official"/>
+    <family value="Dupont"/>
+    <given value="Michel"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1960-01-01"/>
+</Patient>

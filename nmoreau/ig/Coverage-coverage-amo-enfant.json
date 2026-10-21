@@ -1,0 +1,45 @@
+{
+  "resourceType" : "Coverage",
+  "id" : "coverage-amo-enfant",
+  "meta" : {
+    "profile" : ["http://hl7.fr/fhir/fr/preadmission/StructureDefinition/preadmission-coverage-fr"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Narratif généré : Couverture coverage-amo-enfant</b></p><a name=\"coverage-amo-enfant\"> </a><a name=\"hccoverage-amo-enfant\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-preadmission-coverage-fr.html\">Fr Preadmission Coverage Profile</a></p></div><p><b>identifier</b>: <code>http://example.com/identifiers/coverage</code>/AMO-2025-001\u00a0(use:\u00a0official,\u00a0)</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ActCode PUBLICPOL}\">public healthcare</span></p><p><b>subscriber</b>: <a href=\"Patient-patient-parent.html\">Michel Dupont</a></p><p><b>subscriberId</b>: 123456789012345</p><p><b>beneficiary</b>: <a href=\"Patient-patient-001.html\">Jean Dupont</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/subscriber-relationship child}\">Child</span></p><p><b>period</b>: 2025-01-01 00:00:00+0100 --&gt; 2025-12-31 23:59:59+0100</p><p><b>payor</b>: Assurance Maladie Obligatoire</p></div>"
+  },
+  "identifier" : [{
+    "use" : "official",
+    "system" : "http://example.com/identifiers/coverage",
+    "value" : "AMO-2025-001"
+  }],
+  "status" : "active",
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "code" : "PUBLICPOL"
+    }]
+  },
+  "subscriber" : {
+    "reference" : "Patient/patient-parent",
+    "display" : "Michel Dupont"
+  },
+  "subscriberId" : "123456789012345",
+  "beneficiary" : {
+    "reference" : "Patient/patient-001",
+    "display" : "Jean Dupont"
+  },
+  "relationship" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+      "code" : "child"
+    }]
+  },
+  "period" : {
+    "start" : "2025-01-01T00:00:00+01:00",
+    "end" : "2025-12-31T23:59:59+01:00"
+  },
+  "payor" : [{
+    "display" : "Assurance Maladie Obligatoire"
+  }]
+}

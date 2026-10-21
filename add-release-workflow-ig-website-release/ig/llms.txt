@@ -1,0 +1,80 @@
+# hl7.fhir.fr.preadmission#1.0.0-ballot: Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne(en)
+
+## Pages
+
+* [Accueil](en/index.md)
+* [Artifacts Summary](en/artifacts.md)
+* [Téléchargement du guide](en/downloads.md)
+* [Diagrammes des flux](en/flux.md)
+* [Processus centré sur les ressources](en/processus-ressource-fhir.md)
+* [Diagramme de séquence du processus](en/sequence.md)
+* [Historique des versions](en/history.md)
+* [Processus fonctionnelle de la préadmission](en/processus.md)
+
+## Resources
+
+### CodeSystems
+
+* [document-type-cs](en/CodeSystem-document-type-cs.md)
+* [document-type-ins-cs](en/CodeSystem-document-type-ins-cs.md)
+* [preadmission-status-code-system](en/CodeSystem-preadmission-status-code-system.md)
+
+### ValueSets
+
+* [preadmission-consent-category-vs](en/ValueSet-preadmission-consent-category-vs.md)
+* [preadmission-consent-code-vs](en/ValueSet-preadmission-consent-code-vs.md)
+* [preadmission-consent-purpose-reason-vs](en/ValueSet-preadmission-consent-purpose-reason-vs.md)
+* [preadmission-document-type-vs](en/ValueSet-preadmission-document-type-vs.md)
+* [preadmission-status-vs](en/ValueSet-preadmission-statuts-vs.md)
+* [type-couverture-sociale-vs](en/ValueSet-type-couverture-sociale-vs.md)
+* [type-venue-encounter-vs](en/ValueSet-type-venue-encounter-vs.md)
+
+### Resource Profiles
+
+* [Fr Preadmission Appointment Profile](en/StructureDefinition-preadmission-appointment-fr.md)
+* [Fr Preadmission Consent Profile](en/StructureDefinition-preadmission-consent-fr.md)
+* [Fr Preadmission Coverage Profile](en/StructureDefinition-preadmission-coverage-fr.md)
+* [Fr Preadmission DocumentReference Profile](en/StructureDefinition-preadmission-documentreference-fr.md)
+* [Fr Preadmission Encounter Profile](en/StructureDefinition-preadmission-encounter-fr.md)
+* [Fr Preadmission QuestionnaireResponse Profile](en/StructureDefinition-preadmission-questionnaireresponse-fr.md)
+
+### Extensions
+
+* [Consignes de l'agent administratif](en/StructureDefinition-encounter-agent-instructions.md)
+* [Remarque du patient](en/StructureDefinition-encounter-patient-comment.md)
+* [Extension AMC Étendue ROC](en/StructureDefinition-fr-coverage-amc-extended.md)
+* [Extension Statut Pré-admission](en/StructureDefinition-statut-preadmission-fr.md)
+
+### CapabilityStatements
+
+* [Capacités serveur FHIR pour l'IG Preadmission](en/CapabilityStatement-PreadmissionCapabilityStatement.md)
+
+### ImplementationGuides
+
+* [Guide d’Implémentation FHIR – Pré-admission Hospitalière en Ligne](en/ImplementationGuide-hl7.fhir.fr.preadmission.md)
+
+### SearchParameters
+
+* [EncounterPreadmissionStatus](en/SearchParameter-encounter-preadmission-status.md)
+
+### Examples
+
+* [appt-irm-001 (Appointment)](en/Appointment-appt-irm-001.md)
+* [consentement-dmp-alimentation (Consent)](en/Consent-consentement-dmp-alimentation.md)
+* [consentement-dmp-consultation (Consent)](en/Consent-consentement-dmp-consultation.md)
+* [consentement-multi (Consent)](en/Consent-consentement-multi.md)
+* [consentement-refus-rgpd (Consent)](en/Consent-consentement-refus-rgpd.md)
+* [coverage-amc (Coverage)](en/Coverage-coverage-amc.md)
+* [coverage-amo-enfant (Coverage)](en/Coverage-coverage-amo-enfant.md)
+* [coverage-amo (Coverage)](en/Coverage-coverage-amo.md)
+* [documentreference-cni-recto (DocumentReference)](en/DocumentReference-documentreference-cni-recto.md)
+* [encounter-irm-complete (Encounter)](en/Encounter-encounter-irm-complete.md)
+* [encounter-irm-externe (Encounter)](en/Encounter-encounter-irm-externe.md)
+* [encounter-irm-refused (Encounter)](en/Encounter-encounter-irm-refused.md)
+* [patient-001 (Patient)](en/Patient-patient-001.md)
+* [patient-parent (Patient)](en/Patient-patient-parent.md)
+* [practitioner-irm (Practitioner)](en/Practitioner-practitioner-irm.md)
+* [Questionnaire IRM - Préadmission (Questionnaire)](en/Questionnaire-questionnaire-chb-part.md)
+* [Questionnaire IRM - Préadmission (Questionnaire)](en/Questionnaire-questionnaire-irm.md)
+* [qr-chb-part (QuestionnaireResponse)](en/QuestionnaireResponse-qr-chb-part.md)
+* [qr-irm-001 (QuestionnaireResponse)](en/QuestionnaireResponse-qr-irm-001.md)
